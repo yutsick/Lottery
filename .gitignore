@@ -1,0 +1,22 @@
+
+# ignore system files
+.DS_Store
+thumbs.db
+__MACOSX
+._*
+.idea/
+
+# ignore log files
+error_log
+.ftpquota
+.htaccess
+.svn/
+.dropbox
+.dropbox_cache
+
+# ignore build tools
+node_modules/
+dist/
+.sass-cache
+.map
+.js.map
