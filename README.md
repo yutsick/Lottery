@@ -1,4 +1,4 @@
-WMYL Frontend Boilerplate
+Miljonlotteriet - Frontend 2017
 =================
 
 ## Install
