@@ -1,0 +1,18 @@
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+[*.{html,js,php}]
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 4
+
+[*.{css,scss}]
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 4
+
+[{bower.json,composer.json,package.json}]
+indent_style = space
+indent_size = 4
