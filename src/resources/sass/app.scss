@@ -1,0 +1,9 @@
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Styles for BrowserSync notification to be less annoying.
+#__bs_notify__ { top: 95% !important; right: 10px !important; border-radius: 10px !important; }
