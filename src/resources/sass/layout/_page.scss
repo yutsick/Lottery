@@ -1,5 +1,11 @@
 #page-wrapper {
-	padding-left: $sidebar-width-mobile;
+	padding-top: $menu-height;
+	padding-left: 0;
+
+	@include min-screen($screen-xs-min) {
+		padding-top: 0;
+		padding-left: $sidebar-width-mobile;
+	}
 
 	@include min-screen($screen-md-min) {
 		padding-left: $sidebar-width-desktop;
@@ -11,5 +17,9 @@
 }
 
 #content-wrapper {
-	padding: 20px;
+	padding: 0;
+
+	@include min-screen($screen-md-min) {
+		padding: 20px;
+	}
 }

@@ -1,17 +1,40 @@
 #sidebar-wrapper {
+	transform: translate3d(-$sidebar-width-mobile,0,0);
 	position: fixed;
+	z-index: 1000;
+	top: 0;
 	left: $sidebar-width-mobile;
 	margin-left: -$sidebar-width-mobile;
 	width: $sidebar-width-mobile;
-	z-index: 1000;
 	height: 100%;
 	overflow-y: auto;
 	background: $color-sky;
+	transition: transform $duration-fast $delay-none $ease-in-out;
+	box-shadow: px;
+
+	@include min-screen($screen-xs-min) {
+		transform: translate3d(0,0,0);
+	}
 
 	@include min-screen($screen-md-min) {
 		left: $sidebar-width-desktop;
 		margin-left: -$sidebar-width-desktop;
 		width: $sidebar-width-desktop;
+	}
+
+	&.js-active {
+		transform: translate3d(0,0,0);
+	}
+}
+
+.page-logotype {
+	padding: 20px;
+
+	img {
+		max-width: 300px;
+		height: 50px;
+		width: 100%;
+		background-color: $color-shore;
 	}
 }
 
@@ -25,6 +48,7 @@
 		font-weight: 600;
 		border-bottom: 1px solid $color-shore;
 		position: relative;
+		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 
 		@include min-screen($screen-md-min) {
 			padding: 25px 25px 25px 70px;
