@@ -1,5 +1,9 @@
 #page-wrapper {
-	padding-left: 260px;
+	padding-left: $sidebar-width-mobile;
+
+	@include min-screen($screen-md-min) {
+		padding-left: $sidebar-width-desktop;
+	}
 
 	&.sidebar-hidden {
 		padding-left: 0;

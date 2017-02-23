@@ -1,8 +1,11 @@
 /**
- * Screens
+ * Layout
  */
 
-// Media Queries
+
+// Sidebar
+$sidebar-width-desktop: 260px;
+$sidebar-width-mobile: 95px;
 
 /**
  * Fonts
@@ -52,21 +55,21 @@ $color-transparent: rgba(0, 0, 0, $opacity-0);
 // Theme Palette
 $color-snow: #FFF;
 $color-space: #000;
+$color-blue: #2074f2;
+
 $color-sky: #E6ECEF;
 $color-cloud: #F2F5F7;
 $color-shore: #CAD2DB;
+$color-feather: #ECF1F3;
 
 // Color Scheme
-$color-primary:;
-$color-primary-secondary-bright:;
-$color-primary-secondary-light:;
-$color-primary-secondary-dark:;
+$color-primary: $color-blue;
+// $color-primary-secondary: ;
 
-$color-accent:;
-$color-accent-secondary:;
+// $color-accent:;
+// $color-accent-secondary:;
 
 $color-complement:;
-$color-complement-secondary:;
 
 // Others
 $color-dark: $color-space;

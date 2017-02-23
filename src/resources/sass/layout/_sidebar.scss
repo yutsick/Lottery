@@ -1,26 +1,43 @@
 #sidebar-wrapper {
-	width: 260px;
-	z-index: 1000;
 	position: fixed;
-	left: 260px;
+	left: $sidebar-width-mobile;
+	margin-left: -$sidebar-width-mobile;
+	width: $sidebar-width-mobile;
+	z-index: 1000;
 	height: 100%;
-	margin-left: -260px;
 	overflow-y: auto;
 	background: $color-sky;
+
+	@include min-screen($screen-md-min) {
+		left: $sidebar-width-desktop;
+		margin-left: -$sidebar-width-desktop;
+		width: $sidebar-width-desktop;
+	}
 }
 
 .page-navigation {
 	a {
 		display: block;
-		padding: 25px 25px 25px 70px;
-		font-size: 20px;
-		line-height: 1;
+		padding: 60px 14px 20px 14px;
+		font-size: 14px;
+		line-height: 14px;
+		text-align: center;
 		font-weight: 600;
 		border-bottom: 1px solid $color-shore;
 		position: relative;
 
-		&:hover {
+		@include min-screen($screen-md-min) {
+			padding: 25px 25px 25px 70px;
+			line-height: 1;
+			text-align: left;
+		}
+
+		&:hover,
+		&:focus,
+		.active {
 			text-decoration: none;
+			// outline: none; Needs subtle styles
+			background-color: $color-feather;
 		}
 
 		&:first-child {
@@ -33,16 +50,28 @@
 			width: 30px;
 			border-radius: 100%;
 			position: absolute;
-			top: 25px;
-			left: 25px;
+			top: 20px;
+			margin-left: -15px;
+			left: 50%;
 			background-color: $color-shore;
+
+			@include min-screen($screen-md-min) {
+				top: 25px;
+				left: 25px;
+				margin: auto;
+			}
 		}
 
 		span {
-			display: block;
-			font-size: 16px;
-			font-weight: 400;
-			margin-top: 5px;
+			&:last-of-type {
+				display: none;
+
+				@include min-screen($screen-md-min) {
+					display: block;
+					font-weight: 400;
+					margin-top: 5px;
+				}
+			}
 		}
 	}
 }
