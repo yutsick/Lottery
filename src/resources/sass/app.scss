@@ -5,5 +5,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Project config */
+@import "core/core";
+
+/* Page layout */
+@import "layout/layout";
+
+/* Template styles */
+@import "pages/pages";
+
+/* Blocks */
+@import "blocks/blocks";
+
+/* Blocks */
+@import "elements/elements";
+
 // Styles for BrowserSync notification to be less annoying.
 #__bs_notify__ { top: 95% !important; right: 10px !important; border-radius: 10px !important; }

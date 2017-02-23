@@ -49,7 +49,7 @@ elixir((mix) => {
             baseDir: './dist/'
         },
         files: [
-            './dist/*.html',
+            './dist/**/*.html',
             elixir.config.publicPath + '/**/*.js',
             elixir.config.publicPath + '/**/*.css'
         ]

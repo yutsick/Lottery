@@ -1,0 +1,11 @@
+#page-wrapper {
+	padding-left: 260px;
+
+	&.sidebar-hidden {
+		padding-left: 0;
+	}
+}
+
+#content-wrapper {
+	padding: 20px;
+}

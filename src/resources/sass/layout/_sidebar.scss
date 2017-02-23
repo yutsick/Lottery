@@ -1,0 +1,10 @@
+#sidebar-wrapper {
+	width: 260px;
+	z-index: 1000;
+	position: fixed;
+	left: 260px;
+	height: 100%;
+	margin-left: -260px;
+	overflow-y: auto;
+	background: #000;
+}
