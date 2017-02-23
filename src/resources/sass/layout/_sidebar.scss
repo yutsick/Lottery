@@ -6,5 +6,43 @@
 	height: 100%;
 	margin-left: -260px;
 	overflow-y: auto;
-	background: #000;
+	background: $color-sky;
+}
+
+.page-navigation {
+	a {
+		display: block;
+		padding: 25px 25px 25px 70px;
+		font-size: 20px;
+		line-height: 1;
+		font-weight: 600;
+		border-bottom: 1px solid $color-shore;
+		position: relative;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&:first-child {
+			border-top: 1px solid $color-shore;
+		}
+
+		&:before {
+			content: ' ';
+			height: 30px;
+			width: 30px;
+			border-radius: 100%;
+			position: absolute;
+			top: 25px;
+			left: 25px;
+			background-color: $color-shore;
+		}
+
+		span {
+			display: block;
+			font-size: 16px;
+			font-weight: 400;
+			margin-top: 5px;
+		}
+	}
 }

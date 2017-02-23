@@ -3,16 +3,6 @@
  */
 
 // Media Queries
-/*
-$breakpoints: (
-	xsmall: 321px,
-	small: 768px,
-	medium: 1024px,
-	large: 1120px,
-	xlarge: 1200px,
-	xxlarge: 1440px,
-);
-*/
 
 /**
  * Fonts
@@ -62,33 +52,21 @@ $color-transparent: rgba(0, 0, 0, $opacity-0);
 // Theme Palette
 $color-snow: #FFF;
 $color-space: #000;
-$color-salmon: #FF5A50;
-$color-apple: #E04D44;
-$color-sunny: #FFD505;
-$color-sand: #FFE6AA;
-$color-moss: #0F4E38;
-$color-woods: #13684B;
-$color-coral: #1FE6AA;
-$color-mint: #B4EFDB;
-$color-mint-light: #ECFBF6;
-$color-swamp: #A5B3A4;
-$color-goo: #A5B4A5;
-$color-tan: #AFAE7E;
-$color-brick: #EEEEEE;
-$color-stone: #E4E8E4;
-$color-concrete: #E8ECE8;
+$color-sky: #E6ECEF;
+$color-cloud: #F2F5F7;
+$color-shore: #CAD2DB;
 
 // Color Scheme
-$color-primary: $color-woods;
-$color-primary-secondary-bright: $color-coral;
-$color-primary-secondary-light: $color-mint;
-$color-primary-secondary-dark: $color-moss;
+$color-primary:;
+$color-primary-secondary-bright:;
+$color-primary-secondary-light:;
+$color-primary-secondary-dark:;
 
-$color-accent: $color-salmon;
-$color-accent-secondary: $color-apple;
+$color-accent:;
+$color-accent-secondary:;
 
-$color-complement: $color-sunny;
-$color-complement-2secondary: $color-sand;
+$color-complement:;
+$color-complement-secondary:;
 
 // Others
 $color-dark: $color-space;
