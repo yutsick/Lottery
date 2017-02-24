@@ -1,21 +1,29 @@
 module.exports = {
 	init() {
-		toggle_menu();
-		toggle_menu_on_resize();
+		toggle_nav();
+		reset_nav_on_resize();
+		toggle_sub_nav();
 
 		$(window).on('resize', function () {
-			toggle_menu_on_resize();
+			reset_nav_on_resize();
 		});
 
 		var $page_wrapper = $('#page-wrapper');
+		var active_class = 'js-is-active';
 		var trigger = false;
 
-		function toggle_menu_on_resize() {
+		function reset_nav_on_resize() {
 			let win = $(this);
+			let $nav_items = $('#navigation li');
 
+			// Check if window is going from small to large and reset navigation states
 			if ((win.width() >= 480) && (trigger == false)) {
-				$page_wrapper.removeClass('js-navigation-active');
-				trigger = true;
+
+				// Only if the sub menu is not active
+				if (!$nav_items.hasClass('js-is-active')) {
+					$page_wrapper.removeClass(active_class);
+					trigger = true;
+				}
 			}
 
 			if ((win.width() < 480) && (trigger == true)) {
@@ -23,23 +31,64 @@ module.exports = {
 			}
 		}
 
-		function toggle_menu() {
-			$('a.menu__toggle').click(function () {
-				$page_wrapper.toggleClass('js-navigation-active');
-				return false;
-			});
+		function toggle_sub_nav() {
+			$('#navigation').find('> li > a:not(.not-interactive)').click(function () {
 
-			$('#logotype').click(function () {
-				if ($page_wrapper.hasClass('js-navigation-active')) {
-					$page_wrapper.removeClass('js-navigation-active');
+				let $this_nav_item = $(this);
+				let $this_nav_item_sub_menu = $this_nav_item.parent('li');
+
+				// Check if the clicked item has a sub menu, else got o the links href
+				if ($this_nav_item_sub_menu.has('ul').length >= 1)	 {
+
+					// Hide or activate it
+					if ($this_nav_item.hasClass(active_class)) {
+						$this_nav_item.removeClass(active_class);
+						$this_nav_item.parent('li').removeClass(active_class);
+						$page_wrapper.removeClass(active_class);
+					}
+					else {
+						let $nav_items = $('#navigation li');
+
+						$nav_items.each( function () {
+							var $nav_item = $(this);
+							$nav_item.removeClass(active_class);
+							$nav_item.find('> a').removeClass(active_class);
+						});
+
+						$this_nav_item.addClass(active_class);
+						$this_nav_item.parent('li').addClass(active_class);
+						$page_wrapper.addClass(active_class);
+					}
 					return false;
 				}
 				else {
 					return true;
 				}
+
+			});
+		}
+
+		function toggle_nav() {
+			$('a.menu__toggle').click(function () {
+				$page_wrapper.toggleClass(active_class);
+				return false;
 			});
 
-
+			$('.overlay').click(function () {
+				if ($page_wrapper.hasClass(active_class)) {
+					let $nav_items = $('#navigation li');
+					$nav_items.each( function () {
+						var $nav_item = $(this);
+						$nav_item.removeClass(active_class);
+						$nav_item.find('> a').removeClass(active_class);
+					});
+					$page_wrapper.removeClass(active_class);
+				}
+				else {
+					//return true;
+				}
+				return false;
+			});
 		}
 	}
 };

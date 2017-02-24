@@ -1,5 +1,5 @@
 #sidebar-wrapper {
-	transform: translate3d(-$sidebar-width-mobile,0,0);
+	transform: translate3d(-$sidebar-width-mobile, 0, 0);
 	position: fixed;
 	z-index: 1000;
 	top: 0;
@@ -7,14 +7,14 @@
 	margin-left: -$sidebar-width-mobile;
 	width: $sidebar-width-mobile;
 	height: 100%;
-	overflow-y: auto;
+	overflow-x: visible;
 	background: $color-sky;
 	transition: transform $duration-fast $delay-none $ease-in-out;
-	box-shadow: 0 0 6px rgba(0,0,0,0.08);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.08);
 
 	@include min-screen($screen-xs-min) {
 		box-shadow: 0 0 0 0;
-		transform: translate3d(0,0,0);
+		transform: translate3d(0, 0, 0);
 	}
 
 	@include min-screen($screen-md-min) {
@@ -23,79 +23,160 @@
 		width: $sidebar-width-desktop;
 	}
 
-	.js-navigation-active & { // on #page-wrapper
-		transform: translate3d(0,0,0);
+	.js-is-active & { // on #page-wrapper
+		transform: translate3d(0, 0, 0);
 	}
 }
 
-#logotype {
-	display: block;
-	padding: 20px;
+ul#navigation {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow-y: auto;
+	height: 100%;
 
-	img {
-		max-width: 300px;
-		height: 50px;
-		width: 100%;
-		background-color: $color-shore;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		height: 100%;
 	}
-}
 
-#navigation {
-	a {
+	li {
 		display: block;
-		padding: 60px 14px 20px 14px;
-		font-size: 14px;
-		line-height: 14px;
-		text-align: center;
-		font-weight: 600;
 		border-bottom: 1px solid $color-shore;
-		position: relative;
-		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 
-		@include min-screen($screen-md-min) {
+		a {
+			display: block;
 			padding: 25px 25px 25px 70px;
 			line-height: 1;
 			text-align: left;
-		}
+			font-size: 14px;
+			font-weight: 600;
+			color: $color-ocean;
+			position: relative;
+			transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 
-		&:hover,
-		&:focus,
-		.active {
-			text-decoration: none;
-			// outline: none; Needs subtle styles
-			background-color: $color-feather;
-		}
-
-		&:first-child {
-			border-top: 1px solid $color-shore;
-		}
-
-		&:before {
-			content: ' ';
-			height: 30px;
-			width: 30px;
-			border-radius: 100%;
-			position: absolute;
-			top: 20px;
-			margin-left: -15px;
-			left: 50%;
-			background-color: $color-shore;
-
-			@include min-screen($screen-md-min) {
+			&:before {
+				content: ' ';
+				height: 30px;
+				width: 30px;
+				border-radius: 100%;
+				position: absolute;
+				background-color: $color-blueberry;
 				top: 25px;
 				left: 25px;
 				margin: auto;
 			}
-		}
 
-		span {
-			&:last-of-type {
-				display: none;
+			&:hover,
+			&:focus,
+			&.js-is-active {
+				text-decoration: none;
+				color: $color-primary;
+				// outline: none; Needs subtle styles
+				background-color: $color-feather;
 
-				@include min-screen($screen-md-min) {
+				&:before {
+					background-color: $color-primary;
+				}
+			}
+
+			&.logotype {
+				display: block;
+				padding: 20px;
+
+				&:before {
+					content: '';
+					height: 0;
+					width: 0;
+
+					@include min-screen($screen-md-min) {
+						top: 25px;
+						left: 25px;
+						margin: auto;
+					}
+				}
+			}
+
+			img {
+				max-width: 300px;
+				height: 50px;
+				width: 100%;
+				background-color: $color-shore;
+			}
+
+			span {
+				&:last-of-type {
 					display: block;
 					font-weight: 400;
+					color: $color-blueberry;
 					margin-top: 5px;
+				}
+			}
+		}
+
+		> ul {
+			visibility: hidden;
+			position: absolute;
+			top: 0;
+			left: $sidebar-width-mobile;
+			width: $sidebar-width-desktop;
+			height: 100%;
+			transform: translate3d(0, 0, 0);
+			background-color: $color-cloud;
+			overflow-y: auto;
+			opacity: 0;
+			transition: opacity $duration-quick $delay-none $ease-in-out, visibility 0s $duration-fast;
+
+			@include min-screen($screen-md-min) {
+				left: $sidebar-width-desktop;
+			}
+		}
+
+		&.js-is-active {
+			> ul {
+				opacity: 1;
+				visibility: visible;
+				transition: opacity $duration-quick $delay-none $ease-in-out;
+			}
+		}
+	}
+
+	> li {
+		> a {
+			padding: 60px 14px 20px 14px;
+			text-align: center;
+			line-height: 14px;
+
+			@include min-screen($screen-md-min) {
+				padding: 25px 25px 25px 70px;
+				line-height: 1;
+				text-align: left;
+			}
+
+			&:before {
+				top: 20px;
+				margin-left: -15px;
+				left: 50%;
+
+				@include min-screen($screen-md-min) {
+					top: 25px;
+					left: 25px;
+					margin: auto;
+				}
+			}
+
+			span {
+				&:last-of-type {
+					display: none;
+					font-weight: 400;
+					color: $color-blueberry;
+					margin-top: 5px;
+
+					@include min-screen($screen-md-min) {
+						display: block;
+					}
 				}
 			}
 		}

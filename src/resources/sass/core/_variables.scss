@@ -6,8 +6,12 @@
 $menu-height: 90px;
 
 // Sidebar
-$sidebar-width-desktop: 260px;
 $sidebar-width-mobile: 95px;
+$sidebar-width-desktop: 260px;
+$sidebar-total-width-mobile: $sidebar-width-mobile + $sidebar-width-desktop + 25;
+$sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop + 25;
+
+
 
 /**
  * Fonts
@@ -58,6 +62,8 @@ $color-transparent: rgba(0, 0, 0, $opacity-0);
 $color-snow: #FFF;
 $color-space: #000;
 $color-blue: #2074f2;
+$color-ocean: #37454E;
+$color-blueberry: #536785;
 
 $color-sky: #E6ECEF;
 $color-cloud: #F2F5F7;
