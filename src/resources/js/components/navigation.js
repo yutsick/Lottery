@@ -24,10 +24,22 @@ module.exports = {
 		}
 
 		function toggle_menu() {
-			$('a.menu__toggle, #logotype').click( function () {
+			$('a.menu__toggle').click(function () {
 				$page_wrapper.toggleClass('js-navigation-active');
 				return false;
 			});
+
+			$('#logotype').click(function () {
+				if ($page_wrapper.hasClass('js-navigation-active')) {
+					$page_wrapper.removeClass('js-navigation-active');
+					return false;
+				}
+				else {
+					return true;
+				}
+			});
+
+
 		}
 	}
 };
