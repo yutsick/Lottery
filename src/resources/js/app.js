@@ -5,6 +5,5 @@ var navigation = require('./components/navigation');
 
 $(function () {
     console.log('Hello world');
-
     navigation.init();
 });

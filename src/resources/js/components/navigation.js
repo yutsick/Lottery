@@ -1,36 +1,31 @@
 module.exports = {
 	init() {
-		console.log('Hello navigation');
 		toggle_menu();
-		// toggle_menu_on_resize();
+		toggle_menu_on_resize();
 
 		$(window).on('resize', function () {
-			// toggle_menu_on_resize();
+			toggle_menu_on_resize();
 		});
 
-		var $body = $('body');
-		var $navigation = $('#sidebar-wrapper');
+		var $page_wrapper = $('#page-wrapper');
 		var trigger = false;
 
 		function toggle_menu_on_resize() {
 			let win = $(this);
 
-			if ((win.width() >= 1025) && (trigger == false)) {
-				$navigation.removeClass('active');
-				$body.removeClass('js-noscroll');
+			if ((win.width() >= 480) && (trigger == false)) {
+				$page_wrapper.removeClass('js-navigation-active');
 				trigger = true;
 			}
 
-			if ((win.width() <= 1024) && (trigger == true)) {
+			if ((win.width() < 480) && (trigger == true)) {
 				trigger = false;
 			}
 		}
 
 		function toggle_menu() {
-			$('a.menu__toggle').click( function () {
-				console.log('click');
-				$navigation.toggleClass('js-active');
-				// $body.toggleClass('js-noscroll');
+			$('a.menu__toggle, #logotype').click( function () {
+				$page_wrapper.toggleClass('js-navigation-active');
 				return false;
 			});
 		}

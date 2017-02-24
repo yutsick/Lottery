@@ -10,9 +10,10 @@
 	overflow-y: auto;
 	background: $color-sky;
 	transition: transform $duration-fast $delay-none $ease-in-out;
-	box-shadow: px;
+	box-shadow: 0 0 6px rgba(0,0,0,0.08);
 
 	@include min-screen($screen-xs-min) {
+		box-shadow: 0 0 0 0;
 		transform: translate3d(0,0,0);
 	}
 
@@ -22,12 +23,13 @@
 		width: $sidebar-width-desktop;
 	}
 
-	&.js-active {
+	.js-navigation-active & { // on #page-wrapper
 		transform: translate3d(0,0,0);
 	}
 }
 
-.page-logotype {
+#logotype {
+	display: block;
 	padding: 20px;
 
 	img {
@@ -38,7 +40,7 @@
 	}
 }
 
-.page-navigation {
+#navigation {
 	a {
 		display: block;
 		padding: 60px 14px 20px 14px;

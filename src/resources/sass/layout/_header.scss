@@ -2,12 +2,13 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 999;
+	z-index: 990;
 	display: block;
 	width: 100%;
 	background-color: $color-sky;
 	padding: 10px;
 	height: $menu-height;
+	box-shadow: 0 0 6px rgba(0,0,0,0.08);
 
 	@include min-screen($screen-xs-min) {
 		display: none;
