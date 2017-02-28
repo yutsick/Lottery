@@ -69,20 +69,24 @@ $color-snow: #FFFFFF;
 $color-space: #000;
 
 $color-blue: #2074f2;
+$color-green: #3BB566;
 
 $color-night: #131B39; // #151F36
 $color-ocean: #37454E;
 $color-blueberry: #536785;
+$color-shore: #A2B6C2;
 $color-sky: #86A3B5;
 $color-cloud: #F2F5F7;
 $color-feather: #DEE1E8;
 
-$color-shore: #CAD2DB;
+
+
 
 // Color Scheme
 $color-base-primary: $color-night; // Logo
 $color-base-secondary: $color-ocean; // Menu links
 $color-base-complement: $color-blueberry;
+$color-base-light: $color-sky; // Default button
 $color-base-light-01: $color-sky; // Icons
 $color-base-light-02: $color-cloud;
 $color-base-light-03: $color-feather; // Borders, hover etc.
@@ -90,7 +94,7 @@ $color-base-light-03: $color-feather; // Borders, hover etc.
 $color-primary: $color-blue;
 // $color-primary-secondary: ;
 
-// $color-accent:;
+$color-accent: $color-green;
 // $color-accent-secondary:;
 
 // $color-complement: $color-blue;
@@ -98,7 +102,10 @@ $color-primary: $color-blue;
 // Others
 $color-dark: $color-space;
 $color-light: $color-snow;
-$color-overlay: rgba(21, 31, 54, 0.8);
+$color-overlay: rgba($color-base-primary, 0.8);
+
+// States
+$color-darken-amount: 10%;
 
 /**
  * Animation
