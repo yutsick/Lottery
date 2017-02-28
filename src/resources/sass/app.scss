@@ -17,6 +17,10 @@
 @import "elements/elements";
 
 body {
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	font-weight: $regular;
+	line-height: $base-line-height;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: $color-blueberry;

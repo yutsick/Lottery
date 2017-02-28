@@ -12,7 +12,6 @@ $sidebar-total-width-mobile: $sidebar-width-mobile + $sidebar-width-desktop + 25
 $sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop + 25;
 
 
-
 /**
  * Fonts
  */
@@ -20,16 +19,17 @@ $sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop + 
 // Font weights
 $light: 100;
 $regular: 400;
+$medium: 400;
 $bold: 600;
 
 // Base Font
-$base-font-family: 'Work Sans', sans-serif;
+$base-font-family: 'Montserrat', sans-serif;
 $base-font-weight: $regular;
-$base-font-size: 18;
-$base-line-height: 26;
+$base-font-size: 14px;
+$base-line-height: 20px;
 
 // Base Headings
-$base-heading-family: 'Poppins', sans-serif;
+$base-heading-family: sans-serif;
 
 /**
  * Colors
@@ -76,7 +76,7 @@ $color-primary: $color-blue;
 // $color-accent:;
 // $color-accent-secondary:;
 
-$color-complement:;
+$color-complement: $color-blue;
 
 // Others
 $color-dark: $color-space;
