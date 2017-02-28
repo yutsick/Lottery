@@ -7,10 +7,10 @@ $menu-height: 90px;
 
 // Sidebar
 $sidebar-width-mobile: 95px;
-$sidebar-width-desktop: 260px;
+$sidebar-width-desktop: 245px;
 $sidebar-total-width-mobile: $sidebar-width-mobile + $sidebar-width-desktop + 25;
 $sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop + 25;
-
+$sidebar-logo-height: 90px;
 
 /**
  * Fonts
@@ -44,13 +44,13 @@ $opacity-4: 0.22;
 $opacity-5: 0.06;
 
 // Basic colors
-$color-white: #fff;
+$color-white: #FFFFFF;
 $color-white-2: rgba(255, 255, 255, $opacity-2);
 $color-white-3: rgba(255, 255, 255, $opacity-3);
 $color-white-4: rgba(255, 255, 255, $opacity-4);
 $color-white-5: rgba(255, 255, 255, $opacity-5);
 
-$color-black: #000;
+$color-black: #000000;
 $color-black-2: rgba(0, 0, 0, $opacity-2);
 $color-black-3: rgba(0, 0, 0, $opacity-3);
 $color-black-4: rgba(0, 0, 0, $opacity-4);
@@ -59,28 +59,40 @@ $color-black-5: rgba(0, 0, 0, $opacity-5);
 $color-transparent: rgba(0, 0, 0, $opacity-0);
 
 // Theme Palette
-$color-snow: #FFF;
+$color-snow: #FFFFFF;
 $color-space: #000;
+
 $color-blue: #2074f2;
+
+$color-night: #131B39; // #151F36
 $color-ocean: #37454E;
 $color-blueberry: #536785;
-
-$color-sky: #E6ECEF;
+$color-sky: #86A3B5;
 $color-cloud: #F2F5F7;
+$color-feather: #DEE1E8;
+
 $color-shore: #CAD2DB;
-$color-feather: #ECF1F3;
+
 // Color Scheme
+$color-base-primary: $color-night; // Logo
+$color-base-secondary: $color-ocean; // Menu links
+$color-base-complement: $color-blueberry;
+$color-base-light-01: $color-sky; // Icons
+$color-base-light-02: $color-cloud;
+$color-base-light-03: $color-feather; // Borders, hover etc.
+
 $color-primary: $color-blue;
 // $color-primary-secondary: ;
 
 // $color-accent:;
 // $color-accent-secondary:;
 
-$color-complement: $color-blue;
+// $color-complement: $color-blue;
 
 // Others
 $color-dark: $color-space;
 $color-light: $color-snow;
+$color-overlay: rgba(21, 31, 54, 0.8);
 
 /**
  * Animation
