@@ -203,9 +203,14 @@ ul#navigation {
 }
 
 .buttons {
+	display: none;
 	position: absolute;
 	bottom: 0;
 	padding: $padding-default;
+
+	@include min-screen($screen-md-min) {
+		display: block;
+	}
 
 	.btn {
 		width: 100%;
