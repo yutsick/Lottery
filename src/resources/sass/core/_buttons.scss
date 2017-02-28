@@ -1,0 +1,41 @@
+
+.btn {
+	font-size: 12px;
+	border-radius: 18px;
+	font-weight: 600;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.btn-default {
+	&.btn-invert {
+		background-color: $color-base-light;
+		color: $color-light;
+		border: none;
+
+		&:hover,
+		&:focus {
+			background-color: darken($color-base-light, $color-darken-amount);
+		}
+	}
+}
+
+.btn-primary {
+	background-color: $color-primary;
+
+	&:hover,
+	&:focus {
+		background-color: darken($color-primary, $color-darken-amount);
+	}
+}
+
+.btn-success {
+	background-color: $color-accent;
+
+	&:hover,
+	&:focus {
+		background-color: darken($color-accent, $color-darken-amount);
+	}
+}
+
+
