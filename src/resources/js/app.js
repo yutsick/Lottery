@@ -9,6 +9,18 @@ $(function () {
 
 	$('.alert').on('closed.bs.alert', function () {
 		$(this).fadeOut();
-		console.log( $(this) );
-	})
+		console.log($(this));
+	});
+
+	$('#search').click(function () {
+		let $search_container = $(this).parents('.top-account__search');
+
+		if ($search_container.hasClass('js-is-active')) {
+			console.log('Is activated');
+			return true;
+		}
+		else {
+			$search_container.addClass('js-is-active');
+		}
+	});
 });

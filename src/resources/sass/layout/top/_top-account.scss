@@ -7,13 +7,25 @@
 	box-sizing: border-box;
 	overflow: auto;
 	zoom: 1;
+	text-align: center;
+
 
 	@include min-screen($screen-xs-min) {
-		width: auto;
-		padding: $padding-default;
+		padding: $padding-default 0;
 		position: absolute;
 		top: auto;
 		right: 0;
+	}
+
+	@include min-screen($screen-sm-min) {
+		padding: $padding-default;
+		width: auto;
+		text-align: left;
+	}
+
+	btn,
+	> div {
+		vertical-align: bottom;
 	}
 
 	.btn {
@@ -25,7 +37,6 @@
 		height: $account-height;
 		font-size: 18px;
 		font-weight: 400;
-
 
 		@include min-screen($screen-xs-min) {
 			float: none;
@@ -62,5 +73,44 @@
 				}
 			}
 		}
+	}
+
+	.top-account__search {
+		position: relative;
+		display: none;
+		overflow: auto;
+		min-width: 45px;
+		z-index: 985;
+
+		@include min-screen($screen-xs-min) {
+			display: inline-block;
+		}
+
+		.form-control {
+			float: left;
+			width: 0;
+			transition: width 0.4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+		}
+
+		.btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+			margin: 0;
+		}
+
+		&:not(.js-is-active) {
+			.form-control {
+				padding: 0;
+			}
+		}
+
+		&.js-is-active {
+			.form-control {
+				width: 135px;
+			}
+		}
+
 	}
 }
