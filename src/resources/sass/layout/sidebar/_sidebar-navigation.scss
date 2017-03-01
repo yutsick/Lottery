@@ -92,12 +92,12 @@
 		}
 
 		> a {
-			padding: 60px 14px 20px 14px;
+			padding: 60px 10px $padding-default 10px;
 			text-align: center;
 			line-height: 14px;
 
 			@include min-screen($screen-md-min) {
-				padding: 25px 25px 25px 70px;
+				padding: $padding-default 15px $padding-default 65px;
 				line-height: 1;
 				text-align: left;
 			}
@@ -114,8 +114,8 @@
 				left: 50%;
 
 				@include min-screen($screen-md-min) {
-					top: 25px;
-					left: 25px;
+					top: 20px;
+					left: 15px;
 					margin: auto;
 				}
 			}
