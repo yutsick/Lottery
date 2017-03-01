@@ -9,7 +9,10 @@ $margin-default: 20px;
 $padding-default: 20px;
 
 // Menu
-$menu-height: 90px;
+$menu-height: 46px;
+$account-height: 46px;
+$top-padding: $menu-height + $account-height;
+
 
 // Sidebar
 $sidebar-width-mobile: 95px;
@@ -70,6 +73,7 @@ $color-space: #000;
 
 $color-blue: #2074f2;
 $color-green: #3BB566;
+$color-turquoise: #4FB7BD;
 
 $color-night: #131B39; // #151F36
 $color-ocean: #37454E;
@@ -78,11 +82,13 @@ $color-shore: #A2B6C2;
 $color-sky: #86A3B5;
 $color-cloud: #F2F5F7;
 $color-feather: #DEE1E8;
-
-
-
+$color: #626972;
 
 // Color Scheme
+$color-primary: $color-blue;
+$color-accent: $color-green;
+$color-complement-coral: $color-turquoise;
+
 $color-base-primary: $color-night; // Logo
 $color-base-secondary: $color-ocean; // Menu links
 $color-base-complement: $color-blueberry;
@@ -91,13 +97,7 @@ $color-base-light-01: $color-sky; // Icons
 $color-base-light-02: $color-cloud;
 $color-base-light-03: $color-feather; // Borders, hover etc.
 
-$color-primary: $color-blue;
-// $color-primary-secondary: ;
 
-$color-accent: $color-green;
-// $color-accent-secondary:;
-
-// $color-complement: $color-blue;
 
 // Others
 $color-dark: $color-space;

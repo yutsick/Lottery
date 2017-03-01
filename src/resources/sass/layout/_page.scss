@@ -1,5 +1,5 @@
 #page-wrapper {
-	padding-top: $menu-height;
+	padding-top: $top-padding;
 	padding-left: 0;
 
 	@include min-screen($screen-xs-min) {
@@ -18,9 +18,5 @@
 
 #content-wrapper {
 	padding: 0;
-
-	@include min-screen($screen-md-min) {
-		padding: 20px;
-	}
 }
 
