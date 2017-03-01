@@ -1,0 +1,66 @@
+.top-account {
+	padding: 0;
+	position: fixed;
+	top: $menu-height;
+	z-index: 980;
+	width: 100%;
+	box-sizing: border-box;
+	overflow: auto;
+	zoom: 1;
+
+	@include min-screen($screen-xs-min) {
+		width: auto;
+		padding: $padding-default;
+		position: absolute;
+		top: auto;
+		right: 0;
+	}
+
+	.btn {
+		margin: 0;
+		float: left;
+		// Button style modification
+		border-radius: 0;
+		width: 50%;
+		height: $account-height;
+		font-size: 18px;
+		font-weight: 400;
+
+
+		@include min-screen($screen-xs-min) {
+			float: none;
+			margin: 0 10px;
+			// Button style modification
+			border-radius: 18px;
+			width: auto;
+			height: auto;
+			font-size: 12px;
+			font-weight: 600;
+		}
+
+		// Button style modification
+		&.btn-icon {
+			@include max-screen($screen-xs-min) {
+				padding: 0;
+
+				&:before {
+					height:0;
+					width: 0;
+				}
+			}
+		}
+
+		// Button style modification
+		&.btn-2-line {
+			@include max-screen($screen-xs-min) {
+				padding: 0;
+			}
+
+			span {
+				@include max-screen($screen-xs-min) {
+					display: none;
+				}
+			}
+		}
+	}
+}
