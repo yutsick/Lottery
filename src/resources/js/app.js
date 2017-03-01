@@ -4,6 +4,11 @@ require('bootstrap-sass');
 var navigation = require('./components/navigation');
 
 $(function () {
-    console.log('Hello world');
-    navigation.init();
+	console.log('Hello world');
+	navigation.init();
+
+	$('.alert').on('closed.bs.alert', function () {
+		$(this).fadeOut();
+		console.log( $(this) );
+	})
 });

@@ -1,0 +1,17 @@
+.sidebar-account {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: $padding-default;
+
+	@include min-screen($screen-md-min) {
+		display: block;
+	}
+
+	.btn {
+		// Button style modification
+		width: 100%;
+		margin-top: $margin-default;
+	}
+}
