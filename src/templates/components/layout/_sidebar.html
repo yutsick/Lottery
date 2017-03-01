@@ -7,59 +7,53 @@
 		</li>
 		<li>
 			<a href="/">
-				Spela och vinn
-				<span>Description</span>
+				Lotter
+				<span>Skrapa online/prenumerera</span>
 			</a>
 		</li>
 		<li>
 			<a href="/">
-				<span class="hide-mobile">Vinstshoppen</span>
-				<span class="show-mobile">Vinstshop</span>
-				<span>Description</span>
+				Bingo
+				<span>Spela Bingo</span>
 			</a>
 		</li>
+		<li>
+			<a href="/">
+				<span class="hide-mobile">Vinster</span>
+				<span class="show-mobile">Vinster</span>
+				<span>Våra fina vinster & inspiration</span>
+			</a>
+		</li>
+		<li>
+			<a href="/">
+				Ändamål
+				<span>Du gör skillnad</span>
+			</a>
+		</li>
+
 		<li>
 			<a>
-				Mina sidor
-				<span>Description</span>
+				Övrigt
+				<span>Mer om oss</span>
 			</a>
-			<ul>
-				<li>
-					<a>
-						Menyalternativ
-						<span>Description</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						Menyalternativ
-						<span>Description</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						Menyalternativ
-						<span>Description</span>
-					</a>
-				</li>
-				<li>
-					<a>
-						Menyalternativ
-						<span>Description</span>
-					</a>
-				</li>
-			</ul>
+			@@include('layout/sidebar/_sub-navigation.html')
 		</li>
+
+		@@if (signed_in === true) {
 		<li>
 			<a href="/">
-				Mer
-				<span>Description</span>
+				Stefan Jakobsson
+				<span>Spelkonto</span>
 			</a>
 		</li>
+		}
+
 	</ul>
 	<div class="sidebar-account">
 		<button class="btn btn-primary">Registrera lott</button>
-		<!--<button class="btn btn-default btn-invert">Logga ut</button>-->
+		@@if (signed_in === true) {
+			<button class="btn btn-default">Logga ut</button>
+		}
 	</div>
 </aside>
 <!-- /#sidebar-wrapper -->

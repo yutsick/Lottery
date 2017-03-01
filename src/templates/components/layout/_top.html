@@ -1,4 +1,5 @@
 <div id="top">
+
 	<div class="top-menu">
 		<a class="top-menu__toggle"></a>
 		<a class="top-menu__logotype"></a>
@@ -12,11 +13,14 @@
 	</div>
 
 	<div class="top-account">
+		@@if (signed_in === false) {
 		<button class="btn btn-default btn-invert btn-icon">Logga in</button>
 		<button class="btn btn-success btn-icon btn-2-line">
 			Skapa konto
 			<span>och få 40 kr</span>
 		</button>
+		}
+		<button class="btn btn-default btn-invert">Search</button>
 	</div>
 </div>
 <!-- /#top -->
