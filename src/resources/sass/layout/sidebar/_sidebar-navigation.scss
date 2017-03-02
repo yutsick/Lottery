@@ -16,6 +16,7 @@
 	li {
 		display: block;
 		border-top: 1px solid $color-base-light-03;
+		height: $sidebar-item-height;
 
 		&:first-child {
 			border: none;
@@ -23,20 +24,20 @@
 
 		a {
 			display: block;
-			padding: $padding-default;
+			padding: $padding-medium $padding-medium 0 $padding-default;
 			line-height: 1;
 			text-align: left;
 			font-size: 14px;
 			font-weight: 600;
 			color: $color-base-secondary;
 			position: relative;
+			height: 100%;
 			transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 
 			&:hover,
 			&:focus,
 			&.js-is-active {
 				text-decoration: none;
-				// outline: none; // Needs subtle styles
 				background-color: $color-base-light-03;
 
 				&:before {
@@ -69,7 +70,7 @@
 			overflow-y: auto;
 			opacity: 0;
 			transition: opacity $duration-quick $delay-none $ease-in-out, visibility 0s $duration-fast;
-			padding-top: $sidebar-logo-height;
+			padding-top: $sidebar-logo-height - 1;
 
 			#sidebar.js-is-active & {
 				@include max-screen($screen-xs-min) {
@@ -95,23 +96,56 @@
 	> li {
 		&:first-child {
 			height: $sidebar-logo-height - 1; // - border
+
+			> a {
+				display: block;
+				height: 100%;
+				padding: $padding-medium $padding-default 0 $padding-default;
+
+				&:before {
+					// No icon on logotype item
+					content: '';
+					height: 0;
+					width: 0;
+				}
+
+				#sidebar.js-is-active & {
+					@include max-screen($screen-xs-min) {
+						padding: $padding-default;
+					}
+				}
+
+				&:hover {
+					background-color: transparent;
+				}
+
+				img {
+					max-width: 300px;
+					height: $sidebar-logo-image-height;
+					width: 100%;
+					background-color: $color-base-primary;
+					border: none;
+				}
+			}
 		}
 
 		> a {
-			padding: $padding-default 15px $padding-default 65px;
+			padding: $padding-medium $padding-medium 0 60px;
 			line-height: 1;
 			text-align: left;
 
 			#sidebar.js-is-active & {
 				@include max-screen($screen-xs-min) {
-					padding: 60px 10px $padding-default 10px;
+					padding: 40px 10px 0 10px;
+					font-size: 8px;
 					line-height: 14px;
 					text-align: center;
 				}
 			}
 
 			@include screen($screen-xs-min, $screen-md-min) {
-				padding: 60px 10px $padding-default 10px;
+				padding: 40px 10px 0 10px;
+				font-size: 8px;
 				line-height: 14px;
 				text-align: center;
 			}
@@ -123,18 +157,20 @@
 				border-radius: 100%;
 				position: absolute;
 				background-color: $color-base-light-01;
-				top: 20px;
-				left: 15px;
+				top: 15px;
+				left: 20px;
 				margin: auto;
 
 				#sidebar.js-is-active & {
 					@include max-screen($screen-xs-min) {
+						top: 10px;
 						margin-left: -15px;
 						left: 50%;
 					}
 				}
 
 				@include screen($screen-xs-min, $screen-md-min) {
+					top: 10px;
 					margin-left: -15px;
 					left: 50%;
 				}
@@ -157,36 +193,6 @@
 				&:after {
 					transform: translate3d(0, 0, 0);
 					background-color: $color-primary;
-				}
-			}
-
-			&.logotype {
-				display: block;
-				padding: $padding-default;
-
-				&:before {
-					// No icon on logotype item
-					content: '';
-					height: 0;
-					width: 0;
-				}
-
-				#sidebar.js-is-active & {
-					@include max-screen($screen-xs-min) {
-						padding: $padding-default;
-					}
-				}
-
-				&:hover {
-					background-color: transparent;
-				}
-
-				img {
-					max-width: 300px;
-					height: 50px;
-					width: 100%;
-					background-color: $color-base-primary;
-					border: none;
 				}
 			}
 

@@ -1,14 +1,28 @@
 #page-wrapper {
-	padding-top: $top-padding;
 	padding-left: 0;
 
 	@include min-screen($screen-xs-min) {
-		padding-top: 0;
 		padding-left: $sidebar-width-mobile;
 	}
 
 	@include min-screen($screen-md-min) {
 		padding-left: $sidebar-width-desktop;
+	}
+
+	&.logged-in {
+		padding-top: $top-padding-logged-in;
+
+		@include min-screen($screen-xs-min) {
+			padding-top: 0;
+		}
+	}
+
+	&.logged-out {
+		padding-top: $top-padding-logged-out;
+
+		@include min-screen($screen-xs-min) {
+			padding-top: 0;
+		}
 	}
 
 	&.sidebar-hidden {
@@ -17,6 +31,5 @@
 }
 
 #content-wrapper {
-	padding: 0;
 }
 

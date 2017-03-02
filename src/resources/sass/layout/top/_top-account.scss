@@ -12,13 +12,13 @@
 	}
 
 	&.top-up {
-		transform: translate3d(0,-$account-height,0);
+		transform: translate3d(0,-$account-user-height,0);
 	}
 
 	.top-account__user {
 		background-color: $color-base-light-02;
 		padding: 6px $padding-small 0 $padding-small;
-		height: $account-height;
+		height: $account-user-height;
 	}
 
 	.top-account__buttons {
@@ -27,21 +27,15 @@
 		right: 0;
 		padding: 0;
 		box-sizing: border-box;
-		text-align: center;
+		text-align: right;
 		width: 100%;
-		height: $account-height;
+		height: $account-buttons-height;
 		overflow: auto;
 		zoom: 1;
 
 		@include min-screen($screen-xs-min) {
-			padding: $padding-default 0;
-			height: auto;
-		}
-
-		@include min-screen($screen-sm-min) {
 			padding: $padding-default;
-			width: auto;
-			text-align: left;
+			height: auto;
 		}
 
 		> * {
@@ -54,9 +48,7 @@
 			// Button style modification
 			border-radius: 0;
 			width: 50%;
-			height: $account-height;
-			font-size: 18px;
-			font-weight: 400;
+			height: 100%;
 
 			@include min-screen($screen-xs-min) {
 				float: none;
