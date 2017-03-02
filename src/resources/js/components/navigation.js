@@ -77,7 +77,6 @@ module.exports = {
 				else {
 					return true;
 				}
-
 			});
 		}
 
@@ -108,7 +107,6 @@ module.exports = {
 
 		// Hide Header on on scroll down
 		function top_show_hide() {
-
 			var didScroll;
 			var lastScrollTop = 0;
 			var delta = 5;
