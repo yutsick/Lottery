@@ -4,6 +4,11 @@
 	margin: 0;
 	color: $color-light;
 	text-align: center;
+	padding: $padding-small;
+
+	@include min-screen($screen-xs-min) {
+		padding: $padding-default;
+	}
 }
 
 .alert-info {
