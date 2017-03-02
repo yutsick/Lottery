@@ -61,7 +61,7 @@
 			visibility: hidden;
 			position: absolute;
 			top: 0;
-			left: $sidebar-width-mobile;
+			left: $sidebar-width-desktop;
 			width: $sidebar-width-desktop;
 			height: 100%;
 			transform: translate3d(0, 0, 0);
@@ -71,8 +71,14 @@
 			transition: opacity $duration-quick $delay-none $ease-in-out, visibility 0s $duration-fast;
 			padding-top: $sidebar-logo-height;
 
-			@include min-screen($screen-md-min) {
-				left: $sidebar-width-desktop;
+			#sidebar.js-is-active & {
+				@include max-screen($screen-xs-min) {
+					left: $sidebar-width-mobile;
+				}
+			}
+
+			@include screen($screen-xs-min, $screen-md-min) {
+				left: $sidebar-width-mobile;
 			}
 		}
 
@@ -92,14 +98,22 @@
 		}
 
 		> a {
-			padding: 60px 10px $padding-default 10px;
-			text-align: center;
-			line-height: 14px;
+			padding: $padding-default 15px $padding-default 65px;
+			line-height: 1;
+			text-align: left;
 
-			@include min-screen($screen-md-min) {
-				padding: $padding-default 15px $padding-default 65px;
-				line-height: 1;
-				text-align: left;
+			#sidebar.js-is-active & {
+				@include max-screen($screen-xs-min) {
+					padding: 60px 10px $padding-default 10px;
+					line-height: 14px;
+					text-align: center;
+				}
+			}
+
+			@include screen($screen-xs-min, $screen-md-min) {
+				padding: 60px 10px $padding-default 10px;
+				line-height: 14px;
+				text-align: center;
 			}
 
 			&:before {
@@ -110,13 +124,19 @@
 				position: absolute;
 				background-color: $color-base-light-01;
 				top: 20px;
-				margin-left: -15px;
-				left: 50%;
+				left: 15px;
+				margin: auto;
 
-				@include min-screen($screen-md-min) {
-					top: 20px;
-					left: 15px;
-					margin: auto;
+				#sidebar.js-is-active & {
+					@include max-screen($screen-xs-min) {
+						margin-left: -15px;
+						left: 50%;
+					}
+				}
+
+				@include screen($screen-xs-min, $screen-md-min) {
+					margin-left: -15px;
+					left: 50%;
 				}
 			}
 
@@ -151,6 +171,12 @@
 					width: 0;
 				}
 
+				#sidebar.js-is-active & {
+					@include max-screen($screen-xs-min) {
+						padding: $padding-default;
+					}
+				}
+
 				&:hover {
 					background-color: transparent;
 				}
@@ -166,7 +192,13 @@
 
 			span {
 				&:last-of-type {
-					@include max-screen($screen-md-min) {
+					#sidebar.js-is-active & {
+						@include max-screen($screen-xs-min) {
+							display: none;
+						}
+					}
+
+					@include screen($screen-xs-min, $screen-md-min) {
 						display: none;
 					}
 				}

@@ -9,6 +9,7 @@ module.exports = {
 		});
 
 		var $page_wrapper = $('#page-wrapper');
+		var $sidebar = $('#sidebar');
 		var active_class = 'js-is-active';
 		var trigger = false;
 
@@ -20,43 +21,53 @@ module.exports = {
 			if ((win.width() >= 480) && (trigger == false)) {
 
 				// Only if the sub menu is not active
-				if (!$nav_items.hasClass('js-is-active')) {
+					$nav_items.each( function () {
+						let $nav_item = $(this);
+						$nav_item.removeClass(active_class);
+						$nav_item.find('> a').removeClass(active_class);
+					});
 					$page_wrapper.removeClass(active_class);
+					$sidebar.removeClass(active_class);
 					trigger = true;
-				}
 			}
 
-			if ((win.width() < 480) && (trigger == true)) {
+			if ((win.width() <= 480) && (trigger == true)) {
 				trigger = false;
 			}
 		}
 
 		function toggle_sub_nav() {
 			$('.sidebar-navigation').find('> li > a:not(.not-interactive)').click(function () {
-
+				let win = $(window);
 				let $this_nav_item = $(this);
 				let $this_nav_item_sub_menu = $this_nav_item.parent('li');
 
 				// Check if the clicked item has a sub menu, else got o the links href
 				if ($this_nav_item_sub_menu.has('ul').length >= 1)	 {
 
-					// Hide or activate it
+					// Hide or show sub menu
 					if ($this_nav_item.hasClass(active_class)) {
 						$this_nav_item.removeClass(active_class);
 						$this_nav_item.parent('li').removeClass(active_class);
-						$page_wrapper.removeClass(active_class);
+						$sidebar.removeClass(active_class);
+						console.log(win.width());
+						// Hide overlay on large screens
+						if (win.width() > 480) {
+							console.log('worked');
+							$page_wrapper.removeClass(active_class);
+						}
 					}
 					else {
 						let $nav_items = $('.sidebar-navigation li');
-
 						$nav_items.each( function () {
-							var $nav_item = $(this);
+							let $nav_item = $(this);
 							$nav_item.removeClass(active_class);
 							$nav_item.find('> a').removeClass(active_class);
 						});
 
 						$this_nav_item.addClass(active_class);
 						$this_nav_item.parent('li').addClass(active_class);
+						$sidebar.addClass(active_class);
 						$page_wrapper.addClass(active_class);
 					}
 					return false;
@@ -83,6 +94,7 @@ module.exports = {
 						$nav_item.find('> a').removeClass(active_class);
 					});
 					$page_wrapper.removeClass(active_class);
+					$sidebar.removeClass(active_class);
 				}
 				else {
 					//return true;
