@@ -1,0 +1,13 @@
+.icon {
+	&.icon-cirlce {
+		border-radius: 100%;
+	}
+}
+
+.icon-default {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color: $color-light;
+	border: 1px solid $color-base-light-03;
+}

@@ -1,0 +1,16 @@
+.user {
+	> * {
+		vertical-align: top;
+	}
+
+	.user__info {
+		display: inline-block;
+		margin-left: $margin-small;
+		font-size: 12px;
+		line-height: 18px;
+
+		span {
+			display: block;
+		}
+	}
+}

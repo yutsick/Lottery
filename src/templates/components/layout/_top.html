@@ -12,18 +12,36 @@
 	</div>
 
 	<div class="top-account">
-		@@if (signed_in === false) {
-		<button class="btn btn-default btn-invert btn-icon">Logga in</button>
-		<button class="btn btn-success btn-icon btn-2-line">
-			Skapa konto
-			<span>och få 40 kr</span>
-		</button>
+		@@if (signed_in === true) {
+		<div class="top-account__user">
+			<div class="user">
+				<div class="icon icon-default icon-cirlce">
+					<i></i>
+				</div>
+				<div class="user__info">
+					<!--<span>Stefan Jakobsson</span>-->
+					<span><strong>Spelkonto</strong> 500kr</span>
+					<span><strong>Vinstkonto</strong> 500kr</span>
+				</div>
+			</div>
+		</div>
 		}
-		<div class="top-account__search @@if (signed_in === true) {js-is-active}">
-			<form action="">
-				<input type="text" class="form-control" placeholder="Sök">
-				<button id="search" class="btn btn-default" type="button">Go</button>
-			</form>
+
+		<div class="top-account__buttons">
+			@@if (signed_in === false) {
+			<button class="btn btn-default btn-invert btn-icon">Logga in</button>
+			<button class="btn btn-success btn-icon btn-2-line">
+				Skapa konto
+				<span>och få 40 kr</span>
+			</button>
+			}
+
+			<div class="search @@if (signed_in === true) {js-is-active}">
+				<form action="">
+					<input type="text" class="form-control" placeholder="Sök">
+					<button id="search" class="btn btn-default" type="button">Go</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

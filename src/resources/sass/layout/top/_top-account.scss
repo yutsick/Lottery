@@ -1,116 +1,128 @@
 .top-account {
-	padding: 0;
 	position: fixed;
 	top: $menu-height;
 	z-index: 980;
 	width: 100%;
-	box-sizing: border-box;
-	overflow: auto;
-	zoom: 1;
-	text-align: center;
-
 
 	@include min-screen($screen-xs-min) {
-		padding: $padding-default 0;
+		position: static;
+		top: auto;
+	}
+
+	.top-account__user {
+		height: $account-user-height;
+		background-color: $color-base-light-02;
+		padding: 6px $padding-small 0 $padding-small;
+	}
+
+	.top-account__buttons {
 		position: absolute;
 		top: auto;
 		right: 0;
-	}
-
-	@include min-screen($screen-sm-min) {
-		padding: $padding-default;
-		width: auto;
-		text-align: left;
-	}
-
-	btn,
-	> div {
-		vertical-align: bottom;
-	}
-
-	.btn {
-		margin: 0;
-		float: left;
-		// Button style modification
-		border-radius: 0;
-		width: 50%;
-		height: $account-height;
-		font-size: 18px;
-		font-weight: 400;
-
-		@include min-screen($screen-xs-min) {
-			float: none;
-			margin: 0 10px;
-			// Button style modification
-			border-radius: 18px;
-			width: auto;
-			height: auto;
-			font-size: 12px;
-			font-weight: 600;
-		}
-
-		// Button style modification
-		&.btn-icon {
-			@include max-screen($screen-xs-min) {
-				padding: 0;
-
-				&:before {
-					height:0;
-					width: 0;
-				}
-			}
-		}
-
-		// Button style modification
-		&.btn-2-line {
-			@include max-screen($screen-xs-min) {
-				padding: 0;
-			}
-
-			span {
-				@include max-screen($screen-xs-min) {
-					display: none;
-				}
-			}
-		}
-	}
-
-	.top-account__search {
-		position: relative;
-		display: none;
+		padding: 0;
+		box-sizing: border-box;
 		overflow: auto;
-		min-width: 45px;
-		z-index: 985;
+		zoom: 1;
+		text-align: center;
+		width: 100%;
 
 		@include min-screen($screen-xs-min) {
-			display: inline-block;
+			padding: $padding-default 0;
 		}
 
-		.form-control {
-			float: left;
-			width: 0;
-			transition: width 0.4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+		@include min-screen($screen-sm-min) {
+			padding: $padding-default;
+			width: auto;
+			text-align: left;
+		}
+
+		> * {
+			vertical-align: bottom;
 		}
 
 		.btn {
-			position: absolute;
-			top: 0;
-			right: 0;
-			cursor: pointer;
 			margin: 0;
-		}
+			float: left;
+			// Button style modification
+			border-radius: 0;
+			width: 50%;
+			height: $account-height;
+			font-size: 18px;
+			font-weight: 400;
 
-		&:not(.js-is-active) {
-			.form-control {
-				padding: 0;
+			@include min-screen($screen-xs-min) {
+				float: none;
+				margin: 0 10px;
+				// Button style modification
+				border-radius: 18px;
+				width: auto;
+				height: auto;
+				font-size: 12px;
+				font-weight: 600;
+			}
+
+			// Button style modification
+			&.btn-icon {
+				@include max-screen($screen-xs-min) {
+					padding: 0;
+
+					&:before {
+						height:0;
+						width: 0;
+					}
+				}
+			}
+
+			// Button style modification
+			&.btn-2-line {
+				@include max-screen($screen-xs-min) {
+					padding: 0;
+				}
+
+				span {
+					@include max-screen($screen-xs-min) {
+						display: none;
+					}
+				}
 			}
 		}
 
-		&.js-is-active {
+		.search {
+			display: none;
+			position: relative;
+			overflow: auto;
+			min-width: 45px;
+			z-index: 985;
+
+			@include min-screen($screen-xs-min) {
+				display: inline-block;
+			}
+
 			.form-control {
-				width: 135px;
+				float: left;
+				width: 0;
+				transition: width 0.4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+			}
+
+			.btn {
+				position: absolute;
+				top: 0;
+				right: 0;
+				cursor: pointer;
+				margin: 0;
+			}
+
+			&:not(.js-is-active) {
+				.form-control {
+					padding: 0;
+				}
+			}
+
+			&.js-is-active {
+				.form-control {
+					width: 135px;
+				}
 			}
 		}
-
 	}
 }
