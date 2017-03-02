@@ -3,6 +3,7 @@ module.exports = {
 		toggle_nav();
 		reset_nav_on_resize();
 		toggle_sub_nav();
+		top_show_hide();
 
 		$(window).on('resize', function () {
 			reset_nav_on_resize();
@@ -13,6 +14,7 @@ module.exports = {
 		var active_class = 'js-is-active';
 		var trigger = false;
 
+		// Reset navigation on resize window
 		function reset_nav_on_resize() {
 			let win = $(this);
 			let $nav_items = $('.sidebar-navigation li');
@@ -36,6 +38,7 @@ module.exports = {
 			}
 		}
 
+		// Toggle sub navigation
 		function toggle_sub_nav() {
 			$('.sidebar-navigation').find('> li > a:not(.not-interactive)').click(function () {
 				let win = $(window);
@@ -50,10 +53,9 @@ module.exports = {
 						$this_nav_item.removeClass(active_class);
 						$this_nav_item.parent('li').removeClass(active_class);
 						$sidebar.removeClass(active_class);
-						console.log(win.width());
+
 						// Hide overlay on large screens
 						if (win.width() > 480) {
-							console.log('worked');
 							$page_wrapper.removeClass(active_class);
 						}
 					}
@@ -79,6 +81,7 @@ module.exports = {
 			});
 		}
 
+		// Toggle navigation
 		function toggle_nav() {
 			$('a.top-menu__toggle').click(function () {
 				$page_wrapper.toggleClass(active_class);
@@ -101,6 +104,44 @@ module.exports = {
 				}
 				return false;
 			});
+		}
+
+		// Hide Header on on scroll down
+		function top_show_hide() {
+
+			var didScroll;
+			var lastScrollTop = 0;
+			var delta = 5;
+			var $top_menu = $('.top-menu');
+			var $top_account = $('.top-account');
+			var top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight() );
+
+			$(window).scroll(function () {
+				didScroll = true;
+			});
+
+			setInterval(function () {
+				if (didScroll) {
+					hasScrolled();
+					didScroll = false;
+				}
+			}, 250);
+
+			function hasScrolled() {
+				var st = $(this).scrollTop();
+
+				if (Math.abs(lastScrollTop - st) <= delta)
+					return;
+
+				if (st > lastScrollTop && st > top_height) {
+					$top_account.removeClass('top-down').addClass('top-up');
+				} else {
+					if (st + $(window).height() < $(document).height()) {
+						$top_account.removeClass('top-up').addClass('top-down');
+					}
+				}
+				lastScrollTop = st;
+			}
 		}
 	}
 };

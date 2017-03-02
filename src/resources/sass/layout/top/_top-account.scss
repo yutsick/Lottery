@@ -1,18 +1,25 @@
 .top-account {
 	position: fixed;
 	top: $menu-height;
+	height: $account-height;
 	z-index: 980;
 	width: 100%;
+	transform: translate3d(0,0,0);
+	transition: transform $duration-fast $ease-standard $delay-none;
 
 	@include min-screen($screen-xs-min) {
 		position: static;
 		top: auto;
 	}
 
+	&.top-up {
+		transform: translate3d(0,-$account-height,0);
+	}
+
 	.top-account__user {
-		height: $account-user-height;
 		background-color: $color-base-light-02;
 		padding: 6px $padding-small 0 $padding-small;
+		height: 100%;
 	}
 
 	.top-account__buttons {
@@ -25,6 +32,7 @@
 		zoom: 1;
 		text-align: center;
 		width: 100%;
+		height: 100%;
 
 		@include min-screen($screen-xs-min) {
 			padding: $padding-default 0;
