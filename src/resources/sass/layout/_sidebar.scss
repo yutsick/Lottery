@@ -12,22 +12,22 @@
 	transition: transform $duration-fast $delay-none $ease-in-out, width $duration-quick $delay-none $ease-in-out;
 	box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		transform: translate3d(0, 0, 0);
 	}
 
-	&.js-is-active {
-		@include max-screen($screen-xs-min) {
+	@include screen($screen-sm-min, $screen-md-max) {
+		left: $sidebar-width-mobile;
+		margin-left: -$sidebar-width-mobile;
+		width: $sidebar-width-mobile;
+	}
+
+	&.js-is-active { // on #sidebar
+		@include max-screen($screen-sm-min) {
 			left: $sidebar-width-mobile;
 			margin-left: -$sidebar-width-mobile;
 			width: $sidebar-width-mobile;
 		}
-	}
-
-	@include screen($screen-xs-min, $screen-md-min) {
-		left: $sidebar-width-mobile;
-		margin-left: -$sidebar-width-mobile;
-		width: $sidebar-width-mobile;
 	}
 
 	.js-is-active & { // on #page-wrapper

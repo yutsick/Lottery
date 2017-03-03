@@ -72,7 +72,7 @@
 			position: absolute;
 			top: 0;
 			left: $sidebar-width-desktop;
-			width: $sidebar-width-desktop;
+			width: $sub-navigation-width-mobile;
 			height: 100%;
 			transform: translate3d(0, 0, 0);
 			background-color: $color-base-light-02;
@@ -81,14 +81,18 @@
 			transition: opacity $duration-quick $delay-none $ease-in-out, visibility 0s $duration-fast;
 			padding-top: $sidebar-logo-height - 1;
 
-			#sidebar.js-is-active & {
-				@include max-screen($screen-xs-min) {
-					left: $sidebar-width-mobile;
-				}
+			@include min-screen($screen-sm-min) {
+				width: $sub-navigation-width-desktop;
 			}
 
-			@include screen($screen-xs-min, $screen-md-min) {
+			@include screen($screen-sm-min, $screen-md-max) {
 				left: $sidebar-width-mobile;
+			}
+
+			#sidebar.js-is-active & {
+				@include max-screen($screen-sm-min) {
+					left: $sidebar-width-mobile;
+				}
 			}
 
 			// Alternative sub navigation
@@ -144,14 +148,14 @@
 					width: 0;
 				}
 
-				#sidebar.js-is-active & {
-					@include max-screen($screen-xs-min) {
-						padding: $padding-default;
-					}
-				}
-
 				&:hover {
 					background-color: transparent;
+				}
+
+				#sidebar.js-is-active & {
+					@include max-screen($screen-sm-min) {
+						padding: $padding-medium $padding-default 0 $padding-default;
+					}
 				}
 
 				img {
@@ -169,20 +173,20 @@
 			line-height: 1;
 			text-align: left;
 
+			@include screen($screen-sm-min, $screen-md-max) {
+				padding: 40px 0 0;
+				font-size: 10px;
+				line-height: 14px;
+				text-align: center;
+			}
+
 			#sidebar.js-is-active & {
-				@include max-screen($screen-xs-min) {
-					padding: 40px 10px 0 10px;
-					font-size: 8px;
+				@include max-screen($screen-sm-min) {
+					padding: 40px 0 0;
+					font-size: 10px;
 					line-height: 14px;
 					text-align: center;
 				}
-			}
-
-			@include screen($screen-xs-min, $screen-md-min) {
-				padding: 40px 10px 0 10px;
-				font-size: 8px;
-				line-height: 14px;
-				text-align: center;
 			}
 
 			&:before {
@@ -196,18 +200,18 @@
 				left: 20px;
 				margin: auto;
 
+				@include screen($screen-sm-min, $screen-md-max) {
+					top: 10px;
+					margin-left: -15px;
+					left: 50%;
+				}
+
 				#sidebar.js-is-active & {
-					@include max-screen($screen-xs-min) {
+					@include max-screen($screen-sm-min) {
 						top: 10px;
 						margin-left: -15px;
 						left: 50%;
 					}
-				}
-
-				@include screen($screen-xs-min, $screen-md-min) {
-					top: 10px;
-					margin-left: -15px;
-					left: 50%;
 				}
 			}
 
@@ -233,14 +237,14 @@
 
 			span {
 				&:last-of-type {
-					#sidebar.js-is-active & {
-						@include max-screen($screen-xs-min) {
-							display: none;
-						}
+					@include screen($screen-sm-min, $screen-md-max) {
+						display: none;
 					}
 
-					@include screen($screen-xs-min, $screen-md-min) {
-						display: none;
+					#sidebar.js-is-active & {
+						@include max-screen($screen-sm-min) {
+							display: none;
+						}
 					}
 				}
 			}

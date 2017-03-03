@@ -20,15 +20,16 @@ $top-padding-logged-in: $menu-height + $account-user-height;
 $top-padding-logged-out: $menu-height + $account-buttons-height;
 
 // Sidebar
-$sidebar-width-mobile: 90px;
+$sidebar-width-mobile: 70px;
 $sidebar-width-desktop: 240px;
 $sidebar-total-width-mobile: $sidebar-width-mobile + $sidebar-width-desktop;
 $sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop;
-
 $sidebar-item-height: 63px;
-
 $sidebar-logo-height: 69px;
 $sidebar-logo-image-height: 36px;
+
+$sub-navigation-width-mobile: 170px;
+$sub-navigation-width-desktop: $sidebar-width-desktop;
 
 /**
  * Fonts

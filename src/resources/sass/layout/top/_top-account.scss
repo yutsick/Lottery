@@ -6,7 +6,7 @@
 	transform: translate3d(0,0,0);
 	transition: transform $duration-fast $ease-standard $delay-none;
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		position: static;
 		top: auto;
 	}
@@ -33,7 +33,7 @@
 		overflow: auto;
 		zoom: 1;
 
-		@include min-screen($screen-xs-min) {
+		@include min-screen($screen-sm-min) {
 			padding: $padding-default;
 			height: auto;
 		}
@@ -50,7 +50,7 @@
 			width: 50%;
 			height: 100%;
 
-			@include min-screen($screen-xs-min) {
+			@include min-screen($screen-sm-min) {
 				float: none;
 				margin: 0 10px;
 				// Button style modification
@@ -63,7 +63,7 @@
 
 			// Button style modification
 			&.btn-icon {
-				@include max-screen($screen-xs-min) {
+				@include max-screen($screen-sm-min) {
 					padding: 0;
 
 					&:before {
@@ -75,12 +75,12 @@
 
 			// Button style modification
 			&.btn-2-line {
-				@include max-screen($screen-xs-min) {
+				@include max-screen($screen-sm-min) {
 					padding: 0;
 				}
 
 				span {
-					@include max-screen($screen-xs-min) {
+					@include max-screen($screen-sm-min) {
 						display: none;
 					}
 				}
@@ -94,7 +94,7 @@
 			min-width: 45px;
 			z-index: 985;
 
-			@include min-screen($screen-xs-min) {
+			@include min-screen($screen-sm-min) {
 				display: inline-block;
 			}
 

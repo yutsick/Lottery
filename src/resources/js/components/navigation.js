@@ -13,7 +13,7 @@ module.exports = {
 		var $sidebar = $('#sidebar');
 		var active_class = 'js-is-active';
 		var trigger = false;
-		var mobile_width = 480;
+		var mobile_width = 768;
 
 		// Reset navigation on resize window
 		function reset_nav_on_resize() {

@@ -10,7 +10,7 @@
 	height: $menu-height;
 	box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		display: none;
 	}
 

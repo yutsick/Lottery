@@ -6,7 +6,7 @@
 	text-align: center;
 	padding: $padding-small;
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		padding: $padding-default;
 	}
 }

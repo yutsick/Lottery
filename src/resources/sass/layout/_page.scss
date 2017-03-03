@@ -1,18 +1,18 @@
 #page-wrapper {
 	padding-left: 0;
 
-	@include min-screen($screen-xs-min) {
-		padding-left: $sidebar-width-mobile;
+	@include min-screen($screen-md-max) {
+		padding-left: $sidebar-width-desktop;
 	}
 
-	@include min-screen($screen-md-min) {
-		padding-left: $sidebar-width-desktop;
+	@include screen($screen-sm-min, $screen-md-max) {
+		padding-left: $sidebar-width-mobile;
 	}
 
 	&.logged-in {
 		padding-top: $top-padding-logged-in;
 
-		@include min-screen($screen-xs-min) {
+		@include min-screen($screen-sm-min) {
 			padding-top: 0;
 		}
 	}
@@ -20,7 +20,7 @@
 	&.logged-out {
 		padding-top: $top-padding-logged-out;
 
-		@include min-screen($screen-xs-min) {
+		@include min-screen($screen-sm-min) {
 			padding-top: 0;
 		}
 	}
