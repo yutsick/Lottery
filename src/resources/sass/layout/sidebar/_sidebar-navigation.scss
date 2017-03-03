@@ -137,25 +137,18 @@
 			height: $sidebar-logo-height - 1; // - border
 
 			> a {
-				display: block;
-				height: 100%;
 				padding: $padding-medium $padding-default 0 $padding-default;
-
-				&:before {
-					// No icon on logotype item
-					content: '';
-					height: 0;
-					width: 0;
-				}
-
-				&:hover {
-					background-color: transparent;
-				}
 
 				#sidebar.js-is-active & {
 					@include max-screen($screen-sm-min) {
 						padding: $padding-medium $padding-default 0 $padding-default;
 					}
+				}
+
+				&:before {
+					// No icon on logotype item
+					height: 0;
+					width: 0;
 				}
 
 				img {
@@ -189,6 +182,7 @@
 				}
 			}
 
+			// Item icon
 			&:before {
 				content: '';
 				height: 30px;
@@ -199,22 +193,24 @@
 				top: 15px;
 				left: 20px;
 				margin: auto;
+				transition: top $duration-quick $delay-none $ease-in-out;
 
 				@include screen($screen-sm-min, $screen-md-max) {
-					top: 10px;
+					top: 7px;
 					margin-left: -15px;
 					left: 50%;
 				}
 
 				#sidebar.js-is-active & {
 					@include max-screen($screen-sm-min) {
-						top: 10px;
+						top: 7px;
 						margin-left: -15px;
 						left: 50%;
 					}
 				}
 			}
 
+			// Active border
 			&:after {
 				content: '';
 				height: 100%;
