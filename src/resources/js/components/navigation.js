@@ -13,14 +13,15 @@ module.exports = {
 		var $sidebar = $('#sidebar');
 		var active_class = 'js-is-active';
 		var trigger = false;
+		var mobile_width = 480;
 
 		// Reset navigation on resize window
 		function reset_nav_on_resize() {
-			let win = $(this);
+			let $win = $(this);
 			let $nav_items = $('.sidebar-navigation li');
 
 			// Check if window is going from small to large and reset navigation states
-			if ((win.width() >= 480) && (trigger == false)) {
+			if (($win.width() >= mobile_width) && (trigger == false)) {
 
 				// Only if the sub menu is not active
 					$nav_items.each( function () {
@@ -33,7 +34,7 @@ module.exports = {
 					trigger = true;
 			}
 
-			if ((win.width() <= 480) && (trigger == true)) {
+			if (($win.width() <= mobile_width) && (trigger == true)) {
 				trigger = false;
 			}
 		}
@@ -41,7 +42,7 @@ module.exports = {
 		// Toggle sub navigation
 		function toggle_sub_nav() {
 			$('.sidebar-navigation').find('> li > a:not(.not-interactive)').click(function () {
-				let win = $(window);
+				let $win = $(window);
 				let $this_nav_item = $(this);
 				let $this_nav_item_sub_menu = $this_nav_item.parent('li');
 
@@ -55,7 +56,7 @@ module.exports = {
 						$sidebar.removeClass(active_class);
 
 						// Hide overlay on large screens
-						if (win.width() > 480) {
+						if ($win.width() > mobile_width) {
 							$page_wrapper.removeClass(active_class);
 						}
 					}
@@ -115,7 +116,11 @@ module.exports = {
 			var top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight() );
 
 			$(window).scroll(function () {
-				didScroll = true;
+				let $win = $(this);
+
+				if ($win.width() <= mobile_width) {
+					didScroll = true;
+				}
 			});
 
 			setInterval(function () {
@@ -126,15 +131,15 @@ module.exports = {
 			}, 250);
 
 			function hasScrolled() {
-				var st = $(this).scrollTop();
-
+				let st = $(this).scrollTop();
+				let $win = $(window);
 				if (Math.abs(lastScrollTop - st) <= delta)
 					return;
 
 				if (st > lastScrollTop && st > top_height) {
 					$top_account.removeClass('top-down').addClass('top-up');
 				} else {
-					if (st + $(window).height() < $(document).height()) {
+					if (st + $win.height() < $(document).height()) {
 						$top_account.removeClass('top-up').addClass('top-down');
 					}
 				}
