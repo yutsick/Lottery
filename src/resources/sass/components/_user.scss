@@ -1,16 +1,32 @@
 .user {
+	overflow: auto;
+	zoom: 1;
+
 	> * {
-		vertical-align: top;
+		font-size: 12px;
+		line-height: 18px;
+		display: block;
+
+		> * {
+			vertical-align: middle;
+			display: inline-block;
+		}
 	}
 
 	.user__info {
-		display: inline-block;
-		margin-left: $margin-small;
-		font-size: 12px;
-		line-height: 18px;
+		float: left;
+
+		.icon {
+			margin-right: $margin-small;
+		}
+	}
+
+	.user__amount {
+		float: right;
 
 		span {
 			display: block;
+			margin-top: 3px;
 		}
 	}
 }

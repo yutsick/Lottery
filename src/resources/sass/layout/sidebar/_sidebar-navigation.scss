@@ -22,6 +22,13 @@
 			border: none;
 		}
 
+		.navigation-title {
+			display: block;
+			font-size: 18px;
+			font-weight: 600;
+			padding: $padding-default $padding-medium 0 $padding-default;
+		}
+
 		a {
 			display: block;
 			padding: $padding-medium $padding-medium 0 $padding-default;
@@ -35,7 +42,6 @@
 			transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 
 			&:hover,
-			&:focus,
 			&.js-is-active {
 				text-decoration: none;
 				color: $color-primary;
@@ -43,6 +49,9 @@
 				&:before {
 					background-color: $color-primary;
 				}
+			}
+			&:focus {
+				text-decoration: none;
 			}
 
 			span {
@@ -80,6 +89,32 @@
 
 			@include screen($screen-xs-min, $screen-md-min) {
 				left: $sidebar-width-mobile;
+			}
+
+			// Alternative sub navigation
+			&.sub-navigation-alternative {
+				padding-top: 0;
+			}
+
+			// Third depth
+			> ul {
+				height: auto;
+
+				&:first-child {
+					li {
+						&:first-child {
+							height: $sidebar-logo-height - 1; // - border
+						}
+					}
+				}
+
+				&:not(:first-child) {
+					li {
+						&:first-child {
+							border-top: 1px solid $color-base-light-03;
+						}
+					}
+				}
 			}
 		}
 
