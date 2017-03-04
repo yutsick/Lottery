@@ -1,8 +1,10 @@
 <aside id="sidebar">
 	<ul class="sidebar-navigation">
 		<li>
-			<a class="logotype not-interactive" >
-				<img src="" alt="">
+			<a class="logotype not-interactive">
+				<div>
+					<img src="" alt="">
+				</div>
 			</a>
 		</li>
 		<li class="has-sub-menu">
@@ -62,20 +64,19 @@
 
 		@@if (signed_in === true) {
 		<li>
-			<a href="/">
-				<div>
-					Stefan Jakobsson
-					<span>Spelkonto</span>
-				</div>
-			</a>
-		</li>
+			<div class="user">
+				<i class="icon icon-more"></i>
+				Stefan Jakobsson
+				<span>Spelplånbok 450kr</span>
+				<span>Vinstkonto 450kr</span>
+			</div>
 		}
 
 	</ul>
 	<div class="sidebar-account">
 		<button class="btn btn-primary btn-icon">Registrera lott</button>
 		@@if (signed_in === true) {
-			<button class="btn btn-default btn-icon">Logga ut</button>
+		<button class="btn btn-default btn-icon">Logga ut</button>
 		}
 	</div>
 </aside>
