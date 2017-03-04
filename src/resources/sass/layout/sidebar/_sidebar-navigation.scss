@@ -22,21 +22,29 @@
 		&.has-sub-menu {
 			> a {
 				&:after {
-					content: '';
-					height: 5px;
-					width: 5px;
+					font-family: "ml-icons";
+					-webkit-font-smoothing: antialiased;
+					-moz-osx-font-smoothing: grayscale;
+					font-style: normal;
+					font-variant: normal;
+					font-weight: normal;
+					content: '\e908';
+					width: 10px;
+					font-size: 12px;
+					height: auto;
 					position: absolute;
-					background-color: $color-base-light-01;
-					top: 0;
+					color: $color-base-light-03;
+					top: 50%;
 					right: 0;
 					margin: auto;
-					transform: translate3d(-5px, 0, 0);
-					transition: background $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
+					transform: translate3d(-5px, -50%, 0);
+					transition: color $duration-quick $delay-none $ease-in-out;
 				}
 
+				&:hover,
 				&.js-is-active {
 					&:after {
-						background-color: $color-base-primary;
+						color: $color-base-light-01;
 					}
 				}
 			}
