@@ -31,15 +31,15 @@ elixir((mix) => {
     mix.copy(elixir.config.assetsPath + '/img', elixir.config.publicPath + '/img');
 	mix.copy(elixir.config.assetsPath + '/fonts', elixir.config.publicPath + '/fonts');
 
-	mix.fonts(
-		[elixir.config.assetsPath + '/icons/**/*.svg'],
+/*	mix.fonts(
+		[elixir.config.assetsPath + '/icons/!**!/!*.svg'],
 		elixir.config.publicPath + '/fonts/', {
 			font: { fontName: fontName },
 			css: {
 				fontName: fontName,
 				targetPath: '../../../_' + fontName + '.scss'
 			}
-		});
+		});*/
 
     mix.browserSync({
         proxy: null,
