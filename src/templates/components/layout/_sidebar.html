@@ -5,26 +5,36 @@
 				<img src="" alt="">
 			</a>
 		</li>
-		<li>
+		<li class="has-sub-menu">
 			<a href="/">
-				Spela
-				<span>Bingo och Lotter</span>
+				<i class="icon icon-game"></i>
+				<div>
+					Spela
+					<span>Bingo och Lotter</span>
+				</div>
 			</a>
 			@@include('layout/sidebar/_sub-navigation-third.html')
 		</li>
 		<li>
 			<a href="/">
-				<span class="hide-mobile">Vinster</span>
-				<span class="show-mobile">Vinster</span>
-				<span>Vinster & inspiration</span>
+				<i class="icon icon-star"></i>
+				<div>
+					<!-- Use if different text in mobile -->
+					<span class="hide-mobile">Vinster</span>
+					<span class="show-mobile">Vinster</span>
+					<span>Vinster & inspiration</span>
+				</div>
 			</a>
 		</li>
 
 		@@if (signed_in === true) {
-		<li>
+		<li class="has-sub-menu">
 			<a href="/">
-				Mina sidor
-				<span>Överföringar mm.</span>
+				<i class="icon icon-user"></i>
+				<div>
+					Mina sidor
+					<span>Överföringar mm.</span>
+				</div>
 			</a>
 			@@include('layout/sidebar/_sub-navigation.html')
 		</li>
@@ -32,14 +42,20 @@
 
 		<li>
 			<a href="/">
-				Ändamål
-				<span>Du gör skillnad</span>
+				<i class="icon icon-heart"></i>
+				<div>
+					Ändamål
+					<span>Du gör skillnad</span>
+				</div>
 			</a>
 		</li>
-		<li>
+		<li class="has-sub-menu">
 			<a>
-				Övrigt
-				<span>Mer om oss</span>
+				<i class="icon icon-more"></i>
+				<div>
+					Övrigt
+					<span>Mer om oss</span>
+				</div>
 			</a>
 			@@include('layout/sidebar/_sub-navigation.html')
 		</li>
@@ -47,17 +63,19 @@
 		@@if (signed_in === true) {
 		<li>
 			<a href="/">
-				Stefan Jakobsson
-				<span>Spelkonto</span>
+				<div>
+					Stefan Jakobsson
+					<span>Spelkonto</span>
+				</div>
 			</a>
 		</li>
 		}
 
 	</ul>
 	<div class="sidebar-account">
-		<button class="btn btn-primary">Registrera lott</button>
+		<button class="btn btn-primary btn-icon">Registrera lott</button>
 		@@if (signed_in === true) {
-			<button class="btn btn-default">Logga ut</button>
+			<button class="btn btn-default btn-icon">Logga ut</button>
 		}
 	</div>
 </aside>

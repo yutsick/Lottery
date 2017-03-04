@@ -1,17 +1,58 @@
 .sidebar-account {
-	display: none;
+	display: block;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding: $padding-default;
+	padding: 0 $padding-default $padding-default;
+	box-sizing: border-box;
 
-	@include min-screen($screen-md-min) {
-		display: block;
+	@include screen($screen-sm-min, $screen-md-max) {
+		padding: 0 0 $padding-default;
+	}
+
+	#sidebar.js-is-active & {
+		@include max-screen($screen-sm-min) {
+			padding: 0 0 $padding-default;
+		}
 	}
 
 	.btn {
-		// Button style modification
 		width: 100%;
 		margin-top: $margin-default;
+		font-size: 10px;
+		position: relative;
+		white-space: normal;
+
+		@include screen($screen-sm-min, $screen-md-max) {
+			color: $color-base-secondary;
+			background-color: transparent;
+			border: none;
+			padding: 2px;
+		}
+
+		#sidebar.js-is-active & {
+			@include max-screen($screen-sm-min) {
+				color: $color-base-secondary;
+				background-color: transparent;
+				border: none;
+				padding: 2px;
+			}
+		}
+
+		&.btn-icon {
+			@include screen($screen-sm-min, $screen-md-max) {
+				padding-left: 2px;
+			}
+
+			#sidebar.js-is-active & {
+				@include max-screen($screen-sm-min) {
+					padding-left: 12px;
+				}
+			}
+
+			&:before {
+				content: none;
+			}
+		}
 	}
 }

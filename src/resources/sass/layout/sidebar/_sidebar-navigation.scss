@@ -1,15 +1,12 @@
 .sidebar-navigation {
 	list-style: none;
 	padding: 0;
-	margin: 0;
 	overflow-y: auto;
 	height: 100%;
 
 	ul {
 		list-style: none;
 		padding: 0;
-		margin: 0;
-		height: 100%;
 	}
 
 	// Defaults menu item styles
@@ -22,8 +19,30 @@
 			border: none;
 		}
 
-		.navigation-title {
-			display: block;
+		&.has-sub-menu {
+/*			> a {
+				&:after {
+					content: '';
+					height: 5px;
+					width: 5px;
+					position: absolute;
+					background-color: $color-base-light-01;
+					top: 0;
+					right: 0;
+					margin: auto;
+					transform: translate3d(-5px, 0, 0);
+					transition: background $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
+				}
+
+				&.js-is-active {
+					&:after {
+						background-color: $color-base-primary;
+					}
+				}
+			}*/
+		}
+
+		&.navigation-title {
 			font-size: 18px;
 			font-weight: 600;
 			padding: $padding-default $padding-medium 0 $padding-default;
@@ -46,14 +65,30 @@
 				text-decoration: none;
 				color: $color-primary;
 
-				&:before {
-					background-color: $color-primary;
+				i {
+					color: $color-primary;
 				}
 			}
+
 			&:focus {
 				text-decoration: none;
 			}
+		}
 
+		i,
+		div {
+			display: inline-block;
+			vert-align: middle;
+		}
+
+		i {
+			width: 30px;
+			text-align: center;
+			margin-right: $margin-small;
+			color: $color-base-complement;
+		}
+
+		div {
 			span {
 				&:last-of-type {
 					display: block;
@@ -133,6 +168,7 @@
 
 	// First level menu items
 	> li {
+		// Logo and search bar
 		&:first-child {
 			height: $sidebar-logo-height - 1; // - border
 
@@ -143,12 +179,6 @@
 					@include max-screen($screen-sm-min) {
 						padding: $padding-medium $padding-default 0 $padding-default;
 					}
-				}
-
-				&:before {
-					// No icon on logotype item
-					height: 0;
-					width: 0;
 				}
 
 				img {
@@ -162,12 +192,8 @@
 		}
 
 		> a {
-			padding: $padding-medium $padding-medium 0 60px;
-			line-height: 1;
-			text-align: left;
-
 			@include screen($screen-sm-min, $screen-md-max) {
-				padding: 40px 0 0;
+				padding: 18px 0 0;
 				font-size: 10px;
 				line-height: 14px;
 				text-align: center;
@@ -175,43 +201,15 @@
 
 			#sidebar.js-is-active & {
 				@include max-screen($screen-sm-min) {
-					padding: 40px 0 0;
+					padding: 18px 0 0;
 					font-size: 10px;
 					line-height: 14px;
 					text-align: center;
 				}
 			}
 
-			// Item icon
-			&:before {
-				content: '';
-				height: 30px;
-				width: 30px;
-				border-radius: 100%;
-				position: absolute;
-				background-color: $color-base-light-01;
-				top: 15px;
-				left: 20px;
-				margin: auto;
-				transition: top $duration-quick $delay-none $ease-in-out;
-
-				@include screen($screen-sm-min, $screen-md-max) {
-					top: 7px;
-					margin-left: -15px;
-					left: 50%;
-				}
-
-				#sidebar.js-is-active & {
-					@include max-screen($screen-sm-min) {
-						top: 7px;
-						margin-left: -15px;
-						left: 50%;
-					}
-				}
-			}
-
 			// Active border
-			&:after {
+			&:before {
 				content: '';
 				height: 100%;
 				width: 5px;
@@ -225,22 +223,44 @@
 			}
 
 			&.js-is-active {
-				&:after {
+				&:before {
 					transform: translate3d(0, 0, 0);
 					background-color: $color-primary;
 				}
 			}
 
-			span {
-				&:last-of-type {
-					@include screen($screen-sm-min, $screen-md-max) {
-						display: none;
-					}
-
-					#sidebar.js-is-active & {
-						@include max-screen($screen-sm-min) {
+			div {
+				span {
+					&:last-of-type {
+						@include screen($screen-sm-min, $screen-md-max) {
 							display: none;
 						}
+
+						#sidebar.js-is-active & {
+							@include max-screen($screen-sm-min) {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+
+			i {
+				@include screen($screen-sm-min, $screen-md-max) {
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 8px;
+					display: block;
+					text-align: center;
+				}
+
+				#sidebar.js-is-active & {
+					@include max-screen($screen-sm-min) {
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 8px;
+						display: block;
+						text-align: center;
 					}
 				}
 			}
