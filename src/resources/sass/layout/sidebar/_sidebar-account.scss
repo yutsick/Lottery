@@ -19,39 +19,86 @@
 	.btn {
 		width: 100%;
 		margin-top: $margin-default;
-		font-size: 10px;
+		font-size: 12px;
 		position: relative;
 		white-space: normal;
+
+		i {
+			display: none;
+		}
 
 		@include screen($screen-sm-min, $screen-md-max) {
 			color: $color-base-secondary;
 			background-color: transparent;
+			font-size: 10px;
 			border: none;
 			padding: 2px;
-		}
+			margin-top: $margin-medium;
 
+			i {
+				display: block;
+				margin-right: 0;
+			}
+		}
 		#sidebar.js-is-active & {
 			@include max-screen($screen-sm-min) {
 				color: $color-base-secondary;
 				background-color: transparent;
+				font-size: 10px;
 				border: none;
 				padding: 2px;
-			}
-		}
+				margin-top: $margin-medium;
 
-		&.btn-icon {
-			@include screen($screen-sm-min, $screen-md-max) {
-				padding-left: 2px;
-			}
-
-			#sidebar.js-is-active & {
-				@include max-screen($screen-sm-min) {
-					padding-left: 12px;
+				i {
+					display: block;
+					margin-right: 0;
 				}
 			}
+		}
+	}
 
-			&:before {
-				content: none;
+	.btn-icon {
+		padding: 9px 30px;
+
+		@include screen($screen-sm-min, $screen-md-max) {
+			padding: 0 2px;
+		}
+		#sidebar.js-is-active & {
+			@include max-screen($screen-sm-min) {
+				padding: 0 2px;
+			}
+		}
+	}
+
+	.btn-primary {
+		@include screen($screen-sm-min, $screen-md-max) {
+			text-align: center;
+
+			i {
+				background-color: $color_primary;
+				border-radius: 100%;
+				width: 40px;
+				height: 40px;
+				color: $color_light;
+				margin-bottom: 5px;
+				display: inline-block;
+				line-height: 2.3;
+			}
+		}
+		#sidebar.js-is-active & {
+			@include max-screen($screen-sm-min) {
+				text-align: center;
+
+				i {
+					background-color: $color_primary;
+					border-radius: 100%;
+					width: 40px;
+					height: 40px;
+					color: $color_light;
+					margin-bottom: 5px;
+					display: inline-block;
+					line-height: 2.3;
+				}
 			}
 		}
 	}
