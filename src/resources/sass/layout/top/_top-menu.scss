@@ -6,7 +6,7 @@
 	display: block;
 	width: 100%;
 	background-color: $color_light;
-	padding: 10px;
+	padding: 0;
 	height: $menu-height;
 	box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
 
@@ -18,19 +18,17 @@
 		display: inline-block;
 		position: relative;
 
-		&.top-menu__toggle {
-			height: 30px;
-			width: 30px;
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
 
-			&:before {
-				content: ' ';
-				height: 25px;
-				width: 25px;
-				border-radius: 100%;
-				position: absolute;
-				top: 0;
-				left: 00;
-				background-color: $color-shore;
+		&.top-menu__toggle {
+			padding: 24px;
+			color: $color-base-light;
+
+			i {
+				font-size: 18px;
 			}
 		}
 

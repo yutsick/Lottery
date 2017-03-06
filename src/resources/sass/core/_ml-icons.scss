@@ -21,6 +21,9 @@
 	text-transform: none;
 }
 
+.icon-burger:before {
+	content: "\e909";
+}
 .icon-more-alt:before {
 	content: "\e908";
 }

@@ -1,4 +1,5 @@
 .top-account {
+	display: block;
 	position: fixed;
 	top: $menu-height;
 	z-index: 980;
@@ -11,13 +12,17 @@
 		top: auto;
 	}
 
+	@include min-screen($screen-md-max) {
+		display: none;
+	}
+
 	&.top-up {
 		transform: translate3d(0,-$account-user-height,0);
 	}
 
 	.top-account__user {
 		background-color: $color-base-light-02;
-		padding: $padding-small $padding-medium 0 $padding-medium;
+		padding: $padding-small $padding-default 0 $padding-default;
 		height: $account-user-height;
 
 		.user {
