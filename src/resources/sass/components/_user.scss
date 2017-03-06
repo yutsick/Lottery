@@ -1,38 +1,11 @@
 .user {
-	// overflow: auto;
-	// zoom: 1;
-
-	> * {
-		// font-size: 12px;
-		// line-height: 18px;
-		// display: block;
-
-		> * {
-			// vertical-align: middle;
-			// display: inline-block;
-		}
-	}
-
 	.user__name {
 		font-size: 14px;
 		font-weight: 600;
 		color: $color-base-secondary;
 	}
 
-	.user__info {
-		float: left;
-
-		.icon {
-			margin-right: $margin-small;
-		}
-	}
-
-	.user__amount {
-		float: right;
-
-		span {
-			display: block;
-			margin-top: 3px;
-		}
+	span {
+		display: inline-block;
 	}
 }

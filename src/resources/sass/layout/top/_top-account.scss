@@ -17,8 +17,29 @@
 
 	.top-account__user {
 		background-color: $color-base-light-02;
-		padding: 14px $padding-medium 0 $padding-medium;
+		padding: $padding-small $padding-medium 0 $padding-medium;
 		height: $account-user-height;
+
+		.user {
+			overflow: auto;
+			zoom: 1;
+			width: 100%;
+
+			> * {
+				> * {
+					vertical-align: middle;
+					display: inline-block;
+				}
+			}
+
+			i {
+				margin-right: $margin-small;
+			}
+
+			.user__winnings {
+				margin-top: 5px;
+			}
+		}
 	}
 
 	.top-account__buttons {
