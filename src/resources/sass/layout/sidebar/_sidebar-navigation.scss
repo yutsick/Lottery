@@ -19,6 +19,89 @@
 			border: none;
 		}
 
+		i,
+		div {
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		i {
+			width: 30px;
+			text-align: center;
+			margin-right: $margin-small;
+			color: $color-base-complement;
+		}
+
+		.navigation-title {
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		// Custom user styles
+		div.user {
+			i,
+			div {
+				vertical-align: top;
+			}
+
+			div {
+				max-width: 160px;
+			}
+
+			span {
+				@include max-screen($screen-md-max) {
+					display: none;
+				}
+			}
+
+			.user__wallet,
+			.user__winnings {
+				font-size: 11px;
+				line-height: 17px;
+			}
+		}
+
+		a {
+			display: block;
+			padding: $padding-medium $padding-medium 0 $padding-default;
+			line-height: 1;
+			text-align: left;
+			font-size: 14px;
+			font-weight: 600;
+			color: $color-base-secondary;
+			position: relative;
+			height: 100%;
+			transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
+
+			&:hover,
+			&.js-is-active {
+				text-decoration: none;
+				color: $color-primary;
+
+				i {
+					color: $color-primary;
+				}
+			}
+
+			&:focus {
+				text-decoration: none;
+			}
+
+			div {
+				span {
+					&:last-of-type {
+						display: block;
+						font-size: 11px;
+						line-height: 17px;
+						font-weight: 400;
+						color: $color-base-complement;
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+
+		// Navigation item with sub menu
 		&.has-sub-menu {
 			> a {
 				&:after {
@@ -50,63 +133,9 @@
 			}
 		}
 
-		&.navigation-title {
-			font-size: 18px;
-			font-weight: 600;
-			padding: $padding-default $padding-medium 0 $padding-default;
-		}
-
-		a {
-			display: block;
+		// Navigation item with content instead of link
+		&.has-content {
 			padding: $padding-medium $padding-medium 0 $padding-default;
-			line-height: 1;
-			text-align: left;
-			font-size: 14px;
-			font-weight: 600;
-			color: $color-base-secondary;
-			position: relative;
-			height: 100%;
-			transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
-
-			&:hover,
-			&.js-is-active {
-				text-decoration: none;
-				color: $color-primary;
-
-				i {
-					color: $color-primary;
-				}
-			}
-
-			&:focus {
-				text-decoration: none;
-			}
-		}
-
-		i,
-		div {
-			display: inline-block;
-			vert-align: middle;
-		}
-
-		i {
-			width: 30px;
-			text-align: center;
-			margin-right: $margin-small;
-			color: $color-base-complement;
-		}
-
-		div {
-			span {
-				&:last-of-type {
-					display: block;
-					font-size: 11px;
-					line-height: 15px;
-					font-weight: 400;
-					color: $color-base-complement;
-					margin-top: 5px;
-				}
-			}
 		}
 
 		// Sub navigation
@@ -196,6 +225,13 @@
 					background-color: $color-base-primary;
 					border: none;
 				}
+			}
+		}
+
+		// User item
+		&:last-child {
+			&.has-content {
+				height: auto;
 			}
 		}
 

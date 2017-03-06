@@ -1,13 +1,20 @@
+// ML Icons
 .icon {
-	&.icon-cirlce {
-		border-radius: 100%;
-	}
+	font-size: 30px;
+	line-height: 1;
+	font-weight: 400;
+}
+
+// Custom icons
+.icon-cirlce {
+	border-radius: 100%;
 }
 
 .icon-default {
+	border-radius: 100%;
 	display: inline-block;
-	width: 25px;
-	height: 25px;
+	width: 30px;
+	height: 30px;
 	background-color: $color-light;
 	border: 1px solid $color-base-light-03;
 }

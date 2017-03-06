@@ -12,7 +12,7 @@ const rename = require('gulp-rename');
  | Here we can define custom gulp tasks that aren't included
  | in elixir by default. Check documentation at:
  | https://laravel.com/docs/5.2/elixir#writing-elixir-extensions
- |  
+ |
  */
 elixir.extend('fileinclude', function () {
     new Task('fileinclude', function () {
@@ -25,7 +25,7 @@ elixir.extend('fileinclude', function () {
             // include partials
             .pipe(fileinclude({
                 prefix: '@@',
-                basepath: 'src/templates/components',
+                basepath: 'src/templates/partials',
                 filters: {
                     json: JSON.stringify
                 }
