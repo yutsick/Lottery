@@ -219,24 +219,27 @@
 		// Logo and search bar
 		&:first-child {
 			height: $sidebar-logo-height - 1; // - border
+			text-align: center;
 
+			img {
+				display: inline-block;
+				max-width: 75px;
+				height: auto;
+				width: 100%;
+				border: none;
+			}
+/*
 			> a {
 				padding: $padding-medium $padding-default 0 $padding-default;
+				text-align: center;
 
 				#sidebar.js-is-active & {
 					@include max-screen($screen-sm-min) {
 						padding: $padding-medium $padding-default 0 $padding-default;
 					}
 				}
-
-				img {
-					max-width: 300px;
-					height: $sidebar-logo-image-height;
-					width: 100%;
-					background-color: $color-base-primary;
-					border: none;
-				}
 			}
+			*/
 		}
 
 		// User item
