@@ -13,7 +13,7 @@ $(function () {
 	});
 
 	$('#search').click(function () {
-		let $search_container = $(this).parents('.top-account__search');
+		let $search_container = $(this).parents('.search');
 
 		if ($search_container.hasClass('js-is-active')) {
 			console.log('Is activated');
