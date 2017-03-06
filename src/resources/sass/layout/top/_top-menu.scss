@@ -9,6 +9,8 @@
 	padding: 0;
 	height: $menu-height;
 	box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
+	overflow: auto;
+	zoom: 1;
 
 	@include min-screen($screen-sm-min) {
 		display: none;
@@ -33,17 +35,22 @@
 		}
 
 		&.top-menu__logotype {
-			/*
-			content: ' ';
-			height: 30px;
-			width: 30px;
-			border-radius: 100%;
 			position: absolute;
-			top: 20px;
-			margin-left: -15px;
 			left: 50%;
-			background-color: $color-shore;
-			*/
+			transform: translateX(-50%);
+			width: 75px;
+			margin-top: 12px;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		&.top-menu__register {
+			padding: 24px;
+			font-size: 12px;
+			font-weight: 600;
 		}
 	}
 }

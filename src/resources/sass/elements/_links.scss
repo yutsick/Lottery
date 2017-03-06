@@ -1,3 +1,9 @@
 a {
 	cursor: pointer;
+	color: $color_primary;
+
+	&:hover,
+	&:focus {
+		color: darken($color-primary, $color-darken-amount);
+	}
 }
