@@ -33,8 +33,13 @@
 		}
 
 		.navigation-title {
+			display: block;
+			margin-top: 10px;
+			height: 15%;
 			font-size: 18px;
+			line-height: 100%;
 			font-weight: 600;
+
 		}
 
 		// Custom user styles
@@ -49,8 +54,14 @@
 			}
 
 			span {
-				@include max-screen($screen-md-max) {
+				@include screen($screen-sm-min, $screen-md-max) {
 					display: none;
+				}
+
+				#sidebar.js-is-active & {
+					@include max-screen($screen-sm-min) {
+						display: none;
+					}
 				}
 			}
 
@@ -237,7 +248,7 @@
 
 		> a {
 			@include screen($screen-sm-min, $screen-md-max) {
-				padding: 18px 0 0;
+				padding: $padding-small 0 0;
 				font-size: 10px;
 				line-height: 14px;
 				text-align: center;
@@ -245,7 +256,7 @@
 
 			#sidebar.js-is-active & {
 				@include max-screen($screen-sm-min) {
-					padding: 18px 0 0;
+					padding: $padding-small 0 0;
 					font-size: 10px;
 					line-height: 14px;
 					text-align: center;
@@ -293,7 +304,6 @@
 				@include screen($screen-sm-min, $screen-md-max) {
 					width: 100%;
 					margin-right: 0;
-					margin-bottom: 8px;
 					display: block;
 					text-align: center;
 				}
@@ -302,7 +312,6 @@
 					@include max-screen($screen-sm-min) {
 						width: 100%;
 						margin-right: 0;
-						margin-bottom: 8px;
 						display: block;
 						text-align: center;
 					}
