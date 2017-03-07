@@ -8,7 +8,7 @@ module.exports = {
 		$(window).on('resize', function () {
 			reset_nav_on_resize();
 		});
-
+		var $body = $('body');
 		var $page_wrapper = $('#page-wrapper');
 		var $sidebar = $('#sidebar');
 		var active_class = 'js-is-active';
@@ -24,14 +24,15 @@ module.exports = {
 			if (($win.width() >= mobile_width) && (trigger == false)) {
 
 				// Only if the sub menu is not active
-					$nav_items.each( function () {
-						let $nav_item = $(this);
-						$nav_item.removeClass(active_class);
-						$nav_item.find('> a').removeClass(active_class);
-					});
-					$page_wrapper.removeClass(active_class);
-					$sidebar.removeClass(active_class);
-					trigger = true;
+				$nav_items.each(function () {
+					let $nav_item = $(this);
+					$nav_item.removeClass(active_class);
+					$nav_item.find('> a').removeClass(active_class);
+				});
+				$body.removeClass('js-overlay-is-active');
+				$page_wrapper.removeClass(active_class);
+				$sidebar.removeClass(active_class);
+				trigger = true;
 			}
 
 			if (($win.width() <= mobile_width) && (trigger == true)) {
@@ -47,7 +48,7 @@ module.exports = {
 				let $this_nav_item_sub_menu = $this_nav_item.parent('li');
 
 				// Check if the clicked item has a sub menu, else got o the links href
-				if ($this_nav_item_sub_menu.has('ul').length >= 1)	 {
+				if ($this_nav_item_sub_menu.has('ul').length >= 1) {
 
 					// Hide or show sub menu
 					if ($this_nav_item.hasClass(active_class)) {
@@ -57,12 +58,13 @@ module.exports = {
 
 						// Hide overlay on large screens
 						if ($win.width() > mobile_width) {
+							$body.removeClass('js-overlay-is-active');
 							$page_wrapper.removeClass(active_class);
 						}
 					}
 					else {
 						let $nav_items = $('.sidebar-navigation li');
-						$nav_items.each( function () {
+						$nav_items.each(function () {
 							let $nav_item = $(this);
 							$nav_item.removeClass(active_class);
 							$nav_item.find('> a').removeClass(active_class);
@@ -71,6 +73,7 @@ module.exports = {
 						$this_nav_item.addClass(active_class);
 						$this_nav_item.parent('li').addClass(active_class);
 						$sidebar.addClass(active_class);
+						$body.addClass('js-overlay-is-active');
 						$page_wrapper.addClass(active_class);
 					}
 					return false;
@@ -84,6 +87,7 @@ module.exports = {
 		// Toggle navigation
 		function toggle_nav() {
 			$('a.top-menu__toggle').click(function () {
+				$body.addClass('js-overlay-is-active');
 				$page_wrapper.toggleClass(active_class);
 				return false;
 			});
@@ -91,11 +95,12 @@ module.exports = {
 			$('.overlay').click(function () {
 				if ($page_wrapper.hasClass(active_class)) {
 					let $nav_items = $('.sidebar-navigation li');
-					$nav_items.each( function () {
+					$nav_items.each(function () {
 						var $nav_item = $(this);
 						$nav_item.removeClass(active_class);
 						$nav_item.find('> a').removeClass(active_class);
 					});
+					$body.removeClass('js-overlay-is-active');
 					$page_wrapper.removeClass(active_class);
 					$sidebar.removeClass(active_class);
 				}
@@ -113,7 +118,7 @@ module.exports = {
 			var delta = 5;
 			var $top_menu = $('.top-menu');
 			var $top_account = $('.top-account');
-			var top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight() );
+			var top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
 
 			$(window).scroll(function () {
 				let $win = $(this);

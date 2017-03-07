@@ -19,9 +19,6 @@
 /* Template styles */
 @import "pages/pages";
 
-
-
-
 body {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
@@ -31,31 +28,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: $color-blueberry;
-}
 
-.row.equal-height {
-	padding: 0 15px;
-	display: flex;
-	flex-wrap: wrap;
-
-	&:before, &:after {
-		display: block;
-	}
-
-	&.no-padding {
-		padding: 0;
-	}
-
-	> [class*='col-'] {
-		display: flex;
-		flex-direction: column;
-
-		> * {
-			display: flex;
-			flex-direction: column;
-			flex: 1 1 auto;
-			justify-content: flex-end;
-		}
+	&.js-overlay-is-active {
+		overflow: hidden;
 	}
 }
 
