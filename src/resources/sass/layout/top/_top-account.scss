@@ -140,6 +140,12 @@
 				float: left;
 				width: 0;
 				transition: width 0.4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+				border: none;
+				font-size: 12px;
+				border-radius: 18px;
+				padding-top: 8px;
+				padding-bottom: 8px;
+
 			}
 
 			.btn {

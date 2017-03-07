@@ -1,8 +1,8 @@
 .form-control {
-	border: none;
-	font-size: 12px;
-	border-radius: 18px;
-	font-weight: 600;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	font-size: 14px;
+	font-weight: 500;
+	box-shadow: none;
+	border: 1px solid $color-input-border;
+	height: 38px;
+	padding: 9px 12px;
 }
