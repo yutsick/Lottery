@@ -1,0 +1,9 @@
+/* Adjust center align modal */
+.vertical-alignment-helper {
+	.modal-content {
+		width: inherit;
+		height: inherit;
+		margin: 0 auto;
+		pointer-events: all;
+	}
+}
