@@ -5,28 +5,6 @@
 	padding: 9px 30px;
 }
 
-.btn-icon {
-	padding-top: 4px;
-	padding-bottom: 4px;
-
-	i {
-		font-size: 18px;
-		vertical-align: middle;
-		margin-right: $margin-small;
-	}
-}
-
-.btn-2-line {
-	padding-top: 2px;
-	padding-bottom: 2px;
-
-	span {
-		display: block;
-		font-size: 10px;
-		font-weight: 400;
-	}
-}
-
 .btn-default {
 	background-color: $color-base-light;
 	color: $color-light;
@@ -51,10 +29,12 @@
 
 .btn-primary {
 	background-color: $color-primary;
+	color: $color-light;
 
 	&:hover,
 	&:focus {
 		background-color: darken($color-primary, $color-darken-amount);
+		color: $color-light;
 	}
 }
 
@@ -64,6 +44,41 @@
 	&:hover,
 	&:focus {
 		background-color: darken($color-accent, $color-darken-amount);
+	}
+}
+
+.btn-icon {
+	padding-top: 4px;
+	padding-bottom: 4px;
+
+	i {
+		font-size: 18px;
+		vertical-align: middle;
+		margin-right: $margin-small;
+	}
+}
+
+.btn-icon-only {
+	position: relative;
+	padding: 0;
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+
+	i {
+		display: block;
+		font-size: 16px;
+	}
+}
+
+.btn-2-line {
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+	span {
+		display: block;
+		font-size: 10px;
+		font-weight: 400;
 	}
 }
 

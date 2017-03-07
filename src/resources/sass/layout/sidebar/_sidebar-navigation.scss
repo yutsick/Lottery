@@ -290,18 +290,6 @@
 					font-size: 20px;
 				}
 			}
-/*
-			> a {
-				padding: $padding-medium $padding-default 0 $padding-default;
-				text-align: center;
-
-				#sidebar.js-is-active & {
-					@include max-screen($screen-sm-min) {
-						padding: $padding-medium $padding-default 0 $padding-default;
-					}
-				}
-			}
-			*/
 		}
 
 		// User item

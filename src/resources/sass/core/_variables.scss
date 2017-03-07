@@ -29,7 +29,7 @@ $sidebar-logo-image-height: 36px;
 $sub-navigation-width-mobile: 170px;
 $sub-navigation-width-desktop: $sidebar-width-desktop;
 
-$sidebar-total-width-mobile: $sub-navigation-width-mobile;
+$sidebar-total-width-mobile: $sidebar-width-mobile + $sub-navigation-width-mobile;
 $sidebar-total-width-tablet: $sidebar-width-mobile + $sidebar-width-desktop;
 $sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop;
 

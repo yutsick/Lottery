@@ -12,11 +12,16 @@
 	opacity: 0;
 	transition: opacity $duration-fast $delay-none $ease-in-out, visibility 0s $duration-fast;
 
-	.close {
+	#close-navigation {
 		position: absolute;
-		left: $sidebar-total-width-desktop;
+		left: $sidebar-total-width-mobile;
+		margin: 0 0 0 20px;
+		top: 50%;
+		transform: translateY(-50%);
 
-		margin: 20px;
+		@include min-screen($screen-sm-min) {
+			left: $sidebar-total-width-desktop;
+		}
 
 		@include screen($screen-sm-min, $screen-md-max) {
 			left: $sidebar-total-width-tablet;
