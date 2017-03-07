@@ -1,0 +1,25 @@
+.row.equal-height {
+	padding: 0 15px;
+	display: flex;
+	flex-wrap: wrap;
+
+	&:before, &:after {
+		display: block;
+	}
+
+	&.no-padding {
+		padding: 0;
+	}
+
+	> [class*='col-'] {
+		display: flex;
+		flex-direction: column;
+
+		> * {
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 auto;
+			justify-content: flex-end;
+		}
+	}
+}
