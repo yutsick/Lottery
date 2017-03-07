@@ -1,3 +1,24 @@
+.modal-dialog {
+	padding: 0 30px;
+
+	@include min-screen($screen-sm-min) {
+		padding: 0;
+		width: 360px;
+	}
+}
+
+/* Put outside the modal and center */
+.btn.action-close {
+	margin: 0 auto $margin-medium auto;
+	display: block;
+}
+
+.modal-content {
+	box-shadow: none;
+	border: none;
+	background-color: $color-modal-background;
+}
+
 /* Adjust center align modal */
 .vertical-alignment-helper {
 	.modal-content {
@@ -5,5 +26,53 @@
 		height: inherit;
 		margin: 0 auto;
 		pointer-events: all;
+	}
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+	padding: 25px;
+}
+
+
+.modal-header {
+	border: none;
+	text-align: center;
+}
+.modal-body {
+	padding-bottom: 0;
+}
+
+.modal-footer {
+	padding-top: 0;
+	border: none;
+
+	.btn {
+		margin-top: $margin-medium + $margin-medium;
+		position: relative;
+
+		&:before {
+			content: '';
+			height: 1px;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: -$margin-medium;
+			background-color: $color-base-light-03;
+		}
+
+		+ .btn {
+			margin-left: 0;
+			margin-top: $margin-medium + $margin-medium;
+
+			&:first-of-type {
+				margin-top: 0;
+
+				&:before{
+					content: none;
+				}
+			}
+		}
 	}
 }

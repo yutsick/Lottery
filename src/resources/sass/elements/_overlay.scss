@@ -11,7 +11,7 @@
 	opacity: 0;
 	transition: opacity $duration-fast $delay-none $ease-in-out, visibility 0s $duration-fast;
 
-	#close-navigation {
+	.btn.action-close {
 		position: absolute;
 		left: $sidebar-total-width-mobile;
 		margin: 0 0 0 20px;
@@ -41,5 +41,8 @@
 		overflow-y: scroll;
 		transition: opacity $duration-fast $delay-none $ease-in-out;
 
+		.btn.action-close {
+			animation: fadeInDownBig 0.65s ease forwards;
+		}
 	}
 }

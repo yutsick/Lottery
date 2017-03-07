@@ -1,3 +1,4 @@
+/* Bootstrap modifications */
 .btn {
 	font-size: 12px;
 	border-radius: 18px;
@@ -47,14 +48,41 @@
 	}
 }
 
-.btn-icon {
-	padding-top: 4px;
-	padding-bottom: 4px;
+.btn-link {
+	color: $color-primary;
 
+	&:hover,
+	&:focus {
+		color: darken($color-primary, $color-darken-amount);
+		text-decoration: none;
+	}
+}
+
+/* Custom */
+.btn-secondary {
+	background-color: $color-complement-coral;
+	color: $color-light;
+
+	&:hover,
+	&:focus {
+		background-color: darken($color-complement-coral, $color-darken-amount);
+		color: $color-light;
+	}
+}
+
+.btn-icon {
 	i {
 		font-size: 18px;
 		vertical-align: middle;
-		margin-right: $margin-small;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+
+		&.icon-right {
+			left: auto;
+			right: 20px;
+		}
 	}
 }
 

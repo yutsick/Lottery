@@ -83,6 +83,7 @@ $color-transparent: rgba(0, 0, 0, $opacity-0);
 // Theme Palette
 $color-snow: #FFFFFF;
 $color-space: #000;
+$color-gray: #F9F9F9;
 
 $color-blue: #2074f2;
 $color-green: #3BB566;
@@ -117,6 +118,9 @@ $color-overlay: rgba($color-base-primary, 0.8);
 
 // States
 $color-darken-amount: 10%;
+
+// Extras
+$color-modal-background: $color-gray;
 
 /**
  * Animation

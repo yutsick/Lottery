@@ -1,18 +1,46 @@
 <!-- Modal - Sign in -->
-<div class="modal fade" id="modal-log-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			@@include('elements/_button-close.html')
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					<h4 class="modal-title" id="modal-label">Logga in</h4>
 				</div>
 				<div class="modal-body">
-					...
+					<form id="login-modal">
+						<div class="form-group">
+							<label class="control-label" for="userId">Kundnummer, e-post eller
+								personnummer</label>
+							<input type="text" class="form-control" id="userId"
+								   placeholder="123456789 ,fia.frid@mail.com, 880808-8888">
+						</div>
+						<div class="form-group">
+							<label class="control-label" for="userId">Lösenord</label>
+							<input type="password" class="form-control" id="userId"
+								   placeholder="*********">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"> Visa tecken
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox"> Kom ihåg mig på denna enheten
+								</label>
+							</div>
+							<button type="submit" class="btn btn-primary btn-block">Logga in</button>
+						</div>
+						<button type="button" class="btn btn-link btn-block">Jag har glömt mitt lösenord</button>
+					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="btn btn-secondary btn-block btn-icon">Logga in med BankID
+						<i class="icon icon-game icon-right"></i>
+					</button>
+					<button type="button" class="btn btn-default btn-block">Skapa konto</button>
 				</div>
 			</div>
 		</div>
