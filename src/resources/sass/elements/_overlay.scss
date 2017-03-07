@@ -12,24 +12,23 @@
 	opacity: 0;
 	transition: opacity $duration-fast $delay-none $ease-in-out, visibility 0s $duration-fast;
 
-	&:after {
-		content: ' ';
-		height: 30px;
-		width: 30px;
-		border-radius: 100%;
+	.close {
 		position: absolute;
-		z-index: 996;
-		background-color: $color-blueberry;
-		top: 25px;
-		left: $sidebar-total-width-mobile;
-		margin: auto;
-		cursor: pointer;
+		left: $sidebar-total-width-desktop;
 
-		@include min-screen($screen-md-min) {
-			left: $sidebar-total-width-desktop;
+		margin: 20px;
+
+		@include screen($screen-sm-min, $screen-md-max) {
+			left: $sidebar-total-width-tablet;
 		}
-	}
 
+		#sidebar.js-is-active & { // on #sidebar
+			@include max-screen($screen-sm-min) {
+				left: $sidebar-total-width-mobile;
+			}
+		}
+
+	}
 
 	.js-is-active & { // on #page-wrapper
 		opacity: 1;

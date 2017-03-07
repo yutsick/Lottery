@@ -22,14 +22,17 @@ $top-padding-logged-out: $menu-height + $account-buttons-height;
 // Sidebar
 $sidebar-width-mobile: 70px;
 $sidebar-width-desktop: 240px;
-$sidebar-total-width-mobile: $sidebar-width-mobile + $sidebar-width-desktop;
-$sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop;
 $sidebar-item-height: 63px;
 $sidebar-logo-height: 69px;
 $sidebar-logo-image-height: 36px;
 
 $sub-navigation-width-mobile: 170px;
 $sub-navigation-width-desktop: $sidebar-width-desktop;
+
+$sidebar-total-width-mobile: $sub-navigation-width-mobile;
+$sidebar-total-width-tablet: $sidebar-width-mobile + $sidebar-width-desktop;
+$sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop;
+
 
 /**
  * Fonts
@@ -89,7 +92,7 @@ $color-night: #131B39; // #151F36
 $color-ocean: #37454E;
 $color-blueberry: #536785;
 $color-shore: #A2B6C2;
-$color-sky: #86A3B5;
+$color-sky: #85A3B6;
 $color-cloud: #F2F5F7;
 $color-feather: #DEE1E8;
 $color: #626972;
@@ -106,8 +109,6 @@ $color-base-light: $color-sky; // Default button
 $color-base-light-01: $color-sky; // Icons
 $color-base-light-02: $color-cloud;
 $color-base-light-03: $color-feather; // Borders, hover etc.
-
-
 
 // Others
 $color-dark: $color-space;
