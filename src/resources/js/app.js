@@ -2,10 +2,12 @@ window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 
 var navigation = require('./components/navigation');
+var modal = require('./components/modal');
 
 $(function () {
 	console.log('Hello world');
 	navigation.init();
+	modal.init();
 
 	$('.alert').on('closed.bs.alert', function () {
 		$(this).fadeOut();
@@ -40,19 +42,4 @@ $(function () {
 			$search_input.focus();
 		}
 	});
-
-	// Modals
-	$('.logged-in .action-register ').click(function () {
-		$('#modal-login').modal();
-	});
-
-	// Hide open modals when toggle
-	$('.modal').on('show.bs.modal', function (e) {
-		$('.modal').modal('hide');
-	})
-
-
-
-
-
 });
