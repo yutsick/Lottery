@@ -7,6 +7,10 @@
 	padding: 9px 12px;
 }
 
+input {
+	-webkit-appearance: none;
+}
+
 // Hide number toggle button
 input[type='number'] {
 	-moz-appearance:textfield;
