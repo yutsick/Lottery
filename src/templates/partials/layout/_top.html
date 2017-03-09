@@ -6,7 +6,7 @@
 		<a href="/" title="Hem" class="top-menu__logotype">
 			<img src="assets/img/brand/ml-logotype-old.png" alt="Miljonlotteriet">
 		</a>
-		<a class="top-menu__register  float-right">
+		<a class="top-menu__register action-register float-right">
 			Registrera lott
 		</a>
 	</div>
@@ -34,8 +34,8 @@
 
 		<div class="top-account__buttons">
 			@@if (signed_in === false) {
-			<button id="log-in" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-login">Logga in</button>
-			<button class="btn btn-success btn-2-line">
+			<button id="log-in" type="button" class="btn btn-primary action-login" data-toggle="modal" data-target="#modal-login">Logga in</button>
+			<button class="btn btn-success btn-2-line action-create-account">
 				Skapa konto
 				<span>och få 40 kr</span>
 			</button>
@@ -44,7 +44,7 @@
 			<div class="search @@if (signed_in === true) {js-is-active}">
 				<form action="">
 					<input type="text" class="form-control" placeholder="Sök">
-					<button id="search" class="btn btn-default" type="button"><i class="icon icon-search"></i></button>
+					<button id="search" class="btn btn-default action-search" type="button"><i class="icon icon-search"></i></button>
 				</form>
 			</div>
 		</div>

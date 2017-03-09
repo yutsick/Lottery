@@ -24,6 +24,9 @@
 		white-space: normal;
 
 		i {
+			position: relative;
+			top: 0;
+			transform: translateY(0);
 			display: none;
 		}
 

@@ -40,4 +40,12 @@ $(function () {
 			$search_input.focus();
 		}
 	});
+
+	// Modals
+	$('.logged-in .action-register ').click(function () {
+		$('#modal-login').modal();
+	});
+
+
+
 });
