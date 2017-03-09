@@ -8,16 +8,18 @@
 					<h4 class="modal-title" id="modal-label">Skapa konto och få  40 kr!</h4>
 				</div>
 				<div class="modal-body">
-					<form id="create-account-modal">
+
+					<form id="create-account-modal" class="modal-body__form" data-toggle="validator">
 						<div class="form-group">
-							<input type="text" class="form-control" id="userFirstName" placeholder="Förnamn">
-							<input type="text" class="form-control" id="userLastName" placeholder="Efternamn">
-							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅMMDDXXXX)">
+							<input type="text" class="form-control" id="userFirstName" placeholder="Förnamn" required>
+							<input type="text" class="form-control" id="userLastName" placeholder="Efternamn" required>
+							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅMMDDXXXX)" data-minlength="10">
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Nästa steg</button>
 						</div>
 					</form>
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-block action-login" data-toggle="modal" data-target="#modal-login">Jag har redan ett konto</button>
@@ -90,10 +92,10 @@
 				</div>
 				<div class="modal-body">
 
-					<form id="login-bankid-modal" data-toggle="validator">
+					<form id="login-bankid-modal" class="modal-body__form" data-toggle="validator">
 						<div class="form-group">
 							<label class="control-label" for="userId">Fyll i ditt personnummer och tryck på logga in</label>
-							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅÅÅMMDDXXXX)" data-minlength="12" >
+							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅÅÅMMDDXXXX)" data-minlength="12">
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Logga in</button>

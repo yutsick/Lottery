@@ -24,7 +24,7 @@ module.exports = {
 					return false;
 				} else {
 					$('.modal').modal('hide');
-					console.log('Something is good');
+					console.log('Everything is good');
 					return false;
 				}
 			});
