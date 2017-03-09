@@ -5,14 +5,14 @@
 			@@include('elements/_button-close.html')
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="modal-label">Logga in</h4>
+					<h4 class="modal-title" id="modal-label">Skapa konto och få  40 kr!</h4>
 				</div>
 				<div class="modal-body">
 					<form id="create-account-modal">
 						<div class="form-group">
 							<input type="text" class="form-control" id="userFirstName" placeholder="Förnamn">
-							<input type="text" class="form-control" id="userLstName" placeholder="Efternamn">
-							<input type="number" class="form-control" id="userLstName" placeholder="Personnummer">
+							<input type="text" class="form-control" id="userLastName" placeholder="Efternamn">
+							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅMMDDXXXX)">
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Nästa steg</button>
@@ -27,7 +27,7 @@
 	</div>
 </div>
 
-<!-- Modal - Sign in -->
+<!-- Modal - Login -->
 <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
@@ -42,11 +42,11 @@
 							<label class="control-label" for="userId">Kundnummer, e-post eller
 								personnummer</label>
 							<input type="text" class="form-control" id="userId"
-								   placeholder="123456789 ,fia.frid@mail.com, 880808-8888">
+								   placeholder="123456789 ,fia.frid@mail.com, 8808088888">
 						</div>
 						<div class="form-group">
-							<label class="control-label" for="userId">Lösenord</label>
-							<input type="password" class="form-control" id="userId"
+							<label class="control-label" for="userPassword">Lösenord</label>
+							<input type="password" class="form-control" id="userPassword"
 								   placeholder="*********">
 							<div class="checkbox">
 								<label>
@@ -57,19 +57,48 @@
 						<div class="form-group">
 							<div class="checkbox">
 								<label>
-									<input type="checkbox"> Kom ihåg mig på denna enheten
+									<input type="checkbox" id="userRememberDevice"> Kom ihåg mig på denna enheten
 								</label>
 							</div>
 							<button type="submit" class="btn btn-primary btn-block">Logga in</button>
 						</div>
-						<button type="button" class="btn btn-link btn-block">Jag har glömt mitt lösenord</button>
+						<a href="/" class="btn btn-link btn-block">Jag har glömt mitt lösenord</a>
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary btn-block btn-icon" data-toggle="modal" data-target="#modal-login">
+					<button type="button" class="btn btn-secondary btn-block btn-icon" data-toggle="modal" data-target="#modal-login-bankid">
 						Logga in med BankID
 						<i class="icon icon-game icon-right"></i>
 					</button>
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal-create-account">Skapa konto</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal - Login (BankID) -->
+<div class="modal fade" id="modal-login-bankid" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+			@@include('elements/_button-close.html')
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="modal-label">Logga in med BankID</h4>
+				</div>
+				<div class="modal-body">
+					<form id="login-bankid-modal">
+						<div class="form-group">
+							<label class="control-label" for="userId">Fyll i ditt personnummer och tryck på logga in</label>
+							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅMMDDXXXX)">
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Logga in</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#modal-login">Logga in med lösenord</button>
 					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal-create-account">Skapa konto</button>
 				</div>
 			</div>
