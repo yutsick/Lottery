@@ -1,12 +1,3 @@
-.form-control {
-	font-size: 14px;
-	font-weight: 500;
-	box-shadow: none;
-	border: 1px solid $color-input-border;
-	height: 38px;
-	padding: 9px 12px;
-}
-
 input {
 	// -webkit-appearance: none;
 }
@@ -19,4 +10,34 @@ input[type='number'] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
+}
+
+.form-control {
+	font-size: 14px;
+	font-weight: 500;
+	box-shadow: none;
+	border: 1px solid $color-input-border;
+	height: 44px;
+	padding: 12px 12px;
+}
+
+.input-group {
+	width: 100%;
+	margin-bottom: 15px;
+
+	.form-group {
+		&:first-of-type {
+			.form-control {
+				border-radius:6px 6px 0 0;
+				border-bottom: none;
+			}
+		}
+
+		&:last-of-type {
+			.form-control {
+				border-radius:0 0 6px 6px;
+				border-top: none;
+			}
+		}
+	}
 }
