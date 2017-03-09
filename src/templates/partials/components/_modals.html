@@ -1,4 +1,3 @@
-<!-- Modal - Create account -->
 <div class="modal fade" id="modal-create-account" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
@@ -10,7 +9,7 @@
 				<div class="modal-body">
 
 					<form id="create-account-modal" class="modal-body__form" data-toggle="validator">
-						<div class="input-group">
+						<div class="input-group input-vertical">
 							<div class="form-group">
 								<input type="text" class="form-control" id="userFirstName" placeholder="Förnamn" required>
 							</div>
@@ -35,8 +34,8 @@
 		</div>
 	</div>
 </div>
+<!-- /#modal-create-account -->
 
-<!-- Modal - Login -->
 <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
@@ -56,12 +55,12 @@
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="userPassword">Lösenord</label>
-							<input type="password" class="form-control" id="userPassword"
-								   placeholder="*********" required>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox"> Visa tecken
-								</label>
+							<div class="input-group">
+								<input type="password" class="form-control" id="userPassword"
+									   placeholder="*********" required>
+								<div class="input-group-btn">
+									<a class="btn btn-input action-show-password"><i class="icon icon-more"></i></a>
+								</div>
 							</div>
 						</div>
 						<div class="form-group">
@@ -70,6 +69,8 @@
 									<input type="checkbox" id="userRememberDevice"> Kom ihåg mig på denna enheten
 								</label>
 							</div>
+						</div>
+						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Logga in</button>
 						</div>
 						<a href="/" class="btn btn-link btn-block">Jag har glömt mitt lösenord</a>
@@ -87,8 +88,8 @@
 		</div>
 	</div>
 </div>
+<!-- /#modal-login -->
 
-<!-- Modal - Login (BankID) -->
 <div class="modal fade" id="modal-login-bankid" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
@@ -118,3 +119,4 @@
 		</div>
 	</div>
 </div>
+<!-- /#modal-login-bankid -->

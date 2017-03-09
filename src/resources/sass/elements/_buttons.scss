@@ -4,6 +4,11 @@
 	border-radius: 18px;
 	font-weight: 600;
 	padding: 9px 30px;
+	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
+
+	i {
+		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
+	}
 }
 
 .btn-default {
@@ -98,6 +103,30 @@
 	i {
 		display: block;
 		font-size: 14px;
+	}
+}
+
+.btn-input {
+	background-color: $color-light;
+	border-radius: 4px;
+	padding: 12px 12px;
+	border: 1px solid $color-input-border;
+	height: 44px;
+
+	i {
+		font-size: 18px;
+		color: $color-base-light-01;
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
+
+	&.js-is-active {
+		i {
+			color: $color-primary;
+		}
 	}
 }
 

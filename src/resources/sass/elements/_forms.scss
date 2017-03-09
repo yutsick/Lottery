@@ -22,21 +22,23 @@ input::-webkit-inner-spin-button {
 }
 
 .input-group {
-	width: 100%;
-	margin-bottom: 15px;
+	&.input-vertical {
+		width: 100%;
+		margin-bottom: 15px;
 
-	.form-group {
-		&:first-of-type {
-			.form-control {
-				border-radius:6px 6px 0 0;
-				border-bottom: none;
+		.form-group {
+			&:first-of-type {
+				.form-control {
+					border-radius: 6px 6px 0 0;
+					border-bottom: none;
+				}
 			}
-		}
 
-		&:last-of-type {
-			.form-control {
-				border-radius:0 0 6px 6px;
-				border-top: none;
+			&:last-of-type {
+				.form-control {
+					border-radius: 0 0 6px 6px;
+					border-top: none;
+				}
 			}
 		}
 	}
