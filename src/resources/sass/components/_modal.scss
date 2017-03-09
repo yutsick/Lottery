@@ -1,3 +1,10 @@
+.modal-backdrop {
+	background: $color-base-primary;
+
+	&.in {
+		opacity: 0.8;
+	}
+}
 .modal-dialog {
 	padding: 0 30px;
 
