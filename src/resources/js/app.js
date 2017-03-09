@@ -3,11 +3,13 @@ require('bootstrap-sass');
 
 var navigation = require('./components/navigation');
 var modal = require('./components/modal');
+var form = require('./components/form');
 
 $(function () {
 	console.log('Hello world');
 	navigation.init();
 	modal.init();
+	form.init();
 
 	$('.alert').on('closed.bs.alert', function () {
 		$(this).fadeOut();
