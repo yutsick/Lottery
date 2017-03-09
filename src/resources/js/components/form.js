@@ -24,19 +24,18 @@ module.exports = {
 			});
 		}
 
-
 		function form_submit() {
 			// General
-			$('.modal-body__form').validator().on('submit', function (e) {
+/*			$('.modal-body__form').validator().on('submit', function (e) {
 				if (e.isDefaultPrevented()) {
 					console.log('Something is wrong');
 					return false;
 				} else {
 					$('.modal').modal('hide');
 					console.log('Everything is good');
-					return false;
+					return true;
 				}
-			});
+			});*/
 		}
 	}
 };

@@ -4,6 +4,7 @@ module.exports = {
 
 		// Reset navigation on resize window
 		function toggle_modal() {
+			$('#modal-create-account').modalSteps();
 
 			// Modals
 			$('.logged-in .action-register').click(function () {
