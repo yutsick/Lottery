@@ -46,6 +46,13 @@ $(function () {
 		$('#modal-login').modal();
 	});
 
+	// Hide open modals when toggle
+	$('.modal').on('show.bs.modal', function (e) {
+		$('.modal').modal('hide');
+	})
+
+
+
 
 
 });
