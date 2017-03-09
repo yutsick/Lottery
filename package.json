@@ -17,5 +17,8 @@
     "laravel-elixir-fonts": "^0.1.4",
     "laravel-elixir-webpack-official": "^1.0.10",
     "sass-mediaqueries": "^1.6.1"
+  },
+  "dependencies": {
+    "bootstrap-validator": "^0.11.9"
   }
 }

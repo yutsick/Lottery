@@ -37,17 +37,18 @@
 					<h4 class="modal-title" id="modal-label">Logga in</h4>
 				</div>
 				<div class="modal-body">
-					<form id="login-modal">
+
+					<form id="login-modal" class="modal-body__form" data-toggle="validator">
 						<div class="form-group">
 							<label class="control-label" for="userId">Kundnummer, e-post eller
 								personnummer</label>
 							<input type="text" class="form-control" id="userId"
-								   placeholder="123456789 ,fia.frid@mail.com, 8808088888">
+								   placeholder="123456789 ,fia.frid@mail.com, 8808088888" required>
 						</div>
 						<div class="form-group">
 							<label class="control-label" for="userPassword">Lösenord</label>
 							<input type="password" class="form-control" id="userPassword"
-								   placeholder="*********">
+								   placeholder="*********" required>
 							<div class="checkbox">
 								<label>
 									<input type="checkbox"> Visa tecken
@@ -64,6 +65,7 @@
 						</div>
 						<a href="/" class="btn btn-link btn-block">Jag har glömt mitt lösenord</a>
 					</form>
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-block btn-icon" data-toggle="modal" data-target="#modal-login-bankid">
@@ -87,15 +89,17 @@
 					<h4 class="modal-title" id="modal-label">Logga in med BankID</h4>
 				</div>
 				<div class="modal-body">
-					<form id="login-bankid-modal">
+
+					<form id="login-bankid-modal" data-toggle="validator">
 						<div class="form-group">
 							<label class="control-label" for="userId">Fyll i ditt personnummer och tryck på logga in</label>
-							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅMMDDXXXX)">
+							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅÅÅMMDDXXXX)" data-minlength="12" >
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Logga in</button>
 						</div>
 					</form>
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#modal-login">Logga in med lösenord</button>
