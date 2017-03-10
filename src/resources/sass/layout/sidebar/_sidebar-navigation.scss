@@ -44,10 +44,26 @@
 			height: 100%;
 			transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 
-			&:hover,
-			&.js-is-active {
+			&:hover {
 				text-decoration: none;
-				color: $color-primary;
+
+				@include min-screen($screen-sm-max) {
+					color: $color-primary;
+				}
+
+				i {
+					@include min-screen($screen-sm-max) {
+						color: $color-primary;
+					}
+				}
+			}
+
+			&.js-is-active {
+				color: $color-base-secondary;
+
+				@include min-screen($screen-sm-max) {
+					color: $color-primary;
+				}
 
 				i {
 					color: $color-primary;
@@ -186,12 +202,18 @@
 					transition: color $duration-quick $delay-none $ease-in-out;
 				}
 
-				&:hover,
+				&:hover {
+					@include min-screen($screen-sm-max) {
+						color: $color-base-light-01;
+					}
+				}
 				&.js-is-active {
 					&:after {
 						color: $color-base-light-01;
 					}
 				}
+
+
 			}
 		}
 
