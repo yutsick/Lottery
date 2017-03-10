@@ -32,16 +32,6 @@
 			color: $color-base-complement;
 		}
 
-		.navigation-title {
-			display: block;
-			margin-top: 10px;
-			height: 15%;
-			font-size: 18px;
-			line-height: 100%;
-			font-weight: 600;
-
-		}
-
 		// Custom user styles
 		div.user {
 			i,
@@ -152,20 +142,30 @@
 			padding: $padding-medium $padding-medium 0 $padding-default;
 		}
 
-		// Sub navigation
+		&.js-is-active {
+			> ul {
+				opacity: 1;
+				visibility: visible;
+				transition: opacity $duration-quick $delay-none $ease-in-out;
+			}
+		}
+	}
+
+	// Sub navigation
+	> li {
 		> ul {
 			visibility: hidden;
 			position: absolute;
 			top: 0;
-			left: $sidebar-width-desktop;
-			width: $sub-navigation-width-mobile;
 			height: 100%;
+			padding-top: $sidebar-logo-height - 1;
 			transform: translate3d(0, 0, 0);
 			background-color: $color-base-light-02;
 			overflow-y: auto;
 			opacity: 0;
 			transition: opacity $duration-quick $delay-none $ease-in-out, visibility 0s $duration-fast;
-			padding-top: $sidebar-logo-height - 1;
+			width: $sub-navigation-width-mobile;
+			left: $sidebar-width-desktop;
 
 			@include min-screen($screen-sm-min) {
 				width: $sub-navigation-width-desktop;
@@ -182,37 +182,39 @@
 			}
 
 			// Alternative sub navigation
-			&.sub-navigation-alternative {
+			&.sub-navigation-collapsed {
 				padding-top: 0;
 			}
 
 			// Third depth
-			> ul {
+			> li {
 				height: auto;
 
-				&:first-child {
-					li {
-						&:first-child {
-							height: $sidebar-logo-height - 1; // - border
-						}
-					}
+				.navigation-title {
+					display: block;
+					margin-top: 10px;
+					height: 43px;
+					font-size: 18px;
+					line-height: 100%;
+					font-weight: 600;
 				}
 
 				&:not(:first-child) {
-					li {
+					.navigation-title {
+						height: 37px;
+					}
+					// height: $sidebar-logo-height - 1; // - border
+				}
+				> ul {
+					height: auto;
+					margin: 0 -15px 0 -20px;
+
+					> li {
 						&:first-child {
 							border-top: 1px solid $color-base-light-03;
 						}
 					}
 				}
-			}
-		}
-
-		&.js-is-active {
-			> ul {
-				opacity: 1;
-				visibility: visible;
-				transition: opacity $duration-quick $delay-none $ease-in-out;
 			}
 		}
 	}
