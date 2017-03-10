@@ -32,36 +32,6 @@
 			color: $color-base-complement;
 		}
 
-		// Custom user styles
-		div.user {
-			i,
-			div {
-				vertical-align: top;
-			}
-
-			div {
-				max-width: 160px;
-			}
-
-			span {
-				@include screen($screen-sm-min, $screen-md-max) {
-					display: none;
-				}
-
-				#sidebar.js-is-active & {
-					@include max-screen($screen-sm-min) {
-						display: none;
-					}
-				}
-			}
-
-			.user__wallet,
-			.user__winnings {
-				font-size: 11px;
-				line-height: 17px;
-			}
-		}
-
 		a {
 			display: block;
 			padding: $padding-medium $padding-medium 0 $padding-default;
