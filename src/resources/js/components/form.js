@@ -33,6 +33,21 @@ module.exports = {
 				$input_container.removeClass('js-has-content');
 			});
 
+			$('.inner-addon ').on('focus', '.form-control', function () {
+				let $input_containers = $('.inner-addon');
+				let $input = $(this);
+				let $input_container = $input.parent('.inner-addon');
+				let input_value = $input.val();
+
+				if (input_value) {
+					$input_containers.removeClass('js-has-content');
+					$input_container.addClass('js-has-content');
+				}
+				else {
+					$input_containers.removeClass('js-has-content');
+				}
+			});
+
 			$('.inner-addon .form-control').bind('keyup', function(e) {
 				let $input = $(this);
 				let $input_container = $input.parent('.inner-addon');

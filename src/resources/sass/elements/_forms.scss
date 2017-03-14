@@ -4,7 +4,7 @@ input {
 
 // Hide number toggle button
 input[type='number'] {
-	-moz-appearance:textfield;
+	-moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
@@ -20,6 +20,34 @@ input::-webkit-inner-spin-button {
 	height: 44px;
 	padding: 12px 12px;
 }
+
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label {
+	color: $color-complement-lava;
+}
+
+.has-error .form-control {
+	border-color: $color-complement-lava;
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+	border-radius: 0;
+}
+
 
 .input-group {
 	&.input-vertical {
@@ -54,16 +82,18 @@ input::-webkit-inner-spin-button {
 		font-size: 16px;
 		opacity: 0;
 		z-index: 50;
+		transition: opacity $duration-quick $delay-none $ease-in-out;
 	}
 
 	.js-action-empty-input {
 		cursor: pointer;
+		color: $color-complement-lava;
 	}
 
 	&.js-has-content {
 		&.left-addon {
-			input  {
-				padding-left:  45px;
+			input {
+				padding-left: 45px;
 			}
 		}
 

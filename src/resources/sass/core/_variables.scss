@@ -56,35 +56,9 @@ $base-heading-family: sans-serif;
  * Colors
  */
 
-// Opacity
-$opacity-0: 0;
-$opacity-1: 1.0;
-$opacity-2: 0.87;
-$opacity-3: 0.54;
-$opacity-4: 0.22;
-$opacity-5: 0.06;
-
-// Basic colors
-$color-white: #FFFFFF;
-$color-white-2: rgba(255, 255, 255, $opacity-2);
-$color-white-3: rgba(255, 255, 255, $opacity-3);
-$color-white-4: rgba(255, 255, 255, $opacity-4);
-$color-white-5: rgba(255, 255, 255, $opacity-5);
-
-$color-black: #000000;
-$color-black-2: rgba(0, 0, 0, $opacity-2);
-$color-black-3: rgba(0, 0, 0, $opacity-3);
-$color-black-4: rgba(0, 0, 0, $opacity-4);
-$color-black-5: rgba(0, 0, 0, $opacity-5);
-
-$color-transparent: rgba(0, 0, 0, $opacity-0);
-
 // Theme Palette
 $color-snow: #FFFFFF;
 $color-space: #000;
-
-$color-stone: #F9F9F9;
-$color-gravel: #E5E5E5;
 
 $color-blue-dark: #216AC4;
 $color-blue: #2074f2;
@@ -110,6 +84,9 @@ $color-cloud: #F2F5F7;
 $color-feather: #DEE1E8;
 $color: #626972;
 
+$color-stone: #F9F9F9;
+$color-gravel: #E5E5E5;
+
 // Base colors
 $color-base-primary: $color-black; // Text
 $color-base-secondary: $color-ocean; // Menu links
@@ -122,6 +99,9 @@ $color-complement-coral: $color-turquoise;
 // Complement: Sky - Icons
 $color-complement-sky: $color-gray;
 $color-complement-sky-light: $color-gray-light;
+// Complement: Lava
+$color-complement-lava: $color-orange;
+$color-complement-lava-light: $color-orange-light;
 
 // Specific
 $color-border: $color-feather;
@@ -136,6 +116,29 @@ $color-overlay: rgba($color-base-primary, 0.8);
 
 // States
 $color-darken-amount: 10%;
+
+// Opacity
+$opacity-0: 0;
+$opacity-1: 1.0;
+$opacity-2: 0.87;
+$opacity-3: 0.54;
+$opacity-4: 0.22;
+$opacity-5: 0.06;
+
+// Basic colors
+$color-white: #FFFFFF;
+$color-white-2: rgba(255, 255, 255, $opacity-2);
+$color-white-3: rgba(255, 255, 255, $opacity-3);
+$color-white-4: rgba(255, 255, 255, $opacity-4);
+$color-white-5: rgba(255, 255, 255, $opacity-5);
+
+$color-black: #000000;
+$color-black-2: rgba(0, 0, 0, $opacity-2);
+$color-black-3: rgba(0, 0, 0, $opacity-3);
+$color-black-4: rgba(0, 0, 0, $opacity-4);
+$color-black-5: rgba(0, 0, 0, $opacity-5);
+
+$color-transparent: rgba(0, 0, 0, $opacity-0);
 
 /**
  * Animation
