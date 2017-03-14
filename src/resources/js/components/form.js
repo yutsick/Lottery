@@ -44,7 +44,7 @@ module.exports = {
 		function form_show_password() {
 			$('.js-action-show-password').click(function () {
 				let $password_button = $(this);
-				let $password_input  = $password_button.parents('.input-group-btn').prev('.form-control');
+				let $password_input  = $password_button.parents('.input-group-btn').prev('.inner-addon').find('.form-control');
 
 				if ( $password_button.hasClass('js-is-active') ) {
 					$password_input.attr('type', 'password');
