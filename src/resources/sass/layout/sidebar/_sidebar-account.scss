@@ -43,6 +43,7 @@
 				margin-right: 0;
 			}
 		}
+
 		#sidebar.js-is-active & {
 			@include max-screen($screen-sm-min) {
 				color: $color-base-secondary;
@@ -78,29 +79,22 @@
 			text-align: center;
 
 			i {
-				background-color: $color_primary;
-				border-radius: 100%;
-				width: 40px;
-				height: 40px;
-				color: $color_light;
-				margin-bottom: 5px;
+				color: $color_primary;
+				font-size: 32px;
+				margin-bottom: 2px;
 				display: inline-block;
-				line-height: 2.3;
 			}
 		}
+
 		#sidebar.js-is-active & {
 			@include max-screen($screen-sm-min) {
 				text-align: center;
 
 				i {
-					background-color: $color_primary;
-					border-radius: 100%;
-					width: 40px;
-					height: 40px;
-					color: $color_light;
-					margin-bottom: 5px;
+					color: $color_primary;
+					font-size: 32px;
+					margin-bottom: 2px;
 					display: inline-block;
-					line-height: 2.3;
 				}
 			}
 		}
