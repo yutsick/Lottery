@@ -86,7 +86,7 @@ module.exports = {
 
 		// Toggle navigation
 		function toggle_nav() {
-			$('a.top-menu__toggle').click(function () {
+			$('a.js-toggle-sidebar').click(function () {
 				$body.addClass('js-overlay-is-active');
 				$page_wrapper.toggleClass(active_class);
 				return false;

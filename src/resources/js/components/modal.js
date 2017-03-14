@@ -6,8 +6,14 @@ module.exports = {
 		function toggle_modal() {
 
 			// Modals
-			$('.logged-in .action-register').click(function () {
-				$('#modal-login').modal();
+			$('.js-action-register').click(function () {
+				let $page = $('#page-wrapper');
+				if ($page.hasClass('logged-in')) {
+					return true;
+				}
+				else {
+					$('#modal-login').modal();
+				}
 			});
 
 			// Hide open modals when toggle

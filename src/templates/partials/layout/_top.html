@@ -1,12 +1,13 @@
 <div id="top">
 	<div class="top-menu">
-		<a class="top-menu__toggle float-left">
+		<a class="top-menu__left js-toggle-sidebar float-left">
 			<i class="icon icon-burger"></i>
+			<span>Meny</span>
 		</a>
 		<a href="/" title="Hem" class="top-menu__logotype">
 			<img src="assets/img/brand/ml-logotype-old.png" alt="Miljonlotteriet">
 		</a>
-		<a class="top-menu__register action-register float-right">
+		<a href="/" class="top-menu__right js-action-register float-right">
 			Registrera lott
 		</a>
 	</div>
@@ -26,7 +27,7 @@
 					<span class="user__wallet">Spelkonto 500kr</span>
 				</div>
 				<div class="float-right">
-					<span class="user__winnings">Vintkonto 500kr</span>
+					<span class="user__winnings">Vinstkonto 500kr</span>
 				</div>
 			</div>
 		</div>
@@ -34,8 +35,8 @@
 
 		<div class="top-account__buttons">
 			@@if (logged_in === false) {
-			<button id="log-in" type="button" class="btn btn-primary action-login" data-toggle="modal" data-target="#modal-login">Logga in</button>
-			<button class="btn btn-success btn-2-line action-create-account" data-toggle="modal" data-target="#modal-create-account">Skapa konto
+			<button id="log-in" type="button" class="btn btn-primary js-action-login" data-toggle="modal" data-target="#modal-login">Logga in</button>
+			<button class="btn btn-success btn-2-line js-action-create-account" data-toggle="modal" data-target="#modal-create-account">Skapa konto
 				<span>och få 40 kr</span>
 			</button>
 			}
@@ -43,7 +44,7 @@
 			<div class="search @@if (logged_in === true) {js-is-active}">
 				<form action="">
 					<input type="text" class="form-control" placeholder="Sök">
-					<button id="search" class="btn btn-default action-search" type="button"><i class="icon icon-search"></i></button>
+					<button id="search" class="btn btn-default js-action-search" type="button"><i class="icon icon-search"></i></button>
 				</form>
 			</div>
 		</div>

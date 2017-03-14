@@ -7,7 +7,7 @@ module.exports = {
 
 		function form_ux() {
 			// Show hide password
-			$('.action-show-password').click(function () {
+			$('.js-action-show-password').click(function () {
 				let $password_button = $(this);
 				let $password_input  = $password_button.parents('.input-group-btn').prev('.form-control');
 
