@@ -1,22 +1,36 @@
-<div class="modal fade" id="modal-create-account" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+<div class="modal fade" id="modal-create-account" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+	 aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
 			@@include('elements/_button-close.html')
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title" id="modal-label">Skapa konto och få  40 kr!</h4>
+					<h4 class="modal-title" id="modal-label">Skapa konto och få 40 kr!</h4>
 				</div>
 				<div class="modal-body">
-					<form id="create-account-modal" class="modal-body__form" data-toggle="validator" action="/logged-in.html" method="get">
+					<form id="create-account-modal" class="modal-body__form" data-toggle="validator"
+						  action="/logged-in.html" method="get">
 						<div class="input-group input-vertical">
 							<div class="form-group">
-								<input type="text" class="form-control" id="userFirstName" placeholder="Förnamn" required>
+								<div class="inner-addon right-addon">
+									<i class="icon icon-close js-action-empty-input"></i>
+									<input type="text" class="form-control" id="userFirstName" placeholder="Förnamn"
+										   required>
+								</div>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="userLastName" placeholder="Efternamn" required>
+								<div class="inner-addon right-addon">
+									<i class="icon icon-close js-action-empty-input"></i>
+									<input type="text" class="form-control" id="userLastName" placeholder="Efternamn"
+										   required>
+								</div>
 							</div>
 							<div class="form-group">
-								<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅMMDDXXXX)" data-minlength="10" required>
+								<div class="inner-addon right-addon">
+									<i class="icon icon-close js-action-empty-input"></i>
+									<input type="number" class="form-control" id="userPersonalNumber"
+										   placeholder="Personnummer (ÅÅMMDDXXXX)" data-minlength="10" required>
+								</div>
 							</div>
 						</div>
 						<div class="form-group">
@@ -25,7 +39,9 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary btn-block js-action-login" data-toggle="modal" data-target="#modal-login">Jag har redan ett konto</button>
+					<button type="button" class="btn btn-secondary btn-block js-action-login" data-toggle="modal"
+							data-target="#modal-login">Jag har redan ett konto
+					</button>
 				</div>
 			</div>
 		</div>
@@ -41,12 +57,13 @@
 					<h4 class="modal-title" id="modal-label">Logga in</h4>
 				</div>
 				<div class="modal-body">
-					<form id="login-modal" class="modal-body__form" data-toggle="validator" action="/logged-in.html" method="get">
+					<form id="login-modal" class="modal-body__form" data-toggle="validator" action="/logged-in.html"
+						  method="get">
 						<div class="form-group">
 							<label class="control-label" for="userId">Kundnummer, e-post eller
 								personnummer</label>
 							<div class="inner-addon right-addon">
-								<a class="js-action-empty-input"><i class="icon icon-close"></i></a>
+								<i class="icon icon-close js-action-empty-input"></i>
 								<input type="text" class="form-control" id="userId"
 									   placeholder="123456789 ,fia.frid@mail.com, 8808088888" required>
 							</div>
@@ -55,8 +72,11 @@
 						<div class="form-group">
 							<label class="control-label" for="userPassword">Lösenord</label>
 							<div class="input-group">
-								<input type="password" class="form-control" id="userPassword"
-									   placeholder="*********" required>
+								<div class="inner-addon right-addon">
+									<i class="icon icon-close js-action-empty-input"></i>
+									<input type="password" class="form-control" id="userPassword"
+										   placeholder="*********" required>
+								</div>
 								<div class="input-group-btn">
 									<a class="btn btn-input js-action-show-password"><i class="icon icon-eye"></i></a>
 								</div>
@@ -76,18 +96,22 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary btn-block btn-icon" data-toggle="modal" data-target="#modal-login-bankid">
+					<button type="button" class="btn btn-secondary btn-block btn-icon" data-toggle="modal"
+							data-target="#modal-login-bankid">
 						Logga in med BankID
 						<i class="icon icon-game icon-right"></i>
 					</button>
-					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal-create-account">Skapa konto</button>
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal"
+							data-target="#modal-create-account">Skapa konto
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="modal fade" id="modal-login-bankid" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
+<div class="modal fade" id="modal-login-bankid" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+	 aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
 			@@include('elements/_button-close.html')
@@ -98,8 +122,13 @@
 				<div class="modal-body">
 					<form id="login-bankid-modal" class="modal-body__form" data-toggle="validator">
 						<div class="form-group">
-							<label class="control-label" for="userId">Fyll i ditt personnummer och tryck på logga in</label>
-							<input type="number" class="form-control" id="userPersonalNumber" placeholder="Personnummer (ÅÅÅÅMMDDXXXX)" data-minlength="12" required>
+							<label class="control-label" for="userId">Fyll i ditt personnummer och tryck på logga
+								in</label>
+							<div class="inner-addon right-addon">
+								<i class="icon icon-close js-action-empty-input"></i>
+								<input type="number" class="form-control" id="userPersonalNumber"
+									   placeholder="Personnummer (ÅÅÅÅMMDDXXXX)" data-minlength="12" required>
+							</div>
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Logga in</button>
@@ -107,8 +136,12 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary btn-block" data-toggle="modal" data-target="#modal-login">Logga in med lösenord</button>
-					<button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modal-create-account">Skapa konto</button>
+					<button type="button" class="btn btn-secondary btn-block" data-toggle="modal"
+							data-target="#modal-login">Logga in med lösenord
+					</button>
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal"
+							data-target="#modal-create-account">Skapa konto
+					</button>
 				</div>
 			</div>
 		</div>
