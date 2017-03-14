@@ -43,3 +43,50 @@ input::-webkit-inner-spin-button {
 		}
 	}
 }
+
+.inner-addon {
+	position: relative;
+
+	.icon {
+		position: absolute;
+		padding: 13px;
+		pointer-events: none;
+		font-size: 16px;
+		opacity: 0;
+	}
+
+	.js-action-empty-input {
+		cursor: pointer;
+	}
+
+	&.js-has-content {
+		&.left-addon {
+			input  {
+				padding-left:  45px;
+			}
+		}
+
+		&.right-addon {
+			input {
+				padding-right: 30px;
+			}
+		}
+
+		.icon {
+			pointer-events: auto;
+			opacity: 1;
+		}
+	}
+}
+
+.left-addon {
+	.icon {
+		left: 0;
+	}
+}
+
+.right-addon {
+	.icon {
+		right: 0;
+	}
+}
