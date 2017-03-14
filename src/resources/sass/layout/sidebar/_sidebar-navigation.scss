@@ -199,7 +199,7 @@
 					font-style: normal;
 					font-variant: normal;
 					font-weight: normal;
-					content: '\e908';
+					content: '\e902';
 					width: 10px;
 					font-size: 12px;
 					height: auto;
@@ -389,7 +389,7 @@
 							font-style: normal;
 							font-variant: normal;
 							font-weight: normal;
-							content: '\e908';
+							content: '\e906';
 							width: 10px;
 							font-size: 12px;
 							height: auto;
@@ -398,11 +398,18 @@
 							top: 50%;
 							right: 0;
 							margin: auto;
-							transform: translate3d(-5px, -50%, 0);
-							transition: color $duration-quick $delay-none $ease-in-out;
+							transform: translate3d(-15px, -50%, 0) rotate(0deg);
+							transition: color $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
 						}
 
 						&:not(.collapsed) {
+							&:after {
+								transform: translate3d(-15px, -50%, 0) rotate(180deg);
+							}
+						}
+
+						&:not(.collapsed),
+						&:hover {
 							color: $color-primary;
 
 							&:after {
