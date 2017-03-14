@@ -2,8 +2,44 @@ require('bootstrap-validator');
 
 module.exports = {
 	init() {
+		form_validate();
 		form_show_password();
 		form_empty_input();
+
+		function form_validate() {
+			$('#create-account-modal').validator().on('submit', function (e) {
+				var $form = $(this);
+
+				if (e.isDefaultPrevented()) {
+					$form.validator('validate');
+				} else {
+					$('#modal-create-account-step-2').modal();
+				}
+				return false;
+			});
+
+			$('#create-account-modal-step-2').validator().on('submit', function (e) {
+				var $form = $(this);
+
+				if (e.isDefaultPrevented()) {
+					$form.validator('validate');
+				} else {
+					$('#modal-create-account-step-3').modal();
+				}
+				return false;
+			});
+
+			$('#create-account-modal-step-3').validator().on('submit', function (e) {
+				var $form = $(this);
+
+				if (e.isDefaultPrevented()) {
+					$form.validator('validate');
+				} else {
+					$('#modal-create-account-finish').modal();
+				}
+				return false;
+			});
+		}
 
 		function form_show_password() {
 			$('.js-action-show-password').click(function () {
@@ -23,6 +59,7 @@ module.exports = {
 				return false;
 			});
 		}
+
 		function form_empty_input() {
 			$('.js-action-empty-input').click(function () {
 				let $input = $(this).next();

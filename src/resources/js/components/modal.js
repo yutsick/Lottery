@@ -6,7 +6,7 @@ module.exports = {
 		function toggle_modal() {
 
 			// Modals
-			$('a.js-action-register').click(function () {
+			$('.js-action-register').click(function () {
 				let $page = $('#page-wrapper');
 				if ($page.hasClass('logged-out')) {
 					$('#modal-login').modal();

@@ -48,13 +48,14 @@ input::-webkit-inner-spin-button {
 	border-radius: 0;
 }
 
-
 .input-group {
 	&.input-vertical {
 		width: 100%;
 		margin-bottom: 15px;
 
 		.form-group {
+			min-height: 29px;
+
 			&:first-of-type {
 				.form-control {
 					border-radius: 6px 6px 0 0;

@@ -39,8 +39,105 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary btn-block js-action-login" data-toggle="modal"
+					<button type="button" class="btn btn-secondary btn-block" data-toggle="modal"
 							data-target="#modal-login">Jag har redan ett konto
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modal-create-account-step-2" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+	 aria-hidden="true">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+			@@include('elements/_button-close.html')
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="modal-label">Skapa konto och få 40 kr!</h4>
+				</div>
+				<div class="modal-body">
+					<form id="create-account-modal-step-2" class="modal-body__form" data-toggle="validator"
+						  action="/logged-in.html" method="get">
+						<div class="input-group input-vertical">
+							<div class="form-group">
+								<div class="inner-addon right-addon">
+									<i class="icon icon-close js-action-empty-input"></i>
+									<input type="tel" class="form-control" id="userPhoneMobile"
+										   placeholder="Mobilnummer"
+										   required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="inner-addon right-addon">
+									<i class="icon icon-close js-action-empty-input"></i>
+									<input type="tel" class="form-control" id="userPhoneArea" placeholder="Riktnummer"
+										   required>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="inner-addon right-addon">
+									<i class="icon icon-close js-action-empty-input"></i>
+									<input type="tel" class="form-control" id="userPhone"
+										   placeholder="Telefonnummer" required>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="userNewsletter"> Ja tack! jag vill gärna ha nyheter
+									och uppdateringar från miljonlotteriet och ta del av information om tävlingar.
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" id="userAcceptTerms" required> Jag godkänner Miljonlotteriets
+									<a href="/">Villkor</a>, <a href="/">PUL</a> & <a href="/">Cookies</a>
+								</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Nästa steg</button>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal"
+							data-target="#modal-create-account-step-2">Tillbaka
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="modal-create-account-step-3" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+	 aria-hidden="true">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+			@@include('elements/_button-close.html')
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="modal-label">Skapa konto och få 40 kr!</h4>
+					<h5 class="modal-title h3" id="modal-label">Välkommen till Miljonlotteriet!</h5>
+				</div>
+				<div class="modal-body">
+					<p class="align-center">Du har nu skapat ett konto hos miljonlotteriet.se och ett bekräftelsemail är påväg till din
+						registrerade epost. Vi har satt in 40kr på ditt spelkonto som du hittar högst upp på sidan!
+					</p>
+					<p class="align-center"> Lycka till!</p>
+					<p>
+						<strong>Kundnummer: 124906</strong><br/>
+						<strong>Användarnamn: hello@mail.se</strong>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary btn-block" data-toggle="modal"
+							data-target="#modal-create-account-step-2">OK
 					</button>
 				</div>
 			</div>
