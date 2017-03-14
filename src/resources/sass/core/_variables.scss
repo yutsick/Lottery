@@ -86,34 +86,48 @@ $color-space: #000;
 $color-stone: #F9F9F9;
 $color-gravel: #E5E5E5;
 
+$color-blue-dark: #216AC4;
 $color-blue: #2074f2;
-$color-green: #3BB566;
+$color-blue-light: #6CAAE9;
+$color-green: #5bd084;
+$color-green-light: #AADB9B;
+$color-yellow: #F8D138;
+$color-yellow-light: #FBE18F;
+$color-orange: #F0774C;
+$color-orange-light: #F2A960;
+$color-pink: #DD5AB0;
+$color-pink-light: #ED75AE;
 $color-turquoise: #4FB7BD;
-$color-turquoise: #4FB7BD;
+$color-turquoise-light: #B8E2E7;
+$color-gray: #85A3B6;
+$color-gray-light: #BAD1DE;
+$color-black: #2e3237;
+$color-black-light: #475964;
 
-$color-night: #131B39; // #151F36
 $color-ocean: #37454E;
 $color-blueberry: #536785;
-$color-shore: #A2B6C2;
-$color-sky: #85A3B6;
 $color-cloud: #F2F5F7;
 $color-feather: #DEE1E8;
 $color: #626972;
+
+// Base colors
+$color-base-primary: $color-black; // Text
+$color-base-secondary: $color-ocean; // Menu links
+$color-base-complement: $color-blueberry; // Menu descriptions
 
 // Color Scheme
 $color-primary: $color-blue;
 $color-accent: $color-green;
 $color-complement-coral: $color-turquoise;
+// Complement: Sky - Icons
+$color-complement-sky: $color-gray;
+$color-complement-sky-light: $color-gray-light;
 
-
-
-$color-base-primary: $color-night; // Logo
-$color-base-secondary: $color-ocean; // Menu links
-$color-base-complement: $color-blueberry;
-$color-base-light: $color-sky; // Default button
-$color-base-light-01: $color-sky; // Icons
-$color-base-light-02: $color-cloud;
-$color-base-light-03: $color-feather; // Borders, hover etc.
+// Specific
+$color-border: $color-feather;
+$color-container-background: $color-cloud;
+$color-modal-background: $color-stone;
+$color-input-border: $color-gravel;
 
 // Others
 $color-dark: $color-space;
@@ -122,10 +136,6 @@ $color-overlay: rgba($color-base-primary, 0.8);
 
 // States
 $color-darken-amount: 10%;
-
-// Specific
-$color-modal-background: $color-stone;
-$color-input-border: $color-gravel;
 
 /**
  * Animation

@@ -12,7 +12,7 @@
 	// Defaults menu item styles
 	li {
 		display: block;
-		border-top: 1px solid $color-base-light-03;
+		border-top: 1px solid $color-border;
 		height: $sidebar-item-height;
 
 		&:first-child {
@@ -204,7 +204,7 @@
 					font-size: 12px;
 					height: auto;
 					position: absolute;
-					color: $color-base-light-03;
+					color: $color-border;
 					top: 50%;
 					right: 0;
 					margin: auto;
@@ -219,7 +219,7 @@
 				}
 				&.js-is-active {
 					&:after {
-						color: $color-base-light-01;
+						color: $color-complement-sky;
 					}
 				}
 
@@ -353,7 +353,7 @@
 			height: 100%;
 			padding-top: $sidebar-logo-height - 1;
 			transform: translate3d(0, 0, 0);
-			background-color: $color-base-light-02;
+			background-color: $color-container-background;
 			overflow-y: auto;
 			opacity: 0;
 			transition: opacity $duration-quick $delay-none $ease-in-out, visibility 0s $duration-fast;
@@ -394,7 +394,7 @@
 							font-size: 12px;
 							height: auto;
 							position: absolute;
-							color: $color-base-light-03;
+							color: $color-border;
 							top: 50%;
 							right: 0;
 							margin: auto;
@@ -413,7 +413,7 @@
 							color: $color-primary;
 
 							&:after {
-								color: $color-base-light-01;
+								color: $color-complement-sky;
 							}
 						}
 					}
@@ -429,7 +429,7 @@
 				}
 
 				&:last-child {
-					border-bottom: 1px solid $color-base-light-03;
+					border-bottom: 1px solid $color-border;
 				}
 
 				&:not(:first-child) {
@@ -451,7 +451,7 @@
 
 					> li {
 						&:first-child {
-							border-top: 1px solid $color-base-light-03;
+							border-top: 1px solid $color-border;
 						}
 					}
 				}

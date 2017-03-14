@@ -12,13 +12,13 @@
 }
 
 .btn-default {
-	background-color: $color-base-light;
+	background-color: $color-complement-sky;
 	color: $color-light;
 	border: none;
 
 	&:hover,
 	&:focus {
-		background-color: darken($color-base-light, $color-darken-amount);
+		background-color: darken($color-complement-sky, $color-darken-amount);
 		color: $color-light;
 	}
 
@@ -116,7 +116,7 @@
 	i {
 		font-size: 14px;
 		line-height: 1.5	;
-		color: $color-base-light-01;
+		color: $color-complement-sky;
 	}
 
 	&:hover,
