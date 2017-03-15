@@ -40,6 +40,19 @@ module.exports = {
 				}
 				return false;
 			});
+
+			$('#login-bankid-modal').validator().on('submit', function (e) {
+				var $form = $(this);
+
+				if (e.isDefaultPrevented()) {
+					$form.validator('validate');
+				} else {
+					$('#login-bankid-modal-step-2').modal();
+				}
+				return false;
+			});
+
+
 		}
 
 		function form_active_search() {
