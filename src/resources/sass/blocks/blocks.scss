@@ -6,14 +6,6 @@
 	}
 }
 
-.block-hero {
-	padding: 150px 50px;
-	margin-bottom: 25px;
-	height: 100%;
-	width: 100%;
-	background-color: $color-container-background;
-}
-
 .block-promotion {
 	padding: 50px;
 	margin-bottom: 25px;
@@ -22,5 +14,6 @@
 	background-color: $color-container-background;
 }
 
+@import "hero";
 @import "footer";
 @import "bottom-bar";
