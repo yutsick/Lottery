@@ -61,13 +61,17 @@ module.exports = {
 		}
 
 		function form_empty_input() {
-			$('.js-action-empty-input').click(function () {
-				let $input = $(this).next();
-				console.log($input);
+			$('.inner-addon .form-control').bind('keyup', function(e) {
+				let $input = $(this);
 				let $input_container = $input.parent('.inner-addon');
+				let input_value = $input.val();
 
-				$input.val('');
-				$input_container.removeClass('js-has-content');
+				if (input_value) {
+					$input_container.addClass('js-has-content');
+				}
+				else {
+					$input_container.removeClass('js-has-content');
+				}
 			});
 
 			$('.inner-addon ').on('focus', '.form-control', function () {
@@ -85,17 +89,13 @@ module.exports = {
 				}
 			});
 
-			$('.inner-addon .form-control').bind('keyup', function(e) {
-				let $input = $(this);
+			$('.js-action-empty-input').click(function () {
+				let $input = $(this).next();
+				console.log($input);
 				let $input_container = $input.parent('.inner-addon');
-				let input_value = $input.val();
 
-				if (input_value) {
-					$input_container.addClass('js-has-content');
-				}
-				else {
-					$input_container.removeClass('js-has-content');
-				}
+				$input.val('');
+				$input_container.removeClass('js-has-content');
 			});
 		}
 	}
