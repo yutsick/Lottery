@@ -5,6 +5,7 @@
 	font-weight: 600;
 	padding: 9px 30px;
 	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
+	border: 1px solid transparent;
 
 	i {
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
@@ -14,12 +15,13 @@
 .btn-default {
 	background-color: $color-complement-sky;
 	color: $color-light;
-	border: none;
+	border: 1px solid transparent;
 
 	&:hover,
 	&:focus {
 		background-color: darken($color-complement-sky, $color-darken-amount);
 		color: $color-light;
+		border: 1px solid transparent;
 	}
 
 	&.btn-invert {
@@ -31,6 +33,7 @@
 		&:focus {
 			background-color: darken($color-light, $color-darken-amount);
 			color: $color-base-complement;
+			border: 1px solid transparent;
 		}
 	}
 }
@@ -38,20 +41,25 @@
 .btn-primary {
 	background-color: $color-primary;
 	color: $color-light;
+	border: 1px solid transparent;
 
 	&:hover,
 	&:focus {
 		background-color: darken($color-primary, $color-darken-amount);
 		color: $color-light;
+		border: 1px solid transparent;
 	}
 }
 
 .btn-success {
 	background-color: $color-accent;
+	border: 1px solid transparent;
+	border: 1px solid transparent;
 
 	&:hover,
 	&:focus {
 		background-color: darken($color-accent, $color-darken-amount);
+		border: 1px solid transparent;
 	}
 }
 
