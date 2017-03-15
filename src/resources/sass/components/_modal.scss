@@ -54,6 +54,10 @@
 }
 .modal-body {
 	padding-bottom: 0;
+
+	.btn-link {
+		margin-top: -10px;
+	}
 }
 
 .modal-footer {

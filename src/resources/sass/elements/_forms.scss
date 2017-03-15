@@ -12,6 +12,11 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 
+label {
+	margin-bottom: $margin-small;
+	color: $color-base-complement;
+}
+
 .form-control {
 	font-size: 14px;
 	font-weight: 500;
