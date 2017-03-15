@@ -104,12 +104,6 @@
 				@include max-screen($screen-sm-min) {
 					padding: 0;
 				}
-
-				span {
-					@include max-screen($screen-sm-min) {
-						display: none;
-					}
-				}
 			}
 		}
 
