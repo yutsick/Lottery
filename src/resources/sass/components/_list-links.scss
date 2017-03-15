@@ -18,12 +18,21 @@
 				color: darken($color-base-complement, $color-darken-amount);
 			}
 		}
+
+		img {
+			display: block;
+			max-height: 50px;
+			height: 100%;
+			width: auto;
+		}
 	}
 }
 
 .list-links--horizontal {
 	.list-links__item {
 		display: inline-block;
+		vertical-align: top;
 		margin-right: 5px;
+		margin-bottom: 10px;
 	}
 }
