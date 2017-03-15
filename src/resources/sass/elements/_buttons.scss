@@ -11,6 +11,12 @@
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	}
 
+
+}
+
+.btn-load {
+	position: relative;
+	
 	.spinner {
 		position: absolute;
 		left: 50%;
@@ -22,7 +28,13 @@
 	}
 
 	&.js-is-loading {
-		opacity: 1;
+		.spinner {
+			opacity: 1;
+		}
+
+		span {
+			opacity: 0;
+		}
 	}
 }
 

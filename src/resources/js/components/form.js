@@ -9,7 +9,7 @@ module.exports = {
 
 		function form_validate() {
 			$('#create-account-modal').validator().on('submit', function (e) {
-				var $form = $(this);
+				let $form = $(this);
 
 				if (e.isDefaultPrevented()) {
 					$form.validator('validate');
@@ -20,7 +20,7 @@ module.exports = {
 			});
 
 			$('#create-account-modal-step-2').validator().on('submit', function (e) {
-				var $form = $(this);
+				let $form = $(this);
 
 				if (e.isDefaultPrevented()) {
 					$form.validator('validate');
@@ -31,7 +31,7 @@ module.exports = {
 			});
 
 			$('#create-account-modal-step-3').validator().on('submit', function (e) {
-				var $form = $(this);
+				let $form = $(this);
 
 				if (e.isDefaultPrevented()) {
 					$form.validator('validate');
@@ -42,12 +42,14 @@ module.exports = {
 			});
 
 			$('#login-bankid-modal').validator().on('submit', function (e) {
-				var $form = $(this);
+				let $form = $(this);
+				let $submit = $form.find('button[type=submit]');
 
 				if (e.isDefaultPrevented()) {
 					$form.validator('validate');
 				} else {
-					$('#login-bankid-modal-step-2').modal();
+					// $submit.text('');
+					$submit.addClass('js-is-loading');
 				}
 				return false;
 			});
