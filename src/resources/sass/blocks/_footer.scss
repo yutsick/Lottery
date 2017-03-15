@@ -2,4 +2,10 @@
 	border-top: 1px solid $color-border;
 	background-color: $color-container-background;
 	padding: $padding-medium 0;
+	font-size: 13px;
+	line-height: 24px;
+
+	p {
+		margin-bottom: 35px;
+	}
 }

@@ -4,8 +4,19 @@
 	list-style: none;
 
 	.list-links__item {
+		margin-bottom: 5px;
+
+		&:last-child {
+			margin: 0;
+		}
+
 		a {
 			color: $color-base-complement;
+			font-weight: 500;
+
+			&:hover {
+				color: darken($color-base-complement, $color-darken-amount);
+			}
 		}
 	}
 }
@@ -14,9 +25,5 @@
 	.list-links__item {
 		display: inline-block;
 		margin-right: 5px;
-
-		&:last-child {
-			margin: 0;
-		}
 	}
 }
