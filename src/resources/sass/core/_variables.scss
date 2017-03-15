@@ -112,7 +112,8 @@ $color-input-border: $color-gravel;
 // Others
 $color-dark: $color-space;
 $color-light: $color-snow;
-$color-overlay: rgba($color-base-primary, 0.8);
+$color-overlay-base: rgba(21, 31, 54, 1);
+$color-overlay: rgba(21, 31, 54, 0.8);
 
 // States
 $color-darken-amount: 10%;
