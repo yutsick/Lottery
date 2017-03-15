@@ -1,0 +1,29 @@
+.block-bottom-bar {
+	padding: 30px 0 20px;
+
+	.align {
+		// margin-bottom: $margin-default;
+
+		@include max-screen($screen-sm-max) {
+			text-align: center;
+			margin-bottom: $margin-default;
+		}
+
+		&:last-of-type {
+			@include max-screen($screen-sm-max) {
+				// margin-bottom: 0;
+			}
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+
+	img {
+		display: block;
+		max-height: 50px;
+		height: 100%;
+		width: auto;
+	}
+}

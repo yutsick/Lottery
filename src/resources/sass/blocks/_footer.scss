@@ -1,11 +1,25 @@
 .block-footer {
 	border-top: 1px solid $color-border;
+	border-bottom: 1px solid $color-border;
 	background-color: $color-container-background;
 	padding: $padding-medium 0;
 	font-size: 13px;
 	line-height: 24px;
 
 	p {
+		margin-bottom: 35px;
+	}
+
+	a {
+		color: $color-base-complement;
+		font-weight: 500;
+
+		&:hover {
+			color: darken($color-base-complement, $color-darken-amount);
+		}
+	}
+
+	.list-links {
 		margin-bottom: 35px;
 	}
 }

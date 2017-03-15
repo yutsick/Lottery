@@ -22,8 +22,16 @@
 	float: right;
 }
 
-.align-center {
+.align {
+	text-align: left;
+}
+
+.align--center {
 	text-align: center;
+}
+
+.align--right {
+	text-align: right;
 }
 
 .align-vertical {
