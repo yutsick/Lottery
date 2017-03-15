@@ -1,14 +1,9 @@
 .row.equal-height {
-	padding: 0 15px;
 	display: flex;
 	flex-wrap: wrap;
 
 	&:before, &:after {
 		display: block;
-	}
-
-	&.no-padding {
-		padding: 0;
 	}
 
 	> [class*='col-'] {
@@ -22,4 +17,8 @@
 			justify-content: flex-end;
 		}
 	}
+}
+
+.row.padding-extra {
+	padding: 0 $padding-medium;
 }

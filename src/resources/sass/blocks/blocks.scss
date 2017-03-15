@@ -1,17 +1,26 @@
 .block {
-	height: 100%;
-	margin-bottom: 25px;
-	width: 100%;
 	display: block;
-	background-color: $color-complement-sky;
-	padding: 50px;
 
 	p {
-		margin: 15px 0 0 0;
+		margin: 0 0 $margin-medium;
 		color: $color-complement-sky-light;
 	}
 }
 
-.hero-block {
+.block-hero {
 	padding: 150px 50px;
+	margin-bottom: 25px;
+	height: 100%;
+	width: 100%;
+	background-color: $color-complement-sky;
 }
+
+.block-promotion {
+	padding: 50px;
+	margin-bottom: 25px;
+	height: 100%;
+	width: 100%;
+	background-color: $color-complement-sky;
+}
+
+@import "footer";
