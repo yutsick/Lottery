@@ -78,7 +78,7 @@
 
 			@include min-screen($screen-sm-min) {
 				float: none;
-				margin: 0 10px;
+				margin: 0 5px;
 				// Button style modification
 				border-radius: 18px;
 				width: auto;
@@ -145,7 +145,7 @@
 				border-radius: 18px;
 				padding-top: 8px;
 				padding-bottom: 8px;
-
+				height: 37px;
 			}
 
 			.btn {
@@ -157,8 +157,8 @@
 			}
 
 			#search {
-				width: 34px;
-				height: 34px;
+				width: 37px;
+				height: 37px;
 				padding: 7px;
 				border-radius: 100%;
 
