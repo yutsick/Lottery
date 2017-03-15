@@ -1,4 +1,22 @@
 .list-links {
 	padding: 0;
+	margin-bottom: 35px;
 	list-style: none;
+
+	.list-links__item {
+		a {
+			color: $color-base-complement;
+		}
+	}
+}
+
+.list-links--horizontal {
+	.list-links__item {
+		display: inline-block;
+		margin-right: 5px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
 }

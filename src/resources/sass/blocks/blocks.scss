@@ -3,7 +3,6 @@
 
 	p {
 		margin: 0 0 $margin-medium;
-		color: $color-complement-sky-light;
 	}
 }
 
@@ -12,7 +11,7 @@
 	margin-bottom: 25px;
 	height: 100%;
 	width: 100%;
-	background-color: $color-complement-sky;
+	background-color: $color-container-background;
 }
 
 .block-promotion {
@@ -20,7 +19,7 @@
 	margin-bottom: 25px;
 	height: 100%;
 	width: 100%;
-	background-color: $color-complement-sky;
+	background-color: $color-container-background;
 }
 
 @import "footer";
