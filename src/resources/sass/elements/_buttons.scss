@@ -26,13 +26,13 @@
 
 	&.btn-invert {
 		background-color: $color-light;
-		color: $color-base-complement;
-		border: none;
+		color: $color-complement-sky;
+		border: 1px solid transparent;
 
 		&:hover,
 		&:focus {
-			background-color: darken($color-light, $color-darken-amount);
-			color: $color-base-complement;
+			background-color: $color-light;
+			color: $color-complement-sky;
 			border: 1px solid transparent;
 		}
 	}

@@ -16,14 +16,16 @@ $(function () {
 		console.log($(this));
 	});
 
-	$('#search').click(function () {
-		let $search_container = $(this).parents('.search');
+	$('.account-search .js-action-search').click(function () {
+		let $search_container = $(this).parents('.account-search');
+		let $search_input = $search_container.find('.form-control');
 
 		if ($search_container.hasClass('js-is-active')) {
 			return true;
 		}
 		else {
 			$search_container.addClass('js-is-active');
+			$search_input.focus();
 		}
 	});
 

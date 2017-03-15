@@ -5,6 +5,7 @@ module.exports = {
 		form_validate();
 		form_show_password();
 		form_empty_input();
+		form_active_search();
 
 		function form_validate() {
 			$('#create-account-modal').validator().on('submit', function (e) {
@@ -38,6 +39,21 @@ module.exports = {
 					$('#modal-create-account-finish').modal();
 				}
 				return false;
+			});
+		}
+
+		function form_active_search() {
+			$('.search  .form-control').bind('keyup', function(e) {
+				let $input = $(this);
+				let input_value = $input.val();
+				let $input_container = $input.parent('.search');
+
+				if (input_value) {
+					$input_container.addClass('js-has-content');
+				}
+				else {
+					$input_container.removeClass('js-has-content');
+				}
 			});
 		}
 
