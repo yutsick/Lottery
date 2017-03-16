@@ -21,12 +21,12 @@ $top-padding-logged-out: $menu-height + $account-buttons-height;
 
 // Sidebar
 $sidebar-width-mobile: 70px;
-$sidebar-width-desktop: 240px;
+$sidebar-width-desktop: 260px;
 $sidebar-item-height: 63px;
 $sidebar-logo-height: 69px;
 $sidebar-logo-image-height: 36px;
 
-$sub-navigation-width-mobile: 170px;
+$sub-navigation-width-mobile: 190px;
 $sub-navigation-width-desktop: $sidebar-width-desktop;
 
 $sidebar-total-width-mobile: $sidebar-width-mobile + $sub-navigation-width-mobile;
