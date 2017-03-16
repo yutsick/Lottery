@@ -23,7 +23,13 @@ const fontName = "ml-icons";
  */
 
 elixir((mix) => {
-    mix.sass('app.scss');
+	mix.sass([
+		'app.scss'
+	], elixir.config.publicPath + '/css');
+	mix.sass([
+		elixir.config.assetsPath + '/sass/ie/ie.scss'
+	], elixir.config.publicPath + '/css/ie-all.css');
+
     mix.webpack('app.js');
 
     mix.fileinclude();
