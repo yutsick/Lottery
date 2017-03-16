@@ -1,18 +1,5 @@
 .block {
 	position: relative;
-
-	h1,
-	.h1,
-	h2,
-	.h2,
-	h3,
-	.h3 {
-		margin-top: 0;
-	}
-
-	p {
-		margin: 0 0 $margin-medium;
-	}
 }
 
 @import "hero";
@@ -74,17 +61,25 @@
 	&:after {
 		content: ' ';
 		position: absolute;
-		z-index: 10;
+		z-index: 1;
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		height: 50%;
-		background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.54) 100%);
+		height: 100%;
+		background: linear-gradient(transparent 0%, rgba(0, 0, 0, 1) 100%);
+		transition: opacity $duration-fast $delay-none $ease-in-out;
+		opacity: 0.54;
 	}
 
-	&.scrim-full {
+	&.scrim-half {
 		&:after {
-			height: 100%;
+			height: 50%;
+		}
+	}
+
+	&:hover {
+		&:after {
+			opacity: 0.74;
 		}
 	}
 }

@@ -1,7 +1,58 @@
 .block-promotion {
-	padding: 50px;
+	min-height: 220px;
 	margin-bottom: 25px;
+	background-color: $color-container-background;
+
+	p {
+		margin: $margin-small 0 0 0;
+	}
+
+	h3,
+	.h3 {
+		margin: 0;
+	}
+}
+
+.block-promotion__content {
+	padding: $padding-default 35px $padding-default $padding-default;
+	z-index: 2;
+}
+
+.block-promotion__link {
+	position: relative;
+	display: block;
 	height: 100%;
 	width: 100%;
-	background-color: $color-container-background;
+	color: $color-light;
+	z-index: 3;
+
+	&:after {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		font-size: 30px;
+		content: '\e904';
+		font-family: "ml-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		text-decoration: none;
+		text-transform: none;
+		opacity: 0.6;
+		transform: scale(0.8);
+		transition: opacity $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color-light;
+
+		&:after {
+			opacity: 1;
+			transform: scale(1.0);
+		}
+	}
 }
