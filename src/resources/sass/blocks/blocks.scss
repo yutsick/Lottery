@@ -14,45 +14,48 @@
 	background-repeat: no-repeat;
 }
 
-.block--background-color {
-	color: $color-light;
+.block--background-pattern {
 	background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/ricepaper2_@2X.png");
 	background-size: 500px auto;
 	background-blend-mode: multiply;
+}
 
-	&.background-blue {
+.block--background-color {
+	color: $color-light;
+
+	&.background-color-blue {
 		background-color: $color-blue;
 	}
 
-	&.background-green {
+	&.background-color-green {
 		background-color: $color-green;
 	}
 
-	&.background-yellow {
+	&.background-color-yellow {
 		background-color: $color-yellow;
 	}
 
-	&.background-orange {
+	&.background-color-orange {
 		background-color: $color-orange;
 	}
 
-	&.background-pink {
+	&.background-color-pink {
 		background-color: $color-pink;
 	}
 
-	&.background-turquoise {
+	&.background-color-turquoise {
 		background-color: $color-turquoise;
 	}
 
-	&.background-gray {
+	&.background-color-gray {
 		background-color: $color-gray;
 	}
 
-	&.background-black {
+	&.background-color-black {
 		background-color: $color-black;
 	}
 
-	&.background-white {
+	&.background-color-white {
 		background-color: $color-light;
 	}
 }
