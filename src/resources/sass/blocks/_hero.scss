@@ -9,6 +9,32 @@
 		margin-bottom: 50px;
 		min-height: 500px;
 	}
+
+	h1,
+	.h1,
+	h2,
+	.h2 {
+	 margin-bottom: 0;
+	}
+
+	h2,
+	.h2 {
+		margin-top: 10px;
+
+		@include min-screen($screen-sm-min) {
+			margin-top: 25px;
+
+		}
+	}
+
+	.btn {
+		margin-top: 10px;
+
+		@include min-screen($screen-sm-min) {
+			margin-top: 30px;
+
+		}
+	}
 }
 
 .block-hero__content {
@@ -17,4 +43,5 @@
 	top: 50%;
 	transform: translateY(-50%);
 	padding: 0 15px;
+	width: 75%;
 }
