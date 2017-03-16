@@ -63,11 +63,13 @@
 .row {
 	> [class*='col-'] {
 		.block--vertical-align {
-			&.vertical-align-start {
+			&.vertical-align-start,
+			&.vertical-align-start a {
 				justify-content: flex-start;
 			}
 
-			&.vertical-align-center {
+			&.vertical-align-center,
+			&.vertical-align-center a {
 				justify-content: center;
 			}
 		}
