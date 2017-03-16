@@ -7,7 +7,7 @@
 	transition: transform $duration-fast $ease-standard $delay-none;
 
 	@include min-screen($screen-sm-min) {
-		position: static;
+		position: relative;
 		top: auto;
 	}
 
