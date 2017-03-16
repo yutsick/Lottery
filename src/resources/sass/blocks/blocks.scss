@@ -57,6 +57,21 @@
 	}
 }
 
+.row {
+	> [class*='col-'] {
+		.block--vertical-align {
+			&.vertical-align-start {
+				justify-content: flex-start;
+			}
+
+			&.vertical-align-center {
+				justify-content: center;
+			}
+		}
+	}
+}
+
+
 .block--scrim {
 	&:after {
 		content: ' ';

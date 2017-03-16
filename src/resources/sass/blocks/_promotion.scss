@@ -12,7 +12,6 @@
 
 .block-promotion {
 	min-height: 220px;
-	background-color: $color-container-background;
 
 	.promotion-blocks .row > [class*='col-']:not(.col-md-6):not(.col-md-12) & {
 		min-height: 440px;
@@ -29,8 +28,27 @@
 }
 
 .block-promotion__content {
-	padding: $padding-default 35px $padding-default $padding-default;
 	z-index: 2;
+	padding: $padding-default 35px $padding-default $padding-default;
+
+/*	.block--background-color &,
+	.block--background-image & {
+		padding: $padding-default 35px $padding-default $padding-default;
+	}*/
+}
+
+.block-promotion__image {
+	&.block-promotion__image--landscape {
+		padding-bottom: 33%;
+	}
+
+	&.block-promotion__image--portrait {
+		padding-bottom: 150%;
+	}
+
+	&.block-promotion__image--square {
+		padding-bottom: 100%;
+	}
 }
 
 .block-promotion__link {
