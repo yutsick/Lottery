@@ -1,10 +1,6 @@
-.block {
-	display: block;
-
-	p {
-		margin: 0 0 $margin-medium;
-	}
-}
+@import "hero";
+@import "footer";
+@import "bottom-bar";
 
 .block-promotion {
 	padding: 50px;
@@ -14,6 +10,61 @@
 	background-color: $color-container-background;
 }
 
-@import "hero";
-@import "footer";
-@import "bottom-bar";
+.block {
+	display: block;
+
+	p {
+		margin: 0 0 $margin-medium;
+	}
+}
+
+.block--background-image {
+	// background-image: url();
+	color: $color-light;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.block--background-color {
+	color: $color-light;
+	background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/ricepaper2_@2X.png");
+	background-size: 500px auto;
+	background-blend-mode: multiply;
+
+	&.background-blue {
+		background-color: $color-blue;
+	}
+
+	&.background-green {
+		background-color: $color-green;
+	}
+
+	&.background-yellow {
+		background-color: $color-yellow;
+	}
+
+	&.background-orange {
+		background-color: $color-orange;
+	}
+
+	&.background-pink {
+		background-color: $color-pink;
+	}
+
+	&.background-turquoise {
+		background-color: $color-turquoise;
+	}
+
+	&.background-gray {
+		background-color: $color-gray;
+	}
+
+	&.background-black {
+		background-color: $color-black;
+	}
+
+	&.background-white {
+		background-color: $color-light;
+	}
+}

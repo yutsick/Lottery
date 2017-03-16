@@ -50,11 +50,15 @@ module.exports = {
 				// Check if the clicked item has a sub menu, else got o the links href
 				if ($this_nav_item_sub_menu.has('ul').length >= 1) {
 
+					// Collapse all sub menus
+					$('.collapse').collapse('hide');
+
 					// Hide or show sub menu
 					if ($this_nav_item.hasClass(active_class)) {
 						$this_nav_item.removeClass(active_class);
 						$this_nav_item.parent('li').removeClass(active_class);
 						$sidebar.removeClass(active_class);
+
 
 						// Hide overlay on large screens
 						if ($win.width() > mobile_width) {

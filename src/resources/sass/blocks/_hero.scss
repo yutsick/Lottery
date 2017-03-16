@@ -1,7 +1,13 @@
 .block-hero {
 	min-height: 500px;
-	margin-bottom: 25px;
+	margin-bottom: 50px;
 	height: 100%;
 	width: 100%;
 	background-color: $color-container-background;
+}
+
+.block-hero__content {
+	top: 50%;
+	transform: translateY(-50%);
+
 }
