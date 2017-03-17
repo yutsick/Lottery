@@ -6,7 +6,7 @@
 	background-color: $color-container-background;
 
 	@include min-screen($screen-sm-min) {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
 		min-height: 500px;
 	}
 

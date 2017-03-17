@@ -1,0 +1,13 @@
+.block-text {
+	margin-bottom: 20px;
+
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 40px;
+	}
+}
+
+.block-text__content {
+	p {
+		margin-bottom: 20px;
+	}
+}
