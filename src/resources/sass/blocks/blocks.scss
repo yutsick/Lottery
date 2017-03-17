@@ -60,23 +60,6 @@
 	}
 }
 
-.row {
-	> [class*='col-'] {
-		.block--vertical-align {
-			&.vertical-align-start,
-			&.vertical-align-start a {
-				justify-content: flex-start;
-			}
-
-			&.vertical-align-center,
-			&.vertical-align-center a {
-				justify-content: center;
-			}
-		}
-	}
-}
-
-
 .block--scrim {
 	&:after {
 		content: ' ';
@@ -101,5 +84,23 @@
 		&:after {
 			opacity: 0.74;
 		}
+	}
+}
+
+&.flex-top {
+	> a {
+		justify-content: flex-start;
+	}
+}
+
+&.flex-middle {
+	> a {
+		justify-content: center;
+	}
+}
+
+&.flex-bottom {
+	> a {
+		justify-content: flex-end;
 	}
 }
