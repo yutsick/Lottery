@@ -37,6 +37,10 @@
 	}*/
 }
 
+.block-promotion__content--split {
+	padding-right: 55%;
+}
+
 .block-promotion__image {
 	background-size: cover;
 	background-position: center center;
@@ -47,6 +51,7 @@
 	&:hover {
 		transform: scale(1.2);
 	}
+
 	&.block-promotion__image--landscape {
 		padding-bottom: 33%;
 	}
@@ -58,6 +63,16 @@
 	&.block-promotion__image--square {
 		padding-bottom: 100%;
 	}
+}
+
+.block-promotion__image--split {
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+	position: absolute;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	top: 0;
 }
 
 .block-promotion__link {
