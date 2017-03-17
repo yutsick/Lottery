@@ -8,6 +8,8 @@
 
 .block-text__content {
 	p {
+		overflow: auto;
+		zoom: 1;
 		margin-bottom: 20px;
 	}
 }
