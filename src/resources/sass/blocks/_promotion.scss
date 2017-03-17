@@ -12,7 +12,7 @@
 
 .block-promotion {
 	min-height: 220px;
-
+	overflow: hidden;
 	.promotion-blocks .row > [class*='col-']:not(.col-md-6):not(.col-md-12) & {
 		min-height: 440px;
 	}
@@ -38,6 +38,12 @@
 }
 
 .block-promotion__image {
+	transform: scale(1);
+	transition: transform 15s $ease-in-out $delay-none;
+
+	&:hover {
+		transform: scale(1.2);
+	}
 	&.block-promotion__image--landscape {
 		padding-bottom: 33%;
 	}
