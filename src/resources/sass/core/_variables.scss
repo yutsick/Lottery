@@ -12,27 +12,6 @@ $padding-default: 20px;
 $padding-medium: 15px;
 $padding-small: 10px;
 
-// Menu
-$menu-height: 69px;
-$account-user-height: 51px;
-$account-buttons-height: 45px;
-$top-padding-logged-in: $menu-height + $account-user-height;
-$top-padding-logged-out: $menu-height + $account-buttons-height;
-
-// Sidebar
-$sidebar-width-mobile: 70px;
-$sidebar-width-desktop: 260px;
-$sidebar-item-height: 63px;
-$sidebar-logo-height: 69px;
-$sidebar-logo-image-height: 36px;
-
-$sub-navigation-width-mobile: 190px;
-$sub-navigation-width-desktop: $sidebar-width-desktop;
-
-$sidebar-total-width-mobile: $sidebar-width-mobile + $sub-navigation-width-mobile;
-$sidebar-total-width-tablet: $sidebar-width-mobile + $sidebar-width-desktop;
-$sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop;
-
 /**
  * Fonts
  */

@@ -1,5 +1,9 @@
+/* Breakpoints */
+@import "breakpoints/breakpoints";
+
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../../node_modules/sass-mediaqueries/media-queries";
+
 
 /* Project config */
 @import "core/core";
