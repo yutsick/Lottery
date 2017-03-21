@@ -80,7 +80,6 @@ module.exports = {
 				if ( $password_button.hasClass('js-is-active') ) {
 					$password_input.attr('type', 'password');
 					$password_button.removeClass('js-is-active');
-					console.log($password_input);
 				}
 				else {
 					$password_input.attr('type', 'text');
@@ -122,7 +121,6 @@ module.exports = {
 
 			$('.js-action-empty-input').click(function () {
 				let $input = $(this).next();
-				console.log($input);
 				let $input_container = $input.parent('.inner-addon');
 
 				$input.val('');

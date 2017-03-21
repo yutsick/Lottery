@@ -4,7 +4,8 @@ require('bootstrap-sass');
 var alert = require('./components/alert');
 var form = require('./components/form');
 var modal = require('./components/modal');
-var navigation = require('./components/navigation');
+var navigation = require('./layout/navigation');
+var footer = require('./layout/footer');
 var search = require('./components/search');
 
 $(function () {
@@ -12,6 +13,7 @@ $(function () {
 	alert.init();
 	form.init();
 	modal.init();
-	navigation.init();
 	search.init();
+	navigation.init();
+	footer.init();
 });
