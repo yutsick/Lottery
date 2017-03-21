@@ -4,26 +4,25 @@
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../../node_modules/sass-mediaqueries/media-queries";
 
+body.ml-2017 {
+	/* Project config */
+	@import "core/core";
 
-/* Project config */
-@import "core/core";
+	/* Elements */
+	@import "elements/elements";
 
-/* Elements */
-@import "elements/elements";
+	/* Components */
+	@import "components/components";
 
-/* Components */
-@import "components/components";
+	/* Blocks */
+	@import "blocks/blocks";
 
-/* Blocks */
-@import "blocks/blocks";
+	/* Page layouts */
+	@import "layout/layout";
 
-/* Page layouts */
-@import "layout/layout";
+	/* Template styles */
+	@import "pages/pages";
 
-/* Template styles */
-@import "pages/pages";
-
-body {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	font-weight: $regular;
