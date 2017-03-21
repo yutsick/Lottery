@@ -1,8 +1,15 @@
 <section class="block block-article-list">
-	<div class="container padding-extra">
-		<div class="row">
-			<div class="col-md-12">
+	<div class="container">
+		<div class="row padding-extra">
+			<div class="col-xs-12">
+				<h2 class="block__heading h3">Läsvärda artiklar</h2>
 			</div>
+			@@loop('blocks/article-list/_article-list-content.html', [
+				{
+					"title": "My article title",
+					"text": "My article text"
+				}
+			])
 		</div>
 	</div>
 </section>

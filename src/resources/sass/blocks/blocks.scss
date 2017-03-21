@@ -20,6 +20,14 @@
 	}
 }
 
+.block__heading {
+	margin: 0 0 20px;
+
+	@include min-screen($screen-md-max) {
+		margin: 0 0 50px;
+	}
+}
+
 @import "hero";
 @import "footer";
 @import "bottom-bar";
