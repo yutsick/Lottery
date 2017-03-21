@@ -12,13 +12,11 @@
 
 	h1,
 	.h1,
-	h2,
-	.h2 {
-	 margin-bottom: 0;
+	.block-hero__subtitle {
+		margin-bottom: 0;
 	}
 
-	h2,
-	.h2 {
+	.block-hero__subtitle {
 		margin-top: 10px;
 
 		@include min-screen($screen-sm-min) {

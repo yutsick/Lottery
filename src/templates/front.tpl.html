@@ -7,7 +7,14 @@
 
 <div id="content-wrapper">
 	@@include('blocks/_hero.html', {"hero_content": true})
-	@@include('blocks/_promotion.html', {"blocks": "all"})
+	@@include('blocks/_article-list.html')
+	@@include('blocks/_promotion.html', {"blocks": "row_1"})
+	@@include('blocks/_promotion.html', {"blocks": "row_2"})
+	@@include('blocks/_promotion.html', {"blocks": "row_3"})
+	@@include('blocks/_promotion.html', {"blocks": "row_4"})
+	@@include('blocks/_promotion.html', {"blocks": "row_5"})
+	@@include('blocks/_promotion.html', {"blocks": "row_6"})
+	@@include('blocks/_promotion.html', {"blocks": "row_7"})
 </div>
 
 @@include('layout/_footer.html', {"show_footer": true})
