@@ -1,9 +1,7 @@
 <header class="block block--background-image block--scrim block-hero" style="background-image: url('assets/img/mockup/man.jpg')">
 	<div class="container">
-		<div class="block-hero__content">
-			<h1>Max fick tillbaka sin ungdom.</h1>
-			<h2>Rita vann Jackpoten och Max fick sin ungdom tillbaka</h2>
-			<a href="/" class="btn btn-primary" title="">Läs mer</a>
-		</div>
+		@@if (context.hero_content === true) {
+			@@include('blocks/hero/_hero-content.html')
+		}
 	</div>
 </header>
