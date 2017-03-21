@@ -17,6 +17,7 @@
 	@include min-screen($screen-md-max) {
 		min-height: 220px;
 	}
+
 	p {
 		margin: $margin-small 0 0 0;
 	}
