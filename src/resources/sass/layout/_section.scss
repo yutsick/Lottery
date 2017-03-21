@@ -2,9 +2,9 @@
 }
 
 .section__heading {
-	margin: 0 0 20px;
+	margin: 10px 0 20px;
 
 	@include min-screen($screen-sm-min) {
-		margin: 0 0 50px;
+		margin: 10px 0 50px;
 	}
 }
