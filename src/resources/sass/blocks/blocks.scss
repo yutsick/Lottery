@@ -1,5 +1,23 @@
 .block {
 	position: relative;
+
+	&.flex-top {
+		> a {
+			justify-content: flex-start;
+		}
+	}
+
+	&.flex-middle {
+		> a {
+			justify-content: center;
+		}
+	}
+
+	&.flex-bottom {
+		> a {
+			justify-content: flex-end;
+		}
+	}
 }
 
 @import "hero";
@@ -85,23 +103,5 @@
 		&:after {
 			opacity: 0.74;
 		}
-	}
-}
-
-&.flex-top {
-	> a {
-		justify-content: flex-start;
-	}
-}
-
-&.flex-middle {
-	> a {
-		justify-content: center;
-	}
-}
-
-&.flex-bottom {
-	> a {
-		justify-content: flex-end;
 	}
 }

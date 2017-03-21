@@ -27,7 +27,7 @@ elixir((mix) => {
 		'app.scss'
 	], elixir.config.publicPath + '/css');
 	mix.sass([
-		elixir.config.assetsPath + '/sass/ie/ie.scss'
+		elixir.config.assetsPath + '/sass/legacy/ie-all.scss'
 	], elixir.config.publicPath + '/css/ie-all.css');
 
     mix.webpack('app.js');

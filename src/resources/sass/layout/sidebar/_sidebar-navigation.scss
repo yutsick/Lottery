@@ -104,12 +104,6 @@
 				padding: 20px 10px 0;
 			}
 
-			#sidebar.js-is-active & {
-				@include max-screen($screen-sm-min) {
-					padding: 20px 10px 0;
-				}
-			}
-
 			img {
 				display: inline-block;
 				max-width: 75px;
@@ -129,12 +123,6 @@
 
 				@include min-screen($screen-sm-min) {
 					display: none;
-				}
-
-				#sidebar.js-is-active & {
-					@include max-screen($screen-sm-min) {
-						display: none;
-					}
 				}
 
 				&.js-is-active {
@@ -222,8 +210,6 @@
 						color: $color-complement-sky;
 					}
 				}
-
-
 			}
 		}
 
@@ -255,12 +241,6 @@
 				@include screen($screen-sm-min, $screen-md-max) {
 					display: none;
 				}
-
-				#sidebar.js-is-active & {
-					@include max-screen($screen-sm-min) {
-						display: none;
-					}
-				}
 			}
 
 			.user__wallet,
@@ -276,15 +256,6 @@
 				font-size: 10px;
 				line-height: 14px;
 				text-align: center;
-			}
-
-			#sidebar.js-is-active & {
-				@include max-screen($screen-sm-min) {
-					padding: $padding-small 0 0;
-					font-size: 10px;
-					line-height: 14px;
-					text-align: center;
-				}
 			}
 
 			// Active border
@@ -314,12 +285,6 @@
 						@include screen($screen-sm-min, $screen-md-max) {
 							display: none;
 						}
-
-						#sidebar.js-is-active & {
-							@include max-screen($screen-sm-min) {
-								display: none;
-							}
-						}
 					}
 				}
 			}
@@ -330,15 +295,6 @@
 					margin-right: 0;
 					display: block;
 					text-align: center;
-				}
-
-				#sidebar.js-is-active & {
-					@include max-screen($screen-sm-min) {
-						width: 100%;
-						margin-right: 0;
-						display: block;
-						text-align: center;
-					}
 				}
 			}
 		}
@@ -366,12 +322,6 @@
 
 			@include screen($screen-sm-min, $screen-md-max) {
 				left: $sidebar-width-mobile;
-			}
-
-			#sidebar.js-is-active & {
-				@include max-screen($screen-sm-min) {
-					left: $sidebar-width-mobile;
-				}
 			}
 
 			// Collapsed sub navigation
@@ -454,6 +404,66 @@
 							border-top: 1px solid $color-border;
 						}
 					}
+				}
+			}
+		}
+	}
+}
+
+// Active sidebar
+#sidebar.js-is-active {
+	.sidebar-navigation {
+		> li {
+			&:first-child {
+				@include max-screen($screen-sm-min) {
+					padding: 20px 10px 0;
+				}
+
+				.navigation-search {
+					@include max-screen($screen-sm-min) {
+						display: none;
+					}
+				}
+
+				div.user {
+					span {
+						@include max-screen($screen-sm-min) {
+							display: none;
+						}
+					}
+				}
+			}
+
+			> a {
+				@include max-screen($screen-sm-min) {
+					padding: $padding-small 0 0;
+					font-size: 10px;
+					line-height: 14px;
+					text-align: center;
+				}
+
+				div {
+					span {
+						&:last-of-type {
+							@include max-screen($screen-sm-min) {
+								display: none;
+							}
+						}
+					}
+				}
+
+				i {
+					@include max-screen($screen-sm-min) {
+						width: 100%;
+						margin-right: 0;
+						display: block;
+						text-align: center;
+					}
+				}
+			}
+			> ul {
+				@include max-screen($screen-sm-min) {
+					left: $sidebar-width-mobile;
 				}
 			}
 		}

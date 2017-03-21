@@ -25,24 +25,22 @@
 		@include screen($screen-sm-min, $screen-md-max) {
 			left: $sidebar-total-width-tablet;
 		}
-
-		#sidebar.js-is-active & { // on #sidebar
-			@include max-screen($screen-sm-min) {
-				left: $sidebar-total-width-mobile;
-			}
-		}
-
 	}
 
-	.js-is-active & { // on #page-wrapper
-		opacity: 1;
-		visibility: visible;
-		overflow-x: hidden;
-		overflow-y: scroll;
-		transition: opacity $duration-fast $delay-none $ease-in-out;
+}
 
-		.btn.js-action-close {
-			animation: fadeInDownBig 0.65s ease forwards;
+#page-wrapper.js-is-active .overlay {
+	opacity: 1;
+	visibility: visible;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	transition: opacity $duration-fast $delay-none $ease-in-out;
+
+	.btn.js-action-close {
+		animation: fadeInDownBig 0.23s ease forwards;
+
+		@include max-screen($screen-sm-min) {
+			left: $sidebar-total-width-mobile;
 		}
 	}
 }
