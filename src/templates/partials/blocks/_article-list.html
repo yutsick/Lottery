@@ -1,13 +1,24 @@
-<section class="block block-article-list">
+<section class="section article-list-blocks">
 	<div class="container">
 		<div class="row padding-extra">
 			<div class="col-xs-12">
-				<h2 class="block__heading h3">Läsvärda artiklar</h2>
+				<h2 class="section__heading h3">Läsvärda artiklar</h2>
 			</div>
 			@@loop('blocks/article-list/_article-list-content.html', [
 				{
+					"title": "Article block title can be used at anytime, article block title can be used at anytime",
+					"text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mollis fermentum ligula et aliquam. Nunc ac mattis lacus, quis auctor mi. Suspendisse et eleifend turpis.",
+					"flex": "flex-top"
+				},
+				{
 					"title": "My article title",
-					"text": "My article text"
+					"text": "Center text",
+					"flex": "flex-middle"
+				},
+				{
+					"title": "My article title",
+					"text": "Bottom aligned text",
+					"flex": "flex-bottom"
 				}
 			])
 		</div>

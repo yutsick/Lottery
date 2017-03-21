@@ -1,15 +1,3 @@
-.promotion-blocks {
-	.row {
-		> [class*='col-'] {
-			margin-bottom: 15px;
-
-			@include min-screen($screen-md-max) {
-				margin-bottom: 40px;
-			}
-		}
-	}
-}
-
 .block-promotion {
 	min-height: 320px;
 	overflow: hidden;
@@ -27,9 +15,17 @@
 	}
 }
 
-// Custom promotion block size styles
 .promotion-blocks {
 	.row {
+		> [class*='col-'] {
+			margin-bottom: 15px;
+
+			@include min-screen($screen-md-max) {
+				margin-bottom: 40px;
+			}
+		}
+
+		// Custom promotion block size styles
 		[class*='col-']:not(.col-md-6):not(.col-md-12) {
 			.block-promotion {
 				min-height: 440px;
