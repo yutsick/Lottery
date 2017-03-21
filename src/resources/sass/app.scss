@@ -4,9 +4,10 @@
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../../node_modules/sass-mediaqueries/media-queries";
 
-body.ml-2017 {
-	/* Project config */
-	@import "core/core";
+/* Project config */
+@import "core/core";
+
+.ml-2017 {
 
 	/* Elements */
 	@import "elements/elements";
@@ -23,6 +24,9 @@ body.ml-2017 {
 	/* Template styles */
 	@import "pages/pages";
 
+}
+
+body {
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	font-weight: $regular;
