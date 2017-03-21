@@ -18,12 +18,20 @@ module.exports = {
 		}
 
 		function footer_toggle() {
+			let $footer_block = $('.block-footer');
 			let $collapse_items = $('.block-footer .collapse');
 			let $collapse_items_trigger = $('.block-footer [data-toggle="collapse"]');
 
 			// Close open items
 			$collapse_items.on('show.bs.collapse', function () {
-				let $this = $(this);
+				$collapse_items.collapse('hide');
+			});
+
+			$collapse_items.on('hidden.bs.collapse', function () {
+				$footer_block.removeClass('js-is-active');
+			});
+			$collapse_items.on('shown.bs.collapse', function () {
+				$footer_block.addClass('js-is-active');
 			});
 
 			// Don't respond on large screens
