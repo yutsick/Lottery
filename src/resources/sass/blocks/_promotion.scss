@@ -17,11 +17,6 @@
 	@include min-screen($screen-md-max) {
 		min-height: 220px;
 	}
-
-	.promotion-blocks .row > [class*='col-']:not(.col-md-6):not(.col-md-12) & {
-		min-height: 440px;
-	}
-
 	p {
 		margin: $margin-small 0 0 0;
 	}
@@ -32,14 +27,20 @@
 	}
 }
 
+// Custom promotion block size styles
+.promotion-blocks {
+	.row {
+		[class*='col-']:not(.col-md-6):not(.col-md-12) {
+			.block-promotion {
+				min-height: 440px;
+			}
+		}
+	}
+}
+
 .block-promotion__content {
 	z-index: 2;
 	padding: $padding-default 35px $padding-default $padding-default;
-
-/*	.block--background-color &,
-	.block--background-image & {
-		padding: $padding-default 35px $padding-default $padding-default;
-	}*/
 }
 
 .block-promotion__content--split {
