@@ -1,9 +1,11 @@
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
+var flickity = require('flickity/dist/flickity.pkgd.js');
 
 var alert = require('./components/alert');
 var form = require('./components/form');
 var modal = require('./components/modal');
+var slider = require('./components/slider');
 var navigation = require('./layout/navigation');
 var footer = require('./layout/footer');
 var search = require('./components/search');
@@ -15,5 +17,17 @@ $(function () {
 	modal.init();
 	search.init();
 	navigation.init();
+	// slider.init();
 	footer.init();
+
+	$('.slider').flickity({
+		cellSelector: '.slide-item',
+		draggable: true,
+		cellAlign: 'left',
+		wrapAround: false,
+		contain: false,
+		pageDots: true,
+		prevNextButtons: false,
+		setGallerySize: true
+	});
 });
