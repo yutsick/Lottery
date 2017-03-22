@@ -27,6 +27,7 @@
 }
 
 .block-product-list__image {
+	position: relative;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -37,6 +38,19 @@
 	@include min-screen($screen-sm-min) {
 		padding-bottom: 80%;
 	}
+}
+
+.block-product-list__label {
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	top: 10px;
+	color: $color-light;
+	padding: 13px 20px;
+	background-color: $color-primary;
+	border-radius: 20px 0 0 20px;
+	font-size: 12px;
+	line-height: 1;
 }
 
 .block-product-list__content {
