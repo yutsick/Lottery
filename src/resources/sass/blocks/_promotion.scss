@@ -1,8 +1,10 @@
 .block-promotion {
 	min-height: 320px;
 	overflow: hidden;
+	margin-bottom: 15px;
 
-	@include min-screen($screen-md-max) {
+	@include min-screen($screen-md-min) {
+		margin-bottom: 40px;
 		min-height: 220px;
 	}
 
@@ -18,11 +20,7 @@
 .promotion-blocks {
 	.row {
 		> [class*='col-'] {
-			margin-bottom: 15px;
 
-			@include min-screen($screen-sm-min) {
-				margin-bottom: 40px;
-			}
 		}
 
 		// Custom promotion block size styles

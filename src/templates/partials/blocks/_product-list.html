@@ -1,0 +1,31 @@
+<section class="section product-list-blocks">
+	<div class="container">
+		<div class="row padding-extra equal-height">
+			<div class="col-xs-12">
+				<h2 class="section__heading h3">Nytt i vinstshoppen</h2>
+			</div>
+			@@loop('blocks/product-list/_product-list-content.html', [
+				{
+					"image": "assets/img/mockup/train.jpg",
+					"title": "En rad",
+					"price": "450 kr"
+				},
+				{
+					"image": "assets/img/mockup/butterfly.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "200 kr"
+				},
+				{
+					"image": "assets/img/mockup/nature.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "10.000 kr"
+				},
+				{
+					"image": "assets/img/mockup/sunset.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "30 kr"
+				}
+			])
+		</div>
+	</div>
+</section>

@@ -10,7 +10,8 @@
 		display: flex;
 		flex-direction: column;
 
-		> div {
+		> div,
+		> article {
 			display: flex;
 			flex-direction: column;
 			flex: 1 1 auto;
