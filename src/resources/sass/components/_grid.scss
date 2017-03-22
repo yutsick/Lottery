@@ -28,7 +28,7 @@
 .row.padding-extra {
 	padding: 0;
 
-	@include min-screen($screen-md-max) {
+	@include min-screen($screen-md-min) {
 		padding: 0 $padding-medium;
 	}
 }

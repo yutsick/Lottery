@@ -41,7 +41,7 @@
 	padding-top: 55%;
 	padding-right: $padding-default;
 
-	@include min-screen($screen-md-max) {
+	@include min-screen($screen-sm-min) {
 		padding-top: $padding-default;
 		padding-right: 55%;
 	}

@@ -47,12 +47,12 @@
 			&:hover {
 				text-decoration: none;
 
-				@include min-screen($screen-sm-max) {
+				@include min-screen($screen-sm-min) {
 					color: $color-primary;
 				}
 
 				i {
-					@include min-screen($screen-sm-max) {
+					@include min-screen($screen-sm-min) {
 						color: $color-primary;
 					}
 				}
@@ -61,7 +61,7 @@
 			&.js-is-active {
 				color: $color-base-secondary;
 
-				@include min-screen($screen-sm-max) {
+				@include min-screen($screen-sm-min) {
 					color: $color-primary;
 				}
 
@@ -201,7 +201,7 @@
 				}
 
 				&:hover {
-					@include min-screen($screen-sm-max) {
+					@include min-screen($screen-sm-min) {
 						color: $color-primary;
 					}
 				}
