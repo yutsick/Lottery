@@ -91,7 +91,11 @@
 		height: 100%;
 		background: linear-gradient(transparent 0%, rgba(0, 0, 0, 1) 100%);
 		transition: opacity $duration-fast $delay-none $ease-in-out;
-		opacity: 0.54;
+		opacity: 0.74;
+
+		@include min-screen($screen-sm-min) {
+			opacity: 0.54;
+		}
 	}
 
 	&.scrim-half {
@@ -102,7 +106,9 @@
 
 	&:hover {
 		&:after {
-			opacity: 0.74;
+			@include min-screen($screen-sm-min) {
+				opacity: 0.74;
+			}
 		}
 	}
 }

@@ -55,7 +55,9 @@
 	transition: transform 15s $ease-in-out $delay-none;
 
 	&:hover {
-		transform: scale(1.2);
+		@include min-screen($screen-sm-min) {
+			transform: scale(1.2);
+		}
 	}
 
 	&.block-promotion__image--landscape {
@@ -81,7 +83,7 @@
 	width: 100%;
 	height: 50%;
 
-	@include min-screen($screen-md-max) {
+	@include min-screen($screen-sm-min) {
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 		left: auto;
@@ -114,9 +116,14 @@
 		font-weight: normal;
 		text-decoration: none;
 		text-transform: none;
-		opacity: 0.6;
-		transform: scale(0.8);
+		opacity: 1;
+		transform: scale(1.0);
 		transition: opacity $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
+
+		@include min-screen($screen-sm-min) {
+			opacity: 0.6;
+			transform: scale(0.8);
+		}
 	}
 
 	&:hover,
@@ -124,9 +131,11 @@
 	&:active {
 		color: $color-light;
 
-		&:after {
-			opacity: 1;
-			transform: scale(1.0);
+		@include min-screen($screen-sm-min) {
+			&:after {
+				opacity: 1;
+				transform: scale(1.0);
+			}
 		}
 	}
 }
