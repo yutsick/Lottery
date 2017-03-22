@@ -47,16 +47,27 @@
 	}
 }
 
+.block-article-list__image {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-bottom: 100%;
+
+	@include min-screen($screen-sm-min) {
+		padding-bottom: 80%;
+	}
+}
+
 .block-article-list__title {
 	margin: 0;
 
 	@include max-screen($screen-sm-min) {
-		height: 3.4em;
+		height: 1.5em;
 	}
 }
 
 .block-article-list__entry {
-	margin: $padding-medium 0 0 0;
+	margin: $margin-medium 0 0 0;
 	height: 3.0em;
 
 	@include min-screen($screen-sm-min) {
@@ -65,13 +76,13 @@
 	}
 }
 
-.block-article-list__image {
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	padding-bottom: 80%;
-}
+.block-article-list__button {
+	margin: $margin-medium 0 0 0;
+	width: auto;
+	display: inline-block;
+	max-width: none;
 
-.block-article-list__title {
-	margin-top: 0;
+	@include min-screen($screen-sm-min) {
+		max-width: 200px;
+	}
 }

@@ -15,7 +15,7 @@
 			flex-direction: column;
 			flex: 1 1 auto;
 
-			> a {
+			> a:not(.btn) {
 				display: flex;
 				flex-direction: column;
 				flex: 1 1 auto;
