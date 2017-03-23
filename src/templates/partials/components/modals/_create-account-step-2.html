@@ -9,45 +9,28 @@
 				</div>
 				<div class="modal-body">
 					<form id="create-account-modal-step-2" class="modal-body__form" data-toggle="validator"
-						  action="/logged-in.html" method="get">
+						  action="/" method="get">
 						<div class="input-group input-vertical">
 							<div class="form-group">
 								<div class="inner-addon right-addon">
 									<i class="icon icon-close js-action-empty-input"></i>
-									<input type="tel" class="form-control" id="userPhoneMobile"
-										   placeholder="Mobilnummer"
+									<input type="email" class="form-control" id="userFirstName" placeholder="E-post"
 										   required>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="inner-addon right-addon">
 									<i class="icon icon-close js-action-empty-input"></i>
-									<input type="tel" class="form-control" id="userPhoneArea" placeholder="Riktnummer"
+									<input type="email" class="form-control" id="userLastName" placeholder="Bekräfta e-post"
 										   required>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="inner-addon right-addon">
 									<i class="icon icon-close js-action-empty-input"></i>
-									<input type="tel" class="form-control" id="userPhone"
-										   placeholder="Telefonnummer" required>
+									<input type="password" class="form-control" id="userPassword"
+										   placeholder="Lösenord (minst 8 tecken)" data-minlength="8" required>
 								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" id="userNewsletter"> Ja tack! jag vill gärna ha nyheter
-									och uppdateringar från miljonlotteriet och ta del av information om tävlingar.
-								</label>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" id="userAcceptTerms" required> Jag godkänner Miljonlotteriets
-									<a href="/">Villkor</a>, <a href="/">PUL</a> & <a href="/">Cookies</a>
-								</label>
 							</div>
 						</div>
 						<div class="form-group">
@@ -57,7 +40,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default btn-block" data-toggle="modal"
-							data-target="#modal-create-account-step-2">Tillbaka
+							data-target="#modal-create-account">Tillbaka
 					</button>
 				</div>
 			</div>

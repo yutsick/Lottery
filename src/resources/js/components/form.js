@@ -9,10 +9,7 @@ module.exports = {
 
 		function form_validate() {
 			$('#create-account-modal').validator().on('submit', function (e) {
-				let $form = $(this);
-
 				if (e.isDefaultPrevented()) {
-					$form.validator('validate');
 				} else {
 					$('#modal-create-account-step-2').modal();
 				}
@@ -20,10 +17,7 @@ module.exports = {
 			});
 
 			$('#create-account-modal-step-2').validator().on('submit', function (e) {
-				let $form = $(this);
-
 				if (e.isDefaultPrevented()) {
-					$form.validator('validate');
 				} else {
 					$('#modal-create-account-step-3').modal();
 				}
@@ -31,12 +25,9 @@ module.exports = {
 			});
 
 			$('#create-account-modal-step-3').validator().on('submit', function (e) {
-				let $form = $(this);
-
 				if (e.isDefaultPrevented()) {
-					$form.validator('validate');
 				} else {
-					$('#modal-create-account-finish').modal();
+					$('#modal-create-account-final').modal();
 				}
 				return false;
 			});
@@ -46,9 +37,7 @@ module.exports = {
 				let $submit = $form.find('button[type=submit]');
 
 				if (e.isDefaultPrevented()) {
-					$form.validator('validate');
 				} else {
-					// $submit.text('');
 					$submit.addClass('js-is-loading');
 				}
 				return false;
@@ -59,15 +48,11 @@ module.exports = {
 				let $submit = $form.find('button[type=submit]');
 
 				if (e.isDefaultPrevented()) {
-					$form.validator('validate');
 				} else {
-					// $submit.text('');
 					$submit.addClass('js-is-loading');
 				}
 				return false;
 			});
-
-
 		}
 
 		function form_active_search() {
