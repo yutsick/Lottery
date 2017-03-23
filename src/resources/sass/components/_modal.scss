@@ -40,20 +40,38 @@
 .modal-body,
 .modal-footer {
 	padding: 25px;
+	font-size: 12px;
+	line-height: 20px;
 }
 
 .modal-header {
 	border: none;
 	text-align: center;
 	padding-bottom: 0;
-
-	h5 {
-		margin-top: 10px;
-		margin-bottom: -10px;
-	}
 }
+
+.modal-title {
+	color: $color-base-secondary;
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: -10px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.modal-subtitle {
+	margin-top: 20px;
+	margin-bottom: 0;
+	display: block;
+}
+
 .modal-body {
 	padding-bottom: 0;
+
+	.form-control {
+		font-size: 12px;
+		line-height: 20px;
+	}
 
 	.btn-link {
 		margin-top: -10px;
