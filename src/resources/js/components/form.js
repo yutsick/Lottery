@@ -41,6 +41,19 @@ module.exports = {
 				return false;
 			});
 
+			$('#login-modal').validator().on('submit', function (e) {
+				let $form = $(this);
+				let $submit = $form.find('button[type=submit]');
+
+				if (e.isDefaultPrevented()) {
+					$form.validator('validate');
+				} else {
+					// $submit.text('');
+					$submit.addClass('js-is-loading');
+				}
+				return false;
+			});
+
 			$('#login-bankid-modal').validator().on('submit', function (e) {
 				let $form = $(this);
 				let $submit = $form.find('button[type=submit]');
