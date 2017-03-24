@@ -1,4 +1,16 @@
 // Visibility
+&.touchevents {
+	.show-touch {
+		display: block;
+	}
+}
+
+&.no-touchevents {
+	.show-touch {
+		display: none;
+	}
+}
+
 .hide-mobile {
 	display: none;
 

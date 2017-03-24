@@ -9,7 +9,7 @@
 /* Config */
 @import "core/core";
 
-body.ml-2017 {
+.ml-2017 {
 	/* Vendor */
 	@import "vendor/vendor";
 
@@ -31,15 +31,18 @@ body.ml-2017 {
 	/* Template styles */
 	@import "pages/pages";
 
-	font-family: $base-font-family;
-	font-size: $base-font-size;
-	font-weight: $regular;
-	line-height: $base-line-height;
-	color: $color-base-primary;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	&.js-overlay-is-active {
-		overflow: hidden;
+	body {
+		font-family: $base-font-family;
+		font-size: $base-font-size;
+		font-weight: $regular;
+		line-height: $base-line-height;
+		color: $color-base-primary;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		&.js-overlay-is-active {
+			overflow: hidden;
+		}
 	}
 }
 
