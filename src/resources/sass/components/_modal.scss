@@ -47,6 +47,13 @@
 		color: $color-base-complement;
 		font-weight: 500;
 	}
+
+	.account-form__error {
+		p {
+			// color: #77839D;
+			// font-weight: 300;
+		}
+	}
 }
 
 .modal-header {
@@ -71,7 +78,7 @@
 }
 
 .modal-intro {
-	// margin-top: 15px;
+	margin-top: -10px;
 	// margin-bottom: 0;
 }
 

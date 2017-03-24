@@ -8,7 +8,7 @@
 					<h5 class="modal-title" id="modal-label">Logga in med BankID</h5>
 				</div>
 				<div class="modal-body">
-					<form id="login-bankid-modal" class="modal-body__form" data-toggle="validator">
+					<form id="login-bankid-modal" class="account-form" data-toggle="validator">
 						<div class="form-group">
 							<label class="control-label" for="userId">Fyll i ditt personnummer och tryck på logga
 								in</label>
@@ -21,6 +21,10 @@
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block btn-load"><span>Logga in</span> <img
 								class="spinner" src="assets/img/icons/spinner-white.svg" alt="Spinner"></button>
+						</div>
+						<div class="account-form__error">
+							<p class="text-align-center">
+							</p>
 						</div>
 						<button type="button" class="btn btn-link btn-block" data-toggle="modal"
 								data-target="#modal-login">Logga in med lösenord
