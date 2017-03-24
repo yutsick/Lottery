@@ -102,3 +102,72 @@ img.align-center {
 	display: block;
 	margin: 20px auto;
 }
+
+.background-color-blue {
+	background-color: $color-blue;
+}
+
+.background-color-green {
+	background-color: $color-green;
+}
+
+.background-color-yellow {
+	background-color: $color-yellow;
+}
+
+.background-color-orange {
+	background-color: $color-orange;
+}
+
+.background-color-pink {
+	background-color: $color-pink;
+}
+
+.block--turquoise {
+	background-color: $color-turquoise;
+}
+
+.background-color-gray {
+	background-color: $color-gray;
+}
+
+.background-color-black {
+	background-color: $color-black;
+}
+
+.background-color-white {
+	background-color: $color-light;
+}
+
+.scrim {
+	&:after {
+		content: ' ';
+		position: absolute;
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(transparent 0%, rgba(0, 0, 0, 1) 100%);
+		transition: opacity $duration-fast $delay-none $ease-in-out;
+		opacity: 0.74;
+
+		@include min-screen($screen-sm-min) {
+			opacity: 0.54;
+		}
+	}
+
+	&.scrim-half {
+		&:after {
+			height: 50%;
+		}
+	}
+
+	&:hover {
+		&:after {
+			@include min-screen($screen-sm-min) {
+				opacity: 0.74;
+			}
+		}
+	}
+}

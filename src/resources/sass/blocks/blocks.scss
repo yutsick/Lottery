@@ -39,81 +39,12 @@
 	background-repeat: no-repeat;
 }
 
-.block--background-pattern {
-	background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/ricepaper2_@2X.png");
-	background-size: 500px auto;
-	background-blend-mode: multiply;
-}
-
 .block--background-color {
 	color: $color-light;
 }
 
-.block--color-blue {
-	background-color: $color-blue;
-}
-
-.block--color-green {
-	background-color: $color-green;
-}
-
-.block--color-yellow {
-	background-color: $color-yellow;
-}
-
-.block--color-orange {
-	background-color: $color-orange;
-}
-
-.block--color-pink {
-	background-color: $color-pink;
-}
-
-.block--turquoise {
-	background-color: $color-turquoise;
-}
-
-.block--color-gray {
-	background-color: $color-gray;
-}
-
-.block--color-black {
-	background-color: $color-black;
-}
-
-.block--color-white {
-	background-color: $color-light;
-}
-
-.block--scrim {
-	&:after {
-		content: ' ';
-		position: absolute;
-		z-index: 1;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(transparent 0%, rgba(0, 0, 0, 1) 100%);
-		transition: opacity $duration-fast $delay-none $ease-in-out;
-		opacity: 0.74;
-
-		@include min-screen($screen-sm-min) {
-			opacity: 0.54;
-		}
-	}
-
-	&.scrim-half {
-		&:after {
-			height: 50%;
-		}
-	}
-
-	&:hover {
-		&:after {
-			@include min-screen($screen-sm-min) {
-				opacity: 0.74;
-			}
-		}
-	}
+.block--background-pattern {
+	background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/ricepaper2_@2X.png");
+	background-size: 500px auto;
+	background-blend-mode: multiply;
 }
