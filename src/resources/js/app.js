@@ -1,5 +1,6 @@
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
+var modernizr = require('./vendor/modernizr-custom.js');
 var flickity = require('flickity/dist/flickity.pkgd.js');
 
 var alert = require('./components/alert');
@@ -12,6 +13,7 @@ var search = require('./components/search');
 
 $(function () {
 	console.log('Hello world');
+	modernizr.init();
 	alert.init();
 	form.init();
 	modal.init();
