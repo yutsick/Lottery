@@ -52,7 +52,7 @@ module.exports = {
 				} else {
 					$form.addClass('hidden');
 					$loading.removeClass('hidden');
-					// Test error 
+					// Test error
 /*					setTimeout( function () {
 						$loading.addClass('hidden');
 						$error.removeClass('hidden');
@@ -67,7 +67,6 @@ module.exports = {
 				let $loading = $error.prev('.modal-body__loading');
 				let $form = $loading.prev('.account-form');
 
-				// $error.addClass('hidden');
 				$loading.addClass('hidden');
 				$error.addClass('hidden');
 				$form.removeClass('hidden');
