@@ -45,13 +45,32 @@ module.exports = {
 
 			$('#login-bankid-modal').validator().on('submit', function (e) {
 				let $form = $(this);
-				let $submit = $form.find('button[type=submit]');
+				let $loading = $form.next('.modal-body__loading');
+				let $error = $loading.next('.modal-body__error');
 
 				if (e.isDefaultPrevented()) {
 				} else {
-					$submit.addClass('js-is-loading');
+					$form.addClass('hidden');
+					$loading.removeClass('hidden');
+					// Test error 
+/*					setTimeout( function () {
+						$loading.addClass('hidden');
+						$error.removeClass('hidden');
+					}, 2000 );*/
 				}
 				return false;
+			});
+
+			$('.js-action-reset-journey').click(function () {
+				console.log('test');
+				let $error = $(this).parent('.modal-body__error');
+				let $loading = $error.prev('.modal-body__loading');
+				let $form = $loading.prev('.account-form');
+
+				// $error.addClass('hidden');
+				$loading.addClass('hidden');
+				$error.addClass('hidden');
+				$form.removeClass('hidden');
 			});
 		}
 
