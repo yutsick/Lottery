@@ -29,6 +29,6 @@ $(function () {
 		wrapAround: false,
 		contain: false,
 		pageDots: true,
-		prevNextButtons: false
+		prevNextButtons: true
 	});
 });
