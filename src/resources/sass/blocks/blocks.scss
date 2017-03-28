@@ -2,19 +2,19 @@
 	position: relative;
 
 	&.flex-top {
-		> a {
+		> a:not(.btn) {
 			justify-content: flex-start;
 		}
 	}
 
 	&.flex-middle {
-		> a {
+		> a:not(.btn) {
 			justify-content: center;
 		}
 	}
 
 	&.flex-bottom {
-		> a {
+		> a:not(.btn) {
 			justify-content: flex-end;
 		}
 	}

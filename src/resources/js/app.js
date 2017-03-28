@@ -22,14 +22,13 @@ $(function () {
 	// slider.init();
 	footer.init();
 
-	$('.slider').flickity({
-		cellSelector: '.slide-item',
+	$('.block-slider').flickity({
+		cellSelector: '.block-slider__item',
 		draggable: true,
 		cellAlign: 'left',
 		wrapAround: false,
 		contain: false,
 		pageDots: true,
-		prevNextButtons: false,
-		setGallerySize: true
+		prevNextButtons: false
 	});
 });
