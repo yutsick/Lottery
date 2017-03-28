@@ -27,9 +27,22 @@
 
 	&.sidebar-hidden {
 		padding-left: 0;
+
+		#sidebar {
+			display: none;
+		}
+	}
+
+	&.footer-hidden {
+		.block-footer {
+			display: none;
+		}
+
+		.block-bottom-bar {
+			display: none;
+		}
 	}
 }
 
 #content-wrapper {
 }
-
