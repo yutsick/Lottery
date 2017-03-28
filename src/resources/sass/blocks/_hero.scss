@@ -1,5 +1,5 @@
 .block-hero {
-	min-height: 250px;
+	min-height: 450px;
 	margin-bottom: 20px;
 	height: 100%;
 	width: 100%;
@@ -10,19 +10,14 @@
 		min-height: 500px;
 	}
 
-	h1,
-	.h1,
+	.block-hero__title,
 	.block-hero__subtitle {
+		margin-top: 0;
 		margin-bottom: 0;
 	}
 
 	.block-hero__subtitle {
-		margin-top: 10px;
-
-		@include min-screen($screen-sm-min) {
-			margin-top: 25px;
-
-		}
+		margin-top: 25px;
 	}
 
 	.btn {

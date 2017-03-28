@@ -111,7 +111,8 @@
 			display: none;
 			position: relative;
 			overflow: auto;
-			min-width: 45px;
+			min-width: 39px;
+			margin-left: 5px;
 			z-index: 985;
 
 			&:not(.js-is-active) {
@@ -123,6 +124,10 @@
 			&.js-is-active {
 				.form-control {
 					width: 135px;
+					border: 1px solid $color-input-border;
+				}
+				.btn {
+					border: none;
 				}
 			}
 
