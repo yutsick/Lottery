@@ -3,7 +3,8 @@ module.exports = {
 		footer_collapse();
 		footer_toggle();
 
-		var mobile_width = 768;
+		var mobile_width = 767 + 1;
+		var tablet_width = 1020 + 1;
 
 		function footer_collapse() {
 			// Collapse on load - small screens
@@ -11,7 +12,7 @@ module.exports = {
 			let $win = $(document);
 
 			$(function () {
-				if ( $win.width() < mobile_width ) {
+				if ( $win.width() < tablet_width ) {
 					$collapse_items.collapse('hide');
 				}
 			});

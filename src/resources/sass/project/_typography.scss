@@ -52,7 +52,7 @@ h5,
 	line-height: 36px;
 	font-weight: 600;
 
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		font-size: 14px;
 		line-height: 22px;
 	}

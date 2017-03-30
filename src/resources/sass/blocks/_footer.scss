@@ -7,13 +7,13 @@
 	line-height: 24px;
 
 	.block-footer__item {
-		@include max-screen($screen-sm-min) {
+		@include max-screen($screen-md-min) {
 			border-bottom: 1px solid $color-border;
 		}
 	}
 
 	h5 {
-		@include max-screen($screen-sm-min) {
+		@include max-screen($screen-md-min) {
 			cursor: pointer;
 			margin: 0;
 			position: relative;
@@ -23,7 +23,7 @@
 		}
 
 		&:after {
-			@include max-screen($screen-sm-min) {
+			@include max-screen($screen-md-min) {
 				font-family: "ml-icons";
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
@@ -45,7 +45,7 @@
 		}
 
 		&:not(.collapsed) {
-			@include max-screen($screen-sm-min) {
+			@include max-screen($screen-md-min) {
 				&:after {
 					transform: translate3d(-15px, -50%, 0) rotate(180deg);
 					color: $color-complement-sky;
@@ -54,7 +54,7 @@
 		}
 
 		&.collapsed {
-			@include max-screen($screen-sm-min) {
+			@include max-screen($screen-md-min) {
 				border-bottom: 1px solid $color-border;
 			}
 		}
@@ -66,7 +66,7 @@
 		&:last-of-type {
 			h5 {
 				&:last-of-type {
-					@include max-screen($screen-sm-min) {
+					@include max-screen($screen-md-min) {
 						border-bottom: none;
 					}
 				}
@@ -81,7 +81,7 @@
 
 	&.js-is-active {
 		h5 {
-			@include max-screen($screen-sm-min) {
+			@include max-screen($screen-md-min) {
 				cursor: pointer;
 				margin: 0;
 				padding: $padding-default 0;
@@ -89,7 +89,7 @@
 			}
 
 			&.collapsed {
-				@include max-screen($screen-sm-min) {
+				@include max-screen($screen-md-min) {
 					opacity: $opacity-3;
 					border-bottom: 1px solid $color-border;
 				}
