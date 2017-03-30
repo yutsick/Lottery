@@ -1,3 +1,19 @@
+.product-list-blocks {
+	[class*='col-'] {
+		&:nth-child(even) {
+			@include max-screen($screen-md-max) {
+				padding-right: 7.5px;
+			}
+		}
+
+		&:nth-child(odd) {
+			@include max-screen($screen-md-max) {
+				padding-left: 7.5px;
+			}
+		}
+	}
+}
+
 .block-product-list {
 	border: 1px solid $color-border;
 	margin-bottom: 15px;
@@ -57,7 +73,7 @@
 }
 
 .block-product-list__content {
-	padding: $padding-medium $padding-medium;
+	padding: $padding-small $padding-small;
 	text-align: center;
 	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	display: flex;
