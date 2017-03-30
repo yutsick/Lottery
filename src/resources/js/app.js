@@ -25,8 +25,8 @@ $(function () {
 	$('.block-slider').flickity({
 		cellSelector: '.block-slider__item',
 		cellAlign: 'left',
-		wrapAround: false,
-		contain: true,
+		wrapAround: true,
+		contain: false,
 		draggable: true,
 		pageDots: true,
 		prevNextButtons: true
