@@ -24,10 +24,10 @@ $(function () {
 
 	$('.block-slider').flickity({
 		cellSelector: '.block-slider__item',
-		draggable: true,
 		cellAlign: 'left',
 		wrapAround: false,
-		contain: false,
+		contain: true,
+		draggable: true,
 		pageDots: true,
 		prevNextButtons: true
 	});
