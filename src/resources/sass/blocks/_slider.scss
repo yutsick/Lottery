@@ -104,7 +104,8 @@
 		flex-direction: column;
 		flex: 1 1 auto;
 
-		> .block-promotion__image,
+		> .block-promotion__image-wrapper,
+		> div > .block-promotion__image,
 		> a:not(.btn) {
 			display: flex;
 			flex-direction: column;
