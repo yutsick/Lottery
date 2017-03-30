@@ -50,7 +50,11 @@
 		}
 
 		&.previous {
-			left: 80px;
+			left: 40px;
+
+			@include min-screen($screen-md-min) {
+				left: 80px;
+			}
 
 			&:after {
 				top: 50%;
@@ -59,7 +63,11 @@
 		}
 
 		&.next {
-			right: 80px;
+			right: 40px;
+
+			@include min-screen($screen-md-min) {
+				right: 80px;
+			}
 		}
 
 		&:not(:disabled) {
