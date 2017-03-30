@@ -1,20 +1,3 @@
-.block-promotion {
-	overflow: hidden;
-	min-height: 320px;
-
-	@include min-screen($screen-md-min) {
-		min-height: 220px;
-	}
-
-	p {
-		margin: $margin-small 0 0 0;
-	}
-
-	.block-promotion__title {
-		margin: 0;
-	}
-}
-
 .promotion-blocks {
 	.row {
 		> [class*='col-'] {
@@ -33,6 +16,23 @@
 				min-height: 440px;
 			}
 		}
+	}
+}
+
+.block-promotion {
+	overflow: hidden;
+	min-height: 320px;
+
+	@include min-screen($screen-md-min) {
+		min-height: 220px;
+	}
+
+	p {
+		margin: $margin-small 0 0 0;
+	}
+
+	.block-promotion__title {
+		margin: 0;
 	}
 }
 
