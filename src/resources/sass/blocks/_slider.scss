@@ -41,7 +41,7 @@
 			font-weight: normal;
 			text-decoration: none;
 			text-transform: none;
-			color: $color-base-secondary;
+			color: $color-light;
 			transform: translateY(-50%);
 		}
 
@@ -50,6 +50,8 @@
 		}
 
 		&.previous {
+			left: 80px;
+
 			&:after {
 				top: 50%;
 				transform:rotate(180deg) translateY(50%);
@@ -57,6 +59,7 @@
 		}
 
 		&.next {
+			right: 80px;
 		}
 
 		&:not(:disabled) {
@@ -73,6 +76,12 @@
 	.flickity-page-dots {
 		.dot {
 			background: $color-complement-sky;
+
+			@include min-screen($screen-sm-min) {
+				width: 7px;
+				height: 7px;
+				margin: 0 7px;
+			}
 		}
 	}
 }
@@ -81,22 +90,25 @@
 	display: flex;
 	flex-direction: column;
 	margin-left: 15px;
-	opacity: 0.65;
 	transition: opacity $duration-fast $delay-none $ease-in-out;
 	min-height: 400px;
 	width: 86%;
 
-	@include min-screen($screen-sm-min) {
-		min-height: 500px;
-		width: 50%;
+	@include min-screen($screen-xs-min) {
+		width: 46%;
 	}
 
 	@include min-screen($screen-md-min) {
+		min-height: 450px;
 		width: 36%;
 	}
 
 	.block-promotion {
-		min-height: auto;
+		min-height: initial;
+	}
+
+	.block-promotion__image {
+		// padding-bottom: 100%;
 	}
 
 	> div {
@@ -111,21 +123,5 @@
 			flex-direction: column;
 			flex: 1 1 auto;
 		}
-	}
-
-	&.is-selected {
-		opacity: 1;
-
-		+ div {
-			opacity: 0.85;
-
-			&:hover {
-				// opacity: 1;
-			}
-		}
-	}
-
-	&:hover {
-		// opacity: 1;
 	}
 }
