@@ -1,9 +1,12 @@
-
 /* Setup */
 @import "setup";
 
-/* External */
-@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+/* Bootstrap */
+.ml-2017 {
+	@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+}
+
+/* Sass Media Queries */
 @import "../../../node_modules/sass-mediaqueries/media-queries";
 
 /* Config */
@@ -44,6 +47,9 @@
 			overflow: hidden;
 		}
 	}
+
+	/* Extension styles */
+	@import "extension/extension";
 }
 
 // Styles for BrowserSync notification to be less annoying.
