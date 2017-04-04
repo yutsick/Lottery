@@ -4,6 +4,9 @@
 /* Config */
 @import "core/core";
 
+/* Bootstrap */
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
 /* Page wrapper and template styles */
 @import "pages/pages";
 
@@ -11,9 +14,6 @@
 @import "extension/extension";
 
 .ml-2017 {
-	/* Bootstrap */
-	@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-
 	/* Vendor */
 	@import "vendor/vendor";
 

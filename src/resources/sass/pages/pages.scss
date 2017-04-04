@@ -10,6 +10,14 @@ body {
 @import "article";
 @import "front";
 
+.modal-backdrop {
+	background: $color-overlay-base;
+
+	&.in {
+		opacity: 0.8;
+	}
+}
+
 #page-wrapper {
 	padding-left: 0;
 
