@@ -11,22 +11,6 @@
 	}
 }
 
-.hide-mobile {
-	display: none;
-
-	@include min-screen($screen-md-min) {
-		display: block;
-	}
-}
-
-.show-mobile {
-	display: block;
-
-	@include min-screen($screen-md-min) {
-		display: none;
-	}
-}
-
 // Alignment
 .float-left {
 	float: left;

@@ -1,0 +1,57 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	&.js-overlay-is-active {
+		overflow: hidden;
+	}
+}
+
+@import "article";
+@import "front";
+
+#page-wrapper {
+	padding-left: 0;
+
+	@include min-screen($screen-md-min) {
+		padding-left: $sidebar-width-desktop;
+	}
+
+	@include screen($screen-sm-min, $screen-md-max) {
+		padding-left: $sidebar-width-mobile;
+	}
+
+	&.logged-in {
+		padding-top: $top-padding-logged-in;
+
+		@include min-screen($screen-sm-min) {
+			padding-top: 0;
+		}
+	}
+
+	&.logged-out {
+		padding-top: $top-padding-logged-out;
+
+		@include min-screen($screen-sm-min) {
+			padding-top: 0;
+		}
+	}
+
+	&.sidebar-hidden {
+		padding-left: 0;
+
+		#sidebar {
+			display: none;
+		}
+	}
+
+	&.footer-hidden {
+		.block-footer {
+			display: none;
+		}
+
+		.block-bottom-bar {
+			display: none;
+		}
+	}
+}

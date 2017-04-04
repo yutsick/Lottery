@@ -1,18 +1,19 @@
-/* Setup */
-@import "setup";
-
-/* Bootstrap */
-.ml-2017 {
-	@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-}
-
 /* Sass Media Queries */
 @import "../../../node_modules/sass-mediaqueries/media-queries";
 
 /* Config */
 @import "core/core";
 
+/* Page wrapper and template styles */
+@import "pages/pages";
+
+/* Extension styles */
+@import "extension/extension";
+
 .ml-2017 {
+	/* Bootstrap */
+	@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+
 	/* Vendor */
 	@import "vendor/vendor";
 
@@ -31,25 +32,14 @@
 	/* Page layouts */
 	@import "layout/layout";
 
-	/* Template styles */
-	@import "page-templates/pages";
+	font-family: $base-font-family;
+	font-size: $base-font-size;
+	font-weight: $regular;
+	line-height: $base-line-height;
+	color: $color-base-primary;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
-	body {
-		font-family: $base-font-family;
-		font-size: $base-font-size;
-		font-weight: $regular;
-		line-height: $base-line-height;
-		color: $color-base-primary;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-
-		&.js-overlay-is-active {
-			overflow: hidden;
-		}
-	}
-
-	/* Extension styles */
-	@import "extension/extension";
 }
 
 // Styles for BrowserSync notification to be less annoying.

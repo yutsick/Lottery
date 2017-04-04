@@ -1,0 +1,14 @@
+#content-wrapper {
+	// Old site content
+	&:not(.ml2014) {
+		box-sizing: content-box;
+
+		* {
+			box-sizing: content-box;
+		}
+
+		.mobile-container {
+			box-sizing: border-box;
+		}
+	}
+}

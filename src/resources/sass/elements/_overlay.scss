@@ -1,4 +1,4 @@
-.overlay {
+&.overlay {
 	visibility: hidden;
 	width: 100%;
 	height: 100%;
@@ -26,21 +26,23 @@
 			left: $sidebar-total-width-tablet;
 		}
 	}
-
 }
 
-#page-wrapper.js-is-active .overlay {
-	opacity: 1;
-	visibility: visible;
-	overflow-x: hidden;
-	overflow-y: scroll;
-	transition: opacity $duration-fast $delay-none $ease-in-out;
+&.overlay {
+	#page-wrapper.js-is-active & {
+		opacity: 1;
+		visibility: visible;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		transition: opacity $duration-fast $delay-none $ease-in-out;
 
-	.btn.js-action-close {
-		animation: fadeInDownBig 0.23s ease forwards;
+		.btn.js-action-close {
+			animation: fadeInDownBig 0.23s ease forwards;
 
-		@include max-screen($screen-sm-min) {
-			left: $sidebar-total-width-mobile;
+			@include max-screen($screen-sm-min) {
+				left: $sidebar-total-width-mobile;
+			}
 		}
 	}
+
 }
