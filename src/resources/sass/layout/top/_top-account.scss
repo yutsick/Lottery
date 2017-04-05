@@ -21,7 +21,7 @@
 		padding: $padding-small $padding-default 0 $padding-default;
 		height: $account-user-height;
 
-		@include min-screen($screen-md-max) {
+		@include min-screen($screen-sm-min) {
 			display: none;
 		}
 
