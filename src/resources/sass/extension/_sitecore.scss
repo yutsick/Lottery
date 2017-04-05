@@ -16,13 +16,30 @@ body {
 /* Adjust old content styles interfere with new styles */
 .ml-2017 {
 	a.btn {
-		color: inherit !important;
+		color: $color-light !important;
 		display: inline-block !important;
 		font-size: 12px !important;
 		font-family: $base-font-family;
-		text-transform: uppercase;
+		text-transform: none;
 		overflow: auto !important;
 		text-decoration: none !important;
 		outline: none;
+		margin: 0;
+		box-shadow: none;
+
+		&.btn-link {
+			color: $color-primary !important;
+		}
+	}
+
+	.sidebar-account {
+		a.btn {
+			&.btn-icon {
+				@include max-screen($screen-md-max) {
+					color: $color-base-secondary !important;
+					font-size: 10px !important;
+				}
+			}
+		}
 	}
 }
