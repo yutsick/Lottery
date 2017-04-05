@@ -4,12 +4,12 @@
 /* Config */
 @import "core/core";
 
-.ml-2017 {
-	/* Bootstrap */
-	@import "../../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+/* Bootstrap */
+@import "vendor/bootstrap";
 
-	/* Vendor */
-	@import "vendor/vendor";
+.ml-2017 {
+	/* Flickity */
+	@import "vendor/flickity";
 
 	/* Project */
 	@import "project/project";
