@@ -1,3 +1,4 @@
+/* Adjust old content styles */
 body {
 	background: $color-light;
 	margin: 0;
@@ -10,4 +11,18 @@ body {
 
 #bg-wrapper-menu {
 	background: none;
+}
+
+/* Adjust old content styles interfere with new styles */
+.ml-2017 {
+	a.btn {
+		color: inherit !important;
+		display: inline-block !important;
+		font-size: 12px !important;
+		font-family: $base-font-family;
+		text-transform: uppercase;
+		overflow: auto !important;
+		text-decoration: none !important;
+		outline: none;
+	}
 }
