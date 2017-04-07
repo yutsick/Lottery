@@ -13,14 +13,10 @@
 	display: block;
 }
 
-.modal-content {
-	box-shadow: none;
-	border: none;
-	background-color: $color-modal-background;
-}
-
 /* Adjust center align modal */
 .vertical-alignment-helper {
+	text-align: center;
+	
 	.modal-content {
 		width: inherit;
 		height: inherit;
@@ -53,6 +49,13 @@
 	border: none;
 	text-align: center;
 	padding-bottom: 0;
+}
+
+.modal-content {
+	box-shadow: none;
+	border: none;
+	background-color: $color-modal-background;
+	text-align: left;
 }
 
 .modal-title {
