@@ -411,7 +411,7 @@
 }
 
 // Active sidebar
-#sidebar.js-is-active {
+&#sidebar.js-is-active {
 	.sidebar-navigation {
 		> li {
 			&:first-child {
@@ -461,6 +461,7 @@
 					}
 				}
 			}
+
 			> ul {
 				@include max-screen($screen-sm-min) {
 					left: $sidebar-width-mobile;

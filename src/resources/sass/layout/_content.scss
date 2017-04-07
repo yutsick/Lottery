@@ -1,10 +1,2 @@
 #content-wrapper {
-	// Old site content
-	&:not(.ml-2017) {
-		padding-top: 0;
-
-		@include min-screen($screen-sm-min) {
-			padding-top: 75px;
-		}
-	}
 }

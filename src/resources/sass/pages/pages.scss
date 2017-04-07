@@ -59,4 +59,8 @@ body {
 			display: none;
 		}
 	}
+
+	&.js-is-active #sidebar {
+		transform: translate3d(0, 0, 0);
+	}
 }

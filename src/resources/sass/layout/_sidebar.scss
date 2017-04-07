@@ -31,9 +31,5 @@
 	}
 }
 
-#page-wrapper.js-is-active #sidebar { // on #page-wrapper
-	transform: translate3d(0, 0, 0);
-}
-
 @import "sidebar/sidebar-navigation";
 @import "sidebar/sidebar-account";
