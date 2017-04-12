@@ -2,157 +2,128 @@ module.exports = {
 	init() {
 		toggle_nav();
 		reset_nav_on_resize();
-		toggle_sub_nav();
-		top_show_hide();
+		click_top_nav_item();
+		click_sub_menu_item();
 
 		$(window).on('resize', function () {
 			reset_nav_on_resize();
 		});
-		var $body = $('body');
-		var $page_wrapper = $('#page-wrapper');
-		var $sidebar = $('#sidebar');
-		var active_class = 'js-is-active';
-		var trigger = false;
-		var mobile_width = 768;
+
+		let $body = $('body');
+		let $page_wrapper = $('#page-wrapper');
+		let $sidebar = $('#sidebar');
+		let $nav_items = $('.sidebar-navigation li');
+		let active_class = 'js-is-active';
+		let navigation_trigger = false;
+		let mobile_width = 768;
 
 		// Reset navigation on resize window
 		function reset_nav_on_resize() {
-			let $win = $(this);
-			let $nav_items = $('.sidebar-navigation li');
+			let $window = $(window);
 
 			// Check if window is going from small to large and reset navigation states
-			if (($win.width() >= mobile_width) && (trigger == false)) {
-
-				// Only if the sub menu is not active
-				$nav_items.each(function () {
-					let $nav_item = $(this);
-					$nav_item.removeClass(active_class);
-					$nav_item.find('> a').removeClass(active_class);
-				});
-				$body.removeClass('js-overlay-is-active');
-				$page_wrapper.removeClass(active_class);
-				$sidebar.removeClass(active_class);
-				trigger = true;
+			if (($window.width() >= mobile_width) && (navigation_trigger == false)) {
+				toggle_sub_menu('close');
+				navigation_trigger = true;
 			}
 
-			if (($win.width() <= mobile_width) && (trigger == true)) {
-				trigger = false;
+			if (($window.width() < mobile_width) && (navigation_trigger == true)) {
+				navigation_trigger = false;
 			}
 		}
 
 		// Toggle sub navigation
-		function toggle_sub_nav() {
+		function click_top_nav_item() {
 			$('.sidebar-navigation').find('> li > a:not(.not-interactive)').click(function () {
-				let $win = $(window);
-				let $this_nav_item = $(this);
-				let $this_nav_item_sub_menu = $this_nav_item.parent('li');
+				let $this = $(this);
+				let $this_sub_menu = $this.parent('li').find('ul');
 
 				// Check if the clicked item has a sub menu, else got to the links href
-				if ($this_nav_item_sub_menu.has('ul').length >= 1) {
-
-					// Collapse all sub menus
-					$sidebar.find('.collapse').collapse('hide');
-
-					// Hide or show sub menu
-					if ($this_nav_item.hasClass(active_class)) {
-						$this_nav_item.removeClass(active_class);
-						$this_nav_item.parent('li').removeClass(active_class);
-						$sidebar.removeClass(active_class);
-
-
-						// Hide overlay on large screens
-						if ($win.width() > mobile_width) {
-							$body.removeClass('js-overlay-is-active');
-							$page_wrapper.removeClass(active_class);
-						}
+				if ($this_sub_menu.length >= 1) {
+					// Close or open sub menu
+					if ($this.hasClass(active_class)) {
+						toggle_sub_menu();
+						$this.removeClass(active_class);
+						$this.parent('li').removeClass(active_class);
 					}
 					else {
-						let $nav_items = $('.sidebar-navigation li');
-						$nav_items.each(function () {
-							let $nav_item = $(this);
-							$nav_item.removeClass(active_class);
-							$nav_item.find('> a').removeClass(active_class);
-						});
-
-						$this_nav_item.addClass(active_class);
-						$this_nav_item.parent('li').addClass(active_class);
-						$sidebar.addClass(active_class);
-						$body.addClass('js-overlay-is-active');
-						$page_wrapper.addClass(active_class);
+						toggle_sub_menu('open', 'active');
+						$this.addClass(active_class);
+						$this.parent('li').addClass(active_class);
 					}
-					return false;
 				}
-				else {
-					return true;
-				}
+				return false;
 			});
 		}
 
 		// Toggle navigation
 		function toggle_nav() {
 			$('a.js-toggle-sidebar').click(function () {
-				$body.addClass('js-overlay-is-active');
-				$page_wrapper.toggleClass(active_class);
+				toggle_sub_menu('open');
 				return false;
 			});
 
 			$('.overlay').click(function () {
 				if ($page_wrapper.hasClass(active_class)) {
-					let $nav_items = $('.sidebar-navigation li');
-					$nav_items.each(function () {
-						var $nav_item = $(this);
-						$nav_item.removeClass(active_class);
-						$nav_item.find('> a').removeClass(active_class);
-					});
-					$body.removeClass('js-overlay-is-active');
-					$page_wrapper.removeClass(active_class);
-					$sidebar.removeClass(active_class);
-				}
-				else {
-					//return true;
+					toggle_sub_menu('close');
 				}
 				return false;
 			});
 		}
 
-		// Hide Header on on scroll down
-		function top_show_hide() {
-			var didScroll;
-			var lastScrollTop = 0;
-			var delta = 5;
-			var $top_menu = $('.top-menu');
-			var $top_account = $('.top-account');
-			var top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
+		// Click sub menu item with hash and scroll to section
+		function click_sub_menu_item() {
+			$('.sidebar-navigation').find('li.has-sub-menu a:not(.not-interactive):not(.collapsed)').click(function () {
+				let $this = $(this);
+				let link_href = $this.attr('href');
+				let $section = $(link_href);
 
-			$(window).scroll(function () {
-				let $win = $(this);
-
-				if ($win.width() <= mobile_width) {
-					didScroll = true;
-				}
-			});
-
-			setInterval(function () {
-				if (didScroll) {
-					hasScrolled();
-					didScroll = false;
-				}
-			}, 250);
-
-			function hasScrolled() {
-				let st = $(this).scrollTop();
-				let $win = $(window);
-				if (Math.abs(lastScrollTop - st) <= delta)
-					return;
-
-				if (st > lastScrollTop && st > top_height) {
-					$top_account.removeClass('top-down').addClass('top-up');
-				} else {
-					if (st + $win.height() < $(document).height()) {
-						$top_account.removeClass('top-up').addClass('top-down');
+				if(/^#/.test(link_href) === true) {
+					if ($section.length) {
+						toggle_sub_menu('close');
+						scroll_to_section($section);
+						return false;
 					}
 				}
-				lastScrollTop = st;
+			});
+		}
+
+		function scroll_to_section(section) {
+			let $top = $('.top-menu');
+			let top_height = 0;
+			if ($top.is(':visible')) { top_height = parseInt($top.outerHeight()) };
+
+			let section_top = parseInt(section.offset().top);
+
+			$('body').animate({
+				scrollTop: section_top - top_height
+			}, {
+				easing: 'swing',
+				duration: 'slow'
+			});
+		}
+
+		function toggle_sub_menu(state_navigation, state_sidebar) {
+			$nav_items.removeClass(active_class);
+			$nav_items.find('> a').removeClass(active_class);
+
+			if (state_navigation == 'close') {
+				$body.removeClass('js-overlay-is-active');
+				$page_wrapper.removeClass(active_class);
+
+				// Collapse all sub menus
+				$sidebar.find('.collapse').collapse('hide');
+			}
+			else if (state_navigation == 'open') {
+				$page_wrapper.addClass(active_class);
+				$body.addClass('js-overlay-is-active');
+			}
+
+			if (state_sidebar == 'active') {
+				$sidebar.addClass(active_class);
+			}
+			else {
+				$sidebar.removeClass(active_class);
 			}
 		}
 	}
