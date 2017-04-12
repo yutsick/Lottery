@@ -8,6 +8,7 @@ var form = require('./components/form');
 var modal = require('./components/modal');
 var slider = require('./components/slider');
 var navigation = require('./layout/navigation');
+var top = require('./layout/top');
 var footer = require('./layout/footer');
 var search = require('./components/search');
 
@@ -19,6 +20,7 @@ $(function () {
 	modal.init();
 	search.init();
 	navigation.init();
+	top.init();
 	// slider.init();
 	footer.init();
 
