@@ -47,11 +47,11 @@ module.exports = {
 				let $this_nav_item = $(this);
 				let $this_nav_item_sub_menu = $this_nav_item.parent('li');
 
-				// Check if the clicked item has a sub menu, else got o the links href
+				// Check if the clicked item has a sub menu, else got to the links href
 				if ($this_nav_item_sub_menu.has('ul').length >= 1) {
 
 					// Collapse all sub menus
-					$('.collapse').collapse('hide');
+					$sidebar.find('.collapse').collapse('hide');
 
 					// Hide or show sub menu
 					if ($this_nav_item.hasClass(active_class)) {
