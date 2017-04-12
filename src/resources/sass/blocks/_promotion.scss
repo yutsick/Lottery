@@ -9,13 +9,6 @@
 				}
 			}
 		}
-
-		// Custom promotion block size styles
-		[class*='col-']:not(.col-md-6):not(.col-md-12) {
-			.block-promotion {
-				min-height: 440px;
-			}
-		}
 	}
 }
 
@@ -25,6 +18,15 @@
 
 	@include min-screen($screen-md-min) {
 		min-height: 220px;
+	}
+
+	// Large blocks only
+	[class*='col-']:not(.col-md-6):not(.col-md-12) & {
+		min-height: 440px;
+
+		&.block-promotion--image {
+			min-height: auto;
+		}
 	}
 
 	&.block-promotion--text {
@@ -107,7 +109,6 @@
 		width: 50%;
 		height: 100%;
 	}
-
 }
 
 .block-promotion__link {
