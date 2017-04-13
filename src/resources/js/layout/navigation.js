@@ -37,12 +37,18 @@ module.exports = {
 			$('.sidebar-navigation').find('> li > a:not(.not-interactive)').click(function () {
 				let $this = $(this);
 				let $this_sub_menu = $this.parent('li').find('ul');
+				let window_width = $(window).width();
 
 				// Check if the clicked item has a sub menu, else got to the links href
 				if ($this_sub_menu.length >= 1) {
 					// Close or open sub menu
 					if ($this.hasClass(active_class)) {
-						toggle_sub_menu();
+						if (window_width <= mobile_width) {
+							toggle_sub_menu();
+						}
+						else {
+							toggle_sub_menu('close');
+						}
 						$this.removeClass(active_class);
 						$this.parent('li').removeClass(active_class);
 					}
