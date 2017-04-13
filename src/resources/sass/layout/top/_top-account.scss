@@ -1,5 +1,21 @@
-.top-account {
+&.js-is-fixed .top-account {
 	position: fixed;
+
+	@include min-screen($screen-sm-min) {
+		position: relative;
+	}
+
+	.has-cookie-bar & {
+		top: $menu-height;
+
+		@include min-screen($screen-sm-min) {
+			top: auto;
+		}
+	}
+}
+
+.top-account {
+	position: absolute;
 	top: $menu-height;
 	z-index: 980;
 	width: 100%;
@@ -9,6 +25,14 @@
 	@include min-screen($screen-sm-min) {
 		position: relative;
 		top: auto;
+	}
+
+	.has-cookie-bar & {
+		top: $menu-height + 40px;
+
+		@include min-screen($screen-sm-min) {
+			top: auto;
+		}
 	}
 
 	&.js-top-up {

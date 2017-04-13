@@ -1,16 +1,37 @@
 module.exports = {
 	init() {
 		top_show_hide();
+		fixed_menu();
+
+		let $top = $('#top');
+		let $top_menu = $('.top-menu');
+		let $top_account = $('.top-account');
+		let top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
+		let mobile_width = 768;
+
+		function fixed_menu() {
+			$(window).scroll(function () {
+				let $alert = $('#alert-cookie');
+				let alert_height = $alert.outerHeight();
+				alert_height = alert_height ? alert_height : 0;
+				let scroll_top = $(window).scrollTop();
+				console.log(scroll_top);
+				console.log(alert_height);
+
+				if (scroll_top > alert_height) {
+					$top.addClass('js-is-fixed');
+				}
+				else {
+					$top.removeClass('js-is-fixed');
+				}
+			});
+		}
 
 		// Hide Header on on scroll down
 		function top_show_hide() {
-			var didScroll;
-			var mobile_width = 768;
-			var lastScrollTop = 0;
-			var delta = 5;
-			var $top_menu = $('.top-menu');
-			var $top_account = $('.top-account');
-			var top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
+			let didScroll;
+			let lastScrollTop = 0;
+			let delta = 5;
 
 			$(window).scroll(function () {
 				let $win = $(this);

@@ -1,5 +1,17 @@
-.top-menu {
+&.js-is-fixed .top-menu {
 	position: fixed;
+
+	@include min-screen($screen-sm-min) {
+		position: relative;
+	}
+
+	.has-cookie-bar & {
+		top: 0;
+	}
+}
+
+.top-menu {
+	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 990;
@@ -14,6 +26,10 @@
 
 	@include min-screen($screen-sm-min) {
 		display: none;
+	}
+
+	.has-cookie-bar & {
+		top: 40px;
 	}
 
 	a {
