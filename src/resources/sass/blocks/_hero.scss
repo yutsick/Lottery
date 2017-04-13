@@ -10,6 +10,19 @@
 		min-height: 500px;
 	}
 
+	.block-hero__page-title {
+		font-size: 11px;
+		line-height: 1;
+		margin: 0;
+		font-weight: 400;
+		color: $color-complement-sky;
+
+		padding: 20px 15px 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
 	.block-hero__title,
 	.block-hero__subtitle {
 		margin-top: 0;
@@ -27,6 +40,18 @@
 			margin-top: 30px;
 
 		}
+	}
+}
+
+.block-hero--old {
+	min-height: 0;
+	background-color: transparent;
+	margin: 0;
+	padding: 35px 0;
+
+	.block-hero__page-title {
+		padding: 0;
+		position: relative;
 	}
 }
 

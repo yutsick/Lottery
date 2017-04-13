@@ -14,14 +14,9 @@ body {
 }
 
 /* Adjust new wrapper styles with old content */
-#content-wrapper {
+.content-wrapper {
 	&:not(.ml-2017) {
 		overflow: auto;
-		padding-top: 0;
-
-		@include min-screen($screen-sm-min) {
-			padding-top: 75px;
-		}
 	}
 }
 
