@@ -1,39 +1,18 @@
-.promotion-blocks {
-	.row {
-		> [class*='col-'] {
-			.block-promotion {
-				margin-bottom: 15px;
-
-				@include min-screen($screen-md-min) {
-					margin-bottom: 40px;
-				}
-			}
-		}
-	}
-}
-
 .block-promotion {
 	overflow: hidden;
 	min-height: 320px;
+	margin-bottom: 15px;
 
 	@include min-screen($screen-md-min) {
 		min-height: 220px;
-	}
-
-	// Large blocks only
-	[class*='col-']:not(.col-md-6):not(.col-md-12) & {
-		min-height: 440px;
-
-		&.block-promotion--image {
-			min-height: auto;
-		}
+		margin-bottom: 15px;
 	}
 
 	&.block-promotion--text {
 	}
 
 	&.block-promotion--image {
-		min-height: auto;
+		min-height: 0;
 	}
 
 	&.block-promotion--split {
@@ -45,6 +24,17 @@
 
 	.block-promotion__title {
 		margin: 0;
+	}
+}
+
+// Large blocks only
+[class*='col-']:not(.col-md-6):not(.col-md-12) {
+	.block-promotion {
+		min-height: 440px;
+
+		&.block-promotion--image {
+			min-height: 0;
+		}
 	}
 }
 
