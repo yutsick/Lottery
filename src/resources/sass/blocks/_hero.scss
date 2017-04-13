@@ -17,10 +17,14 @@
 		font-weight: 400;
 		color: $color-complement-sky;
 
-		padding: 20px 15px 0;
+		padding: 20px 30px 0;
 		position: absolute;
 		top: 0;
 		left: 0;
+
+		@include min-screen($screen-sm-min) {
+			padding: 20px 15px 0;
+		}
 	}
 
 	.block-hero__title,
