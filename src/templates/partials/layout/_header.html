@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <!--[if lt IE 8]>
-<html class="lt-ie8" lang="en"> <![endif]-->
+<html class="lt-ie8 has-cookie-bar" lang="en"> <![endif]-->
 <!--[if IE 8]>
-<html class="ie8" lang="en"> <![endif]-->
+<html class="ie8 has-cookie-bar" lang="en"> <![endif]-->
 <!--[if IE 9]>
-<html class="ie9" lang="en"> <![endif]-->
+<html class="ie9 has-cookie-bar" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html lang="en"><!--<![endif]-->
+<html class="has-cookie-bar" lang="en"><!--<![endif]-->
 <head>
 	<title>Miljonlotteriet - Frontend 2017</title>
 	<meta charset="utf-8">
@@ -30,3 +30,4 @@
 
 <body>
 <div class="@@if(context.class){@@class}" id="page-wrapper">
+	@@include('components/_cookie-bar.html')
