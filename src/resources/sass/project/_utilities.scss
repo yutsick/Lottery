@@ -51,24 +51,6 @@
 	pointer-events:none;
 }
 
-.flex-align {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.flex-align--top {
-	justify-content: flex-start;
-}
-
-.flex-align--center {
-	justify-content: center;
-}
-
-.flex-align--bottom {
-	justify-content: flex-end;
-}
-
 .flex-top {
 	justify-content: flex-start;
 }
