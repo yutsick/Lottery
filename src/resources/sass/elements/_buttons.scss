@@ -12,27 +12,6 @@
 	}
 }
 
-.btn-load {
-	position: relative;
-
-	.spinner {
-		position: absolute;
-		left: 15px;
-		top: 50%;
-		width: 22px;
-		// margin-left: -15px;
-		transform: translateY(-50%);
-		transition: opacity $duration-quick $delay-none $ease-in-out;
-		opacity: 0;
-	}
-
-	&.js-is-loading {
-		.spinner {
-			opacity: 1;
-		}
-	}
-}
-
 .btn-default {
 	background-color: $color-complement-sky;
 	color: $color-light;
@@ -184,8 +163,23 @@
 	}
 }
 
-.btn-input {
+.btn-load {
+	position: relative;
 
+	.spinner {
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		width: 22px;
+		// margin-left: -15px;
+		transform: translateY(-50%);
+		transition: opacity $duration-quick $delay-none $ease-in-out;
+		opacity: 0;
+	}
+
+	&.js-is-loading {
+		.spinner {
+			opacity: 1;
+		}
+	}
 }
-
-
