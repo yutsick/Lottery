@@ -34,16 +34,6 @@
 	padding: $padding-default 35px $padding-default $padding-default;
 }
 
-.block-promotion__content--split {
-	padding-top: 55%;
-	padding-right: $padding-default;
-
-	@include min-screen($screen-sm-min) {
-		padding-top: $padding-default;
-		padding-right: 55%;
-	}
-}
-
 .block-promotion__image-wrapper {
 	display: block;
 }
@@ -71,24 +61,6 @@
 
 	&.block-promotion__image--square {
 		padding-bottom: 100%;
-	}
-}
-
-.block-promotion__image--split {
-	clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: auto;
-	width: 100%;
-	height: 50%;
-
-	@include min-screen($screen-sm-min) {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-		left: auto;
-		right: 0;
-		width: 50%;
-		height: 100%;
 	}
 }
 
@@ -139,63 +111,8 @@
 }
 
 // Block types
-.block-promotion--text {
-}
 
-.block-promotion--image {
-	min-height: 0;
-}
-
-.block-promotion--split {
-}
-
-.block-promotion--bingo {
-	@include max-screen($screen-sm-max) {
-		min-height: 0;
-	}
-
-	.block-promotion__content {
-		@include max-screen($screen-sm-max) {
-			padding: 20px;
-		}
-	}
-
-	p {
-		margin-top: 0;
-	}
-
-	.block-promotion__title {
-		line-height: 0.85;
-
-		+ p {
-			margin-top: 10px;
-		}
-	}
-}
-
-.block-promotion__bingo-icon {
-	max-width: 60px;
-	float: left;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.58);
-	margin-right: $margin-default;
-
-	img {
-		width: 100%;
-		height: auto;
-	}
-}
-
-.block-promotion__bingo-column {
-	margin: 25px 0;
-	display: inline-block;
-	text-align: left;
-
-	.h4 {
-		margin-top: 0;
-
-		@include max-screen($screen-xs-max) {
-			font-size: 16px;
-			line-height: 26px;
-		}
-	}
-}
+@import "promotion/_promotion-text";
+@import "promotion/_promotion-image";
+@import "promotion/_promotion-split";
+@import "promotion/_promotion-bingo";
