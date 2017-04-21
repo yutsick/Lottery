@@ -1,16 +1,12 @@
 @@include('layout/_header.html', {
-	"class": "page-article logged-out"
+	"class": "page-front logged-out"
 })
 
 @@include('layout/_top.html', {"logged_in": false})
 @@include('layout/_sidebar.html', {"logged_in": false})
 
 <div class="content-wrapper ml-2017">
-	@@include('blocks/_hero.html', {"hero_content": false})
 	@@include('blocks/_content.html', {"text_only": false})
-	@@include('blocks/_promotion.html', {"blocks": "row_7"})
-	@@include('blocks/_content.html', {"text_only": true})
-	@@include('blocks/_promotion.html', {"blocks": "all"})
 </div>
 
 @@include('layout/_footer.html', {"show_footer": true})

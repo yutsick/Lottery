@@ -1,0 +1,15 @@
+.block-content {
+	margin-bottom: 20px;
+
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 40px;
+	}
+}
+
+.block-content__content {
+	p {
+		overflow: auto;
+		zoom: 1;
+		margin-bottom: 20px;
+	}
+}
