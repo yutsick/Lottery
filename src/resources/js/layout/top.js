@@ -15,8 +15,6 @@ module.exports = {
 				let alert_height = $alert.outerHeight();
 				alert_height = alert_height ? alert_height : 0;
 				let scroll_top = $(window).scrollTop();
-				console.log(scroll_top);
-				console.log(alert_height);
 
 				if (scroll_top > alert_height) {
 					$top.addClass('js-is-fixed');

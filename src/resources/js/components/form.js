@@ -62,7 +62,6 @@ module.exports = {
 			});
 
 			$('.js-action-reset-journey').click(function () {
-				console.log('test');
 				let $error = $(this).parent('.modal-body__error');
 				let $loading = $error.prev('.modal-body__loading');
 				let $form = $loading.prev('.account-form');

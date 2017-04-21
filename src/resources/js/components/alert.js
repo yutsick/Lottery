@@ -9,7 +9,6 @@ module.exports = {
 			});
 
 			$('.alert').on('closed.bs.alert', function () {
-				// console.log('I,m closed');
 			});
 
 			$('#alert-cookie').on('closed.bs.alert', function () {
