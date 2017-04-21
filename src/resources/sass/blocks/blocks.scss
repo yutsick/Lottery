@@ -20,17 +20,15 @@
 	}
 }
 
-@import "hero";
+.block--background-color {
+	color: $color-light;
+}
 
-@import "article-list";
-@import "promotion";
-@import "product-list";
-@import "slider";
-@import "article";
-
-@import "footer";
-@import "bottom-bar";
-
+.block--background-pattern {
+	background-image: url("../img/background/ricepaper2_@2X.png");
+	background-size: 500px auto;
+	background-blend-mode: multiply;
+}
 
 .block--background-image {
 	color: $color-light;
@@ -39,12 +37,11 @@
 	background-repeat: no-repeat;
 }
 
-.block--background-color {
-	color: $color-light;
-}
-
-.block--background-pattern {
-	background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/ricepaper2_@2X.png");
-	background-size: 500px auto;
-	background-blend-mode: multiply;
-}
+@import "hero";
+@import "article-list";
+@import "promotion";
+@import "product-list";
+@import "slider";
+@import "content";
+@import "footer";
+@import "bottom-bar";
