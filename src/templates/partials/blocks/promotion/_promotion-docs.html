@@ -3,83 +3,26 @@
 	<h2 class="section__heading h3">Promotion blocks - Small with bingo</h2>
 </div>
 
-<div class="col-xs-12 col-md-12 col-lg-6">
-	<div class="block-promotion block-promotion--bingo block block--background-pattern block--background-color background-color-blue flex-top">
-		<div class="block-promotion__content">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="block-promotion__bingo-icon">
-						<img src="assets/img/mockup/bingo-icon.png" alt="Bingo icon">
-					</div>
-					<p class="block-promotion__title h4" >Bingorum 1</p>
-					<p>Nästa spel: <strong>Tvåkronan</strong></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-4">
-					<div class="block-promotion__bingo-column block-bingo-jackpot">
-						<p>Jackpot</p>
-						<p class="h4">2 445 kr</p>
-					</div>
-				</div>
-				<div class="col-xs-4 text-align-center">
-					<div class="block-promotion__bingo-column block-bingo-next">
-						<p>Nästa spel</p>
-						<p class="h4">06:15</p>
-					</div>
-				</div>
-				<div class="col-xs-4 text-align-right">
-					<div class="block-promotion__bingo-column block-bingo-players">
-						<p>Spelare</p>
-						<p class="h4">65</p>
-					</div>
-				</div>
-				<div class="col-xs-12">
-					<a href="" class="btn btn-primary btn--invert">Till spelet</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="col-xs-12 col-md-12 col-lg-6">
-	<div class="block-promotion block-promotion--bingo block block--background-pattern block--background-color background-color-blue flex-top">
-		<div class="block-promotion__content">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="block-promotion__bingo-icon">
-						<img src="assets/img/mockup/bingo-icon.png" alt="Bingo icon">
-					</div>
-					<p class="block-promotion__title h4" >Bingorum längre 2</p>
-					<p>Nästa spel: <strong>Tvåkronan</strong></p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-xs-4">
-					<div class="block-promotion__bingo-column block-bingo-jackpot">
-						<p>Jackpot</p>
-						<p class="h4">2 445 kr</p>
-					</div>
-				</div>
-				<div class="col-xs-4 text-align-center">
-					<div class="block-promotion__bingo-column block-bingo-next">
-						<p>Nästa spel</p>
-						<p class="h4">06:15</p>
-					</div>
-				</div>
-				<div class="col-xs-4 text-align-right">
-					<div class="block-promotion__bingo-column block-bingo-players">
-						<p>Spelare</p>
-						<p class="h4">65</p>
-					</div>
-				</div>
-				<div class="col-xs-12">
-					<a href="" class="btn btn-primary btn--invert">Till spelet</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+@@loop('blocks/promotion/block/_promotion-bingo.html', [
+	{
+		"color": "blue",
+		"image": "assets/img/mockup/bingo-icon.png",
+		"title": "Bingorum 1",
+		"next_game": "Tvåkronan",
+		"jackpot": "2 445 kr",
+		"next_time": "06:15",
+		"players": "65"
+	},
+	{
+		"color": "blue",
+		"image": "",
+		"title": "Bingorum längre 2",
+		"next_game": "Tvåkronan",
+		"jackpot": "5 445 kr",
+		"next_time": "08:15",
+		"players": "30"
+	}
+])
 
 <!-- Promotion blocks - Small with text -->
 <div class="col-xs-12">
