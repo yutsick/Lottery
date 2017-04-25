@@ -1,11 +1,4 @@
-// Pre defined mobile and active settings
-@mixin menu-main-notification-mobile() {
-	transform: translateX(-50%);
-	left: 50%;
-	margin-left: -13px;
-	top: -3px;
-}
-
+// Defaults menu styles
 .sidebar-navigation {
 	list-style: none;
 	padding: 0;
@@ -17,7 +10,6 @@
 		padding: 0;
 	}
 
-	// Defaults menu item styles
 	li {
 		display: block;
 		border-top: 1px solid $color-border;
@@ -99,8 +91,52 @@
 			}
 		}
 	}
+}
 
-	// First level menu items
+// Pre-defined small and active mobile styles
+@mixin menu-main-item-mobile() {
+	padding: 20px 10px 0;
+}
+
+@mixin menu-main-search-mobile() {
+	display: none;
+}
+
+@mixin menu-main-user-mobile() {
+	display: none;
+}
+
+@mixin menu-main-link-mobile() {
+	padding: $padding-small 0 0;
+	font-size: 10px;
+	line-height: 14px;
+	text-align: center;
+}
+
+@mixin menu-main-description-mobile() {
+	display: none;
+}
+
+@mixin menu-main-icon-mobile() {
+	width: 100%;
+	margin-right: 0;
+	display: block;
+	text-align: center;
+}
+
+@mixin menu-main-notification-mobile() {
+	transform: translateX(-50%);
+	left: 50%;
+	margin-left: -13px;
+	top: -3px;
+}
+
+@mixin menu-sub-mobile() {
+	left: $sidebar-width-mobile;
+}
+
+// Main menu items
+.sidebar-navigation {
 	> li {
 		// Logo and search bar
 		&:first-child {
@@ -109,7 +145,7 @@
 			position: relative;
 
 			@include screen($screen-sm-min, $screen-md-max) {
-				padding: 20px 10px 0;
+				@include menu-main-item-mobile();
 			}
 
 			img {
@@ -254,7 +290,7 @@
 
 			span {
 				@include screen($screen-sm-min, $screen-md-max) {
-					display: none;
+					@include menu-main-user-mobile();
 				}
 			}
 
@@ -267,10 +303,7 @@
 
 		> a {
 			@include screen($screen-sm-min, $screen-md-max) {
-				padding: $padding-small 0 0;
-				font-size: 10px;
-				line-height: 14px;
-				text-align: center;
+				@include menu-main-link-mobile();
 			}
 
 			// Active border
@@ -298,7 +331,7 @@
 				span {
 					&:last-of-type {
 						@include screen($screen-sm-min, $screen-md-max) {
-							display: none;
+							@include menu-main-description-mobile();
 						}
 					}
 				}
@@ -306,10 +339,7 @@
 
 			i {
 				@include screen($screen-sm-min, $screen-md-max) {
-					width: 100%;
-					margin-right: 0;
-					display: block;
-					text-align: center;
+					@include menu-main-icon-mobile();
 				}
 
 				.notification {
@@ -320,8 +350,10 @@
 			}
 		}
 	}
+}
 
-	// Sub navigation
+// Sub menu items
+.sidebar-navigation {
 	> li {
 		> ul {
 			visibility: hidden;
@@ -442,19 +474,19 @@
 		> li {
 			&:first-child {
 				@include max-screen($screen-sm-min) {
-					padding: 20px 10px 0;
+					@include menu-main-item-mobile();
 				}
 
 				.navigation-search {
 					@include max-screen($screen-sm-min) {
-						display: none;
+						@include menu-main-search-mobile();
 					}
 				}
 
 				div.user {
 					span {
 						@include max-screen($screen-sm-min) {
-							display: none;
+							@include menu-main-user-mobile();
 						}
 					}
 				}
@@ -462,17 +494,14 @@
 
 			> a {
 				@include max-screen($screen-sm-min) {
-					padding: $padding-small 0 0;
-					font-size: 10px;
-					line-height: 14px;
-					text-align: center;
+					@include menu-main-link-mobile();
 				}
 
 				div {
 					span {
 						&:last-of-type {
 							@include max-screen($screen-sm-min) {
-								display: none;
+								@include menu-main-description-mobile();
 							}
 						}
 					}
@@ -480,10 +509,7 @@
 
 				i {
 					@include max-screen($screen-sm-min) {
-						width: 100%;
-						margin-right: 0;
-						display: block;
-						text-align: center;
+						@include menu-main-icon-mobile();
 					}
 
 					.notification {
@@ -496,7 +522,7 @@
 
 			> ul {
 				@include max-screen($screen-sm-min) {
-					left: $sidebar-width-mobile;
+					@include menu-sub-mobile();
 				}
 			}
 		}
