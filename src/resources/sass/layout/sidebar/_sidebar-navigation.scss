@@ -220,10 +220,17 @@
 		}
 
 		i {
+			position: relative;
 			width: 30px;
 			text-align: center;
 			margin-right: $margin-small;
 			color: $color-complement-sky;
+
+			.notification {
+				position: absolute;
+				left: -6px;
+				top: -6px;
+			}
 		}
 
 		// Custom user styles
@@ -394,6 +401,11 @@
 					font-size: 18px;
 					line-height: 1;
 					font-weight: 600;
+				}
+
+				.notification {
+					margin-left: 6px;
+					margin-bottom: -18px;
 				}
 
 				> ul {
