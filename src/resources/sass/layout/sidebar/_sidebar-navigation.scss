@@ -1,3 +1,11 @@
+// Pre defined mobile and active settings
+@mixin menu-main-notification-mobile() {
+	transform: translateX(-50%);
+	left: 50%;
+	margin-left: -13px;
+	top: -3px;
+}
+
 .sidebar-navigation {
 	list-style: none;
 	padding: 0;
@@ -303,6 +311,12 @@
 					display: block;
 					text-align: center;
 				}
+
+				.notification {
+					@include screen($screen-sm-min, $screen-md-max) {
+						@include menu-main-notification-mobile();
+					}
+				}
 			}
 		}
 	}
@@ -470,6 +484,12 @@
 						margin-right: 0;
 						display: block;
 						text-align: center;
+					}
+
+					.notification {
+						@include max-screen($screen-sm-min) {
+							@include menu-main-notification-mobile();
+						}
 					}
 				}
 			}
