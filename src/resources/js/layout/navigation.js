@@ -57,8 +57,9 @@ module.exports = {
 						$this.addClass(active_class);
 						$this.parent('li').addClass(active_class);
 					}
+
+					return false;
 				}
-				return false;
 			});
 		}
 
