@@ -1,36 +1,53 @@
 <div class="col-xs-12 col-md-12 col-lg-6">
 	<div class="block-promotion block-promotion--bingo block block--background-pattern block--background-color background-color-@@color flex-top">
 		<div class="block-promotion__content">
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="block-promotion__bingo-icon">
-						<img src="@@image" alt="Bingo icon">
-					</div>
-					<p class="block-promotion__title h4" >@@title</p>
-					<p>Nästa spel: <strong>@@next_game</strong></p>
+			@@if(context.image) {
+				<div class="block-promotion__bingo-icon">
+					<img src="@@image" alt="Bingo icon">
 				</div>
-			</div>
+			}
+			<p class="block-promotion__title h4" >@@title <span class="block-bingo-price hidden-xs">@@price</span></p>
+			<p>Nästa spel: <strong>@@next_game</strong></p>
 			<div class="row">
-				<div class="col-xs-4">
+				<div class="col-xs-6 visible-xs-block">
+					<div class="block-promotion__bingo-column block-bingo-price">
+						<p>Pris</p>
+						<p class="h4">@@price</p>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4">
 					<div class="block-promotion__bingo-column block-bingo-jackpot">
 						<p>Jackpot</p>
 						<p class="h4">@@jackpot</p>
 					</div>
 				</div>
-				<div class="col-xs-4 text-align-center">
+				<div class="col-xs-6 col-sm-4 text-align-center">
 					<div class="block-promotion__bingo-column block-bingo-next">
-						<p>Nästa spel</p>
+						@@if (context.bingo_room) {
+							<p>Tid kvar</p>
+						}
+						@@if (!context.bingo_room) {
+							<p>Nästa spel</p>
+						}
+
 						<p class="h4">@@next_time</p>
 					</div>
 				</div>
-				<div class="col-xs-4 text-align-right">
+				<div class="col-xs-6 col-sm-4 text-align-right">
 					<div class="block-promotion__bingo-column block-bingo-players">
 						<p>Spelare</p>
 						<p class="h4">@@players</p>
 					</div>
 				</div>
-				<div class="col-xs-12">
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
 					<a href="" class="btn btn-primary btn--invert">Till spelet</a>
+				</div>
+				<div class="col-xs-6 text-align-right block-bingo-room">
+					@@if (context.bingo_room) {
+					<p><strong>@@bingo_room</strong></p>
+					}
 				</div>
 			</div>
 		</div>

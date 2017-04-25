@@ -4,9 +4,7 @@
 	}
 
 	.block-promotion__content {
-		@include max-screen($screen-sm-max) {
-			padding: 20px;
-		}
+		padding: 20px;
 	}
 
 	p {
@@ -14,11 +12,52 @@
 	}
 
 	.block-promotion__title {
+		position: relative;
 		line-height: 0.85;
+		padding-right: 0;
+
+		@include min-screen($screen-xs-min) {
+			padding-right: 80px;
+		}
+
+		.block-bingo-price {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 
 		+ p {
 			margin-top: 10px;
 		}
+	}
+
+	.row {
+		@include max-screen($screen-xs-max) {
+			margin-top: 25px;
+		}
+
+		[class*='col-'] {
+			padding: 0 15px;
+
+			@include min-screen($screen-sm-min) {
+				padding: 0;
+			}
+
+			&:first-of-type,
+			&.visible-xs-block + div {
+				padding-left: 15px;
+			}
+
+			&:last-of-type {
+				padding-right: 15px;
+			}
+		}
+	}
+}
+
+.block-bingo-room {
+	p {
+		margin-top: 10px;
 	}
 }
 
@@ -36,9 +75,15 @@
 }
 
 .block-promotion__bingo-column {
-	margin: 25px 0;
+	margin: 5px 0;
+	width: 100%;
 	display: inline-block;
 	text-align: left;
+
+	@include min-screen($screen-sm-min) {
+		margin: 25px 0;
+		width: auto;
+	}
 
 	.h4 {
 		margin-top: 0;
