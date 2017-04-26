@@ -19,16 +19,17 @@
 	</div>
 </div>
 
-<div class="col-xs-12 col-md-12 col-lg-6">
-	<div
-		class="block-promotion block-promotion--split block block--background-pattern block--background-color background-color-pink flex-bottom">
-		<a class="block-promotion__link" href="/" title="Ge bort lotter i påsk">
-			<div class="block-promotion__content block-promotion__content--split">
-				<p class="block-promotion__title h4" >Ditt lottköp gör skillnad</p>
-			</div>
-			<div class="block-promotion__image block-promotion__image--split"
-				 style="background-image: url('assets/img/mockup/butterfly.jpg')">
-			</div>
-		</a>
-	</div>
-</div>
+@@include('blocks/promotion/block/_promotion-split.html', {
+	"size": "medium",
+	"background": "color",
+	"background_color": "pink",
+	"background_color_pattern": "true",
+	"background_image": "",
+	"content_alignment": "bottom",
+	"content_title": "Ditt lottköp gör skillnad",
+	"content_text": "",
+	"content_link": "true",
+	"content_image": "assets/img/mockup/butterfly.jpg",
+	"text_protection": "",
+	"text_alignment": ""
+})
