@@ -14,7 +14,6 @@ import search from './components/search';
 import slider from './components/slider';
 
 $(function () {
-	console.log('Hello world');
 	modernizr();
 	alert();
 	form();
