@@ -1,36 +1,27 @@
 window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
-var modernizr = require('./vendor/modernizr-custom.js');
-var flickity = require('flickity/dist/flickity.pkgd.js');
+require('bootstrap-validator');
+require('flickity/dist/flickity.pkgd.js');
 
-var alert = require('./components/alert');
-var form = require('./components/form');
-var modal = require('./components/modal');
-var slider = require('./components/slider');
-var navigation = require('./layout/navigation');
-var top = require('./layout/top');
-var footer = require('./layout/footer');
-var search = require('./components/search');
+import modernizr from './vendor/modernizr-custom.js';
+import alert from './components/alert';
+import form from './components/form';
+import modal from './components/modal';
+import navigation from './layout/navigation';
+import top from './layout/top';
+import footer from './layout/footer';
+import search from './components/search';
+import slider from './components/slider';
 
 $(function () {
 	console.log('Hello world');
-	modernizr.init();
-	alert.init();
-	form.init();
-	modal.init();
-	search.init();
-	navigation.init();
-	top.init();
-	// slider.init();
-	footer.init();
-
-	$('.block-slider').flickity({
-		cellSelector: '.block-slider__item',
-		cellAlign: 'left',
-		wrapAround: true,
-		contain: false,
-		draggable: true,
-		pageDots: true,
-		prevNextButtons: true
-	});
+	modernizr();
+	alert();
+	form();
+	modal();
+	search();
+	navigation();
+	top();
+	footer();
+	slider();
 });

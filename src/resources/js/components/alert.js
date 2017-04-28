@@ -1,20 +1,15 @@
-module.exports = {
-	init() {
-		alert_ux();
+export default function() {
+	$('.alert .js-action-close').on('click', function () {
+		let $alert = $(this).parents('.alert');
+		$alert.alert('close');
+	});
 
-		function alert_ux() {
-			$('.alert .js-action-close').click(function () {
-				let $alert = $(this).parents('.alert');
-				$alert.alert('close');
-			});
+	$('.alert').on('closed.bs.alert', function () {
+	});
 
-			$('.alert').on('closed.bs.alert', function () {
-			});
+	$('#alert-cookie').on('closed.bs.alert', function () {
+		let $html = $('html');
+		$html.removeClass('has-cookie-bar');
+	});
+}
 
-			$('#alert-cookie').on('closed.bs.alert', function () {
-				$html = $('html');
-				$html.removeClass('has-cookie-bar');
-			});
-		}
-	}
-};
