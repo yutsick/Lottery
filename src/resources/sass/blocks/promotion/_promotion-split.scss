@@ -2,6 +2,7 @@
 }
 
 .block-promotion__content--split {
+	height: 100%;
 	padding-top: 55%;
 	padding-right: $padding-default;
 
@@ -12,6 +13,7 @@
 }
 
 .block-promotion__image--split {
+	clip-path: url("#clip-split-mobile");
 	clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 	position: absolute;
 	left: 0;
@@ -21,6 +23,7 @@
 	height: 50%;
 
 	@include min-screen($screen-sm-min) {
+		clip-path: url("#clip-split");
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
 		left: auto;
 		right: 0;
