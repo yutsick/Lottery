@@ -33,7 +33,7 @@ export default function () {
 		}
 	}
 
-	//
+	// Check sidebar account height
 	let toggle_height = false;
 
 	function check_sidebar_account() {
@@ -43,9 +43,9 @@ export default function () {
 		let $sidebar_account = $('.sidebar-account');
 
 		let window_height = $window.height();
-		let sidebar_navigation_height = $sidebar_navigation.outerHeight();
+		let sidebar_navigation_height = $sidebar_navigation.innerHeight();
 		let sidebar_account_height = $sidebar_account.outerHeight();
-		let total_height = sidebar_navigation_height + sidebar_account_height;
+		let total_height = sidebar_navigation_height + sidebar_account_height + 10;
 
 		if ( window_height < total_height ) {
 			if ( toggle_height == false) {
