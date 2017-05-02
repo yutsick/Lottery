@@ -61,8 +61,14 @@
 	}
 }
 
+&#sidebar.js-is-small .sidebar-account {
+	position: relative;
+	top: 0;
+	bottom: auto;
+}
+
 // Active
-#sidebar.js-is-active .sidebar-account {
+&#sidebar.js-is-active .sidebar-account {
 	@include max-screen($screen-sm-min) {
 		padding: 0 0 $padding-default;
 	}

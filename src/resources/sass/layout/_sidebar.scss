@@ -37,5 +37,10 @@
 	}
 }
 
+.sidebar-wrapper {
+	height: 100%;
+	overflow-y: scroll;
+}
+
 @import "sidebar/sidebar-navigation";
 @import "sidebar/sidebar-account";

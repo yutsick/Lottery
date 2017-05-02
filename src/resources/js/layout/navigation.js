@@ -3,9 +3,11 @@ export default function () {
 	reset_nav_on_resize();
 	click_top_nav_item();
 	click_sub_menu_item();
+	check_sidebar_account();
 
 	$(window).on('resize', function () {
 		reset_nav_on_resize();
+		check_sidebar_account();
 	});
 
 	let $body = $('body');
@@ -28,6 +30,34 @@ export default function () {
 
 		if (($window.width() < mobile_width) && (navigation_trigger == true)) {
 			navigation_trigger = false;
+		}
+	}
+
+	//
+	let toggle_height = false;
+
+	function check_sidebar_account() {
+		let $window = $(window);
+		let $sidebar = $('#sidebar');
+		let $sidebar_navigation = $('.sidebar-navigation');
+		let $sidebar_account = $('.sidebar-account');
+
+		let window_height = $window.height();
+		let sidebar_navigation_height = $sidebar_navigation.outerHeight();
+		let sidebar_account_height = $sidebar_account.outerHeight();
+		let total_height = sidebar_navigation_height + sidebar_account_height;
+
+		if ( window_height < total_height ) {
+			if ( toggle_height == false) {
+				$sidebar.addClass('js-is-small');
+				toggle_height = true;
+			}
+		}
+		else {
+			if ( toggle_height == true) {
+				$sidebar.removeClass('js-is-small');
+				toggle_height = false;
+			}
 		}
 	}
 
