@@ -2,11 +2,9 @@
 }
 
 .block-promotion__content--split {
-	height: auto;
 	padding-right: 50px;
 
 	@include min-screen($screen-sm-min) {
-		height: 100%;
 		padding-right: 55%;
 	}
 }
