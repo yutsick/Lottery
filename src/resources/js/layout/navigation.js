@@ -127,10 +127,10 @@ export default function () {
 	function scroll_to_section(section) {
 		let $top = $('.top-menu');
 		let top_height = 0;
+
 		if ($top.is(':visible')) {
-			top_height = parseInt($top.outerHeight())
+			top_height = parseInt($top.outerHeight());
 		}
-		;
 
 		let section_top = parseInt(section.offset().top);
 
