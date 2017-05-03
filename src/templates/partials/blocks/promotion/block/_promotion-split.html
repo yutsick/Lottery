@@ -15,6 +15,20 @@
 			</div>
 			@@if(context.content_image){
 			<div class="block-promotion__image block-promotion__image--split" style="background-image: url('@@content_image')">
+				<svg class="clip-svg">
+					<defs>
+						<clipPath id="clip-split" clipPathUnits="objectBoundingBox" >
+							<polygon points="0 0, 1 0, 1 1, 0.1 1" />
+						</clipPath>
+					</defs>
+				</svg>
+				<svg class="clip-svg">
+					<defs>
+						<clipPath id="clip-split-mobile" clipPathUnits="objectBoundingBox" >
+							<polygon points="0 0, 1 0, 1 0.8, 0 1" />
+						</clipPath>
+					</defs>
+				</svg>
 			</div>
 			}
 		@@if(context.content_link){
