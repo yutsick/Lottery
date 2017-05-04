@@ -1,97 +1,96 @@
 <aside id="sidebar" class="ml-2017">
-	<div class="sidebar-wrapper">
-		<ul class="sidebar-navigation">
-			<li class="has-content">
-				<img src="assets/img/brand/ml-logotype-old.png" alt="Miljonlotteriet">
-				<div class="navigation-search">
-					<form class="search" action="">
-						<input type="text" class="form-control" placeholder="Sök...">
-						<i class="icon icon-search js-action-search"></i>
-					</form>
+	<ul class="sidebar-navigation">
+		<li class="has-content">
+			<img src="assets/img/brand/ml-logotype-old.png" alt="Miljonlotteriet">
+			<div class="navigation-search">
+				<form class="search" action="">
+					<input type="text" class="form-control" placeholder="Sök...">
+					<i class="icon icon-search js-action-search"></i>
+				</form>
+			</div>
+		</li>
+		<li class="has-sub-menu">
+			<a>
+				<i class="icon icon-game"></i>
+				<div>
+					Spela
+					<span>Bingo och Lotter</span>
 				</div>
-			</li>
-			<li class="has-sub-menu">
-				<a>
-					<i class="icon icon-game"></i>
-					<div>
-						Spela
-						<span>Bingo och Lotter</span>
-					</div>
-				</a>
-				@@include('layout/sidebar/_sub-navigation-collapsed.html')
-			</li>
-			<li>
-				<a href="/">
-					<i class="icon icon-star"></i>
-					<div>
-						<!-- Example: Use if different text in mobile -->
-						<span>Vinster</span>
-						<span>Vinster & inspiration</span>
-					</div>
-				</a>
-			</li>
-
-			<li>
-				<a href="/">
-					<i class="icon icon-heart"></i>
-					<div>
-						Ändamål
-						<span>Du gör skillnad</span>
-					</div>
-				</a>
-			</li>
-			<li class="has-sub-menu">
-				<a>
-					<i class="icon icon-more"></i>
-					<div>
-						Övrigt
-						<span>Mer om oss</span>
-					</div>
-				</a>
-				@@include('layout/sidebar/_sub-navigation.html')
-			</li>
-
-			@@if (logged_in === true) {
-			<li class="has-sub-menu">
-				<a>
-					<i class="icon icon-user">
-						@@include('elements/_notification.html', { "number": "1" })
-					</i>
-					<div>
-						Mina sidor
-						<span>Överföringar mm.</span>
-					</div>
-				</a>
-				@@include('layout/sidebar/_sub-navigation.html')
-			</li>
-			<li>
-				<a href="/">
-					<i class="icon icon-insert"></i>
-					<div>
-						Insättning
-						<span>Sätt in pengar</span>
-					</div>
-				</a>
-			</li>
-			<li class="has-content">
-				<div class="user">
-					<i class="icon icon-default"></i>
-					<div>
-						<span class="user__name">Stefan Jakobsson</span>
-						<span class="user__wallet">Spelplånbok 450kr</span>
-						<span class="user__winnings">Vinstkonto 450kr</span>
-					</div>
+			</a>
+			@@include('layout/sidebar/_sub-navigation-collapsed.html')
+		</li>
+		<li>
+			<a href="/">
+				<i class="icon icon-star"></i>
+				<div>
+					<!-- Example: Use if different text in mobile -->
+					<span>Vinster</span>
+					<span>Vinster & inspiration</span>
 				</div>
-			</li>
-			}
+			</a>
+		</li>
 
-		</ul>
+		<li>
+			<a href="/">
+				<i class="icon icon-heart"></i>
+				<div>
+					Ändamål
+					<span>Du gör skillnad</span>
+				</div>
+			</a>
+		</li>
+		<li class="has-sub-menu">
+			<a>
+				<i class="icon icon-more"></i>
+				<div>
+					Övrigt
+					<span>Mer om oss</span>
+				</div>
+			</a>
+			@@include('layout/sidebar/_sub-navigation.html')
+		</li>
 
-		<div class="sidebar-account">
-			<a href="/" class="btn btn-primary btn-icon js-action-register"><i class="icon icon-plus"></i>Registrera lott</a>
-			@@if (logged_in === true) {
-			<button class="btn btn-default btn-icon js-action-logout"><i class="icon icon-leave"></i>Logga ut</button></u}
-		</div>
+		@@if (logged_in === true) {
+		<li class="has-sub-menu">
+			<a>
+				<i class="icon icon-user">
+					@@include('elements/_notification.html', { "number": "1" })
+				</i>
+				<div>
+					Mina sidor
+					<span>Överföringar mm.</span>
+				</div>
+			</a>
+			@@include('layout/sidebar/_sub-navigation.html')
+		</li>
+		<li>
+			<a href="/">
+				<i class="icon icon-insert"></i>
+				<div>
+					Insättning
+					<span>Sätt in pengar</span>
+				</div>
+			</a>
+		</li>
+		<li class="has-content">
+			<div class="user">
+				<i class="icon icon-default"></i>
+				<div>
+					<span class="user__name">Stefan Jakobsson</span>
+					<span class="user__wallet">Spelplånbok 450kr</span>
+					<span class="user__winnings">Vinstkonto 450kr</span>
+				</div>
+			</div>
+		</li>
+		}
 
+	</ul>
+
+	<div class="sidebar-account">
+		<a href="/" class="btn btn-primary btn-icon js-action-register"><i class="icon icon-plus"></i>Registrera
+			lott</a>
+		@@if (logged_in === true) {
+		<button class="btn btn-default btn-icon js-action-logout"><i class="icon icon-leave"></i>Logga ut</button>
+		</u}
 	</div>
 </aside>

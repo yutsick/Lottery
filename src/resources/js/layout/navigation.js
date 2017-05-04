@@ -3,11 +3,11 @@ export default function () {
 	reset_nav_on_resize();
 	click_top_nav_item();
 	click_sub_menu_item();
-	check_sidebar_account();
+	// check_sidebar_account();
 
 	$(window).on('resize', function () {
 		reset_nav_on_resize();
-		check_sidebar_account();
+		// check_sidebar_account();
 	});
 
 	let $body = $('body');
