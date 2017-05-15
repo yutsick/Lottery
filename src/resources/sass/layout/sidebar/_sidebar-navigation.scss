@@ -1,4 +1,4 @@
-// Defaults menu styles
+// Default menu styles
 .sidebar-navigation {
 	list-style: none;
 	padding: 0;
@@ -148,12 +148,18 @@
 				@include menu-main-item-mobile();
 			}
 
-			img {
+			.logotype {
 				display: inline-block;
 				max-width: 75px;
 				height: auto;
-				width: 100%;
-				border: none;
+				padding: 0;
+
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+					border: none;
+				}
 			}
 
 			.navigation-search {
