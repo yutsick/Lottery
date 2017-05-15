@@ -224,6 +224,15 @@
 				@include min-screen($screen-md-max) {
 					display: block;
 				}
+
+				span {
+					display: block;
+				}
+
+				a {
+					padding: 0;
+					display: block;
+				}
 			}
 		}
 
@@ -290,10 +299,6 @@
 				vertical-align: top;
 			}
 
-			div {
-				max-width: 160px;
-			}
-
 			span {
 				@include screen($screen-sm-min, $screen-md-max) {
 					@include menu-main-user-mobile();
@@ -301,9 +306,13 @@
 			}
 
 			.user__wallet,
-			.user__winnings {
+			.user__wallet a,
+			.user__winnings,
+			.user__winnings a {
+				font-weight: 400;
 				font-size: 11px;
 				line-height: 17px;
+				color: $color-base-complement;
 			}
 		}
 
