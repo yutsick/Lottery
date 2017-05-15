@@ -22,6 +22,11 @@
 .alert-info,
 &.alert-info {
 	background-color: $color-complement-coral;
+
+	a,
+	a:hover {
+		color: $color-light;
+	}
 }
 
 #alert-cookie,
