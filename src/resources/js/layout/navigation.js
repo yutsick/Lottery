@@ -149,14 +149,14 @@ export default function () {
 		if (state_navigation == 'close') {
 			$body.removeClass('js-overlay-is-active');
 			$page_wrapper.removeClass(active_class);
-
-			// Collapse all sub menus
-			$sidebar.find('.collapse').collapse('hide');
 		}
 		else if (state_navigation == 'open') {
 			$page_wrapper.addClass(active_class);
 			$body.addClass('js-overlay-is-active');
 		}
+
+		// Collapse all sub menus
+		$sidebar.find('.collapse').collapse('hide');
 
 		if (state_sidebar == 'active') {
 			$sidebar.addClass(active_class);
