@@ -1,4 +1,9 @@
 .block-promotion--split {
+	&.flex-top {
+		@include max-screen($screen-sm-max) {
+			justify-content: flex-end;
+		}
+	}
 }
 
 .block-promotion__content--split {

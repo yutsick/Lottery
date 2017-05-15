@@ -5,6 +5,14 @@
 		> a:not(.btn) {
 			justify-content: flex-start;
 		}
+
+		&.block-promotion--split {
+			> a:not(.btn) {
+				@include max-screen($screen-sm-max) {
+					justify-content: flex-end;
+				}
+			}
+		}
 	}
 
 	&.flex-middle {
