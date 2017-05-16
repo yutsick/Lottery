@@ -10,6 +10,10 @@
 	i {
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	}
+
+	&:focus, &:focus:active{
+		outline:none;
+	}
 }
 
 .btn-default {
