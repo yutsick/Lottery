@@ -56,6 +56,11 @@
 		font-size: 13px;
 		line-height: 23px;
 
+		.row {
+			display: flex;
+			align-items: center;
+		}
+
 		.list-links {
 			margin-bottom: 0;
 
