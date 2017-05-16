@@ -1,0 +1,17 @@
+.social-links {
+	padding: 0;
+	list-style: none;
+
+	.social-links__item {
+		a {
+			display: block;
+			padding: 8px 0;
+		}
+
+		.icon {
+			font-size: 19px;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+	}
+}

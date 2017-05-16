@@ -7,51 +7,36 @@
 	font-size: 13px;
 	line-height: 20px;
 
-	@include min-screen($screen-sm-min) {
-		font-size: 16px;
-		line-height: 24px;
-	}
-
 	h5 {
-		font-size: 16px;
+		font-size: 17px;
 		line-height: 22px;
-
-		@include min-screen($screen-sm-min) {
-			font-size: 18px;
-			line-height: 24px;
-		}
-
-		@include min-screen($screen-lg-min) {
-			font-size: 22px;
-			line-height: 28px;
-			//padding: $padding-default 0;
-		}
 	}
 
 	p { margin-bottom: 35px; }
 
 	a {
 		color: $color-base-complement;
-		font-weight: 500;
+		font-weight: 400;
 
 		@include min-screen($screen-sm-min) {
-			font-size: 16px;
-			line-height: 22px;
+			font-size: 14px;
+			line-height: 20px;
 		}
 
 		&:hover {
 			color: darken($color-base-complement, $color-darken-amount);
 		}
 	}
+
 	.block-footer__phone-link {
 		font-size: 16px;
 		line-height: 22px;
-		font-weight: 600;
+		font-weight: 500;
 		text-decoration: underline;
 
 		@include min-screen($screen-sm-min) {
-			font-size: 20px;
-			line-height: 26px;
+			font-size: 18px;
+			line-height: 24px;
 		}
 	}
 
@@ -62,22 +47,5 @@
 			margin-bottom: 15px;
 		}
 	}
-}
 
-.social-links {
-	padding: 0;
-	list-style: none;
-
-	.social-links__item {
-		a {
-			display: block;
-			padding: 8px 0;
-		}
-
-		.icon {
-			font-size: 19px;
-			vertical-align: middle;
-			margin-right: 10px;
-		}
-	}
 }
