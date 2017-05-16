@@ -1,5 +1,12 @@
 .block-bottom-bar {
-	padding: 30px 0 20px;
+	padding: 20px 0 20px;
+
+	.row {
+		@include min-screen($screen-md-min) {
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 
 .block-bottom-bar__column {
@@ -8,6 +15,9 @@
 		margin-bottom: $margin-default;
 	}
 
+	.list-links--horizontal .list-links__item {
+		margin-bottom: 0;
+	}
 	p {
 		margin: 0;
 	}

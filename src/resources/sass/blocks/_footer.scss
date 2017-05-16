@@ -3,114 +3,81 @@
 	border-bottom: 1px solid $color-border;
 	background-color: $color-container-background;
 	padding: $padding-medium 0;
+	font-weight: 200;
 	font-size: 13px;
-	line-height: 24px;
+	line-height: 20px;
 
-	.block-footer__item {
-		@include max-screen($screen-md-min) {
-			border-bottom: 1px solid $color-border;
-		}
+	@include min-screen($screen-sm-min) {
+		font-size: 16px;
+		line-height: 24px;
 	}
 
 	h5 {
-		@include max-screen($screen-md-min) {
-			cursor: pointer;
-			margin: 0;
-			position: relative;
-			padding: $padding-default 0;
-			opacity: $opacity-1;
-			transition: opacity $duration-fast $delay-none $ease-in-out;
+		font-size: 16px;
+		line-height: 22px;
+
+		@include min-screen($screen-sm-min) {
+			font-size: 18px;
+			line-height: 24px;
 		}
 
-		&:after {
-			@include max-screen($screen-md-min) {
-				font-family: "ml-icons";
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-				font-style: normal;
-				font-variant: normal;
-				font-weight: normal;
-				content: '\e906';
-				width: 10px;
-				font-size: 12px;
-				height: auto;
-				position: absolute;
-				color: $color-border;
-				top: 50%;
-				right: 0;
-				margin: auto;
-				transform: translate3d(-15px, -50%, 0) rotate(0deg);
-				transition: color $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
-			}
-		}
-
-		&:not(.collapsed) {
-			@include max-screen($screen-md-min) {
-				&:after {
-					transform: translate3d(-15px, -50%, 0) rotate(180deg);
-					color: $color-complement-sky;
-				}
-			}
-		}
-
-		&.collapsed {
-			@include max-screen($screen-md-min) {
-				border-bottom: 1px solid $color-border;
-			}
-		}
-
-
-	}
-
-	[class*='col-'] {
-		&:last-of-type {
-			h5 {
-				&:last-of-type {
-					@include max-screen($screen-md-min) {
-						border-bottom: none;
-					}
-				}
-			}
-			.block-footer__item {
-				&:last-of-type {
-					border-bottom: none;
-				}
-			}
+		@include min-screen($screen-lg-min) {
+			font-size: 22px;
+			line-height: 28px;
+			//padding: $padding-default 0;
 		}
 	}
 
-	&.js-is-active {
-		h5 {
-			@include max-screen($screen-md-min) {
-				cursor: pointer;
-				margin: 0;
-				padding: $padding-default 0;
-				opacity: $opacity-2;
-			}
-
-			&.collapsed {
-				@include max-screen($screen-md-min) {
-					opacity: $opacity-3;
-					border-bottom: 1px solid $color-border;
-				}
-			}
-		}
-	}
-
-	p {
-		margin-bottom: 35px;
-	}
+	p { margin-bottom: 35px; }
 
 	a {
 		color: $color-base-complement;
 		font-weight: 500;
 
+		@include min-screen($screen-sm-min) {
+			font-size: 16px;
+			line-height: 22px;
+		}
+
 		&:hover {
 			color: darken($color-base-complement, $color-darken-amount);
+		}
+	}
+	.block-footer__phone-link {
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 600;
+		text-decoration: underline;
+
+		@include min-screen($screen-sm-min) {
+			font-size: 20px;
+			line-height: 26px;
 		}
 	}
 
 	.list-links {
 		margin-bottom: 35px;
+
+		.list-links__item {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.social-links {
+	padding: 0;
+	list-style: none;
+
+	.social-links__item {
+		a {
+			display: block;
+			padding: 8px 0;
+		}
+
+		.icon {
+			font-size: 19px;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
 	}
 }
