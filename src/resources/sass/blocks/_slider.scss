@@ -58,7 +58,12 @@
 
 			&:after {
 				top: 50%;
-				transform:rotate(180deg) translateY(50%);
+				transform: rotate(180deg) translateY(50%);
+			}
+
+			&.disabled {
+				opacity: 0;
+				visibility: hidden;;
 			}
 		}
 
