@@ -29,32 +29,16 @@ body {
 	&.logged-in {
 		padding-top: $top-padding-logged-in;
 
-		.has-cookie-bar & {
-			padding-top: $top-padding-logged-in + $cookie-bar-height-mobile;
-		}
-
 		@include min-screen($screen-sm-min) {
 			padding-top: 0;
-
-			.has-cookie-bar & {
-				padding-top: 0;
-			}
 		}
 	}
 
 	&.logged-out {
 		padding-top: $top-padding-logged-out;
 
-		.has-cookie-bar & {
-			padding-top: $top-padding-logged-out + $cookie-bar-height-mobile;
-		}
-
 		@include min-screen($screen-sm-min) {
 			padding-top: 0;
-
-			.has-cookie-bar & {
-				padding-top: 0;
-			}
 		}
 	}
 

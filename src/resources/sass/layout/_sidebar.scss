@@ -29,12 +29,6 @@
 			width: $sidebar-width-mobile;
 		}
 	}
-
-	.has-cookie-bar & {
-		@include min-screen($screen-sm-min) {
-			// top: 60px;
-		}
-	}
 }
 
 .sidebar-wrapper {

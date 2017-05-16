@@ -1,6 +1,6 @@
 export default function () {
 	top_show_hide();
-	fixed_menu();
+// 	fixed_menu();
 
 	let $top = $('#top');
 	let $top_menu = $('.top-menu');

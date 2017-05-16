@@ -1,25 +1,9 @@
-&.js-is-fixed .top-account {
-	position: fixed;
-
-	@include min-screen($screen-sm-min) {
-		position: relative;
-	}
-
-	.has-cookie-bar & {
-		top: $menu-height;
-
-		@include min-screen($screen-sm-min) {
-			top: auto;
-		}
-	}
-}
-
 .top-account {
-	position: absolute;
+	position: fixed;
 	top: $menu-height;
 	z-index: 980;
 	width: 100%;
-	transform: translate3d(0,0,0);
+	transform: translate3d(0, 0, 0);
 	transition: transform $duration-fast $ease-standard $delay-none;
 
 	@include min-screen($screen-sm-min) {
@@ -27,16 +11,8 @@
 		top: auto;
 	}
 
-	.has-cookie-bar & {
-		top: $menu-height + 40px;
-
-		@include min-screen($screen-sm-min) {
-			top: auto;
-		}
-	}
-
 	&.js-top-up {
-		transform: translate3d(0,-$account-user-height,0);
+		transform: translate3d(0, -$account-user-height, 0);
 	}
 
 	.top-account__user {
@@ -69,7 +45,6 @@
 				margin-right: $margin-small;
 			}
 
-
 			.user__wallet,
 			.user__winnings {
 				margin: 5px 0;
@@ -77,6 +52,13 @@
 		}
 	}
 
+
+	.logged-in & {
+		.top-account__buttons{
+			display: none;
+		}
+	}
+	
 	.top-account__buttons {
 		position: absolute;
 		top: auto;
@@ -123,7 +105,7 @@
 					padding: 0;
 
 					&:before {
-						height:0;
+						height: 0;
 						width: 0;
 					}
 				}
