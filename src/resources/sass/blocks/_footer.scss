@@ -10,6 +10,7 @@
 	h5 {
 		font-size: 17px;
 		line-height: 22px;
+		word-break: break-word;
 	}
 
 	p { margin-bottom: 35px; }
@@ -48,4 +49,34 @@
 		}
 	}
 
+	.block-footer__bottom {
+		border-top: 1px solid $color-border;
+		padding: $padding-medium 0 0;
+		font-weight: 200;
+		font-size: 13px;
+		line-height: 23px;
+
+		.list-links {
+			margin-bottom: 0;
+
+			.list-links__item {
+				margin-bottom: 0;
+				margin-right: 15px;
+			}
+		}
+	}
+
+	.block-footer__bottom-logos {
+		img {
+			max-height: 23px;
+		}
+
+		img + img {
+			margin-left: 15px;
+		}
+
+		@include min-screen($screen-sm-min) {
+			text-align: right;
+		}
+	}
 }

@@ -1,24 +1,10 @@
 .block-bottom-bar {
-	padding: 20px 0 20px;
+	padding: 10px 0;
+	text-align: center;
 
-	.row {
-		@include min-screen($screen-md-min) {
-			display: flex;
-			align-items: center;
-		}
-	}
-}
-
-.block-bottom-bar__column {
-	@include max-screen($screen-sm-max) {
-		text-align: center;
-		margin-bottom: $margin-default;
-	}
-
-	.list-links--horizontal .list-links__item {
-		margin-bottom: 0;
-	}
-	p {
+		p {
 		margin: 0;
+		font-size: 12px;
+		line-height: 14px;
 	}
 }
