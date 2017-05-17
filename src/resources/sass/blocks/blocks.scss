@@ -34,8 +34,15 @@
 
 .block--background-pattern {
 	background-image: url("../img/background/ricepaper2_@2X.png");
-	background-size: 500px auto;
+	background-size: 100% 100%;
+	background-repeat: repeat;
+	background-position: top left;
 	background-blend-mode: multiply;
+
+	@include min-screen($screen-lg-min){
+		background-size: 500px auto;
+
+	}
 }
 
 .block--background-image {
