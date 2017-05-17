@@ -26,8 +26,14 @@ $sidebar-total-width-tablet: $sidebar-width-mobile + $sidebar-width-desktop;
 $sidebar-total-width-desktop: $sidebar-width-desktop + $sidebar-width-desktop;
 
 // Custom container widths
-$container-sm: 683px;
-$container-md: 937px;
+$container-xs: 100%;
+$container-sm: 100%;
+$container-md: 100%;
+$container-lg: 100%;
+
+.container {
+	max-width: 1920px;
+}
 
 //== Media queries breakpoints
 //
