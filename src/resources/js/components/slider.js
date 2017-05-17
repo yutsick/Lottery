@@ -9,13 +9,14 @@ export default function () {
 		prevNextButtons: true
 	});
 
-	let flkty = $flickity.data('flickity');
-	let $previousButton = $flickity.find('.previous')
-
-	// Disable previous button on by default
-	$previousButton.addClass('disabled');
+	// Disable previous button by default
+	$flickity.find('.previous').addClass('disabled');
 
 	$flickity.on('select.flickity', function () {
+		let $this = $(this);
+		let flkty = $this.data('flickity');
+		let $previousButton = $this.find('.previous')
+
 		if (flkty.selectedIndex == 0) {
 			$previousButton.addClass('disabled');
 		}
