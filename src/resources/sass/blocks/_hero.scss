@@ -65,15 +65,25 @@
 	}
 }
 
+.block-hero--mini,
 .block-hero--old {
 	min-height: 0;
 	background-color: transparent;
 	margin: 0;
-	padding: 35px 0;
+	padding: 0;
+
+	@include min-screen($screen-sm-min) {
+		padding: 0 15px;
+	}
 
 	.block-hero__page-title {
-		padding: 0;
+		padding: 20px 0;
 		position: relative;
+	}
+
+	.block-hero__title {
+		padding: 0;
+		margin:0 0 20px 0;
 	}
 }
 
