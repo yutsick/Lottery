@@ -52,10 +52,13 @@
 		}
 	}
 
-
 	.logged-in & {
 		.top-account__buttons{
 			display: none;
+
+			@include min-screen($screen-sm-min) {
+				display: block;
+			}
 		}
 	}
 
