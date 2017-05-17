@@ -58,7 +58,7 @@
 			display: none;
 		}
 	}
-	
+
 	.top-account__buttons {
 		position: absolute;
 		top: auto;
@@ -111,12 +111,6 @@
 				}
 			}
 
-			// Button style modification
-			&.btn-2-line {
-				@include max-screen($screen-sm-min) {
-					padding: 0;
-				}
-			}
 		}
 
 		.account-search {
