@@ -1,6 +1,7 @@
 &.product-cart {
 	display: inline-block;
 	position: fixed;
+	z-index: 999;
 	width: 55px;
 	height: 50px;
 	right: 0;
@@ -12,7 +13,8 @@
 	height: 100%;
 	text-align: center;
 	border-radius: 3px 0 0 3px;
-	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+	background-color: $color-light;
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
 }
 
 .product-cart__icon {
