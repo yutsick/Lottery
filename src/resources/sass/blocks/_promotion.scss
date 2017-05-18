@@ -18,7 +18,7 @@
 }
 
 // Large blocks only
-[class*='col-']:not(.col-md-6):not(.col-md-12) {
+[class*='col-']:not(.col-sm-6):not(.col-md-12) {
 	.block-promotion {
 		min-height: 440px;
 	}
