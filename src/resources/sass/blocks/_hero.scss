@@ -10,26 +10,6 @@
 		min-height: 500px;
 	}
 
-	.h1 {
-		font-size: 30px;
-		line-height: 36px;
-
-		@include min-screen($screen-sm-min) {
-			font-size: 65px;
-			line-height: 65px;
-		}
-	}
-
-	.h2 {
-		font-size: 25px;
-		line-height: 31px;
-
-		@include min-screen($screen-sm-min) {
-			font-size: 36px;
-			line-height: 46px;
-		}
-	}
-
 	.block-hero__page-title {
 		font-size: 11px;
 		line-height: 1;
