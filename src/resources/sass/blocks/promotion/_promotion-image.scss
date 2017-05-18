@@ -3,6 +3,11 @@
 }
 
 .block-promotion--image-dynamic {
+	@include max-screen($screen-md-max) {
+		min-height: 440px;
+		margin-bottom: 15px;
+	}
+
 	.block-promotion__image-wrapper {
 		display: flex;
 		flex: auto;
