@@ -1,3 +1,15 @@
 .block-promotion--image {
 	min-height: 0;
 }
+
+.block-promotion--image-dynamic {
+	.block-promotion__image-wrapper {
+		display: flex;
+		flex: auto;
+
+		.block-promotion__image {
+			display: flex;
+			flex: auto;
+		}
+	}
+}

@@ -32,6 +32,10 @@
 				@@include('blocks/promotion/_promotion-example-split.html')
 				@@include('blocks/promotion/_promotion-example-bingo.html')
 			}
+
+			@@if (context.blocks === 'example-test') {
+			@@include('blocks/promotion/_promotion-example-test.html')
+			}
 			@@if (context.blocks === 'example-text') {
 				@@include('blocks/promotion/_promotion-example-text.html')
 			}
