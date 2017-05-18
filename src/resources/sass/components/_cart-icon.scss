@@ -1,0 +1,27 @@
+&.product-cart {
+	display: inline-block;
+	position: fixed;
+	width: 55px;
+	height: 50px;
+	right: 0;
+	top: 30%;
+}
+
+.product-slider-cart {
+	position: relative;
+	height: 100%;
+	text-align: center;
+	border-radius: 3px 0 0 3px;
+	box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12);
+}
+
+.product-cart__icon {
+	display: inline-block;
+	color: $color-complement-sky;
+}
+
+.product-cart__notification {
+	position: absolute;
+	top: -5px;
+	right: -3px;
+}
