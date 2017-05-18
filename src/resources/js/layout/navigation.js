@@ -3,6 +3,7 @@ export default function () {
 	reset_nav_on_resize();
 	click_top_nav_item();
 	click_sub_menu_item();
+	click_sub_menu_item_collapsed();
 
 	$(window).on('resize', function () {
 		reset_nav_on_resize();
@@ -91,6 +92,20 @@ export default function () {
 					return false;
 				}
 			}
+		});
+	}
+
+	// Click sub menu item with hash and scroll to section
+	function click_sub_menu_item_collapsed() {
+		$('.sidebar-navigation').find('li.has-sub-menu a[data-toggle="collapse"]').click(function () {
+			let $collapsed = $sidebar.find('.collapse');
+
+			$collapsed.each( function () {
+				let $this = $(this);
+				if ( !$this.hasClass('collapsed') ) {
+					$this.collapse('hide');
+				}
+			})
 		});
 	}
 
