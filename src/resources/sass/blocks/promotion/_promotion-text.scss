@@ -1,7 +1,11 @@
 .block-promotion--text {
 	&.flex-bottom:not(.text-align-center) {
 		.block-promotion__content {
-			padding-right: 60px;
+			padding-right: 30%;
+
+			@include min-screen($screen-sm-min) {
+				padding-right: 60px;
+			}
 		}
 	}
 }
