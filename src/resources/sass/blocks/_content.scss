@@ -6,7 +6,8 @@
 	}
 }
 
-.block-content__content {
+.block-content__content,
+.block-promotion--text-rich .block-promotion__rich-text {
 	p {
 		overflow: visible;
 		zoom: 1;
@@ -40,7 +41,7 @@
 
 	blockquote {
 		font-size: 30px;
-		line-height: 20px;
+		line-height: 38px;
 		font-weight: 300;
 		font-style: italic;
 		padding: 10px 0;
@@ -52,5 +53,11 @@
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 600;
+	}
+
+	ul {
+		li {
+			margin-bottom: 5px;
+		}
 	}
 }

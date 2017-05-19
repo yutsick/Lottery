@@ -1,7 +1,33 @@
 .block-promotion--text {
-	&.flex-bottom:not(.text-align-center) {
+	&:not(.text-align-center) {
 		.block-promotion__content {
-			padding-right: 60px;
+			padding-right: 30%;
+
+			@include min-screen($screen-sm-min) {
+				padding-right: 60px;
+			}
+		}
+	}
+}
+
+.block-promotion--text.block-promotion--text-rich {
+	.block-promotion__content {
+		padding: 0;
+	}
+
+	// See all content styles in _content.scss
+	.block-promotion__rich-text {
+		p {
+			margin: 20px 0;
+		}
+
+		blockquote {
+			margin-bottom: 0;
+		}
+
+		ul,
+		ol {
+			margin: 20px 0;
 		}
 	}
 }
