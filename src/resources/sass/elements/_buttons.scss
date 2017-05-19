@@ -23,7 +23,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: darken($color-complement-sky, $color-darken-amount);
+		background-color: $color-complement-sky-light;
 		color: $color-light;
 		border: 1px solid transparent;
 	}
@@ -49,7 +49,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: darken($color-primary, $color-darken-amount);
+		background-color: $color-blue-light;
 		color: $color-light;
 		border: 1px solid transparent;
 	}
@@ -75,7 +75,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: darken($color-accent, $color-darken-amount);
+		background-color: $color-green-light;
 		border: 1px solid transparent;
 	}
 }
@@ -85,7 +85,7 @@
 
 	&:hover,
 	&:focus {
-		color: darken($color-primary, $color-darken-amount);
+		color: $color-blue-light;
 		text-decoration: none;
 	}
 }
@@ -97,7 +97,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: darken($color-complement-coral, $color-darken-amount);
+		background-color: $color-gray-light;
 		color: $color-light;
 	}
 }
