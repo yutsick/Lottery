@@ -124,6 +124,10 @@
 		// padding-bottom: 100%;
 	}
 
+	&.is-third{
+		opacity: 0.8;
+	}
+
 	> div {
 		display: flex;
 		flex-direction: column;
