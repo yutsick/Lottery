@@ -21,6 +21,7 @@
 		height: 100%;
 		width: 100%;
 		position: relative;
+		z-index: 10;
 	}
 }
 
@@ -33,4 +34,5 @@
 	position: absolute;
 	top: -5px;
 	right: -3px;
+	z-index: 9;
 }
