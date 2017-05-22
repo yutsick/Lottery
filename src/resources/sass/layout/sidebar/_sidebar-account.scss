@@ -5,6 +5,11 @@
 	width: 100%;
 	padding: 0 $padding-default $padding-default;
 	box-sizing: border-box;
+	background: linear-gradient(rgba(255,255,255,0.1) , rgba(255,255,255,1) 20px);
+
+	@include max-screen($screen-sm-min) {
+		background: transparent;
+	}
 
 	@include screen($screen-sm-min, $screen-md-max) {
 		padding: 0 0 $padding-default;
