@@ -1,11 +1,11 @@
 .block-promotion {
 	overflow: hidden;
 	min-height: 320px;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 
-	@include min-screen($screen-md-min) {
+	@include min-screen($screen-sm-min) {
 		min-height: 220px;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 	}
 
 	p {

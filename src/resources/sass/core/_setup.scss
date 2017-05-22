@@ -76,4 +76,5 @@ $screen-xs-max:              ($screen-sm-min - 1) !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 
-
+// Set Gutter
+$grid-gutter-width: 20px; // redefining
