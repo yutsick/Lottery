@@ -2,8 +2,11 @@
 .sidebar-navigation {
 	list-style: none;
 	padding: 0;
-	overflow-y: auto;
 	margin-bottom: 0;
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+
 
 	@media (max-height: 580px) and (max-width: $screen-sm-max) {
 		padding-bottom: 120px;
@@ -383,6 +386,7 @@
 .sidebar-navigation {
 	> li {
 		> ul {
+			-webkit-overflow-scrolling: touch;
 			visibility: hidden;
 			position: absolute;
 			top: 0;

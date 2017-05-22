@@ -7,7 +7,6 @@
 	margin-left: -$sidebar-width-desktop;
 	width: $sidebar-width-desktop;
 	height: 100%;
-	overflow-x: visible;
 	background: $color-light;
 	transition: transform $duration-fast $delay-none $ease-in-out, width $duration-quick $delay-none $ease-in-out;
 	box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
@@ -32,8 +31,7 @@
 }
 
 .sidebar-navigation-wrapper{
-	-webkit-overflow-scrolling: touch;
-	overflow-y: auto;
+	position: relative;
 	height: 100%;
 }
 
