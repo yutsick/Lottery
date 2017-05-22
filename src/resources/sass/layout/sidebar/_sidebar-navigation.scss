@@ -386,6 +386,8 @@
 .sidebar-navigation {
 	> li {
 		> ul {
+			overflow-x: hidden;
+			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 			visibility: hidden;
 			position: absolute;
@@ -393,7 +395,7 @@
 			height: 100%;
 			transform: translate3d(0, 0, 0);
 			background-color: $color-container-background;
-			overflow-y: auto;
+
 			opacity: 0;
 			transition: opacity $duration-quick $delay-none $ease-in-out, visibility 0s $duration-fast;
 			width: $sub-navigation-width-mobile;
@@ -508,9 +510,11 @@
 &#sidebar.js-is-active {
 	.sidebar-navigation {
 		> li {
+			// Logotype
 			&:first-child {
-				padding: 20px 10px 0;
-
+				@include max-screen($screen-sm-min) {
+					padding: 20px 10px 0;
+				}
 				> a {
 					padding: 0;
 				}
