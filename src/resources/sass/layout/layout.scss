@@ -1,3 +1,13 @@
+.container {
+	padding-left: 10px;
+	padding-right: 10px;
+
+	@include min-screen($screen-sm-min) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
 @import "content";
 @import "header";
 @import "top";
