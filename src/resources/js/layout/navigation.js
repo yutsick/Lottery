@@ -80,12 +80,13 @@ export default function () {
 
 	// Click sub menu item with hash and scroll to section
 	function click_sub_menu_item() {
-		$('.sidebar-navigation').find('li.has-sub-menu a:not(.not-interactive):not(.collapsed)').click(function () {
+		$('.sidebar-navigation').find('li.has-sub-menu ul a:not(.not-interactive):not(.collapsed)').click(function () {
 			let $this = $(this);
 			let link_href = $this.attr('href');
-			let $section = $(link_href);
 
-			if (/^#/.test(link_href) === true) {
+			if (link_href) {
+				let hash = '#' + link_href.replace(/^.*?(#|$)/,'');
+				let $section = $(hash);
 				if ($section.length) {
 					toggle_sub_menu('close');
 					scroll_to_section($section);
