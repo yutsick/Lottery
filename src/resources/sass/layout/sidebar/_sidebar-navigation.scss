@@ -509,8 +509,10 @@
 	.sidebar-navigation {
 		> li {
 			&:first-child {
-				@include max-screen($screen-sm-min) {
-					@include menu-main-item-mobile();
+				padding: 20px 10px 0;
+
+				> a {
+					padding: 0;
 				}
 
 				.navigation-search {
