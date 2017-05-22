@@ -1,92 +1,93 @@
 <aside id="sidebar" class="ml-2017">
-	<ul class="sidebar-navigation">
-		<li class="has-content">
-			<a class="logotype" href="/" target="_self">
-				<img src="assets/img/brand/ml-logotype-old.png" alt="Miljonlotteriet">
-			</a>
-			<div class="navigation-search">
-				<form class="search" action="">
-					<input type="text" class="form-control" placeholder="Sök...">
-					<i class="icon icon-search js-action-search"></i>
-				</form>
-			</div>
-		</li>
-		<li class="has-sub-menu">
-			<a>
-				<i class="icon icon-game"></i>
-				<div>
-					Spela
-					<span>Bingo och Lotter</span>
+	<div class="sidebar-navigation-wrapper">
+		<ul class="sidebar-navigation">
+			<li class="has-content">
+				<a class="logotype" href="/" target="_self">
+					<img src="assets/img/brand/ml-logotype-old.png" alt="Miljonlotteriet">
+				</a>
+				<div class="navigation-search">
+					<form class="search" action="">
+						<input type="text" class="form-control" placeholder="Sök...">
+						<i class="icon icon-search js-action-search"></i>
+					</form>
 				</div>
-			</a>
-			@@include('layout/sidebar/_sub-navigation-collapsed.html')
-		</li>
-		<li>
-			<a href="/">
-				<i class="icon icon-star"></i>
-				<div>
-					<!-- Example: Use if different text in mobile -->
-					<span>Vinster</span>
-					<span>Vinster & inspiration</span>
-				</div>
-			</a>
-		</li>
+			</li>
+			<li class="has-sub-menu">
+				<a>
+					<i class="icon icon-game"></i>
+					<div>
+						Spela
+						<span>Bingo och Lotter</span>
+					</div>
+				</a>
+				@@include('layout/sidebar/_sub-navigation-collapsed.html')
+			</li>
+			<li>
+				<a href="/">
+					<i class="icon icon-star"></i>
+					<div>
+						<!-- Example: Use if different text in mobile -->
+						<span>Vinster</span>
+						<span>Vinster & inspiration</span>
+					</div>
+				</a>
+			</li>
 
-		<li>
-			<a href="/">
-				<i class="icon icon-heart"></i>
-				<div>
-					Ändamål
-					<span>Du gör skillnad</span>
-				</div>
-			</a>
-		</li>
-		<li class="has-sub-menu">
-			<a>
-				<i class="icon icon-more"></i>
-				<div>
-					Övrigt
-					<span>Mer om oss</span>
-				</div>
-			</a>
-			@@include('layout/sidebar/_sub-navigation.html')
-		</li>
+			<li>
+				<a href="/">
+					<i class="icon icon-heart"></i>
+					<div>
+						Ändamål
+						<span>Du gör skillnad</span>
+					</div>
+				</a>
+			</li>
+			<li class="has-sub-menu">
+				<a>
+					<i class="icon icon-more"></i>
+					<div>
+						Övrigt
+						<span>Mer om oss</span>
+					</div>
+				</a>
+				@@include('layout/sidebar/_sub-navigation.html')
+			</li>
 
-		@@if (logged_in === true) {
-		<li class="has-sub-menu">
-			<a>
-				<i class="icon icon-user">
-					@@include('elements/_notification.html', { "number": "1" })
-				</i>
-				<div>
-					Mina sidor
-					<span>Överföringar mm.</span>
+			@@if (logged_in === true) {
+			<li class="has-sub-menu">
+				<a>
+					<i class="icon icon-user">
+						@@include('elements/_notification.html', { "number": "1" })
+					</i>
+					<div>
+						Mina sidor
+						<span>Överföringar mm.</span>
+					</div>
+				</a>
+				@@include('layout/sidebar/_sub-navigation.html')
+			</li>
+			<li>
+				<a href="/">
+					<i class="icon icon-insert"></i>
+					<div>
+						Insättning
+						<span>Sätt in pengar</span>
+					</div>
+				</a>
+			</li>
+			<li class="has-content">
+				<div class="user">
+					<i class="icon icon-default hidden"></i>
+					<div>
+						<span class="user__name">Stefan Jakobsson</span>
+						<span class="user__wallet"><a href="/" target="_self">Spelplånbok <span>450kr</span></a></span>
+						<span class="user__winnings"><a href="/" target="_self">Vinstkonto <span>450kr</span></a></span>
+					</div>
 				</div>
-			</a>
-			@@include('layout/sidebar/_sub-navigation.html')
-		</li>
-		<li>
-			<a href="/">
-				<i class="icon icon-insert"></i>
-				<div>
-					Insättning
-					<span>Sätt in pengar</span>
-				</div>
-			</a>
-		</li>
-		<li class="has-content">
-			<div class="user">
-				<i class="icon icon-default hidden"></i>
-				<div>
-					<span class="user__name">Stefan Jakobsson</span>
-					<span class="user__wallet"><a href="/" target="_self">Spelplånbok <span>450kr</span></a></span>
-					<span class="user__winnings"><a href="/" target="_self">Vinstkonto <span>450kr</span></a></span>
-				</div>
-			</div>
-		</li>
-		}
-
-	</ul>
+			</li>
+			}
+		</ul>
+	</div>
 
 	<div class="sidebar-account">
 		<a href="/" class="btn btn-primary btn-icon js-action-register"><i class="icon icon-plus"></i>Registrera

@@ -3,7 +3,11 @@
 	list-style: none;
 	padding: 0;
 	overflow-y: auto;
-	height: 100%;
+	margin-bottom: 0;
+
+	@media (max-height: 580px) and (max-width: $screen-sm-max) {
+		padding-bottom: 120px;
+	}
 
 	ul {
 		list-style: none;
