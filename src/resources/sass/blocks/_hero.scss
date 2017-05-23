@@ -38,6 +38,7 @@
 
 	.btn {
 		margin-top: 10px;
+		text-shadow: none;
 
 		@include min-screen($screen-sm-min) {
 			margin-top: 30px;
