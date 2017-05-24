@@ -11,33 +11,49 @@
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	}
 
-	&:focus, &:focus:active{
+	&:focus,
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
 		outline:none;
+		border: 1px solid transparent;
+		box-shadow: none;
 	}
 }
 
 .btn-default {
 	background-color: $color-complement-sky;
 	color: $color-light;
-	border: 1px solid transparent;
+
+	&:focus {
+		background-color: $color-complement-sky;
+		color: $color-light;
+	}
 
 	&:hover,
-	&:focus {
+	&:active,
+	&:active:hover,
+	&:active:focus {
 		background-color: $color-complement-sky-light;
 		color: $color-light;
-		border: 1px solid transparent;
 	}
 
 	&.btn--invert {
 		background-color: $color-light;
 		color: $color-complement-sky;
-		border: 1px solid transparent;
 
-		&:hover,
 		&:focus {
 			background-color: $color-light;
 			color: $color-complement-sky;
-			border: 1px solid transparent;
+		}
+
+		&:hover,
+		&:active,
+		&:active:hover,
+		&:active:focus {
+			background-color: $color-light;
+			color: $color-complement-sky;
 		}
 	}
 }
@@ -45,38 +61,51 @@
 .btn-primary {
 	background-color: $color-primary;
 	color: $color-light;
-	border: 1px solid transparent;
+
+	&:focus {
+		background-color: $color-primary;
+		color: $color-light;
+	}
 
 	&:hover,
-	&:focus {
+	&:active,
+	&:active:hover,
+	&:active:focus {
 		background-color: $color-blue-light;
 		color: $color-light;
-		border: 1px solid transparent;
 	}
 
 	&.btn--invert {
 		background-color: $color-light;
 		color: $color-primary;
-		border: 1px solid transparent;
+
+		&:focus {
+			background-color: $color-light;
+			color: $color-primary;
+		}
 
 		&:hover,
-		&:focus {
+		&:active,
+		&:active:hover,
+		&:active:focus {
 			background-color: darken($color-light, $color-darken-amount);
 			color: $color-primary;
-			border: 1px solid transparent;
 		}
 	}
 }
 
 .btn-success {
 	background-color: $color-accent;
-	border: 1px solid transparent;
-	border: 1px solid transparent;
+
+	&:focus {
+		background-color: $color-accent;
+	}
 
 	&:hover,
-	&:focus {
+	&:active,
+	&:active:hover,
+	&:active:focus {
 		background-color: $color-green-light;
-		border: 1px solid transparent;
 	}
 }
 
@@ -95,8 +124,15 @@
 	background-color: $color-complement-coral;
 	color: $color-light;
 
-	&:hover,
 	&:focus {
+		background-color: $color-complement-coral;
+		color: $color-light;
+	}
+
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
 		background-color: $color-gray-light;
 		color: $color-light;
 	}
@@ -175,7 +211,6 @@
 		left: 15px;
 		top: 50%;
 		width: 22px;
-		// margin-left: -15px;
 		transform: translateY(-50%);
 		transition: opacity $duration-quick $delay-none $ease-in-out;
 		opacity: 0;
