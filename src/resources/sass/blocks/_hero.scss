@@ -67,7 +67,7 @@
 	}
 
 	.block-hero__content {
-		@include max-screen($screen-md-max) {
+		@include max-screen($screen-sm-max) {
 			position: relative;
 			top: auto;
 			transform: translateY(0);
@@ -77,8 +77,7 @@
 }
 
 .block-hero--padding {
-
-	@include max-screen($screen-md-max) {
+	@include max-screen($screen-sm-max) {
 		display: flex;
 		padding-bottom: 0;
 	}
