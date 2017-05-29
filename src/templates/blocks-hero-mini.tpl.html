@@ -6,7 +6,12 @@
 @@include('layout/_sidebar.html', {"logged_in": false})
 
 <div class="content-wrapper ml-2017">
-	@@include('blocks/_hero-padding.html', {"hero_content": true})
+	@@include('blocks/_hero.html', {
+	"hero_type": "mini",
+	"hero_content": true,
+	"h1": true,
+	"h2": true
+	})
 </div>
 
 @@include('layout/_footer.html', {"show_footer": true})

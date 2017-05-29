@@ -1,12 +1,59 @@
-<header class="block block--background-image text-shadow block-hero" style="background-image: url('assets/img/mockup/man.jpg')">
-	<div class="container">
-		@@if (context.hero_content === true) {
+@@if (context.hero_type === "full") {
+<header class="block block--background-image block-hero flex-@@hero_align text-shadow text-shadow--heavy" style="background-image: url('assets/img/mockup/man.jpg')">
+	@@if (context.hero_content === true) {
+		<div class="container">
 			<h1 class="block-hero__page-title">Spela bingo och skrapa lotter</h1>
-			<div class="block-hero__content">
+		</div>
+		<div class="block-hero__content">
+			<div class="container">
 				<h2 class="block-hero__title h1">Max fick tillbaka sin ungdom.</h2>
 				<p class="block-hero__subtitle h2">Rita vann Jackpoten och Max fick sin ungdom tillbaka</p>
 				<a href="/" class="btn btn-primary" title="">Läs mer</a>
 			</div>
+		</div>
+	}
+</header>
+}
+
+@@if (context.hero_type === "contained") {
+	<div class="container">
+		<header class="block block--background-image block-hero flex-@@hero_align text-shadow text-shadow--heavy" style="background-image: url('assets/img/mockup/man.jpg')">
+			@@if (context.hero_content === true) {
+			<div class="container">
+				<h1 class="block-hero__page-title">Spela bingo och skrapa lotter</h1>
+			</div>
+			<div class="block-hero__content">
+				<div class="container">
+					<h2 class="block-hero__title h1">Max fick tillbaka sin ungdom.</h2>
+					<p class="block-hero__subtitle h2">Rita vann Jackpoten och Max fick sin ungdom tillbaka</p>
+					<a href="/" class="btn btn-primary" title="">Läs mer</a>
+				</div>
+			</div>
+			}
+		</header>
+	</div>
+}
+
+@@if (context.hero_type === "old") {
+<header class="block block-hero block-hero--old">
+	<div class="container">
+		@@if (context.hero_content === true) {
+		<h1 class="block-hero__page-title">Spela bingo och skrapa lotter</h1>
 		}
 	</div>
 </header>
+
+}
+
+@@if (context.hero_type === "mini") {
+<header class="block block-hero block-hero--mini">
+	<div class="container">
+		@@if (context.h1 === true) {
+		<h1 class="block-hero__page-title">Spela bingo och skrapa lotter</h1>
+		}
+		@@if (context.h2 === true) {
+		<h2 class="block-hero__title h1">Max fick tillbaka sin ungdom.</h2>
+		}
+	</div>
+</header>
+}
