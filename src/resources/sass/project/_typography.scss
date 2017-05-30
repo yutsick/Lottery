@@ -2,8 +2,8 @@
 
 h1,
 .h1 {
-	font-size: 30px;
-	line-height: 36px;
+	font-size: 24px;
+	line-height: 30px;
 	font-weight: 600;
 
 	@include min-screen($screen-sm-min) {
@@ -14,8 +14,8 @@ h1,
 
 h2,
 .h2 {
-	font-size: 25px;
-	line-height: 32px;
+	font-size: 20px;
+	line-height: 28px;
 	font-weight: 300;
 
 	@include min-screen($screen-sm-min) {
