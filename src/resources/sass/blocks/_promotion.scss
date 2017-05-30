@@ -1,6 +1,6 @@
 .block-promotion {
 	overflow: hidden;
-	min-height: 320px;
+	min-height: 270px;
 	margin-bottom: 10px;
 
 	@include min-screen($screen-sm-min) {
@@ -20,7 +20,12 @@
 // Large blocks only
 [class*='col-']:not(.col-sm-6):not(.col-md-12) {
 	.block-promotion {
-		min-height: 440px;
+		min-height: 320px;
+
+		@include min-screen($screen-sm-min) {
+			min-height: 440px;
+		}
+
 	}
 
 	.block-promotion--image {
