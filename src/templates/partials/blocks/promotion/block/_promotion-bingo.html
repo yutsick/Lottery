@@ -1,41 +1,53 @@
 <div class="col-xs-12 col-sm-6 col-lg-3">
-	<div class="block-promotion block-promotion--bingo block block--background-pattern block--background-color background-color-@@color flex-top">
-		<div class="block-promotion__content">
-			@@if(context.image) {
+	<div class="block-promotion block-promotion--bingo block block--background-pattern block--background-color background-color-@@color">
+		<div class="row">
+			<div class="col-xs-12">
+				@@if(context.image) {
 				<div class="block-promotion__bingo-icon">
 					<img src="@@image" alt="@@title">
 				</div>
-			}
-			<p class="block-promotion__title h4" >@@bingo_room<span class="block-bingo-price hidden-xs">@@price</span></p>
-			<p>Nästa spel: <strong>@@next_game</strong></p>
-			<div class="row equal-height">
-				<div class="col-xs-6 col-md-4 col-lg-6">
-					<div class="block-promotion__bingo-column">
-						<p>Jackpot</p>
-						<p class="h4 block-bingo-jackpot">@@jackpot</p>
-					</div>
-				</div>
+				}
+				<p class="block-promotion__title h4" >@@bingo_room<span class="block-bingo-price">@@price</span></p>
+				<p>Nästa spel: <strong>@@next_game</strong></p>
+			</div>
+		</div>
 
-				<div class="col-xs-6 col-md-4 col-lg-6">
-					<div class="block-promotion__bingo-column block-bingo-next">
-						@@if (context.bingo_room) {
-							<p>Nästa spel</p>
-						}
-						<p class="h4">@@next_time</p>
-					</div>
+		<div class="row equal-height">
+			<div class="col-xs-6 col-md-4 col-lg-6">
+				<div class="block-promotion__bingo-column">
+					<p>Jackpot</p>
+					<p class="h4 block-bingo-jackpot">@@jackpot</p>
 				</div>
+			</div>
 
-				<div class="col-xs-6 col-md-4 col-lg-6">
-					<div class="block-promotion__bingo-column">
-						<p>Spelare</p>
-						<p class="h4 block-bingo-players">@@players</p>
-					</div>
+			<div class="col-xs-6 col-md-4 col-lg-6">
+				<div class="block-promotion__bingo-column block-bingo-next">
+					@@if (context.bingo_room) {
+						<p>Nästa spel</p>
+					}
+					<p class="h4">@@next_time</p>
 				</div>
+			</div>
 
-				<div class="col-xs-6 col-md-4 col-lg-6">
-					<div class="block-promotion__bingo-column">
-						<a href="/" class="btn btn-primary btn--invert">Till spelet</a>
-					</div>
+			<div class="col-xs-6 col-md-4 col-lg-6 visible-md-block">
+				<div class="block-promotion__bingo-column block-bingo-player">
+					<p>Spelare</p>
+					<p class="h4 block-bingo-players">@@players</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row equal-height">
+			<div class="col-xs-6 col-md-6 col-lg-6 hidden-md">
+				<div class="block-promotion__bingo-column block-bingo-player">
+					<p>Spelare</p>
+					<p class="h4 block-bingo-players">@@players</p>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-md-6 col-lg-6">
+				<div class="block-promotion__bingo-column">
+					<a href="/" class="btn btn-primary btn--invert">Till spelet</a>
 				</div>
 			</div>
 		</div>
