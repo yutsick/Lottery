@@ -11,10 +11,16 @@
 		margin-top: 0;
 	}
 
+	h4 {
+		font-size: 22px;
+	}
+
 	.block-promotion__title {
 		position: relative;
 		line-height: 0.85;
 		padding-right: 0;
+		font-size: 22px;
+		padding-top: 5px;
 
 		@include min-screen($screen-xs-min) {
 			padding-right: 80px;
@@ -24,6 +30,10 @@
 			position: absolute;
 			right: 0;
 			top: 0;
+			font-size: 16px;
+			background-color: #1f64bb;
+			padding: 10px;
+			border-radius: 20px;
 		}
 
 		+ p {
@@ -32,24 +42,48 @@
 	}
 
 	.row {
-		@include max-screen($screen-xs-max) {
-			margin-top: 25px;
-		}
-
 		[class*='col-'] {
-			padding: 0 15px;
+			&:nth-child(even) {
+				.block-promotion__bingo-column {
+					p {
+						align-self: flex-end;
 
-			@include min-screen($screen-sm-min) {
-				padding: 0;
+						@include min-screen($screen-xs-min) {
+							align-self: flex-end;
+						}
+						@include min-screen($screen-md-min) {
+							align-self: flex-start;
+						}
+						@include min-screen($screen-lg-min) {
+							align-self: flex-end;
+						}
+					}
+				}
 			}
 
-			&:first-of-type,
-			&.visible-xs-block + div {
-				padding-left: 15px;
+			&:nth-child(2) {
+				.block-promotion__bingo-column {
+					p {
+						@include min-screen($screen-md-min) {
+							align-self: center;
+						}
+						@include min-screen($screen-lg-min) {
+							align-self: flex-end;
+						}
+					}
+				}
 			}
-
-			&:last-of-type {
-				padding-right: 15px;
+			&:nth-child(3) {
+				.block-promotion__bingo-column {
+					p {
+						@include min-screen($screen-md-min) {
+							align-self: flex-end;
+						}
+						@include min-screen($screen-lg-min) {
+							align-self: flex-start;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -67,6 +101,15 @@
 	box-shadow: 0 2px 4px rgba(0,0,0,0.58);
 	border-radius: 4px;
 	margin-right: $margin-default;
+	display: none;
+
+	@include min-screen($screen-sm-min) {
+		display: inline-block;
+	}
+
+	@include min-screen($screen-lg-min) {
+		display: none;
+	}
 
 	img {
 		width: 100%;
@@ -81,16 +124,27 @@
 	text-align: left;
 
 	@include min-screen($screen-sm-min) {
-		margin: 25px 0;
+		margin: 15px 0;
 		width: auto;
 	}
 
 	.h4 {
 		margin-top: 0;
+		font-size: 16px;
+		line-height: 26px;
 
-		@include max-screen($screen-xs-max) {
-			font-size: 16px;
-			line-height: 26px;
+		@include min-screen($screen-xs-min) {
+			font-size: 22px;
 		}
+	}
+
+	p {
+		display: inline-block;
+		align-self: flex-start
+	}
+
+	.btn, button {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
