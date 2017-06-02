@@ -1,5 +1,5 @@
 .block-promotion--bingo {
-	padding: 20px 20px 15px 20px;
+	padding: 15px 20px 15px 20px;
 	justify-content: space-between;
 
 	@include max-screen($screen-sm-max) {
@@ -24,7 +24,7 @@
 		.block-bingo-price {
 			position: absolute;
 			right: 0;
-			top: 0;
+			top: 5px;
 			font-size: 16px;
 			background-color: #1f64bb;
 			padding: 10px;
@@ -97,7 +97,8 @@
 	.h4 {
 		margin-top: 0;
 		font-size: 18px;
-		line-height: 30px;
+		margin-top: 5px;
+		line-height: 1;
 	}
 
 	&.block-bingo-next {
