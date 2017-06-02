@@ -1,5 +1,5 @@
 .block-promotion--bingo {
-	padding: 20px;
+	padding: 20px 20px 15px 20px;
 	justify-content: space-between;
 
 	@include max-screen($screen-sm-max) {
@@ -14,20 +14,12 @@
 		margin-top: 0;
 	}
 
-	h4 {
-		font-size: 22px;
-	}
-
 	.block-promotion__title {
 		position: relative;
 		line-height: 0.85;
-		padding-right: 0;
+		padding-right: 80px;
 		font-size: 22px;
 		padding-top: 5px;
-
-		@include min-screen($screen-xs-min) {
-			padding-right: 80px;
-		}
 
 		.block-bingo-price {
 			position: absolute;
@@ -96,23 +88,20 @@
 		width: auto;
 	}
 
-	.h4 {
-		margin-top: 0;
-		font-size: 16px;
-		line-height: 26px;
-
-		@include min-screen($screen-xs-min) {
-			font-size: 22px;
-		}
-	}
-
 	p {
 		display: inline-block;
-		align-self: flex-start
+		align-self: flex-start;
+		line-height: 1;
+	}
+
+	.h4 {
+		margin-top: 0;
+		font-size: 18px;
+		line-height: 30px;
 	}
 
 	&.block-bingo-next {
-		p {
+		> div {
 			align-self: flex-end;
 
 			@include min-screen($screen-md-min) {
@@ -122,17 +111,25 @@
 			@include min-screen($screen-lg-min) {
 				align-self: flex-end;
 			}
+
+			p {
+				display: block;
+			}
 		}
 	}
 
 	&.block-bingo-player {
-		p {
+		> div {
 			@include min-screen($screen-md-min) {
 				align-self: flex-end;
 			}
 
 			@include min-screen($screen-lg-min) {
 				align-self: flex-start;
+			}
+
+			p {
+				display: block;
 			}
 		}
 	}
