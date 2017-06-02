@@ -10,6 +10,10 @@
 
 	p {
 		margin: $margin-small 0 0 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
 	}
 }
 
