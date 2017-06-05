@@ -4,3 +4,8 @@
 		background-image: none !important;
 	}
 }
+@supports (-ms-ime-align:auto) {
+	.block--background-pattern {
+		background-image: none !important;
+	}
+}
