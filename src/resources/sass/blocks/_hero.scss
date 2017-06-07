@@ -16,10 +16,6 @@
 		margin-bottom: 40px;
 	}
 
-	@include min-screen(1920px) {
-		padding-bottom: 35%;
-	}
-
 	> .container {
 		position: absolute;
 		top: 0;
