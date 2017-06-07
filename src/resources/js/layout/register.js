@@ -1,14 +1,25 @@
 export default function () {
-	$('#chooseLoginWay li a').on('click', function(){
+	
+	$("#userEmail").on('focus', function() {
+		$('#userPersonalNumber').popover({ html:true, content: "Gustav Ågren <br>Hv*********en <br>4 41* *0, Göteborg"});
+		$("#userPersonalNumber").popover('show');
+		$('#userPersonalNumber').addClass('loadinggif');
+	});
+	
+	$("#userEmail").on('blur', function() {
+		$("#userPersonalNumber").popover('hide');
+		$('#userPersonalNumber').removeClass('loadinggif');
+	});
+	
+	
+	$('#chooseLoginWay li').on('click', function(){
 		var choice = $(this).text();
 		if(choice === 'Lösenord'){
-			$('#userPasswordGroup').show();
-			$('#userPasswordRepeatGroup').show();
+			$('#passwordInputs').show();
 			$('#userPassword').prop("required", true);
 			$('#userPasswordRepeat').prop("required", true);
 		} else {
-			$('#userPasswordGroup').hide();
-			$('#userPasswordRepeatGroup').hide();
+			$('#passwordInputs').hide();
 			$('#userPassword').prop("required", false);
 			$('#userPasswordRepeat').prop("required", false);
 		}

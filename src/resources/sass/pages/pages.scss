@@ -71,7 +71,16 @@ body {
 }
 
 #page-wrapper.page--content-only {
-    padding-top: 0px;
+	@include max-screen($screen-sm-max) {
+		padding-top: 0px;
+	}	
+    
+}
+
+#page-wrapper.page--content-only {
+    @include screen($screen-sm-min, $screen-sm-max) {
+		padding-left: 0px;
+	}
 }
 
 .page--content-only {

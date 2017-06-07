@@ -9,73 +9,72 @@
 
 
 
-<div class="content-wrapper ml-2017">
+<div class="content-wrapper ml-2017 register-content">
 	
 	@@include('blocks/_hero.html', {
 	"hero_type": "full",
 	"hero_align": "middle",
 	"hero_content": true
 	})
-	
-	<form class="register-content" data-toggle="validator"
+	<div class="container">
+		<form class="register-content" data-toggle="validator"
 		action="/" method="get">
-		<div class="container">
+		
 			<a href="/" id="registerBackButton" class="btn-icon-only">
 				<i id="registerBackButtonIcon" class="icon icon-arrow-button "></i>
 			</a>
-			<div class="row">
+			<div class="row content">
 				<div class="col-12 col-md-3"></div>
 				<div class="col-12 col-md-3">
-					<div class="input-group">
+					
 						<h2>Hej!</h2>
 						<p>Låt oss skapa ditt konto. Det tar bara en minut</p>
-						<div class="form-group">
+						<div class="form-group has-feedback">
 							<label for="userPersonalNumber">Ange ditt personnummer</label>
 							<input type="text" class="form-control" id="userPersonalNumber"
-							   placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken.">
+							   placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken." data-toggle="popover" data-trigger="manual" data-placement="top">
 							<div class="help-block with-errors"></div>
 						</div>
-						<br><br>
-						<div class="form-group">
-							<label for="userEmail">Och din e-postadress</label>
+						<div class="form-group has-feedback">
+							<label for="userEmail has-feedback">Och din e-postadress</label>
 							<input type="email" class="form-control" id="userEmail"
 							   placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
 							<div class="help-block with-errors"></div>
 
 						</div>
 					</div>
-				</div>
+				
 				<div class="col-12 col-md-3">
-					<div class="input-group">
-						<div class="form-group right-input-group" >
-							<label for="chooseLoginWay">Välj inloggningssätt</label>
-							<div class="dropdown">
-								<button id="chooseLoginWayLabel" type="button" class="dropdown-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded=false>
-									Bank Id <i class="icon icon-chevron-down chevron-down pull-right"></i>
-											<i class="icon icon-chevron-up icon-chevron-down chevron-up pull-right"></i>
-								</button>
-								<ul id="chooseLoginWay" class="dropdown-menu">
-									<li><a href="#">Bank Id</a></li>
-									<li><a href="#">Lösenord</a></li>
-								</ul>
-							</div>
+					<div class="form-group right-input-group" >
+						<label for="chooseLoginWay">Välj inloggningssätt</label>
+						<div class="dropdown">
+							<button id="chooseLoginWayLabel" type="button" class="dropdown-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded=false>
+								Bank Id <i class="icon icon-chevron-down chevron-down pull-right"></i>
+										<i class="icon icon-chevron-up icon-chevron-down chevron-up pull-right"></i>
+							</button>
+							<ul id="chooseLoginWay" class="dropdown-menu">
+								<li>Bank Id</li>
+								<li>Lösenord</li>
+							</ul>
 						</div>
-
-							<div class="form-group" id="userPasswordGroup" style="display: none;">
-								<label for="userPassword">Ange lösenord</label><label class="pull-right light-label" for="userPassword">Minst 6 tecken</label>
-								<input type="password" class="form-control" data-minlength="6" id="userPassword"
+					</div>
+					<div id="passwordInputs" style="display: none;">
+						<div class="form-group has-feedback"  id="userPasswordGroup" >
+							<label for="userPassword">Ange lösenord</label><label class="pull-right light-label" for="userPassword">Minst 6 tecken</label>
+							<input type="password" class="form-control" data-minlength="6" id="userPassword"
 								   placeholder="" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 6 tecken.">
 							<div class="help-block with-errors"></div>
 
 
-							</div>
-							<div class="form-group" id="userPasswordRepeatGroup" style="display: none;">
-								<label for="userPasswordRepeat">Ange lösenordet igen</label>
-								<input type="password" class="form-control" id="userPasswordRepeat" type="hidden" data-match="#userPassword" data-match-error="Oops! Nu blev det fel. Det verkar som om lösenorden du valt inte matchar." 
-								   placeholder="" data-required-error="Du måste fylla i detta fält.">
-								<div class="help-block with-errors"></div>
-							</div>
-
+						</div>
+						<div class="form-group has-feedback" id="userPasswordRepeatGroup">
+							<label for="userPasswordRepeat">Ange lösenordet igen</label>
+							<input type="password" class="form-control" id="userPasswordRepeat" type="hidden" data-match="#userPassword" data-match-error="Oops! Nu blev det fel. Det verkar som om lösenorden du valt inte matchar." 
+							   placeholder="" data-required-error="Du måste fylla i detta fält.">
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+					<div class="form-group">
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" id="userAcceptTerms" required data-required-error="Du måste fylla i detta fält.">
@@ -89,16 +88,19 @@
 							</label>
 						</div>
 					</div>
+				
 					<div class="input-group">
 						<div class="form-group">
 							<button type="submit" class="btn btn-primary btn-block">Slutför</button>
 						</div>	
 					</div>
 				</div>
-				<div class="col-12 col-md-3"></div>
 			</div>
-		</div>
-	</form>
+			<div class="col-12 col-md-3"></div>
+			
+	
+		</form>
+	</div>
 </div>
 
 

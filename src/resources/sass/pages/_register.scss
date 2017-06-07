@@ -2,8 +2,28 @@
 	background-color: #F2F5F7;
 	padding-bottom: 50px;
 	
+	h2 {
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: 400;
+	}
+	
 	label {
 		font-weight: normal;
+		color: #2e3237;
+		cursor: auto;
+		font-size: 13;
+		font-weight: 300;
+		margin-bottom: 4px;
+	}
+	
+	p {
+		font-size: 16px;
+		padding-bottom: 10px;
+	}
+	
+	.form-control {
+		font-weight: 400;
 	}
 	
 	.light-label {
@@ -43,6 +63,53 @@
 	button[aria-expanded=false] .chevron-up {
 	   	display: none;
 	}
+	
+	.loadinggif 
+	{
+	   background:
+		 url('http://www.hsi.com.hk/HSI-Net/pages/images/en/share/ajax-loader.gif')
+		 no-repeat
+		 right center;
+		background-color: white;
+		background-origin: content-box;
+	}
+	
+	.modal-body p {
+		font-weight: 300;
+		font-size: 13px;
+		text-align: justify;
+	}
+	.modal-footer .btn:before {
+		content: '';
+		height: 0px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: -15px;
+		background-color: transparent;
+	}
+	
+	.modal-title {
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+	
+	.content {
+        margin: 30px;
+	}
+	
+	.dropdown-menu > li {
+		display: block;
+		padding: 3px 20px;
+		clear: both;
+		font-weight: normal;
+		line-height: 1.428571429;
+		color: #333333;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+	
 }
 
 .right-input-group {
