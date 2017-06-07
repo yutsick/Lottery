@@ -1,0 +1,52 @@
+.register-content {
+	background-color: #F2F5F7;
+	padding-bottom: 50px;
+	
+	label {
+		font-weight: normal;
+	}
+	
+	.light-label {
+		color: darkgray;
+	}
+	
+	.input-group {
+		width: 100%;
+	}
+	
+	#registerBackButtonIcon {
+		font-size: 30px;
+		margin-top: 20px;
+		width: 40px;
+		-ms-transform: rotate(180deg); /* IE 9 */
+    	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    	transform: rotate(180deg);
+	}
+	.icon {
+		color: $color-primary;
+		font-size: 20px;
+	}
+	
+	.icon-chevron-up {
+		-ms-transform: rotate(180deg); /* IE 9 */
+    	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    	transform: rotate(180deg);
+	}
+	
+	.dropdown-menu {
+		width: 100%;
+	}
+	
+	button[aria-expanded=true] .chevron-down {
+   		display: none;
+	}
+	button[aria-expanded=false] .chevron-up {
+	   	display: none;
+	}
+}
+
+.right-input-group {
+	margin-top: 70px;
+}
+
+
