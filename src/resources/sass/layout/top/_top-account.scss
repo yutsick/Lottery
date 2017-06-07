@@ -3,6 +3,7 @@
 	top: $menu-height;
 	z-index: 980;
 	width: 100%;
+	max-width: 1400px;
 	transform: translate3d(0, 0, 0);
 	transition: transform $duration-fast $ease-standard $delay-none;
 
