@@ -72,12 +72,19 @@
 	}
 
 	.block-footer__bottom-logos {
-		img {
+		a {
 			max-height: 23px;
+			margin-left: 15px;
+			display: inline-block;
+
+			&:first-of-type {
+				margin-left: 0;
+			}
 		}
 
-		img + img {
-			margin-left: 15px;
+		img {
+			width: 100%;
+			display: block;
 		}
 
 		@include min-screen($screen-sm-min) {
