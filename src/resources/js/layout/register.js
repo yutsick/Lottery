@@ -14,16 +14,20 @@ export default function () {
 	
 	$('#chooseLoginWay li').on('click', function(){
 		var choice = $(this).text();
+		console.log(choice);
+		var iconHtml = "";
 		if(choice === 'Lösenord'){
 			$('#passwordInputs').show();
 			$('#userPassword').prop("required", true);
 			$('#userPasswordRepeat').prop("required", true);
+			iconHtml = '<img id="password-icon" src="assets/img/icons/lock.svg">';
 		} else {
 			$('#passwordInputs').hide();
 			$('#userPassword').prop("required", false);
 			$('#userPasswordRepeat').prop("required", false);
+			iconHtml = '<img id="bankid-icon" src="assets/img/icons/bankid.svg">';
 		}
-		$('#chooseLoginWayLabel').html(choice + '<i class="icon icon-chevron-down chevron-down pull-right"></i>'+
+		$('#chooseLoginWayLabel').html(iconHtml + choice + '<i class="icon icon-chevron-down chevron-down pull-right"></i>'+
 											'<i class="icon icon-chevron-up icon-chevron-down chevron-up pull-right"></i>');
 	});
 }
