@@ -6,6 +6,10 @@
 	height: 50px;
 	right: 0;
 	top: 30%;
+
+	&.js-hidden {
+		display: none;
+	}
 }
 
 .product-slider-cart {
