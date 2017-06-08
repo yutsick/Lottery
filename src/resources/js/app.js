@@ -11,7 +11,6 @@ import form from './components/form';
 import modal from './components/modal';
 import navigation from './layout/navigation';
 import top from './layout/top';
-import register from './layout/register';
 import search from './components/search';
 import slider from './components/slider';
 
@@ -23,7 +22,6 @@ $(function () {
 	search();
 	navigation();
 	top();
-	register();
 	slider();
 });
 

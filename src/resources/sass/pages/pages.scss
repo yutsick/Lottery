@@ -10,7 +10,6 @@ body {
 
 @import "article";
 @import "front";
-@import "register";
 
 .modal-backdrop {
 	background: $color-overlay-base;
@@ -68,54 +67,4 @@ body {
 	&.js-is-active #sidebar {
 		transform: translate3d(0, 0, 0);
 	}
-}
-
-#page-wrapper.page--content-only {
-	@include max-screen($screen-sm-max) {
-		padding-top: 0px;
-	}	
-    
-}
-
-#page-wrapper.page--content-only {
-    @include screen($screen-sm-min, $screen-sm-max) {
-		padding-left: 0px;
-	}
-}
-
-.page--content-only {
-
-    #sidebar {
-        @include max-screen($screen-sm-max) {
-            display: none;
-        }
-    }
-	
-	.block-hero {
-        @include max-screen($screen-sm-max) {
-            display: none;
-        }
-    }
-	
-	#top {
-        @include max-screen($screen-sm-max) {
-            display: none;
-        }
-    }
-	
-	#registerBackButton {
-        @include min-screen($screen-sm-max) {
-            display: none;
-        }
-    }
-	
-	.right-input-group {
-		@include max-screen($screen-sm-max) {
-            margin-top: 10px;
-        }
-	
-	}
-
-		
-	
 }
