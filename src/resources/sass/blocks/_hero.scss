@@ -12,7 +12,7 @@
 
 	@include min-screen($screen-md-min) {
 		display: block;
-		padding-bottom: 45%;
+		padding-bottom: 36%;
 		margin-bottom: 40px;
 	}
 
@@ -55,11 +55,38 @@
 	margin-bottom: 0;
 }
 
+.block-hero__title {
+	font-size: 24px;
+	line-height: 30px;
+
+	@include min-screen($screen-sm-min) {
+		font-size: 46px;
+		line-height: 52px;
+	}
+
+	@include min-screen($screen-lg-min) {
+		font-size: 65px;
+		line-height: 65px;
+	}
+}
+
 .block-hero__subtitle {
 	margin-top: 15px;
+	font-size: 20px;
+	line-height: 28px;
+
+	@include min-screen($screen-sm-min) {
+		font-size: 28px;
+		line-height: 38px;
+	}
 
 	@include min-screen($screen-md-min) {
 		margin-top: 25px;
+	}
+
+	@include min-screen($screen-lg-min) {
+		font-size: 36px;
+		line-height: 46px;
 	}
 }
 
