@@ -120,7 +120,7 @@ export default function () {
 
 		let section_top = parseInt(section.offset().top);
 
-		$('body').animate({
+		$('body,html').animate({
 			scrollTop: section_top - top_height
 		}, {
 			easing: 'swing',
