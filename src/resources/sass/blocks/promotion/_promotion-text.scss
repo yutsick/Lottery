@@ -10,6 +10,18 @@
 	}
 }
 
+[class*='col-']:not(.col-sm-6):not(.col-md-12) .block-promotion--text {
+	&:not(.text-align-center) {
+		.block-promotion__content {
+			padding-right: 30%;
+
+			@include min-screen($screen-sm-min) {
+				padding-right: 50%;
+			}
+		}
+	}
+}
+
 .block-promotion--text.block-promotion--text-rich {
 	.block-promotion__content {
 		padding: 0;
