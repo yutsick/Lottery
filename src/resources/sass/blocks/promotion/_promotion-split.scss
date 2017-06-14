@@ -1,16 +1,16 @@
 .block-promotion--split {
-	@include max-screen($screen-sm-max) {
+	@include max-screen($screen-xs-max) {
 		display: block !important;;
 	}
 
 	&.flex-top {
-		@include max-screen($screen-sm-max) {
+		@include max-screen($screen-xs-max) {
 			justify-content: flex-end;
 		}
 	}
 
 	.block-promotion__link {
-		@include max-screen($screen-sm-max) {
+		@include max-screen($screen-xs-max) {
 			display: block !important;
 		}
 	}
