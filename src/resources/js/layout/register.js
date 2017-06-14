@@ -3,12 +3,12 @@ export default function () {
 	$("#userEmail").on('focus', function() {
 		$('#userPersonalNumber').popover({ html:true, content: "Gustav Ågren <br>Hv*********en <br>4 41* *0, Göteborg"});
 		$("#userPersonalNumber").popover('show');
-		$('#userPersonalNumber').addClass('loadinggif');
+		$('#spinnerPersonalNumber').show();
 	});
 	
 	$("#userEmail").on('blur', function() {
 		$("#userPersonalNumber").popover('hide');
-		$('#userPersonalNumber').removeClass('loadinggif');
+		$('#spinnerPersonalNumber').hide();
 	});
 	
 	
