@@ -26,7 +26,7 @@
 	background-repeat: no-repeat;
 	padding-bottom: 100%;
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		padding-bottom: 80%;
 	}
 }
@@ -36,25 +36,25 @@
 	padding: 0;
 	min-height: 150px;
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		margin-left: 0;
 		padding: $padding-default $padding-default $padding-default 0;
 	}
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		min-height: 0;
 	}
 }
 
 .block-article__title,
 .block-article__entry {
-	@include max-screen($screen-xs-max) {
+	@include max-screen($screen-sm-max) {
 		overflow: hidden;
 		position: relative;
 	}
 
 	&:after {
-		@include max-screen($screen-xs-max) {
+		@include max-screen($screen-sm-max) {
 			content: "";
 			text-align: right;
 			position: absolute;
@@ -67,32 +67,32 @@
 }
 
 .block-article__title {
-	margin: 0 0 $margin-xsall;
+	margin: 0 0 $margin-small;
 
-	@include max-screen($screen-xs-max) {
+	@include max-screen($screen-sm-max) {
 		font-size: 18px;
 		line-height: 24px;
 		max-height: 50px;
 	}
 
 	&:after {
-		@include max-screen($screen-xs-max) {
+		@include max-screen($screen-sm-max) {
 			height: 25px;
 		}
 	}
 }
 
 .block-article__entry {
-	margin: 0 0 $margin-xsall;
+	margin: 0 0 $margin-small;
 	max-height: 40px;
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		height: auto;
 		margin: 0 0 $padding-default;
 	}
 
 	&:after {
-		@include max-screen($screen-xs-max) {
+		@include max-screen($screen-sm-max) {
 			height: 20px;
 		}
 	}
@@ -105,7 +105,7 @@
 	display: inline-block;
 	max-width: none;
 
-	@include min-screen($screen-xs-min) {
+	@include min-screen($screen-sm-min) {
 		max-width: 200px;
 	}
 }
