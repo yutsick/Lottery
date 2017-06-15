@@ -34,10 +34,15 @@
 .block-article__content {
 	margin-left: -5px;
 	padding: 0;
+	min-height: 150px;
 
 	@include min-screen($screen-xs-min) {
 		margin-left: 0;
 		padding: $padding-default $padding-default $padding-default 0;
+	}
+
+	@include min-screen($screen-xs-min) {
+		min-height: 0;
 	}
 }
 
@@ -62,12 +67,12 @@
 }
 
 .block-article__title {
-	margin: 0;
+	margin: 0 0 $margin-xsall;
 
 	@include max-screen($screen-xs-max) {
 		font-size: 18px;
 		line-height: 24px;
-		height: 50px;
+		max-height: 50px;
 	}
 
 	&:after {
@@ -78,12 +83,12 @@
 }
 
 .block-article__entry {
-	margin: $margin-small 0 0 0;
-	height: 40px;
+	margin: 0 0 $margin-xsall;
+	max-height: 40px;
 
 	@include min-screen($screen-xs-min) {
 		height: auto;
-		margin: $padding-default 0 0 0;
+		margin: 0 0 $padding-default;
 	}
 
 	&:after {
@@ -94,7 +99,8 @@
 }
 
 .block-article__button {
-	margin: $margin-medium 0 0 0;
+	margin-top: auto;
+	align-self: baseline;
 	width: auto;
 	display: inline-block;
 	max-width: none;
