@@ -1,0 +1,131 @@
+.register-content {
+	padding-bottom: 50px;
+	
+	h2 {
+		font-size: 20px;
+		line-height: 30px;
+		font-weight: 400;
+	}
+	
+	label {
+		font-weight: normal;
+		color: #2e3237;
+		cursor: auto;
+		font-size: 13;
+		font-weight: 300;
+		margin-bottom: 4px;
+	}
+	
+	p {
+		font-size: 16px;
+		padding-bottom: 10px;
+	}
+	
+	.form-control {
+		font-weight: 400;
+	}
+	
+	.light-label {
+		color: darkgray;
+	}
+	
+	.input-group {
+		width: 100%;
+	}
+	
+	#registerBackButtonIcon {
+		font-size: 30px;
+		margin-top: 20px;
+		width: 40px;
+		-ms-transform: rotate(180deg); /* IE 9 */
+    	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    	transform: rotate(180deg);
+	}
+	.icon {
+		color: $color-primary;
+		font-size: 20px;
+	}
+	
+	.icon-chevron-up {
+		-ms-transform: rotate(180deg); /* IE 9 */
+    	-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    	transform: rotate(180deg);
+	}
+	
+	.dropdown-menu {
+		width: 100%;
+	}
+	
+	button[aria-expanded=true] .chevron-down {
+   		display: none;
+	}
+	button[aria-expanded=false] .chevron-up {
+	   	display: none;
+	}
+	
+	#spinnerPersonalNumber {
+		margin-top: 3px;
+		margin-right: 3px;
+	}
+	
+	.modal-body p {
+		font-weight: 300;
+		font-size: 13px;
+		text-align: justify;
+	}
+	.modal-footer .btn:before {
+		content: '';
+		height: 0px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: -15px;
+		background-color: transparent;
+	}
+	
+	.modal-title {
+		font-size: 20px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+	
+	.content {
+        margin: 30px;
+	}
+	
+	.dropdown-menu > li {
+		display: block;
+		padding: 3px 20px;
+		clear: both;
+		font-weight: normal;
+		line-height: 1.428571429;
+		color: #333333;
+		white-space: nowrap;
+		cursor: pointer;
+	}
+	
+	#password-icon {
+		width: 20px;
+		height: 20px;
+		margin-right: 20px;
+	}
+	
+	#bankid-icon {
+		margin-right: 20px; 
+		width: 20px;
+		height: 20px;
+	}
+	
+	.input-icon {
+		padding-top: 10px;
+		color: #A9DB9B;
+	}
+
+	
+}
+
+.right-input-group {
+	margin-top: 70px;
+}
+
+
