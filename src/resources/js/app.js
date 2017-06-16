@@ -13,6 +13,7 @@ import navigation from './layout/navigation';
 import top from './layout/top';
 import search from './components/search';
 import slider from './components/slider';
+import register from './layout/register';
 
 $(function () {
 	modernizr();
@@ -23,6 +24,7 @@ $(function () {
 	navigation();
 	top();
 	slider();
+	register();
 });
 
 /**
