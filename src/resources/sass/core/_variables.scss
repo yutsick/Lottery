@@ -38,31 +38,34 @@ $base-heading-family: sans-serif;
 // Theme Palette
 $color-snow: #FFFFFF;
 $color-space: #000;
-
-$color-blue-dark: #216AC4;
-$color-blue: #2074f2;
-$color-blue-light: #6CAAE9;
-$color-green: #5bd084;
-$color-green-light: #AADB9B;
-$color-yellow: #F8D138;
-$color-yellow-light: #FBE18F;
-$color-orange: #F0774C;
+$color-blue-deep: #004673; // *new*
+$color-blue-dark: #006CB0; //  *new*
+$color-blue: #0078C0; // *new*
+$color-blue-light: #008EE3; // *new*
+$color-turquoise: #00AFBA; // *new*
+$color-turquoise-light: #A0E4E7; // *new*
+$color-green: #79CD8B;
+$color-green-light: #B3D8A0;
+$color-yellow: #FFD72B; // *new*
+$color-yellow-light: #FFEC9C; // *new*
+$color-orange: #FA640F; // *new*
+$color-orange-light: #FFAD6C; // *new*
 $color-red: #f04c60;
-$color-orange-light: #F2A960;
-$color-pink: #DD5AB0;
-$color-pink-light: #ED75AE;
-$color-turquoise: #4FB7BD;
-$color-turquoise-light: #B8E2E7;
-$color-gray: #8DA7BA; // #85A3B6
-$color-gray-light: #BAD1DE;
-$color-black: #2e3237;
-$color-black-light: #475964;
+$color-pink: #DF4D9B; // *new*
+$color-pink-light: #F19FC8; // *new*
+$color-black: #2E3237; // Color dark gray *new*
+$color-black-light: #4A5863;
+$color-gray: #91A5B8; // UI elements
+$color-gray-light: #BDD0DC;
 
 $color-ocean: #37454E;
 $color-blueberry: #536785;
 $color-cloud: #F2F5F7;
 $color-feather: #DEE1E8;
-$color: #626972;
+
+$color: #475964; // Color light gray
+$color: #BAD1DE; // Color heaven gray *new*
+$color: #85A3B6; // Color blue gray *new*
 
 $color-stone: #F9F9F9;
 $color-gravel: #E5E5E5;
@@ -76,9 +79,11 @@ $color-base-complement: $color-blueberry; // Menu descriptions, input labels, mo
 $color-primary: $color-blue;
 $color-accent: $color-green;
 $color-complement-coral: $color-turquoise;
+
 // Complement: Sky - Icons
 $color-complement-sky: $color-gray;
 $color-complement-sky-light: $color-gray-light;
+
 // Complement: Lava
 $color-complement-lava: $color-orange;
 $color-complement-lava-light: $color-orange-light;
