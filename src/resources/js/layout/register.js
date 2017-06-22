@@ -14,7 +14,6 @@ export default function () {
 	
 	$('#chooseLoginWay li').on('click', function(){
 		var choice = $(this).text();
-		console.log(choice);
 		var iconHtml = "";
 		if(choice === 'Lösenord'){
 			$('#passwordInputs').show();
@@ -30,5 +29,14 @@ export default function () {
 		$('#chooseLoginWayLabel').html(iconHtml + choice + '<i class="icon icon-chevron-down chevron-down pull-right"></i>'+
 											'<i class="icon icon-chevron-up icon-chevron-down chevron-up pull-right"></i>');
 	});
+	
+	$('#registerForm').validator({
+    custom: {
+        'loginway': function($el) { console.log($el.text()); return false;}
+    },
+    errors: {
+        'loginway': "You must choose a way of logging in!"
+    }
+});
 }
 
