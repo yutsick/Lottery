@@ -48,19 +48,17 @@
 					</div>
 				
 				<div class="col-12 col-md-3 col-md-offset-1">
-					<div id="loginWay" class="form-group right-input-group" >
-						<label for="chooseLoginWay">Välj inloggningssätt</label>
-						<div class="dropdown">
-							<button id="chooseLoginWayLabel" type="button" class="dropdown-button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded=false data-loginway="loginway">
-								Välj inloggningssätt <i class="icon icon-chevron-down chevron-down pull-right"></i>
-										<i class="icon icon-chevron-up icon-chevron-down chevron-up pull-right"></i>
-							</button>
-							<ul id="chooseLoginWay" class="dropdown-menu">
-								<li><img id="bankid-icon" src="assets/img/icons/bankid.svg">Bank Id</li>
-								<li><img id="password-icon" src="assets/img/icons/lock.svg">Lösenord</li>
-							</ul>
+					<div id="loginWay" class="form-group has-feedback" >
+						<label for="chooseLoginWay" style="width: 100%;">
+							Välj inloggningssätt
+							<select id="chooseLoginWay" class="form-control chooseLoginWay" name="chooseLoginWay" required data-error="Du måste välja ett inloggningssätt" style="width: 100%">
+								<option value>Välj inloggningssätt</option>
+								<option value="bankid"><img id="bankid-icon" src="assets/img/icons/bankid.svg">Bank Id</option>
+								<option value="password"><img id="password-icon" src="assets/img/icons/lock.svg">Lösenord</option>
+							</select>
 							<div class="help-block with-errors"></div>
-						</div>
+						</label>
+						
 					</div>
 					<div id="passwordInputs" style="display: none;">
 						<div class="form-group has-feedback"  id="userPasswordGroup" >
@@ -78,7 +76,7 @@
 							<div class="help-block with-errors"></div>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group has-feedback">
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" id="userAcceptTerms" class="custom-checkbox" required data-required-error="Du måste fylla i detta fält.">
@@ -86,6 +84,8 @@
 							</label>
 							<div class="help-block with-errors"></div>
 						</div>
+					</div>
+					<div class="form-group">
 						<div class="checkbox">
 							<label>
 								<input type="checkbox" class="custom-checkbox" id="newsletterCheckbox"> Jag vill ha nyhetsbrev
