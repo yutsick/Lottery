@@ -51,13 +51,13 @@
 					<div id="loginWay" class="form-group has-feedback" >
 						<label for="chooseLoginWay" style="width: 100%;">
 							Välj inloggningssätt
+						</label>
 							<select id="chooseLoginWay" class="form-control chooseLoginWay" name="chooseLoginWay" required data-error="Du måste välja ett inloggningssätt" style="width: 100%">
 								<option value>Välj inloggningssätt</option>
-								<option value="bankid"><img id="bankid-icon" src="assets/img/icons/bankid.svg">Bank Id</option>
-								<option value="password"><img id="password-icon" src="assets/img/icons/lock.svg">Lösenord</option>
+								<option value="bankid" id="bankid">Bank Id</option>
+								<option value="password" id="password">Lösenord</option>
 							</select>
-							<div class="help-block with-errors"></div>
-						</label>
+						<div class="help-block with-errors"></div>
 						
 					</div>
 					<div id="passwordInputs" style="display: none;">

@@ -12,8 +12,7 @@ export default function () {
 	});
 	
 	
-	$('.chooseLoginWay').change(function (evt) {
-  // Do something¨
+	$('.chooseLoginWay').on('select2:select', function (evt) {
 			var choice = evt.params.data.id;
 			console.log(choice);
 			
@@ -29,7 +28,19 @@ export default function () {
 	});
 	
 	$('.chooseLoginWay').select2({
-		minimumResultsForSearch: Infinity
+		minimumResultsForSearch: Infinity,
+    templateSelection: format,
+		templateResult: format
 	});
 }
+
+function format(o) {
+    if (!o.id)
+      return o.text;
+    else if (o.id == 'password')
+        return $('<img id="password-icon" src="assets/img/icons/lock.svg" class="choice-icon"/><span>' + o.text + '</span>');
+    else if (o.id == 'bankid')
+        return $('<img id="bankid-icon" src="assets/img/icons/bankid.svg" class="choice-icon"/><span>' + o.text + '</span>');
+	  else return o.text;
+  }
 

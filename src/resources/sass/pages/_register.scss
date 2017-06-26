@@ -105,18 +105,6 @@ html {
         margin: 30px;
 	}
 	
-	#password-icon {
-		width: 20px;
-		height: 20px;
-		margin-right: 20px;
-	}
-	
-	#bankid-icon {
-		margin-right: 20px; 
-		width: 20px;
-		height: 20px;
-	}
-	
 	#chooseLoginWay {
 		width: 100%;
 	}
@@ -164,6 +152,27 @@ html {
     transform: rotate(180deg);
 	}
 	
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-weight: bold;
+		vertical-align: middle;
+	}
+	
+	.select2-container--default .select2-selection--single .select2-selection__rendered span{
+    padding-top: 10px;
+	}
+	
+	.btn{
+  	-webkit-transition: background-color 1s ease;
+  	-moz-transition: background-color 1s ease;
+  	-o-transition: background-color 1s ease;
+  	-ms-transition: background-color 1s ease;
+  	transition: background-color 1s ease;
+	}
+	
+	.btn.disabled{
+		background-color: red;
+	}
+	
 	
 }
 .right-input-group {
@@ -171,7 +180,7 @@ html {
 	}
 
 .select2-dropdown {
-		border: none;
+		border: 1px solid #E5E5E5;
 		overflow-y: hidden;
 		font-family: sans-serif;
 		font-weight: 300;
@@ -179,7 +188,15 @@ html {
 
 	.select2-results__option {
 		font-size: 14px;
-		line-height: 15px;
+		line-height: 20px;
 		padding: 15px;
+		vertical-align: middle;
 	}
-
+	
+	.choice-icon {
+		margin-right: 20px; 
+		width: 20px;
+		height: 20px;
+		margin-bottom: -4px;
+	}
+	
