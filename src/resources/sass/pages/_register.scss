@@ -170,7 +170,12 @@ html {
 	}
 	
 	.btn.disabled{
-		background-color: red;
+		background-color: #90BDD9;
+	}
+	
+	.btn.disabled:hover{
+		background-color: #90BDD9;
+		border: none;
 	}
 	
 	
