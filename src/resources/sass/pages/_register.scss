@@ -1,5 +1,6 @@
 .page-register {
 	height: 100%;
+	padding-bottom: 50px;
 }
 
 body {
@@ -16,7 +17,7 @@ html {
 }
 
 .register-content {
-	padding-bottom: 50px;
+
 	background-color: #F8F9FB;
 	height: 100%;
 	
@@ -84,6 +85,7 @@ html {
 		font-weight: 300;
 		font-size: 13px;
 		text-align: justify;
+		padding: 10px;
 	}
 	.modal-footer .btn:before {
 		content: '';
@@ -102,7 +104,7 @@ html {
 	}
 	
 	.content {
-        margin: 30px;
+     margin: 30px;
 	}
 	
 	#chooseLoginWay {
@@ -175,13 +177,13 @@ html {
 	
 	.btn.disabled:hover{
 		background-color: #90BDD9;
-		border: none;
+		border: 1px solid transparent;
 	}
 	
 	
 }
 .right-input-group {
-		margin-top: 70px;
+		margin-top: 61px;
 	}
 
 .select2-dropdown {
