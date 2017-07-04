@@ -16,6 +16,11 @@ html {
 	vertical-align: middle;
 }
 
+.register-content.modal-content {
+    max-height: 75%;
+		overflow-y: scroll;
+}
+
 .register-content {
 
 	background-color: #F8F9FB;
@@ -80,6 +85,8 @@ html {
 		margin-top: 3px;
 		margin-right: 3px;
 	}
+	
+
 	
 	.modal-body p {
 		font-weight: 300;
