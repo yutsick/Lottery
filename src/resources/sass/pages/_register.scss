@@ -19,6 +19,7 @@ html {
 .register-content.modal-content {
     max-height: 75%;
 		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
 }
 
 .register-content {
