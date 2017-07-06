@@ -111,7 +111,7 @@ body {
     }
 	
 	.right-input-group {
-		@include max-screen($screen-sm-max) {
+		@include max-screen($screen-xs-max) {
             margin-top: 10px;
         }
 	
