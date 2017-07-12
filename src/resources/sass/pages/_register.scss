@@ -86,9 +86,11 @@ html {
 		margin-top: 3px;
 		margin-right: 3px;
 	}
-	
 
-	
+	.popover{
+		width: 100%;
+		max-width:413px;
+	}
 	.modal-body p {
 		font-weight: 300;
 		font-size: 13px;
