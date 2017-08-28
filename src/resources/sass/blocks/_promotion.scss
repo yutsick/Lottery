@@ -23,7 +23,7 @@
 
 // Large blocks only
 [class*='col-']:not(.col-sm-6):not(.col-md-12) {
-	.block-promotion {
+	.block-promotion:not(.block-promotion--image) {
 		min-height: 320px;
 
 		@include min-screen($screen-sm-min) {
