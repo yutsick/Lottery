@@ -7,6 +7,21 @@
 	}
 }
 
+.modal-close{
+	background: #207acb;
+	color: white;
+	position:relative;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 45px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 30px;
+	margin:0 auto;
+	margin-bottom: 20px;
+}
+
 /* Put outside the modal and center */
 .btn.js-action-close {
 	margin: 0 auto $margin-medium auto;
@@ -19,9 +34,10 @@
 
 	.modal-content {
 		width: inherit;
-		//height: inherit;
+		height: auto;
 		margin: 0 auto;
 		pointer-events: all;
+		overflow-y: auto;
 	}
 }
 

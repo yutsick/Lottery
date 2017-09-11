@@ -37,7 +37,7 @@ html {
 		font-weight: normal;
 		color: #2e3237;
 		cursor: auto;
-		font-size: 13;
+		font-size: 13px;
 		font-weight: 300;
 		margin-bottom: 4px;
 	}
@@ -120,7 +120,15 @@ html {
 	#chooseLoginWay {
 		width: 100%;
 	}
-	
+
+	#choosePayWay {
+		width: 100%;
+	}
+
+	#chooseDelivery{
+		width: 100%;
+	}
+
 	.input-icon {
 		padding-top: 10px;
 		color: #A9DB9B;

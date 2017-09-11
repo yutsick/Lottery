@@ -15,7 +15,7 @@ export default function () {
 	$('.chooseLoginWay').on('select2:select', function (evt) {
 			var choice = evt.params.data.id;
 			console.log(choice);
-			
+
 			if(choice === "password"){
 				$('#passwordInputs').show();
 				$('#userPassword').prop("required", true);
@@ -25,13 +25,36 @@ export default function () {
 				$('#userPassword').prop("required", false);
 				$('#userPasswordRepeat').prop("required", false);
 			}
+
+			if(choice === "bankid"){
+				$('#deviceId').show();
+			} else {
+				$('#deviceId').hide();
+			}
 	});
-	
+
 	$('.chooseLoginWay').select2({
 		minimumResultsForSearch: Infinity,
     templateSelection: format,
 		templateResult: format
 	});
+
+    $('.chooseDelivery').select2({
+        minimumResultsForSearch: Infinity,
+        templateSelection: format,
+        templateResult: format
+    });
+
+    $('.choosePayWay').select2({
+        minimumResultsForSearch: Infinity,
+        templateSelection: format,
+        templateResult: format
+    });
+    $('.chooseDevice').select2({
+        minimumResultsForSearch: Infinity,
+        templateSelection: format,
+        templateResult: format
+    });
 }
 
 function format(o) {
@@ -43,4 +66,7 @@ function format(o) {
         return $('<img id="bankid-icon" src="assets/img/icons/bankid.svg" class="choice-icon"/><span>' + o.text + '</span>');
 	  else return o.text;
   }
+
+
+
 
