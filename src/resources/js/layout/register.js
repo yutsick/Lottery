@@ -57,6 +57,7 @@ export default function () {
     });
 }
 
+
 function format(o) {
     if (!o.id)
       return o.text;
