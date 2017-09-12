@@ -14,7 +14,7 @@ before_script:
   - ssh-add <(echo "$DEPLOY_KEY")
 
 stages:  
-  - deploy
+  - deploy 
 
 deploy_to_staging:
   stage: deploy
