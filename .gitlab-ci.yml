@@ -8,14 +8,12 @@ cache:
 
 before_script:
   - npm install
-  - npm -g install bower
-  - bower install --allow-root
   - eval $(ssh-agent -s)
   - ssh-add <(echo "$DEPLOY_KEY")
 
 stages:  
   - deploy
-  
+
 
 deploy_to_staging:
   stage: deploy
