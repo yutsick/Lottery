@@ -21,4 +21,4 @@ deploy_to_staging:
     - develop
   script:
     - npm run build
-    - rsync -rv * serverpilot@stuff.wmyl.se:/var/www/ml-2017.stuff.wmyl.se/web/ --exclude '.git' --exclude '.gitlab-ci.yml' --exclude '.gitignore' --exclude 'node_modules' --exclude 'src'
+    - rsync -rv * serverpilot@stuff.wmyl.se:/srv/users/serverpilot/apps/ml-2017/web/ --exclude '.git' --exclude '.gitlab-ci.yml' --exclude '.gitignore' --exclude 'node_modules' --exclude 'resources'
