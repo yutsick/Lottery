@@ -14,10 +14,12 @@ import top from './layout/top';
 import search from './components/search';
 import slider from './components/slider';
 import register from './layout/register';
+import loggedin from './layout/loggedin';
 
 $(function () {
 	modernizr();
 	alert();
+	loggedin();
 	form();
 	modal();
 	search();

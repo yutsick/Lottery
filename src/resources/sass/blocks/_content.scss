@@ -6,6 +6,25 @@
 	}
 }
 
+.tuff{
+	background-color: green;
+	color:pink;
+	width: 300px;
+	margin-left: $margin-default;
+	height: 300px;
+	border:2px solid;
+}
+
+.tuff1{
+	background-color: green;
+	color:pink;
+	width: 50px;
+	margin-left: $margin-default;
+	height: 300px;
+	border:2px solid;
+}
+
+
 .block-content__content,
 .block-promotion--text-rich .block-promotion__rich-text {
 	h2,

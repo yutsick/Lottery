@@ -17,6 +17,24 @@
 </div>
 }
 
+@@if (context.hero_type === "loggedin") {
+<div class="container container--no-space">
+	<header class="block block--background-image block-hero flex-@@hero_align text-shadow text-shadow--heavy" style="background-image: url('assets/img/mockup/sunset.jpg')">
+		@@if (context.hero_content === true) {
+		<div class="block-hero__content">
+			<div class="container">
+				<h2 class="block-hero__title h1">Hej Stefan!</h2>
+				<p class="block-hero__subtitle h2">Välkommen till miljonlotteriet!<br>
+					Vi bjuder på två tian-lotter!</p>
+				<a href="/" class="btn btn-primary" title="">Läs Mer</a>
+			</div>
+		</div>
+		}
+	</header>
+</div>
+}
+
+
 @@if (context.hero_type === "contained") {
 	<div class="container">
 		<header class="block block--background-image block-hero flex-@@hero_align text-shadow text-shadow--heavy" style="background-image: url('assets/img/mockup/man.jpg')">
@@ -35,6 +53,8 @@
 		</header>
 	</div>
 }
+
+
 
 @@if (context.hero_type === "old") {
 <div class="container">
