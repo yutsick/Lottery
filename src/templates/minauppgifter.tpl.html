@@ -1,0 +1,108 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-in"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+    <div class="container container-fluid">
+    <h1>Mina uppgifter</h1>
+
+
+        <!--<button class="editbtn">Ändra</button>-->
+        <table id="tableone" class="customers" style="margin-top: 30px;">
+            <caption class="nono">Inloggningsuppgifter</caption>
+            <tr>
+                <th class="border" >Kundnummer</th>
+                <td>123123123</td>
+                <th class="nonoa"> </th>
+            </tr>
+            <tr>
+                <th class="border">E-postadress</th>
+                <td>asddas@test.se</td>
+                <th><button class="editbtn">Ändra</button></th>
+            </tr>
+            <tr class="border">
+                <th >Lösenord</th>
+                <td>***********</td>
+                <th><button class="editbtn">Ändra</button></th>
+            </tr>
+        </table>
+        <table class="customers">
+            <caption class="nono">Profilinställningar</caption>
+            <tr>
+                <th class="border" >Chat-namn</th>
+                <td>Djpingo</td>
+                <th><button class="editbtn">Ändra</button></th>
+            </tr>
+        </table>
+
+        <table class="customers">
+            <caption class="nono">Kontaktuppgifter</caption>
+            <tr>
+                <th class="border" >Namn</th>
+                <td>Stefan Jakobsson</td>
+            </tr>
+            <tr>
+                <th class="border" >Adress</th>
+                <td>Asdasd 3, 411 20, Göteborg</td>
+            </tr>
+            <tr>
+                <th class="border" >Telefonnummer</th>
+                <td>Ej angivet</td>
+                <th><button class="editbtn">Ändra</button></th>
+            </tr>
+            <tr>
+                <th class="border" >Mobilnummer</th>
+                <td>0783 18 81 81</td>
+                <th><button class="editbtn">Ändra</button></th>
+            </tr>
+        </table>
+
+        <table id="tableone" class="customers" style="margin-top: 30px;">
+            <caption class="nono">Kontonummer</caption>
+            <tr>
+                <th class="border" >Clearing</th>
+                <td>8368-3</td>
+                <th class="nonoa"> </th>
+            </tr>
+            <tr>
+                <th class="border">Kontonummer</th>
+                <td>1244 19 123 123 </td>
+                <th><button class="editbtn">Ändra</button></th>
+            </tr>
+        </table>
+
+
+<div class="col-md-12" style="margin-top: 30px;">
+    <h4>Mina Verktyg</h4>
+    <div class="col-md-2">
+        <button class="btn btn-primary btn-icon" style="width: 90%;">Playscan</button><br>
+        <p>Håll spelandet under
+            kontroll med Playscan</p>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary btn-icon" style="width: 90%">Spelbudget</button><br>
+        <p>Bestäm i förväg var
+            dina spelgränser gåra</p>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary btn-icon" style="width: 90%">Tidsgräns</button><br>
+        <p>Spela inte längre tid
+            än du tänkt dig</p>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary btn-icon" style="width: 90%">Spelstopp</button><br>
+        <p>Om du vill spärra dig
+            från våra onlinespel</p>
+    </div>
+</div>
+
+
+    </div>
+</div>
+
+
+@@include('layout/_footer.html', {"show_footer": false})
+

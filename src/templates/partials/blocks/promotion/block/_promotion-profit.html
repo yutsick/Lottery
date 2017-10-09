@@ -3,16 +3,18 @@
         @@if(context.content_image) {
         <img class="walletpic" src="@@content_image" style="position: absolute; width:90px;left: 0; right: 0; margin-left: auto; top: 15px; margin-right: auto;">
         }
-        <div class="coolblock2 @@if(context.background === 'color'){ block--background-color background-color-@@background_color}">'
+        <div class="coolblock2 @@if(context.background === 'color'){ block--background-color background-color-@@background_color}">
             <div class="walletheadtext2">
                 @@if(context.content_title){
                 @@content_title
                 }
 
+                <!--
                 <div id="close-panel1" style="cursor:pointer; float: right ">
                     <i class="glyphicon glyphicon-plus ion ion-ios71-close-empty" style="font-size: 30px;"></i>
                 </div>
-                <span style="float: right; margin-right: 40px">@@content_pris</span>
+                -->
+                <span style="float: right; margin-right: 70px">@@content_pris</span>
             </div>
         </div>
         <div class="panel1" style="display: none;">

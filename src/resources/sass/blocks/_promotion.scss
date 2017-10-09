@@ -16,6 +16,9 @@
 		}
 	}
 }
+
+
+
 //---------------------------------------- ME STARTED HEERERERERER
 
 
@@ -42,12 +45,11 @@
 	}
 }
 
-
-.favgamebg{
+.favgamebg {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
-	background-clip: border-box;
-	background-repeat: no-repeat ;
-	height: 250px;
 }
 
 .asdasd{
@@ -76,7 +78,7 @@
 .walletheadtext{
 	padding-left: 20px;
 	color: #FF9148;
-	margin-top: 3px;
+	margin-top: 14px;
 	display: none;
 	font-size: 16px;
 	@media screen and (max-width: 767px) {
@@ -85,7 +87,7 @@
 }
 
 .walletheadtext2{
-	margin-top: 3px;
+	margin-top: 14px;
 	padding-left: 20px;
 	color: #DF4D9C;
 	display: none;
@@ -132,12 +134,12 @@
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright:5px;
 	height: 90px;
-	border: 2px solid #DF4D9C;
+	border: 1px solid #DF4D9C;
 	@media screen and (max-width: 767px) {
-		height: 65px;
+		height: 50px;
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
-		margin-bottom: 30px;
+		margin-bottom: 24px;
 
 	}
 }
@@ -149,11 +151,10 @@
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
 	height: 90px;
-	border: 2px solid #FF9148;
+	border: 1px solid #FF9148;
 	@media screen and (max-width: 767px) {
-		height: 65px;
-		margin-top: 10px;
-		margin-bottom: 30px;
+		height: 50px;
+		margin-bottom: 24px;
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
 	}
@@ -247,6 +248,11 @@
 	display: block;
 }
 
+.margin{
+	margin-top: 68px;
+	padding-top: 68px;
+}
+
 .block-promotion__image {
 	background-size: cover;
 	background-position: center center;
@@ -256,7 +262,7 @@
 
 	&:hover {
 		@include min-screen($screen-sm-min) {
-			transform: scale(1.2);
+			transform: scale(1	);
 		}
 	}
 
@@ -269,8 +275,21 @@
 	}
 
 	&.block-promotion__image--square {
-		padding-bottom: 100%;
+		padding-bottom: 30%;
+		padding-top: 35%;
+		border-radius: 10px;
 	}
+
+}
+
+.test:hover{
+	transform: scale(1.05);
+	-webkit-box-shadow: 0px 13px 73px -6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 13px 73px -6px rgba(0,0,0,0.75);
+	box-shadow: 0px 13px 73px -6px rgba(0,0,0,0.75);
+	border-radius: 10px;
+	border:none;
+
 }
 
 .block-promotion__link {
@@ -295,14 +314,14 @@
 		text-decoration: none;
 		text-transform: none;
 		opacity: 1;
-		transform: scale(1.0);
+		transform: scale(1);
 		transition: opacity $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
 		text-shadow: none;
 
 		@include min-screen($screen-sm-min) {
 			bottom: 20px;
 			right: 20px;
-			opacity: 0.6;
+			opacity: 0;
 			transform: scale(0.8);
 		}
 	}
