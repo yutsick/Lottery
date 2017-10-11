@@ -3,16 +3,15 @@
  */
 @font-face {
   font-family: UniNeueHeavy;
+  src: url(../fonts/UniNeueHeavy.otf);
 }
+
 
 @font-face {
   font-family: ProximaNova;
   src: url(../fonts/PROXIMANOVA-REGULAR.OTF);
 }
 
-@font-face {
-  font-family: myFirstFont;
-}
 
 // Margins
 $margin-default: 20px;
@@ -41,7 +40,7 @@ $base-font-size: 14px;
 $base-line-height: 20px;
 
 // Base Headings
-$base-heading-family: sans-serif;
+$base-heading-family: UniNeueHeavy;
 
 /**
  * Colors

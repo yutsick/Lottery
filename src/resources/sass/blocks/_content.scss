@@ -1,3 +1,13 @@
+h1, h2, h3,
+h4, h5, h6 {
+	font-family: UniNeueHeavy;
+}
+
+
+.h1,.h2,.h3,.h4,.h5,.h6{
+	font-family: UniNeueHeavy;
+}
+
 .block-content {
 	margin-bottom: 20px;
 
@@ -32,6 +42,7 @@
 		font-size: 30px;
 		line-height: 36px;
 		font-weight: 600;
+		font-family: $base-heading-family;
 
 		@include min-screen($screen-sm-min) {
 			font-size: 65px;
@@ -44,6 +55,7 @@
 		font-size: 25px;
 		line-height: 32px;
 		font-weight: 300;
+		font-family: $base-heading-family;
 
 		@include min-screen($screen-sm-min) {
 			font-size: 36px;
@@ -56,6 +68,7 @@
 		font-size: 36px;
 		line-height: 46px;
 		font-weight: 600;
+		font-family: "Helvetica Neue" !important;
 
 		@include min-screen($screen-sm-min) {
 			font-size: 48px;
@@ -68,6 +81,7 @@
 		font-size: 28px;
 		line-height: 34px;
 		font-weight: 600;
+		font-family: $base-heading-family;
 
 		@include min-screen($screen-sm-min) {
 			font-size: 30px;
@@ -80,6 +94,7 @@
 		font-size: 20px;
 		line-height: 26px;
 		font-weight: 600;
+		font-family: $base-heading-family;
 
 		@include min-screen($screen-md-min) {
 			font-size: 24px;
@@ -92,6 +107,7 @@
 		font-size: 16px;
 		line-height: 20px;
 		font-weight: 600;
+		font-family: $base-heading-family;
 
 		@include min-screen($screen-md-min) {
 			font-size: 16px;

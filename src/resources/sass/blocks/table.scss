@@ -10,6 +10,7 @@
 
 .customers td{
   padding: 20px;
+  outline: none !important;
 }
 
 .customers td:nth-child(3) {
@@ -25,7 +26,17 @@
   width: 20px;
   height: 20px;
   padding-right: 60px;
+  outline:none !important;
 }
+
+.editbtn:hover{
+  border: none;
+  outline:none !important;
+}
+
+
+
+
 
 .nonoa{
   margin-left: 20px;

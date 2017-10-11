@@ -83,6 +83,7 @@
 	font-size: 16px;
 	@media screen and (max-width: 767px) {
 		display: block;
+		color: black;
 	}
 }
 
@@ -94,6 +95,7 @@
 	font-size: 16px;
 	@media screen and (max-width: 767px) {
 		display: block;
+		color: black;
 	}
 }
 
@@ -127,38 +129,41 @@
 }
 
 
-.coolblock2{
-	//background-color: #fbf1eb;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-topright:5px;
-	height: 90px;
-	border: 1px solid #DF4D9C;
-	@media screen and (max-width: 767px) {
-		height: 50px;
-		border-bottom-right-radius: 5px;
-		border-bottom-left-radius: 5px;
-		margin-bottom: 24px;
-
-	}
-}
-
-.coolblock{
+.coolblock2 {
 	//background-color: #fbf1eb;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
-	height: 90px;
-	border: 1px solid #FF9148;
+	height: 80px;
+	border: 1px solid #DF4D9C;
 	@media screen and (max-width: 767px) {
 		height: 50px;
-		margin-bottom: 24px;
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
+		margin-bottom: 20px;
+
 	}
 }
+
+
+.coolblock1{
+	//background-color: #fbf1eb;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright:5px;
+	height: 80px;
+	border: 1px solid #fab890;
+	@media screen and (max-width: 767px) {
+		height: 50px;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		margin-bottom: 20px;
+
+	}
+}
+
 
 .moneyline{
 	border-top: 1px solid $color-feather;
@@ -195,11 +200,11 @@
 
 .block-promotion1 {
 	overflow: hidden;
-	min-height: 300px;
+	min-height: 290px;
 	margin-bottom: 10px;
 
 	@include min-screen($screen-sm-min) {
-		min-height: 300px;
+		min-height: 290px;
 		margin-bottom: 20px;
 
 	}
@@ -289,6 +294,7 @@
 	box-shadow: 0px 13px 73px -6px rgba(0,0,0,0.75);
 	border-radius: 10px;
 	border:none;
+	transition-duration: 0.5s;
 
 }
 
@@ -317,6 +323,7 @@
 		transform: scale(1);
 		transition: opacity $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
 		text-shadow: none;
+		transition-duration: 0.5s;
 
 		@include min-screen($screen-sm-min) {
 			bottom: 20px;

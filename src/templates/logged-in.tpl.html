@@ -4,16 +4,15 @@
 
 @@include('layout/_top.html', {"logged_in": true})
 @@include('layout/_sidebar.html', {"logged_in": true})
-
 <div class="content-wrapper ml-2017">
 	@@include('blocks/_hero.html', {
 	"hero_type": "loggedin",
 	"hero_align": "bottom",
 	"hero_content": true
 	})
+	<div class="container container-fluid" style="margin-left: -10px !important;">
 
-	<div class="container container-fluid" >
-
+		<a style="color: #0b235b" href="#">
 	@@include('blocks/promotion/block/_promotion-wallet.html', {
 	"size": "medium",
 	"background": "color",
@@ -29,7 +28,8 @@
 	"text_protection": "",
 	"text_alignment": "bottom"
 	})
-
+		</a>
+		<a style="color: #0b235b" href="#">
 	@@include('blocks/promotion/block/_promotion-profit.html', {
 	"size": "medium",
 	"background": "color",
@@ -45,7 +45,7 @@
 	"text_protection": "",
 	"text_alignment": "bottom"
 	})
-
+		</a>
 
 	@@include('blocks/promotion/block/_promotion-splithead.html', {
 	"size": "medium",
@@ -61,9 +61,11 @@
 	"text_protection": "",
 	"text_alignment": "bottom"
 	})
-
+		<div class="row"></div>
 		<div class="container-fluid">
-			<h4 style="margin-top: 20px !important;">Mina sidor</h4>
+			<div class="qwerty" style="margin-top: 20px; margin-bottom: 15px;">
+				<h4>Mina favoritspel</h4>
+			</div>
 		</div>
 
 	@@include('blocks/promotion/block/_promotiom-favgame.html')
