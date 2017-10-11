@@ -35,9 +35,6 @@
 }
 
 
-
-
-
 .nonoa{
   margin-left: 20px;
 }
@@ -56,7 +53,11 @@
   border-top-left-radius: 10px;
 
 }
-.customers tr:nth-child(even){background-color: #f5f8fa;  }
+.customers tr:nth-child(2){
+  background-color: #f5f8fa;
+  border-radius: 2px !important;
+}
+
 
 .customers th {
   padding-top: 12px;

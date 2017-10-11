@@ -99,10 +99,20 @@
 	}
 }
 
-
+.titlegame{
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
 
 .walletpic{
 	display: block;
+	position: absolute;
+	width:80px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	top: 15px;
+	margin-right: auto;
 	@media screen and (max-width: 767px) {
 		display: none;
 	}
@@ -128,6 +138,18 @@
 	transform: rotate(360deg);
 }
 
+.amountblock{
+	float: right;
+	margin-right: 20px;
+}
+
+.maintxtblock{
+	color:#536785;
+	font-weight: 500;
+	height: 50px;
+	font-size: 16px;
+	padding-top: 10px;
+}
 
 .coolblock2 {
 	//background-color: #fbf1eb;
@@ -136,7 +158,7 @@
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
 	height: 80px;
-	border: 1px solid #DF4D9C;
+	border: 1px solid #f7a4d1;
 	@media screen and (max-width: 767px) {
 		height: 50px;
 		border-bottom-right-radius: 5px;
@@ -167,8 +189,9 @@
 
 .moneyline{
 	border-top: 1px solid $color-feather;
-	padding-top: 20px;
-
+	padding-top: 10px;
+	color:#536785;
+	font-size: 16px;
 }
 
 
@@ -179,6 +202,8 @@
 .paddingline{
 	padding-top: 20px;
 	padding-bottom: 20px;
+	color:#536785;
+	font-size: 14px
 }
 
 

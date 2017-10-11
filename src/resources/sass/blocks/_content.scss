@@ -3,7 +3,6 @@ h4, h5, h6 {
 	font-family: UniNeueHeavy;
 }
 
-
 .h1,.h2,.h3,.h4,.h5,.h6{
 	font-family: UniNeueHeavy;
 }
@@ -16,22 +15,17 @@ h4, h5, h6 {
 	}
 }
 
-.tuff{
-	background-color: green;
-	color:pink;
-	width: 300px;
-	margin-left: $margin-default;
-	height: 300px;
-	border:2px solid;
+.awallet{
+	color: #37454e;
 }
 
-.tuff1{
-	background-color: green;
-	color:pink;
-	width: 50px;
-	margin-left: $margin-default;
-	height: 300px;
-	border:2px solid;
+.margin40{
+	margin-top: 40px;
+}
+
+.boldtext{
+	font-weight: 900;
+	font-size: 18px;
 }
 
 
