@@ -146,8 +146,9 @@
 .maintxtblock{
 	color:#536785;
 	font-weight: 500;
-	height: 50px;
+	min-height: 50px;
 	font-size: 16px;
+	height: auto;
 	padding-top: 10px;
 }
 
@@ -207,15 +208,16 @@
 }
 
 
-
 .nocoolblock{
 	display:block;
-	height: 210px;
+	min-height: 210px;
+	height: auto;
 	border-left: 1px solid $color-feather;
 	border-right: 1px solid $color-feather;
 	border-bottom: 1px solid $color-feather;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
+	position: initial;
 	@media screen and (max-width: 767px) {
 		display: none;
 		margin-top: 10px;
@@ -312,11 +314,11 @@
 
 }
 
-.test:hover{
+.shadow:hover{
 	transform: scale(1.05);
-	-webkit-box-shadow: 0px 13px 73px -6px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 13px 73px -6px rgba(0,0,0,0.75);
-	box-shadow: 0px 13px 73px -6px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 25px 156px -19px rgba(1,28,48,0.59);
+	-moz-box-shadow: 0px 25px 156px -19px rgba(1,28,48,0.59);
+	box-shadow: 0px 25px 156px -19px rgba(1,28,48,0.59);
 	border-radius: 10px;
 	border:none;
 	transition-duration: 0.5s;
