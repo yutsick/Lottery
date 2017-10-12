@@ -1,0 +1,49 @@
+.block-promotion--wallet {
+	.block-promotion__content {
+		border-left: 1px solid $color-feather;
+		border-right: 1px solid $color-feather;
+		border-bottom: 1px solid $color-feather;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		padding-top: 40px;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		color: $color-blueberry;
+
+		@media screen and (max-width: 767px) {
+			display: none;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.block-promotion__title {
+		color: black;
+		margin-bottom: 10px;
+	}
+
+	.block-promotion__text {
+		font-weight: 500;
+		margin-top: 0;
+		font-size: 16px;
+	}
+
+	.wallet-money {
+		padding-top: 10px;
+		font-size: 16px;
+		margin-top: auto;
+
+		hr {
+			margin-top: 0;
+			margin-bottom: 10px;
+			border-top: 1px solid $color-feather;
+		}
+
+	}
+
+	.wallet-money__amount {
+		font-weight: 900;
+		font-size: 18px;
+	}
+}
