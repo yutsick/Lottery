@@ -33,6 +33,12 @@
 		}
 	}
 
+	.gametitle{
+		@media screen and (max-width: 767px) {
+			padding-top: 40px;
+		}
+	}
+
 	.block-promotion-minifiedmoney{
 		float: right;
 	}
