@@ -1,3 +1,8 @@
+//Safari Rendering
+*{
+	text-rendering:optimizeLegibility;
+}
+
 // Visibility
 &.touchevents {
 	.show-touch {
@@ -107,6 +112,10 @@ img.align-center {
 	background-color: $color-orange;
 }
 
+.head-color-orange{
+	background-color: $color-head-orange;
+}
+
 .background-color-pink {
 	background-color: $color-pink;
 }
@@ -142,6 +151,11 @@ img.align-center {
 .border-color-orange{
 	background-color: $color-border-orange;
 }
+
+.border-color-pink{
+	background-color: $color-border-pink;
+}
+
 
 .text-protection {
 	&:after {

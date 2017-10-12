@@ -5,7 +5,7 @@
 
 	@include min-screen($screen-sm-min) {
 		min-height: 220px;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 	}
 
 	p {
@@ -38,6 +38,10 @@
 	display: none;
 }
 
+.bottom{
+	margin-bottom: 0;
+}
+
 .favgamelink :hover{
 	transform: scale(1.05);
 	.arrowlink{
@@ -52,33 +56,25 @@
 	background-size: cover;
 }
 
-.asdasd{
-	height: 250px;
-	border: 1px solid $color-feather;
-	border-top: none;
-	display: none;
-	}
-
-
-.color:hover {
-	background: #FF5722;
-}
 
 .block-wallet{
+	color: black;
+	.wallethover:hover{
+		color: black;
 
+	}
 	@media screen and (min-width: 1020px) {
-		height: 50px;
+		min-height: 50px;
 	}
 	@include min-screen($screen-sm-min) {
-		min-height: 300px;
-		margin-bottom: 20px;
+		min-height: 290px;
 	}
 }
 
 .walletheadtext{
-	padding-left: 20px;
-	color: #FF9148;
 	margin-top: 14px;
+	padding-left: 20px;
+	color: $color-head-orange;
 	display: none;
 	font-size: 16px;
 	@media screen and (max-width: 767px) {
@@ -90,7 +86,7 @@
 .walletheadtext2{
 	margin-top: 14px;
 	padding-left: 20px;
-	color: #DF4D9C;
+	color: $color-pink;
 	display: none;
 	font-size: 16px;
 	@media screen and (max-width: 767px) {
@@ -100,8 +96,9 @@
 }
 
 .titlegame{
-	margin-top: 5px;
-	margin-bottom: 15px;
+	h4{
+	padding: 20px 0 0 0;
+	}
 }
 
 .walletpic{
@@ -144,7 +141,18 @@
 }
 
 .maintxtblock{
-	color:#536785;
+	color:$color-blueberry;
+	font-weight: 500;
+	min-height: 50px;
+	font-size: 16px;
+	height: auto;
+	padding-top: 10px;
+}
+
+
+
+.maintxtblock1{
+	color:$color-blueberry;
 	font-weight: 500;
 	min-height: 50px;
 	font-size: 16px;
@@ -158,8 +166,8 @@
 	border-top-left-radius: 5px;
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright: 5px;
-	height: 80px;
-	border: 1px solid #f7a4d1;
+	min-height: 80px;
+	border: 1px solid $color-border-pink;
 	@media screen and (max-width: 767px) {
 		height: 50px;
 		border-bottom-right-radius: 5px;
@@ -176,8 +184,8 @@
 	border-top-left-radius: 5px;
 	-moz-border-radius-topleft: 5px;
 	-moz-border-radius-topright:5px;
-	height: 80px;
-	border: 1px solid #fab890;
+	min-height: 80px;
+	border:1px solid $color-border-orange;
 	@media screen and (max-width: 767px) {
 		height: 50px;
 		border-bottom-right-radius: 5px;
@@ -191,10 +199,9 @@
 .moneyline{
 	border-top: 1px solid $color-feather;
 	padding-top: 10px;
-	color:#536785;
+	color:$color-blueberry;
 	font-size: 16px;
 }
-
 
 .line {
 	border-top: 1px solid $color-feather;
@@ -203,7 +210,7 @@
 .paddingline{
 	padding-top: 20px;
 	padding-bottom: 20px;
-	color:#536785;
+	color:$color-blueberry;
 	font-size: 14px
 }
 
@@ -232,8 +239,6 @@
 
 	@include min-screen($screen-sm-min) {
 		min-height: 290px;
-		margin-bottom: 20px;
-
 	}
 
 	p {

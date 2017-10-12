@@ -1,0 +1,84 @@
+​<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #main {
+            min-height: 300px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-flow: row;
+        }
+
+        #main > .red {
+            margin: 4px;
+            padding: 5px;
+            border-radius: 7pt;
+            background: #dddd88;
+            flex: 3 1 60%;
+            order: 3;
+        }
+
+        #main > .asd {
+            margin: 4px;
+            padding: 5px;
+            border: 1px solid #8888bb;
+            border-radius: 7pt;
+            background: #ccccff;
+            flex: 1 2 20%;
+            order: 1;
+        }
+
+        #main > .das {
+            margin: 4px;
+            padding: 5px;
+            border: 1px solid #8888bb;
+            border-radius: 7pt;
+            background: #ccccff;
+            flex: 1 2 20%;
+            order: 2;
+        }
+
+        /* Too narrow to support three columns */
+        @media all and (max-width: 1000px) {
+            #main, #page {
+                flex-direction: column;
+            }
+
+            #main > article, #main > nav, #main > aside {
+                /* Return them to document order */
+                order: 0;
+            }
+
+            #main > nav, #main > aside, header, footer {
+                min-height: 50px;
+                max-height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id='main'>
+    <div class="red">
+        @@include('blocks/promotion/block/_promotion-split.html', {
+        "size": "medium",
+        "background": "color",
+        "background_color": "newturqiose",
+        "background_color_pattern": "true",
+        "background_image": "",
+        "content_alignment": "bottom",
+        "content_title": "Ge ett utsatt barn en fin sommar",
+        "content_text": "Det vet väll att vårat överskott går till IOGT - NTO's arbete.",
+        "content_link": "",
+        "content_image": "assets/img/mockup/image001.jpg",
+        "text_protection": "",
+        "text_alignment": "bottom"
+        })
+
+
+    </div>
+    <div class="asd"></div>
+    <div class="das"></div>
+</div>
+</body>
+</html>

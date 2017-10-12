@@ -10,70 +10,68 @@
 	"hero_align": "bottom",
 	"hero_content": true
 	})
-	<div class="container container-fluid" style="margin-left: -10px !important;">
+	<div class="row equal-height">
+		<div class="container">
+			<div class="row equal-height">
+		@@include('blocks/promotion/block/_promotion-wallet.html', {
+		"size": "medium",
+		"background": "color",
+		"background_color": "lightorange",
+		"background_color_pattern": "true",
+		"background_image": "",
+		"content_alignment": "bottom",
+		"content_title": "Spelplånbok",
+		"content_text": "Här ligger de pengar du kan spela för.",
+		"content_link": "",
+		"content_pris": "444 kr",
+		"content_image": "assets/img/mockup/spelbok.png",
+		"text_protection": "",
+		"text_alignment": "bottom"
+		})
 
-	<a style="color: #0b235b" href="#">
-	@@include('blocks/promotion/block/_promotion-wallet.html', {
-	"size": "medium",
-	"background": "color",
-	"background_color": "lightorange",
-	"background_color_pattern": "true",
-	"background_image": "",
-	"content_alignment": "bottom",
-	"content_title": "Spelplånbok",
-	"content_text": "Här ligger de pengar du kan spela för.",
-	"content_link": "",
-	"content_pris": "444 kr",
-	"content_image": "assets/img/mockup/spelbok.png",
-	"text_protection": "",
-	"text_alignment": "bottom"
-	})
-	@@include('blocks/promotion/block/_promotion-profit.html', {
-	"size": "medium",
-	"background": "color",
-	"background_color": "lightpink",
-	"background_color_pattern": "true",
-	"background_image": "",
-	"content_alignment": "bottom",
-	"content_title": "Vinstkonto",
-	"content_text": "Här ligger de pengar du kan använda i vår vinstshop.",
-	"content_link": "",
-	"content_pris": "514 kr",
-	"content_image": "assets/img/mockup/vinstkonto.png",
-	"text_protection": "",
-	"text_alignment": "bottom"
-	})
+		@@include('blocks/promotion/block/_promotion-profit.html', {
+		"size": "medium",
+		"background": "color",
+		"background_color": "lightpink",
+		"background_color_pattern": "true",
+		"background_image": "",
+		"content_alignment": "bottom",
+		"content_title": "Vinstkonto",
+		"content_text": "Här ligger de pengar du kan använda i vår vinstshop.",
+		"content_link": "",
+		"content_pris": "514 kr",
+		"content_image": "assets/img/mockup/vinstkonto.png",
+		"text_protection": "",
+		"text_alignment": "bottom"
+		})
 
-	@@include('blocks/promotion/block/_promotion-splithead.html', {
-	"size": "medium",
-	"background": "color",
-	"background_color": "newturqiose",
-	"background_color_pattern": "true",
-	"background_image": "",
-	"content_alignment": "bottom",
-	"content_title": "Ge ett utsatt barn en fin sommar",
-	"content_text": "Det vet väll att vårat överskott går till IOGT - NTO's arbete.",
-	"content_link": "",
-	"content_image": "assets/img/mockup/image001.jpg",
-	"text_protection": "",
-	"text_alignment": "bottom"
-	})
-
-		<div class="row"></div>
-
-		<div class="container-fluid titlegame">
+		@@include('blocks/promotion/block/_promotion-split.html', {
+		"size": "medium",
+		"background": "color",
+		"background_color": "newturqiose",
+		"background_color_pattern": "true",
+		"background_image": "",
+		"content_alignment": "bottom",
+		"content_title": "Ge ett utsatt barn en fin sommar",
+		"content_text": "Det vet väll att vårat överskott går till IOGT - NTO's arbete.",
+		"content_link": "",
+		"content_image": "assets/img/mockup/image001.jpg",
+		"text_protection": "",
+		"text_alignment": "bottom"
+		})
+			</div>
+		<div class="col-xs-12">
+			<div class="titlegame">
 				<h4>Mina favoritspel</h4>
+			</div>
 		</div>
-
 	@@include('blocks/promotion/block/_promotiom-favgame.html')
 	@@include('blocks/promotion/block/_promotiom-favgame.html')
 	@@include('blocks/promotion/block/_promotiom-favgame.html')
 	@@include('blocks/promotion/block/_promotiom-favgame.html')
+		</div></div>
 
 	</div>
-</div>
-
-</div>
 
 
 @@include('layout/_footer.html', {"show_footer": true})
