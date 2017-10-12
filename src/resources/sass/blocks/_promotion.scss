@@ -7,8 +7,11 @@
 		min-height: 220px;
 		margin-bottom: 40px;
 	}
-
-	p {
+	@media screen and (max-width: 767px) {
+		min-height: 0;
+		margin-bottom: 0;
+	}
+		p {
 		margin: $margin-small 0 0 0;
 
 		&:first-of-type {
@@ -20,7 +23,7 @@
 .block-promotion__header {
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
-	min-height: 80px;
+	height: 80px;
 
 	&.background-color-lightorange {
 		border: 1px solid $color-border-orange;

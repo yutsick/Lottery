@@ -23,6 +23,20 @@
 		margin-bottom: 10px;
 	}
 
+	.block-promotion-minified{
+		color: black;
+		display: none;
+		font-size: 18px;
+		float: left;
+		@media screen and (max-width: 767px) {
+			display: block;
+		}
+	}
+
+	.block-promotion-minifiedmoney{
+		float: right;
+	}
+
 	.block-promotion__text {
 		font-weight: 500;
 		margin-top: 0;

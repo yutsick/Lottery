@@ -8,8 +8,14 @@
 				@@if(context.content_image) {
 				<img src="@@content_image">
 				}
-			</div>
+                <div class="block-promotion-minified">
+                    @@if(context.content_title){
+                    <span style="left:40px; top:16px; float:left; position: absolute">@@content_title </span>
+                    <span style="right: 40px;top:16px; position: absolute">@@content_pris </span>
 
+                    }
+                </div>
+			</div>
 			<div class="block-promotion__content">
 				@@if(context.content_title){
 				<p class="block-promotion__title h4">@@content_title</p>
@@ -28,7 +34,7 @@
 					<p class="wallet-money__amount">@@content_pris</p>
 					}
 				</div>
-			</div>
+            </div>
 		</a>
 	</div>
 </div>
