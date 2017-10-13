@@ -149,7 +149,7 @@
 		text-transform: none;
 		opacity: 1;
 		transform: scale(1);
-		transition: opacity $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-slow $ease-in-out;
+		transition: opacity $duration-quick $delay-slow $ease-in-out, transform $duration-quick $delay-slow $ease-in-out;
 		text-shadow: none;
 		transition-duration: 1s;
 
