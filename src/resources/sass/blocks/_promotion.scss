@@ -90,13 +90,20 @@
 	padding-top: 68px;
 }
 
-.shadow:hover{
+
+.shadow{
+	transition: 0.8s;
+
+	&:hover{
 	-webkit-box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
 	-moz-box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
 	box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
 	transform: scale(1.05);
-	transition:$duration-slow $delay-none $ease-in-out, transform $duration-slow $delay-none $ease-in-out;
+	transition:$duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
 	border-radius: 10px;
+	transition-duration: 0.8s;
+
+	}
 }
 
 .block-promotion__image {
@@ -149,7 +156,7 @@
 		text-transform: none;
 		opacity: 1;
 		transform: scale(1);
-		transition: opacity $duration-quick $delay-slow $ease-in-out, transform $duration-quick $delay-slow $ease-in-out;
+		transition: opacity $duration-quick $delay-fast $ease-in-out, transform $duration-quick $delay-fast $ease-in-out;
 		text-shadow: none;
 		transition-duration: 1s;
 
