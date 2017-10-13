@@ -154,7 +154,7 @@
 		text-transform: none;
 		opacity: 1;
 		transform: scale(1.05);
-		transition:$duration-quicker $delay-none $ease-in-out, transform $duration-quicker $delay-none $ease-in-out;
+		transition:$duration-fast $delay-none $ease-in-out, transform $duration-fast $delay-none $ease-in-out;
 		text-shadow: none;
 
 		@include min-screen($screen-sm-min) {
