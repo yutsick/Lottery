@@ -8,7 +8,15 @@ export default function () {
 	let top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
 	let mobile_width = 768;
 
-	function fixed_menu() {
+    $(".new-message")
+        .css("display", "flex")
+        .hide()
+		.delay(2000)
+        .fadeIn(600);
+
+
+
+        function fixed_menu() {
 		$(window).scroll(function () {
 			let $alert = $('#alert-cookie');
 			let alert_height = $alert.outerHeight();
@@ -24,7 +32,8 @@ export default function () {
 		});
 	}
 
-	// Hide Header on on scroll down
+
+    // Hide Header on on scroll down
 	function top_show_hide() {
 		let didScroll;
 		let lastScrollTop = 0;
@@ -45,6 +54,14 @@ export default function () {
 			}
 		}, 250);
 
+
+        $(document).ready(function () {
+            $("#closemessage").click(function () {
+                $('.new-message').fadeOut(600);
+            });
+        });
+
+
 		function hasScrolled() {
 			let st = $(this).scrollTop();
 			let $win = $(window);
@@ -61,5 +78,7 @@ export default function () {
 			lastScrollTop = st;
 		}
 	}
+
+
 }
 

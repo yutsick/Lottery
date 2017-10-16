@@ -91,17 +91,17 @@
 }
 
 
-.shadow{
-	transition: 0.2s;
+	.shadow{
+		transition: 0.2s;
 
-	&:hover{
-	-webkit-box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
-	-moz-box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
-	box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
-	transform: scale(1.05);
-	transition:$duration-quicker $delay-none $ease-in-out, transform $duration-quicker $delay-none $ease-in-out;
-	border-radius: 10px;
-	}
+		&:hover{
+		-webkit-box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
+		-moz-box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
+		box-shadow: 0px 25px 156px -19px rgba(1, 28, 48, 0.59);
+		transform: scale(1.05);
+		transition:$duration-quicker $delay-none $ease-in-out, transform $duration-quicker $delay-none $ease-in-out;
+		border-radius: 10px;
+		}
 }
 
 .block-promotion__image {
