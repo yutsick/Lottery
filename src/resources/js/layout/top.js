@@ -12,14 +12,23 @@ export default function () {
 
 
 
+    $(".msgcontent").delay(2000).queue(function(next){
+        $(".msgcontent").addClass("new-message__show").animate({ left: "-200" }, 1500 )
+        ;
+        next();
+
+            $(".msgcontent").delay(15000).queue(function(second){
+                $(".msgcontent").removeClass("new-message__show");
+                second();
+            });
+
+    });
+
 
     $(document).ready(function () {
-        $(".new-message").delay(2000).queue(function(next){
-            $(this).addClass("new-message__show");
-            next();
+        $(".new-message__button").click(function() {
+            $(".msgcontent").removeClass("new-message__show");
         });
-
-
     });
 
         function fixed_menu() {
