@@ -12,26 +12,16 @@
 		</a>
 	</div>
 
-
-
     <div class="alert alert-info" role="alert">
 		<button type="button" class="close js-action-close" aria-label="Close"><span
 			aria-hidden="true"><i class="icon icon-close icon-size-small"></i></span></button>
 		<a href="/" target="_self"><strong>540 500 kr i Jackpot</strong></a>, dragning 11 Mars
 	</div>
 
-    <div class="msgcontent">
-            <div class="new-message">
-                    <div class="col-xs-1 new-message__icon new-message__icon--ml2017">
-                        ML
-                    </div>
-                    <div class="col-xs-10 col-xs-offset-1 new-message__message-text">
-                        <h6>Nytt meddelande</h6>
-                        <p>Du har en ny bonus att hämta!</p>
-                    </div>
-                    <button class="new-message__button"><i class="icon icon-close"></i></button>
-            </div>
-    </div>
+    @@include('components/_message.html',{
+    "background_image": "assets/img/mockup/ML.png"
+    })
+
 
 
     <div class="top-account">

@@ -13,11 +13,12 @@ export default function () {
 
 
     $(".msgcontent").delay(2000).queue(function(next){
-        $(".msgcontent").addClass("new-message__show").animate({ left: "-200" }, 1500 )
-        ;
+        $(".msgcontent").addClass("new-message__show").animate({ left: "-400" }, 500 );
         next();
+        $("body").css("overflow-x", "hidden");
 
-            $(".msgcontent").delay(15000).queue(function(second){
+
+        $(".msgcontent").delay(15000).queue(function(second){
                 $(".msgcontent").removeClass("new-message__show");
                 second();
             });
