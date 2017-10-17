@@ -11,6 +11,14 @@
   font-family: ProximaNova;
   src: url(../fonts/PROXIMANOVA-REGULAR.OTF);
 }
+@font-face {
+  font-family: ProximaNovaSemiBold;
+  src: url(../fonts/PROXIMANOVA-SEMIBOLD.OTF);
+}
+@font-face {
+  font-family: ProximaNovaExtraBold;
+  src: url(../fonts/PROXIMANOVA-EXTRABLD.OTF);
+}
 
 
 // Margins
@@ -41,6 +49,8 @@ $base-line-height: 20px;
 
 // Base Headings
 $base-heading-family: UniNeueHeavy;
+$semi-heading-family: ProximaNovaExtraBold;
+$basic-heading-family: ProximaNovaSemiBold;
 
 /**
  * Colors
