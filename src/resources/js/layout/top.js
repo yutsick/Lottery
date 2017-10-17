@@ -1,3 +1,5 @@
+import alert from "../components/alert";
+
 export default function () {
 	top_show_hide();
 // 	fixed_menu();
@@ -8,13 +10,17 @@ export default function () {
 	let top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
 	let mobile_width = 768;
 
-    $(".new-message")
-        .css("display", "flex")
-        .hide()
-		.delay(2000)
-        .fadeIn(600);
 
 
+
+    $(document).ready(function () {
+        $(".new-message").delay(2000).queue(function(next){
+            $(this).addClass("new-message__show");
+            next();
+        });
+
+
+    });
 
         function fixed_menu() {
 		$(window).scroll(function () {
@@ -55,11 +61,7 @@ export default function () {
 		}, 250);
 
 
-        $(document).ready(function () {
-            $("#closemessage").click(function () {
-                $('.new-message').fadeOut(600);
-            });
-        });
+
 
 
 		function hasScrolled() {

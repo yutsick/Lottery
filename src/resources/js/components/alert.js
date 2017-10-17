@@ -2,6 +2,7 @@ export default function() {
 	$('.alert .js-action-close').on('click', function () {
 		let $alert = $(this).parents('.alert');
 		$alert.alert('close');
+        $(".new-message").addClass("new-message__alone");
 	});
 
 	$('.alert').on('closed.bs.alert', function () {
