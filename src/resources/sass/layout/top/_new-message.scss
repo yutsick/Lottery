@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1400px;
     position: relative;
+    z-index: 999;
     transition: transform $duration-fast $ease-standard $delay-none, right $duration-fast $ease-standard $delay-none;
 
   @media screen and (max-width: 767px) {
@@ -10,32 +11,36 @@
     }
 }
 
+
+.fixed {
+  position:fixed;
+  top:0;
+  z-index:99999;
+}
+
 .new-message {
-      display: flex;
-      position:fixed;
-      right:-500px;
-      align-items: center;
-      width: 300px;
-      border-radius: 10px;
-      border: 2px solid #d8dde6;
-      background-color:#f5f8fa;
-      z-index: 999;
-      top:$menu-height;
-      opacity: 0;
-      box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.1);
-
-    @media screen and (min-width: 1420px) {
+    display: flex;
+    position:absolute;
+    right:-500px;
+    align-items: center;
+    width: 300px;
+    z-index: 999;
+    top:20px;
+    border-radius: 10px;
+    border: 2px solid #d8dde6;
+    background-color:#f5f8fa;
+    opacity: 0;
+    box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.1);
+    @media screen and (max-width:1419px) {
+      top:71px;
     }
-
     @media screen and (max-width: 767px) {
         position: fixed;
         bottom: 80px;
-        margin-left: 10px;
-        margin-right: 10px;
         width: auto;
-        left: 0;
-        right: 0;
-        top: auto;
+        left: 10px;
+      right: 10px !important;
+      top: auto;
       }
       & h6{
           font-size: 16px;
@@ -45,25 +50,28 @@
 }
 
 .new-message__show{
-  opacity: 0.95;
-  right: 20px;
-  transition: opacity 1s , right 0.6s;
-  @media screen and (max-width: 767px) {
-    right: 0;
-    transition: opacity 0.5s
-  }
-
+    opacity: 0.95;
+    right: 20px;
+    transition: opacity 1s , right 0.6s;
+      @media screen and (max-width: 767px) {
+        right: 10px !important;
+        transition: opacity 0.5s
+      }
 }
 
+.new-message__remove{
+  @media screen and (max-width: 767px) {
+    bottom: 30px;
+  }
+}
 
 .new-message__alone{
-  opacity: 0;
-  right:-500px;
-  transition: opacity 0.6s , right 1s;
-  @media screen and (max-width: 767px) {
-    right: 0;
-    transition: opacity 0.5s
-  }
+    opacity: 0;
+    right:-500px;
+    transition: opacity 0.6s , right 1s;
+      @media screen and (max-width: 767px) {
+        transition: opacity 0.5s
+      }
 
 }
 

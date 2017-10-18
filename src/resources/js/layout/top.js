@@ -20,9 +20,27 @@ export default function () {
             $(".new-message").addClass("new-message__alone");  //.animate({ left: "-400" }, 500 );
                 second();
             });
+    });
 
 
 
+        $(document).ready(function () {
+            var top = $('.msgcontent').offset().top;
+            $(window).scroll(function (event) {
+                var y = $(this).scrollTop();
+                if (y >= top)
+                    $('.msgcontent').addClass('fixed');
+                else
+                    $('.msgcontent').removeClass('fixed');
+                $('.msgcontent').width($('.msgcontent').parent().width());
+            });
+        });
+
+
+    $(window).scroll(function(){
+//box one
+        var $win = $(window);
+        $('.new-message__show').css('right', 20 -$win.scrollLeft());
     });
 
 
