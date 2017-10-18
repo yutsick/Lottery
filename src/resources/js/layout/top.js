@@ -10,25 +10,25 @@ export default function () {
 	let top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
 	let mobile_width = 768;
 
-
-
-    $(".msgcontent").delay(2000).queue(function(next){
-        $(".msgcontent").addClass("new-message__show").animate({ left: "-400" }, 500 );
+    $(".new-message").delay(2000).queue(function(next){
+        $(".new-message").addClass("new-message__show");  //.animate({ left: "-400" }, 500 );
         next();
         $("body").css("overflow-x", "hidden");
 
 
-        $(".msgcontent").delay(15000).queue(function(second){
-                $(".msgcontent").removeClass("new-message__show");
+        $(".new-message").delay(15000).queue(function(second){
+            $(".new-message").addClass("new-message__alone");  //.animate({ left: "-400" }, 500 );
                 second();
             });
+
+
 
     });
 
 
     $(document).ready(function () {
         $(".new-message__button").click(function() {
-            $(".msgcontent").removeClass("new-message__show");
+            $(".new-message").addClass("new-message__alone");
         });
     });
 

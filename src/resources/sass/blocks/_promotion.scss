@@ -104,6 +104,25 @@
 		}
 }
 
+.favgamecontainer{
+	width: 100%;
+	margin-bottom: 10px;
+	@media screen and (max-width: $screen-sm) {
+		margin-bottom: 15px;
+	}
+}
+
+
+.favgame{
+	@media screen and (max-width: $screen-sm) {
+		padding: 5px 5px 5px 5px;
+	}
+	@media screen and (min-width: $screen-sm) {
+		padding: 10px 10px 10px 10px;
+	}
+
+}
+
 .block-promotion__image {
 
 	background-size: cover;

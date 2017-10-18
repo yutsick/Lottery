@@ -1,9 +1,8 @@
 .msgcontent{
     width: 100%;
-    display: none;
     max-width: 1400px;
     position: relative;
-    transition: transform $duration-fast $ease-standard $delay-none, opacity $duration-fast $ease-standard $delay-none;
+    transition: transform $duration-fast $ease-standard $delay-none, right $duration-fast $ease-standard $delay-none;
 
   @media screen and (max-width: 767px) {
       bottom: 0;
@@ -12,52 +11,60 @@
 }
 
 .new-message {
+      display: flex;
       position:absolute;
-      right: -380px;
+      right:-500px;
       align-items: center;
       width: 300px;
-      display: flex;
       border-radius: 10px;
       border: 2px solid #d8dde6;
       background-color:#f5f8fa;
       z-index: 999;
-      opacity: 1;
-      transition: transform $duration-fast $ease-standard $delay-none, opacity $duration-fast $ease-standard $delay-none;
-      -webkit-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.1);
-      -moz-box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.1);
+      opacity: 0;
       box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.1);
 
     @media screen and (min-width: 1420px) {
       top:20px;
     }
 
-
-  @media screen and (max-width: 767px) {
-      position: fixed;
-      bottom: 80px;
-      margin-left: 10px;
-      margin-right: 10px;
-      width: auto;
-      left: 0;
-      right: 0;
-      top: auto;
-    }
-    & h6{
-        font-size: 16px;
-        line-height: 1;
-        color: $color-ocean;
-    }
+    @media screen and (max-width: 767px) {
+        position: fixed;
+        bottom: 80px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+        left: 0;
+        right: 0;
+        top: auto;
+      }
+      & h6{
+          font-size: 16px;
+          line-height: 1;
+          color: $color-ocean;
+      }
 }
+
 .new-message__show{
-  display: flex;
-  opacity: 1;
+  opacity: 0.95;
+  right: 20px;
+  transition: opacity 1s , right 0.6s;
+  @media screen and (max-width: 767px) {
+    right: 0;
+    transition: opacity 0.5s
+  }
+
 }
 
 
 .new-message__alone{
+  opacity: 0;
+  right:-500px;
+  transition: opacity 0.6s , right 1s;
   @media screen and (max-width: 767px) {
-    bottom: 15px;
+    right: 0;
+    transition: opacity 0.5s
   }
+
 }
 
 
