@@ -12,7 +12,7 @@
 
 .new-message {
       display: flex;
-      position:absolute;
+      position:fixed;
       right:-500px;
       align-items: center;
       width: 300px;
@@ -20,11 +20,11 @@
       border: 2px solid #d8dde6;
       background-color:#f5f8fa;
       z-index: 999;
+      top:$menu-height;
       opacity: 0;
       box-shadow: 0px 6px 6px 0px rgba(0,0,0,0.1);
 
     @media screen and (min-width: 1420px) {
-      top:20px;
     }
 
     @media screen and (max-width: 767px) {
