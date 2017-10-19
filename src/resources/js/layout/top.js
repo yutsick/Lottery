@@ -4,7 +4,9 @@ export default function () {
 	top_show_hide();
 // 	fixed_menu();
 
-	let $top = $('#top');
+    $("body").css("overflow-x", "hidden");
+
+    let $top = $('#top');
 	let $top_menu = $('.top-menu');
 	let $top_account = $('.top-account');
 	let top_height = parseInt($top_menu.outerHeight() + $top_account.outerHeight());
@@ -13,7 +15,6 @@ export default function () {
     $(".new-message").delay(2000).queue(function(next){
         $(".new-message").addClass("new-message__show");  //.animate({ left: "-400" }, 500 );
         next();
-        $("body").css("overflow-x", "hidden");
 
 
         $(".new-message").delay(15000).queue(function(second){
@@ -24,17 +25,17 @@ export default function () {
 
 
 
-        $(document).ready(function () {
-            var top = $('.msgcontent').offset().top;
-            $(window).scroll(function (event) {
-                var y = $(this).scrollTop();
-                if (y >= top)
-                    $('.msgcontent').addClass('fixed');
-                else
-                    $('.msgcontent').removeClass('fixed');
-                $('.msgcontent').width($('.msgcontent').parent().width());
-            });
+    $(document).ready(function () {
+        var top = $('.msgcontent').offset().top;
+        $(window).scroll(function (event) {
+            var y = $(this).scrollTop();
+            if (y >= top)
+                $('.msgcontent').addClass('fixed');
+            else
+                $('.msgcontent').removeClass('fixed');
+            $('.msgcontent').width($('.msgcontent').parent().width());
         });
+    });
 
 
     $(window).scroll(function(){
