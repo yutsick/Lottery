@@ -7,8 +7,8 @@
 
 <div class="content-wrapper ml-2017">
     <div class="container container-fluid">
-    <h1>Mina uppgifter</h1>
-    <p>Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
+        <h1>Mina uppgifter</h1>
+        <p>Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
 
 
         <!--<button class="editbtn">Ändra</button>-->
@@ -35,6 +35,22 @@
             <tr>
                 <th class="border" >Chat-namn</th>
                 <td>Djpingo</td>
+                <th><button class="editbtn">Ändra</button></th>
+            </tr>
+            <tr>
+                <th class="border" >Nyhetsbrev</th>
+                <td class="news2 ">
+                    <div class="test2">
+                        Ja
+                    </div>
+                </td>
+                <td class="news1 ">
+                        <input type="checkbox" value="1" id="checkja">
+                        <label for="checkja">Ja</label>
+
+                        <input type="checkbox" value="2" id="checknej">
+                        <label for="checknej">Nej</label>
+                 </td>
                 <th><button class="editbtn">Ändra</button></th>
             </tr>
         </table>
@@ -64,42 +80,49 @@
 
         <table id="tableone" class="customers" style="margin-top: 30px;">
             <caption class="nono">Kontonummer</caption>
-            <tr>
-                <th class="border" >Clearing</th>
-                <td>8368-3</td>
-                <th class="nonoa"> </th>
-            </tr>
-            <tr>
-                <th class="border">Kontonummer</th>
-                <td>1244 19 123 123 </td>
+            <tr style="height: 100px;">
+                <th class="border" >Kontonummer</th>
+                <td class="konto1">
+                    <div class="col-xs-12">
+                        <div class="row"></div>
+                        <label for="usr">Clearingnr</label>
+                        <label style="margin-left: 20px;" for="pwd">Kontonummer</label>
+                        <input class="col-xs-4" style="height: 40px; border-radius: 10px; border: 1px solid #DEE1E8" type="text" id="usr">
+                        <input class="col-xs-7 col-xs-offset-1" style="height: 40px; border-radius: 10px; border: 1px solid #DEE1E8" type="text"id="pwd">
+                    </div>
+                </td>
+                <td class="konto2">
+                    123123123123123
+                </td>
+
                 <th><button class="editbtn">Ändra</button></th>
             </tr>
         </table>
 
 
-<div class="col-md-12" style="margin-top: 30px;">
-    <h4>Mina Verktyg</h4>
-    <div class="col-md-2">
-        <button class="btn btn-primary btn-icon" style="width: 90%;">Playscan</button><br>
-        <p>Håll spelandet under
-            kontroll med Playscan</p>
-    </div>
-    <div class="col-md-2">
-        <button class="btn btn-primary btn-icon" style="width: 90%">Spelbudget</button><br>
-        <p>Bestäm i förväg var
-            dina spelgränser gåra</p>
-    </div>
-    <div class="col-md-2">
-        <button class="btn btn-primary btn-icon" style="width: 90%">Tidsgräns</button><br>
-        <p>Spela inte längre tid
-            än du tänkt dig</p>
-    </div>
-    <div class="col-md-2">
-        <button class="btn btn-primary btn-icon" style="width: 90%">Spelstopp</button><br>
-        <p>Om du vill spärra dig
-            från våra onlinespel</p>
-    </div>
-</div>
+        <div class="col-md-12" style="margin-top: 30px;">
+            <h4>Mina Verktyg</h4>
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-icon" style="width: 90%;">Playscan</button><br>
+                <p>Håll spelandet under
+                    kontroll med Playscan</p>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-icon" style="width: 90%">Spelbudget</button><br>
+                <p>Bestäm i förväg var
+                    dina spelgränser gåra</p>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-icon" style="width: 90%">Tidsgräns</button><br>
+                <p>Spela inte längre tid
+                    än du tänkt dig</p>
+            </div>
+            <div class="col-md-2">
+                <button class="btn btn-primary btn-icon" style="width: 90%">Spelstopp</button><br>
+                <p>Om du vill spärra dig
+                    från våra onlinespel</p>
+            </div>
+        </div>
 
 
     </div>

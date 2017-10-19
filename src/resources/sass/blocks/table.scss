@@ -2,7 +2,7 @@
   width: 100%;
   border-collapse: separate;
   margin-bottom: 50px;
-  border: 4px solid $color-feather;
+  border: 1px solid $color-feather;
   border-top:0;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius:10px;
@@ -11,12 +11,54 @@
 .customers td{
   padding: 20px;
   width: 250px;
+  height: 50px;
   float:left;
   outline: none !important;
+  font-family: $basic-heading-family;
 }
 
 .customers td:nth-child(3) {
   float: right;
+}
+
+[contenteditable="true"]{
+    border: 1px solid $color-feather;
+    border-radius: 10px;
+    &.news1{
+      display: block;
+      float: left !important;
+      padding-left: 0;
+      border: 0;
+    }
+    &.news2{
+      display: none;
+    }
+    &.konto1{
+      display: block;
+      float: left !important;
+      padding-left: 0;
+      border: 0;
+    }
+    &.konto2{
+      display: none;
+    }
+
+}
+
+.konto1{
+    display: none;
+}
+.konto2{
+    display: block;
+  float: left !important;
+  padding-top: 40px !important;
+}
+
+.news2{
+  display: block;
+}
+.news1 {
+  display: none;
 }
 
 tbody{
@@ -24,6 +66,36 @@ tbody{
   border-bottom-left-radius:10px;
 
 }
+input[type="checkbox"] {
+  visibility: hidden;
+}
+input[type="checkbox"] + label:before {
+  border: 1px solid #333;
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em sans-serif;
+  height: 18px;
+  margin: 0 5px 0 0;
+  padding: 0;
+  vertical-align: top;
+  width: 18px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background: #fff;
+  color: #333;
+  content: "X";
+  text-align: center;
+}
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+.checkbox label{
+  margin-right: 20px;
+  padding: 0;
+}
+
 
 .editbtn{
   background-color: transparent;
@@ -50,18 +122,21 @@ tbody{
 }
 .nono{
   background-color: #d6eeff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
   padding:15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius:10px;
   color: black;
+  font-family: $basic-heading-family;
   border: 1px solid #a2c3ff;
 
 }
 .customers tr:last-child{
-  background: pink;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius:10px;
-  }
+  border-top: 1px solid;
+}
 
 
 
@@ -70,6 +145,8 @@ tbody{
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
+  min-height: 65px;
   color: $color-blueberry;
+  font-family: $basic-heading-family;
   width: 130px;
 }
