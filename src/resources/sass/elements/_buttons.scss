@@ -8,7 +8,7 @@
 	border: 1px solid transparent;
 	font-family:$semi-heading-family;
 
-	i {
+	i{
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	}
 
@@ -164,7 +164,7 @@
 
 	i {
 		display: block;
-		font-size: 14px;
+		font-size: $base-font-size;
 	}
 }
 
@@ -176,7 +176,7 @@
 	height: 44px;
 
 	i {
-		font-size: 14px;
+		font-size: $base-font-size;
 		line-height: 1.5	;
 		color: $color-complement-sky;
 	}

@@ -7,7 +7,7 @@
 		min-height: 220px;
 		margin-bottom: 40px;
 	}
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: $screen-sm) {
 		min-height: 0;
 		margin-bottom: 0;
 	}
@@ -33,7 +33,7 @@
 		border: 1px solid $color-border-pink;
 	}
 
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: $screen-sm) {
 		height: 50px;
 		border-bottom-right-radius: 5px;
 		border-bottom-left-radius: 5px;
@@ -104,7 +104,7 @@
 		}
 }
 
-.favgamecontainer{
+.favorite-game-list{
 	width: 100%;
 	margin-bottom: 10px;
 	@media screen and (max-width: $screen-sm) {
@@ -112,17 +112,21 @@
 		padding-left: 5px;
 		padding-right: 5px;
 	}
+
 }
 
 
-.favgame{
+.favorite-game-list__item{
+	border-radius: 10px;
 	@media screen and (max-width: $screen-sm) {
 		padding: 5px 5px 5px 5px;
 	}
 	@media screen and (min-width: $screen-sm) {
 		padding: 10px 10px 30px 10px;
 	}
-
+	.favorite-game-list__item--rounded{
+		border-radius: 10px;
+	}
 }
 
 .block-promotion__image {
@@ -148,7 +152,6 @@
 	&.block-promotion__image--square {
 		padding-bottom: 30%;
 		padding-top: 35%;
-		border-radius: 10px;
 	}
 }
 

@@ -1,6 +1,6 @@
 .block-promotion--image {
 	min-height: 0;
-	@media screen and (max-width: 767px) {
+	@media screen and (max-width: $screen-sm) {
 		padding-top: 10px;
 	}
 

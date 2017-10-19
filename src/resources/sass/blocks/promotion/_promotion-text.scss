@@ -1,5 +1,5 @@
 .block-promotion--text {
-	&:not(.text-align-center) {
+	&:not(.text-align-center, .text-align-right) {
 		.block-promotion__content {
 			padding-right: 30%;
 
@@ -11,7 +11,7 @@
 }
 
 [class*='col-']:not(.col-sm-6):not(.col-md-12) .block-promotion--text {
-	&:not(.text-align-center) {
+	&:not(.text-align-center .text-align-right) {
 		.block-promotion__content {
 			padding-right: 30%;
 

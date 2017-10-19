@@ -1,25 +1,81 @@
-.customers {
-  width: 100%;
-  border-collapse: separate;
-  margin-bottom: 50px;
-  border: 1px solid $color-feather;
-  border-top:0;
+.detailstabel {
+    width: 100%;
+    border-collapse: separate;
+    margin-bottom: 50px;
+    border: 1px solid $color-feather;
+    border-top:0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius:10px;
+
+    & td{
+        padding: 20px;
+        width: 250px;
+        height: 50px;
+        float:left;
+        outline: none !important;
+        font-family: $basic-heading-family;
+            :nth-child(3){
+            float: right;
+            }
+    }
+    & th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 15px;
+        text-align: left;
+        min-height: 65px;
+        color: $color-blueberry;
+        font-family: $basic-heading-family;
+        width: 130px;
+    }
+
+    & tr:last-child{
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius:10px;
+      border-top: 1px solid;
+    }
+}
+
+
+.details--tabel__caption{
+  background-color: #d6eeff;
+  font-size: 16px;
+  font-weight: 900;
+  padding:15px;
+  border-top-right-radius: 10px;
+  border-top-left-radius:10px;
+  color: black;
+  font-family: $basic-heading-family;
+  border: 1px solid #a2c3ff;
+}
+
+.detailstabel tr:last-child{
   border-bottom-right-radius: 10px;
   border-bottom-left-radius:10px;
+  border-top: 1px solid;
 }
 
-.customers td{
-  padding: 20px;
-  width: 250px;
-  height: 50px;
-  float:left;
-  outline: none !important;
-  font-family: $basic-heading-family;
+.checkbox label{
+  margin-right: 20px;
+  padding: 0;
 }
 
-.customers td:nth-child(3) {
+
+.editbtn{
+  background-color: transparent;
   float: right;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding-right: 60px;
+  outline:none !important;
 }
+
+.editbtn:hover{
+  border: none;
+  outline:none !important;
+}
+
 
 [contenteditable="true"]{
     border: 1px solid $color-feather;
@@ -42,7 +98,6 @@
     &.konto2{
       display: none;
     }
-
 }
 
 .konto1{
@@ -89,64 +144,4 @@ input[type="checkbox"]:checked + label:before {
 }
 input[type="checkbox"]:checked + label:after {
   font-weight: bold;
-}
-
-.checkbox label{
-  margin-right: 20px;
-  padding: 0;
-}
-
-
-.editbtn{
-  background-color: transparent;
-  float: right;
-  border: none;
-  width: 20px;
-  height: 20px;
-  padding-right: 60px;
-  outline:none !important;
-}
-
-.editbtn:hover{
-  border: none;
-  outline:none !important;
-}
-
-
-.nonoa{
-  margin-left: 20px;
-}
-
-.customers th{
-  padding: 15px;
-}
-.nono{
-  background-color: #d6eeff;
-  font-size: 16px;
-  font-weight: 900;
-  padding:15px;
-  border-top-right-radius: 10px;
-  border-top-left-radius:10px;
-  color: black;
-  font-family: $basic-heading-family;
-  border: 1px solid #a2c3ff;
-
-}
-.customers tr:last-child{
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius:10px;
-  border-top: 1px solid;
-}
-
-
-
-
-.customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  min-height: 65px;
-  color: $color-blueberry;
-  font-family: $basic-heading-family;
-  width: 130px;
 }

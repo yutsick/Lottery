@@ -7,20 +7,6 @@
 }
 
 
-@font-face {
-  font-family: ProximaNova;
-  src: url(../fonts/PROXIMANOVA-REGULAR.OTF);
-}
-@font-face {
-  font-family: ProximaNovaSemiBold;
-  src: url(../fonts/PROXIMANOVA-SEMIBOLD.OTF);
-}
-@font-face {
-  font-family: ProximaNovaExtraBold;
-  src: url(../fonts/PROXIMANOVA-EXTRABLD.OTF);
-}
-
-
 // Margins
 $margin-default: 20px;
 $margin-medium: 15px;
@@ -40,17 +26,18 @@ $light: 100;
 $regular: 400;
 $medium: 400;
 $bold: 600;
+$extrabold: 800;
 
 // Base Font
-$base-font-family: ProximaNova; //  'Montserrat', sans-serif förr
+$base-font-family: 'Proxima Nova'; //  'Montserrat', sans-serif förr
 $base-font-weight: $regular;
 $base-font-size: 14px;
 $base-line-height: 20px;
 
 // Base Headings
 $base-heading-family: UniNeueHeavy;
-$semi-heading-family: ProximaNovaExtraBold;
-$basic-heading-family: ProximaNovaSemiBold;
+$semi-heading-family: 'Proxima Nova';
+$basic-heading-family: 'Proxima Nova';
 
 /**
  * Colors

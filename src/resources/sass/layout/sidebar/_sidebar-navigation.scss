@@ -45,7 +45,7 @@
 			padding: $padding-medium $padding-medium 0 $padding-default;
 			line-height: 1;
 			text-align: left;
-			font-size: 14px;
+			font-size: $base-font-size;
 			font-weight: 600;
 			color: $color-base-secondary;
 			position: relative;
@@ -118,7 +118,7 @@
 @mixin menu-main-link-mobile() {
 	padding: $padding-small 0 0;
 	font-size: 10px;
-	line-height: 14px;
+	line-height: $base-font-size;
 	text-align: center;
 }
 

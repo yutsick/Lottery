@@ -11,7 +11,7 @@
 		flex-direction: column;
 		color: $color-blueberry;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: $screen-sm) {
 			display: none;
 			margin-top: 10px;
 			margin-bottom: 10px;
@@ -19,7 +19,7 @@
 	}
 
 	.block-promotion__title {
-		color: black;
+		color: $color-black;
 		margin-bottom: 10px;
 	}
 
@@ -28,7 +28,7 @@
 		display: none;
 		font-size: 18px;
 		float: left;
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: $screen-sm) {
 			display: block;
 
 			.block-promotion-minified--text {
@@ -46,7 +46,7 @@
 	}
 
 	.gametitle{
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: $screen-sm) {
 			padding-top: 40px;
 		}
 	}
@@ -56,10 +56,10 @@
 	}
 
 	.block-promotion__text {
-		font-weight: 500;
 		margin-top: 0;
-		font-size: 14px;
+		font-size: $base-font-size;
 		font-family: $basic-heading-family;
+		font-weight: $bold;
 
 		p{
 		}
@@ -67,9 +67,10 @@
 
 	.wallet-money {
 		padding-top: 10px;
-		font-size: 14px;
+		font-size: $base-font-size;
 		margin-top: auto;
 		font-family: $basic-heading-family;
+		font-weight: $bold;
 
 
 		hr {
@@ -83,6 +84,6 @@
 	.wallet-money__amount {
 		font-size: 18px;
 		font-family: $semi-heading-family;
-
+		font-weight: $extrabold;
 	}
 }
