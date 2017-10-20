@@ -1,4 +1,4 @@
-.detailstabel {
+.details-table {
     width: 100%;
     border-collapse: separate;
     margin-bottom: 50px;
@@ -6,115 +6,151 @@
     border-top:0;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius:10px;
-
     & td{
-        padding: 20px;
-        width: 250px;
-        height: 50px;
+        padding: 25px;
         float:left;
-        outline: none !important;
+        color: #77839e;
+        font-weight: 600;
+        outline: none;
         font-family: $basic-heading-family;
             :nth-child(3){
             float: right;
             }
+      &[contenteditable="true"]{
+          background-color: white;
+          height: 40px;
+          margin-top: 12px;
+          padding-left: 10px;
+          margin-left: 20px;
+          width: 200px;
+          padding-top: 12px;
+          border: 1px solid #DEE1E8;
+          border-radius: 5px;
+          color: #536785;
+          font-weight: 600;
+          &.change-password{
+              border: none;
+              display: block;
+              height: 100px;
+              width: 500px;
+          }
+          &.change-password--hidden{
+               display: none;
+          }
+          &.details-table__news--hidden{
+              display: block;
+              float: left;
+              padding-left: 0;
+              border: 0;
+              margin-left: 10px;
+              background-color: transparent;
+          }
+          &.details-table__news--visible{
+              display: none;
+          }
+          &.details-table__konto--hidden{
+              display: block;
+              float: left;
+              padding-left: 0;
+              width: 400px;
+              height: 85px;
+              border: 0;
+          }
+          &.details-table__konto--visible{
+              display: none;
+          }
+      }
     }
     & th {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 25px;
         padding-left: 15px;
         text-align: left;
-        min-height: 65px;
+        float: left;
+        height: 64px;
         color: $color-blueberry;
         font-family: $basic-heading-family;
         width: 130px;
+        &.button{
+          float: right;
+        }
     }
-
-    & tr:last-child{
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius:10px;
-      border-top: 1px solid;
-    }
-}
-
-
-.details--tabel__caption{
-  background-color: #d6eeff;
-  font-size: 16px;
-  font-weight: 900;
-  padding:15px;
-  border-top-right-radius: 10px;
-  border-top-left-radius:10px;
-  color: black;
-  font-family: $basic-heading-family;
-  border: 1px solid #a2c3ff;
-}
-
-.detailstabel tr:last-child{
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius:10px;
-  border-top: 1px solid;
-}
-
-.checkbox label{
-  margin-right: 20px;
-  padding: 0;
-}
-
-
-.editbtn{
-  background-color: transparent;
-  float: right;
-  border: none;
-  width: 20px;
-  height: 20px;
-  padding-right: 60px;
-  outline:none !important;
-}
-
-.editbtn:hover{
-  border: none;
-  outline:none !important;
-}
-
-
-[contenteditable="true"]{
-    border: 1px solid $color-feather;
-    border-radius: 10px;
-    &.news1{
-      display: block;
-      float: left !important;
-      padding-left: 0;
-      border: 0;
-    }
-    &.news2{
-      display: none;
-    }
-    &.konto1{
-      display: block;
-      float: left !important;
-      padding-left: 0;
-      border: 0;
-    }
-    &.konto2{
-      display: none;
+    & tr{
+        min-height: 50px;
     }
 }
-
-.konto1{
-    display: none;
+.details-table tr:nth-child(even){
+    background-color: #f5f8fa;
+    border: 1px solid black;
 }
-.konto2{
-    display: block;
-  float: left !important;
-  padding-top: 40px !important;
-}
-
-.news2{
+.details-table__konto--visible{
   display: block;
 }
-.news1 {
+
+.details-table__konto--hidden{
   display: none;
 }
+
+.details-table__news--visible{
+  display: block;
+}
+.details-table__news--hidden {
+  display: none;
+}
+
+.details-table__caption{
+    background-color: #d6eeff;
+    font-size: 16px;
+    font-weight:$bold ;
+    padding:15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius:10px;
+    color: black;
+    font-family: $basic-heading-family;
+    border: 1px solid #a2c3ff;
+}
+
+.details-table tr:last-child{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius:10px;
+    border-top: 1px solid;
+}
+
+
+.edit-button{
+    background-color: transparent;
+    display: block;
+    float: right;
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding-right: 60px;
+    outline:none;
+    &.edit-button-toggle{
+        color:#1670f6;
+    }
+}
+
+.password{
+  border: 1px solid $color-feather;
+  border-radius: 5px;
+  height: 35px;
+  outline: none;
+  width: 100%;
+  :focus{
+    border: 1px solid #ef7450;
+  }
+}
+
+.change-password{
+  display: none;
+}
+
+
+.checkboxnews{
+  margin-left: 20px;
+}
+
+
 
 tbody{
   border-bottom-right-radius: 10px;
@@ -124,24 +160,32 @@ tbody{
 input[type="checkbox"] {
   visibility: hidden;
 }
+
+.newlabel{
+  font-weight: 600;
+}
 input[type="checkbox"] + label:before {
-  border: 1px solid #333;
+  border: 1px solid #536785;
   content: "\00a0";
   display: inline-block;
-  font: 16px/1em sans-serif;
-  height: 18px;
-  margin: 0 5px 0 0;
+  height: 16px;
+  margin: 1px 5px 0 0;
   padding: 0;
   vertical-align: top;
-  width: 18px;
+  width: 16px;
 }
 
 input[type="checkbox"]:checked + label:before {
   background: #fff;
-  color: #333;
+  color: #536785;
+  font-size: 12px;
   content: "X";
   text-align: center;
 }
 input[type="checkbox"]:checked + label:after {
   font-weight: bold;
+}
+.checkbox label{
+  margin-right: 20px;
+  padding: 0;
 }
