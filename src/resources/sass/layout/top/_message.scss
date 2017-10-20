@@ -13,11 +13,24 @@
 
 
 .fixed {
-  @media screen and (min-width: $screen-sm) {
+  @media screen and (min-width: 1661px) {
     position: fixed;
     top: 0;
     z-index: 99999;
-    right:0;
+  }
+  @media screen and (max-width: 1660px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+  }
+
+
+  @media screen and (max-width: $screen-sm) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
   }
 }
 
