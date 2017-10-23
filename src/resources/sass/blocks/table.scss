@@ -3,8 +3,8 @@
     border-collapse: collapse;
   & td{
       padding-top: 15px;
-      padding-left: 25px;
       float:left;
+      padding-left: 25px;
       color: #77839e;
       opacity: 0.7;
       font-weight: 600;
@@ -28,10 +28,9 @@
           border-radius: 5px;
           color: #536785;
           font-weight: 600;
-
         @media screen and (max-width: $screen-xs) {
           margin-left: 20px;
-          width: 100%;
+          width: 90%;
           margin-bottom: 10px;
           margin-top: 5px;
           }
@@ -40,16 +39,16 @@
               display: block;
               width: 400px;
               height: 100px;
+              margin-left: 5px;
             @media screen and (max-width: $screen-xs) {
               width: 100%;
-              margin-left: 0;
               margin-top: 0;
               padding-left: 10px;
-              height: 180px;
+              height: 160px;
             }
-
           }
-          &.change-password--hidden{
+
+        &.change-password--hidden{
                display: none;
           }
           &.details-table__news--hidden{
@@ -96,16 +95,13 @@
           padding-left: 20px;
           padding-top: 15px;
         }
-
-
-
       &.button{
         float: right;
         @media screen and (max-width: $screen-xs) {
           padding-top: 0;
           position: absolute;
           right: 0;
-          margin-top: 25px;
+          margin-top: 15px;
         }
 
       }
@@ -121,6 +117,33 @@
     }
 }
 
+.padding5{
+  padding-left: 5px;
+}
+
+.padding0{
+  padding-left:0;
+  padding-right: 0;
+}
+
+.password{
+  border: 1px solid $color-feather;
+  border-radius: 5px;
+  height: 35px;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+  &:focus{
+    border: 1px solid #ef7450;
+  }
+}
+
+
+.change-password{
+  display: none;
+}
+
+
 .clearingnr {
   border: none;
   &[contenteditable="true"] {
@@ -128,7 +151,6 @@
     margin-right: 20px;
     padding: 10px;
     border-radius: 5px;
-    padding-right: 30px;
     &.ShowClear{
       display: none;
     }
@@ -140,11 +162,12 @@
 .konto{
   border: none;
   &[contenteditable="true"] {
-    border: 1px solid $color-feather;
+    border: 1px solid #DEE1E8;
     border-radius: 5px;
     margin-right: 20px;
     padding: 10px;
-    padding-right: 70px;
+    width: 100%;
+    padding-right: 50px;
   }
 }
 
@@ -152,17 +175,18 @@
   display: none;
     &[contenteditable="true"] {
     display: block;
+    padding-left: 0;
   }
 }
 
 .kontonr {
-  width: 500px !important;
+  width: 170px !important;
   &[contenteditable="true"] {
     padding-left: 0 !important;
     margin-top: 15px !important;
     border: none !important;
     padding-top: 0 !important;
-    width: 400px !important;
+    width: 275px !important;
     height: 100px !important;
   }
 }
@@ -171,10 +195,7 @@ tbody{
   border-left: 2px solid #d8dde6;
   border-right: 2px solid #d8dde6;
 }
-.test{
-  padding-left: 10px;
-  padding-right: 10px;
-}
+
 .table_wrapper {
   border-radius: 5px;
   border: 2px solid #d8dde6 ;
@@ -195,11 +216,6 @@ tbody{
   }
 }
 
-.details--tabel-edit__text {
-  @media screen and (max-width: $screen-xs) {
-    width: 100%;
-  }
-}
 
 .details-table__konto--visible{
   display: block;
@@ -230,7 +246,7 @@ tbody{
 }
 
 
-.edit-button{
+.edit-button, .edit-button1{
     background-color: transparent;
     display: block;
     float: right;
@@ -245,12 +261,16 @@ tbody{
 }
 
 .title{
+   padding-left: 0;
+   padding-top: 0px;
+   padding-bottom: 10px;
+ }
+
+.title1{
   padding-left: 0;
-  padding-top: 0px;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
 
 
 .td [contenteditable="true"]{
@@ -259,31 +279,13 @@ tbody{
   }
 }
 
-.password{
-  border: 1px solid $color-feather;
-  border-radius: 5px;
-  height: 35px;
-  outline: none;
-  width: 100%;
-  :focus{
-    border: 1px solid #ef7450;
-  }
-}
 
-.change-password{
-  display: none;
-}
-
-
-.checkboxnews{
-  margin-left: 20px;
-}
 
 
 
 tbody{
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius:10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius:5px;
 
 }
 input[type="checkbox"] {
@@ -297,18 +299,20 @@ input[type="checkbox"] + label:before {
   border: 1px solid #536785;
   content: "\00a0";
   display: inline-block;
-  height: 16px;
+  height: 20px;
+  width: 16px;
   margin: 1px 5px 0 0;
   padding: 0;
   vertical-align: top;
-  width: 16px;
 }
 
 input[type="checkbox"]:checked + label:before {
-  background: #fff;
   color: #536785;
-  font-size: 12px;
-  content: "X";
+  font-size: 8px;
+  height: 20px;
+  width: 16px;
+  font-family: 'ml-icons';
+  content: "\e908";
   text-align: center;
 }
 input[type="checkbox"]:checked + label:after {
