@@ -149,12 +149,19 @@ export default function () {
                 currentTD = $(this).parents('tr').find('td');
                 $.each(currentTD, function () {
                     $(this).prop('contenteditable', true);
+                    $('.clearingnr').prop('contenteditable', true);
+                    $('.konto').prop('contenteditable', true);
+                    $('.text').prop('contenteditable', true);
+
 
                 });
             } else {
                 $(this).removeClass('edit-button-toggle');
                 $.each(currentTD, function () {
                     $(this).prop('contenteditable', false);
+                    $('.clearingnr').prop('contenteditable', false);
+                    $('.konto').prop('contenteditable', false);
+                    $('.text').prop('contenteditable', false);
                 });
             }
             $(this).html($(this).html() == 'Ändra' ? 'Spara' : 'Ändra');
