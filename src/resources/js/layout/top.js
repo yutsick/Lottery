@@ -17,13 +17,13 @@ export default function () {
         next();
 
 
-
+/*
         $(".new-message").delay(15000).queue(function (second) {
             $(".new-message").addClass("new-message__alone");  //.animate({ left: "-400" }, 500 );
             second();
-        });
-    });
+        });*/
 
+    });
 
     $(document).ready(function () {
         var top = $('.message-container').offset().top;

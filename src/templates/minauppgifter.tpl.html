@@ -55,13 +55,12 @@
         </table>
     </div>
 
-
     <div class="table_wrapper">
         <table class="details-table">
             <caption class="details-table__caption">Profilinställningar</caption>
             <tr>
                 <th class="border" >Chat-namn</th>
-                <td>Djpingo</td>
+                <td data-placeholder="Ej angivet" class="details-table__placeholder">Djpingo</td>
                 <th class="button"><button id="editbtn" class="edit-button red">Ändra</button></th>
             </tr>
             <tr>
@@ -70,7 +69,7 @@
                         Ja
                 </td>
                 <td class="details-table__news--hidden" contenteditable="false">
-                    <div class="details-table__checkbox">
+                    <div class="details-table__checkbox" contenteditable="false">
                     <input type="radio" id="userAcceptTerms" contenteditable="false" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="1">
                         <label class="newlabel" for="userAcceptTerms" contenteditable="false" >Ja</label>
                     <input type="radio" id="userAcceptTerms1" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="2" contenteditable="false">
@@ -95,12 +94,12 @@
             </tr>
             <tr>
                 <th class="border" >Telefonnummer</th>
-                <td>Ej angivet</td>
+                <td data-placeholder="Ej angivet" class="details-table__placeholder"></td>
                 <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
             </tr>
             <tr>
                 <th class="border" >Mobilnummer</th>
-                <td>0768 95 67 48</td>
+                <td data-placeholder="Ej angivet" class="details-table__placeholder">0768 95 67 48</td>
                 <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
             </tr>
         </table>
@@ -112,14 +111,14 @@
             <caption class="details-table__caption">Kontonummer</caption>
             <tr>
                 <th class="border" >Kontonummer</th>
-                <td class="kontonr ShowClear">
-                    <div class="text">
-                        <div class="col-xs-4 padding0" style="margin-bottom: 20px;">
+                <td data-placeholder="Ej angivet" class="kontonr ShowClear" contenteditable="false">
+                    <div class="text" contenteditable="false">
+                        <div class="col-xs-4 padding0" style="margin-bottom: 20px;" contenteditable="false">
                             <span class="ShowClear" contenteditable="false" >Clearingnr</span>
                         </div>
 
-                        <div class="col-xs-8 padding0" style="margin-bottom: 20px;">
-                            <span class="ShowKonto" contenteditable="false" >Kontonummer</span>
+                        <div class="col-xs-8 padding0" style="margin-bottom: 20px;" contenteditable="false">
+                            <span class="ShowKonto" contenteditable="false" contenteditable="false">Kontonummer</span>
                         </div>
                     </div>
                     <div class="col-xs-4 padding0" contenteditable="false" >

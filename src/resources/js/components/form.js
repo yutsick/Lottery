@@ -168,6 +168,7 @@ export default function () {
                 currentTD = $(this).parents('tr').find('td');
                 $.each(currentTD, function () {
                     $(this).prop('contenteditable', true);
+                    this.focus();
                 });
             } else {
                 $(this).removeClass('edit-button-toggle');
