@@ -8,7 +8,7 @@
 <div class="content-wrapper ml-2017">
     <div class="container container-fluid">
         <h1>Mina uppgifter</h1>
-        <p style="color: #536785">Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
+        <p style="color: #536785;font-family: 'Proxima Nova';font-weight: 600;">Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
 
 
 
@@ -38,7 +38,7 @@
 
                         <div class="col-sm-6 col-xs-12 padding5">
 
-                        <div class="col-xs-12 title1">Bekräfta lösenord</div>
+                        <div class="col-xs-12 title">Bekräfta lösenord</div>
                             <input class="password" type="password">
                         </div>
 
@@ -69,11 +69,11 @@
                         Ja
                 </td>
                 <td class="details-table__news--hidden">
-                        <input type="checkbox" value="1" id="checkja">
-                        <label class="newlabel" for="checkja">Ja</label>
+                    <input type="checkbox" id="userAcceptTerms" class="custom-checkbox" value="1">
+                        <label class="newlabel" for="userAcceptTerms">Ja</label>
 
-                        <input type="checkbox" value="2" id="checknej">
-                        <label class="checkboxnews newlabel" for="checknej">Nej</label>
+                    <input type="checkbox" id="userAcceptTerms1" class="custom-checkbox" value="1">
+                        <label class="checkboxnews newlabel" for="userAcceptTerms1">Nej</label>
                  </td>
                 <th class="button"><button id="editbtn" class="edit-button red">Ändra</button></th>
             </tr>
@@ -131,27 +131,26 @@
             </tr>
         </table>
         </div>
-        <div class="col-md-12">
-            <h4>Mina Verktyg</h4>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-icon" style="width: 90%;">Playscan</button><br>
-                <p>Håll spelandet under
+
+        <div class="col-xs-12 h4 mina-verktyg--text">Mina Verktyg</div>
+        <div class="col-md-9 col-xs-12 container--verktyg">
+            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
+                <button class="btn btn-primary btn-icon details-table__button">Playscan</button><br>
+                <p class="details-table__button-text">Håll spelandet under
                     kontroll med Playscan</p>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-icon" style="width: 90%">Spelbudget</button><br>
-                <p>Bestäm i förväg var
-                    dina spelgränser gåra</p>
+            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
+                <button class="btn btn-primary btn-icon details-table__button">Spelbudget</button><br>
+                <p class="details-table__button-text">Bestäm i förväg var
+                    dina spelgränser går</p>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-icon" style="width: 90%">Tidsgräns</button><br>
-                <p>Spela inte längre tid
-                    än du tänkt dig</p>
+            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
+                <button class="btn btn-primary btn-icon details-table__button">Tidsgräns</button><br>
+                <p class="details-table__button-text">Spela inte längre tid än du tänkt dig</p>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-primary btn-icon" style="width: 90%">Spelstopp</button><br>
-                <p>Om du vill spärra dig
-                    från våra onlinespel</p>
+            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding ">
+                <button class="btn btn-primary btn-icon details-table__button">Spelstopp</button><br>
+                <p class="details-table__button-text">Om du vill spärra dig från våra onlinespel</p>
             </div>
         </div>
     </div>
