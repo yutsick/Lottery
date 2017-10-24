@@ -141,7 +141,26 @@ export default function () {
 	}
 
 
-        $(document).ready(function () {
+
+
+    function checkPasswordMatch() {
+        var password = $(".password").val();
+        var confirmPassword = $(".passwordconfirm").val();
+
+        if (password != confirmPassword)
+            $("#divCheckPasswordMatch").html("Lösenorden matchar ej!");
+        else
+            $("#divCheckPasswordMatch").html("");
+    }
+
+    $(document).ready(function () {
+        $(".passwordconfirm").keyup(checkPasswordMatch);
+    });
+
+
+
+
+    $(document).ready(function () {
         $('.edit-button').click(function () {
             var currentTD = $(this).parents('tr').find('td');
             if ($(this).html() == 'Ändra') {
@@ -161,6 +180,10 @@ export default function () {
         });
 
     });
+
+
+
+
 
 
     $(document).ready(function () {

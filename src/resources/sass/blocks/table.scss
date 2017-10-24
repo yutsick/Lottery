@@ -182,6 +182,17 @@
   }
 }
 
+.passwordconfirm{
+  border: 1px solid $color-feather;
+  border-radius: 5px;
+  height: 40px;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+  &:focus{
+    border: 1px solid #ef7450;
+  }
+}
 
 .change-password{
   display: none;
@@ -322,6 +333,12 @@ tbody{
     &.edit-button-toggle{
         color:#1670f6;
     }
+}
+
+#divCheckPasswordMatch{
+  font-size: 14px;
+  padding-left: 5px;
+  margin-top: 10px;
 }
 
 .title{
