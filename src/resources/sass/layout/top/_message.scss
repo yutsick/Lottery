@@ -25,9 +25,8 @@
     z-index: 99999;
   }
 
-
   @media screen and (max-width: $screen-sm) {
-    position: fixed;
+    position: relative;
     top: 0;
     right: 0;
     z-index: 99999;
