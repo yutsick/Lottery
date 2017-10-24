@@ -130,9 +130,16 @@
 
 
 .details-table__checkbox--margin {
-  margin: 5px 0px -7px !important;
+  margin: 5px 0px -5px !important;
   background-color: transparent !important;
+  height: 20px;
+  width: 20px;
+  &:checked:after{
+    top: 2px;
+    left:2px;
+  }
 }
+
 
 .padding5{
   padding-left: 5px;
@@ -151,6 +158,7 @@
 }
 
 .details-table__checkbox{
+
   @media screen and (max-width: $screen-xs) {
     width: 50px;
   }
@@ -321,20 +329,23 @@ tbody{
 }
 
 
-.edit-button, .edit-button1{
-    background-color: transparent;
-    display: block;
-    float: right;
-    border: none;
-    width: 20px;
-    height: 20px;
-    padding-right: 70px;
-    outline:none;
-    &.edit-button-toggle{
-        color:#1670f6;
-    }
+.edit-button, .edit-button1 {
+  background-color: transparent;
+  display: block;
+  float: right;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding-right: 70px;
+  outline: none;
+  @media screen and (max-width: $screen-xs) {
+    padding-top: 15px;
+  }
+  &.edit-button-toggle {
+    color: #1670f6;
+    padding-top: 0;
+  }
 }
-
 #divCheckPasswordMatch{
   font-size: 14px;
   padding-left: 5px;
