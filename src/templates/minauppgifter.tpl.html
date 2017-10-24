@@ -32,14 +32,14 @@
                     <div class="col-xs-12" style="padding-left: 0 !important;">
                         <div class="col-sm-6 col-xs-12 padding5">
 
-                        <div class="col-xs-12 title">Nytt lösenord</div>
+                        <div class="col-xs-12 title"contenteditable="false">Nytt lösenord</div>
                             <input class="password" type="password">
                         </div>
 
                         <div class="col-sm-6 col-xs-12 padding5">
 
-                        <div class="col-xs-12 title">Bekräfta lösenord</div>
-                            <input class="passwordconfirm" type="password">
+                        <div class="col-xs-12 title" contenteditable="false" >Bekräfta lösenord</div>
+                            <input  class="passwordconfirm" type="password">
                         </div>
 
                         <div id="divCheckPasswordMatch"></div>
@@ -69,12 +69,12 @@
                 <td class="details-table__news--visible">
                         Ja
                 </td>
-                <td class="details-table__news--hidden">
+                <td class="details-table__news--hidden" contenteditable="false">
                     <div class="details-table__checkbox">
-                    <input type="checkbox" id="userAcceptTerms" class="custom-checkbox details-table__checkbox--margin" value="1">
-                        <label class="newlabel" for="userAcceptTerms">Ja</label>
-                    <input type="checkbox" id="userAcceptTerms1" class="custom-checkbox details-table__checkbox--margin" value="1">
-                        <label class="checkboxnews newlabel" for="userAcceptTerms1">Nej</label>
+                    <input type="radio" id="userAcceptTerms" contenteditable="false" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="1">
+                        <label class="newlabel" for="userAcceptTerms" contenteditable="false" >Ja</label>
+                    <input type="radio" id="userAcceptTerms1" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="2" contenteditable="false">
+                        <label class="checkboxnews newlabel" contenteditable="false" for="userAcceptTerms1">Nej</label>
                     </div>
                  </td>
                 <th class="button"><button id="editbtn" class="edit-button red">Ändra</button></th>
@@ -115,18 +115,18 @@
                 <td class="kontonr ShowClear">
                     <div class="text">
                         <div class="col-xs-4 padding0" style="margin-bottom: 20px;">
-                            <span class="ShowClear">Clearingnr</span>
+                            <span class="ShowClear" contenteditable="false" >Clearingnr</span>
                         </div>
 
                         <div class="col-xs-8 padding0" style="margin-bottom: 20px;">
-                            <span class="ShowKonto" >Kontonummer</span>
+                            <span class="ShowKonto" contenteditable="false" >Kontonummer</span>
                         </div>
                     </div>
-                    <div class="col-xs-4 padding0">
-                        <span class="clearingnr"> 8-1259</span>
+                    <div class="col-xs-4 padding0" contenteditable="false" >
+                        <span class="clearingnr" contenteditable="false" > 8-1259</span>
                     </div>
-                    <div class="col-xs-8 padding0">
-                        <span class="konto">149500685490</span>
+                    <div class="col-xs-8 padding0" contenteditable="false">
+                        <span class="konto"contenteditable="false" >149500685490</span>
                      </div>
                 </td>
                 <th class="button"><button id="editbtn" class="edit-button1">Ändra</button></th>
