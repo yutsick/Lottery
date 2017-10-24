@@ -18,7 +18,7 @@
       &[contenteditable="true"]{
           background-color: white;
           height: 40px;
-          margin-top: 5px;
+          margin-top: 8px;
           padding-left: 10px;
           margin-left: 20px;
           width: 200px;
@@ -28,11 +28,10 @@
           border-radius: 5px;
           color: #536785;
           font-weight: $semibold;
-        @media screen and (max-width: $screen-xs) {
+          @media screen and (max-width: $screen-xs) {
           margin-left: 20px;
           width: 90%;
           margin-bottom: 10px;
-          margin-top: 5px;
           }
           &.change-password{
               border: none;
@@ -122,7 +121,7 @@
         }
     }
     & tr{
-        min-height: 50px;
+      height:56px;
     }
 }
 .details-table__checkbox--margin {
@@ -341,11 +340,12 @@ tbody{
   font-size: 14px;
   padding-right: 40px;
   outline: none;  @media screen and (max-width: $screen-xs) {
-    padding-top: 12px;
+  margin-top: 12px;
   }
   &.edit-button-toggle {
     color: #1670f6;
     padding-top: 0;
+    margin-top: 0;
   }
 }
 #divCheckPasswordMatch{
