@@ -3,7 +3,8 @@
 	font-size: 12px;
 	border-radius: 18px;
 	font-weight: $extrabold;
-	padding: 9px 30px;
+	padding: 10px 30px;
+	line-height:1;
 	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	border: 1px solid transparent;
 	font-family:$semi-heading-family;

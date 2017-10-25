@@ -1,0 +1,153 @@
+.meddelande__container{
+  float: left;
+  min-height: 775px;
+  border: 1px solid #d8dde6;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.meddelande__container-list{
+  height: 775px;
+  border-right: 1px solid #d8dde6;
+  padding: 0;
+  overflow: auto;
+}
+
+.meddelande__incoming-message--read{
+  border-bottom: 1px solid #d8dde6;
+  min-height: 100px;
+  .meddelande__incoming-message--title{
+    color: $color-blueberry;
+    font-size: 16px;
+    font-family: "Proxima Nova";
+    font-weight: $semibold;
+    padding: 20px 20px 0 20px;
+  }
+  .meddelande__incoming-message--date{
+    float: right;
+    font-weight: $semibold;
+  }
+  .meddelande__incoming-message--text{
+    color: $color-blueberry;
+    font-size: 16px;
+    font-family: "Proxima Nova";
+    font-weight: 500;
+    padding: 10px 50px 20px 20px;
+  }
+}
+
+.meddelande__incoming-message--unread{
+  border-bottom: 1px solid #d8dde6;
+  min-height: 100px;
+  .meddelande__incoming-message--title{
+    color: $color-ocean;
+    font-size: 16px;
+    font-family: "Proxima Nova";
+    font-weight: $extrabold;
+    padding: 20px 20px 0 20px;
+  }
+  .meddelande__incoming-message--date{
+    float: right;
+    color: $color-ocean;
+    font-weight: $semibold;
+  }
+  .meddelande__incoming-message--text{
+    color: $color-blueberry;
+    font-size: 16px;
+    font-family: "Proxima Nova";
+    font-weight: $semibold;
+    padding: 10px 20px 20px 20px;
+  }
+  .meddelande__incoming-message--notification {
+    border-radius: 100%;
+    background-color: #1670f6;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+  }
+}
+
+.meddelande__incoming-message--target {
+  border-bottom: 1px solid #d8dde6;
+  border-left: 4px solid #1670f6;
+  background-color: #f5f8fa;
+  min-height: 100px;
+  .meddelande__incoming-message--title {
+    color: $color-black;
+    font-size: 16px;
+    font-family: "Proxima Nova";
+    font-weight: $extrabold;
+    padding: 20px 20px 0 20px;
+  }
+  .meddelande__incoming-message--date {
+    float: right;
+    font-weight: $semibold;
+  }
+  .meddelande__incoming-message--text {
+    color: $color-ocean;
+    font-size: 16px;
+    font-family: "Proxima Nova";
+    font-weight: $semibold;
+    padding: 10px 20px 20px 20px;
+  }
+}
+
+.meddelande__message--header{
+  min-height: 80px;
+  border-bottom: 1px solid #d8dde6;
+  width: 100%;
+}
+
+.meddelande__message--header-icon{
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  padding-top: 20px;
+  & img{
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.meddelande__message--title{
+  margin-left: 60px;
+  font-size: 16px;
+  padding-top: 20px;
+  font-family: "Proxima Nova";
+  font-weight: $extrabold;
+  color: $color-blueberry;
+
+}
+
+.meddelande__message--subtitle{
+  margin-left: 60px;
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: $semibold;
+  color: $color-blueberry;
+}
+
+.meddelande__message--date{
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.meddelande__message--img{
+  height: 450px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: $color-blueberry;
+}
+.meddelande__message--text{
+  padding-top: 20px;
+  font-size: 14px;
+  padding-bottom: 20px;
+  font-family: "Proxima Nova";
+  font-weight: $semibold;
+  color: $color-ocean;
+}

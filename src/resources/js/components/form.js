@@ -102,6 +102,8 @@ export default function () {
 		});
 	}
 
+
+
 	function form_empty_input() {
 		$('.inner-addon .form-control').bind('keyup', function (e) {
 			let $input = $(this);
@@ -118,8 +120,7 @@ export default function () {
 
 		$('.inner-addon ').on('focus', '.form-control', function () {
 			let $input_containers = $('.inner-addon');
-			let $input = $(this);
-			let $input_container = $input.parent('.inner-addon');
+        			let $input_container = $input.parent('.inner-addon');
 			let input_value = $input.val();
 
 			if (input_value) {
@@ -140,9 +141,6 @@ export default function () {
 		});
 	}
 
-
-
-
     function checkPasswordMatch() {
         var password = $(".password").val();
         var confirmPassword = $(".passwordconfirm").val();
@@ -157,9 +155,6 @@ export default function () {
         $(".passwordconfirm").keyup(checkPasswordMatch);
     });
 
-
-
-
     $(document).ready(function () {
         $('.edit-button').click(function () {
             var currentTD = $(this).parents('tr').find('td');
@@ -167,8 +162,9 @@ export default function () {
                 $(this).addClass('edit-button-toggle');
                 currentTD = $(this).parents('tr').find('td');
                 $.each(currentTD, function () {
-                    $(this).prop('contenteditable', true);
-                    this.focus();
+                    var focusedElement = document.activeElement;
+                    $(this).prop('contenteditable', true).focus();
+
                 });
             } else {
                 $(this).removeClass('edit-button-toggle');
@@ -181,11 +177,6 @@ export default function () {
         });
 
     });
-
-
-
-
-
 
     $(document).ready(function () {
         $('.edit-button1').click(function () {
