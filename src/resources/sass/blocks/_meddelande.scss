@@ -1,13 +1,15 @@
 .meddelande__container{
-  min-height: 775px;
   border: 1px solid $color-gray-border;
   border-radius: 5px;
-  margin-bottom: 40px;
   padding: 0;
-  @media screen and (max-width: $screen-sm) {
-  min-height: 480px;
+  @media screen and(min-width: 1021px){
+    margin-bottom: 40px;
+  }
+  @media screen and(max-width: 1021px){
+  border: 0;
   }
 }
+
 
 .meddelande__container-list{
   height: 775px;
@@ -15,8 +17,12 @@
   padding: 0;
   overflow: auto;
   transition: right 2s;
-  @media screen and(max-width: $screen-sm){
+  @media screen and(max-width: 1021px){
     height: auto;
+    border-top: 1px solid $color-gray-border;
+    border-right: 1px solid $color-gray-border;
+    border-left: 1px solid $color-gray-border;
+    border-radius: 5px;
   }
 }
 
@@ -48,7 +54,7 @@
   border-left: 4px solid $color-light-blue;
   background-color:$color-dark-white;
   min-height: 100px;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
     border-left: 0;
     background-color:transparent;
   }
@@ -58,7 +64,7 @@
     font-family: "Proxima Nova";
     font-weight: $extrabold;
     padding: 20px 20px 0 20px;
-    @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: 1021px) {
       color: $color-blueberry;
       font-weight: $semibold;
     }
@@ -112,7 +118,7 @@
 
 
 .meddelande__message{
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
     position: absolute;
     left: 1000px;
     width: 100%;
@@ -121,7 +127,7 @@
 
 
 .meddelande__message--notvisible{
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
     position: absolute;
     display: none;
     right: 600px;
@@ -131,7 +137,7 @@
 }
 
 .meddelande__message--visible{
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
     position: absolute;
     width: 100%;
     left: 0;
@@ -143,14 +149,14 @@
 
 
 #messagelist li:nth-child(even){
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
   display: none;
   background-color: #F2F5F7;
   }
 }
 
 #messagelist li {
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
     display: none;
   }
 }
@@ -161,7 +167,7 @@
 }
 
 .test{
-  @media screen and (max-width: $screen-sm){
+  @media screen and (max-width: 1021px){
     display: inline !important;
     cursor: pointer;
   }
@@ -176,7 +182,8 @@
   display: none;
   cursor:pointer;
   margin-bottom: 40px;
-  @media screen and (max-width: $screen-sm) {
+  margin-top: 20px;
+  @media screen and (max-width: 1021px) {
     display: inline-block;
   }
 }
@@ -224,7 +231,7 @@
   font-family: "Proxima Nova";
   font-weight: $extrabold;
   color: $color-blueberry;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
     margin-top: -37px;
   }
 }
@@ -251,7 +258,7 @@
   width: 100%;
   margin-top: 20px;
   background-color: $color-blueberry;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
   height: 150px;
   }
 }
@@ -266,7 +273,7 @@
 
 .meddelande_message--button{
   padding-left: 0;
-  @media screen and (max-width: $screen-sm) {
+  @media screen and (max-width: 1021px) {
     text-align: center;
     margin-top: -20px;
   }

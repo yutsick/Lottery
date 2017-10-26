@@ -12,6 +12,8 @@
       font-family: $basic-heading-family;
       @media screen and (max-width: $screen-xs) {
         padding-left: 20px;
+        color: #546785;
+        opacity: 1;
         padding-bottom: 15px;
         padding-top: 0;
       }
@@ -99,6 +101,7 @@
         font-family: $basic-heading-family;
         @media screen and (max-width: $screen-xs) {
           height: 100%;
+          color: $color-black;
           padding-bottom:0;
           padding-left: 20px;
           padding-top: 15px;
@@ -117,6 +120,9 @@
           width: 100px;
           @media screen and (max-width: $screen-xs) {
             width: 100%;
+          }
+          @media screen and (min-width: $screen-xs) {
+            height: 56px;
           }
         }
     }
@@ -258,13 +264,13 @@
 }
 
 tbody{
-  border-left: 2px solid #d8dde6;
-  border-right: 2px solid #d8dde6;
+  border-left: 1px solid $color-gray-border;
+  border-right: 1px solid $color-gray-border;
 }
 
 .table_wrapper {
   border-radius: 5px;
-  border: 2px solid #d8dde6 ;
+  border: 1px solid $color-gray-border;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -274,7 +280,15 @@ tbody{
 
 .details-table tr:nth-child(even){
   background-color: #f5f8fa;
-  border-bottom: 1px solid $color-feather;
+  border-top: 1px solid $color-feather;
+  border-bottom: 0;
+  @media screen and (max-width: $screen-xs) {
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+.details-table tr:nth-child(3n+3){
   border-top: 1px solid $color-feather;
   @media screen and (max-width: $screen-xs) {
     width: 100%;
@@ -327,7 +341,7 @@ tbody{
   border-top-left-radius: 5px;
   color: black;
   font-family: "Proxima Nova";
-  border: 2px solid #a2c3ff;
+  border: 1px solid #a2c3ff;
   border-bottom: 1px solid #a2c3ff;
 }
 
@@ -337,15 +351,16 @@ tbody{
   display: block;
   float: right;
   border: none;
+  color:#546785;
   font-size: 14px;
   padding-right: 40px;
   outline: none;  @media screen and (max-width: $screen-xs) {
   margin-top: 12px;
   }
   &.edit-button-toggle {
-    color: #1670f6;
+    color: $color-light-blue;
     padding-top: 0;
-    margin-top: 0;
+    margin-top: 2px;
   }
 }
 #divCheckPasswordMatch{
