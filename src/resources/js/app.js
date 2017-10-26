@@ -12,6 +12,7 @@ import modal from './components/modal';
 import navigation from './layout/navigation';
 import top from './layout/top';
 import search from './components/search';
+import message from './components/message';
 import slider from './components/slider';
 import register from './layout/register';
 import loggedin from './layout/loggedin';
@@ -19,6 +20,7 @@ import loggedin from './layout/loggedin';
 $(function () {
 	modernizr();
 	alert();
+	message();
 	loggedin();
 	form();
 	modal();
