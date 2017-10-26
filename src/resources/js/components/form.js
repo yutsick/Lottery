@@ -102,8 +102,6 @@ export default function () {
 		});
 	}
 
-
-
 	function form_empty_input() {
 		$('.inner-addon .form-control').bind('keyup', function (e) {
 			let $input = $(this);
@@ -163,8 +161,7 @@ export default function () {
                 currentTD = $(this).parents('tr').find('td');
                 $.each(currentTD, function () {
                     var focusedElement = document.activeElement;
-                    $(this).prop('contenteditable', true).focus();
-
+                    $(this).prop('contenteditable', true);
                 });
             } else {
                 $(this).removeClass('edit-button-toggle');
@@ -177,6 +174,7 @@ export default function () {
         });
 
     });
+
 
     $(document).ready(function () {
         $('.edit-button1').click(function () {

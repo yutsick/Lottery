@@ -7,6 +7,7 @@
 
 <div class="content-wrapper ml-2017">
     <div class="container container-fluid">
+        <h1 class="block-hero__page-title">Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!</h1>
         <h1>Mina uppgifter</h1>
         <p style="color: #536785;font-family: 'Proxima Nova';font-weight: 600;">Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
 
@@ -23,26 +24,28 @@
             </tr>
             <tr>
                 <th class="border">E-postadress</th>
-                <td id="hello" class="details--tabel-edit__text">Hello@stefan.se</td>
+                <td contenteditable="false" data-placeholder="Ej angivet" class="details-table__placeholder">
+                    <input type="email" class="inputtext-table" value="stefan@brave.se">
+                </td>
                 <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
             </tr>
             <tr class="border">
                 <th class="border" >Lösenord</th>
                 <td class="change-password">
                     <div class="col-xs-12" style="padding-left: 0 !important;">
-                        <div class="col-sm-6 col-xs-12 padding5">
+                        <div class="col-sm-6 col-xs-12 padding5" contenteditable="false">
 
                         <div class="col-xs-12 title"contenteditable="false">Nytt lösenord</div>
                             <input class="password" type="password">
                         </div>
 
-                        <div class="col-sm-6 col-xs-12 padding5">
+                        <div class="col-sm-6 col-xs-12 padding5" contenteditable="false">
 
                         <div class="col-xs-12 title" contenteditable="false" >Bekräfta lösenord</div>
-                            <input  class="passwordconfirm" type="password">
+                            <input class="passwordconfirm" type="password">
                         </div>
 
-                        <div id="divCheckPasswordMatch"></div>
+                        <div id="divCheckPasswordMatch" contenteditable="false"></div>
                     </div>
                 </td>
                 <td class="change-password--hidden">
@@ -60,7 +63,9 @@
             <caption class="details-table__caption">Profilinställningar</caption>
             <tr>
                 <th class="border" >Chat-namn</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholder">Djpingo</td>
+                <td data-placeholder="Ej angivet" class="details-table__placeholder">
+                    <input contenteditable="false" type="text" class="inputtext-table" value="Djpingo">
+                </td>
                 <th class="button"><button id="editbtn" class="edit-button red">Ändra</button></th>
             </tr>
             <tr>
@@ -70,9 +75,9 @@
                 </td>
                 <td class="details-table__news--hidden" contenteditable="false">
                     <div class="details-table__checkbox" contenteditable="false">
-                    <input type="radio" id="userAcceptTerms" contenteditable="false" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="1">
+                    <input type="radio" id="userAcceptTerms" contenteditable="false" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="1" style="outline: 0;">
                         <label class="newlabel" for="userAcceptTerms" contenteditable="false" >Ja</label>
-                    <input type="radio" id="userAcceptTerms1" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="2" contenteditable="false">
+                    <input type="radio" id="userAcceptTerms1" contenteditable="false" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="2"  style="outline: 0;">
                         <label class="checkboxnews newlabel" contenteditable="false" for="userAcceptTerms1">Nej</label>
                     </div>
                  </td>
@@ -80,8 +85,8 @@
             </tr>
         </table>
     </div>
-        <div class="table_wrapper">
 
+    <div class="table_wrapper">
         <table class="details-table">
             <caption class="details-table__caption">Kontaktuppgifter</caption>
             <tr>
@@ -94,12 +99,16 @@
             </tr>
             <tr>
                 <th class="border" >Telefonnummer</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholder"></td>
+                <td data-placeholder="Ej angivet" class="details-table__placeholder">
+                    <input contenteditable="false" type="number" class="inputtext-table" value="070000000">
+                </td>
                 <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
             </tr>
             <tr>
                 <th class="border" >Mobilnummer</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholder">0768 95 67 48</td>
+                <td data-placeholder="Ej angivet" class="details-table__placeholder">
+                    <input contenteditable="false" type="number" class="inputtext-table" value="070000000">
+                </td>
                 <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
             </tr>
         </table>
@@ -113,19 +122,19 @@
                 <th class="border" >Kontonummer</th>
                 <td data-placeholder="Ej angivet" class="kontonr ShowClear" contenteditable="false">
                     <div class="text" contenteditable="false">
-                        <div class="col-xs-4 padding0" style="margin-bottom: 20px;" contenteditable="false">
+                        <div class="col-xs-4 padding0" contenteditable="false">
                             <span class="ShowClear" contenteditable="false" >Clearingnr</span>
                         </div>
 
-                        <div class="col-xs-8 padding0" style="margin-bottom: 20px;" contenteditable="false">
-                            <span class="ShowKonto" contenteditable="false" contenteditable="false">Kontonummer</span>
+                        <div class="col-xs-8 padding0" contenteditable="true">
+                            <span class="ShowKonto" style="display: block;margin-left: 10px;" contenteditable="true" contenteditable="false">Kontonummer</span>
                         </div>
                     </div>
                     <div class="col-xs-4 padding0" contenteditable="false" >
-                        <span class="clearingnr" contenteditable="false" > 8-1259</span>
+                        <input type="number" class="clearingnr" value="123123">
                     </div>
                     <div class="col-xs-8 padding0" contenteditable="false">
-                        <span class="konto"contenteditable="false" >149500685490</span>
+                        <input type="number" class="konto" value="123123123123">
                      </div>
                 </td>
                 <th class="button"><button id="editbtn" class="edit-button1">Ändra</button></th>
