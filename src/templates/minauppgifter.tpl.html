@@ -8,11 +8,8 @@
 <div class="content-wrapper ml-2017">
     <div class="container container-fluid">
         <h1 class="block-hero__page-title">Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!</h1>
-        <h1>Mina uppgifter</h1>
+        <div class="block-content__content"><h2>Mina uppgifter</h2></div>
         <p style="color: #536785;font-family: 'Proxima Nova';font-weight: 600;">Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
-
-
-
     <div class="table_wrapper">
         <!--<button class="editbtn">Ändra</button>-->
         <table class="details-table">
@@ -25,35 +22,23 @@
             <tr>
                 <th class="border">E-postadress</th>
                 <td contenteditable="false" data-placeholder="Ej angivet" class="details-table__placeholder">
-                    <input type="email" class="inputtext-table" value="stefan@brave.se">
+                        <input type="email" class="inputtext-table" id="userEmail" placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
                 </td>
-                <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
+                <th class="button"><button id="editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
             <tr class="border">
                 <th class="border" >Lösenord</th>
-                <td class="change-password">
-                    <div class="col-xs-12" style="padding-left: 0 !important;">
-                        <div class="col-sm-6 col-xs-12 padding5" contenteditable="false">
-
-                        <div class="col-xs-12 title"contenteditable="false">Nytt lösenord</div>
-                            <input class="password" type="password">
+                <td contenteditable="false" data-placeholder="Ej angivet" class="details-table__placeholder">
+                    <div class="inputtext-table PassTitle" style="display: none"><span class="clering">Nytt lösenord</span> <span class="PasswordTitleConfirm">Bekräfta lösenord</span></div>
+                    <input type="password" id="txtNewPassword" placeholder="******" class="inputtext-table" disabled="disabled" value="******">
+                    <input type="password" id="txtConfirmPassword" placeholder="" class="inputtext-table" onChange="checkPasswordMatch();" style="display: none" disabled="disabled" value="******">
+                    <div class="inputtext-table checkPasswordMatch" style="display: none">
+                        <div class="heej">
+                            Lösenorden matchar ej!
                         </div>
-
-                        <div class="col-sm-6 col-xs-12 padding5" contenteditable="false">
-
-                        <div class="col-xs-12 title" contenteditable="false" >Bekräfta lösenord</div>
-                            <input class="passwordconfirm" type="password">
-                        </div>
-
-                        <div id="divCheckPasswordMatch" contenteditable="false"></div>
                     </div>
                 </td>
-                <td class="change-password--hidden">
-                    <div class="change-password1" style="padding-left: 0!important;">
-                        **********
-                    </div>
-                </td>
-                <th class="button"><button id="editbtn" class="edit-button red">Ändra</button></th>
+                <th class="button"><button id="editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
         </table>
     </div>
@@ -63,25 +48,25 @@
             <caption class="details-table__caption">Profilinställningar</caption>
             <tr>
                 <th class="border" >Chat-namn</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholder">
-                    <input contenteditable="false" type="text" class="inputtext-table" value="Djpingo">
+                <td>
+                    <input id="chat-namn-text" type="text" disabled="disabled" class="inputtext-table" value="Djpingo">
                 </td>
-                <th class="button"><button id="editbtn" class="edit-button red">Ändra</button></th>
+                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
             <tr>
                 <th class="border">Nyhetsbrev</th>
                 <td class="details-table__news--visible">
                         Ja
                 </td>
-                <td class="details-table__news--hidden" contenteditable="false">
-                    <div class="details-table__checkbox" contenteditable="false">
-                    <input type="radio" id="userAcceptTerms" contenteditable="false" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="1" style="outline: 0;">
-                        <label class="newlabel" for="userAcceptTerms" contenteditable="false" >Ja</label>
-                    <input type="radio" id="userAcceptTerms1" contenteditable="false" name="wantsnews" class="custom-checkbox details-table__checkbox--margin" value="2"  style="outline: 0;">
-                        <label class="checkboxnews newlabel" contenteditable="false" for="userAcceptTerms1">Nej</label>
-                    </div>
-                 </td>
-                <th class="button"><button id="editbtn" class="edit-button red">Ändra</button></th>
+                <td>
+                <div class="details-table__checkbox" contenteditable="false">
+                    <input id="chat-namn-text" id="userAcceptTerms" name="wantsnews" type="radio" disabled="disabled" class="inputtext-table custom-checkbox details-table__checkbox--margin" value="Ja" style="display: none">
+                    <label class="newlabel" for="userAcceptTerms" contenteditable="false">Ja</label>
+                    <input id="chat-namn-text" id="userAcceptTerms" name="wantsnews" type="radio" disabled="disabled" class="inputtext-table custom-checkbox details-table__checkbox--margin" value="Ja" style="display: none">
+                    <label class="checkboxnews newlabel" contenteditable="false" for="userAcceptTerms1">Nej</label>
+                </div>
+                </td>
+                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
         </table>
     </div>
@@ -99,17 +84,17 @@
             </tr>
             <tr>
                 <th class="border" >Telefonnummer</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholder">
-                    <input type="number" class="inputtext-table" value="070000000">
+                <td>
+                    <input id="chat-namn-text" placeholder="Ej angivet" type="tel" disabled="disabled" class="inputtext-table" value="">
                 </td>
-                <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
+                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
             <tr>
                 <th class="border" >Mobilnummer</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholder">
-                    <input type="number" class="inputtext-table" value="070000000">
+                <td>
+                    <input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table" value="0700 77 33 22">
                 </td>
-                <th class="button"><button id="editbtn" class="edit-button">Ändra</button></th>
+                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
         </table>
         </div>
@@ -120,29 +105,16 @@
             <caption class="details-table__caption">Kontonummer</caption>
             <tr>
                 <th class="border" >Kontonummer</th>
-                <td data-placeholder="Ej angivet" class="kontonr ShowClear" contenteditable="false">
-                    <div class="text" contenteditable="false">
-                        <div class="col-xs-4 padding0" contenteditable="false">
-                            <span class="ShowClear" contenteditable="false" >Clearingnr</span>
-                        </div>
-
-                        <div class="col-xs-8 padding0" contenteditable="true">
-                            <span class="ShowKonto" style="display: block;margin-left: 10px;" contenteditable="true" contenteditable="false">Kontonummer</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-4 padding0" contenteditable="false" >
-                        <input type="number" class="clearingnr" value="123123">
-                    </div>
-                    <div class="col-xs-8 padding0" contenteditable="false">
-                        <input type="number" class="konto" value="123123123123">
-                     </div>
+                <td>
+                    <div class="inputtext-table clearingnr" style="display: none"><span class="clering">Clearingnr</span> <span class="kontoo">Kontonummer</span></div>
+                    <input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table clearing" value="83683">
+                    <input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table konto" value="90123123">
                 </td>
-                <th class="button"><button id="editbtn" class="edit-button1">Ändra</button></th>
+                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
         </table>
     </div>
-
-        <div class="col-xs-12 h4 mina-verktyg--text">Mina Verktyg</div>
+    <div class="col-xs-12 h4 mina-verktyg--text">Mina Verktyg</div>
         <div class="col-md-9 col-xs-12 container--verktyg">
             <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
                 <button class="btn btn-primary btn-icon details-table__button">Playscan</button><br>

@@ -13,59 +13,25 @@
         padding-left: 20px;
         padding-bottom: 15px;
         padding-top: 0;
+        color: #546785;
+        width: 100%;
       }
-      &[contenteditable="true"]{
-          background-color: white;
-          height: 40px;
-          margin-top: 8px;
-          padding-left: 10px;
-          margin-left: 20px;
-          width: 200px;
-          opacity: 1;
-          padding-top: 0;
-          border: 1px solid #DEE1E8;
-          border-radius: 5px;
-          color: #536785;
-          font-weight: $semibold;
-          @media screen and (max-width: $screen-xs) {
-          margin-left: 20px;
-          padding-top: 10px;
-          width: 90%;
-          margin-bottom: 10px;
-          }
-          &.change-password{
-              border: none;
-              display: block;
-              width: 500px;
-              height: 130px;
-              margin-left: 5px;
-              margin-top: 0;
-              padding-top: 5px;
-              @media screen and (max-width: $screen-sm) {
-              width: 100%;
-              margin-top: 0;
-              padding-left: 15px;
-              height: auto;
-              margin-left: 0px;
-            }
-          }
-
-        &.change-password--hidden{
-               display: none;
-          }
-          &.details-table__news--hidden{
-              display: block;
-              float: left;
-              padding-left: 0;
-              border: 0;
-              margin-top: 0;
-              margin-left: 20px;
-              background-color: transparent;
-            @media screen and (max-width: $screen-xs) {
-              height: 85px;
-            }
-
-            }
+      &.change-password--hidden{
+         display: none;
+      }
+      &.details-table__news--hidden {
+        display: block;
+        float: left;
+        padding-left: 0;
+        border: 0;
+        margin-top: 0;
+        margin-left: 20px;
+        background-color: transparent;
+        @media screen and (max-width: $screen-xs) {
+          height: 85px;
+          color: #546785;
+        }
+      }
           &.details-table__news--visible{
               display: none;
           }
@@ -80,6 +46,7 @@
                   margin-left: 0;
                   margin-top: 0;
                   padding-right: 0;
+                  color: #546785;
               }
           }
 
@@ -104,8 +71,11 @@
           padding-left: 20px;
           padding-top: 15px;
         }
+
       &.button{
         float: right;
+        position: absolute;
+        right: 20px;
         @media screen and (max-width: $screen-xs) {
           padding-top: 0;
           position: absolute;
@@ -115,7 +85,7 @@
 
       }
         &.border{
-          width: 100px;
+          width: 110px;
           @media screen and (max-width: $screen-xs) {
             width: 100%;
           }
@@ -127,18 +97,6 @@
     & tr{
       height:56px;
     }
-}
-.details-table__checkbox--margin {
-  margin: 5px 0px -5px !important;
-  background-color: transparent !important;
-  height: 20px;
-  width: 20px;
-  outline: 0;
-  &:checked:after{
-    top: 2px;
-    left:2px;
-  }
-}
 
 .details-table__placeholder:empty:not(:focus):before {
   content: attr(data-placeholder)
@@ -158,6 +116,12 @@
   padding-right: 0;
 }
 
+#chat-namn-text{
+  color: #536785;
+  font-weight: 600;
+  opacity: 1;
+}
+
 .container--verktyg{
   padding-left:0;
   padding-right: 0;
@@ -167,7 +131,6 @@
 
 .details-table__checkbox{
   outline: none;
-  padding-top: 10px;
   @media screen and (max-width: $screen-xs) {
     width: 50px;
   }
@@ -187,17 +150,19 @@
 }
 
 
+
+
 .password{
   border: 1px solid $color-feather;
   border-radius: 5px;
   height: 40px;
   outline: none;
-  width: 200px;
+  width: 220px;
   padding-left: 10px;
   &:focus{
     border: 1px solid #ef7450;
   }
-  @media screen and (max-width: $screen-sm){
+  @media screen and (max-width: $screen-xs){
     width: 100%;
   }
 }
@@ -207,12 +172,12 @@
   border-radius: 5px;
   height: 40px;
   outline: none;
-  width: 200px;
+  width: 220ppx;
   padding-left: 10px;
   &:focus{
     border: 1px solid #ef7450;
   }
-  @media screen and (max-width: $screen-sm){
+  @media screen and (max-width: $screen-xs){
     width: 100%;
   }
 }
@@ -235,7 +200,7 @@
     &.ShowClear{
       display: none;
     }
-    @media screen and (max-width: $screen-sm){
+    @media screen and (max-width: $screen-xs){
       border: none;
       outline: none;
       background-color: transparent;
@@ -246,91 +211,150 @@
 }
 
 .clearingnr {
-  border: none;
-  &[contenteditable="true"] {
-    border: 1px solid $color-feather !important;
     display: block;
-    width: 80px;
-    margin-bottom: 20px;
-    height: 40px;
-    margin-right: 20px;
-    padding: 12px;
-    border-radius: 5px;
-    &.ShowClear{
-      display: none;
-    }
-    @media screen and (max-width: $screen-sm){
-      border: none;
-      outline: none;
-      background-color: transparent;
-      width: 100%;
-      padding-right: 20px;
-    }
-  }
 }
 
 .inputtext-table{
   border: none;
-  background-color: transparent;
   width: 100%;
-  height: 100%;
   padding-right: 10px;
+  background-color: transparent;
+  padding-left: 0px;
   outline: none;
-  &[contenteditable="true"] {
+  &.asda {
     border: 1px solid #DEE1E8;
     border-radius: 5px;
-    display: inline-block;
-    width: 100%;
+    margin-top: -7px;
+    display: inline-block !important;
+    background-color: white;
+    width: 220px;
+    margin-bottom: 0;
     height: 40px;
     overflow: scroll;
-    margin-left: 10px;
     padding-top: 0 !important;
     padding-left: 12px;
     padding-right: 50px;
-    @media screen and (max-width: $screen-sm){
-      width: 85%;
+    @media screen and (max-width: $screen-xs){
+      width: 90%;
+      padding-right: 12px;
+      margin-right: 10px;
+      margin-top: 5px;
+    ;
     }
+    &.details-table__checkbox--margin {
+      margin: 0px 0px -5px !important;
+      background-color: transparent !important;
+      height: 20px;
+      width: 0px;
+      padding-right: 7px;
+      outline: 0;
+      &:checked:after{
+        top: 2px;
+        left:2px;
+      }
+    }
+    &.checkPasswordMatch{
+      border: none ;
+      height: auto;
+      width: 100%;
+      padding-left: 0;
+    }
+    &.clearing{
+      border: 1px solid #DEE1E8;
+      border-radius: 5px;
+      display: block;
+      width: 80px;
+      margin-top: 0;
+      height: 40px;
+      overflow: scroll;
+      padding-top: 12px !important;
+      padding: 12px;
+      margin-bottom: 20px;
+      padding-right: 50px;
+    }
+    &.konto{
+      border: 1px solid #DEE1E8;
+      border-radius: 5px;
+      display: block;
+      width: 220px;
+      margin-top: 0;
+      height: 40px;
+      overflow: scroll;
+      padding-top: 12px !important;
+      margin-left: 10px;
+      padding: 12px;
+      padding-right: 50px;
+      @media screen and (max-width: $screen-xs){
+        width: 60%;
+      }
+    }
+    &.clearingnr{
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      padding: 0;
+      border: none;
+    }
+    &.PassTitle{
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      margin-bottom: 5px;
+      padding: 0;
+      border: none;
+      @media screen and (max-width: $screen-xs) {
+        margin-bottom: -10px;
+      }
+
+
+    }
+    ::placeholder { /* Chrome/Opera/Safari */
+      color: pink;
+    }
+
+  }&.test{
+       border: 1px solid black;
+     }
+}
+.PasswordTitleConfirm{
+  padding-left: 160px;
+  padding-right: 0;
+  position: absolute;
+  @media screen and (max-width: $screen-xs){
+    left: 30px;
+    margin-top: 70px;
+    padding-left: 0;
+    position: absolute;
+  }
+}
+.heej{
+  display: none;
+}
+
+#txtConfirmPassword{
+  margin-left: 20px;
+  margin-bottom: 10px;
+  @media screen and (max-width: $screen-xs){
+    /* margin-left: 20px; */
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 0;
+    /* padding-right: 10px; */
   }
 }
 
+
+
+.clearing{
+  width: 55px;
+}
+
+.kontoo{
+  margin-left: 25px;
+}
 
 .konto{
-  border: none;
-  &[contenteditable="true"] {
-    border: 1px solid #DEE1E8;
-    border-radius: 5px;
-    display: block;
-    width: 200px;
-    height: 40px;
-    overflow: scroll;
-    margin-left: 10px;
-    padding: 12px;
-    padding-right: 50px;
-    @media screen and (max-width: $screen-sm){
-      width: 85%;
-    }
-  }
-}
-
-.text{
-  display: none;
-    &[contenteditable="true"] {
-    display: block;
-    padding-left: 0;
-  }
-}
-
-.kontonr {
-  width: 170px !important;
-  &[contenteditable="true"] {
-    padding-left: 0 !important;
-    margin-top: 15px !important;
-    border: none !important;
-    padding-top: 0 !important;
-    width: 275px !important;
-    height: auto !important;
-    margin-bottom: 0px !important;
-  }
+  width: 100px;
 }
 
 tbody{
@@ -431,7 +455,7 @@ input[type="checkbox"]:focus{
   outline: none;  @media screen and (max-width: $screen-xs) {
   margin-top: 12px;
   }
-  &.edit-button-toggle {
+  &.blue{
     color: $color-light-blue;
     padding-top: 0;
     margin-top: 2px;
@@ -441,6 +465,7 @@ input[type="checkbox"]:focus{
   font-size: 14px;
   padding-left: 5px;
   top: 10px;
+  width: 100%;
   position: relative;
 }
 

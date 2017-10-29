@@ -139,20 +139,115 @@ export default function () {
 		});
 	}
 
+    (function($){
+        $.fn.focusTextToEnd = function(){
+            this.focus();
+            var $thisVal = this.val();
+            this.val('').val($thisVal);
+            return this;
+        }
+    }(jQuery));
+
     function checkPasswordMatch() {
-        var password = $(".password").val();
-        var confirmPassword = $(".passwordconfirm").val();
+        var password = $("#txtNewPassword").val();
+        var confirmPassword = $("#txtConfirmPassword").val();
 
         if (password != confirmPassword)
-            $("#divCheckPasswordMatch").html("Lösenorden matchar ej!");
+            $(".heej").css("display", "block");
         else
-            $("#divCheckPasswordMatch").html("");
+            $(".heej").css("display", "none");
     }
 
     $(document).ready(function () {
-        $(".passwordconfirm").keyup(checkPasswordMatch);
+        $("#txtConfirmPassword").keyup(checkPasswordMatch);
     });
 
+
+
+
+    /*
+    $(document).ready(function(){
+        $("#chat_editbtn").on("click", function(){
+
+            var value = $(this).val();
+
+            if(value === "save"){
+                $("#chat-namn-text").attr("disabled", true);
+                $(this).val("edit");
+                $(this).html("Edit");
+            }else if(value === "edit"){
+                $("#chat-namn-text").attr("disabled", false);
+                $(this).val("save");
+                $(this).html("Save");
+            }
+        });
+    });*/
+	function editAll(bool, value){
+		$(".test").each(function(i, obj){
+            var current_button = $(this);
+            var text = $(this).parents("tr").find(".inputtext-table");
+			console.log(text.attr("disabled"));
+			if(text.hasClass("current")){
+				text.removeClass("current");
+            }
+			else{
+				$(this).val(value);
+				$(this).html(value);
+                text.removeClass("asda");
+                current_button.removeClass("blue");
+                text.attr("disabled", bool);
+
+            }
+		});
+    }
+	$(document).ready(function(){
+		$(".test").on("click", function(){
+			var current_button = $(this);
+			var current_text = $(this).parents("tr").find(".inputtext-table");
+            if(current_button.val() === "Spara"){
+                current_button.removeClass("blue");
+                current_text.attr("disabled", true);
+                current_text.removeClass("asda");
+                current_button.val("Ändra");
+                current_button.html("Ändra");
+                current_text.addClass("current");
+				//editAll(false, "save");
+
+            }else if(current_button.val() === "Ändra"){
+                current_text.attr("disabled", false);
+                current_text.addClass("asda");
+                current_button.val("Spara");
+                current_button.addClass("blue");
+                current_button.html("Spara");
+                current_text.addClass("current").focusTextToEnd();
+                editAll(true, "Ändra");
+            }
+        });
+	});
+
+
+    $("#reg_confirm_pass").blur(function() {
+        var user_pass = $("#reg_pass").val();
+        var user_pass2 = $("#reg_confirm_pass").val();
+        //var enter = $("#enter").val();
+
+        if (user_pass.length == 0) {
+            alert("please fill password first");
+            $("#enter").prop('disabled',true)//use prop()
+        } else if (user_pass == user_pass2) {
+            $("#enter").prop('disabled',false)//use prop()
+        } else {
+            $("#enter").prop('disabled',true)//use prop()
+            alert("Your password doesn't same");
+        }
+
+    });
+
+
+
+
+
+/*
     $(document).ready(function () {
         $('.edit-button').click(function () {
             var currentTD = $(this).parents('tr').find('td');
@@ -174,7 +269,7 @@ export default function () {
         });
 
     });
-
+*/
 
     $(document).ready(function () {
         $('.edit-button1').click(function () {

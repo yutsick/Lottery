@@ -10,7 +10,18 @@ export default function () {
 		$("#userPersonalNumber").popover('hide');
 		$('#spinnerPersonalNumber').hide();
 	});
-	
+
+
+    $("#userEmail").on('focus', function() {
+        $('#userPersonalNumber').popover({ html:true, content: "Gustav Ågren <br>Hv*********en <br>4 41* *0, Göteborg"});
+        $("#userPersonalNumber").popover('show');
+        $('#spinnerPersonalNumber').show();
+    });
+
+    $("#userEmail").on('blur', function() {
+        $("#userPersonalNumber").popover('hide');
+        $('#spinnerPersonalNumber').hide();
+    });
 	
 	$('.chooseLoginWay').on('select2:select', function (evt) {
 			var choice = evt.params.data.id;
