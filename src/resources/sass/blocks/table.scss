@@ -1,6 +1,7 @@
 .details-table {
     width: 100%;
     border-collapse: collapse;
+
   & td{
       padding-top: 15px;
       float:left;
@@ -57,7 +58,6 @@
     }
     & th {
         padding-top: 15px;
-        padding-bottom:15px;
         padding-left: 15px;
         text-align: left;
         float: left;
@@ -117,7 +117,6 @@
 }
 
 #chat-namn-text{
-  color: #536785;
   font-weight: 600;
   opacity: 1;
 }
@@ -149,6 +148,11 @@
   }
 }
 
+#userAcceptTerms1{
+  @media screen and (max-width: $screen-xs){
+    margin-top: 10px !important;
+  }
+}
 
 
 
@@ -221,6 +225,7 @@
   background-color: transparent;
   padding-left: 0px;
   outline: none;
+
   &.asda {
     border: 1px solid #DEE1E8;
     border-radius: 5px;
@@ -234,12 +239,14 @@
     padding-top: 0 !important;
     padding-left: 12px;
     padding-right: 50px;
-    @media screen and (max-width: $screen-xs){
+    @media screen and (max-width: $screen-xs) {
       width: 90%;
       padding-right: 12px;
       margin-right: 10px;
       margin-top: 5px;
-    ;
+    }
+    &.konto {
+      margin-bottom: 20px;
     }
     &.details-table__checkbox--margin {
       margin: 0px 0px -5px !important;
@@ -248,11 +255,12 @@
       width: 0px;
       padding-right: 7px;
       outline: 0;
-      &:checked:after{
+      &:checked:after {
         top: 2px;
-        left:2px;
+        left: 2px;
       }
     }
+
     &.checkPasswordMatch{
       border: none ;
       height: auto;
@@ -269,8 +277,8 @@
       overflow: scroll;
       padding-top: 12px !important;
       padding: 12px;
+      padding-right: 0;
       margin-bottom: 20px;
-      padding-right: 50px;
     }
     &.konto{
       border: 1px solid #DEE1E8;
@@ -316,6 +324,8 @@
        border: 1px solid black;
      }
 }
+
+
 .PasswordTitleConfirm{
   padding-left: 160px;
   padding-right: 0;
@@ -350,7 +360,7 @@
 }
 
 .kontoo{
-  margin-left: 25px;
+  margin-left: 35px;
 }
 
 .konto{
@@ -503,4 +513,11 @@ tbody{
   @media screen and (max-width: $screen-xs) {
     margin-right: 0;
   }
+}
+
+input:disabled, textarea:disabled{
+  opacity: 1 !important;
+  color: #546785;
+  font-weight: 600;
+  -webkit-text-fill-color:#546785
 }
