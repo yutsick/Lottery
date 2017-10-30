@@ -206,30 +206,6 @@
   display: none;
 }
 
-
-.wtff {
-  border: none;
-  &[contenteditable="true"] {
-    border: 1px solid $color-feather;
-    display: block;
-    width: 80px;
-    height: 40px;
-    margin-right: 20px;
-    padding: 12px;
-    border-radius: 5px;
-    &.ShowClear{
-      display: none;
-    }
-    @media screen and (max-width: $screen-xs){
-      border: none;
-      outline: none;
-      background-color: transparent;
-      width: 100%;
-      padding-right: 20px;
-    }
-  }
-}
-
 .clearingnr {
     display: block;
 }
@@ -250,7 +226,6 @@
     background-color: white;
     width: 220px;
     height: 40px;
-    overflow: scroll;
     padding-top: 0;
     padding-left: 12px;
     padding-right: 50px;
@@ -526,17 +501,9 @@ input[type="checkbox"]:focus{
   padding-bottom: 10px;
 }
 
-
-.td [contenteditable="true"]{
-  .kontonr{
-    background-color:aqua;
-  }
-}
-
 tbody{
   border-bottom-right-radius: 5px;
   border-bottom-left-radius:5px;
-
 }
 
 .newlabel {
