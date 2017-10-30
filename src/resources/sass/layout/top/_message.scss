@@ -4,13 +4,11 @@
     position: relative;
     z-index: 900;
     transition: transform $duration-fast $ease-standard $delay-none, right $duration-fast $ease-standard $delay-none;
-
-  @media screen and (max-width: $screen-sm) {
+    @media screen and (max-width: $screen-sm) {
       bottom: 0;
       left: 0;
     }
 }
-
 
 .fixed {
   @media screen and (min-width: 1661px) {

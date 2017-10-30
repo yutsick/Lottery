@@ -1,106 +1,107 @@
 .details-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 
   & td{
-      padding-top: 18px;
-      float:left;
-      padding-left: 25px;
+    padding-top: 18px;
+    float:left;
+    min-height: 62px;
+    padding-left: 25px;
+    color: #546785;
+    outline: none;
+    font-weight: $semibold;
+    font-family: $basic-heading-family;
+    @media screen and (max-width: $screen-xs) {
+      padding-left: 20px;
+      padding-top: 0;
       color: #546785;
-      outline: none;
-      font-weight: $semibold;
-      font-family: $basic-heading-family;
+      width: 100%;
+    }
+    &.change-password--hidden{
+      display: none;
+    }
+    &.details-table__news--hidden {
+      display: block;
+      float: left;
+      padding-left: 0;
+      border: 0;
+      margin-top: 0;
+      margin-left: 20px;
+      background-color: transparent;
       @media screen and (max-width: $screen-xs) {
-        padding-left: 20px;
-        padding-top: 0;
+        height: 85px;
         color: #546785;
-        width: 100%;
-      }
-      &.change-password--hidden{
-         display: none;
-      }
-      &.details-table__news--hidden {
-        display: block;
-        float: left;
-        padding-left: 0;
-        border: 0;
-        margin-top: 0;
-        margin-left: 20px;
-        background-color: transparent;
-        @media screen and (max-width: $screen-xs) {
-          height: 85px;
-          color: #546785;
-        }
-      }
-          &.details-table__news--visible{
-              display: none;
-          }
-          &.details-table__konto--hidden{
-              display: block;
-              float: left;
-              padding-left: 0;
-              width: 400px;
-              border: 0;
-              @media screen and (max-width: $screen-xs) {
-                  width: 100%;
-                  margin-left: 0;
-                  margin-top: 0;
-                  padding-right: 0;
-                  color: #546785;
-              }
-          }
-
-        &.details-table__konto--visible{
-              display: none;
-          }
       }
     }
-    & th {
-        padding-top: 20px;
-        padding-left: 15px;
-        text-align: left;
-        float: left;
-        color: $color-black;
-        font-weight: $semibold;
-        font-family: $basic-heading-family;
-        @media screen and (max-width: $screen-xs) {
-          height: 100%;
-          color: $color-black;
-          padding-bottom:0;
-          padding-left: 20px;
-          padding-top: 15px;
-        }
-
-      &.button{
-        float: right;
-        right: 20px;
-        @media screen and (max-width: $screen-md) {
-          position: absolute;
-        }
-        @media screen and (max-width: $screen-xs) {
-          padding-top: 0;
-          position: absolute;
-          right: 0;
-          margin-top: 15px;
-        }
-
-      }
-        &.border{
-          width: 110px;
-          @media screen and (max-width: $screen-xs) {
-            width: 100%;
-          }
-          @media screen and (min-width: $screen-xs) {
-            height: 56px;
-          }
-        }
+    &.details-table__news--visible{
+      display: none;
     }
-    & tr{
-      height:56px;
+    &.details-table__konto--hidden{
+      display: block;
+      float: left;
+      padding-left: 0;
+      width: 400px;
+      border: 0;
       @media screen and (max-width: $screen-xs) {
-        height: 65px !important;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        padding-right: 0;
+        color: #546785;
       }
     }
+
+    &.details-table__konto--visible{
+      display: none;
+    }
+  }
+}
+& th {
+  padding-top: 20px;
+  padding-left: 15px;
+  text-align: left;
+  float: left;
+  color: $color-black;
+  font-weight: $semibold;
+  font-family: $basic-heading-family;
+  @media screen and (max-width: $screen-xs) {
+    height: 100%;
+    color: $color-black;
+    padding-bottom:0;
+    padding-left: 20px;
+    padding-top: 15px;
+  }
+
+  &.button{
+    float: right;
+    right: 20px;
+    @media screen and (max-width: $screen-md) {
+      position: absolute;
+    }
+    @media screen and (max-width: $screen-xs) {
+      padding-top: 0;
+      position: absolute;
+      right: 0;
+      margin-top: 15px;
+    }
+
+  }
+  &.border{
+    width: 110px;
+    @media screen and (max-width: $screen-xs) {
+      width: 100%;
+    }
+    @media screen and (min-width: $screen-xs) {
+      height: 56px;
+    }
+  }
+}
+& tr{
+  height:56px;
+  @media screen and (max-width: $screen-xs) {
+    height: 65px !important;
+  }
+}
 
 .details-table__placeholder:empty:not(:focus):before {
   content: attr(data-placeholder)
@@ -210,7 +211,7 @@
 }
 
 .clearingnr {
-    display: block;
+  display: block;
 }
 
 .inputtext-table{
@@ -224,15 +225,15 @@
   &.asda {
     border: 1px solid #DEE1E8;
     border-radius: 5px;
-    margin-top: -10px;
+    margin-top: -7px;
     display: inline-block !important;
-    background-color: white;
+    background-color: white !important;
     width: 220px;
     height: 40px;
     padding-top: 0;
     padding-left: 12px;
+    padding-bottom: 0px;
     padding-right: 50px;
-
     @media screen and (max-width: $screen-xs) {
       width: 90%;
       margin-bottom: 10px;
@@ -323,8 +324,8 @@
       }
     }
   }&.test{
-       border: 1px solid black;
-     }
+     border: 1px solid black;
+   }
 }
 
 .clering{
@@ -474,7 +475,7 @@ input[type="checkbox"]:focus{
   padding-right: 40px;
   outline: none;  @media screen and (max-width: $screen-xs) {
   margin-top: 12px;
-  }
+}
   &.blue{
     color: $color-light-blue;
     padding-top: 0;
@@ -489,10 +490,15 @@ input[type="checkbox"]:focus{
   position: relative;
 }
 
+.epostvalid{
+  margin-top: -11px;
+  margin-bottom: 0;
+}
+
 .title{
-   padding-left: 0;
-   padding-top: 10px;
-   padding-bottom: 10px;
+  padding-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   @media screen and (max-width: $screen-xs){
     padding-bottom:0;
   }

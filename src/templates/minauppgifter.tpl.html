@@ -21,17 +21,22 @@
             </tr>
             <tr>
                 <th class="border">E-postadress</th>
-                <td contenteditable="false" data-placeholder="Ej angivet" class="details-table__placeholder">
-                        <input type="email" class="inputtext-table" id="userEmail" value="stefan@brave.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
+                <td>
+                    <div class="form-group has-feedback epostvalid">
+                    <form data-toggle="validator">
+                        <input type="email" disabled="disabled" class="form-control inputtext-table"  style="background-color: transparent;margin-top: 5px;" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med." id="userEmail" placeholder="namn@email.se"></form>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
                 </td>
-                <th class="button"><button id="editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
-            </tr>
+
+                <th class="button"><button id="editbtn" class="edit-button test" type="button" value="Ändra">Ändra</button></th>
             <tr class="border">
                 <th class="border" >Lösenord</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholder" style="padding-bottom: 0;">
+                <td data-placeholder="Ej angivet" class="details-table__placeholderr" style="padding-bottom: 0;">
                     <div class="inputtext-table PassTitle" style="display: none"><span class="clering">Nytt lösenord</span> <span class="PasswordTitleConfirm">Bekräfta lösenord</span></div>
                     <input type="password" id="txtNewPassword" placeholder="******" class="inputtext-table" disabled="disabled" value="******">
-                    <input type="password" id="txtConfirmPassword" placeholder="" class="inputtext-table" onChange="checkPasswordMatch();" style="display: none" disabled="disabled" value="******">
+                    <input type="password" id="txtConfirmPassword" placeholder="" class="inputtext-table" style="display: none" disabled="disabled" value="******">
                     <div class="inputtext-table checkPasswordMatch" style="display: none">
                         <div class="heej">
                             Lösenorden matchar ej!
@@ -49,7 +54,7 @@
             <tr>
                 <th class="border" >Chat-namn</th>
                 <td>
-                    <input id="chat-namn-text" type="text" disabled="disabled" class="inputtext-table" value="Djpingo">
+                    <input id="chat-namn-text" type="text" disabled="disabled" onfocus="this.value = this.value;" class="inputtext-table" value="Djpingo">
                 </td>
                 <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
@@ -59,18 +64,18 @@
                         Ja
                 </td>
                 <td>
-                <div class="details-table__checkbox" contenteditable="false">
-                    <input id="chat-namn-text1" id="userAcceptTerms1" name="wantsnews" type="radio" disabled="disabled" class="inputtext-table custom-checkbox details-table__checkbox--margin" value="Ja" style="display: none;">
-                    <label class="newlabel" for="userAcceptTerms" contenteditable="false">Ja</label>
-                    <input id="chat-namn-text" id="userAcceptTerms" name="wantsnews" type="radio" disabled="disabled" class="inputtext-table custom-checkbox details-table__checkbox--margin" value="Ja" style="display: none">
-                    <label class="checkboxnews newlabel" contenteditable="false" for="userAcceptTerms1">Nej</label>
+                <div class="details-table__checkbox">
+                    <div class="nyhetsbrev">Ja</div>
+                    <input value="Ja" checked="checked" id="chat-namn-text1" id="userAcceptTerms1" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none;">
+                    <label class="inputtext-table newlabel" for="userAcceptTerms" style="display: none">Ja</label>
+                    <input value="Nej" id="chat-a-text" id="userAcceptTerms" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none">
+                    <label class="inputtext-table newlabel" for="userAcceptTerms1" style="display: none">Nej</label>
                 </div>
                 </td>
                 <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
         </table>
     </div>
-
     <div class="table_wrapper">
         <table class="details-table">
             <caption class="details-table__caption">Kontaktuppgifter</caption>
@@ -85,7 +90,7 @@
             <tr>
                 <th class="border" >Telefonnummer</th>
                 <td>
-                    <input id="chat-namn-text" placeholder="Ej angivet" type="tel" disabled="disabled" class="inputtext-table" value="">
+                    <input id="chat-namn-text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ej angivet'" placeholder="Ej angivet" type="tel" disabled="disabled" class="inputtext-table" value="">
                 </td>
                 <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
@@ -107,8 +112,8 @@
                 <th class="border" >Kontonummer</th>
                 <td>
                     <div class="inputtext-table clearingnr" style="display: none"><span class="clering">Clearingnr</span> <span class="kontoo">Kontonummer</span></div>
-                    <input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table clearing" value="83683">
-                    <input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table konto" value="90123123">
+                    <input id="chat-namn-text" type="tel" class="inputtext-table clearing" value="83683">
+                    <input id="chat-namn-text" type="tel" class="inputtext-table konto" value="90123123">
                 </td>
                 <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
             </tr>
