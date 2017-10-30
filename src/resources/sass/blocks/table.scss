@@ -13,10 +13,12 @@
     font-family: $basic-heading-family;
     @media screen and (max-width: $screen-xs) {
       padding-left: 20px;
+      min-height: 35px;
       padding-top: 0;
       color: #546785;
       width: 100%;
     }
+
     &.change-password--hidden{
       display: none;
     }
@@ -144,9 +146,15 @@
 .details-table__checkbox{
   outline: none;
   @media screen and (max-width: $screen-xs) {
-    width: 50px;
+    width: 100%;
   }
+}
 
+.testing{
+  display: inline-block;
+  @media screen and (max-width: $screen-xs){
+    display: block;
+  }
 }
 .mina-verktyg--text{
   margin-bottom: 20px;
@@ -214,6 +222,11 @@
   display: block;
 }
 
+.harfel {
+  border-color: #a94442 !important;
+  box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.75);
+}
+
 .inputtext-table{
   border: none;
   width: 100%;
@@ -233,7 +246,6 @@
     padding-top: 0;
     padding-left: 12px;
     padding-bottom: 0px;
-    padding-right: 50px;
     @media screen and (max-width: $screen-xs) {
       width: 90%;
       margin-bottom: 10px;
@@ -247,9 +259,9 @@
       margin-bottom: 20px;
       @media screen  and (max-width: $screen-xs){
         margin-bottom: 0;
-
       }
     }
+
     &.details-table__checkbox--margin {
       margin: 0px 0px -5px !important;
       background-color: transparent !important;
@@ -262,7 +274,6 @@
         left: 2px;
       }
     }
-
     &.checkPasswordMatch{
       border: none ;
       height: auto;
@@ -323,6 +334,13 @@
         padding-bottom: 0;
       }
     }
+    &.epostvaliddd{
+      margin-top: -11px;
+      margin-bottom: 0;
+      @media screen and (max-width: $screen-xs){
+        margin-top: -10px !important;
+      }
+    }
   }&.test{
      border: 1px solid black;
    }
@@ -360,6 +378,7 @@
 }
 
 #txtNewPassword{
+
   @media screen and (max-width: $screen-xs){
     margin-top: 0px;
   }
@@ -463,6 +482,16 @@ input[type="checkbox"]:focus{
   border: 1px solid #a2c3ff;
   border-bottom: 1px solid #a2c3ff;
 }
+¨
+#checkat{
+  background-color: transparent !important;
+  width: 10px !important;
+  padding-right: 23px;
+  height: 20px !important;
+  margin-bottom: 0;
+  border: none;
+  padding-left: 5px;
+}
 
 
 .edit-button, .edit-button1 {
@@ -493,7 +522,14 @@ input[type="checkbox"]:focus{
 .epostvalid{
   margin-top: -11px;
   margin-bottom: 0;
+  @media screen and (max-width: $screen-xs){
+    margin-top: 0px;
+  }
 }
+
+
+
+
 
 .title{
   padding-left: 0;
@@ -516,6 +552,13 @@ tbody{
 }
 
 .newlabel {
+  background-color: transparent !important;
+  width: 10px !important;
+  height: 20px !important;
+  margin-bottom: 0;
+  border: none !important;
+  padding-left: 5px !important;
+  padding-right: 20px !important;
   font-weight: 600;
   margin-right: 20px;
   @media screen and (max-width: $screen-xs) {

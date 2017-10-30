@@ -16,18 +16,16 @@
             <caption class="details-table__caption">Inloggningsuppgifter</caption>
             <tr>
                 <th class="border" >Kundnummer</th>
-                <td>110001679538</td>
-                <th></th>
+                <td colspan="2">110001679538</td>
             </tr>
             <tr>
                 <th class="border">E-postadress</th>
                 <td>
                     <div class="form-group has-feedback epostvalid">
                     <form data-toggle="validator">
-                        <input type="email" disabled="disabled" class="form-control inputtext-table"  style="background-color: transparent;margin-top: 5px;" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med." id="userEmail" placeholder="namn@email.se"></form>
+                        <input type="email" disabled="disabled" class="form-control inputtext-table epostvaliddd¨"  style="background-color: transparent;" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med." id="userEmail" placeholder="namn@email.se"></form>
                         <div class="help-block with-errors"></div>
                     </div>
-
                 </td>
 
                 <th class="button"><button id="editbtn" class="edit-button test" type="button" value="Ändra">Ändra</button></th>
@@ -66,10 +64,14 @@
                 <td>
                 <div class="details-table__checkbox">
                     <div class="nyhetsbrev">Ja</div>
-                    <input value="Ja" checked="checked" id="chat-namn-text1" id="userAcceptTerms1" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none;">
-                    <label class="inputtext-table newlabel" for="userAcceptTerms" style="display: none">Ja</label>
-                    <input value="Nej" id="chat-a-text" id="userAcceptTerms" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none">
-                    <label class="inputtext-table newlabel" for="userAcceptTerms1" style="display: none">Nej</label>
+                    <div class="testing">
+                    <input value="Ja" checked="checked" id="chat-namn-text1" id="userAcceptTerms1" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none; ">
+                    <label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms" style="display: none;background-color: transparent !important;">Ja</label>
+                    </div>
+                    <div class="testing" style="margin-bottom: 10px;">
+                    <input value="Nej" id="chat-a-text" id="userAcceptTerms" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none; margin-bottom: 10px;">
+                    <label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms1" style="display: none; background-color: transparent !important;">Nej</label>
+                    </div>
                 </div>
                 </td>
                 <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>

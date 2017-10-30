@@ -69,7 +69,10 @@ export default function () {
 		});
 	}
 
-	function form_active_search() {
+
+
+
+    function form_active_search() {
 		$('.search  .form-control').bind('keyup', function (e) {
 			let $input = $(this);
 			let input_value = $input.val();
@@ -148,82 +151,76 @@ export default function () {
         }
     }(jQuery));
 
-    function checkPasswordMatch() {
-        var password = $("#txtNewPassword").val();
-        var confirmPassword = $("#txtConfirmPassword").val();
-
-        if (password != confirmPassword)
-            $(".heej").css("display", "block");
-        else
-            $(".heej").css("display", "none");
-    }
-
-    $(document).ready(function () {
-        $("#txtConfirmPassword").keyup(checkPasswordMatch);
-    });
 
 
 
 
-    /*
-    $(document).ready(function(){
-        $("#chat_editbtn").on("click", function(){
 
-            var value = $(this).val();
-
-            if(value === "save"){
-                $("#chat-namn-text").attr("disabled", true);
-                $(this).val("edit");
-                $(this).html("Edit");
-            }else if(value === "edit"){
-                $("#chat-namn-text").attr("disabled", false);
-                $(this).val("save");
-                $(this).html("Save");
-            }
-        });
-    });*/
 	function editAll(bool, value){
 		$(".test").each(function(i, obj){
-            var current_button = $(this);
-            var text = $(this).parents("tr").find(".inputtext-table");
+			var current_button = $(this);
+			var text = $(this).parents("tr").find(".inputtext-table");
 			console.log(text.attr("disabled"));
 			if(text.hasClass("current")){
 				text.removeClass("current");
-            }
+			}
 			else{
 				$(this).val(value);
 				$(this).html(value);
-                text.removeClass("asda");
-                current_button.removeClass("blue");
-                text.attr("disabled", bool);
+				text.removeClass("asda");
+				current_button.removeClass("blue");
 
-            }
+				text.attr("disabled", bool);
+			}
 		});
-    }
-	$(document).ready(function(){
-		$(".test").on("click", function(){
-			var current_button = $(this);
-			var current_text = $(this).parents("tr").find(".inputtext-table");
-            if(current_button.val() === "Spara"){
-                current_button.removeClass("blue");
-                current_text.attr("disabled", true);
-                current_text.removeClass("asda");
-                current_button.val("Ändra");
-                current_button.html("Ändra");
-                current_text.addClass("current");
-				//editAll(false, "save");
+}
+	$(document).ready(function() {
+		$("input[name$='wantsnews']").click(function() {
+			var test = $(this).val();
 
-            }else if(current_button.val() === "Ändra"){
-                current_text.attr("disabled", false);
-                current_text.addClass("asda");
-                current_button.val("Spara");
-                current_button.addClass("blue");
-                current_button.html("Spara");
-                current_text.addClass("current").focusTextToEnd();
-                editAll(true, "Ändra");
-            }
-        });
+			console.log(test);
+			$('.nyhetsbrev').html(test);
+		});
 	});
+
+
+
+	/*					DISABLE IF EMPTY
+
+
+    $(document).ready(function(){
+        $('.edit-button').prop('disabled',false);
+        $('.inputtext-table').keyup(function(){
+            $('.edit-button').prop('disabled', this.value == "" ? true : false);
+        });
+    });
+
+*/
+
+$(document).ready(function(){
+	$(".test").on("click", function(){
+		var current_button = $(this);
+		var current_text = $(this).parents("tr").find(".inputtext-table");
+		if(current_button.val() === "Spara"){
+			current_button.removeClass("blue");
+			current_text.attr("disabled", true);
+			current_text.removeClass("asda");
+			current_button.val("Ändra");
+			current_button.html("Ändra");
+			current_text.addClass("current");
+			current_text.removeClass("harfel");
+
+		}else if(current_button.val() === "Ändra"){
+			current_text.attr("disabled", false);
+			current_text.addClass("asda");
+			current_button.val("Spara");
+			current_button.addClass("blue");
+			current_button.html("Spara");
+			current_text.addClass("current");
+			editAll(true, "Ändra");
+		}
+	});
+});
 
 
     $("#reg_confirm_pass").blur(function() {
@@ -240,12 +237,27 @@ export default function () {
             $("#enter").prop('disabled',true)//use prop()
             alert("Your password doesn't same");
         }
-
     });
 
+    function checkPasswordMatch() {
+        var password = $("#txtNewPassword").val();
+        var confirmPassword = $("#txtConfirmPassword").val();
+
+        if (password != confirmPassword)
+            $(".heej").css("display", "block"),
+        	$("#txtNewPassword").addClass("harfel"),
+			$("#txtConfirmPassword").addClass("harfel");
+        else
+            $(".heej").css("display", "none"),
+        	$("#txtNewPassword").removeClass("harfel"),
+            $("#txtConfirmPassword").removeClass("harfel");
+
+    }
 
 
-
+    $(document).ready(function () {
+        $("#txtNewPassword, #txtConfirmPassword").keyup(checkPasswordMatch);
+    });
 
 /*
     $(document).ready(function () {
@@ -271,33 +283,6 @@ export default function () {
     });
 */
 
-    $(document).ready(function () {
-        $('.edit-button1').click(function () {
-            var currentTD = $(this).parents('tr').find('td');
-            if ($(this).html() == 'Ändra') {
-                $(this).addClass('edit-button-toggle');
-                currentTD = $(this).parents('tr').find('td');
-                $.each(currentTD, function () {
-                    $(this).prop('contenteditable', true);
-                    $('.clearingnr').prop('contenteditable', true);
-                    $('.konto').prop('contenteditable', true);
-                    $('.text').prop('contenteditable', true);
-
-                });
-            } else {
-                $(this).removeClass('edit-button-toggle');
-                $.each(currentTD, function () {
-                    $(this).prop('contenteditable', false);
-                    $('.clearingnr').prop('contenteditable', false);
-                    $('.konto').prop('contenteditable', false);
-                    $('.text').prop('contenteditable', false);
-                });
-            }
-            $(this).html($(this).html() == 'Ändra' ? 'Spara' : 'Ändra');
-
-        });
-
-    });
 
 }
 
