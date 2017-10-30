@@ -12,7 +12,6 @@
       font-family: $basic-heading-family;
       @media screen and (max-width: $screen-xs) {
         padding-left: 20px;
-        padding-bottom: 15px;
         padding-top: 0;
         color: #546785;
         width: 100%;
@@ -96,10 +95,17 @@
     }
     & tr{
       height:56px;
+      @media screen and (max-width: $screen-xs) {
+        height: 65px !important;
+      }
     }
 
 .details-table__placeholder:empty:not(:focus):before {
   content: attr(data-placeholder)
+}
+
+.details-table__placeholder{
+  padding-bottom: 0;
 }
 
 
@@ -176,7 +182,7 @@
   border-radius: 5px;
   height: 40px;
   outline: none;
-  width: 220ppx;
+  width: 220px;
   padding-left: 10px;
   &:focus{
     border: 1px solid #ef7450;
@@ -185,6 +191,13 @@
     width: 100%;
   }
 }
+
+#chat-namn-text1{
+  @media screen and (max-width: $screen-xs){
+    margin-top: 10px !important;
+  }
+}
+
 
 .change-password{
   display: none;
@@ -233,20 +246,27 @@
     display: inline-block !important;
     background-color: white;
     width: 220px;
-    margin-bottom: 0;
     height: 40px;
     overflow: scroll;
-    padding-top: 0 !important;
+    padding-top: 0;
     padding-left: 12px;
     padding-right: 50px;
+
     @media screen and (max-width: $screen-xs) {
       width: 90%;
+      margin-bottom: 10px;
+      margin-top: 5px;
       padding-right: 12px;
       margin-right: 10px;
-      margin-top: 5px;
+      padding-top: 12px;
+      padding-bottom: 10px;
     }
     &.konto {
       margin-bottom: 20px;
+      @media screen  and (max-width: $screen-xs){
+        margin-bottom: 0;
+
+      }
     }
     &.details-table__checkbox--margin {
       margin: 0px 0px -5px !important;
@@ -266,6 +286,11 @@
       height: auto;
       width: 100%;
       padding-left: 0;
+      @media screen and (max-width: $screen-xs){
+        padding-bottom: 0;
+        margin-bottom: 0px;
+        margin-top: 0;
+      }
     }
     &.clearing{
       border: 1px solid #DEE1E8;
@@ -278,7 +303,6 @@
       padding-top: 12px !important;
       padding: 12px;
       padding-right: 0;
-      margin-bottom: 20px;
     }
     &.konto{
       border: 1px solid #DEE1E8;
@@ -293,7 +317,7 @@
       padding: 12px;
       padding-right: 50px;
       @media screen and (max-width: $screen-xs){
-        width: 60%;
+        width: 55%;
       }
     }
     &.clearingnr{
@@ -307,24 +331,24 @@
       margin: 0;
       height: 100%;
       width: 100%;
-      margin-bottom: 5px;
       padding: 0;
+      overflow: auto;
+      padding-bottom: 5px;
       border: none;
       @media screen and (max-width: $screen-xs) {
-        margin-bottom: -10px;
+        margin-top: 5px;
+        overflow: auto;
+        padding-bottom: 0;
       }
-
-
     }
-    ::placeholder { /* Chrome/Opera/Safari */
-      color: pink;
-    }
-
   }&.test{
        border: 1px solid black;
      }
 }
 
+.clering{
+  padding-top: 5px;
+}
 
 .PasswordTitleConfirm{
   padding-left: 160px;
@@ -346,13 +370,18 @@
   margin-bottom: 10px;
   @media screen and (max-width: $screen-xs){
     /* margin-left: 20px; */
-    margin-bottom: 10px;
-    margin-top: 30px;
+    margin-bottom: 0;
+    margin-top: 20px;
     margin-left: 0;
     /* padding-right: 10px; */
   }
 }
 
+#txtNewPassword{
+  @media screen and (max-width: $screen-xs){
+    margin-top: -5px;
+  }
+}
 
 
 .clearing{
