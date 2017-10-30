@@ -125,6 +125,10 @@
 #chat-namn-text{
   font-weight: 600;
   opacity: 1;
+  @media screen and (max-width: $screen-xs){
+    margin-bottom: 10px;
+
+  }
 }
 
 .container--verktyg{
@@ -356,7 +360,7 @@
   position: absolute;
   @media screen and (max-width: $screen-xs){
     left: 30px;
-    margin-top: 70px;
+    margin-top: 75px;
     padding-left: 0;
     position: absolute;
   }
@@ -379,7 +383,7 @@
 
 #txtNewPassword{
   @media screen and (max-width: $screen-xs){
-    margin-top: -5px;
+    margin-top: 0px;
   }
 }
 
