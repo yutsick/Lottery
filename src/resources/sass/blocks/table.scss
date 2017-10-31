@@ -137,7 +137,8 @@
 #chat-namn-text1 {
   width: 220px;
   @media screen and (max-width: $screen-xs){
-    margin-top: 0px !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px;
     width: 55%;
   }
 }
