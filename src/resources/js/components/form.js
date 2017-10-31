@@ -144,7 +144,8 @@ export default function () {
 	function toggle_profile_inputs() {
 		$('.js-update-profile-row').on('click', function () {
 			let $currentRow = $(this).parents('.profile__row');
-			$currentRow.find('input').prop('disabled', false).focus();
+			$currentRow.find('input').prop('disabled', false);
+			$currentRow.find('input').first().focus();
 			$currentRow.addClass('profile__row--active');
 		});
 	}

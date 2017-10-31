@@ -36,12 +36,18 @@
 }
 
 .profile__label {
-	display: inline-block;
+	display: block;
 	width: 130px;
 	font-weight: 600;
 	color: #000000;
-	margin-bottom: 0;
 	vertical-align: top;
+	margin-bottom: 5px;
+
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 0;
+		display: inline-block;
+	}
+
 }
 
 .profile__input {
@@ -128,9 +134,18 @@
 }
 
 .profile__actions {
-	display: inline-block;
-	float: right;
-	padding-right: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	@include min-screen($screen-sm-min) {
+		position: relative;
+		display: inline-block;
+		float: right;
+		padding-right: 20px;
+		top: 0;
+		right: 0;
+	}
 
 	.btn-link {
 		padding: 0;
@@ -170,6 +185,14 @@
 
 	.profile__multiple-input {
 		display: inline-block;
+		margin-bottom: 10px;
+		@include min-screen($screen-sm-min) {
+			margin-bottom: 0;
+		}
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 
 		&:nth-of-type(2) {
 			display: inline-block;
