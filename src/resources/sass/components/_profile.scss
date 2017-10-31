@@ -61,7 +61,6 @@
 
 	.help-block {
 		margin: 0;
-
 		ul { margin: 5px 0 0; }
 	}
 
@@ -89,7 +88,6 @@
 			@include min-screen($screen-sm-min) {
 				padding: 9px 0;
 			}
-
 		}
 	}
 
@@ -116,7 +114,6 @@
 			line-height: 1;
 		}
 	}
-
 }
 
 .profile__input.profile__input--account {
@@ -130,6 +127,10 @@
 
 		.input-clearing {
 			width: 50px;
+		}
+
+		.input-account {
+			width: auto;
 		}
 
 		.input-acount { }
