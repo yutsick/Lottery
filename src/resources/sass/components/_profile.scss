@@ -93,6 +93,7 @@
 		input {
 			display: none;
 			margin: 0;
+			outline: none;
 		}
 
 		input:checked + label { display: inline-block; }
