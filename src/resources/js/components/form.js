@@ -68,6 +68,39 @@ export default function () {
 			$error.addClass('hidden');
 			$form.removeClass('hidden');
 		});
+
+        $('form[data-use-ajax]').validator().on('submit', function (e) {
+            if (e.isDefaultPrevented()) {
+            } else {
+            	let $this = $(this);
+                let formData = $this.serialize();
+                let url = $this.attr('action');
+				let $currentRow = $this.parents('.profile__row');
+                let $submitButton = $this.find('[type="submit"]');
+
+            	// disable submit button
+				$submitButton.prop('disabled', true);
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: formData,
+                    success: function(data) {
+                    	// stop spinner and hide form
+
+						// disable submit button
+						$submitButton.prop('disabled', false);
+						$this.find('input').prop('disabled', true);
+						$currentRow.removeClass('profile__row--active');
+                    },
+					error: function() {
+						// something went wrong on the backend?
+						$submitButton.prop('disabled', false);
+					}
+                });
+            }
+            return false;
+        });
 	}
 
 
