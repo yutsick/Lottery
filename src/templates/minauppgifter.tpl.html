@@ -82,13 +82,14 @@
 			<div class="profile__header">Profilinställningar</div>
 
 			<div class="profile__row form-group has-feedback">
-				<form action="/" method="post" data-toggle="validator">
+				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Chat-namn</label>
 					<div class="profile__input">
 						<input type="text"
 							   data-required-error="Du måste fylla i detta fält."
 							   placeholder="Chat-namn"
 							   value="DjPingo"
+							   name="chat-name"
 							   required disabled>
 						<div class="help-block with-errors"></div>
 					</div>
@@ -100,7 +101,7 @@
 			</div>
 
 			<div class="profile__row form-group has-feedback">
-				<form action="/" method="post" data-toggle="validator">
+				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Nyhetsbrev</label>
 
 					<div class="profile__input">
@@ -142,14 +143,14 @@
 			</div>
 
 			<div class="profile__row form-group has-feedback">
-				<form action="/" method="post" data-toggle="validator">
+				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Telefonnummer</label>
 					<div class="profile__input">
 						<input type="number"
 							   data-required-error="Du måste fylla i detta fält."
-							   data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."
 							   placeholder="Ej angivet"
 							   value=""
+							   name="phone"
 							   disabled>
 						<div class="help-block with-errors"></div>
 					</div>
@@ -161,14 +162,14 @@
 			</div>
 
 			<div class="profile__row form-group has-feedback">
-				<form action="/" method="post" data-toggle="validator">
+				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Mobilnummer</label>
 					<div class="profile__input">
 						<input type="number"
 							   data-required-error="Du måste fylla i detta fält."
-							   data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."
 							   placeholder="Ej angivet"
 							   value="0768232323"
+							   name="mobile"
 							   required disabled>
 						<div class="help-block with-errors"></div>
 					</div>
@@ -184,7 +185,7 @@
 			<div class="profile__header">Kontonummer</div>
 
 			<div class="profile__row form-group has-feedback">
-				<form action="/" method="post" data-toggle="validator">
+				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Kontonummer</label>
 
 					<div class="profile__input profile__input--account">
