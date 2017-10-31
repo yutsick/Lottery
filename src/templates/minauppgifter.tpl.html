@@ -108,14 +108,16 @@
 						<div class="profile__multiple-input">
 
 							<div class="checkbox">
-								<input value="Ja" id="newsletter-yes" name="newsletter" type="radio" class="custom-checkbox" checked>
+								<input value="Ja" id="newsletter-yes" name="newsletter" type="radio"
+									   class="custom-checkbox" checked>
 								<label for="newsletter-yes">Ja</label>
 							</div>
 						</div>
 
 						<div class="profile__multiple-input">
 							<div class="checkbox">
-								<input value="Nej" id="newsletter-no" name="newsletter" type="radio" class="custom-checkbox">
+								<input value="Nej" id="newsletter-no" name="newsletter" type="radio"
+									   class="custom-checkbox">
 								<label for="newsletter-no">Nej</label>
 							</div>
 						</div>
@@ -147,7 +149,7 @@
 				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Telefonnummer</label>
 					<div class="profile__input">
-						<input type="number"
+						<input type="tel"
 							   data-required-error="Du måste fylla i detta fält."
 							   placeholder="Ej angivet"
 							   value=""
@@ -166,7 +168,7 @@
 				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Mobilnummer</label>
 					<div class="profile__input">
-						<input type="number"
+						<input type="tel"
 							   data-required-error="Du måste fylla i detta fält."
 							   placeholder="Ej angivet"
 							   value="0768232323"
@@ -197,7 +199,7 @@
 								   data-required-error="Du måste fylla i detta fält."
 								   name="clearingnumber"
 								   value="80325"
-								   disabled>
+								   disabled pattern="[0-9]*">
 						</div>
 						<div class="profile__multiple-input">
 							<label>Kontonummer</label>
@@ -206,7 +208,7 @@
 								   data-required-error="Du måste fylla i detta fält."
 								   name="accountnumber"
 								   value="234234"
-								   disabled>
+								   disabled pattern="[0-9]*">
 						</div>
 						<div class="help-block with-errors"></div>
 					</div>
