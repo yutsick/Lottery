@@ -180,9 +180,7 @@ export default function () {
 	$(document).ready(function() {
 		$("input[name$='wantsnews']").click(function() {
 			var test = $(this).val();
-			console.log(test);
 			$('.nyhetsbrev').html(test);
-
 		});
 	});
 
@@ -226,6 +224,26 @@ $(document).ready(function(){
 
 
 });
+
+
+    $(document).ready(function(){
+        $(".checkbutton").on("click", function(){
+            var current_button = $(this);
+            var current_text = $(this).parents("tr").find(".nyhetsbrev");
+            if(current_button.val() === "Spara"){
+                current_text.hide();
+
+            }else if(current_button.val() === "Ändra"){
+                current_text.show();
+                editAll(true, "Ändra");
+            }
+        });
+
+
+    });
+
+
+
 
     if ('inputtext-table custom-checkbox details-table__checkbox--margin asda' === true){
         console.log("hej");
