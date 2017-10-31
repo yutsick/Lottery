@@ -103,6 +103,7 @@
 		display: block;
 		overflow: hidden;
 		margin: 0;
+
 		@include min-screen($screen-sm-min) {
 			overflow: initial;
 			display: inline-block;
@@ -167,7 +168,7 @@
 		color: #546785;
 		font-weight: 600;
 		font-size: 14px;
-		line-height: 16px;
+		line-height: 24px;
 	}
 
 	.profile__submit {
