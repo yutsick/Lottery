@@ -126,106 +126,96 @@
 			</div>
 		</div>
 
+		<div class="profile">
+			<div class="profile__header">Kontaktuppgifter</div>
+
+			<div class="profile__row">
+				<div class="profile__label">Namn</div>
+				<div class="profile__input">Stefan Jakobsson</div>
+			</div>
+
+			<div class="profile__row">
+				<div class="profile__label">Address</div>
+				<div class="profile__input">Hvitfeldtsgatan 4, 411 20, Göteborg</div>
+			</div>
+
+			<div class="profile__row form-group has-feedback">
+				<form action="/" method="post" data-toggle="validator">
+					<label class="profile__label">Telefonnummer</label>
+					<div class="profile__input">
+						<input type="number"
+							   data-required-error="Du måste fylla i detta fält."
+							   data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."
+							   placeholder="Ej angivet"
+							   value=""
+							   disabled>
+						<div class="help-block with-errors"></div>
+					</div>
+					<div class="profile__actions">
+						<button class="btn btn-link js-update-profile-row" type="button">Ändra</button>
+						<button class="btn btn-link profile__submit" type="submit">Spara</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="profile__row form-group has-feedback">
+				<form action="/" method="post" data-toggle="validator">
+					<label class="profile__label">Mobilnummer</label>
+					<div class="profile__input">
+						<input type="number"
+							   data-required-error="Du måste fylla i detta fält."
+							   data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."
+							   placeholder="Ej angivet"
+							   value="0768232323"
+							   required disabled>
+						<div class="help-block with-errors"></div>
+					</div>
+					<div class="profile__actions">
+						<button class="btn btn-link js-update-profile-row" type="button">Ändra</button>
+						<button class="btn btn-link profile__submit" type="submit">Spara</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="profile">
+			<div class="profile__header">Kontonummer</div>
+
+			<div class="profile__row form-group has-feedback">
+				<form action="/" method="post" data-toggle="validator">
+					<label class="profile__label">Kontonummer</label>
+
+					<div class="profile__input profile__input--account">
+						<div class="profile__multiple-input">
+							<label>Clearingnr</label>
+							<input class="input-clearing"
+								   type="number"
+								   data-required-error="Du måste fylla i detta fält."
+								   name="clearingnumber"
+								   value="80325"
+								   disabled>
+						</div>
+						<div class="profile__multiple-input">
+							<label>Kontonummer</label>
+							<input class="input-account"
+								   type="number"
+								   data-required-error="Du måste fylla i detta fält."
+								   name="accountnumber"
+								   value="234234"
+								   disabled>
+						</div>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div class="profile__actions">
+						<button class="btn btn-link js-update-profile-row" type="button">Ändra</button>
+						<button class="btn btn-link profile__submit" type="submit">Spara</button>
+					</div>
+				</form>
+			</div>
+		</div>
 
 		<!-- OLD CODE: -->
-		<div class="table_wrapper">
-			<table class="details-table">
-				<caption class="details-table__caption">Profilinställningar</caption>
-				<tr>
-					<th class="border">Chat-namn</th>
-					<td>
-						<input id="chat-namn-text" type="text" disabled="disabled" onfocus="this.value = this.value;"
-							   class="inputtext-table" value="Djpingo">
-					</td>
-					<th class="button">
-						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
-					</th>
-				</tr>
-				<tr>
-					<th class="border">Nyhetsbrev</th>
-					<td class="details-table__news--visible">
-
-					</td>
-					<td>
-						<div class="details-table__checkbox">
-							<div class="nyhetsbrev">Ja</div>
-							<div class="testing">
-								<input value="Ja" checked="checked" id="userAcceptTerms1" name="wantsnews" type="radio"
-									   class="inputtext-table custom-checkbox details-table__checkbox--margin"
-									   style="display: none; ">
-								<label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms"
-									   style="display: none;background-color: transparent !important;">Ja</label>
-							</div>
-							<div class="testing" style="margin-bottom: 10px;">
-								<input value="Nej" id="chat-a-text" id="userAcceptTerms" name="wantsnews" type="radio"
-									   class="inputtext-table custom-checkbox details-table__checkbox--margin"
-									   style="display: none; margin-bottom: 10px;">
-								<label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms1"
-									   style="display: none; background-color: transparent !important;">Nej</label>
-							</div>
-						</div>
-					</td>
-					<th class="button">
-						<button id="chat_editbtn" class="edit-button test checkbutton" value="Ändra">Ändra</button>
-					</th>
-				</tr>
-			</table>
-		</div>
-		<div class="table_wrapper">
-			<table class="details-table">
-				<caption class="details-table__caption">Kontaktuppgifter</caption>
-				<tr>
-					<th class="border">Namn</th>
-					<td>Stefan Jakobsson</td>
-				</tr>
-				<tr>
-					<th class="border">Address</th>
-					<td colspan="2">Hvitfeldtsgatan 4, 411 20, Göteborg</td>
-				</tr>
-				<tr>
-					<th class="border">Telefonnummer</th>
-					<td>
-						<input id="chat-namn-text" onfocus="this.placeholder = ''"
-							   onblur="this.placeholder = 'Ej angivet'" placeholder="Ej angivet" type="tel"
-							   disabled="disabled" class="inputtext-table" value="">
-					</td>
-					<th class="button">
-						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
-					</th>
-				</tr>
-				<tr>
-					<th class="border">Mobilnummer</th>
-					<td>
-						<input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table"
-							   value="0700 77 33 22">
-					</td>
-					<th class="button">
-						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
-					</th>
-				</tr>
-			</table>
-		</div>
-
-
-		<div class="table_wrapper">
-			<table class="details-table">
-				<caption class="details-table__caption">Kontonummer</caption>
-				<tr>
-					<th class="border">Kontonummer</th>
-					<td>
-						<div class="inputtext-table clearingnr" style="display: none"><span
-							class="clering">Clearingnr</span> <span class="kontoo">Kontonummer</span></div>
-						<input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table clearing"
-							   value="83683">
-						<input id="chat-namn-text1" type="tel" disabled="disabled" class="inputtext-table konto"
-							   value="90123123">
-					</td>
-					<th class="button">
-						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
-					</th>
-				</tr>
-			</table>
-		</div>
 		<div class="col-xs-12 h4 mina-verktyg--text">Mina Verktyg</div>
 		<div class="col-md-9 col-xs-12 container--verktyg">
 			<div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
