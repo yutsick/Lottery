@@ -52,13 +52,15 @@
 
 .profile__input {
 	display: inline-block;
-	margin: -10px 0;
 	color: #546785;
 	font-weight: 600;
 
+	@include min-screen($screen-sm-min) {
+		margin: -10px 0;
+	}
+
 	.help-block {
 		margin: 0;
-
 		ul { margin: 5px 0 0; }
 	}
 
@@ -82,17 +84,25 @@
 			background: transparent;
 			border: none;
 			margin: 0;
-			padding: 9px 0;
+			padding: 0;
+			@include min-screen($screen-sm-min) {
+				padding: 9px 0;
+			}
 		}
 	}
 
 	.checkbox {
-		display: inline-block;
 		margin: 0 15px 0 0;
+		display: block;
+
+		@include min-screen($screen-sm-min) {
+			display: inline-block;
+		}
 
 		input {
 			display: none;
 			margin: 0;
+			outline: none;
 		}
 
 		input:checked + label { display: inline-block; }
@@ -104,7 +114,6 @@
 			line-height: 1;
 		}
 	}
-
 }
 
 .profile__input.profile__input--account {
@@ -118,6 +127,10 @@
 
 		.input-clearing {
 			width: 50px;
+		}
+
+		.input-account {
+			width: auto;
 		}
 
 		.input-acount { }
@@ -172,10 +185,6 @@
 
 	.profile__submit { display: inline-block; }
 
-	.profile__input {
-		margin: 0;
-	}
-
 	.profile__input input {
 		@include placeholder-styles {
 			color: transparent;
@@ -183,6 +192,8 @@
 	}
 
 	.profile__input .checkbox {
+		padding: 10px 0 0;
+
 		label {
 			display: inline-block;
 		}
@@ -200,8 +211,10 @@
 	.profile__multiple-input {
 		display: inline-block;
 		margin-bottom: 10px;
+
 		@include min-screen($screen-sm-min) {
 			margin-bottom: 0;
+			padding: 10px 0;
 		}
 
 		&:last-of-type {
