@@ -6,143 +6,252 @@
 @@include('layout/_sidebar.html', {"logged_in": true})
 
 <div class="content-wrapper ml-2017">
-    <div class="container container-fluid">
-        <h1 class="block-hero__page-title">Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!</h1>
-        <div class="block-content__content"><h2>Mina uppgifter</h2></div>
-        <p style="color: #536785;font-family: 'Proxima Nova';font-weight: 600;">Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
-    <div class="table_wrapper">
-        <!--<button class="editbtn">Ändra</button>-->
-        <table class="details-table">
-            <caption class="details-table__caption">Inloggningsuppgifter</caption>
-            <tr>
-                <th class="border" >Kundnummer</th>
-                <td colspan="2">110001679538</td>
-            </tr>
-            <tr>
-                <th class="border">E-postadress</th>
-                <td>
-                    <div class="form-group has-feedback epostvalid">
-                    <form data-toggle="validator">
-                        <input type="email" disabled="disabled" class="form-control inputtext-table epostvaliddd"  style="background-color: transparent;" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med." id="userEmail" value="hello@hello.se"></form>
-                        <div class="help-block with-errors" style="margin-bottom: 0px;"></div>
-                    </div>
-                </td>
+	<div class="container container-fluid">
+		<h1 class="block-hero__page-title">Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och
+			jackpottar!</h1>
+		<div class="block-content__content"><h2>Mina uppgifter</h2></div>
+		<p style="color: #536785;font-family: 'Proxima Nova';font-weight: 600;">Vissa av dina uppgifter nedan går inte
+			att ändra eftersom de läses in automatiskt från folkbokföringsregistret.</p>
 
-                <th class="button"><button id="editbtn" class="edit-button test" type="button" value="Ändra">Ändra</button></th>
-            <tr class="border">
-                <th class="border" >Lösenord</th>
-                <td data-placeholder="Ej angivet" class="details-table__placeholderr" style="padding-bottom: 0;">
-                    <div class="inputtext-table PassTitle" style="display: none"><span class="clering">Nytt lösenord</span> <span class="PasswordTitleConfirm">Bekräfta lösenord</span></div>
-                    <input type="password" id="txtNewPassword" placeholder="******"class="inputtext-table" disabled="disabled" value="******">
-                    <input type="password" id="txtConfirmPassword" placeholder="" class="inputtext-table" style="display: none" disabled="disabled" value="******">
-                    <div class="inputtext-table checkPasswordMatch" style="display: none">
-                        <div class="heej">
-                            Lösenorden matchar ej!
-                        </div>
-                    </div>
-                </td>
-                <th class="button"><button id="editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
-            </tr>
-        </table>
-    </div>
+		<div class="profile">
+			<div class="profile__header">Inloggningsuppgifter</div>
 
-    <div class="table_wrapper">
-        <table class="details-table">
-            <caption class="details-table__caption">Profilinställningar</caption>
-            <tr>
-                <th class="border" >Chat-namn</th>
-                <td>
-                    <input id="chat-namn-text" type="text" disabled="disabled" onfocus="this.value = this.value;" class="inputtext-table" value="Djpingo">
-                </td>
-                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
-            </tr>
-            <tr>
-                <th class="border">Nyhetsbrev</th>
-                <td class="details-table__news--visible">
+			<div class="profile__row">
+				<div class="profile__label">Kundnummer</div>
+				<div class="profile__input">110001679538</div>
+			</div>
 
-                </td>
-                <td>
-                <div class="details-table__checkbox">
-                    <div class="nyhetsbrev">Ja</div>
-                    <div class="testing">
-                    <input value="Ja" checked="checked" id="userAcceptTerms1" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none; ">
-                    <label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms" style="display: none;background-color: transparent !important;">Ja</label>
-                    </div>
-                    <div class="testing" style="margin-bottom: 10px;">
-                    <input value="Nej" id="chat-a-text" id="userAcceptTerms" name="wantsnews" type="radio"class="inputtext-table custom-checkbox details-table__checkbox--margin" style="display: none; margin-bottom: 10px;">
-                    <label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms1" style="display: none; background-color: transparent !important;">Nej</label>
-                    </div>
-                </div>
-                </td>
-                <th class="button"><button id="chat_editbtn" class="edit-button test checkbutton" value="Ändra">Ändra</button></th>
-            </tr>
-        </table>
-    </div>
-    <div class="table_wrapper">
-        <table class="details-table">
-            <caption class="details-table__caption">Kontaktuppgifter</caption>
-            <tr>
-                <th class="border">Namn</th>
-                <td>Stefan Jakobsson</td>
-            </tr>
-            <tr>
-                <th class="border">Address</th>
-                <td colspan="2">Hvitfeldtsgatan 4, 411 20, Göteborg</td>
-            </tr>
-            <tr>
-                <th class="border" >Telefonnummer</th>
-                <td>
-                    <input id="chat-namn-text"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Ej angivet'" placeholder="Ej angivet" type="tel" disabled="disabled" class="inputtext-table" value="">
-                </td>
-                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
-            </tr>
-            <tr>
-                <th class="border" >Mobilnummer</th>
-                <td>
-                    <input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table" value="0700 77 33 22">
-                </td>
-                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
-            </tr>
-        </table>
-        </div>
+			<div class="profile__row form-group has-feedback">
+				<form action="/" method="post" data-toggle="validator">
+					<label class="profile__label">E-postadress</label>
+					<div class="profile__input">
+						<input type="email"
+							   data-required-error="Du måste fylla i detta fält."
+							   data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."
+							   placeholder="E-postadress"
+							   value="hello@hello.se"
+							   required disabled>
+						<div class="help-block with-errors"></div>
+					</div>
+					<div class="profile__actions">
+						<button class="btn btn-link js-update-profile-row" type="button">Ändra</button>
+						<button class="btn btn-link profile__submit" type="submit">Spara</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="profile__row form-group has-feedback">
+				<form action="/" method="post" data-toggle="validator">
+					<label class="profile__label">Lösenord</label>
+
+					<div class="profile__input">
+						<div class="profile__multiple-input">
+							<label>Nytt lösenord</label>
+							<input type="password"
+								   id="password"
+								   data-required-error="Du måste fylla i detta fält."
+								   name="password"
+								   value="********"
+								   required disabled>
+						</div>
+						<div class="profile__multiple-input">
+							<label>Bekräfta lösenord</label>
+							<input type="password"
+								   id="confirmPassword"
+								   data-required-error="Du måste fylla i detta fält."
+								   data-match="#password"
+								   data-match-error="Lösenorden matchar ej"
+								   name="confirm-password"
+								   value=""
+								   required disabled>
+						</div>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div class="profile__actions">
+						<button class="btn btn-link js-update-profile-row" type="button">Ändra</button>
+						<button class="btn btn-link profile__submit" type="submit">Spara</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="profile">
+			<div class="profile__header">Profilinställningar</div>
+
+			<div class="profile__row form-group has-feedback">
+				<form action="/" method="post" data-toggle="validator">
+					<label class="profile__label">Chat-namn</label>
+					<div class="profile__input">
+						<input type="text"
+							   data-required-error="Du måste fylla i detta fält."
+							   placeholder="Chat-namn"
+							   value="DjPingo"
+							   required disabled>
+						<div class="help-block with-errors"></div>
+					</div>
+					<div class="profile__actions">
+						<button class="btn btn-link js-update-profile-row" type="button">Ändra</button>
+						<button class="btn btn-link profile__submit" type="submit">Spara</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="profile__row form-group has-feedback">
+				<form action="/" method="post" data-toggle="validator">
+					<label class="profile__label">Nyhetsbrev</label>
+
+					<div class="profile__input">
+						<div class="checkbox">
+							<input value="Ja" name="newsletter" type="radio" class="custom-checkbox" checked>
+							<label>
+								Ja
+							</label>
+						</div>
+
+						<div class="checkbox">
+							<input value="Nej" name="newsletter" type="radio" class="custom-checkbox">
+							<label>
+								Nej
+							</label>
+						</div>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div class="profile__actions">
+						<button class="btn btn-link js-update-profile-row" type="button">Ändra</button>
+						<button class="btn btn-link profile__submit" type="submit">Spara</button>
+					</div>
+				</form>
+			</div>
+		</div>
 
 
-    <div class="table_wrapper">
-        <table class="details-table">
-            <caption class="details-table__caption">Kontonummer</caption>
-            <tr>
-                <th class="border" >Kontonummer</th>
-                <td>
-                    <div class="inputtext-table clearingnr" style="display: none"><span class="clering">Clearingnr</span> <span class="kontoo">Kontonummer</span></div>
-                    <input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table clearing" value="83683">
-                    <input id="chat-namn-text1" type="tel" disabled="disabled" class="inputtext-table konto" value="90123123">
-                </td>
-                <th class="button"><button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button></th>
-            </tr>
-        </table>
-    </div>
-    <div class="col-xs-12 h4 mina-verktyg--text">Mina Verktyg</div>
-        <div class="col-md-9 col-xs-12 container--verktyg">
-            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
-                <button class="btn btn-primary btn-icon details-table__button">Playscan</button><br>
-                <p class="details-table__button-text">Håll spelandet under
-                    kontroll med Playscan</p>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
-                <button class="btn btn-primary btn-icon details-table__button">Spelbudget</button><br>
-                <p class="details-table__button-text">Bestäm i förväg var
-                    dina spelgränser går</p>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
-                <button class="btn btn-primary btn-icon details-table__button">Tidsgräns</button><br>
-                <p class="details-table__button-text">Spela inte längre tid än du tänkt dig</p>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding ">
-                <button class="btn btn-primary btn-icon details-table__button">Spelstopp</button><br>
-                <p class="details-table__button-text">Om du vill spärra dig från våra onlinespel</p>
-            </div>
-        </div>
-    </div>
+		<!-- OLD CODE: -->
+		<div class="table_wrapper">
+			<table class="details-table">
+				<caption class="details-table__caption">Profilinställningar</caption>
+				<tr>
+					<th class="border">Chat-namn</th>
+					<td>
+						<input id="chat-namn-text" type="text" disabled="disabled" onfocus="this.value = this.value;"
+							   class="inputtext-table" value="Djpingo">
+					</td>
+					<th class="button">
+						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
+					</th>
+				</tr>
+				<tr>
+					<th class="border">Nyhetsbrev</th>
+					<td class="details-table__news--visible">
+
+					</td>
+					<td>
+						<div class="details-table__checkbox">
+							<div class="nyhetsbrev">Ja</div>
+							<div class="testing">
+								<input value="Ja" checked="checked" id="userAcceptTerms1" name="wantsnews" type="radio"
+									   class="inputtext-table custom-checkbox details-table__checkbox--margin"
+									   style="display: none; ">
+								<label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms"
+									   style="display: none;background-color: transparent !important;">Ja</label>
+							</div>
+							<div class="testing" style="margin-bottom: 10px;">
+								<input value="Nej" id="chat-a-text" id="userAcceptTerms" name="wantsnews" type="radio"
+									   class="inputtext-table custom-checkbox details-table__checkbox--margin"
+									   style="display: none; margin-bottom: 10px;">
+								<label class="inputtext-table newlabel" id="checkat" for="userAcceptTerms1"
+									   style="display: none; background-color: transparent !important;">Nej</label>
+							</div>
+						</div>
+					</td>
+					<th class="button">
+						<button id="chat_editbtn" class="edit-button test checkbutton" value="Ändra">Ändra</button>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div class="table_wrapper">
+			<table class="details-table">
+				<caption class="details-table__caption">Kontaktuppgifter</caption>
+				<tr>
+					<th class="border">Namn</th>
+					<td>Stefan Jakobsson</td>
+				</tr>
+				<tr>
+					<th class="border">Address</th>
+					<td colspan="2">Hvitfeldtsgatan 4, 411 20, Göteborg</td>
+				</tr>
+				<tr>
+					<th class="border">Telefonnummer</th>
+					<td>
+						<input id="chat-namn-text" onfocus="this.placeholder = ''"
+							   onblur="this.placeholder = 'Ej angivet'" placeholder="Ej angivet" type="tel"
+							   disabled="disabled" class="inputtext-table" value="">
+					</td>
+					<th class="button">
+						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
+					</th>
+				</tr>
+				<tr>
+					<th class="border">Mobilnummer</th>
+					<td>
+						<input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table"
+							   value="0700 77 33 22">
+					</td>
+					<th class="button">
+						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
+					</th>
+				</tr>
+			</table>
+		</div>
+
+
+		<div class="table_wrapper">
+			<table class="details-table">
+				<caption class="details-table__caption">Kontonummer</caption>
+				<tr>
+					<th class="border">Kontonummer</th>
+					<td>
+						<div class="inputtext-table clearingnr" style="display: none"><span
+							class="clering">Clearingnr</span> <span class="kontoo">Kontonummer</span></div>
+						<input id="chat-namn-text" type="tel" disabled="disabled" class="inputtext-table clearing"
+							   value="83683">
+						<input id="chat-namn-text1" type="tel" disabled="disabled" class="inputtext-table konto"
+							   value="90123123">
+					</td>
+					<th class="button">
+						<button id="chat_editbtn" class="edit-button test" value="Ändra">Ändra</button>
+					</th>
+				</tr>
+			</table>
+		</div>
+		<div class="col-xs-12 h4 mina-verktyg--text">Mina Verktyg</div>
+		<div class="col-md-9 col-xs-12 container--verktyg">
+			<div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
+				<button class="btn btn-primary btn-icon details-table__button">Playscan</button>
+				<br>
+				<p class="details-table__button-text">Håll spelandet under
+					kontroll med Playscan</p>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
+				<button class="btn btn-primary btn-icon details-table__button">Spelbudget</button>
+				<br>
+				<p class="details-table__button-text">Bestäm i förväg var
+					dina spelgränser går</p>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding">
+				<button class="btn btn-primary btn-icon details-table__button">Tidsgräns</button>
+				<br>
+				<p class="details-table__button-text">Spela inte längre tid än du tänkt dig</p>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 details-table__button--padding ">
+				<button class="btn btn-primary btn-icon details-table__button">Spelstopp</button>
+				<br>
+				<p class="details-table__button-text">Om du vill spärra dig från våra onlinespel</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 

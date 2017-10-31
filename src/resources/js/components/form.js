@@ -3,6 +3,7 @@ export default function () {
 	form_show_password();
 	form_empty_input();
 	form_active_search();
+	toggle_profile_inputs();
 
 	function form_validate() {
 		$('#create-account-modal').validator().on('submit', function (e) {
@@ -70,9 +71,7 @@ export default function () {
 	}
 
 
-
-
-    function form_active_search() {
+	function form_active_search() {
 		$('.search  .form-control').bind('keyup', function (e) {
 			let $input = $(this);
 			let input_value = $input.val();
@@ -121,7 +120,7 @@ export default function () {
 
 		$('.inner-addon ').on('focus', '.form-control', function () {
 			let $input_containers = $('.inner-addon');
-        			let $input_container = $input.parent('.inner-addon');
+			let $input_container = $input.parent('.inner-addon');
 			let input_value = $input.val();
 
 			if (input_value) {
@@ -142,182 +141,12 @@ export default function () {
 		});
 	}
 
-
-    (function($){
-        $.fn.focusTextToEnd = function(){
-            this.focus();
-            var $thisVal = this.val();
-            var current_button = $(this);
-            console.log($thisVal);
-            if ($thisVal === 'Ja' ){
-            	console.log("hej");
-			}else{
-                console.log("nej");
-                this.val('').val($thisVal);
-            }
-            return this;
-        };
-    }(jQuery));
-
-
-
-
-	function editAll(bool, value){
-		$(".test").each(function(i, obj){
-			var current_button = $(this);
-			var text = $(this).parents("tr").find(".inputtext-table");
-            var nyhetsbrev = $(this).parents("td").find(".nyhetsbrev");
-            console.log(text.attr("disabled"));
-			if(text.hasClass("current")){
-				text.removeClass("current");
-			}
-			else{
-				$(this).val(value);
-				$(this).html(value);
-				text.removeClass("asda");
-				current_button.removeClass("blue");
-				text.attr("disabled", bool);
-			}
-
+	function toggle_profile_inputs() {
+		$('.js-update-profile-row').on('click', function () {
+			let $currentRow = $(this).parents('.profile__row');
+			$currentRow.find('input').prop('disabled', false);
+			$currentRow.addClass('profile__row--active');
 		});
-}
-
-
-
-	$(document).ready(function() {
-		$("input[name$='wantsnews']").click(function() {
-			var test = $(this).val();
-			$('.nyhetsbrev').html(test);
-		});
-	});
-
-
-
-	/*					DISABLE IF EMPTY
-
-
-    $(document).ready(function(){
-        $('.edit-button').prop('disabled',false);
-        $('.inputtext-table').keyup(function(){
-            $('.edit-button').prop('disabled', this.value == "" ? true : false);
-        });
-    });
-
-*/
-
-$(document).ready(function(){
-	$(".test").on("click", function(){
-		var current_button = $(this);
-		var current_text = $(this).parents("tr").find(".inputtext-table");
-		if(current_button.val() === "Spara"){
-			current_button.removeClass("blue");
-			current_text.attr("disabled", true);
-			current_text.removeClass("asda");
-			current_button.val("Ändra");
-			current_button.html("Ändra");
-			current_text.addClass("current");
-			current_text.removeClass("harfel");
-
-		}else if(current_button.val() === "Ändra"){
-			current_text.attr("disabled", false);
-			current_text.addClass("asda");
-			current_button.val("Spara");
-			current_button.addClass("blue");
-			current_button.html("Spara");
-			current_text.addClass("current").focusTextToEnd();
-			editAll(true, "Ändra");
-		}
-	});
-
-
-});
-
-
-    $(document).ready(function(){
-        $(".checkbutton").on("click", function(){
-            var current_button = $(this);
-            var current_text = $(this).parents("tr").find(".nyhetsbrev");
-            if(current_button.val() === "Spara"){
-                current_text.hide();
-
-            }else if(current_button.val() === "Ändra"){
-                current_text.show();
-                editAll(true, "Ändra");
-            }
-        });
-
-
-    });
-
-
-
-
-    if ('inputtext-table custom-checkbox details-table__checkbox--margin asda' === true){
-        console.log("hej");
-    }else{
-        console.log("hejdå");
-    }
-
-    $("#reg_confirm_pass").blur(function() {
-        var user_pass = $("#reg_pass").val();
-        var user_pass2 = $("#reg_confirm_pass").val();
-        //var enter = $("#enter").val();
-
-        if (user_pass.length == 0) {
-            alert("please fill password first");
-            $("#enter").prop('disabled',true)//use prop()
-        } else if (user_pass == user_pass2) {
-            $("#enter").prop('disabled',false)//use prop()
-        } else {
-            $("#enter").prop('disabled',true)//use prop()
-            alert("Your password doesn't same");
-        }
-    });
-
-    function checkPasswordMatch() {
-        var password = $("#txtNewPassword").val();
-        var confirmPassword = $("#txtConfirmPassword").val();
-
-        if (password != confirmPassword)
-            $(".heej").css("display", "block"),
-        	$("#txtNewPassword").addClass("harfel"),
-			$("#txtConfirmPassword").addClass("harfel");
-        else
-            $(".heej").css("display", "none"),
-        	$("#txtNewPassword").removeClass("harfel"),
-            $("#txtConfirmPassword").removeClass("harfel");
-
-    }
-
-
-    $(document).ready(function () {
-        $("#txtNewPassword, #txtConfirmPassword").keyup(checkPasswordMatch);
-    });
-
-/*
-    $(document).ready(function () {
-        $('.edit-button').click(function () {
-            var currentTD = $(this).parents('tr').find('td');
-            if ($(this).html() == 'Ändra') {
-                $(this).addClass('edit-button-toggle');
-                currentTD = $(this).parents('tr').find('td');
-                $.each(currentTD, function () {
-                    var focusedElement = document.activeElement;
-                    $(this).prop('contenteditable', true);
-                });
-            } else {
-                $(this).removeClass('edit-button-toggle');
-                $.each(currentTD, function () {
-                    $(this).prop('contenteditable', false);
-                });
-            }
-            $(this).html($(this).html() == 'Ändra' ? 'Spara' : 'Ändra');
-
-        });
-
-    });
-*/
-
+	}
 
 }
-

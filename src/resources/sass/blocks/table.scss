@@ -250,6 +250,7 @@
   background-color: transparent;
   padding-left: 0px;
   outline: none;
+
   &.epostvaliddd{
     box-shadow: none;
     margin-bottom: 0;
@@ -529,7 +530,7 @@ input[type="checkbox"]:focus{
   border: 1px solid #a2c3ff;
   border-bottom: 1px solid #a2c3ff;
 }
-¨
+
 #checkat{
   background-color: transparent !important;
   width: 10px !important;
@@ -612,9 +613,9 @@ tbody{
   }
 }
 
-input:disabled, textarea:disabled{
-  opacity: 1 !important;
-  color: #546785;
-  font-weight: 600;
-  -webkit-text-fill-color:#546785
-}
+//input:disabled, textarea:disabled{
+//  opacity: 1 !important;
+//  color: #546785;
+//  font-weight: 600;
+//  -webkit-text-fill-color:#546785
+//}

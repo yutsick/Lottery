@@ -74,8 +74,8 @@ body {
 #page-wrapper.page--content-only {
 	@include max-screen($screen-sm-max) {
 		padding-top: 0px;
-	}	
-    
+	}
+
 }
 
 #page-wrapper.page--content-only {
@@ -91,30 +91,30 @@ body {
             display: none;
         }
     }
-	
+
 	.block-hero {
         @include max-screen($screen-sm-max) {
             display: none;
         }
     }
-	
+
 	#top {
         @include max-screen($screen-sm-max) {
             display: none;
         }
     }
-	
+
 	#registerBackButton {
         @include min-screen($screen-sm-max) {
             display: none;
         }
     }
-	
+
 	.right-input-group {
 		@include max-screen($screen-xs-max) {
             margin-top: 10px;
         }
-	
+
 	}
 }
 

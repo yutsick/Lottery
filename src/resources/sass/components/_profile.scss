@@ -1,0 +1,154 @@
+.profile {
+	margin-bottom: 20px;
+}
+
+.profile__header {
+	background-color: #d6eeff;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 15px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color: #000;
+	border: 1px solid #a2c3ff;
+}
+
+.profile__row {
+	border: 1px solid $color-gray-border;
+	border-top: 0;
+	padding: 20px 15px;
+
+	&:nth-of-type(odd) {
+		background-color: #f5f8fa; }
+
+	&:last-of-type {
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+
+	&.form-group {
+		margin: 0;
+	}
+
+	.profile__submit {
+		display: none
+	}
+}
+
+.profile__row--active {
+	.btn-link { display: none; }
+
+	.profile__submit { display: inline-block; }
+
+	.profile__input .checkbox {
+		label {
+			display: inline-block;
+		}
+
+		input {
+			display: inline-block;
+		}
+	}
+
+	.profile__input label {
+		display: block
+	}
+
+	.profile__multiple-input {
+		display: inline-block;
+
+		&:nth-of-type(2) {
+			display: inline-block;
+		}
+	}
+}
+
+.profile__label {
+	display: inline-block;
+	width: 130px;
+	font-weight: 600;
+	color: #000000;
+	margin-bottom: 0;
+	vertical-align: top;
+}
+
+.profile__input {
+	display: inline-block;
+	margin: -10px 0;
+	color: #546785;
+	font-weight: 600;
+
+	.help-block {
+		margin: 0;
+
+		ul { margin: 5px 0 0; }
+	}
+
+	label {
+		display: none;
+		margin-bottom: 5px;
+		font-weight: 600;
+	}
+
+	input:not([type=radio]) {
+		color: #546785;
+		display: inline-block;
+		border: 1px solid $color-feather;
+		border-radius: 5px;
+		background-color: white;
+		width: 220px;
+		padding: 9px 10px;
+
+		&:disabled {
+			background: transparent;
+			border: none;
+			margin: 0;
+			padding: 9px 0;
+		}
+	}
+
+	.checkbox {
+		display: inline-block;
+		margin: 0 10px 0 0;
+		padding: 9px 0;
+
+		input {
+			display: none;
+			margin: 0;
+		}
+
+		input:checked + label { display: inline-block; }
+
+		label {
+			margin: 0;
+			padding: 0;
+			min-height: initial;
+			vertical-align: super;
+		}
+	}
+}
+
+.profile__multiple-input {
+	margin-right: 20px;
+
+	&:nth-of-type(2) {
+		display: none;
+	}
+}
+
+.profile__actions {
+	display: inline-block;
+	float: right;
+	padding-right: 20px;
+
+	.btn-link {
+		padding: 0;
+		color: #546785;
+		font-weight: 600;
+		font-size: 14px;
+	}
+
+	.profile__submit {
+		color: $color-light-blue;
+	}
+}
