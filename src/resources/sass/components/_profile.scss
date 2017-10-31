@@ -64,7 +64,10 @@
 
 	.help-block {
 		margin: 0;
-		ul { margin: 5px 0 0; }
+
+		ul {
+			margin: 5px 0 0;
+		}
 	}
 
 	label {
@@ -88,6 +91,10 @@
 			border: none;
 			margin: 0;
 			padding: 0;
+			color: #546785;
+			-webkit-text-fill-color: rgba(#546785, 1);
+			opacity: 1;
+
 			@include min-screen($screen-sm-min) {
 				padding: 9px 0;
 			}
@@ -195,15 +202,8 @@
 	}
 
 	.profile__input .checkbox {
-		padding: 10px 0 0;
-
-		label {
-			display: inline-block;
-		}
-
-		input {
-			display: inline-block;
-		}
+		label { display: inline-block; }
+		input { display: inline-block; }
 	}
 
 	.profile__input label {
@@ -220,13 +220,9 @@
 			padding: 10px 0;
 		}
 
-		&:last-of-type {
-			margin-bottom: 0;
-		}
+		&:last-of-type { margin-bottom: 0; }
 
-		&:nth-of-type(2) {
-			display: inline-block;
-		}
+		&:nth-of-type(2) { display: inline-block; }
 	}
 
 	.profile__input.profile__input--account {
