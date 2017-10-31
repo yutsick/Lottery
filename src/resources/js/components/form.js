@@ -141,16 +141,23 @@ export default function () {
 			$input_container.removeClass('js-has-content');
 		});
 	}
+
+
     (function($){
         $.fn.focusTextToEnd = function(){
             this.focus();
             var $thisVal = this.val();
-            this.val('').val($thisVal);
+            var current_button = $(this);
+            console.log($thisVal);
+            if ($thisVal === 'Ja' ){
+            	console.log("hej");
+			}else{
+                console.log("nej");
+                this.val('').val($thisVal);
+            }
             return this;
         };
     }(jQuery));
-
-
 
 
 
@@ -217,7 +224,7 @@ $(document).ready(function(){
 			current_button.val("Spara");
 			current_button.addClass("blue");
 			current_button.html("Spara");
-			current_text.addClass("current").focus();
+			current_text.addClass("current").focusTextToEnd();
 			editAll(true, "Ändra");
 		}
 	});
