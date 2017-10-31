@@ -100,10 +100,12 @@
 	}
 
 	.checkbox {
-		margin: 0 15px 0 0;
 		display: block;
+		overflow: hidden;
+		margin: 0;
 
 		@include min-screen($screen-sm-min) {
+			overflow: initial;
 			display: inline-block;
 		}
 
@@ -170,7 +172,7 @@
 		color: #546785;
 		font-weight: 600;
 		font-size: 14px;
-		line-height: 16px;
+		line-height: 24px;
 	}
 
 	.profile__submit {
@@ -198,8 +200,28 @@
 	}
 
 	.profile__input .checkbox {
-		label { display: inline-block; }
-		input { display: inline-block; }
+		padding: 10px 0;
+		margin: 0;
+
+		& + .checkbox {
+			padding-bottom: 0;
+		}
+
+		@include min-screen($screen-sm-min) {
+			padding: 0;
+			margin: 0 15px 0 0;
+		}
+
+		label {
+			display: inline-block;
+			vertical-align: sub;
+		}
+
+		input {
+			display: block;
+			float: left;
+			margin-right: 10px;
+		}
 	}
 
 	.profile__input label {
