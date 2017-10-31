@@ -3,9 +3,9 @@
   border-collapse: collapse;
 
   & td{
-    padding-top: 18px;
+    padding-top: 22px;
     float:left;
-    min-height: 62px;
+    min-height: 60px;
     padding-left: 25px;
     color: #546785;
     outline: none;
@@ -19,7 +19,8 @@
       width: 100%;
     }
 
-    &.change-password--hidden{
+
+    &.change-password --hidden{
       display: none;
     }
     &.details-table__news--hidden {
@@ -59,7 +60,7 @@
   }
 }
 & th {
-  padding-top: 20px;
+  padding-top: 22px;
   padding-left: 15px;
   text-align: left;
   float: left;
@@ -73,8 +74,6 @@
     padding-left: 20px;
     padding-top: 15px;
   }
-
-
   &.button{
     float: right;
     right: 20px;
@@ -95,7 +94,7 @@
       width: 100%;
     }
     @media screen and (min-width: $screen-xs) {
-      height: 56px;
+      height: 60px;
     }
   }
 }
@@ -133,10 +132,15 @@
   opacity: 1;
   @media screen and (max-width: $screen-xs){
     margin-bottom: 10px;
-
   }
 }
-
+#chat-namn-text1 {
+  width: 220px;
+  @media screen and (max-width: $screen-xs){
+    margin-top: 0px !important;
+    width: 55%;
+  }
+}
 .container--verktyg{
   padding-left:0;
   padding-right: 0;
@@ -161,6 +165,10 @@
   margin-bottom: 20px;
   padding-left:0;
   padding-right: 0;
+  @media screen and (max-width: $screen-xs) {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
 
   &.last{
     @media screen and (max-width: $screen-xs) {
@@ -227,6 +235,12 @@
   border-color: #a94442 !important;
   box-shadow: 0px 0px 15px -4px rgba(0,0,0,0.75);
 }
+.nyhetsbrev{
+  display: none;
+  &.nyhetsbrev1{
+    display: block;
+  }
+}
 
 .inputtext-table{
   border: none;
@@ -236,25 +250,36 @@
   padding-left: 0px;
   outline: none;
   &.epostvaliddd{
-    margin-top: 5px;
+    box-shadow: none;
     margin-bottom: 0;
     @media screen and (max-width: $screen-xs){
       margin-top: -15px !important;
     }
   }
+
+  &.help-block{
+    margin-bottom: 0;
+  }
+  &.help-block{
+    margin-bottom: 0;
+  }
+  &.test{
+    display: block;
+  }
   &.asda {
     border: 1px solid #DEE1E8;
     border-radius: 5px;
-    margin-top: -7px;
+    margin-top: -14px;
     display: inline-block !important;
     background-color: white !important;
     width: 220px;
-    height: 40px;
-    padding-top: 0;
+    height: 44px;
+    padding-top: 7px;
     padding-left: 12px;
-    padding-bottom: 0px;
+    /* padding-bottom: 0px; */
     @media screen and (max-width: $screen-xs) {
       width: 90%;
+      display:block;
       margin-bottom: 10px;
       margin-top: 5px;
       padding-right: 12px;
@@ -262,12 +287,22 @@
       padding-top: 12px;
       padding-bottom: 10px;
     }
+    &.test{
+      display: none;
+    }
     &.epostvaliddd{
-      margin-top: 5px;
+      border: 1px solid #DEE1E8;
+      margin-top: -2px;
+      transition: none;
       margin-bottom: 0;
+      padding-top: 16px;
       @media screen and (max-width: $screen-xs){
-        margin-top: -10px !important;
+        margin-top: 5px !important;
       }
+    }
+
+    &.help-block{
+      margin-bottom: 0;
     }
     &.konto {
       margin-bottom: 20px;
@@ -302,7 +337,7 @@
     &.clearing{
       border: 1px solid #DEE1E8;
       border-radius: 5px;
-      display: block;
+      display: inline-block !important;
       width: 80px;
       margin-top: 0;
       height: 40px;
@@ -314,7 +349,7 @@
     &.konto{
       border: 1px solid #DEE1E8;
       border-radius: 5px;
-      display: block;
+      display: inline-block !important;
       width: 220px;
       margin-top: 0;
       height: 40px;
@@ -363,7 +398,7 @@
   position: absolute;
   @media screen and (max-width: $screen-xs){
     left: 30px;
-    margin-top: 75px;
+    margin-top: 70px;
     padding-left: 0;
     position: absolute;
   }
@@ -378,14 +413,14 @@
   @media screen and (max-width: $screen-xs){
     /* margin-left: 20px; */
     margin-bottom: 0;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 0;
     /* padding-right: 10px; */
   }
 }
 
 #txtNewPassword{
-
+  margin-top: -7px;
   @media screen and (max-width: $screen-xs){
     margin-top: 0px;
   }
@@ -394,12 +429,16 @@
 
 .clearing{
   width: 55px;
+
 }
 
 .kontoo{
-  margin-left: 35px;
+  margin-left: 25px;
+  @media screen  and (max-width: $screen-xs){
+    margin-left: 35px;
+  }
 }
-
+di
 .konto{
   width: 100px;
 }
@@ -533,7 +572,6 @@ input[type="checkbox"]:focus{
     margin-top: 0px;
   }
 }
-
 
 
 

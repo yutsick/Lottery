@@ -141,14 +141,13 @@ export default function () {
 			$input_container.removeClass('js-has-content');
 		});
 	}
-
     (function($){
         $.fn.focusTextToEnd = function(){
             this.focus();
             var $thisVal = this.val();
             this.val('').val($thisVal);
             return this;
-        }
+        };
     }(jQuery));
 
 
@@ -160,7 +159,8 @@ export default function () {
 		$(".test").each(function(i, obj){
 			var current_button = $(this);
 			var text = $(this).parents("tr").find(".inputtext-table");
-			console.log(text.attr("disabled"));
+            var nyhetsbrev = $(this).parents("td").find(".nyhetsbrev");
+            console.log(text.attr("disabled"));
 			if(text.hasClass("current")){
 				text.removeClass("current");
 			}
@@ -169,17 +169,20 @@ export default function () {
 				$(this).html(value);
 				text.removeClass("asda");
 				current_button.removeClass("blue");
-
 				text.attr("disabled", bool);
 			}
+
 		});
 }
+
+
+
 	$(document).ready(function() {
 		$("input[name$='wantsnews']").click(function() {
 			var test = $(this).val();
-
 			console.log(test);
 			$('.nyhetsbrev').html(test);
+
 		});
 	});
 
@@ -216,12 +219,19 @@ $(document).ready(function(){
 			current_button.val("Spara");
 			current_button.addClass("blue");
 			current_button.html("Spara");
-			current_text.addClass("current");
+			current_text.addClass("current").focus();
 			editAll(true, "Ändra");
 		}
 	});
+
+
 });
 
+    if ('inputtext-table custom-checkbox details-table__checkbox--margin asda' === true){
+        console.log("hej");
+    }else{
+        console.log("hejdå");
+    }
 
     $("#reg_confirm_pass").blur(function() {
         var user_pass = $("#reg_pass").val();
