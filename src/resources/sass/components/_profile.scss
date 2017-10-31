@@ -189,6 +189,12 @@
 
 	.profile__submit { display: inline-block; }
 
+	.profile__input input {
+		@include placeholder-styles {
+			color: transparent;
+		}
+	}
+
 	.profile__input .checkbox {
 		label { display: inline-block; }
 		input { display: inline-block; }
