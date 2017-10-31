@@ -22,7 +22,7 @@
 			</div>
 
 			<div class="profile__row form-group has-feedback">
-				<form action="/" method="post" data-toggle="validator">
+				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">E-postadress</label>
 					<div class="profile__input">
 						<input type="email"
@@ -30,6 +30,7 @@
 							   data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."
 							   placeholder="E-postadress"
 							   value="hello@hello.se"
+							   name="email"
 							   required disabled>
 						<div class="help-block with-errors"></div>
 					</div>

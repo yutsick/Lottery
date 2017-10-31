@@ -2,8 +2,7 @@
   "name": "ml-frontend-2017",
   "private": true,
   "scripts": {
-    "prod": "gulp --production",
-    "dev": "gulp watch"
+    "build": "gulp"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
@@ -21,8 +20,5 @@
   "dependencies": {
     "bootstrap-validator": "^0.11.9",
     "flickity": "^2.0.5"
-  },
-  "scripts": {
-    "build": "gulp"
   }
 }
