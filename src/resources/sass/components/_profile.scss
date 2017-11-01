@@ -151,8 +151,11 @@
 
 .profile__actions {
 	position: absolute;
-	top: 20px;
 	right: 20px;
+
+	top: 0;
+	height: 100%;
+	display: flex;
 
 	@include min-screen($screen-sm-min) {
 		position: relative;
@@ -161,6 +164,7 @@
 		padding-right: 20px;
 		top: 0;
 		right: 0;
+		height: auto;
 	}
 
 	.btn-link {
@@ -242,6 +246,16 @@
 	.profile__input.profile__input--account {
 		.profile__multiple-input .input-clearing {
 			width: 75px;
+		}
+	}
+
+	.profile__actions {
+		top: 16px;
+		display: block;
+
+		@include min-screen($screen-sm-min) {
+			top: 0;
+			display: inline-block;
 		}
 	}
 }
