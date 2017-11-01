@@ -178,7 +178,7 @@ export default function () {
 		$('.js-update-profile-row').on('click', function () {
 			let $currentRow = $(this).parents('.profile__row');
 			$currentRow.find('input').prop('disabled', false);
-			$currentRow.find('input').focus().focusTextToEnd();
+			$currentRow.find('input').last().focusTextToEnd().focus();
 			$currentRow.addClass('profile__row--active');
 		});
 	}
@@ -186,7 +186,7 @@ export default function () {
 	(function ($) {
 		$.fn.focusTextToEnd = function () {
 			this.focus();
-			var $thisVal = this.val();
+			let $thisVal = this.val();
 			this.val('').val($thisVal);
 			return this;
 		}
