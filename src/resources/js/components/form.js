@@ -69,38 +69,38 @@ export default function () {
 			$form.removeClass('hidden');
 		});
 
-        $('form[data-use-ajax]').validator().on('submit', function (e) {
-            if (e.isDefaultPrevented()) {
-            } else {
-            	let $this = $(this);
-                let formData = $this.serialize();
-                let url = $this.attr('action');
+		$('form[data-use-ajax]').validator().on('submit', function (e) {
+			if (e.isDefaultPrevented()) {
+			} else {
+				let $this = $(this);
+				let formData = $this.serialize();
+				let url = $this.attr('action');
 				let $currentRow = $this.parents('.profile__row');
-                let $submitButton = $this.find('[type="submit"]');
+				let $submitButton = $this.find('[type="submit"]');
 
-            	// disable submit button
+				// disable submit button
 				$submitButton.prop('disabled', true);
 
-                $.ajax({
-                    type: "POST",
-                    url: url,
-                    data: formData,
-                    success: function(data) {
-                    	// stop spinner and hide form
+				$.ajax({
+					type: "POST",
+					url: url,
+					data: formData,
+					success: function (data) {
+						// stop spinner and hide form
 
 						// disable submit button
 						$submitButton.prop('disabled', false);
 						$this.find('input').prop('disabled', true);
 						$currentRow.removeClass('profile__row--active');
-                    },
-					error: function() {
+					},
+					error: function () {
 						// something went wrong on the backend?
 						$submitButton.prop('disabled', false);
 					}
-                });
-            }
-            return false;
-        });
+				});
+			}
+			return false;
+		});
 	}
 
 
@@ -178,7 +178,7 @@ export default function () {
 		$('.js-update-profile-row').on('click', function () {
 			let $currentRow = $(this).parents('.profile__row');
 			$currentRow.find('input').prop('disabled', false);
-			$currentRow.find('input').last().focusTextToEnd().focus();
+			$currentRow.find('input').last().focusTextToEnd();
 			$currentRow.addClass('profile__row--active');
 		});
 	}
