@@ -1,6 +1,6 @@
 .block-promotion--wallet {
 	@media screen and (max-width: $screen-sm) {
-		margin-bottom: 20px;
+		margin-bottom: $margin-default;
 	}
 
 	.block-promotion__header {
@@ -12,7 +12,7 @@
 		}
 
 		&-title {
-			margin: 0 20px;
+			margin: 0 $margin-default;
 			color: $color-black;
 			line-height: 80px;
 		}
@@ -31,17 +31,17 @@
 		}
 
 		&--text {
-			margin-left: 20px;
+			margin-left: $margin-default;
 		}
 
 		&--price {
-			margin-right: 20px;
+			margin-right: $margin-default;
 			margin-left: auto;
 		}
 	}
 
 	.block-promotion-minified__btn {
-		padding: 15px;
+		padding: $padding-medium;
 		border: 0;
 		background: none;
 
@@ -53,7 +53,7 @@
 
 	.gametitle{
 		@media screen and (max-width: $screen-sm) {
-			padding-top: 40px;
+			padding-top: ($padding-default*2);
 		}
 	}
 
@@ -67,7 +67,7 @@
 		border-bottom: 1px solid $color-feather;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
-		padding-top: 40px;
+		padding-top: ($padding-default*2);
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
@@ -84,7 +84,7 @@
 
 	.block-promotion__title {
 		color: $color-black;
-		margin-bottom: 10px;
+		margin-bottom: $margin-small;
 	}
 
 	.block-promotion__text {
@@ -98,14 +98,14 @@
 		margin: auto 0 0;
 		padding: 0;
 		list-style: none;
-		padding-top: 10px;
+		padding-top: $padding-small;
 		font-family: $basic-heading-family;
 		font-size: $base-font-size;
 		font-weight: $bold;
 
 		hr {
 			margin-top: 0;
-			margin-bottom: 10px;
+			margin-bottom: $margin-small;
 			border-top: 1px solid $color-feather;
 		}
 	}
@@ -115,14 +115,14 @@
 		justify-content: space-between;
 
 		&:not(:first-child) {
-			margin-top: 10px;
-			padding-top: 10px;
+			margin-top: $margin-small;
+			padding-top: $padding-small;
 			border-top: 1px solid $color-feather;
 		}
 
 		&:first-child:last-child {
-			margin-top: 10px;
-			padding-top: 10px;
+			margin-top: $margin-small;
+			padding-top: $padding-small;
 			border-top: 1px solid $color-feather;
 		}
 	}
@@ -138,13 +138,13 @@
 	}
 
 	.block-promotion__action-btns {
-		margin-top: 20px;
+		margin-top: $margin-default;
 	}
 
 	/* Toggle block */
 	&--toggle {
 		.block-promotion__content {
-			padding-top: 20px;
+			padding-top: $padding-default;
 		}
 	}
 }
