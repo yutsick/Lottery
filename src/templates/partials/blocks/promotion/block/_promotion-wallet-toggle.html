@@ -1,0 +1,46 @@
+<div class="col-xs-12 col-sm-6">
+	<div class="block-promotion block-promotion--wallet block-promotion--wallet--toggle">
+		<div class="block-promotion__header
+		@@if(context.background === 'color'){ block--background-color background-color-@@background_color}">
+			@@if(context.content_title){
+			<h4 class="block-promotion__header-title visible-sm visible-md visible-lg">@@content_title </h4>
+			}
+
+			@@if(context.content_image) {
+			<img class="block-promotion__header-img block-promotion__header-img--right" src="@@content_image">
+			}
+
+			<div class="block-promotion-minified">
+				@@if(context.content_title){
+				<div class="block-promotion-minified--text">@@content_title</div>
+				}
+				@@if(context.content_pris){
+				<div class="block-promotion-minified--price">@@content_pris</div>
+				}
+				<div class="block-promotion-minified--btn">
+					<button class="js-toggle-content" data-content="@@id">Toggle wallet</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="block-promotion__content" id="@@id">
+			@@if(context.content_text){
+			<p class="block-promotion__text">@@content_text</p>
+			}
+
+			<div class="wallet-money">
+
+				<hr>
+				Totalt:<br>
+				@@if(context.content_pris){
+				<p class="wallet-money__amount">@@content_pris</p>
+				}
+			</div>
+
+
+			<a class="" href="/" >Länk text</a>
+			<a class="" href="/" >Länk text</a>
+
+		</div>
+	</div>
+</div>
