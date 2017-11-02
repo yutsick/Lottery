@@ -143,9 +143,9 @@
 .block-hero--old {
 	min-height: 0;
 	background-color: transparent;
-	margin: 0;
 	padding: 0;
 	display: block;
+	margin: 0 0 10px;
 
 	> .container {
 		position: relative;
@@ -158,7 +158,12 @@
 
 	.block-hero__title {
 		padding: 0;
-		margin:0 0 20px 0;
+		margin: 0 0 10px 0;
 		max-width: 800px;
+	}
+
+	p {
+		color: $color-blueberry;
+		font-weight: 600;
 	}
 }
