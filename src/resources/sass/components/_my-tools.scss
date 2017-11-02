@@ -1,0 +1,30 @@
+.my-tools {
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 20px;
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
+
+.my-tools__tool {
+	text-align: center;
+	margin-bottom: 10px;
+
+	.btn {
+		margin-bottom: 10px;
+	}
+
+	p {
+		display: none;
+		font-size: 14px;
+		font-weight: 600;
+		width: 90%;
+		margin: 0 auto 10px;
+
+		@include min-screen($screen-sm-min) {
+			display: block;
+		}
+	}
+}
