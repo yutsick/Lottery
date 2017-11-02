@@ -8,10 +8,10 @@
 <div class="content-wrapper ml-2017">
 
 	@@include('blocks/_hero.html', {
-	"hero_type": "mini",
-	"hero_content": true,
-	"h1": true,
-	"h2": false
+		"hero_type": "mini",
+		"hero_content": true,
+		"h1": true,
+		"h2": false
 	})
 
 	<div class="container container-fluid">
@@ -25,35 +25,34 @@
 	<div class="container">
 		<div class="row equal-height">
 			@@include('blocks/promotion/block/_promotion-wallet-toggle.html', {
-			"id": "wallet",
-			"background": "color",
-			"background_color": "lightorange",
-			"content_title": "Spelplånbok",
-			"content_text": "I spelkontot ligger de pengar du kan spela för.",
-			"content_pris": "500 kr",
-			"content_image": "assets/img/mockup/symbol_spelplanbok_vec.svg",
-			"primary_button_text": "Sätt in pengar",
-			"secondary_button_text": "Ta ut pengar"
+				"id": "wallet",
+				"background": "color",
+				"background_color": "lightorange",
+				"content_title": "Spelplånbok",
+				"content_text": "I spelkontot ligger de pengar du kan spela för.",
+				"content_pris": "500 kr",
+				"content_image": "assets/img/mockup/symbol_spelplanbok_vec.svg",
+				"primary_button_text": "Sätt in pengar",
+				"secondary_button_text": "Ta ut pengar"
 			})
 
 			@@include('blocks/promotion/block/_promotion-wallet-toggle.html', {
-			"id": "account",
-			"background": "color",
-			"background_color": "lightpink",
-			"content_title": "Vinstkonto",
-			"content_text": "Vinstkontot används för att beställa produkter ur vårat vinstsortiment. Saknas det pengar till en produkt kan du föra över pengar från din spelplånbok här under.",
-			"content_pris": "444 kr",
-			"content_image": "assets/img/mockup/symbol_vinstkontot.svg",
-			"primary_button_text": "Hämta ut vinst"
+				"id": "account",
+				"background": "color",
+				"background_color": "lightpink",
+				"content_title": "Vinstkonto",
+				"content_text": "Vinstkontot används för att beställa produkter ur vårat vinstsortiment. Saknas det pengar till en produkt kan du föra över pengar från din spelplånbok här under.",
+				"content_pris": "444 kr",
+				"content_image": "assets/img/mockup/symbol_vinstkontot.svg",
+				"primary_button_text": "Hämta ut vinst"
 			})
-		</div>
 
-		<div class="col-xs-12 visible-xs">
-			<a class="" href="/" >Länk text</a>
-			<a class="" href="/" >Länk text</a>
+			<div class="col-xs-12 visible-xs">
+				<a class="btn btn-primary" href="/" >Sätt in pengar</a>
+				<a class="btn btn-primary" href="/" >Ta ut pengar</a>
+			</div>
 		</div>
 	</div>
 </div>
 
 @@include('layout/_footer.html', {"show_footer": false})
-
