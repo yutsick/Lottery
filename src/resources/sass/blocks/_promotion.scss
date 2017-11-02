@@ -53,6 +53,11 @@
 		@media screen and (max-width: 767px) {
 			display: none;
 		}
+
+		&.block-promotion__header-img--right {
+			right: 30px;
+			left: auto;
+		}
 	}
 }
 
