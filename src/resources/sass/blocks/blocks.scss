@@ -52,6 +52,21 @@
 	background-repeat: no-repeat;
 }
 
+.block--decoration {
+	@include max-screen($screen-sm) {
+		&:not(:first-child) {
+			margin-top: $margin-default;
+		}
+	}
+
+	@include min-screen($screen-sm) {
+		margin-top: 0;
+		padding: $padding-default;
+		border-radius: 10px;
+		border: 1px solid $color-feather;
+	}
+}
+
 @import "hero";
 @import "article-list";
 @import "promotion";
