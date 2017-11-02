@@ -105,17 +105,17 @@
 					<label class="profile__label">Nyhetsbrev</label>
 
 					<div class="profile__input">
-							<div class="checkbox">
-								<input value="Ja" id="newsletter-yes" name="newsletter" type="radio"
-									   class="custom-checkbox" checked>
-								<label for="newsletter-yes">Ja</label>
-							</div>
+						<div class="checkbox">
+							<input value="Ja" id="newsletter-yes" name="newsletter" type="radio"
+								   class="custom-checkbox" checked>
+							<label for="newsletter-yes">Ja</label>
+						</div>
 
-							<div class="checkbox">
-								<input value="Nej" id="newsletter-no" name="newsletter" type="radio"
-									   class="custom-checkbox">
-								<label for="newsletter-no">Nej</label>
-							</div>
+						<div class="checkbox">
+							<input value="Nej" id="newsletter-no" name="newsletter" type="radio"
+								   class="custom-checkbox">
+							<label for="newsletter-no">Nej</label>
+						</div>
 						<div class="help-block with-errors"></div>
 					</div>
 
@@ -190,19 +190,22 @@
 						<div class="profile__multiple-input">
 							<label>Clearingnr</label>
 							<input class="input-clearing"
-								   type="number"
+								   type="text"
 								   data-required-error="Du måste fylla i detta fält."
 								   name="clearingnumber"
 								   value="80325"
-								   disabled pattern="[0-9]*">
+								   disabled
+								   maxlength="5"
+								   pattern="[0-9]*">
 						</div>
 						<div class="profile__multiple-input">
 							<label>Kontonummer</label>
 							<input class="input-account"
-								   type="number"
+								   type="text"
 								   data-required-error="Du måste fylla i detta fält."
 								   name="accountnumber"
 								   value="234234"
+								   maxlength="10"
 								   disabled pattern="[0-9]*">
 						</div>
 						<div class="help-block with-errors"></div>
