@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="6px" viewBox="0 0 11 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow_down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="spelkonto-error" transform="translate(-321.000000, -253.000000)" fill-rule="nonzero" fill="#2E3236">
+            <path d="M321.317867,255.056855 L324.588902,258.270066 C325.579376,259.24303 327.178137,259.244288 328.172018,258.267977 L331.682133,254.819912 C332.105956,254.403582 332.105956,253.728578 331.682133,253.312248 C331.258311,252.895917 330.571159,252.895917 330.147337,253.312248 L326.637221,256.760312 C326.491536,256.903422 326.267077,256.903246 326.123699,256.762402 L322.852663,253.549191 C322.428841,253.132861 321.741689,253.132861 321.317867,253.549191 C320.894044,253.965521 320.894044,254.640525 321.317867,255.056855 Z" id="arrow_down"></path>
+        </g>
+    </g>
+</svg>

@@ -18,7 +18,10 @@
 				<div class="block-promotion-minified--price">@@content_pris</div>
 				}
 				<div class="block-promotion-minified--btn">
-					<button class="js-toggle-content" data-content="@@id">Toggle wallet</button>
+					<button class="block-promotion-minified__btn js-toggle-content" data-content="@@id">
+						<img src="assets/img/icons/arrow-down.svg" alt="Pilikon för att visa innehåll">
+						<span class="sr-only">Visa innehåll</span>
+					</button>
 				</div>
 			</div>
 		</div>
@@ -28,19 +31,44 @@
 			<p class="block-promotion__text">@@content_text</p>
 			}
 
-			<div class="wallet-money">
+			<ul class="wallet-money">
+				@@if(context.id == "wallet"){
+					@@loop('blocks/wallet-list/_wallet-item.html', [
+						{
+							"label": "Kontanter",
+							"value": "250kr"
+						},
+						{
+							"label": "Bonus",
+							"value": "250kr"
+						},
+						{
+							"label": "Totalt",
+							"value": "500kr"
+						}
+					])
+				}
 
-				<hr>
-				Totalt:<br>
-				@@if(context.content_pris){
-				<p class="wallet-money__amount">@@content_pris</p>
+				@@if (context.id == "account") {
+					@@loop('blocks/wallet-list/_wallet-item.html', [
+						{
+							"label": "Kontanter",
+							"value": "250kr"
+						}
+					])
+				}
+			</ul>
+
+			@@if(context.primary_button_text) || (context.secondary_button_text) {
+			<div class="block-promotion__action-btns">
+				@@if(context.primary_button_text) {
+				<a class="block-promotion__action-btn btn btn-primary" href="/" >@@primary_button_text</a>
+				}
+				@@if(context.secondary_button_text) {
+				<a class="block-promotion__action-btn btn btn-primary" href="/" >@@secondary_button_text</a>
 				}
 			</div>
-
-
-			<a class="" href="/" >Länk text</a>
-			<a class="" href="/" >Länk text</a>
-
+			}
 		</div>
 	</div>
 </div>
