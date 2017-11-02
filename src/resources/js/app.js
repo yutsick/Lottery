@@ -9,6 +9,7 @@ import modernizr from './vendor/modernizr-custom.js';
 import alert from './components/alert';
 import form from './components/form';
 import modal from './components/modal';
+import togglecontent from './components/toggle-content';
 import navigation from './layout/navigation';
 import top from './layout/top';
 import search from './components/search';
@@ -29,6 +30,7 @@ $(function () {
 	top();
 	slider();
 	register();
+	togglecontent();
 });
 
 /**
