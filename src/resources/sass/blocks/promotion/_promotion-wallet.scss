@@ -1,4 +1,56 @@
 .block-promotion--wallet {
+	@media screen and (max-width: $screen-sm) {
+		margin-bottom: 20px;
+	}
+
+	.block-promotion__header {
+		margin-bottom: 0;
+
+		&.js-is-active {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+		&-title {
+			margin: 0 20px;
+			color: $color-black;
+			line-height: 80px;
+		}
+	}
+
+	.block-promotion-minified{
+		display: none;
+
+		@media screen and (max-width: $screen-sm) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: inherit;
+			padding-right: 20px;
+			padding-left: 20px;
+			color: black;
+			font-size: 18px;
+		}
+
+		&--price {
+			margin-left: auto;
+		}
+
+		&--btn {
+			margin-left: 20px;
+		}
+	}
+
+	.gametitle{
+		@media screen and (max-width: $screen-sm) {
+			padding-top: 40px;
+		}
+	}
+
+	.block-promotion-minifiedmoney{
+		float: right;
+	}
+
 	.block-promotion__content {
 		border-left: 1px solid $color-feather;
 		border-right: 1px solid $color-feather;
@@ -13,8 +65,10 @@
 
 		@media screen and (max-width: $screen-sm) {
 			display: none;
-			margin-top: 10px;
-			margin-bottom: 10px;
+		}
+
+		&.js-is-visible {
+			display: flex;
 		}
 	}
 
@@ -23,46 +77,11 @@
 		margin-bottom: 10px;
 	}
 
-	.block-promotion-minified{
-		color: black;
-		display: none;
-		font-size: 18px;
-		float: left;
-		@media screen and (max-width: $screen-sm) {
-			display: block;
-
-			.block-promotion-minified--text {
-				padding-left: 20px;
-				top: 16px;
-				float: left;
-				position: absolute;
-			}
-			.block-promotion-minified--price {
-				right: 30px;
-				top:16px;
-				position: absolute;
-			}
-		}
-	}
-
-	.gametitle{
-		@media screen and (max-width: $screen-sm) {
-			padding-top: 40px;
-		}
-	}
-
-	.block-promotion-minifiedmoney{
-		float: right;
-	}
-
 	.block-promotion__text {
 		margin-top: 0;
 		font-size: $base-font-size;
 		font-family: $basic-heading-family;
 		font-weight: $bold;
-
-		p{
-		}
 	}
 
 	.wallet-money {
@@ -72,18 +91,23 @@
 		font-family: $basic-heading-family;
 		font-weight: $bold;
 
-
 		hr {
 			margin-top: 0;
 			margin-bottom: 10px;
 			border-top: 1px solid $color-feather;
 		}
-
 	}
 
 	.wallet-money__amount {
 		font-size: 18px;
 		font-family: $semi-heading-family;
 		font-weight: $extrabold;
+	}
+}
+
+/* Toggle block */
+.block-promotion--wallet--toggle {
+	.block-promotion__content {
+		padding-top: 20px;
 	}
 }
