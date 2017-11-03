@@ -85,14 +85,27 @@
 	}
 }
 
-.block-product__title {
-	margin: 0;
-	font-weight: 600;
-	// line-height: 22px; /* Gotham Bold */
-	line-height: 18px;
+.block-product__item {
+	margin-bottom: 0;
+	font-weight: $light;
+
+	&:not(:first-child) {
+		margin-top: 5px;
+	}
+
+	&--highlight {
+		font-weight: $bold;
+	}
 }
 
-.block-product__price {
-	font-weight: 300;
-	margin: 5px 0 0 0;
+.block-product__title {
+	font-weight: $bold;
+
+	> a {
+		color: inherit;
+	}
+}
+
+.block-product__link {
+	font-weight: $bold;
 }
