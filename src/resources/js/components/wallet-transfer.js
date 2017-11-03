@@ -1,10 +1,12 @@
 export default function() {
 	$('.js-wallet-transfer').bind('click', function () {
         // Account
-		let $accountFirst = $(this).prev().find('.wallet-transfer__account');
+		let $accountFirst = $(this).prev();
 		let $accountFirstData = $accountFirst.data('account');
-		let $accountSecond = $(this).next().find('.wallet-transfer__account');
+        let $accountFirstHtml = $accountFirst.find('.wallet-transfer__account');
+		let $accountSecond = $(this).next();
 		let $accountSecondData = $accountSecond.data('account');
+        let $accountSecondHtml = $accountSecond.find('.wallet-transfer__account');
 
 		// Balance
 		let $balanceFirst = $(this).prev().find('.wallet-transfer__balance');
@@ -13,13 +15,11 @@ export default function() {
 		let $balanceSecondData = $balanceSecond.data('balance');
 
 		// Switch account values on click
-		$accountFirst
-			.html($accountFirst.html() == $accountFirstData ? $accountSecondData : $accountFirstData)
-			.attr('data-account', $accountFirst.attr('data-account') == $accountFirstData ? $accountSecondData : $accountFirstData);
+        $accountFirstHtml.html($accountFirstHtml.html() == $accountFirstData ? $accountSecondData : $accountFirstData);
+        $accountFirst.attr('data-account', $accountFirst.attr('data-account') == $accountFirstData ? $accountSecondData : $accountFirstData);
 
-		$accountSecond
-			.html($accountSecond.html() == $accountSecondData ? $accountFirstData : $accountSecondData)
-			.attr('data-account', $accountSecond.attr('data-account') == $accountSecondData ? $accountFirstData : $accountSecondData);
+        $accountSecondHtml.html($accountSecondHtml.html() == $accountSecondData ? $accountFirstData : $accountSecondData);
+        $accountSecond.attr('data-account', $accountSecond.attr('data-account') == $accountSecondData ? $accountFirstData : $accountSecondData);
 
 		// Switch balance values on click
 		$balanceFirst

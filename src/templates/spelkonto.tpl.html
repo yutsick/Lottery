@@ -57,26 +57,28 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-6">
 					<h4>Kontoöverföring</h4>
-					<p>Här kan du flytta över medel mellan din spelplånbok och ditt vinstkonto. Funktionen fungera åt båda hållen.</p>
+					<p>Här kan du flytta över medel mellan din spelplånbok och ditt vinstkonto. Funktionen fungerar åt båda hållen.</p>
 				</div>
 				<div class="col-xs-12 col-sm-6">
 					<div class="wallet-transfer">
-						<p class="wallet-transfer__item">Till:
-							<span class="wallet-transfer__account" data-account="Vinstkonto">Vinstkonto</span>
+						<p class="wallet-transfer__item" data-account="Vinstkonto">
+							<span class="wallet-transfer__label">Till:</span>
+							<span class="wallet-transfer__account" >Vinstkonto</span>
 							(<span class="wallet-transfer__balance" data-balance="100">100</span>kr)
 						</p>
 						<button class="wallet-transfer__btn js-wallet-transfer">Switch account</button>
-						<p class="wallet-transfer__item">Från:
-							<span class="wallet-transfer__account" data-account="Spelplånbok">Spelplånbok</span>
+						<p class="wallet-transfer__item" data-account="Spelplånbok">
+							<span class="wallet-transfer__label">Från:</span>
+							<span class="wallet-transfer__account">Spelplånbok</span>
 							(<span class="wallet-transfer__balance" data-balance="200">200</span>kr)
 						</p>
 					</div>
 					<div class="">
-						<input type="number" placeholder="Belopp"/>
-						<button>25kr</button>
-						<button>50kr</button>
-						<button>100kr</button>
-						<button class="btn btn-primary">För över</button>
+						<input class="" type="number" placeholder="Belopp"/>
+						<button class="" data-amount="25">25kr</button>
+						<button class="" data-amount="50">50kr</button>
+						<button class="" data-amount="100">100kr</button>
+						<a class="btn btn-primary" href="/">För över</a>
 					</div>
 				</div>
 			</div>

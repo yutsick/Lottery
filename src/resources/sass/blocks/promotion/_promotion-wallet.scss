@@ -148,3 +148,30 @@
 		}
 	}
 }
+
+.wallet-transfer {
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 0;
+		color: $color-head-orange;
+
+		&[data-account="Vinstkonto"] {
+			color: $color-pink;
+		}
+	}
+
+	&__label {
+		display: block;
+		color: $color-blueberry;
+
+
+		@media screen and (min-width: $screen-sm) {
+			display: inline-block;
+		}
+	}
+
+	&__btn {
+
+	}
+}
