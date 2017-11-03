@@ -150,14 +150,23 @@
 }
 
 .wallet-switch {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
 	&__item {
-		display: inline-block;
-		vertical-align: middle;
+		width: 265px;
 		margin-bottom: 0;
 		color: $color-head-orange;
 
 		&[data-account="Vinstkonto"] {
 			color: $color-pink;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			padding: $padding-small;
+			border: 1px solid $color-gravel;
+			border-radius: .3em;
 		}
 	}
 
@@ -165,22 +174,75 @@
 		display: block;
 		color: $color-blueberry;
 
-
-		@media screen and (min-width: $screen-sm) {
+		@media screen and (min-width: $screen-md) {
 			display: inline-block;
 		}
 	}
 
 	&__btn {
+		flex: 0 0 auto;
 		width: 40px;
 		height: 40px;
+		margin-right: $margin-default;
+		margin-left: $margin-default;
 		border: 0;
 		border-radius: 50%;
 		background-color: $color-gray;
+		transition: background-color $duration-fast $ease-standard;
+
+		&:hover,
+		&:focus {
+			background-color: darken($color-gray, 5%);
+		}
+
+		&:focus {
+			outline: 0;
+		}
 	}
 }
 
-.js-wallet-switch__animation {
+.js-animation--rotate {
 	transition: transform $duration-fast $ease-standard;
 	transform: rotate(180deg);
+}
+
+.wallet-transfer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&:not(:first-child) {
+		margin-top: $margin-default;
+	}
+
+	&__form-wrapper  {
+		width: 100%;
+
+		@media screen and (min-width: $screen-sm) {
+			flex: 1;
+			margin-right: $margin-small;
+			margin-bottom: 0;
+			max-width: 265px;
+		}
+	}
+
+	&__btn {
+		margin-right: $margin-default;
+		padding: $padding-small;
+		border: 0;
+		border-radius: .3em;
+		background-color: $color-gray-light;
+		transition: background-color $duration-fast $ease-standard;
+		color: $color-white;
+		font-weight: $bold;
+
+		&:hover,
+		&:focus {
+			background-color: $color-gray;
+		}
+	}
+
+	&__submit {
+		margin-left: auto;
+	}
 }
