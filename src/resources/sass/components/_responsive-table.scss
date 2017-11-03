@@ -1,0 +1,134 @@
+.table-title {
+	margin-bottom: 0;
+	padding: $padding-medium;
+	border: 1px solid #a2c3ff;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	background-color: #d6eeff;
+	font-size: 16px;
+	font-weight: $bold;
+	color: #000;
+
+	@include min-screen($screen-sm) {
+		display: none;
+	}
+}
+
+/* Narrow screens */
+@include max-screen($screen-sm) {
+	.responsive-table {
+		&,
+		thead,
+		tbody,
+		th,
+		td {
+			display: block;
+		}
+
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+		tbody {
+			tr {
+				display: flex;
+				flex-wrap: wrap;
+				border-bottom: 1px solid $color-gray-border;
+				border-right: 1px solid $color-gray-border;
+				border-left: 1px solid $color-gray-border;
+
+				&:nth-of-type(even) {
+					background-color: #f5f8fa;
+				}
+
+				&:last-child {
+					border-bottom-left-radius: .4em;
+					border-bottom-right-radius: .4em;
+				}
+			}
+		}
+
+		td {
+			width: 50%;
+			padding: $padding-medium;
+
+			&:nth-child(2n) {
+				text-align: right;
+			}
+
+			&:before {
+				content: attr(data-header);
+				display: block;
+			}
+		}
+	}
+}
+
+/* Large screens */
+@include min-screen($screen-sm) {
+	.responsive-table {
+		width: 100%;
+		border-collapse: separate;
+		border-bottom-right-radius: .4em;
+		border-bottom-left-radius: .4em;
+
+		th:last-child,
+		td:last-child {
+			text-align:right;
+		}
+
+		thead {
+			th {
+				padding: $padding-medium;
+				border-top: 1px solid #a2c3ff;
+				border-bottom: 1px solid #a2c3ff;
+				background-color: #d6eeff;
+				font-size: 16px;
+				font-weight: $bold;
+
+				&:first-child {
+					border-top-left-radius: .4em;
+					border-left: 1px solid #a2c3ff;
+				}
+
+				&:last-child {
+					border-top-right-radius: .4em;
+					border-right: 1px solid #a2c3ff;
+				}
+			}
+		}
+
+		tbody {
+			td {
+				padding: 20px $padding-medium;
+				border-bottom: 1px solid $color-gray-border;
+
+				&:first-child {
+					border-left: 1px solid $color-gray-border;
+				}
+
+				&:last-child {
+					border-right: 1px solid $color-gray-border;
+				}
+			}
+
+			tr:nth-of-type(even) {
+				background-color: #f5f8fa;
+			}
+
+			tr:last-child {
+				td {
+					&:first-child {
+						border-bottom-left-radius: .4em;
+					}
+
+					&:last-child {
+						border-bottom-right-radius: .4em;
+					}
+				}
+			}
+		}
+	}
+}
