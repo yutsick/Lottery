@@ -13,7 +13,8 @@ import modal from './components/modal';
 import search from './components/search';
 import slider from './components/slider';
 import togglecontent from './components/toggle-content';
-import wallettransfer from './components/wallet-transfer';
+import walletaccountswitch from './components/wallet-account-switch';
+import wallettransferamount from './components/wallet-transfer-amount';
 import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
@@ -32,7 +33,8 @@ $(function () {
 	slider();
 	register();
 	togglecontent();
-    wallettransfer();
+    walletaccountswitch();
+    wallettransferamount();
 });
 
 /**
