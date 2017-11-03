@@ -1,5 +1,7 @@
 export default function() {
 	$('.js-wallet-switch').bind('click', function () {
+		let $icon = $('.wallet-switch__icon');
+
 		// Account
 		let $accountFirst = $(this).prev();
 		let $accountFirstData = $accountFirst.data('account');
@@ -29,5 +31,13 @@ export default function() {
 		$balanceSecond
 			.html($balanceSecond.html() == $balanceSecondData ? $balanceFirstData : $balanceSecondData)
 			.attr('data-balance', $balanceSecond.attr('data-balance') == $balanceSecondData ? $balanceFirstData : $balanceSecondData);
+
+		// Add animation class
+		$icon.addClass('js-wallet-switch__animation');
+
+		// Remove animation class after transition ends
+		$icon.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+			$(this).removeClass('js-wallet-switch__animation');
+		});
 	});
 }
