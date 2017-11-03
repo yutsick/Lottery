@@ -1,0 +1,123 @@
+.messages-list {
+	color: $color-base-complement;
+	font-size: 14px;
+	margin: 0;
+	max-height: 100%;
+	flex: 1 0 0;
+	overflow: hidden;
+	overflow-y: auto;
+	transition: opacity $duration-fast $ease-in-out;
+
+	@include min-screen($screen-sm-min) {
+		font-size: 16px;
+	}
+}
+
+.messages-list__message {
+	border: none;
+	text-align: left;
+	padding: 20px;
+	border-bottom: 1px solid $color-gray-border;
+	border-radius: 0;
+	outline: none;
+	width: 100%;
+	background-color: transparent;
+
+	@include max-screen($screen-xs-max) {
+		padding: 15px;
+		display: none;
+
+		// Show only the first 3 messages on load on mobile.
+		&:nth-of-type(-n+3) {
+			display: block;
+		}
+
+		&:nth-of-type(even) {
+			background-color: $color-cloud;
+		}
+
+		&:last-of-type {
+			border-bottom: 0;
+		}
+	}
+}
+
+.messages-list__sender {
+	display: block;
+	font-weight: 600;
+	margin-bottom: 5px;
+
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 10px;
+	}
+}
+
+.messages-list__date {
+	float: right;
+	font-weight: 600;
+}
+
+.messages-list__subject {
+	display: block;
+	overflow: hidden;
+	font-weight: 600;
+
+	@include min-screen($screen-sm-min) {
+		font-weight: 500;
+	}
+
+}
+
+// States for messages list.
+.messages-list__message--unread {
+
+	.messages-list__sender {
+		color: $color-base-secondary;
+		font-weight: 700;
+	}
+
+	.messages-list__sender:before {
+		content: '';
+		border-radius: 100%;
+		background-color: $color-light-blue;
+		width: 8px;
+		height: 8px;
+		display: inline-block;
+	}
+
+	.messages-list__subject {
+		font-weight: 600;
+	}
+}
+
+.messages-list__message--active {
+	@include min-screen($screen-sm-min) {
+		border-left: 4px solid $color-light-blue;
+		background-color: $color-dark-white;
+
+		.messages-list__sender {
+			color: $color-base-secondary;
+			font-weight: 700;
+		}
+
+		.messages-list__subject {
+			color: $color-base-secondary;
+			font-weight: 600;
+		}
+	}
+}
+
+.messages--message-active .messages-list {
+	display: none;
+}
+
+.messages--is-loading {
+	.messages-list {
+		opacity: 0.6;
+
+		@include min-screen($screen-sm) {
+			opacity: 1;
+		}
+
+	}
+}
