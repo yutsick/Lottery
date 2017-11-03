@@ -1,6 +1,6 @@
 .block-promotion--wallet {
 	@media screen and (max-width: $screen-sm) {
-		margin-bottom: 20px;
+		margin-bottom: $margin-default;
 	}
 
 	.block-promotion__header {
@@ -12,13 +12,13 @@
 		}
 
 		&-title {
-			margin: 0 20px;
+			margin: 0 $margin-default;
 			color: $color-black;
 			line-height: 80px;
 		}
 	}
 
-	.block-promotion-minified{
+	.block-promotion-minified {
 		display: none;
 
 		@media screen and (max-width: $screen-sm) {
@@ -26,24 +26,34 @@
 			align-items: center;
 			justify-content: space-between;
 			height: inherit;
-			padding-right: 20px;
-			padding-left: 20px;
 			color: black;
 			font-size: 18px;
 		}
 
-		&--price {
-			margin-left: auto;
+		&--text {
+			margin-left: $margin-default;
 		}
 
-		&--btn {
-			margin-left: 20px;
+		&--price {
+			margin-right: $margin-default;
+			margin-left: auto;
+		}
+	}
+
+	.block-promotion-minified__btn {
+		padding: $padding-medium;
+		border: 0;
+		background: none;
+
+
+		&.js-is-active {
+			transform: rotate(-180deg);
 		}
 	}
 
 	.gametitle{
 		@media screen and (max-width: $screen-sm) {
-			padding-top: 40px;
+			padding-top: ($padding-default*2);
 		}
 	}
 
@@ -57,7 +67,7 @@
 		border-bottom: 1px solid $color-feather;
 		border-bottom-left-radius: 10px;
 		border-bottom-right-radius: 10px;
-		padding-top: 40px;
+		padding-top: ($padding-default*2);
 		flex: 1 1 auto;
 		display: flex;
 		flex-direction: column;
@@ -74,7 +84,7 @@
 
 	.block-promotion__title {
 		color: $color-black;
-		margin-bottom: 10px;
+		margin-bottom: $margin-small;
 	}
 
 	.block-promotion__text {
@@ -85,17 +95,40 @@
 	}
 
 	.wallet-money {
-		padding-top: 10px;
-		font-size: $base-font-size;
-		margin-top: auto;
+		margin: auto 0 0;
+		padding: 0;
+		list-style: none;
+		padding-top: $padding-small;
 		font-family: $basic-heading-family;
+		font-size: $base-font-size;
 		font-weight: $bold;
 
 		hr {
 			margin-top: 0;
-			margin-bottom: 10px;
+			margin-bottom: $margin-small;
 			border-top: 1px solid $color-feather;
 		}
+	}
+
+	.wallet__list-item {
+		display: flex;
+		justify-content: space-between;
+
+		&:not(:first-child) {
+			margin-top: $margin-small;
+			padding-top: $padding-small;
+			border-top: 1px solid $color-feather;
+		}
+
+		&:first-child:last-child {
+			margin-top: $margin-small;
+			padding-top: $padding-small;
+			border-top: 1px solid $color-feather;
+		}
+	}
+
+	.wallet__item {
+		margin-top: 0;
 	}
 
 	.wallet-money__amount {
@@ -103,11 +136,42 @@
 		font-family: $semi-heading-family;
 		font-weight: $extrabold;
 	}
+
+	.block-promotion__action-btns {
+		margin-top: $margin-default;
+	}
+
+	/* Toggle block */
+	&--toggle {
+		.block-promotion__content {
+			padding-top: $padding-default;
+		}
+	}
 }
 
-/* Toggle block */
-.block-promotion--wallet--toggle {
-	.block-promotion__content {
-		padding-top: 20px;
+.wallet-switch {
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 0;
+		color: $color-head-orange;
+
+		&[data-account="Vinstkonto"] {
+			color: $color-pink;
+		}
+	}
+
+	&__label {
+		display: block;
+		color: $color-blueberry;
+
+
+		@media screen and (min-width: $screen-sm) {
+			display: inline-block;
+		}
+	}
+
+	&__btn {
+
 	}
 }

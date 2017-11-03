@@ -8,13 +8,15 @@ var Flickity = require('flickity/dist/flickity.pkgd.js');
 import modernizr from './vendor/modernizr-custom.js';
 import alert from './components/alert';
 import form from './components/form';
+import message from './components/message';
 import modal from './components/modal';
+import search from './components/search';
+import slider from './components/slider';
 import togglecontent from './components/toggle-content';
+import walletaccountswitch from './components/wallet-account-switch';
+import wallettransferamount from './components/wallet-transfer-amount';
 import navigation from './layout/navigation';
 import top from './layout/top';
-import search from './components/search';
-import message from './components/message';
-import slider from './components/slider';
 import register from './layout/register';
 import loggedin from './layout/loggedin';
 
@@ -31,6 +33,8 @@ $(function () {
 	slider();
 	register();
 	togglecontent();
+    walletaccountswitch();
+    wallettransferamount();
 });
 
 /**
