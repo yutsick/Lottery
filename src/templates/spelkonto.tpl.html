@@ -102,6 +102,25 @@
 		</section>
 	</div>
 
+	<div class="container">
+		<section class="block block-content">
+			<div class="block-content__content">
+				<h3>Vinstbeställningar</h3>
+				Du har obeställda varor i varukorgen
+			</div>
+		</section>
+	</div>
+	@@include('blocks/_product-list-full.html')
+
+	<div class="container">
+		<section class="block block-content">
+			<div class="block-content__content">
+				<h3>Mina beställda varor</h3>
+			</div>
+		</section>
+	</div>
+	@@include('blocks/_product-list-full.html')
+
 </div>
 
 @@include('layout/_footer.html', {"show_footer": false})
