@@ -1,29 +1,41 @@
 .row.equal-height {
-	display: flex;
-	flex-wrap: wrap;
-
-	&:before, &:after {
-		display: block;
-	}
-
-	> [class*='col-'] {
+	@include min-screen($screen-sm-min) {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 
-		> div,
-		> article {
+		&:before, &:after {
+			display: block;
+		}
+
+		> [class*='col-'] {
 			display: flex;
 			flex-direction: column;
-			flex: 1 1 auto;
 
-			> a:not(.btn) {
+			> div,
+			> article {
 				display: flex;
 				flex-direction: column;
 				flex: 1 1 auto;
+
+				> a:not(.btn) {
+					display: flex;
+					flex-direction: column;
+					flex: 1 1 auto;
+				}
 			}
 		}
 	}
 }
 
 .row.padding-extra {
+}
+
+.row.no-gutter {
+	margin-left: 0;
+	margin-right: 0;
+
+	> [class*='col-'] {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
