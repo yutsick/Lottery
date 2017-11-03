@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="spelkonto-error" transform="translate(-176.000000, -565.000000)">
+            <g id="Group-3" transform="translate(21.000000, 441.000000)">
+                <g id="transfer" transform="translate(146.000000, 113.000000)">
+                    <g id="Group-2" transform="translate(18.500000, 19.500000) rotate(-360.000000) translate(-18.500000, -19.500000) translate(9.000000, 11.000000)">
+                        <g id="Group" transform="translate(9.000000, 0.000000)">
+                            <path d="M2.26240867,4.93007932 L5.2360775,7.90374815 C6.13650761,8.80417826 7.58992675,8.8053426 8.49345502,7.90181433 L11.6844692,4.71080017 C12.0697622,4.32550717 12.0697622,3.70082381 11.6844692,3.31553081 C11.2991762,2.93023782 10.6744928,2.93023782 10.2891998,3.31553081 L7.09818567,6.50654498 C6.96574427,6.63898638 6.76169098,6.63882292 6.63134685,6.50847879 L3.65767803,3.53480996 C3.27238503,3.14951697 2.64770167,3.14951697 2.26240867,3.53480996 C1.87711568,3.92010296 1.87711568,4.54478632 2.26240867,4.93007932 Z" id="arrow_down" fill="#FFFFFF" fill-rule="nonzero" transform="translate(6.973439, 5.802913) rotate(-90.000000) translate(-6.973439, -5.802913) "></path>
+                            <path d="M0.5,6 L7.5,6" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                        </g>
+                        <g id="Group-Copy" transform="translate(5.000000, 11.500000) scale(-1, 1) translate(-5.000000, -11.500000) translate(0.000000, 6.000000)">
+                            <path d="M1.86823541,4.48278391 L4.84190424,7.45645274 C5.74233435,8.35688285 7.19575348,8.35804719 8.09928175,7.45451893 L11.2902959,4.26350476 C11.6755889,3.87821176 11.6755889,3.2535284 11.2902959,2.86823541 C10.9050029,2.48294241 10.2803196,2.48294241 9.89502657,2.86823541 L6.7040124,6.05924957 C6.571571,6.19169098 6.36751771,6.19152751 6.23717359,6.06118339 L3.26350476,3.08751456 C2.87821176,2.70222156 2.2535284,2.70222156 1.86823541,3.08751456 C1.48294241,3.47280755 1.48294241,4.09749091 1.86823541,4.48278391 Z" id="arrow_down" fill="#FFFFFF" fill-rule="nonzero" transform="translate(6.579266, 5.355618) rotate(-90.000000) translate(-6.579266, -5.355618) "></path>
+                            <path d="M0.5,5 L7.5,5" id="Line" stroke="#FFFFFF" stroke-width="2" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
