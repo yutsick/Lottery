@@ -31,15 +31,18 @@ export default function () {
 		});
 	});
 
+	// Mobile: Close message.
 	$('.js-close-message').on('click', function () {
 		$messagesContainer.removeClass('messages--message-active');
 	});
 
+	// Mobile: Show more messages.
 	$('.js-show-more-messages').on('click', function () {
 		let numOfVisibleItems = $('.messages-list__message:visible').length;
 		let itemsToShow = numOfVisibleItems + 5;
 		$(".messages-list__message:lt(" + itemsToShow + ")").slideDown();
 
+		// Hide load more if all is visible.
 		let numOfHiddenItems = $('.messages-list__message:hidden').length;
 		if (numOfHiddenItems === 0) {
 			$('.messages__load-more-button').remove();
