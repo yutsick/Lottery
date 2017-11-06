@@ -1,12 +1,6 @@
 /**
  * Layout
  */
-@font-face {
-  font-family: UniNeueHeavy;
-  src: url(../fonts/UniNeueHeavy.otf);
-}
-
-
 // Margins
 $margin-default: 20px;
 $margin-medium: 15px;
@@ -36,7 +30,7 @@ $base-font-size: 14px;
 $base-line-height: 20px;
 
 // Base Headings
-$base-heading-family: UniNeueHeavy;
+$base-heading-family: 'UniNeueHeavy';
 $semi-heading-family: 'Proxima Nova';
 $basic-heading-family: 'Proxima Nova';
 

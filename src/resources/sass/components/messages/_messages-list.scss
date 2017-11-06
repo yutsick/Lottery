@@ -1,43 +1,43 @@
 .messages-list {
-	color: $color-base-complement;
 	font-size: 14px;
 	margin: 0;
 	max-height: 100%;
-	flex: 1 0 0;
 	overflow: hidden;
 	overflow-y: auto;
 	transition: opacity $duration-fast $ease-in-out;
+	color: #8da8bb;
 
 	@include min-screen($screen-sm-min) {
-		font-size: 16px;
+		flex: 1 0 0 !important;
+		color: $color-base-complement;
 	}
 }
 
 .messages-list__message {
 	border: none;
 	text-align: left;
-	padding: 20px;
-	border-bottom: 1px solid $color-gray-border;
+	padding: 15px;
+	border-top: 1px solid $color-gray-border;
 	border-radius: 0;
 	outline: none;
 	width: 100%;
 	background-color: transparent;
+
+	&:first-of-type {
+		border-top: 0;
+	}
 
 	@include max-screen($screen-xs-max) {
 		padding: 15px;
 		display: none;
 
 		// Show only the first 3 messages on load on mobile.
-		&:nth-of-type(-n+3) {
+		&:nth-of-type(-n+5) {
 			display: block;
 		}
 
 		&:nth-of-type(even) {
 			background-color: $color-cloud;
-		}
-
-		&:last-of-type {
-			border-bottom: 0;
 		}
 	}
 }
@@ -46,10 +46,6 @@
 	display: block;
 	font-weight: 600;
 	margin-bottom: 5px;
-
-	@include min-screen($screen-sm-min) {
-		margin-bottom: 10px;
-	}
 }
 
 .messages-list__date {
@@ -58,9 +54,14 @@
 }
 
 .messages-list__subject {
-	display: block;
 	overflow: hidden;
 	font-weight: 600;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1; /* number of lines to show */
+	line-height: 20px; /* fallback */
+	max-height: 20px; /* fallback */
 
 	@include min-screen($screen-sm-min) {
 		font-weight: 500;
@@ -83,6 +84,9 @@
 		width: 8px;
 		height: 8px;
 		display: inline-block;
+		margin-bottom: 4px;
+		margin-right: 4px;
+		vertical-align: middle;
 	}
 
 	.messages-list__subject {
@@ -92,7 +96,7 @@
 
 .messages-list__message--active {
 	@include min-screen($screen-sm-min) {
-		border-left: 4px solid $color-light-blue;
+		border-left: 3px solid $color-light-blue;
 		background-color: $color-dark-white;
 
 		.messages-list__sender {
@@ -108,7 +112,9 @@
 }
 
 .messages--message-active .messages-list {
-	display: none;
+	@include max-screen($screen-xs-max) {
+		display: none;
+	}
 }
 
 .messages--is-loading {

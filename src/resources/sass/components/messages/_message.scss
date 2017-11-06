@@ -4,26 +4,20 @@
 	@include min-screen($screen-sm-min) {
 		margin-bottom: 50px;
 	}
+
+	h1 {
+		transition: font-size $duration-quick $ease-in-out;
+		.icon { display: none; }
+	}
 }
 
 .messages__container {
 	border: 1px solid $color-gray-border;
 	border-radius: 5px;
 	margin-bottom: 25px;
-}
 
-.messages__back-button {
-	background: none;
-	border: none;
-	font-size: 18px;
-	font-weight: 700;
-	display: none;
-	padding: 20px 0;
-
-	.icon {
-		vertical-align: middle;
-		font-size: 15px;
-		color: $color-base-complement;
+	@include max-screen($screen-xs-max) {
+		animation: activeMessageList $duration-fast $ease-in-out;
 	}
 }
 
@@ -51,10 +45,6 @@
 
 	p { margin-bottom: 20px; }
 
-	.btn {
-		width: auto;
-		align-self: start;
-	}
 }
 
 .messages--is-loading {
@@ -65,9 +55,9 @@
 
 .message__header {
 	position: relative;
-	font-size: 16px;
-	color: $color-base-complement;
-	padding-bottom: 20px;
+	font-size: 14px;
+	color: $color-base-secondary;
+	padding-bottom: 10px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid $color-gray-border;
 	font-weight: 600;
@@ -75,18 +65,22 @@
 
 .message__thumbnail {
 	float: left;
-	margin-right: 20px;
+	margin-right: 10px;
+
+	@include min-screen($screen-sm-min) {
+		margin-right: 20px;
+	}
 
 	img {
-		width: 36px;
-		height: 36px;
+		width: 30px;
+		height: 30px;
 		margin: 0;
 	}
 }
 
 .message__sender {
 	font-weight: 800;
-	color: #1e2227;
+	margin-bottom: 5px;
 }
 
 .message__date {
@@ -96,26 +90,43 @@
 	top: 0;
 }
 
+.message__cta {
+	text-align: center;
+	@include min-screen($screen-sm-min) {
+		text-align: left;
+	}
+
+}
+
 .messages__load-more-button {
+	transition: transform $duration-quick $ease-in-out,
+	opacity $duration-quick $ease-in-out;
+	transform: translateY(0);
+	opacity: 1;
+
 	@include min-screen($screen-sm-min) {
 		display: none;
 	}
 }
 
 .messages--message-active {
-	h1 {
-		display: none;
 
-		@include min-screen($screen-sm-min) {
-			display: block;
+	.messages__container {
+		@include max-screen($screen-xs-max) {
+			animation: activeMessage $duration-fast $ease-in-out;
 		}
 	}
+	h1 {
+		@include max-screen($screen-xs-max) {
+			font-size: 18px;
+			font-weight: 700;
 
-	.messages__back-button {
-		display: block;
-
-		@include min-screen($screen-sm-min) {
-			display: none;
+			.icon {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 15px;
+				color: $color-base-complement;
+			}
 		}
 	}
 
@@ -124,6 +135,21 @@
 	}
 
 	.messages__load-more-button {
-		display: none;
+		transform: translateY(30px);
+		opacity: 0;
 	}
+}
+
+@keyframes activeMessage {
+	0% { transform: translateX(0); }
+	5% { transform: translateX(100px); }
+	50% { transform: translateX(-10px); }
+	100% { transform: translateX(0); }
+}
+
+@keyframes activeMessageList {
+	0% { transform: translateX(0); }
+	5% { transform: translateX(-100px); }
+	50% { transform: translateX(10px); }
+	100% { transform: translateX(0); }
 }

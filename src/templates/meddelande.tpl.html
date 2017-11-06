@@ -9,11 +9,7 @@
 	<div class="container">
 
 		<div class="messages" data-messages-endpoint="/ajax/message.html?id=">
-			<h1>Mina meddelanden</h1>
-
-			<button class="messages__back-button js-close-message" aria-hidden="true">
-				<i class="icon icon-chevron-left"></i> Mina meddelanden
-			</button>
+			<h1 class="js-close-message"><i class="icon icon-chevron-left"></i> Mina meddelanden</h1>
 
 			<div class="messages__container">
 				<div class="row equal-height no-gutter">
@@ -24,7 +20,7 @@
 								<span class="messages-list__sender">
 									Miljonlotteriet <span class="messages-list__date">Idag - 14.06</span>
 								</span>
-								<span class="messages-list__subject">Det finns en ny bonus för dig att hämta ut!</span>
+								<span class="messages-list__subject">Det finns en ny bonus för dig att hämta ut som är lite längre än de andra</span>
 							</button>
 
 							<button class="messages-list__message js-load-message messages-list__message--active"
@@ -33,6 +29,41 @@
 									Miljonlotteriet <span class="messages-list__date">2017-11-02</span>
 								</span>
 								<span class="messages-list__subject">Det finns en ny bonus för dig att hämta ut!</span>
+							</button>
+
+							<button class="messages-list__message js-load-message" data-message-id="3">
+								<span class="messages-list__sender">
+									IOGT - NTO <span class="messages-list__date">2017-10-27</span>
+								</span>
+								<span class="messages-list__subject">Läs mer om var månadens överskott gick..</span>
+							</button>
+
+							<button class="messages-list__message js-load-message" data-message-id="3">
+								<span class="messages-list__sender">
+									IOGT - NTO <span class="messages-list__date">2017-10-27</span>
+								</span>
+								<span class="messages-list__subject">Läs mer om var månadens överskott gick..</span>
+							</button>
+
+							<button class="messages-list__message js-load-message" data-message-id="3">
+								<span class="messages-list__sender">
+									IOGT - NTO <span class="messages-list__date">2017-10-27</span>
+								</span>
+								<span class="messages-list__subject">Läs mer om var månadens överskott gick..</span>
+							</button>
+
+							<button class="messages-list__message js-load-message" data-message-id="3">
+								<span class="messages-list__sender">
+									IOGT - NTO <span class="messages-list__date">2017-10-27</span>
+								</span>
+								<span class="messages-list__subject">Läs mer om var månadens överskott gick..</span>
+							</button>
+
+							<button class="messages-list__message js-load-message" data-message-id="3">
+								<span class="messages-list__sender">
+									IOGT - NTO <span class="messages-list__date">2017-10-27</span>
+								</span>
+								<span class="messages-list__subject">Läs mer om var månadens överskott gick..</span>
 							</button>
 
 							<button class="messages-list__message js-load-message" data-message-id="3">
@@ -100,7 +131,10 @@
 								på
 								50 kr att spela för!</p>
 
-							<a class="btn btn-primary" href="/">Hämta bonuskod</a>
+							<div class="message__cta">
+								<a class="btn btn-primary" href="/">Hämta bonuskod</a>
+							</div>
+
 						</div>
 					</div>
 				</div>

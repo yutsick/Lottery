@@ -108,3 +108,11 @@
 	font-weight: 600;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'UniNeueHeavy';
+	src: url('../fonts/unineueheavy-webfont.woff2') format('woff2'),
+	url('../fonts/unineueheavy-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

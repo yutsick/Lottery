@@ -25,7 +25,7 @@ export default function () {
 				if (isMobile()) {
 					$("html, body").animate({
 						scrollTop: 0
-					}, 240);
+					}, 0);
 				}
 			}
 		});
@@ -37,7 +37,7 @@ export default function () {
 
 	$('.js-show-more-messages').on('click', function () {
 		let numOfVisibleItems = $('.messages-list__message:visible').length;
-		let itemsToShow = numOfVisibleItems + 3;
+		let itemsToShow = numOfVisibleItems + 5;
 		$(".messages-list__message:lt(" + itemsToShow + ")").slideDown();
 
 		let numOfHiddenItems = $('.messages-list__message:hidden').length;
