@@ -27,6 +27,9 @@
 		border-top: 0;
 	}
 
+	&:hover {
+		background-color: #f5f8fa;
+	}
 	@include max-screen($screen-xs-max) {
 		padding: 15px;
 		display: none;

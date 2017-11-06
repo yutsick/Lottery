@@ -33,7 +33,7 @@
 	@include min-screen($screen-md-min) {
 		display: block;
 		border-left: 1px solid $color-gray-border;
-		min-height: 400px;
+		min-height: 600px;
 	}
 
 	img {
