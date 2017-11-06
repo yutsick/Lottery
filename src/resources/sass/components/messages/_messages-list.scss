@@ -7,7 +7,7 @@
 	transition: opacity $duration-fast $ease-in-out;
 	color: #8da8bb;
 
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		flex: 1 0 0 !important;
 		color: $color-base-complement;
 	}
@@ -30,7 +30,7 @@
 	&:hover {
 		background-color: #f5f8fa;
 	}
-	@include max-screen($screen-xs-max) {
+	@include max-screen($screen-sm-max) {
 		padding: 15px;
 		display: none;
 
@@ -66,7 +66,7 @@
 	line-height: 20px; /* fallback */
 	max-height: 20px; /* fallback */
 
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		font-weight: 500;
 	}
 
@@ -98,7 +98,7 @@
 }
 
 .messages-list__message--active {
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		border-left: 3px solid $color-light-blue;
 		background-color: $color-dark-white;
 
@@ -115,7 +115,7 @@
 }
 
 .messages--message-active .messages-list {
-	@include max-screen($screen-xs-max) {
+	@include max-screen($screen-sm-max) {
 		display: none;
 	}
 }
@@ -124,7 +124,7 @@
 	.messages-list {
 		opacity: 0.6;
 
-		@include min-screen($screen-sm) {
+		@include min-screen($screen-md) {
 			opacity: 1;
 		}
 

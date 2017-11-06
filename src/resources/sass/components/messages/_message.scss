@@ -1,7 +1,7 @@
 .messages {
 	margin-bottom: 25px;
 
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		margin-bottom: 50px;
 	}
 
@@ -16,7 +16,7 @@
 	border-radius: 5px;
 	margin-bottom: 25px;
 
-	@include max-screen($screen-xs-max) {
+	@include max-screen($screen-sm-max) {
 		animation: activeMessageList $duration-fast $ease-in-out;
 	}
 }
@@ -67,7 +67,7 @@
 	float: left;
 	margin-right: 10px;
 
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		margin-right: 20px;
 	}
 
@@ -92,7 +92,7 @@
 
 .message__cta {
 	text-align: center;
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		text-align: left;
 	}
 
@@ -104,7 +104,7 @@
 	transform: translateY(0);
 	opacity: 1;
 
-	@include min-screen($screen-sm-min) {
+	@include min-screen($screen-md-min) {
 		display: none;
 	}
 }
@@ -112,12 +112,12 @@
 // States for message.
 .messages--message-active {
 	.messages__container {
-		@include max-screen($screen-xs-max) {
+		@include max-screen($screen-sm-max) {
 			animation: activeMessage $duration-fast $ease-in-out;
 		}
 	}
 	h1 {
-		@include max-screen($screen-xs-max) {
+		@include max-screen($screen-sm-max) {
 			font-size: 18px;
 			font-weight: 700;
 
