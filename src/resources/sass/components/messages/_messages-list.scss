@@ -60,11 +60,10 @@
 	overflow: hidden;
 	font-weight: 600;
 	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 1; /* number of lines to show */
+	display: block;
 	line-height: 20px; /* fallback */
 	max-height: 20px; /* fallback */
+	white-space: nowrap;
 
 	@include min-screen($screen-md-min) {
 		font-weight: 500;
