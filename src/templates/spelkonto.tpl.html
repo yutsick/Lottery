@@ -8,10 +8,10 @@
 <div class="content-wrapper ml-2017">
 
 	@@include('blocks/_hero.html', {
-		"hero_type": "mini",
-		"hero_content": true,
-		"h1": true,
-		"h2": false
+	"hero_type": "mini",
+	"hero_content": true,
+	"h1": true,
+	"h2": false
 	})
 
 	<div class="container">
@@ -22,31 +22,31 @@
 
 			<div class="row equal-height">
 				@@include('blocks/promotion/block/_promotion-wallet-toggle.html', {
-					"id": "wallet",
-					"background": "color",
-					"background_color": "lightorange",
-					"content_title": "Spelplånbok",
-					"content_text": "I spelkontot ligger de pengar du kan spela för.",
-					"content_pris": "500 kr",
-					"content_image": "assets/img/mockup/symbol_spelplanbok_vec.svg",
-					"primary_button_text": "Sätt in pengar",
-					"secondary_button_text": "Ta ut pengar"
+				"id": "wallet",
+				"background": "color",
+				"background_color": "lightorange",
+				"content_title": "Spelplånbok",
+				"content_text": "I spelkontot ligger de pengar du kan spela för.",
+				"content_pris": "500 kr",
+				"content_image": "assets/img/mockup/symbol_spelplanbok_vec.svg",
+				"primary_button_text": "Sätt in pengar",
+				"secondary_button_text": "Ta ut pengar"
 				})
 
 				@@include('blocks/promotion/block/_promotion-wallet-toggle.html', {
-					"id": "account",
-					"background": "color",
-					"background_color": "lightpink",
-					"content_title": "Vinstkonto",
-					"content_text": "Vinstkontot används för att beställa produkter ur vårat vinstsortiment. Saknas det pengar till en produkt kan du föra över pengar från din spelplånbok här under.",
-					"content_pris": "444 kr",
-					"content_image": "assets/img/mockup/symbol_vinstkontot.svg",
-					"primary_button_text": "Hämta ut vinst"
+				"id": "account",
+				"background": "color",
+				"background_color": "lightpink",
+				"content_title": "Vinstkonto",
+				"content_text": "Vinstkontot används för att beställa produkter ur vårat vinstsortiment. Saknas det pengar till en produkt kan du föra över pengar från din spelplånbok här under.",
+				"content_pris": "444 kr",
+				"content_image": "assets/img/mockup/symbol_vinstkontot.svg",
+				"primary_button_text": "Hämta ut vinst"
 				})
 
 				<div class="col-xs-12 visible-xs">
-					<a class="btn btn-primary" href="/" >Sätt in pengar</a>
-					<a class="btn btn-primary" href="/" >Ta ut pengar</a>
+					<a class="btn btn-primary" href="/">Sätt in pengar</a>
+					<a class="btn btn-primary" href="/">Ta ut pengar</a>
 				</div>
 			</div>
 
@@ -54,30 +54,35 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-6">
 						<h4>Kontoöverföring</h4>
-						<p>Här kan du flytta över medel mellan din spelplånbok och ditt vinstkonto. Funktionen fungerar åt båda hållen.</p>
+						<p>Här kan du flytta över medel mellan din spelplånbok och ditt vinstkonto. Funktionen fungerar
+							åt båda hållen.</p>
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-6">
 						<div class="wallet-switch">
 							<p class="wallet-switch__item" data-account="Vinstkonto">
 								<span class="wallet-switch__label">Till:</span>
-								<span class="wallet-switch__account" >Vinstkonto</span>
-								<span class="hidden-xs">(<span class="wallet-switch__balance" data-balance="100">100</span>kr)</span>
+								<span class="wallet-switch__account">Vinstkonto</span>
+								<span class="hidden-xs">(<span class="wallet-switch__balance"
+															   data-balance="100">100</span>kr)</span>
 							</p>
 							<button class="wallet-switch__btn js-wallet-switch">
-								<img class="wallet-switch__icon" src="assets/img/icons/arrow-switch-white.svg" alt="Pilar för att växla mellan konto" width="19px" height="17px">
+								<img class="wallet-switch__icon" src="assets/img/icons/arrow-switch-white.svg"
+									 alt="Pilar för att växla mellan konto" width="19px" height="17px">
 								<span class="sr-only">Växla konto</span>
 							</button>
 							<p class="wallet-switch__item" data-account="Spelplånbok">
 								<span class="wallet-switch__label">Från:</span>
 								<span class="wallet-switch__account">Spelplånbok</span>
-								<span class="hidden-xs">(<span class="wallet-switch__balance" data-balance="200">200</span>kr)</span>
+								<span class="hidden-xs">(<span class="wallet-switch__balance"
+															   data-balance="200">200</span>kr)</span>
 							</p>
 						</div>
 
 						<div class="wallet-transfer">
 							<div class="wallet-transfer__form-wrapper form-group">
 								<label class="sr-only" for="amount">Ange belopp</label>
-								<input class="wallet-transfer__amount form-control" id="amount" type="number" placeholder="Belopp"/>
+								<input class="wallet-transfer__amount form-control" id="amount" type="number"
+									   placeholder="Belopp"/>
 							</div>
 
 							<button class="wallet-transfer__btn js-wallet-amount" data-amount="25">25kr</button>
@@ -98,40 +103,93 @@
 				<h3>Kontohistorik</h3>
 			</div>
 
-			<p class="table-title">Kontohistorik</p>
-			<table class="responsive-table">
-				<thead>
-					<tr>
-						<th>Tidpunkt</th>
-						<th>Typ</th>
-						<th>Summa</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td data-header="Tidpunkt">Idag 14:01</td>
-						<td data-header="Typ">Köp</td>
-						<td data-header="Summa">-250kr</td>
-					</tr>
-					<tr>
-						<td data-header="Tidpunkt">Igår 12:00</td>
-						<td data-header="Typ">Köp</td>
-						<td data-header="Summa">+50kr</td>
-					</tr>
-					<tr>
-						<td data-header="Tidpunkt">Igår 11:59</td>
-						<td data-header="Typ">Köp</td>
-						<td data-header="Summa">+150kr</td>
-					</tr>
-					<tr>
-						<td data-header="Tidpunkt">2017-10-27</td>
-						<td data-header="Typ">Köp</td>
-						<td data-header="Summa">+250kr</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
+			<div class="row">
+				<div class="nav flex-column nav-pills col-xs-4" id="account-selector-tab" role="tablist"
+					 aria-orientation="vertical">
+					<a data-toggle="tab" href="#account-wallet" role="tab">
+						<h4>Spelplånbok</h4>
+						<p>Se över och ändra dina uppgifter</p>
+					</a>
+					<a data-toggle="tab" href="#account-prizes" role="tab">
+						<h4>Vinstkonto</h4>
+						<p>Håll koll på ditt spelande</p>
+					</a>
+				</div>
 
+				<div class="tab-content col-xs-8">
+					<div class="tab-pane active" id="account-wallet" role="tabpanel">
+						<p class="table-title">Kontohistorik</p>
+						<table class="responsive-table">
+							<thead>
+							<tr>
+								<th>Tidpunkt</th>
+								<th>Typ</th>
+								<th>Summa</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td data-header="Tidpunkt">Idag 14:01</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">-250kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">Igår 12:00</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">+50kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">Igår 11:59</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">+150kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">2017-10-27</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">+250kr</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tab-pane" id="account-prizes" role="tabpanel">
+						<p class="table-title">Vinstkonto</p>
+						<label>Filtera:
+						</label>
+						<table class="responsive-table">
+							<thead>
+							<tr>
+								<th>Tidpunkt</th>
+								<th>Typ</th>
+								<th>Summa</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td data-header="Tidpunkt">Idag 14:01</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">-250kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">Igår 12:00</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">+50kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">Igår 11:59</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">+150kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">2017-10-27</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Summa">+250kr</td>
+							</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 
 	<div class="container">

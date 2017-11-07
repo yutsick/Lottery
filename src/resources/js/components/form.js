@@ -152,6 +152,7 @@ export default function () {
 		});
 
 		$('.inner-addon ').on('focus', '.form-control', function () {
+			let $input = $(this);
 			let $input_containers = $('.inner-addon');
 			let $input_container = $input.parent('.inner-addon');
 			let input_value = $input.val();
