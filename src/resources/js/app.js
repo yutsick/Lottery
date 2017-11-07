@@ -5,6 +5,7 @@ require('bootstrap-validator');
 var fizzyUIUtils = require('fizzy-ui-utils');
 var Flickity = require('flickity/dist/flickity.pkgd.js');
 
+import textToggle from './utilities/textToggle';
 import modernizr from './vendor/modernizr-custom.js';
 import alert from './components/alert';
 import form from './components/form';
@@ -18,6 +19,7 @@ import wallettransferamount from './components/wallet-transfer-amount';
 import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
+import dataList from './components/data-list';
 
 $(function () {
 	modernizr();
@@ -31,8 +33,10 @@ $(function () {
 	slider();
 	register();
 	togglecontent();
-    walletaccountswitch();
-    wallettransferamount();
+	walletaccountswitch();
+	wallettransferamount();
+	dataList();
+	textToggle();
 });
 
 /**
