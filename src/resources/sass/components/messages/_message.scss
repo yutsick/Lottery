@@ -50,6 +50,13 @@
 
 }
 
+.message--fixed-height {
+	@include min-screen($screen-md-min) {
+		overflow: auto;
+		max-height: 600px;
+	}
+}
+
 .messages--is-loading {
 	.message {
 		opacity: 0.6;
