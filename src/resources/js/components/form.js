@@ -74,6 +74,7 @@ export default function () {
 			} else {
 				let $this = $(this);
 				let formData = $this.serialize();
+				let formDataArray = $this.serializeArray();
 				let url = $this.attr('action');
 				let $currentRow = $this.parents('.profile__row');
 				let $submitButton = $this.find('[type="submit"]');
@@ -92,10 +93,14 @@ export default function () {
 						$submitButton.prop('disabled', false);
 						$this.find('input').prop('disabled', true);
 						$currentRow.removeClass('profile__row--active');
+
 					},
 					error: function () {
 						// something went wrong on the backend?
 						$submitButton.prop('disabled', false);
+					},
+					complete: function () {
+						update_phone_placeholder($this, formDataArray);
 					}
 				});
 			}
@@ -103,6 +108,26 @@ export default function () {
 		});
 	}
 
+	function update_phone_placeholder($form, formDataArray) {
+		// Special placeholder functionality if edit phone number.
+		if ($form.find('.profile__input--phone').length) {
+			let placeholder = '';
+
+			$.each(formDataArray, function (i, object) {
+				if (i > 0) {
+					placeholder = placeholder + '-'
+				}
+
+				placeholder = placeholder + object.value;
+			});
+
+			if (placeholder === '-') {
+				placeholder = 'Ej angivet';
+			}
+
+			$form.find('.profile__placeholder').html(placeholder);
+		}
+	}
 
 	function form_active_search() {
 		$('.search  .form-control').bind('keyup', function (e) {
