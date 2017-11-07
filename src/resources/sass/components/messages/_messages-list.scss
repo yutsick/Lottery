@@ -5,11 +5,10 @@
 	overflow: hidden;
 	overflow-y: auto;
 	transition: opacity $duration-fast $ease-in-out;
-	color: #8da8bb;
+	color: $color-base-complement;
 
 	@include min-screen($screen-md-min) {
 		flex: 1 0 0 !important;
-		color: $color-base-complement;
 	}
 }
 
@@ -30,6 +29,7 @@
 	&:hover {
 		background-color: #f5f8fa;
 	}
+
 	@include max-screen($screen-sm-max) {
 		padding: 15px;
 		display: none;
