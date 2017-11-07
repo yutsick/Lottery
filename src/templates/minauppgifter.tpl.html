@@ -144,13 +144,29 @@
 			<div class="profile__row form-group has-feedback">
 				<form action="/" method="post" data-toggle="validator" data-use-ajax>
 					<label class="profile__label">Telefonnummer</label>
-					<div class="profile__input">
-						<input type="tel"
-							   data-required-error="Du måste fylla i detta fält."
-							   placeholder="Ej angivet"
-							   value=""
-							   name="phone"
-							   disabled>
+					<div class="profile__input profile__input--phone">
+						<span class="profile__placeholder">Ej angivet</span>
+						<div class="profile__multiple-input">
+							<label>Riktnummer</label>
+							<input type="text"
+								   class="input-areacode"
+								   data-required-error="Du måste fylla i detta fält."
+								   name="areacode"
+								   value=""
+								   maxlength="4"
+								   disabled pattern="[0-9]*">
+						</div>
+
+						<div class="profile__multiple-input">
+							<label>Telefonnummer</label>
+							<input type="text"
+								   data-required-error="Du måste fylla i detta fält."
+								   name="phone"
+								   maxlength="8"
+								   value=""
+								   pattern="[0-9]*"
+								   disabled>
+						</div>
 						<div class="help-block with-errors"></div>
 					</div>
 					<div class="profile__actions">

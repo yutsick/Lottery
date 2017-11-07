@@ -97,6 +97,10 @@
 				padding: 9px 0;
 			}
 		}
+
+		&.input-areacode {
+			width: 55px;
+		}
 	}
 
 	.checkbox {
@@ -126,6 +130,15 @@
 	}
 }
 
+.profile__placeholder {
+	display: inline-block;
+}
+
+// Special case with phone who has two inputs but only one "placeholder/label" when not active.
+.profile__input.profile__input--phone {
+	input { display: none; }
+}
+
 .profile__input.profile__input--account {
 	.profile__multiple-input {
 		margin-right: 20px;
@@ -152,7 +165,6 @@
 .profile__actions {
 	position: absolute;
 	right: 20px;
-
 	top: 0;
 	height: 100%;
 	display: flex;
@@ -182,6 +194,14 @@
 
 // Styles when a edit is active.
 .profile__row--active {
+
+	.profile__placeholder {
+		display: none;
+	}
+
+	.profile__input.profile__input--phone {
+		input { display: inline-block; }
+	}
 
 	&.has-error {
 		input:not([type=radio]) {

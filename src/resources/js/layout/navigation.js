@@ -45,14 +45,12 @@ export default function () {
 				if ($this.hasClass(active_class)) {
 					if (window_width <= mobile_width) {
 						toggle_sub_menu();
-					}
-					else {
+					} else {
 						toggle_sub_menu('close');
 					}
 					$this.removeClass(active_class);
 					$this.parent('li').removeClass(active_class);
-				}
-				else {
+				} else {
 					toggle_sub_menu('open', 'active');
 					$this.addClass(active_class);
 					$this.parent('li').addClass(active_class);
@@ -85,7 +83,7 @@ export default function () {
 			let link_href = $this.attr('href');
 
 			if (link_href) {
-				let hash = '#' + link_href.replace(/^.*?(#|$)/,'');
+				let hash = '#' + link_href.replace(/^.*?(#|$)/, '');
 				let $section = $(hash);
 				if ($section.length) {
 					toggle_sub_menu('close');
@@ -101,9 +99,9 @@ export default function () {
 		$('.sidebar-navigation').find('li.has-sub-menu a[data-toggle="collapse"]').click(function () {
 			let $collapsed = $sidebar.find('.collapse');
 
-			$collapsed.each( function () {
+			$collapsed.each(function () {
 				let $this = $(this);
-				if ( !$this.hasClass('collapsed') ) {
+				if (!$this.hasClass('collapsed')) {
 					$this.collapse('hide');
 				}
 			})
@@ -135,8 +133,7 @@ export default function () {
 		if (state_navigation == 'close') {
 			$body.removeClass('js-overlay-is-active');
 			$page_wrapper.removeClass(active_class);
-		}
-		else if (state_navigation == 'open') {
+		} else if (state_navigation == 'open') {
 			$page_wrapper.addClass(active_class);
 			$body.addClass('js-overlay-is-active');
 		}
@@ -146,8 +143,7 @@ export default function () {
 
 		if (state_sidebar == 'active') {
 			$sidebar.addClass(active_class);
-		}
-		else {
+		} else {
 			$sidebar.removeClass(active_class);
 		}
 	}

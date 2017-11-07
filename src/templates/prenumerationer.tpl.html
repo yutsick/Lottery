@@ -1,0 +1,69 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-in"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+
+	@@include('blocks/_hero.html', {
+	"hero_type": "mini",
+	"hero_content": true,
+	"h1": true,
+	"h2": false
+	})
+
+	<div class="container">
+		<section class="block block-content">
+			<div class="block-content__content">
+				<h2>Prenumerationer</h2>
+			</div>
+
+			<div class="data-list">
+				<div class="data-list__header">
+					<h3 class="h5">Mina prenumerationer</h3>
+				</div>
+
+				<ul>
+					<li>
+						<div class="data-list__cell">Orginal</div>
+						<div class="data-list__cell">6st</div>
+						<div class="data-list__cell">200kr</div>
+						<div class="data-list__cell">Digital</div>
+						<div class="data-list__cell data-list__cell--actions">
+							<div class="data-list__sub-actions">
+								<button class="btn btn-link">Byt leveranssätt</button>
+								<button class="btn btn-link">Ändra betalsätt</button>
+								<button class="btn btn-link">Uppsägning</button>
+							</div>
+
+							<button class="btn btn-link js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
+						</div>
+					</li>
+					<li>
+						<div class="data-list__cell">Tjugan</div>
+						<div class="data-list__cell">4st</div>
+						<div class="data-list__cell">40kr</div>
+						<div class="data-list__cell">Fysisk</div>
+						<div class="data-list__cell data-list__cell--actions">
+							<div class="data-list__sub-actions">
+								<button class="btn btn-link">Byt leveranssätt</button>
+								<button class="btn btn-link">Ändra betalsätt</button>
+								<button class="btn btn-link">Uppsägning</button>
+							</div>
+
+							<button class="btn btn-link js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</section>
+
+	</div>
+
+
+</div>
+
+@@include('layout/_footer.html', {"show_footer": false})

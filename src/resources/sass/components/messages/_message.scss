@@ -5,7 +5,8 @@
 		margin-bottom: 50px;
 	}
 
-	h1 {
+	h2 {
+		margin: 0;
 		transition: font-size $duration-quick $ease-in-out;
 		.icon { display: none; }
 	}
@@ -45,6 +46,15 @@
 
 	p { margin-bottom: 20px; }
 
+	strong { font-weight: $extrabold; }
+
+}
+
+.message--fixed-height {
+	@include min-screen($screen-md-min) {
+		overflow: auto;
+		max-height: 600px;
+	}
 }
 
 .messages--is-loading {
@@ -66,6 +76,7 @@
 .message__thumbnail {
 	float: left;
 	margin-right: 10px;
+	margin-top: 7px;
 
 	@include min-screen($screen-md-min) {
 		margin-right: 20px;
@@ -116,7 +127,7 @@
 			animation: activeMessage $duration-fast $ease-in-out;
 		}
 	}
-	h1 {
+	h2 {
 		@include max-screen($screen-sm-max) {
 			font-size: 18px;
 			font-weight: 700;

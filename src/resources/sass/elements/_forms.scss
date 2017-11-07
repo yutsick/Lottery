@@ -17,8 +17,8 @@ label {
 	margin-bottom: $margin-small;
 	color: $color-base-complement;
 	font-weight: 500;
-	position:relative;
-	cursor:pointer;
+	position: relative;
+	cursor: pointer;
 }
 
 // Custom checkbox and radio buttons
@@ -58,7 +58,7 @@ label {
 			display: none;
 
 			& + .cr > .cr-icon {
-				transform: scale(1.1) ;
+				transform: scale(1.1);
 				opacity: 0;
 				transition: all $duration-quick $delay-none $ease-in-out;
 			}
@@ -97,7 +97,7 @@ label {
 .has-error.checkbox label,
 .has-error.radio-inline label,
 .has-error.checkbox-inline label {
-	color: #77839D;
+	color: #77839d;
 	font-weight: 300;
 }
 
@@ -189,7 +189,7 @@ label {
 		}
 	}
 
-	&.input-vertical--small  {
+	&.input-vertical--small {
 		.form-group {
 			&:first-of-type {
 				.form-control {
