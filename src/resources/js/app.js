@@ -18,13 +18,11 @@ import wallettransferamount from './components/wallet-transfer-amount';
 import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
-import loggedin from './layout/loggedin';
 
 $(function () {
 	modernizr();
 	alert();
 	message();
-	loggedin();
 	form();
 	modal();
 	search();

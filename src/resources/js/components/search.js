@@ -5,8 +5,7 @@ export default function () {
 
 		if ($search_container.hasClass('js-is-active')) {
 			return true;
-		}
-		else {
+		} else {
 			$search_container.addClass('js-is-active');
 			$search_input.focus();
 		}
@@ -19,12 +18,10 @@ export default function () {
 		if ($search_container.hasClass('js-is-active')) {
 			if ($search_input.val()) {
 				return true;
-			}
-			else {
+			} else {
 				$search_container.removeClass('js-is-active');
 			}
-		}
-		else {
+		} else {
 			$search_container.addClass('js-is-active');
 			$search_input.focus();
 		}

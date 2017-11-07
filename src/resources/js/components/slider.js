@@ -19,8 +19,7 @@ export default function () {
 
 		if (flkty.selectedIndex == 0) {
 			$previousButton.addClass('disabled');
-		}
-		else {
+		} else {
 			$previousButton.removeClass('disabled');
 		}
 	})

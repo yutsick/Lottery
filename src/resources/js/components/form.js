@@ -137,8 +137,7 @@ export default function () {
 
 			if (input_value) {
 				$input_container.addClass('js-has-content');
-			}
-			else {
+			} else {
 				$input_container.removeClass('js-has-content');
 			}
 		});
@@ -152,8 +151,7 @@ export default function () {
 			if ($password_button.hasClass('js-is-active')) {
 				$password_input.attr('type', 'password');
 				$password_button.removeClass('js-is-active');
-			}
-			else {
+			} else {
 				$password_input.attr('type', 'text');
 				$password_button.addClass('js-is-active');
 			}
@@ -170,8 +168,7 @@ export default function () {
 
 			if (input_value) {
 				$input_container.addClass('js-has-content');
-			}
-			else {
+			} else {
 				$input_container.removeClass('js-has-content');
 			}
 		});
@@ -184,8 +181,7 @@ export default function () {
 			if (input_value) {
 				$input_containers.removeClass('js-has-content');
 				$input_container.addClass('js-has-content');
-			}
-			else {
+			} else {
 				$input_containers.removeClass('js-has-content');
 			}
 		});
