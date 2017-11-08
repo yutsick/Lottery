@@ -4,3 +4,40 @@ ol.index {
 		margin-bottom: 5px;
 	}
 }
+
+.list-group {
+	.list-group-item {
+		border-color: $color-gray-border;
+
+		header {
+			font-weight: 800;
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		&:nth-of-type(odd), &.active:nth-of-type(odd), &:active:nth-of-type(odd) {
+			background-color: $color-dark-white;
+		}
+
+		&.active, &:active {
+			color: $color-base-primary;
+			background-color: initial;
+			border-color: $color-gray-border;
+
+			&:hover, &:focus {
+				background-color: initial;
+				border-color: $color-gray-border;
+
+				&:nth-of-type(odd) {
+					background-color: $color-dark-white;
+				}
+			}
+
+			header {
+				color: $color-blue;
+			}
+		}
+	}
+}

@@ -104,17 +104,17 @@
 			</div>
 
 			<div class="row">
-				<div class="nav flex-column nav-pills col-xs-4" id="account-selector-tab" role="tablist"
+				<ul class="nav list-group col-xs-4" id="account-selector-tab" role="tablist"
 					 aria-orientation="vertical">
-					<a data-toggle="tab" href="#account-wallet" role="tab">
-						<h4>Spelplånbok</h4>
+					<li class="list-group-item" data-toggle="tab" href="#account-wallet" role="tab">
+						<header>Spelplånbok</header>
 						<p>Se över och ändra dina uppgifter</p>
-					</a>
-					<a data-toggle="tab" href="#account-prizes" role="tab">
-						<h4>Vinstkonto</h4>
+					</li>
+					<li class="list-group-item" data-toggle="tab" href="#account-prizes" role="tab">
+						<header>Vinstkonto</header>
 						<p>Håll koll på ditt spelande</p>
-					</a>
-				</div>
+					</li>
+				</ul>
 
 				<div class="tab-content col-xs-8">
 					<div class="tab-pane active" id="account-wallet" role="tabpanel">
@@ -153,7 +153,7 @@
 					</div>
 					<div class="tab-pane" id="account-prizes" role="tabpanel">
 						<p class="table-title">Vinstkonto</p>
-						<label>Filtera:
+						<label>Visa: DROPDOWN HÄR
 						</label>
 						<table class="responsive-table">
 							<thead>
