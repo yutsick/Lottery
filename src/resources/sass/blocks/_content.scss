@@ -154,7 +154,7 @@ h4, h5, h6 {
 		margin-bottom: 20px;
 	}
 
-	a {
+	a:not(.btn) {
 		position: relative;
 		overflow: visible;
 
