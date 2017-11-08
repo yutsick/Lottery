@@ -13,7 +13,15 @@ h4, h5, h6 {
 	@include min-screen($screen-sm-min) {
 		margin-bottom: 40px;
 	}
+
+	&__btns {
+		display: inline-block;
+		vertical-align: top;
+		padding-top: $padding-small;
+		padding-bottom: $padding-small;
+	}
 }
+
 .awallet{
 	color: $color-ocean;
 }
@@ -204,12 +212,5 @@ h4, h5, h6 {
 	iframe {
 		margin-bottom: $margin-medium;
 		max-width: 100%;
-	}
-
-	.block-content__btns {
-		display: inline-block;
-		vertical-align: top;
-		padding-top: $padding-small;
-		padding-bottom: $padding-small;
 	}
 }
