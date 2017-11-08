@@ -61,6 +61,7 @@
 			&:before {
 				content: attr(data-header);
 				display: block;
+				font-weight: $bold;
 			}
 		}
 	}
