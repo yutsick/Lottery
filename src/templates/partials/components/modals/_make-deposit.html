@@ -1,0 +1,35 @@
+<div class="modal fade" id="modal-make-deposit" tabindex="-1" role="dialog" aria-labelledby="modal-make-deposit-label"
+	 aria-hidden="true">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+			@@include('elements/_button-close.html')
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal-make-deposit-label">Sätt in pengar att spela för</h5>
+				</div>
+				<div class="modal-body">
+					<p class="text-align-center">Minsta belopp är 100kr. Ange ditt belopp nedan.</p>
+					<form id="make-deposit-modal" class="make-deposit" data-toggle="validator"
+						  action="/" method="get">
+						<div class="form-group">
+							<div class="inner-addon right-addon">
+								<i class="icon icon-close js-action-empty-input"></i>
+								<input type="number" class="form-control" id="depositValue" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Betala med kort</button>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Betala med Swish</button>
+						</div>
+						<div class="make-deposit__error">
+							<p class="text-align-center">
+							</p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
