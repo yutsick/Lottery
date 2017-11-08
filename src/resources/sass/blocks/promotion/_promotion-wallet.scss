@@ -155,12 +155,15 @@
 	align-items: center;
 
 	&__item {
-		width: 265px;
 		margin-bottom: 0;
 		color: $color-head-orange;
 
 		&[data-account="Vinstkonto"] {
 			color: $color-pink;
+		}
+
+		@media screen and (min-width: $screen-xs) {
+			width: 265px;
 		}
 
 		@media screen and (min-width: $screen-md) {
