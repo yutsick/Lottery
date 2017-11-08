@@ -1,6 +1,15 @@
 .block-promotion--wallet {
+	display: flex;
+	flex-direction:column;
+
 	@media screen and (max-width: $screen-sm) {
 		margin-bottom: $margin-default;
+	}
+
+	> a {
+		display: flex;
+		flex-direction:column;
+		flex: 1 1 auto;
 	}
 
 	.block-promotion__header {
