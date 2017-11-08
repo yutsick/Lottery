@@ -15,10 +15,8 @@
 	})
 
 	<div class="container">
-		<section class="block block-content">
-			<div class="block-content__content">
-				<h2>Spelkonto</h2>
-			</div>
+		<section class="section block block-content">
+			<h1 class="section__header">Spelkonto</h1>
 
 			<div class="row equal-height">
 				@@include('blocks/promotion/block/_promotion-wallet-toggle.html', {
@@ -100,10 +98,8 @@
 
 
 	<div class="container">
-		<section class="block block-content">
-			<div class="block-content__content">
-				<h3>Kontohistorik</h3>
-			</div>
+		<section class="section block block-content">
+			<h2 class="section__heading h3">Kontohistorik</h2>
 
 			<div class="row">
 				<div class="col-xs-12 col-md-4">
@@ -159,9 +155,9 @@
 						</div>
 					</div>
 					<div class="tab-pane" id="account-prizes" role="tabpanel">
-						<p class="table-title">Vinstkonto</p>
 						<label>Visa: DROPDOWN HÄR
 						</label>
+						<p class="table-title">Vinstkonto</p>
 						<table class="responsive-table">
 							<thead>
 							<tr>
@@ -204,23 +200,45 @@
 	</div>
 
 	<div class="container">
-		<section class="block block-content">
-			<div class="block-content__content">
-				<h3>Vinstbeställningar</h3>
-				Du har obeställda varor i varukorgen
+		<section class="section block block-content">
+			<div class="section__heading">
+				<h2 class="h3">Vinstbeställningar</h2>
+				<p class="notification-title">
+					@@include('elements/_notification.html', {
+					"class": "notification--large notification--lighter",
+					"number": "!"
+					})
+					Du har obeställda varor i varukorgen
+				</p>
+				<div class="block-content__btns hidden-xs">
+					<a class="btn btn-primary" href="/" title="">Beställ varor</a>
+					<a class="btn btn-link" href="/" title="">Fortsätt handla</a>
+				</div>
+			</div>
+			@@include('blocks/_product-list-full.html', {
+			"class": " container--no-space"
+			})
+
+			<div class="row visible-xs text-center">
+				<div class="col-xs-6">
+					<a class="btn btn-primary btn-block" href="/" title="">Beställ varor</a>
+				</div>
+				<div class="col-xs-6">
+					<a class="btn btn-link btn-block" href="/" title="">Fortsätt handla</a>
+				</div>
 			</div>
 		</section>
 	</div>
-	@@include('blocks/_product-list-full.html')
 
 	<div class="container">
-		<section class="block block-content">
-			<div class="block-content__content">
-				<h3>Mina beställda varor</h3>
-			</div>
+		<section class="section block block-content">
+			<h2 class="section__heading h3">Mina beställda varor</h2>
+
+			@@include('blocks/_product-list-full.html', {
+			"class": " container--no-space"
+			})
 		</section>
 	</div>
-	@@include('blocks/_product-list-full.html')
 
 </div>
 

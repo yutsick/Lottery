@@ -1,3 +1,27 @@
+.notification-title {
+	display: inline-block;
+	position: relative;
+	padding-left: ($padding-default * 2);
+
+	&:not(:last-child) {
+		margin-right: $margin-default;
+	}
+
+	@include min-screen($screen-sm-min) {
+		font-size: 30px;
+		line-height: 36px;
+		font-family: $base-heading-family;
+		font-weight: $light;
+	}
+
+	.notification {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+}
+
 .notification {
 	border-radius: 100%;
 	background-color: $color-red;
@@ -5,9 +29,21 @@
 	width: 18px;
 	height: 18px;
 	display: inline-block;
+	vertical-align: middle;
 	line-height: 1.7;
 	text-align: center;
 	font-weight: 600;
 	font-size: 11px;
 	font-style: normal;
+
+	&--large {
+		font-size: 1rem;
+		width: 2rem;
+		height: 2rem;
+		line-height: 2rem;
+	}
+
+	&--lighter {
+		background-color: $color-head-orange;
+	}
 }

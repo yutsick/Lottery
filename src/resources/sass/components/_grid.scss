@@ -30,3 +30,11 @@
 		padding-left: 0;
 	}
 }
+
+.col-xs-6 {
+	@include max-screen($screen-sm) {
+		&:nth-child(2n+1) {
+			clear: left;
+		}
+	}
+}
