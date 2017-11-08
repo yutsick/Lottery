@@ -1,74 +1,74 @@
 <div class="col-xs-12 col-sm-6">
-<div class="block-promotion block-promotion--wallet block-promotion--wallet--toggle ">
-	<div class="block-promotion__header no-flex
-	@@if(context.background === 'color'){ block--background-color background-color-@@background_color}">
-		@@if(context.content_title){
-		<h4 class="block-promotion__header-title visible-sm visible-md visible-lg">@@content_title </h4>
-		}
-
-		@@if(context.content_image) {
-		<img class="block-promotion__header-img block-promotion__header-img--right" src="@@content_image">
-		}
-
-		<div class="block-promotion-minified">
+	<div class="block-promotion block-promotion--wallet block-promotion--wallet--toggle">
+		<div class="block-promotion__header no-flex
+		@@if(context.background === 'color'){ block--background-color background-color-@@background_color}">
 			@@if(context.content_title){
-			<div class="block-promotion-minified--text">@@content_title</div>
+			<h4 class="block-promotion__header-title visible-sm visible-md visible-lg">@@content_title </h4>
 			}
-			@@if(context.content_pris){
-			<div class="block-promotion-minified--price">@@content_pris</div>
+
+			@@if(context.content_image) {
+			<img class="block-promotion__header-img block-promotion__header-img--right" src="@@content_image">
 			}
-			<div class="block-promotion-minified--btn">
-				<button class="block-promotion-minified__btn js-toggle-content" data-content="@@id">
-					<img src="assets/img/icons/arrow-down.svg" alt="Pilikon för att visa innehåll">
-					<span class="sr-only">Visa innehåll</span>
-				</button>
+
+			<div class="block-promotion-minified">
+				@@if(context.content_title){
+				<div class="block-promotion-minified--text">@@content_title</div>
+				}
+				@@if(context.content_pris){
+				<div class="block-promotion-minified--price">@@content_pris</div>
+				}
+				<div class="block-promotion-minified--btn">
+					<button class="block-promotion-minified__btn js-toggle-content" data-content="@@id">
+						<img src="assets/img/icons/arrow-down.svg" alt="Pilikon för att visa innehåll">
+						<span class="sr-only">Visa innehåll</span>
+					</button>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="block-promotion__content" id="@@id">
-		@@if(context.content_text){
-		<p class="block-promotion__text">@@content_text</p>
-		}
-
-		<ul class="wallet-money">
-			@@if(context.id == "wallet"){
-				@@loop('blocks/wallet-list/_wallet-item.html', [
-					{
-						"label": "Kontanter",
-						"value": "250kr"
-					},
-					{
-						"label": "Bonus",
-						"value": "250kr"
-					},
-					{
-						"label": "Totalt",
-						"value": "500kr"
-					}
-				])
+		<div class="block-promotion__content" id="@@id">
+			@@if(context.content_text){
+			<p class="block-promotion__text">@@content_text</p>
 			}
 
-			@@if (context.id == "account") {
-				@@loop('blocks/wallet-list/_wallet-item.html', [
-					{
-						"label": "Kontanter",
-						"value": "250kr"
-					}
-				])
-			}
-		</ul>
+			<ul class="wallet-money">
+				@@if(context.id == "wallet"){
+					@@loop('blocks/wallet-list/_wallet-item.html', [
+						{
+							"label": "Kontanter",
+							"value": "250kr"
+						},
+						{
+							"label": "Bonus",
+							"value": "250kr"
+						},
+						{
+							"label": "Totalt",
+							"value": "500kr"
+						}
+					])
+				}
 
-		@@if(context.primary_button_text) || (context.secondary_button_text) {
-		<div class="block-promotion__action-btns">
-			@@if(context.primary_button_text) {
-			<a class="block-promotion__action-btn btn btn-primary" href="/" >@@primary_button_text</a>
-			}
-			@@if(context.secondary_button_text) {
-			<a class="block-promotion__action-btn btn btn-primary" href="/" >@@secondary_button_text</a>
+				@@if (context.id == "account") {
+					@@loop('blocks/wallet-list/_wallet-item.html', [
+						{
+							"label": "Kontanter",
+							"value": "250kr"
+						}
+					])
+				}
+			</ul>
+
+			@@if(context.primary_button_text) || (context.secondary_button_text) {
+			<div class="block-promotion__action-btns@@if(context.id == "wallet") { hidden-xs}">
+				@@if(context.primary_button_text) {
+				<a class="block-promotion__action-btn btn btn-primary" href="/" >@@primary_button_text</a>
+				}
+				@@if(context.secondary_button_text) {
+				<a class="block-promotion__action-btn btn btn-primary" href="/" >@@secondary_button_text</a>
+				}
+			</div>
 			}
 		</div>
-		}
 	</div>
-</div>
 </div>
