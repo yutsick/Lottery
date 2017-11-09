@@ -6,6 +6,17 @@
 		margin-bottom: $margin-default;
 	}
 
+	/* Toggle block */
+	&-toggle {
+		@media screen and (min-width: $screen-sm) {
+			margin-bottom: $margin-default;
+		}
+
+		.block-promotion__content {
+			padding-top: $padding-default;
+		}
+	}
+
 	> a {
 		display: flex;
 		flex-direction:column;
@@ -157,13 +168,6 @@
 
 		@media screen and (max-width: $screen-sm) {
 			text-align: center;
-		}
-	}
-
-	/* Toggle block */
-	&--toggle {
-		.block-promotion__content {
-			padding-top: $padding-default;
 		}
 	}
 }
