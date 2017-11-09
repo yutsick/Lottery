@@ -8,11 +8,12 @@
 <div class="content-wrapper ml-2017">
 	<div class="container">
 		<div class="block block-hero block-hero--mini">
-			<h1 class="block-hero__page-title">Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och
-				jackpottar!</h1>
+			<h1 class="block-hero__page-title">
+				Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!
+			</h1>
 			<h2 class="block-hero__title">Mina uppgifter</h2>
 			<p>Vissa av dina uppgifter nedan går inte att ändra eftersom de läses in automatiskt från
-				folkbokföringsregistret.</p>
+			   folkbokföringsregistret.</p>
 		</div>
 
 		<div class="profile">
@@ -49,14 +50,29 @@
 
 					<div class="profile__input">
 						<div class="profile__multiple-input">
+							<label>Nuvarande lösenord</label>
+							<!-- Byt yt data-remote url till en giltig URL. -->
+							<input type="password"
+								   id="currentPassword"
+								   data-required-error="Du måste fylla i detta fält."
+								   data-remote-error="Befintliga lösenordet är inte giltigt"
+								   name="currentPassword"
+								   placeholder="*******"
+								   value=""
+								   required disabled
+								   data-remote="/path/to/remote/validator">
+						</div>
+
+						<div class="profile__multiple-input">
 							<label>Nytt lösenord</label>
 							<input type="password"
 								   id="password"
 								   data-required-error="Du måste fylla i detta fält."
 								   name="password"
-								   value="********"
+								   value=""
 								   required disabled>
 						</div>
+
 						<div class="profile__multiple-input">
 							<label>Bekräfta lösenord</label>
 							<input type="password"

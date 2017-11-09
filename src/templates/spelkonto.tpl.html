@@ -43,9 +43,11 @@
 				})
 
 				<div class="col-xs-12 visible-xs">
-					<div class="block-promotion__action-btns">
-						<a class="block-promotion__action-btn btn btn-primary" href="/">Sätt in pengar</a>
-						<a class="block-promotion__action-btn btn btn-primary" href="/">Ta ut pengar</a>
+					<div class="block-promotion__action-btns visible-xs">
+						<button id="make-deposit" type="button" class="block-promotion__action-btn btn btn-primary"
+								data-toggle="modal" data-target="#modal-make-deposit">Sätt in pengar</button>
+						<button id="make-withdrawal" type="button" class="block-promotion__action-btn btn btn-primary"
+								data-toggle="modal" data-target="#modal-make-withdrawal">Ta ut pengar</button>
 					</div>
 				</div>
 			</div>
@@ -59,22 +61,22 @@
 					</div>
 					<div class="col-xs-12 col-sm-12 col-md-6">
 						<div class="wallet-switch">
-							<p class="wallet-switch__item" data-account="Vinstkonto">
-								<span class="wallet-switch__label">Till:</span>
-								<span class="wallet-switch__account">Vinstkonto</span>
+							<p class="wallet-switch__item" data-account="Spelplånbok">
+								<span class="wallet-switch__label">Från:</span>
+								<span class="wallet-switch__account">Spelplånbok</span>
 								<span class="hidden-xs">(<span class="wallet-switch__balance"
-															   data-balance="100">100</span>kr)</span>
+															   data-balance="200">200</span>kr)</span>
 							</p>
 							<button class="wallet-switch__btn js-wallet-switch">
 								<img class="wallet-switch__icon" src="assets/img/icons/arrow-switch-white.svg"
 									 alt="Pilar för att växla mellan konto" width="19px" height="17px">
 								<span class="sr-only">Växla konto</span>
 							</button>
-							<p class="wallet-switch__item" data-account="Spelplånbok">
-								<span class="wallet-switch__label">Från:</span>
-								<span class="wallet-switch__account">Spelplånbok</span>
+							<p class="wallet-switch__item" data-account="Vinstkonto">
+								<span class="wallet-switch__label">Till:</span>
+								<span class="wallet-switch__account">Vinstkonto</span>
 								<span class="hidden-xs">(<span class="wallet-switch__balance"
-															   data-balance="200">200</span>kr)</span>
+															   data-balance="100">100</span>kr)</span>
 							</p>
 						</div>
 
@@ -94,10 +96,7 @@
 				</div>
 			</div>
 		</section>
-	</div>
 
-
-	<div class="container">
 		<section class="section block block-content">
 			<h2 class="section__heading h3">Kontohistorik</h2>
 
@@ -197,9 +196,7 @@
 				</div>
 			</div>
 		</section>
-	</div>
 
-	<div class="container">
 		<section class="section block block-content">
 			<div class="section__heading">
 				<h2 class="h3">Vinstbeställningar</h2>
@@ -228,9 +225,7 @@
 				</div>
 			</div>
 		</section>
-	</div>
 
-	<div class="container">
 		<section class="section block block-content">
 			<h2 class="section__heading h3">Mina beställda varor</h2>
 
@@ -239,7 +234,6 @@
 			})
 		</section>
 	</div>
-
 </div>
 
 @@include('layout/_footer.html', {"show_footer": false})

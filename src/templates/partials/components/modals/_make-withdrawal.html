@@ -1,0 +1,38 @@
+<div class="modal fade" id="modal-make-withdrawal" tabindex="-1" role="dialog" aria-labelledby="modal-make-withdrawal-label"
+	 aria-hidden="true">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+			@@include('elements/_button-close.html')
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal-make-withdrawal-label">Ange kontouppgifter</h5>
+				</div>
+				<div class="modal-body">
+					<p class="text-align-center">För att kunna göra ett uttag behöver vi dina kontouppgifter.</p>
+					<form id="make-withdrawal-modal" class="make-withdrawal" data-toggle="validator"
+						  action="/" method="get">
+						<div class="form-group">
+							<div class="inner-addon right-addon">
+								<i class="icon icon-close js-action-empty-input"></i>
+								<input type="number" class="form-control" id="clearingNr" placeholder="Clearingnummer" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="inner-addon right-addon">
+								<i class="icon icon-close js-action-empty-input"></i>
+								<input type="number" class="form-control" id="accountNr" placeholder="Kontonummer" required>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Registrera</button>
+						</div>
+						<div class="make-deposit__error">
+							<p class="text-align-center">
+							</p>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

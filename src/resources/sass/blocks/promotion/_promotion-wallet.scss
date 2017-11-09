@@ -22,7 +22,7 @@
 
 		&-title {
 			margin: 0 $margin-default;
-			color: $color-black;
+			color: $color-base-primary;
 			line-height: 80px;
 		}
 	}
@@ -179,9 +179,10 @@
 	align-items: center;
 
 	&__item {
+		width: 265px;
 		margin-bottom: 0;
 		color: $color-head-orange;
-		width: 265px;
+		font-weight: $bold;
 
 		&[data-account="Vinstkonto"] {
 			color: $color-pink;
@@ -200,6 +201,7 @@
 
 		@media screen and (min-width: $screen-md) {
 			display: inline-block;
+			font-size: 12px;
 		}
 	}
 
@@ -240,6 +242,10 @@
 	flex-wrap: wrap;
 	align-items: center;
 
+	@media screen and (min-width: $screen-sm) {
+		flex-wrap: nowrap;
+	}
+
 	&:not(:first-child) {
 		margin-top: $margin-default;
 	}
@@ -248,30 +254,42 @@
 		width: 100%;
 
 		@media screen and (min-width: $screen-sm) {
-			flex: 1;
-			margin-right: $margin-small;
+			width: 265px;
+			margin-right: $margin-medium;
 			margin-bottom: 0;
-			max-width: 265px;
+		}
+
+		> input {
+			font-weight: $bold;
 		}
 	}
 
 	&__btn {
-		margin-right: $margin-default;
+		margin-right: $margin-medium;
 		padding: $padding-small;
 		border: 0;
 		border-radius: .3em;
 		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
 		color: $color-white;
-		font-weight: $bold;
+		font-weight: $extrabold;
 
 		&:hover,
 		&:focus {
 			background-color: $color-gray;
 		}
+
+		@media screen and (min-width: $screen-sm) {
+			flex: 1 1 auto;
+		}
 	}
 
 	&__submit {
 		margin-left: auto;
+		font-size: $base-font-size;
+
+		@media screen and (min-width: $screen-sm) {
+			flex: 1 1 auto;
+		}
 	}
 }
