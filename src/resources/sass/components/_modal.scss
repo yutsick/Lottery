@@ -60,7 +60,6 @@
 	font-size: 12px;
 }
 
-
 .modal-title1 {
 	color: $color-base-secondary;
 	padding: 20px;
@@ -69,8 +68,6 @@
 	font-size: 24px;
 	line-height: 18px;
 }
-
-
 
 .modal-content {
 	box-shadow: none;
@@ -104,8 +101,6 @@
 	}
 }
 
-
-
 .modal-footer {
 	padding-top: 0;
 	border: none;
@@ -130,10 +125,32 @@
 			&:first-of-type {
 				margin-top: 0;
 
-				&:before{
+				&:before {
 					content: none;
 				}
 			}
 		}
 	}
+}
+
+.modal-page {
+	display: none;
+
+	.modal-header {
+		display: flex;
+		align-items: center;
+		justify-content: center
+	}
+
+	.modal-page__back-button {
+		position: absolute;
+		left: 20px;
+		padding: 0;
+		color: #8da7ba;
+		i { font-size: 16px; }
+	}
+}
+
+.modal-page--active {
+	display: block;
 }

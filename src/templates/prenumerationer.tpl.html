@@ -34,7 +34,12 @@
 						<div class="data-list__cell data-list__cell--actions">
 							<div class="data-list__sub-actions">
 								<button class="btn btn-link">Byt leveranssätt</button>
-								<button class="btn btn-link">Ändra betalsätt</button>
+								<button class="btn btn-link"
+										data-toggle="modal"
+										data-target="#modal-payment-method"
+										data-subscription-id="2">
+									Ändra betalsätt
+								</button>
 								<button class="btn btn-link">Uppsägning</button>
 							</div>
 
@@ -47,9 +52,15 @@
 						<div class="data-list__cell">40kr</div>
 						<div class="data-list__cell">Fysisk</div>
 						<div class="data-list__cell data-list__cell--actions">
+
 							<div class="data-list__sub-actions">
 								<button class="btn btn-link">Byt leveranssätt</button>
-								<button class="btn btn-link">Ändra betalsätt</button>
+								<button class="btn btn-link"
+										data-toggle="modal"
+										data-target="#modal-payment-method"
+										data-subscription-id="2">
+									Ändra betalsätt
+								</button>
 								<button class="btn btn-link">Uppsägning</button>
 							</div>
 
@@ -59,11 +70,9 @@
 				</ul>
 			</div>
 
+			<a href="/" class="btn btn-primary">Starta ny prenumeration</a>
 		</section>
-
 	</div>
-
-
 </div>
 
 @@include('layout/_footer.html', {"show_footer": false})

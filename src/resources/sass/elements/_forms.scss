@@ -84,6 +84,10 @@ label {
 	padding: 12px 12px;
 }
 
+select.form-control {
+	border-radius: 40px;
+}
+
 .has-error .control-label {
 	color: $color-base-complement;
 }
