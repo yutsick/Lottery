@@ -1,5 +1,11 @@
 input {
-	// -webkit-appearance: none;
+	//-webkit-appearance: none;
+}
+
+/* Reset appearance for text and number fields */
+input[type="text"],
+input[type="number"]{
+	-webkit-appearance: none;
 }
 
 // Hide number toggle button

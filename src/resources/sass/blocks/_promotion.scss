@@ -50,7 +50,7 @@
 		margin-right: auto;
 		top: 15px;
 
-		@media screen and (max-width: 767px) {
+		@media screen and (max-width: $screen-sm) {
 			display: none;
 		}
 

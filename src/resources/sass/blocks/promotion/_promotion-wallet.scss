@@ -36,6 +36,10 @@
 			margin: 0 $margin-default;
 			color: $color-base-primary;
 			line-height: 80px;
+
+			@media screen and (max-width: $screen-sm) {
+				display: none;
+			}
 		}
 	}
 
@@ -66,6 +70,9 @@
 		border: 0;
 		background: none;
 
+		&:focus {
+			outline: 0;
+		}
 
 		&.js-is-active {
 			transform: rotate(-180deg);
@@ -118,19 +125,24 @@
 
 	.block-promotion__action-btns {
 		margin-top: $margin-default;
+	}
+}
 
-		@media screen and (max-width: $screen-sm) {
-			text-align: center;
-		}
+.block-promotion__action-btns {
+	@media screen and (max-width: $screen-sm) {
+		text-align: center;
 	}
 }
 
 .block-promotion__action-btn {
 	&:not(:last-child) {
 		margin-right: $margin-medium;
+
+		@media screen and (max-width: $screen-sm) {
+			margin-right: 0;
+		}
 	}
 }
-
 
 /* Wallet money list */
 .wallet-money {
@@ -199,11 +211,11 @@
 
 .wallet-switch {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 
 	&__item {
-		width: 265px;
+		width: 40%;
 		margin-bottom: 0;
 		color: $color-head-orange;
 		font-weight: $bold;
@@ -230,12 +242,12 @@
 	}
 
 	&__btn {
-		flex: 0 0 auto;
+		flex: none;
 		width: 40px;
 		height: 40px;
+		border: 0;
 		margin-right: ($margin-default * 2);
 		margin-left: ($margin-default * 2);
-		border: 0;
 		border-radius: 50%;
 		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
@@ -249,9 +261,9 @@
 			outline: 0;
 		}
 
-		@media screen and (min-width: $screen-sm) {
-			margin-right: $margin-default;
-			margin-left: $margin-default;
+		@media screen and (min-width: $screen-md) {
+			margin-right: $margin-medium;
+			margin-left: $margin-medium;
 		}
 	}
 }
@@ -259,10 +271,11 @@
 .wallet-transfer {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-start;
 
-	@media screen and (min-width: $screen-sm) {
+	@media screen and (min-width: $screen-md) {
 		flex-wrap: nowrap;
+		justify-content: space-between;
 	}
 
 	&:not(:first-child) {
@@ -272,19 +285,20 @@
 	&__form-wrapper  {
 		width: 100%;
 
-		@media screen and (min-width: $screen-sm) {
-			width: 265px;
-			margin-right: $margin-medium;
+		@media screen and (min-width: $screen-md) {
+			width: 40%;
 			margin-bottom: 0;
-		}
-
-		> input {
-			font-weight: $bold;
 		}
 	}
 
+	&__amount {
+		height: auto;
+		padding: 10px;
+		font-weight: $bold;
+	}
+
 	&__btn {
-		margin-right: $margin-medium;
+		margin-right: 15px;
 		padding: $padding-small;
 		border: 0;
 		border-radius: .3em;
@@ -298,8 +312,14 @@
 			background-color: $color-gray;
 		}
 
-		@media screen and (min-width: $screen-sm) {
-			flex: 1 1 auto;
+		@media screen and (min-width: $screen-md) {
+			flex: 1;
+			margin-right: 2%;
+
+			&:first-of-type {
+				margin-left: 2%;
+			}
+
 		}
 	}
 
@@ -307,8 +327,9 @@
 		margin-left: auto;
 		font-size: $base-font-size;
 
-		@media screen and (min-width: $screen-sm) {
-			flex: 1 1 auto;
+		@media screen and (min-width: $screen-md) {
+			flex: 2;
+			margin-left: 0;
 		}
 	}
 }
