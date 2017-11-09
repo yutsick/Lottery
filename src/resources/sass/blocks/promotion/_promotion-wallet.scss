@@ -12,7 +12,8 @@
 			margin-bottom: $margin-default;
 		}
 
-		.block-promotion__content {
+		/* Add extra class for specificity */
+		&.block-promotion--wallet .block-promotion__content {
 			padding-top: $padding-default;
 		}
 	}
@@ -108,59 +109,11 @@
 	}
 
 	.block-promotion__text {
+		max-width: $block-text-width;
 		margin-top: 0;
 		font-size: $base-font-size;
 		font-family: $basic-heading-family;
 		font-weight: $bold;
-		max-width: 450px;
-	}
-
-	.wallet-money {
-		margin: $margin-default 0 0;
-		padding: $padding-small 0 0;
-		list-style: none;
-		font-family: $basic-heading-family;
-		font-size: $base-font-size;
-		font-weight: $bold;
-
-		@media screen and (min-width: $screen-sm) {
-			margin-top: auto;
-		}
-
-		hr {
-			margin-top: 0;
-			margin-bottom: $margin-small;
-			border-top: 1px solid $color-feather;
-		}
-	}
-
-	.wallet__list-item {
-		display: flex;
-		justify-content: space-between;
-
-		&:not(:first-child) {
-			margin-top: $margin-small;
-			padding-top: $padding-small;
-			border-top: 1px solid $color-feather;
-		}
-
-		&:first-child:last-child {
-			@media screen and (min-width: $screen-sm) {
-				margin-top: $margin-small;
-				padding-top: $padding-small;
-				border-top: 1px solid $color-feather;
-			}
-		}
-	}
-
-	.wallet__item {
-		margin-top: 0;
-	}
-
-	.wallet-money__amount {
-		font-size: 18px;
-		font-family: $semi-heading-family;
-		font-weight: $extrabold;
 	}
 
 	.block-promotion__action-btns {
@@ -175,6 +128,72 @@
 .block-promotion__action-btn {
 	&:not(:last-child) {
 		margin-right: $margin-medium;
+	}
+}
+
+
+/* Wallet money list */
+.wallet-money {
+	margin: $margin-default 0 0;
+	padding: $padding-small 0 0;
+	list-style: none;
+	font-family: $basic-heading-family;
+	font-size: $base-font-size;
+	font-weight: $bold;
+
+	@media screen and (min-width: $screen-sm) {
+		margin-top: auto;
+	}
+
+	hr {
+		margin-top: 0;
+		margin-bottom: $margin-small;
+		border-top: 1px solid $color-feather;
+	}
+
+	&__amount {
+		font-size: 18px;
+		font-family: $semi-heading-family;
+		font-weight: $extrabold;
+	}
+}
+
+.wallet__list-item {
+	display: flex;
+	justify-content: space-between;
+
+	&:not(:first-child) {
+		margin-top: $margin-small;
+		padding-top: $padding-small;
+		border-top: 1px solid $color-feather;
+	}
+
+	&:first-child:last-child {
+		@media screen and (min-width: $screen-sm) {
+			margin-top: $margin-small;
+			padding-top: $padding-small;
+			border-top: 1px solid $color-feather;
+		}
+	}
+
+	.wallet__item {
+		margin-top: 0;
+	}
+}
+
+
+/* Wallet transfer block */
+.block-wallet-transfer {
+	&__title:first-child {
+		margin-top: 0;
+	}
+
+	&__text {
+		max-width: $block-text-width;
+		margin-top: 0;
+		font-family: $basic-heading-family;
+		font-weight: $bold;
+		color: $color-blueberry;
 	}
 }
 
@@ -235,11 +254,6 @@
 			margin-left: $margin-default;
 		}
 	}
-}
-
-.js-animation--rotate {
-	transition: transform $duration-fast $ease-standard;
-	transform: rotate(180deg);
 }
 
 .wallet-transfer {
