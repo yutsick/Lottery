@@ -258,7 +258,7 @@
 .wallet-transfer {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-start;
 
 	@media screen and (min-width: $screen-md) {
 		flex-wrap: nowrap;
@@ -276,10 +276,12 @@
 			width: 40%;
 			margin-bottom: 0;
 		}
+	}
 
-		> input {
-			font-weight: $bold;
-		}
+	&__amount {
+		height: auto;
+		padding: 10px;
+		font-weight: $bold;
 	}
 
 	&__btn {
