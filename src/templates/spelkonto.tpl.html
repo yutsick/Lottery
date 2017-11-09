@@ -6,18 +6,16 @@
 @@include('layout/_sidebar.html', {"logged_in": true})
 
 <div class="content-wrapper ml-2017">
-
-	@@include('blocks/_hero.html', {
-	"hero_type": "mini",
-	"hero_content": true,
-	"h1": true,
-	"h2": false
-	})
-
 	<div class="container">
-		<section class="section block block-content">
-			<h1 class="section__header">Spelkonto</h1>
 
+		<div class="block block-hero block-hero--mini">
+			<h1 class="block-hero__page-title">
+				Spela Bingo och skrapa lotter hos Miljonlotteriet
+			</h1>
+			<h2 class="h1 no-spacing">Spelkonto</h2>
+		</div>
+
+		<section class="section block block-content">
 			<div class="row equal-height">
 				@@include('blocks/promotion/block/_promotion-wallet-toggle.html', {
 				"id": "wallet",
