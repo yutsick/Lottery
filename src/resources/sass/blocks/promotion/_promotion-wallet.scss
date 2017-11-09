@@ -237,7 +237,7 @@
 		margin-left: ($margin-default * 2);
 		border: 0;
 		border-radius: 50%;
-		background-color: $color-gray;
+		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
 
 		&:hover,
@@ -291,7 +291,7 @@
 		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
 		color: $color-white;
-		font-weight: $extrabold;
+		font-weight: $bold;
 
 		&:hover,
 		&:focus {
