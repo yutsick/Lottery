@@ -199,11 +199,11 @@
 
 .wallet-switch {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
 
 	&__item {
-		width: 265px;
+		width: 40%;
 		margin-bottom: 0;
 		color: $color-head-orange;
 		font-weight: $bold;
@@ -230,12 +230,11 @@
 	}
 
 	&__btn {
-		flex: 0 0 auto;
 		width: 40px;
 		height: 40px;
+		border: 0;
 		margin-right: ($margin-default * 2);
 		margin-left: ($margin-default * 2);
-		border: 0;
 		border-radius: 50%;
 		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
@@ -249,9 +248,9 @@
 			outline: 0;
 		}
 
-		@media screen and (min-width: $screen-sm) {
-			margin-right: $margin-default;
-			margin-left: $margin-default;
+		@media screen and (min-width: $screen-md) {
+			margin-right: $margin-medium;
+			margin-left: $margin-medium;
 		}
 	}
 }
@@ -261,8 +260,9 @@
 	flex-wrap: wrap;
 	align-items: center;
 
-	@media screen and (min-width: $screen-sm) {
+	@media screen and (min-width: $screen-md) {
 		flex-wrap: nowrap;
+		justify-content: space-between;
 	}
 
 	&:not(:first-child) {
@@ -272,9 +272,8 @@
 	&__form-wrapper  {
 		width: 100%;
 
-		@media screen and (min-width: $screen-sm) {
-			width: 265px;
-			margin-right: $margin-medium;
+		@media screen and (min-width: $screen-md) {
+			width: 40%;
 			margin-bottom: 0;
 		}
 
@@ -284,7 +283,7 @@
 	}
 
 	&__btn {
-		margin-right: $margin-medium;
+		margin-right: 15px;
 		padding: $padding-small;
 		border: 0;
 		border-radius: .3em;
@@ -298,8 +297,14 @@
 			background-color: $color-gray;
 		}
 
-		@media screen and (min-width: $screen-sm) {
-			flex: 1 1 auto;
+		@media screen and (min-width: $screen-md) {
+			flex: 1;
+			margin-right: 2%;
+
+			&:first-of-type {
+				margin-left: 2%;
+			}
+
 		}
 	}
 
@@ -307,8 +312,9 @@
 		margin-left: auto;
 		font-size: $base-font-size;
 
-		@media screen and (min-width: $screen-sm) {
-			flex: 1 1 auto;
+		@media screen and (min-width: $screen-md) {
+			flex: 2;
+			margin-left: 0;
 		}
 	}
 }
