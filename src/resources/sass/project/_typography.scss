@@ -17,6 +17,7 @@ h2,
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: 300;
+	word-break: break-word;
 
 	@include min-screen($screen-sm-min) {
 		font-size: 36px;
