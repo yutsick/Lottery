@@ -8,3 +8,9 @@
 		opacity:1;
 	}
 }
+
+/* Rotate animation */
+.js-animation--rotate {
+	transition: transform $duration-fast $ease-standard;
+	transform: rotate(180deg);
+}

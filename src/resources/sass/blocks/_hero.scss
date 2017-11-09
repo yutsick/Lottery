@@ -33,6 +33,11 @@
 	&.flex-bottom {
 		align-items: flex-end;
 	}
+
+	.no-spacing {
+		margin: 0;
+		transition: font-size $duration-quick $ease-in-out;
+	}
 }
 
 .block-hero__page-title {
