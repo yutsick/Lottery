@@ -36,6 +36,10 @@
 			margin: 0 $margin-default;
 			color: $color-base-primary;
 			line-height: 80px;
+
+			@media screen and (max-width: $screen-sm) {
+				display: none;
+			}
 		}
 	}
 
@@ -66,6 +70,9 @@
 		border: 0;
 		background: none;
 
+		&:focus {
+			outline: 0;
+		}
 
 		&.js-is-active {
 			transform: rotate(-180deg);
@@ -128,9 +135,12 @@
 .block-promotion__action-btn {
 	&:not(:last-child) {
 		margin-right: $margin-medium;
+
+		@media screen and (max-width: $screen-sm) {
+			margin-right: 0;
+		}
 	}
 }
-
 
 /* Wallet money list */
 .wallet-money {
@@ -230,6 +240,7 @@
 	}
 
 	&__btn {
+		flex: none;
 		width: 40px;
 		height: 40px;
 		border: 0;

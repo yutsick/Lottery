@@ -27,7 +27,7 @@
 
 
 /* Narrow screens */
-@include max-screen($screen-sm) {
+@include max-screen($screen-xs-max) {
 	.responsive-table {
 		&,
 		thead,
