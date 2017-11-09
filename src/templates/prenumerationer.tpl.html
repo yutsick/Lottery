@@ -15,10 +15,8 @@
 	})
 
 	<div class="container">
-		<section class="block block-content">
-			<div class="block-content__content">
-				<h2>Prenumerationer</h2>
-			</div>
+		<section class="section block block-content">
+			<h2 class=" h3">Prenumerationer</h2>
 
 			<div class="data-list">
 				<div class="data-list__header">
@@ -33,14 +31,14 @@
 						<div class="data-list__cell">Digital</div>
 						<div class="data-list__cell data-list__cell--actions">
 							<div class="data-list__sub-actions">
-								<button class="btn btn-link">Byt leveranssätt</button>
+								<a href="/" class="btn btn-link">Byt leveranssätt</a>
 								<button class="btn btn-link"
 										data-toggle="modal"
 										data-target="#modal-payment-method"
 										data-subscription-id="2">
 									Ändra betalsätt
 								</button>
-								<button class="btn btn-link">Uppsägning</button>
+								<a href="/" class="btn btn-link">Uppsägning</a>
 							</div>
 
 							<button class="btn btn-link js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
@@ -54,14 +52,14 @@
 						<div class="data-list__cell data-list__cell--actions">
 
 							<div class="data-list__sub-actions">
-								<button class="btn btn-link">Byt leveranssätt</button>
+								<a href="/" class="btn btn-link">Byt leveranssätt</a>
 								<button class="btn btn-link"
 										data-toggle="modal"
 										data-target="#modal-payment-method"
 										data-subscription-id="2">
 									Ändra betalsätt
 								</button>
-								<button class="btn btn-link">Uppsägning</button>
+								<a href="/" class="btn btn-link">Uppsägning</a>
 							</div>
 
 							<button class="btn btn-link js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
@@ -72,6 +70,29 @@
 
 			<a href="/" class="btn btn-primary">Starta ny prenumeration</a>
 		</section>
+
+		<section class="section block block-content">
+			<h2>Dina fakturor</h2>
+
+			<div class="invoice">
+				<div class="invoice__header">
+					<span class="invoice__icon invoice__icon--warning">!</span>
+					<div class="invoice__status">
+						<h3>Obetald faktura</h3>
+						<p>Du har en obetald faktura.</p>
+					</div>
+				</div>
+
+				<div class="invoice__values">
+					<div class="invoice__cell"><span>Förfallodatum: </span> 2017-06-24</div>
+					<div class="invoice__cell"><span>OCR: </span> 024242234-0240</div>
+					<div class="invoice__cell"><span>Bankgiro: </span> 589-68879</div>
+					<div class="invoice__cell"><span>Summa: </span> 250 kr</div>
+				</div>
+			</div>
+
+		</section>
+
 	</div>
 </div>
 

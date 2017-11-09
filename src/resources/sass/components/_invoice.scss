@@ -1,0 +1,68 @@
+.invoice {
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid $color-feather;
+	background-color: $color-dark-white;
+}
+
+.invoice__header {
+	border-bottom: 1px solid $color-feather;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.invoice__status {
+	h3 {
+		font-size: 14px;
+		line-height: 20px;
+		margin: 0;
+	}
+
+	p:last-of-type { margin-bottom: 0; }
+}
+
+.invoice__icon {
+	border-radius: 30px;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+	margin-right: 15px;
+}
+
+.invoice__icon--warning {
+	background-color: #f89471;
+}
+
+.invoice__values {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.invoice__cell {
+	font-weight: $bold;
+	color: $color-base-complement;
+	width: 50%;
+	margin-bottom: 10px;
+
+	@include min-screen($screen-sm-min) {
+		display: flex;
+		width: auto;
+		margin-bottom: 0;
+	}
+
+	span {
+		display: block;
+		color: $color-base-primary;
+
+		@include min-screen($screen-sm-min) {
+			color: $color-base-complement;
+			display: inline-block;
+			margin-right: 5px;
+		}
+	}
+}
