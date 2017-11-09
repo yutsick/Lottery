@@ -118,7 +118,7 @@
 				<div class="tab-content col-xs-12 col-md-8">
 					<div class="tab-pane active" id="account-wallet" role="tabpanel">
 						<p class="table-title">Kontohistorik</p>
-						<table class="responsive-table">
+						<table class="responsive-table" data-total-rows="10">
 							<thead>
 							<tr>
 								<th>Tidpunkt</th>
@@ -126,7 +126,7 @@
 								<th>Summa</th>
 							</tr>
 							</thead>
-							<tbody>
+							<tbody id="account-wallet-table-data">
 							<tr>
 								<td data-header="Tidpunkt">Idag 14:01</td>
 								<td data-header="Typ">Köp</td>
@@ -151,7 +151,7 @@
 						</table>
 
 						<div class="account-history-actions">
-							<a class="btn btn-primary" href="/" >Visa fler</a>
+							<a class="btn btn-primary" data-target="#account-wallet-table-data" href="/ajax/account-history/account-wallet.html" >Visa fler</a>
 						</div>
 					</div>
 					<div class="tab-pane" id="account-prizes" role="tabpanel">
