@@ -16,9 +16,16 @@ h4, h5, h6 {
 
 	&__btns {
 		display: inline-block;
-		vertical-align: top;
-		padding-top: $padding-small;
+		vertical-align: middle;
 		padding-bottom: $padding-small;
+	}
+
+	&__link {
+		font-weight: $extrabold;
+
+		&:not(:first-child) {
+			margin-left: $padding-medium;
+		}
 	}
 }
 

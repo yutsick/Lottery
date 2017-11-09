@@ -206,8 +206,8 @@
 					Du har obeställda varor i varukorgen
 				</p>
 				<div class="block-content__btns hidden-xs">
-					<a class="btn btn-primary" href="/" title="">Beställ varor</a>
-					<a class="btn btn-link" href="/" title="">Fortsätt handla</a>
+					<a class="block-content__btn btn btn-primary" href="/" title="">Beställ varor</a>
+					<a class="block-content__link" href="/" title="">Fortsätt handla</a>
 				</div>
 			</div>
 			@@include('blocks/_product-list-full.html', {
@@ -228,7 +228,8 @@
 			<h2 class="section__heading h3">Mina beställda varor</h2>
 
 			@@include('blocks/_product-list-full.html', {
-			"class": " container--no-space"
+			"class": " container--no-space",
+			"status": "ordered"
 			})
 		</section>
 	</div>
