@@ -7,12 +7,24 @@
 	background-color: #d6eeff;
 	font-size: 16px;
 	font-weight: $bold;
-	color: #000;
+	color: $color-base-primary;
 
 	@include min-screen($screen-sm) {
 		display: none;
 	}
 }
+
+.responsive-table {
+	td {
+		font-weight: $bold;
+		color: $color-blueberry;
+
+		&.highlight {
+			color: $color-green;
+		}
+	}
+}
+
 
 /* Narrow screens */
 @include max-screen($screen-sm) {
@@ -77,12 +89,14 @@
 
 		th:last-child,
 		td:last-child {
+			width: auto;
 			text-align: right;
 		}
 
+
 		thead {
 			th {
-				padding: $padding-medium;
+				padding: $padding-medium $padding-default;
 				border-top: 1px solid #a2c3ff;
 				border-bottom: 1px solid #a2c3ff;
 				background-color: #d6eeff;
@@ -103,7 +117,9 @@
 
 		tbody {
 			td {
-				padding: 20px $padding-medium;
+				width: 1px;
+				white-space: nowrap;
+				padding: $padding-medium $padding-default;
 				border-bottom: 1px solid $color-gray-border;
 
 				&:first-child {

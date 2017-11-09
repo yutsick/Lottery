@@ -13,13 +13,14 @@ import message from './components/message';
 import modal from './components/modal';
 import search from './components/search';
 import slider from './components/slider';
-import togglecontent from './components/toggle-content';
-import walletaccountswitch from './components/wallet-account-switch';
-import wallettransferamount from './components/wallet-transfer-amount';
+import toggleContent from './components/toggle-content';
+import walletAccountSwitch from './components/wallet-account-switch';
+import walletTransferAmount from './components/wallet-transfer-amount';
 import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
 import dataList from './components/data-list';
+import accountHistoryActions from './components/account-history-actions';
 
 $(function () {
 	modernizr();
@@ -32,11 +33,12 @@ $(function () {
 	top();
 	slider();
 	register();
-	togglecontent();
-	walletaccountswitch();
-	wallettransferamount();
+	toggleContent();
+	walletAccountSwitch();
+	walletTransferAmount();
 	dataList();
 	textToggle();
+	accountHistoryActions();
 });
 
 /**
