@@ -125,10 +125,12 @@
 
 	.block-promotion__action-btns {
 		margin-top: $margin-default;
+	}
+}
 
-		@media screen and (max-width: $screen-sm) {
-			text-align: center;
-		}
+.block-promotion__action-btns {
+	@media screen and (max-width: $screen-sm) {
+		text-align: center;
 	}
 }
 
