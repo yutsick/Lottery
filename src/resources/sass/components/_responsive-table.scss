@@ -149,7 +149,7 @@
 
 		thead {
 			th {
-				padding: $padding-medium $padding-default;
+				padding: $padding-default;
 				border-top: 1px solid #a2c3ff;
 				border-bottom: 1px solid #a2c3ff;
 				background-color: #d6eeff;
@@ -172,7 +172,7 @@
 			td {
 				width: 1px;
 				white-space: nowrap;
-				padding: $padding-medium $padding-default;
+				padding: $padding-default;
 				border-bottom: 1px solid $color-gray-border;
 
 				&:first-child {
@@ -216,9 +216,12 @@
 
 .responsive-table-filter {
 	margin-bottom: 20px;
-	h3 {
+	label {
+		color: $color-base-complement;
 		display: inline-block;
 		margin-right: 15px;
+		font-size: 18px;
+		font-weight: $semibold;
 	}
 
 	.form-control {

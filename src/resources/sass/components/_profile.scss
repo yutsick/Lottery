@@ -19,7 +19,7 @@
 	padding: 16px 15px;
 
 	@include min-screen($screen-sm-min) {
-		padding: 20px 15px;
+		padding: 20px;
 	}
 
 	&:nth-of-type(odd) {
