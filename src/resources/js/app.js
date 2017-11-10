@@ -21,6 +21,7 @@ import top from './layout/top';
 import register from './layout/register';
 import dataList from './components/data-list';
 import tableActions from './components/table-actions';
+import invoiceHistory from './components/invoice-history';
 
 $(function () {
 	modernizr();
@@ -39,6 +40,7 @@ $(function () {
 	dataList();
 	textToggle();
 	tableActions();
+	invoiceHistory();
 });
 
 /**

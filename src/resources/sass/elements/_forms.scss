@@ -4,7 +4,7 @@ input {
 
 /* Reset appearance for text and number fields */
 input[type="text"],
-input[type="number"]{
+input[type="number"] {
 	-webkit-appearance: none;
 }
 
@@ -92,6 +92,7 @@ label {
 
 select.form-control {
 	border-radius: 40px;
+	padding-right: 40px;
 }
 
 .has-error .control-label {
