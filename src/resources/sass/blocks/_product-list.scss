@@ -4,11 +4,19 @@
 			@include max-screen($screen-md-max) {
 				padding-right: 7.5px;
 			}
+
+			@include max-screen($screen-xs-max) {
+				padding-left: 3.75px;
+			}
 		}
 
 		&:nth-child(odd) {
 			@include max-screen($screen-md-max) {
-				padding-left: 7.5px;
+				padding-right: 7.5px;
+			}
+
+			@include max-screen($screen-xs-max) {
+				padding-right: 3.75px;
 			}
 		}
 	}
@@ -16,7 +24,11 @@
 
 .block-product {
 	border: 1px solid $color-border;
-	margin-bottom: 15px;
+	margin-bottom: 7.5px;
+
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 15px;
+	}
 
 	@include min-screen($screen-md-min) {
 		margin-bottom: 40px;
