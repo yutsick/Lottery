@@ -334,9 +334,14 @@
 		color: $color-white;
 		font-weight: $bold;
 
+		&--active,
 		&:hover,
 		&:focus {
 			background-color: $color-gray;
+		}
+
+		&:focus {
+			outline: 0;
 		}
 
 		@media screen and (min-width: $screen-md) {
