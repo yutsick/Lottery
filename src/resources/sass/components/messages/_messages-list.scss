@@ -8,7 +8,7 @@
 	color: $color-base-complement;
 
 	@include min-screen($screen-md-min) {
-		flex: 1 0 0 !important;
+		flex: 1 0 0;
 	}
 }
 
