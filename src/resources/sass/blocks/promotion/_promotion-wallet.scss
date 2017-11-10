@@ -109,7 +109,7 @@
 		.block-promotion__content {
 			@media screen and (max-width: $screen-sm) {
 				overflow: hidden;
-				display: block;
+				display: flex;
 				height: auto;
 				max-height: 0;
 				padding: 0;
