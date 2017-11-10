@@ -178,8 +178,6 @@
 		}
 
 	}
-	//display: flex;
-	//align-items: center;
 }
 
 .responsive-table.responsive-table--has-dropdown {
@@ -216,9 +214,15 @@
 		.invoice-history-dropdown {
 			.invoice-history-dropdown__cell {
 				padding: 5px 0;
+				width: 50%;
 
 				span {
+					display: block;
 					color: $color-base-primary;
+				}
+
+				&:nth-of-type(2n) {
+					text-align: right;
 				}
 			}
 		}
