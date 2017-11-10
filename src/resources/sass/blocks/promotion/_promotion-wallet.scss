@@ -161,6 +161,8 @@
 }
 
 .block-promotion__action-btns {
+	display: flex;
+
 	@media screen and (max-width: $screen-sm) {
 		text-align: center;
 	}
@@ -168,11 +170,7 @@
 
 .block-promotion__action-btn {
 	&:not(:last-child) {
-		margin-right: $margin-medium;
-
-		@media screen and (max-width: $screen-sm) {
-			margin-right: 0;
-		}
+		margin-right: 5px;
 	}
 }
 
