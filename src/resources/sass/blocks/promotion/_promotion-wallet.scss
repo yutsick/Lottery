@@ -121,7 +121,6 @@
 				&.js-is-visible {
 					opacity: 1;
 					max-height: 600px;
-					//padding: 20px;
 					transition: max-height $duration-normal $ease-in-out,
 								opacity $duration-fast $ease-in-out;
 				 }
@@ -250,7 +249,7 @@
 			color: $color-pink;
 		}
 
-		@media screen and (min-width: $screen-md) {
+		@media screen and (min-width: $screen-xs) {
 			padding: $padding-small;
 			border: 1px solid $color-gravel;
 			border-radius: .3em;
@@ -261,7 +260,7 @@
 		display: block;
 		color: $color-blueberry;
 
-		@media screen and (min-width: $screen-md) {
+		@media screen and (min-width: $screen-xs) {
 			display: inline-block;
 			font-size: 12px;
 		}
@@ -274,7 +273,7 @@
 		padding: 0;
 		border: 0;
 		margin-right: ($margin-default * 2);
-		margin-left: ($margin-default * 2);
+		//margin-left: ($margin-default * 2);
 		border-radius: 50%;
 		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
@@ -288,7 +287,7 @@
 			outline: 0;
 		}
 
-		@media screen and (min-width: $screen-md) {
+		@media screen and (min-width: $screen-xs) {
 			margin-right: $margin-medium;
 			margin-left: $margin-medium;
 		}
