@@ -35,6 +35,8 @@
 	border-top-left-radius: 5px;
 	background-color: #d6eeff;
 	color: #000;
+	display: flex;
+	flex-wrap: wrap;
 
 	h3 { margin: 0; }
 }

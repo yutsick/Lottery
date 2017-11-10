@@ -41,7 +41,8 @@
 								<a href="/" class="btn btn-data-action">Uppsägning</a>
 							</div>
 
-							<button class="btn btn-data-action js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
+							<button class="btn btn-data-action js-data-list-toggle" data-text-toggle="Avbryt">Ändra
+							</button>
 						</div>
 					</li>
 					<li>
@@ -62,7 +63,8 @@
 								<a href="/" class="btn btn-data-action">Uppsägning</a>
 							</div>
 
-							<button class="btn btn-data-action js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
+							<button class="btn btn-data-action js-data-list-toggle" data-text-toggle="Avbryt">Ändra
+							</button>
 						</div>
 					</li>
 				</ul>
@@ -93,36 +95,95 @@
 		</section>
 
 		<section class="section block block-content">
+
+			<div class="responsive-table-filter">
+				<h3 class="h5">Filtrera historik</h3>
+
+				<select class="form-control">
+					<option>Fysisk leverans</option>
+				</select>
+			</div>
+
 			<p class="table-title">Historik</p>
-			<table class="responsive-table responsive-table--auto-td">
+			<table class="responsive-table responsive-table--auto-td responsive-table--has-dropdown">
 				<thead>
 				<tr>
 					<th>Tidpunkt</th>
-					<th>Summa</th>
-					<th>Antal</th>
+					<th>Belopp</th>
 					<th>Typ</th>
 					<th>Status</th>
 					<th></th>
 				</tr>
 				</thead>
+
+				<!-- data-total-rows needs to be multiplied by 2 here. Since each "row" consists of 2 tr.
+				in order for the "show more" content to work-->
 				<tbody id="invoice-history-table-data" data-total-rows="8">
 				<tr>
-					<td data-header="Tidpunkt">Idag 14:01</td>
-					<td data-header="Summa">40.00 kr</td>
-					<td data-header="Antal">2 st</td>
+					<td data-header="Tidpunkt">Idag 14:01</td><td data-header="Belopp">40.00kr</td>
 					<td data-header="Typ">Orginal</td>
-					<td data-header="Status">Obetald</td>
+					<td data-header="Status"><span class="text-color-orange">Obetald</span></td>
 					<td>
-						<button class="btn btn-data-action">Visa mer</button>
+						<button class="btn btn-data-action js-show-invoice-history-details"
+								data-text-toggle="Visa mindre">Visa mer
+						</button>
 					</td>
 				</tr>
-
+				<tr class="invoice-history-dropdown">
+					<td colspan="6">
+						<hr>
+						<div class="invoice-history-dropdown__wrapper">
+							<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
+							<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td data-header="Tidpunkt">Idag 14:01</td>
+					<td data-header="Belopp">40.00kr</td>
+					<td data-header="Typ">Orginal</td>
+					<td data-header="Status"><span class="text-color-green">Betald</span></td>
+					<td>
+						<button class="btn btn-data-action js-show-invoice-history-details"
+								data-text-toggle="Visa mindre">Visa mer
+						</button>
+					</td>
+				</tr>
+				<tr class="invoice-history-dropdown">
+					<td colspan="6">
+						<hr>
+						<div class="invoice-history-dropdown__wrapper">
+							<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
+							<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td data-header="Tidpunkt">Idag 14:01</td>
+					<td data-header="Belopp">40.00kr</td>
+					<td data-header="Typ">Orginal</td>
+					<td data-header="Status"><span class="text-color-green">Betald</span></td>
+					<td>
+						<button class="btn btn-data-action js-show-invoice-history-details"
+								data-text-toggle="Visa mindre">Visa mer
+						</button>
+					</td>
+				</tr>
+				<tr class="invoice-history-dropdown">
+					<td colspan="6">
+						<hr>
+						<div class="invoice-history-dropdown__wrapper">
+							<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
+							<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+						</div>
+					</td>
+				</tr>
 				</tbody>
 			</table>
 
 			<div class="table-actions">
 				<a class="btn btn-primary" data-target="#invoice-history-table-data"
-				   href="/ajax/account-history/account-wallet.html">Visa fler</a>
+				   href="/ajax/invoice-history.html">Visa fler</a>
 			</div>
 		</section>
 

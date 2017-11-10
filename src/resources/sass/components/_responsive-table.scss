@@ -73,6 +73,7 @@
 				content: attr(data-header);
 				display: block;
 				font-weight: $bold;
+				color: $color-base-primary;
 			}
 		}
 	}
@@ -129,18 +130,21 @@
 				}
 			}
 
-			tr:nth-of-type(even) {
+			tr:nth-of-type(even):not(.invoice-history-dropdown) {
 				background-color: #f5f8fa;
 			}
 
 			tr:last-child {
+				border-bottom-left-radius: .4em;
+				border-bottom-right-radius: .4em;
+
 				td {
 					&:first-child {
-						border-bottom-left-radius: .4em;
+						//border-bottom-left-radius: .4em;
 					}
 
 					&:last-child {
-						border-bottom-right-radius: .4em;
+						//border-bottom-right-radius: .4em;
 					}
 				}
 			}
@@ -151,6 +155,105 @@
 		tbody {
 			td {
 				width: auto;
+			}
+		}
+	}
+}
+
+.responsive-table-filter {
+	margin-bottom: 20px;
+	h3 {
+		display: inline-block;
+		margin-right: 15px;
+	}
+
+	.form-control {
+		display: inline-block;
+		float: right;
+		max-width: 50%;
+
+		@include min-screen($screen-sm-min) {
+			width: auto;
+			float: none;
+		}
+
+	}
+}
+
+.responsive-table.responsive-table--has-dropdown {
+	.invoice-history-dropdown { display: none; }
+
+	tbody tr { background-color: #fff; }
+
+	tr:nth-of-type(4n+1) {
+		background-color: $color-dark-white;
+
+		+ .invoice-history-dropdown {
+			background-color: $color-dark-white;
+		}
+	}
+
+	.invoice-history-dropdown {
+		td {
+			width: 100%;
+			text-align: left;
+			padding: 0 20px 15px;
+
+			hr {
+				margin-top: 0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	@include max-screen($screen-xs-max) {
+		.dropdown-open { border-bottom: 0; }
+
+		.dropdown-open + .invoice-history-dropdown { display: block; }
+
+		.invoice-history-dropdown {
+			.invoice-history-dropdown__cell {
+				padding: 5px 0;
+				width: 50%;
+
+				span {
+					display: block;
+					color: $color-base-primary;
+				}
+
+				&:nth-of-type(2n) {
+					text-align: right;
+				}
+			}
+		}
+
+	}
+
+	@include min-screen($screen-sm-min) {
+		.dropdown-open td {
+			border-bottom: 0;
+		}
+
+		.dropdown-open + .invoice-history-dropdown {
+			display: table-row;
+		}
+
+		.invoice-history-dropdown {
+			.invoice-history-dropdown__wrapper {
+				display: flex;
+			}
+
+			.invoice-history-dropdown__cell {
+				text-align: center;
+				flex: 1;
+
+				&:first-of-type {
+					text-align: left;
+				}
+
+				&:last-of-type {
+					text-align: right;
+				}
 			}
 		}
 	}

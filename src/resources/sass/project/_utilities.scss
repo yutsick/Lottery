@@ -1,6 +1,6 @@
 //Safari Rendering
-*{
-	text-rendering:optimizeLegibility;
+* {
+	text-rendering: optimizeLegibility;
 }
 
 // Visibility
@@ -72,8 +72,6 @@
 	justify-content: flex-end;
 }
 
-
-
 a img.align-left,
 img.align-left {
 	float: left;
@@ -112,7 +110,7 @@ img.align-center {
 	background-color: $color-orange;
 }
 
-.head-color-orange{
+.head-color-orange {
 	background-color: $color-head-orange;
 }
 
@@ -120,7 +118,7 @@ img.align-center {
 	background-color: $color-pink;
 }
 
-.background-color-newturqiose{
+.background-color-newturqiose {
 	background-color: $color-new-turqoiuse;
 }
 
@@ -140,22 +138,29 @@ img.align-center {
 	background-color: $color-light;
 }
 
-.background-color-lightpink{
+.background-color-lightpink {
 	background-color: $color-light-pink;
 }
 
-.background-color-lightorange{
+.background-color-lightorange {
 	background-color: $color-light-orange;
 }
 
-.border-color-orange{
+.border-color-orange {
 	background-color: $color-border-orange;
 }
 
-.border-color-pink{
+.border-color-pink {
 	background-color: $color-border-pink;
 }
 
+.text-color-green {
+	color: #33b663;
+}
+
+.text-color-orange {
+	color: #f89471;
+}
 
 .text-protection {
 	&:after {
@@ -194,6 +199,6 @@ img.align-center {
 	text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
 	&.text-shadow--heavy {
-		text-shadow: 0 0 0.5em #333, 0 2px 1em rgba(0,0,0,.65), 0 4px 1em rgba(0,0,0,.65), 0 8px 2em rgba(0,0,0,.65);
+		text-shadow: 0 0 0.5em #333, 0 2px 1em rgba(0, 0, 0, .65), 0 4px 1em rgba(0, 0, 0, .65), 0 8px 2em rgba(0, 0, 0, .65);
 	}
 }
