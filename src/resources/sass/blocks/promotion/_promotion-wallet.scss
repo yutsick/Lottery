@@ -22,6 +22,10 @@
 	.block-promotion__header {
 		margin-bottom: 0;
 
+		@media screen and (max-width: $screen-sm) {
+			cursor: pointer;
+		}
+
 		&.js-is-active {
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
@@ -58,19 +62,13 @@
 			margin-right: $margin-default;
 			margin-left: auto;
 		}
-	}
 
-	.block-promotion-minified__btn {
-		padding: $padding-medium;
-		border: 0;
-		background: none;
+		&--btn {
+			padding: $padding-medium;
 
-		&:focus {
-			outline: 0;
-		}
-
-		&.js-is-active {
-			transform: rotate(-180deg);
+			&.js-is-active {
+				transform: rotate(-180deg);
+			}
 		}
 	}
 
