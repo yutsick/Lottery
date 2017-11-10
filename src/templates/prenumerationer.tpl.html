@@ -6,18 +6,15 @@
 @@include('layout/_sidebar.html', {"logged_in": true})
 
 <div class="content-wrapper ml-2017">
-
-	@@include('blocks/_hero.html', {
-	"hero_type": "mini",
-	"hero_content": true,
-	"h1": true,
-	"h2": false
-	})
-
 	<div class="container">
-		<section class="section block block-content">
-			<h2 class=" h3">Prenumerationer</h2>
+		<div class="block block-hero block-hero--mini">
+			<h1 class="block-hero__page-title">
+				Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!
+			</h1>
+			<h2 class="block-hero__title">Prenumerationer</h2>
+		</div>
 
+		<section class="section block block-content">
 			<div class="data-list">
 				<div class="data-list__header">
 					<h3 class="h5">Mina prenumerationer</h3>
@@ -89,7 +86,7 @@
 					<div class="invoice__cell"><span>Förfallodatum: </span> 2017-06-24</div>
 					<div class="invoice__cell"><span>OCR: </span> 024242234-0240</div>
 					<div class="invoice__cell"><span>Bankgiro: </span> 589-68879</div>
-					<div class="invoice__cell"><span>Summa: </span> 250 kr</div>
+					<div class="invoice__cell"> 250 kr</div>
 				</div>
 			</div>
 		</section>
@@ -97,7 +94,7 @@
 		<section class="section block block-content">
 
 			<div class="responsive-table-filter">
-				<h3 class="h5">Filtrera historik</h3>
+				<label>Filtrera</label>
 
 				<select class="form-control">
 					<option>Fysisk leverans</option>
@@ -120,7 +117,8 @@
 				in order for the "show more" content to work-->
 				<tbody id="invoice-history-table-data" data-total-rows="8">
 				<tr>
-					<td data-header="Tidpunkt">Idag 14:01</td><td data-header="Belopp">40.00kr</td>
+					<td data-header="Tidpunkt">Idag 14:01</td>
+					<td data-header="Belopp">40.00kr</td>
 					<td data-header="Typ">Orginal</td>
 					<td data-header="Status"><span class="text-color-orange">Obetald</span></td>
 					<td>
