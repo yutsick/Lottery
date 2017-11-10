@@ -112,19 +112,32 @@
 				display: flex;
 				height: auto;
 				max-height: 0;
-				padding: 0;
+				padding-top: 0;
+				padding-bottom: 0;
 				opacity: 0;
-				transition: max-height $duration-normal $ease-in-out, opacity $duration-fast $duration-normal $ease-in-out;
+				transition:	max-height $duration-normal $ease-in-out,
+							opacity $duration-fast $duration-normal $ease-in-out;
 
 				&.js-is-visible {
 					opacity: 1;
 					max-height: 600px;
-					transition: max-height $duration-normal $ease-in-out, opacity $duration-fast $ease-in-out;
+					//padding: 20px;
+					transition: max-height $duration-normal $ease-in-out,
+								opacity $duration-fast $ease-in-out;
 				 }
 
-				// Just for better animation
-				.block-promotion__content-wrapper {
-					padding: 20px;
+				// For better animation
+				> :first-child {
+					padding-top: 20px;
+				}
+
+				> .wallet-money,
+				> :last-child:not(.hidden-xs){
+					padding-bottom: 20px;
+				}
+
+				.block-promotion__action-btns {
+					margin-top: 0;
 				}
 			}
 		}
@@ -194,18 +207,11 @@
 	display: flex;
 	justify-content: space-between;
 
-	&:not(:first-child) {
+	&:not(:first-child),
+	&:first-child:last-child {
 		margin-top: $margin-small;
 		padding-top: $padding-small;
 		border-top: 1px solid $color-feather;
-	}
-
-	&:first-child:last-child {
-		@media screen and (min-width: $screen-sm) {
-			margin-top: $margin-small;
-			padding-top: $padding-small;
-			border-top: 1px solid $color-feather;
-		}
 	}
 
 	.wallet__item {
