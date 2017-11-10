@@ -1,24 +1,20 @@
 .row.equal-height {
-	@include min-screen($screen-sm-min) {
+	display: flex;
+	flex-wrap: wrap;
+
+	&:before,
+	&:after {
+		display: block;
+	}
+
+	> [class*='col-'] {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 
-		&:before, &:after {
-			display: block;
-		}
-
-		> [class*='col-'] {
-			display: flex;
-			flex-direction: column;
-
-			> :not(.row, .no-flex) {
-				flex: 1 1 auto;
-			}
+		> :not(.row, .no-flex) {
+			flex: 1 1 auto;
 		}
 	}
-}
-
-.row.padding-extra {
 }
 
 .row.no-gutter {

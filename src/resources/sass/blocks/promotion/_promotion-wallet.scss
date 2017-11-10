@@ -245,6 +245,7 @@
 		flex: none;
 		width: 40px;
 		height: 40px;
+		padding: 0;
 		border: 0;
 		margin-right: ($margin-default * 2);
 		margin-left: ($margin-default * 2);
@@ -319,7 +320,6 @@
 			&:first-of-type {
 				margin-left: 2%;
 			}
-
 		}
 	}
 
@@ -330,6 +330,11 @@
 		@media screen and (min-width: $screen-md) {
 			flex: 2;
 			margin-left: 0;
+		}
+
+		@media screen and (max-width: 348px) {
+			flex: 1;
+			margin-top: 10px;
 		}
 	}
 }
