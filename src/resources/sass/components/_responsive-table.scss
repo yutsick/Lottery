@@ -25,7 +25,6 @@
 	}
 }
 
-
 /* Narrow screens */
 @include max-screen($screen-xs-max) {
 	.responsive-table {
@@ -93,7 +92,6 @@
 			text-align: right;
 		}
 
-
 		thead {
 			th {
 				padding: $padding-medium $padding-default;
@@ -145,6 +143,14 @@
 						border-bottom-right-radius: .4em;
 					}
 				}
+			}
+		}
+	}
+
+	.responsive-table--auto-td {
+		tbody {
+			td {
+				width: auto;
 			}
 		}
 	}

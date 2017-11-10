@@ -20,7 +20,7 @@ import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
 import dataList from './components/data-list';
-import accountHistoryActions from './components/account-history-actions';
+import tableActions from './components/table-actions';
 
 $(function () {
 	modernizr();
@@ -38,7 +38,7 @@ $(function () {
 	walletTransferAmount();
 	dataList();
 	textToggle();
-	accountHistoryActions();
+	tableActions();
 });
 
 /**

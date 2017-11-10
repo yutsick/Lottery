@@ -25,14 +25,6 @@
 
 	}
 
-	.btn-link {
-		padding: 0;
-		color: #546785;
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 20px;
-	}
-
 }
 
 .data-list__header {
@@ -81,7 +73,7 @@
 		visibility: visible;
 	}
 
-	.btn-link {
+	.btn-data-action {
 		color: $color-light-blue;
 	}
 }

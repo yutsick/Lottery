@@ -31,17 +31,17 @@
 						<div class="data-list__cell">Digital</div>
 						<div class="data-list__cell data-list__cell--actions">
 							<div class="data-list__sub-actions">
-								<a href="/" class="btn btn-link">Byt leveranssätt</a>
-								<button class="btn btn-link"
+								<a href="/" class="btn btn-data-action">Byt leveranssätt</a>
+								<button class="btn btn-data-action"
 										data-toggle="modal"
 										data-target="#modal-payment-method"
 										data-subscription-id="2">
 									Ändra betalsätt
 								</button>
-								<a href="/" class="btn btn-link">Uppsägning</a>
+								<a href="/" class="btn btn-data-action">Uppsägning</a>
 							</div>
 
-							<button class="btn btn-link js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
+							<button class="btn btn-data-action js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
 						</div>
 					</li>
 					<li>
@@ -52,17 +52,17 @@
 						<div class="data-list__cell data-list__cell--actions">
 
 							<div class="data-list__sub-actions">
-								<a href="/" class="btn btn-link">Byt leveranssätt</a>
-								<button class="btn btn-link"
+								<a href="/" class="btn btn-data-action">Byt leveranssätt</a>
+								<button class="btn btn-data-action"
 										data-toggle="modal"
 										data-target="#modal-payment-method"
 										data-subscription-id="2">
 									Ändra betalsätt
 								</button>
-								<a href="/" class="btn btn-link">Uppsägning</a>
+								<a href="/" class="btn btn-data-action">Uppsägning</a>
 							</div>
 
-							<button class="btn btn-link js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
+							<button class="btn btn-data-action js-data-list-toggle" data-text-toggle="Avbryt">Ändra</button>
 						</div>
 					</li>
 				</ul>
@@ -90,24 +90,40 @@
 					<div class="invoice__cell"><span>Summa: </span> 250 kr</div>
 				</div>
 			</div>
+		</section>
 
-			<div class="invoice">
-				<div class="invoice__header">
-					<span class="invoice__icon invoice__icon--warning">!</span>
-					<div class="invoice__status">
-						<h3>Obetald faktura</h3>
-						<p>Du har en obetald faktura.</p>
-					</div>
-				</div>
+		<section class="section block block-content">
+			<p class="table-title">Historik</p>
+			<table class="responsive-table responsive-table--auto-td">
+				<thead>
+				<tr>
+					<th>Tidpunkt</th>
+					<th>Summa</th>
+					<th>Antal</th>
+					<th>Typ</th>
+					<th>Status</th>
+					<th></th>
+				</tr>
+				</thead>
+				<tbody id="invoice-history-table-data" data-total-rows="8">
+				<tr>
+					<td data-header="Tidpunkt">Idag 14:01</td>
+					<td data-header="Summa">40.00 kr</td>
+					<td data-header="Antal">2 st</td>
+					<td data-header="Typ">Orginal</td>
+					<td data-header="Status">Obetald</td>
+					<td>
+						<button class="btn btn-data-action">Visa mer</button>
+					</td>
+				</tr>
 
-				<div class="invoice__values">
-					<div class="invoice__cell"><span>Förfallodatum: </span> 2017-06-24</div>
-					<div class="invoice__cell"><span>OCR: </span> 024242234-0240</div>
-					<div class="invoice__cell"><span>Bankgiro: </span> 589-68879</div>
-					<div class="invoice__cell"><span>Summa: </span> 250 kr</div>
-				</div>
+				</tbody>
+			</table>
+
+			<div class="table-actions">
+				<a class="btn btn-primary" data-target="#invoice-history-table-data"
+				   href="/ajax/account-history/account-wallet.html">Visa fler</a>
 			</div>
-
 		</section>
 
 	</div>

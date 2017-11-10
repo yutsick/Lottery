@@ -5,7 +5,7 @@ export default function () {
 		}
 	}
 
-	$('.account-history-actions a').each(function () {
+	$('.table-actions a').each(function () {
 		let $this = $(this);
 		let $target = $($this.data('target'));
 		let source = $this.attr('href');
