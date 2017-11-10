@@ -112,15 +112,13 @@
 				max-height: 0;
 				padding-top: 0;
 				padding-bottom: 0;
-				opacity: 0;
-				transition:	max-height $duration-normal $ease-in-out,
-							opacity $duration-fast $duration-normal $ease-in-out;
+				border-bottom-color: transparent;
+				transition: max-height $duration-fast $ease-in-out,
+							border-color $duration-fast $ease-in-out;
 
 				&.js-is-visible {
-					opacity: 1;
 					max-height: 600px;
-					transition: max-height $duration-normal $ease-in-out,
-								opacity $duration-fast $ease-in-out;
+					border-bottom-color: $color-feather;
 				 }
 
 				// For better animation
