@@ -22,6 +22,52 @@
 	}
 }
 
+.table-select + .select2 {
+	min-width: 200px;
+
+	&.select2-container--open .select2-selection__arrow:before {
+		transform: rotate(180deg);
+	}
+
+	.select2-selection__arrow {
+		top: 50%;
+		right: 20px;
+		width: auto;
+		height: auto;
+		transform: translateY(-50%);
+
+		&:before {
+			content: "\e906";
+			display: block;
+			font-size: 20px;
+			font-family: "ml-icons";
+			color: $color-blue;
+		}
+
+		b {
+			height: 0;
+			border: none;
+		}
+	}
+
+	.select2-selection {
+		height: 44px;
+		padding: 5px;
+		border-radius: 4px;
+		border: 1px solid #E5E5E5;
+		line-height: 44px;
+	}
+
+	.select2-selection__rendered {
+		font-weight: $bold;
+		vertical-align: middle;
+
+		span {
+			padding-top: $padding-small;
+		}
+	}
+}
+
 .responsive-table {
 	td {
 		font-weight: $bold;
