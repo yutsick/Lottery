@@ -272,8 +272,7 @@
 		height: 40px;
 		padding: 0;
 		border: 0;
-		margin-right: ($margin-default * 2);
-		//margin-left: ($margin-default * 2);
+		margin-right: 50px;
 		border-radius: 50%;
 		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
@@ -285,6 +284,10 @@
 
 		&:focus {
 			outline: 0;
+		}
+
+		@media screen and (max-width: 348px) {
+			margin-right: ($margin-default * 2);
 		}
 
 		@media screen and (min-width: $screen-xs) {
