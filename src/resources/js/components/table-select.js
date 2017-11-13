@@ -18,7 +18,7 @@ export default function () {
 		var choice = evt.params.data.id;
 
 		if (choice) {
-			$('#' + choice).addClass('table-pane--active').siblings('.tab-pane').removeClass('table-pane--active');
+			$('#' + choice).addClass('table-pane--active').siblings('.table-pane').removeClass('table-pane--active');
 		}
 	});
 }
