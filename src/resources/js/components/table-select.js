@@ -2,7 +2,8 @@ export default function () {
 	$('.table-select').select2({
 		minimumResultsForSearch: Infinity,
 		templateSelection: format,
-		templateResult: format
+		templateResult: format,
+		dropdownParent: $('.responsive-table-filter')
 	});
 
 	function format(o) {

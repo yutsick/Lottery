@@ -1,0 +1,152 @@
+/* Wallet transfer block */
+.block-wallet-transfer {
+	&__title:first-child {
+		margin-top: 0;
+	}
+
+	&__text {
+		max-width: $block-text-width;
+		margin-top: 0;
+		font-family: $basic-heading-family;
+		font-weight: $bold;
+		color: $color-blueberry;
+	}
+}
+
+.wallet-switch {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__item {
+		width: 40%;
+		margin-bottom: 0;
+		color: $color-head-orange;
+		font-weight: $bold;
+
+		&[data-account="Vinstkonto"] {
+			color: $color-pink;
+		}
+
+		@media screen and (min-width: $screen-xs) {
+			padding: $padding-small;
+			border: 1px solid $color-gravel;
+			border-radius: .3em;
+		}
+	}
+
+	&__label {
+		display: block;
+		color: $color-blueberry;
+
+		@media screen and (min-width: $screen-xs) {
+			display: inline-block;
+			font-size: 12px;
+		}
+	}
+
+	&__btn {
+		flex: none;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		border: 0;
+		margin-right: 50px;
+		border-radius: 50%;
+		background-color: $color-gray-light;
+		transition: background-color $duration-fast $ease-standard;
+
+		&:hover,
+		&:focus {
+			background-color: darken($color-gray, 5%);
+		}
+
+		&:focus {
+			outline: 0;
+		}
+
+		@media screen and (max-width: 348px) {
+			margin-right: ($margin-default * 2);
+		}
+
+		@media screen and (min-width: $screen-xs) {
+			margin-right: $margin-medium;
+			margin-left: $margin-medium;
+		}
+	}
+}
+
+.wallet-transfer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+
+	@media screen and (min-width: $screen-md) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+
+	&:not(:first-child) {
+		margin-top: $margin-default;
+	}
+
+	&__form-wrapper  {
+		width: 100%;
+
+		@media screen and (min-width: $screen-md) {
+			width: 40%;
+			margin-bottom: 0;
+		}
+	}
+
+	&__amount {
+		height: auto;
+		padding: 10px;
+		font-weight: $bold;
+	}
+
+	&__btn {
+		margin-right: 15px;
+		padding: $padding-small;
+		border: 0;
+		border-radius: .3em;
+		background-color: $color-gray-light;
+		transition: background-color $duration-fast $ease-standard;
+		color: $color-white;
+		font-weight: $bold;
+
+		&--active,
+		&:hover,
+		&:focus {
+			background-color: $color-gray;
+		}
+
+		&:focus {
+			outline: 0;
+		}
+
+		@media screen and (min-width: $screen-md) {
+			flex: 1;
+			margin-right: 2%;
+
+			&:first-of-type {
+				margin-left: 2%;
+			}
+		}
+	}
+
+	&__submit {
+		margin-left: auto;
+		font-size: $base-font-size;
+
+		@media screen and (min-width: $screen-md) {
+			flex: 2;
+			margin-left: 0;
+		}
+
+		@media screen and (max-width: 348px) {
+			flex: 1;
+			margin-top: 10px;
+		}
+	}
+}

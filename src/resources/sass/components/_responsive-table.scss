@@ -151,13 +151,6 @@
 
 .responsive-table-filter {
 	margin-bottom: 20px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-
-	@include min-screen($screen-sm-min) {
-		display: block;
-	}
 
 	label {
 		color: $color-base-complement;

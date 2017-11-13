@@ -35,11 +35,10 @@
 		margin-bottom: $margin-default;
 		font-family: $base-heading-family;
 		font-size: 18px;
+		line-height: 1;
 		color: inherit;
 
 		.icon {
-			display: inline-block;
-			vertical-align: middle;
 			font-size: 15px;
 			color: $color-base-complement;
 		}
