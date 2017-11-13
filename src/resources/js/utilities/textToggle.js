@@ -1,11 +1,16 @@
 export default function () {
 	$(document).on("click", "[data-text-toggle]", function () {
-		let element = $(this);
-		if (element.text() === element.data("text-toggle")) {
-			element.text(element.data("text-original"));
+		let $element = $(this);
+		if ($element.text() === $element.data("text-toggle")) {
+			$element.text($element.data("text-original"));
 		} else {
-			element.data("text-original", element.text());
-			element.text(element.data("text-toggle"));
+			$element.data("text-original", $element.text());
+			$element.text($element.data("text-toggle"));
 		}
+
+		if ($element.hasClass('btn-with-arrow')) {
+			$element.toggleClass('btn-with-arrow--active');
+		}
+
 	});
 }

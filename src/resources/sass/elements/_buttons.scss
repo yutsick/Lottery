@@ -128,6 +128,26 @@
 	font-weight: 600;
 	font-size: 14px;
 	line-height: 20px;
+
+	&:active, &:focus, &:hover {
+		color: #546785;
+	}
+}
+
+.btn-with-arrow {
+	&:after {
+		margin-left: 5px;
+		font-size: 12px;
+		vertical-align: middle;
+		font-family: $base-icon-family;
+		content: $icon-chevron-down;
+	}
+
+	&.btn-with-arrow--active {
+		&:after {
+			content: $icon-chevron-up;
+		}
+	}
 }
 
 /* Custom */
