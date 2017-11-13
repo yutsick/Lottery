@@ -33,6 +33,7 @@ elixir((mix) => {
 
     mix.copy(elixir.config.assetsPath + '/img', elixir.config.publicPath + '/img');
 	mix.copy(elixir.config.assetsPath + '/fonts', elixir.config.publicPath + '/fonts');
+	mix.copy('src/templates/ajax/json', 'dist/ajax/json');
 
     mix.browserSync({
         proxy: null,

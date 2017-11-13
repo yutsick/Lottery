@@ -1,0 +1,10 @@
+{
+  "d": {
+    "__type": "com.mogul.miljonlotteriet.model.BaseRequest",
+    "BRSuccess": false,
+    "BRSessionExpired": false,
+    "BRErrors": [],
+    "BRInfo": [],
+    "BRErrorCode": 1014
+  }
+}

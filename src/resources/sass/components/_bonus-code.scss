@@ -1,0 +1,16 @@
+.bonus-code {
+	p {
+		font-weight: $bold;
+		color: $color-blueberry;
+	}
+
+	button[type=submit] {
+		@include min-screen($screen-sm-min) {
+			margin-top: 5px;
+		}
+	}
+}
+
+.bonus-code__success { display: none; }
+
+.bonus-code__error { display: none; }

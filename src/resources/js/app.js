@@ -24,6 +24,7 @@ import tableSelect from './components/table-select';
 import entityCollectionActions from './components/entity-collection-actions';
 import invoiceHistory from './components/invoice-history';
 import loadSection from './components/load-section';
+import bonusCode from './components/bonus-code';
 
 $(function () {
 	modernizr();
@@ -44,7 +45,8 @@ $(function () {
 	entityCollectionActions();
 	tableSelect();
 	invoiceHistory();
-    loadSection();
+	loadSection();
+	bonusCode();
 });
 
 /**
