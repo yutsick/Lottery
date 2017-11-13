@@ -87,6 +87,8 @@
 		opacity: 0;
 		visibility: hidden;
 		transform: translateX(50px);
+	}
+	@include min-screen($screen-md-min) {
 		margin-right: 40px;
 	}
 
@@ -103,9 +105,16 @@
 .data-list__cell.data-list__cell--actions {
 	color: #77839e;
 	display: flex;
-	flex: 6;
 	justify-content: flex-end;
 	flex-direction: row;
+
+	@include min-screen($screen-sm-min) {
+		flex: 7;
+	}
+
+	@include min-screen($screen-md-min) {
+		flex: 6;
+	}
 
 	.btn-data-action {
 		text-align: center;
