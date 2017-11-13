@@ -1,6 +1,6 @@
 export default function () {
 	function showOrHideAction($target, totalItems, $action) {
-		if ($target.find('tr').length >= totalItems) {
+		if ($target.children().length >= totalItems) {
 			$action.hide();
 		}
 	}
