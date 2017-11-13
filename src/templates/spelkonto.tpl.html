@@ -96,18 +96,21 @@
 			</div>
 		</section>
 
-		<section class="section block block-content">
+		<section class="table-section section block block-content">
 			<h2 class="section__heading h3">Kontohistorik</h2>
+			<h2 class="section__sub-title h4">
+				<a class="js-hide-section" href="/"><i class="icon icon-chevron-left"></i> Kontohistorik</a>
+			</h2>
 
 			<div class="row">
 				<div class="col-xs-12 col-md-3">
 					<ul class="nav list-group" id="account-selector-tab" role="tablist"
 						 aria-orientation="vertical">
-						<li class="list-group-item" data-toggle="tab" href="#account-wallet" role="tab">
+						<li class="js-load-section list-group-item" data-toggle="tab" href="#account-wallet" role="tab">
 							<header>Spelplånbok</header>
 							<p>Se över och ändra dina uppgifter</p>
 						</li>
-						<li class="list-group-item" data-toggle="tab" href="#account-prizes" role="tab">
+						<li class="js-load-section list-group-item" data-toggle="tab" href="#account-prizes" role="tab">
 							<header>Vinstkonto</header>
 							<p>Håll koll på ditt spelande</p>
 						</li>
@@ -115,7 +118,7 @@
 				</div>
 				<div class="tab-content col-xs-12 col-md-9">
 					<div class="tab-pane active" id="account-wallet" role="tabpanel">
-						<p class="table-title">Kontohistorik</p>
+						<p class="table-title">Historik</p>
 						<table class="responsive-table">
 							<thead>
 							<tr>
@@ -124,7 +127,7 @@
 								<th>Summa</th>
 							</tr>
 							</thead>
-							<tbody id="account-wallet-table-data" data-total-rows="8">
+							<tbody id="account-wallet-table-data" data-total-items="8">
 							<tr>
 								<td data-header="Tidpunkt">Idag 14:01</td>
 								<td data-header="Typ">Köp</td>
@@ -148,14 +151,14 @@
 							</tbody>
 						</table>
 
-						<div class="table-actions">
+						<div class="entity-collection-actions">
 							<a class="btn btn-primary" data-target="#account-wallet-table-data" href="/ajax/account-history/account-wallet.html" >Visa fler</a>
 						</div>
 					</div>
 
-					<div class="tab-pane" id="account-prizes" role="tabpanel">
+					<div class="table-wrapper tab-pane" id="account-prizes" role="tabpanel">
 						<div class="form-group responsive-table-filter">
-							<label for="tableSelect">Visa:</label>
+							<label class="table-label" for="tableSelect">Visa:</label>
 							<select id="tableSelect" class="table-select form-control" name="tableSelect">
 								<option value="history" id="accountHistory">Kontohistorik</option>
 								<option value="expiration-date" id="accountExpirationDate">Förfallodatum</option>
@@ -163,7 +166,7 @@
 						</div>
 
 						<div id="history" class="table-pane table-pane--active tab-pane" role="tabpanel">
-							<p class="table-title">Vinstkonto</p>
+							<p class="table-title">Historik</p>
 							<table class="responsive-table">
 								<thead>
 								<tr>
@@ -172,7 +175,7 @@
 									<th>Summa</th>
 								</tr>
 								</thead>
-								<tbody id="account-prizes-table-data" data-total-rows="12">
+								<tbody id="account-prizes-table-data" data-total-items="12">
 								<tr>
 									<td data-header="Tidpunkt">Idag 14:01</td>
 									<td data-header="Typ">Köp</td>
@@ -196,13 +199,13 @@
 								</tbody>
 							</table>
 
-							<div class="table-actions">
+							<div class="entity-collection-actions">
 								<a class="btn btn-primary" data-target="#account-prizes-table-data" href="/ajax/account-history/account-prizes.html" >Visa fler</a>
 							</div>
 						</div>
 
 						<div id="expiration-date" class="table-pane tab-pane" role="tabpanel">
-							<p class="table-title">Vinstkonto</p>
+							<p class="table-title">Historik</p>
 							<table class="responsive-table">
 								<thead>
 								<tr>
@@ -210,7 +213,7 @@
 									<th>Summa</th>
 								</tr>
 								</thead>
-								<tbody id="account-prizes-table-data" data-total-rows="12">
+								<tbody id="account-prizes-table-data" data-total-items="12">
 								<tr>
 									<td data-header="Tidpunkt">Idag 14:01</td>
 									<td data-header="Summa">- 250kr</td>
@@ -230,7 +233,7 @@
 								</tbody>
 							</table>
 
-							<div class="table-actions">
+							<div class="entity-collection-actions">
 								<a class="btn btn-primary" data-target="#account-prizes-table-data" href="/ajax/account-history/account-prizes.html" >Visa fler</a>
 							</div>
 						</div>

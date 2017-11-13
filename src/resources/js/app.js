@@ -20,8 +20,10 @@ import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
 import dataList from './components/data-list';
-import tableActions from './components/table-actions';
+import tableSelect from './components/table-select';
+import entityCollectionActions from './components/entity-collection-actions';
 import invoiceHistory from './components/invoice-history';
+import loadSection from './components/load-section';
 
 $(function () {
 	modernizr();
@@ -39,8 +41,10 @@ $(function () {
 	walletTransferAmount();
 	dataList();
 	textToggle();
-	tableActions();
+	entityCollectionActions();
+	tableSelect();
 	invoiceHistory();
+    loadSection();
 });
 
 /**
