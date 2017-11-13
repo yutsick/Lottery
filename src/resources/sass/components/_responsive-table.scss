@@ -1,3 +1,33 @@
+.table-section {
+	@include max-screen($screen-sm-max) {
+		&.js-load-from-right {
+			.section__heading,
+			.nav {
+				display: none;
+			}
+
+			.tab-content {
+				display: block;
+				animation: loadFromRight $duration-fast $ease-in-out;
+			}
+
+			.section__sub-title {
+				@include max-screen($screen-sm-max) {
+					display: block;
+				}
+			}
+		}
+
+		&.js-load-from-left {
+			animation: loadFromLeft $duration-fast $ease-in-out;
+		}
+
+		.tab-content {
+			display: none;
+		}
+	}
+}
+
 .table-title {
 	margin-bottom: 0;
 	padding: $padding-medium;
@@ -14,12 +44,29 @@
 	}
 }
 
+.section__sub-title {
+	display: none;
+	font-size: 18px;
+	font-weight: 700;
+
+	.icon {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 15px;
+		color: $color-base-complement;
+	}
+}
+
 .table-pane {
 	display: none;
 
 	&--active {
 		display: block;
 	}
+}
+
+.table-label {
+	font-weight: $bold;
 }
 
 .table-select + .select2 {
