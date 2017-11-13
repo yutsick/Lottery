@@ -260,7 +260,9 @@
 				</div>
 			</div>
 			@@include('blocks/_product-list-full.html', {
-			"class": " container--no-space"
+			"class": " container--no-space",
+			"collectionId": "not-yet-ordered-products-list",
+			"dataSourceUrl": "/ajax/not-yet-ordered-products-list.html"
 			})
 
 			<div class="row visible-xs text-center">
@@ -278,7 +280,9 @@
 
 			@@include('blocks/_product-list-full.html', {
 			"class": " container--no-space",
-			"status": "ordered"
+			"status": "ordered",
+			"collectionId": "ordered-products-list",
+			"dataSourceUrl": "/ajax/ordered-products-list.html"
 			})
 		</section>
 	</div>
