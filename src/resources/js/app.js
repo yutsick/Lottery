@@ -23,6 +23,7 @@ import dataList from './components/data-list';
 import tableSelect from './components/table-select';
 import entityCollectionActions from './components/entity-collection-actions';
 import invoiceHistory from './components/invoice-history';
+import loadSection from './components/load-section';
 
 $(function () {
 	modernizr();
@@ -43,6 +44,7 @@ $(function () {
 	entityCollectionActions();
 	tableSelect();
 	invoiceHistory();
+    loadSection();
 });
 
 /**

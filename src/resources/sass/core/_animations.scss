@@ -9,6 +9,23 @@
 	}
 }
 
+/* Load content from the left hand side */
+@keyframes loadFromLeft {
+	0% { transform: translateX(0); }
+	5% { transform: translateX(-100px); }
+	50% { transform: translateX(10px); }
+	100% { transform: translateX(0); }
+}
+
+
+/* Load content from the right hand side */
+@keyframes loadFromRight {
+	0% { transform: translateX(0); }
+	5% { transform: translateX(100px); }
+	50% { transform: translateX(-10px); }
+	100% { transform: translateX(0); }
+}
+
 /* Rotate animation */
 .js-animation--rotate {
 	transition: transform $duration-fast $ease-standard;
