@@ -1,0 +1,85 @@
+/* Table section */
+.table-section {
+	@include max-screen($screen-sm-max) {
+		&.js-load-from-right {
+			.section__heading,
+			.nav {
+				display: none;
+			}
+
+			.tab-content {
+				display: block;
+				animation: loadFromRight $duration-fast $ease-in-out;
+			}
+
+			.js-hide-section {
+				@include max-screen($screen-sm-max) {
+					display: block;
+				}
+			}
+		}
+
+		&.js-load-from-left {
+			.list-group {
+				animation: loadFromLeft $duration-fast $ease-in-out;
+			}
+		}
+
+		.tab-content {
+			display: none;
+		}
+	}
+
+	.js-hide-section {
+		display: none;
+		margin-bottom: $margin-default;
+		font-family: $base-heading-family;
+		font-size: 18px;
+		color: inherit;
+
+		.icon {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 15px;
+			color: $color-base-complement;
+		}
+
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+	}
+}
+
+.table-pane {
+	display: none;
+
+	&--active {
+		display: block;
+	}
+}
+
+.table__title-block {
+	margin-bottom: 0;
+	padding: $padding-medium;
+	border: 1px solid #a2c3ff;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	background-color: #d6eeff;
+	font-size: 16px;
+	font-weight: $bold;
+	color: $color-base-primary;
+
+	@include min-screen($screen-sm) {
+		display: none;
+	}
+}
+
+.table__text {
+	max-width: 750px;
+	margin-top: 0;
+	margin-bottom: $margin-default;
+	font-family: $basic-heading-family;
+	font-weight: $bold;
+	color: $color-blueberry;
+}
