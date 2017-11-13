@@ -1,17 +1,17 @@
 export default function () {
-	function showOrHideAction($target, totalRows, $action) {
-		if ($target.find('tr').length >= totalRows) {
+	function showOrHideAction($target, totalItems, $action) {
+		if ($target.find('tr').length >= totalItems) {
 			$action.hide();
 		}
 	}
 
-	$('.table-actions a').each(function () {
+	$('.entity-collection-actions a').each(function () {
 		let $this = $(this);
 		let $target = $($this.data('target'));
 		let source = $this.attr('href');
-		let totalRows = $target.data('totalRows');
+		let totalItems = $target.data('totalItems');
 
-		showOrHideAction($target, totalRows, $this);
+		showOrHideAction($target, totalItems, $this);
 
 		$this.bind('click', function (e) {
 
@@ -19,7 +19,7 @@ export default function () {
 				url: source,
 				success: function (data) {
 					$target.append(data);
-					showOrHideAction($target, totalRows, $this);
+					showOrHideAction($target, totalItems, $this);
 				},
 			});
 

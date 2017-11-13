@@ -20,7 +20,8 @@ import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
 import dataList from './components/data-list';
-import tableActions from './components/table-actions';
+import tableSelect from './components/table-select';
+import entityCollectionActions from './components/entity-collection-actions';
 import invoiceHistory from './components/invoice-history';
 
 $(function () {
@@ -39,7 +40,8 @@ $(function () {
 	walletTransferAmount();
 	dataList();
 	textToggle();
-	tableActions();
+	entityCollectionActions();
+	tableSelect();
 	invoiceHistory();
 });
 
