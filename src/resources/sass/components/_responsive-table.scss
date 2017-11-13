@@ -11,7 +11,7 @@
 				animation: loadFromRight $duration-fast $ease-in-out;
 			}
 
-			.section__sub-title {
+			.js-hide-section {
 				@include max-screen($screen-sm-max) {
 					display: block;
 				}
@@ -19,12 +19,35 @@
 		}
 
 		&.js-load-from-left {
-			animation: loadFromLeft $duration-fast $ease-in-out;
+			.list-group {
+				animation: loadFromLeft $duration-fast $ease-in-out;
+			}
 		}
 
 		.tab-content {
 			display: none;
 		}
+	}
+}
+
+
+.js-hide-section {
+	display: none;
+	margin-bottom: $margin-default;
+	font-size: 18px;
+	font-weight: 700;
+	color: inherit;
+
+	.icon {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 15px;
+		color: $color-base-complement;
+	}
+
+	&:hover,
+	&:focus {
+		color: inherit;
 	}
 }
 
@@ -41,19 +64,6 @@
 
 	@include min-screen($screen-sm) {
 		display: none;
-	}
-}
-
-.section__sub-title {
-	display: none;
-	font-size: 18px;
-	font-weight: 700;
-
-	.icon {
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 15px;
-		color: $color-base-complement;
 	}
 }
 
