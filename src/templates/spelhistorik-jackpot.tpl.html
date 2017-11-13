@@ -1,0 +1,72 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-in"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<div class="my-pages container">
+
+		<div class="block block-hero block-hero--mini">
+			<h1 class="block-hero__page-title">
+				Spela Bingo och skrapa lotter hos Miljonlotteriet
+			</h1>
+			<h2 class="h1 no-spacing">Spelhistorik</h2>
+		</div>
+
+		<section class="table-section section block block-content">
+			<h4 class="table__title">Mina jackpotandelar</h4>
+			<p class="table__text">Nedan kan du se hur många jackpotandelar du har i respektive dragning under 2017.<br/>
+				Alla våra prenumerationslotter ger dig jackpotandelar.</p>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="table-wrapper">
+						<div class="table-pane table-pane--active" role="tabpanel">
+							<p class="table__title-block">Mina jackpotandelar</p>
+							<table class="responsive-table">
+								<thead>
+									<tr>
+										<th>Dragning</th>
+										<th>Datum</th>
+										<th>Antal andelar</th>
+									</tr>
+								</thead>
+								<tbody id="history-jackpot-table-data" data-total-items="8">
+									<tr>
+										<td data-header="Dragning">Jackpot 2017 - Dragning 1</td>
+										<td data-header="Datum">2016-05-01 - 2016-06-01</td>
+										<td data-header="Antal andelar">12 st</td>
+									</tr>
+									<tr>
+										<td data-header="Dragning">Jackpot 2017 - Dragning 2</td>
+										<td data-header="Datum">2016-05-01 - 2016-06-01</td>
+										<td data-header="Antal andelar">12 st</td>
+									</tr>
+									<tr>
+										<td data-header="Dragning">Jackpot 2017 - Dragning 3</td>
+										<td data-header="Datum">2016-05-01 - 2016-06-01</td>
+										<td data-header="Antal andelar">12 st</td>
+									</tr>
+									<tr>
+										<td data-header="Dragning">Jackpot 2017 - Dragning 4</td>
+										<td data-header="Datum">2016-05-01 - 2016-06-01</td>
+										<td data-header="Antal andelar">12 st</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="entity-collection-actions">
+								<a class="btn btn-primary" data-target="#history-jackpot-table-data" href="/ajax/account-history/history-jackpot.html" >Visa fler</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": false})
