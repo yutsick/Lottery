@@ -93,10 +93,10 @@
 		transform: translateY(-50%);
 
 		&:before {
+			font-family: $base-icon-family;
 			content: "\e906";
 			display: block;
 			font-size: 20px;
-			font-family: "ml-icons";
 			color: $color-blue;
 		}
 
@@ -333,6 +333,29 @@
 	}
 
 	@include max-screen($screen-xs-max) {
+
+		tbody tr td {
+			width: 33%;
+
+			&:nth-of-type(2) {
+				text-align: center;
+			}
+
+			&:nth-of-type(3) {
+				text-align: right;
+			}
+
+			&:nth-of-type(4) {
+				text-align: left;
+				width: 50%;
+			}
+
+			&:nth-of-type(5) {
+				width: 50%;
+				text-align: right;
+			}
+		}
+
 		.dropdown-open { border-bottom: 0; }
 
 		.dropdown-open + .invoice-history-dropdown { display: block; }
