@@ -1,6 +1,6 @@
 <section class="section product-list-blocks">
 	<div class="container@@class">
-		<div class="row equal-height" data-total-items="12">
+		<div class="row equal-height" data-total-items="12" id="@@collectionId">
 			@@if (context.status != "ordered") {
 				@@loop('blocks/product-list/_product-item-full.html', [
 					{
@@ -84,5 +84,10 @@
 			}
 
 		</div>
+	@@if (context.collectionId) {
+		<div class="entity-collection-actions">
+			<a class="btn btn-primary" data-target="#@@collectionId" href="@@dataSourceUrl" >Visa fler</a>
+		</div>
+	}
 	</div>
 </section>
