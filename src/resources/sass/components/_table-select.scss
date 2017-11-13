@@ -5,6 +5,7 @@
 
 .table-select + .select2 {
 	min-width: 200px;
+	font-family: $base-font-family;
 
 	&.select2-container--open .select2-selection__arrow:before {
 		transform: rotate(180deg);
@@ -37,6 +38,7 @@
 		border-radius: 4px;
 		border: 1px solid #e5e5e5;
 		line-height: 44px;
+		outline: none;
 	}
 
 	.select2-selection__rendered {
