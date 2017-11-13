@@ -1,0 +1,127 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-in"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<div class="my-pages container">
+
+		<div class="block block-hero block-hero--mini">
+			<h1 class="block-hero__page-title">
+				Spela Bingo och skrapa lotter hos Miljonlotteriet
+			</h1>
+			<h2 class="h1 no-spacing">Spelhistorik</h2>
+		</div>
+
+		<section class="table-section section block block-content">
+			<h4 class="table__title">Onlinespel</h4>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="table-wrapper">
+						<div class="form-group responsive-table-filter">
+							<label class="table__label" for="tableSelect">Visa:</label>
+							<select id="tableSelect" class="table-select form-control" name="tableSelect">
+								<option value="history-settled" id="historySettled">Avgjorda</option>
+								<option value="history-dummy" id="historyDummy">Lorem Ipsum</option>
+							</select>
+						</div>
+
+						<div id="history-settled" class="table-pane table-pane--active" role="tabpanel">
+							<p class="table__title-block">Avgjorda spel</p>
+							<table class="responsive-table">
+								<thead>
+									<tr>
+										<th>Tidpunkt</th>
+										<th>Spel</th>
+										<th>Insats</th>
+										<th>Utfall</th>
+									</tr>
+								</thead>
+								<tbody id="history-settled-table-data" data-total-items="12">
+									<tr>
+										<td data-header="Tidpunkt">Idag 14:01</td>
+										<td data-header="Spel">Femkronan</td>
+										<td data-header="Insats">45.00 kr</td>
+										<td class="highlight" data-header="Utfall">250.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">Idag 12:00</td>
+										<td data-header="Spel">Word o'hoy</td>
+										<td data-header="Insats">200.00 kr</td>
+										<td data-header="Utfall">60.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Bingo</td>
+										<td data-header="Insats">20.00 kr</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Bingo</td>
+										<td data-header="Insats">20.00 kr</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="entity-collection-actions">
+								<a class="btn btn-primary" data-target="#history-settled-table-data" href="/ajax/account-history/history-settled.html" >Visa fler</a>
+							</div>
+						</div>
+
+						<div id="history-dummy" class="table-pane" role="tabpanel">
+							<p class="table-title">Lorem ipsum</p>
+							<table class="responsive-table">
+								<thead>
+								<tr>
+									<th>Tidpunkt</th>
+									<th>Spel</th>
+									<th>Insats</th>
+									<th>Utfall</th>
+								</tr>
+								</thead>
+								<tbody id="history-dummy-table-data" data-total-items="12">
+								<tr>
+									<td data-header="Tidpunkt">Idag 14:01</td>
+									<td data-header="Spel">Word o'hoy</td>
+									<td data-header="Insats">145.00 kr</td>
+									<td class="highlight" data-header="Utfall">350.00 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">Idag 12:00</td>
+									<td data-header="Spel">Femkronan</td>
+									<td data-header="Insats">20.00 kr</td>
+									<td data-header="Utfall">40.00 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2017-10-27</td>
+									<td data-header="Spel">Femkronan</td>
+									<td data-header="Insats">30.00 kr</td>
+									<td class="highlight" data-header="Utfall">60.00 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2017-10-27</td>
+									<td data-header="Spel">Bingo</td>
+									<td data-header="Insats">50.00 kr</td>
+									<td class="highlight" data-header="Utfall">60.00 kr</td>
+								</tr>
+								</tbody>
+							</table>
+
+							<div class="entity-collection-actions">
+								<a class="btn btn-primary" data-target="#history-dummy-table-data" href="/ajax/account-history/history-settled.html" >Visa fler</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": false})

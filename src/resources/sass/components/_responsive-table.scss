@@ -1,131 +1,9 @@
-.table-section {
-	@include max-screen($screen-sm-max) {
-		&.js-load-from-right {
-			.section__heading,
-			.nav {
-				display: none;
-			}
-
-			.tab-content {
-				display: block;
-				animation: loadFromRight $duration-fast $ease-in-out;
-			}
-
-			.js-hide-section {
-				@include max-screen($screen-sm-max) {
-					display: block;
-				}
-			}
-		}
-
-		&.js-load-from-left {
-			.list-group {
-				animation: loadFromLeft $duration-fast $ease-in-out;
-			}
-		}
-
-		.tab-content {
-			display: none;
-		}
-	}
-}
-
-.js-hide-section {
-	display: none;
-	margin-bottom: $margin-default;
-	font-family: $base-heading-family;
-	font-size: 18px;
-	color: inherit;
-
-	.icon {
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 15px;
-		color: $color-base-complement;
-	}
-
-	&:hover,
-	&:focus {
-		color: inherit;
-	}
-}
-
-.table-title {
-	margin-bottom: 0;
-	padding: $padding-medium;
-	border: 1px solid #a2c3ff;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	background-color: #d6eeff;
-	font-size: 16px;
-	font-weight: $bold;
-	color: $color-base-primary;
-
-	@include min-screen($screen-sm) {
-		display: none;
-	}
-}
-
-.table-pane {
-	display: none;
-
-	&--active {
-		display: block;
-	}
-}
-
-.table-label {
-	font-weight: $bold;
-}
-
-.table-select + .select2 {
-	min-width: 200px;
-
-	&.select2-container--open .select2-selection__arrow:before {
-		transform: rotate(180deg);
-	}
-
-	.select2-selection__arrow {
-		top: 50%;
-		right: 20px;
-		width: auto;
-		height: auto;
-		transform: translateY(-50%);
-
-		&:before {
-			content: "\e906";
-			display: block;
-			font-size: 20px;
-			font-family: "ml-icons";
-			color: $color-blue;
-		}
-
-		b {
-			height: 0;
-			border: none;
-		}
-	}
-
-	.select2-selection {
-		height: 44px;
-		padding: 5px;
-		border-radius: 4px;
-		border: 1px solid #e5e5e5;
-		line-height: 44px;
-	}
-
-	.select2-selection__rendered {
-		font-weight: $bold;
-		vertical-align: middle;
-		line-height: 32px;
-
-		span {
-			padding-top: $padding-small;
-		}
-	}
-}
-
+/* General responsive table styling */
 .responsive-table {
+	th {
+		white-space: nowrap;
+	}
+
 	td {
 		font-weight: $bold;
 		color: $color-blueberry;
@@ -333,6 +211,29 @@
 	}
 
 	@include max-screen($screen-xs-max) {
+
+		tbody tr td {
+			width: 33%;
+
+			&:nth-of-type(2) {
+				text-align: center;
+			}
+
+			&:nth-of-type(3) {
+				text-align: right;
+			}
+
+			&:nth-of-type(4) {
+				text-align: left;
+				width: 50%;
+			}
+
+			&:nth-of-type(5) {
+				width: 50%;
+				text-align: right;
+			}
+		}
+
 		.dropdown-open { border-bottom: 0; }
 
 		.dropdown-open + .invoice-history-dropdown { display: block; }
