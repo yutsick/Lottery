@@ -5,6 +5,8 @@ export default function () {
 
 		$(this).parents('.data-list__cell--actions')
 			.next('.data-list__cell--mobile-actions')
-			.toggleClass('data-list__cell--active');
+			.toggleClass('data-list__cell--active')
+			.find('.data-list__sub-actions')
+			.slideToggle();
 	});
 }
