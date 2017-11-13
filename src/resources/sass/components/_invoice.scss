@@ -24,7 +24,7 @@
 	}
 
 	p {
-		color:  $color-base-complement;
+		color: $color-base-complement;
 		font-size: 11px;
 	}
 
@@ -39,6 +39,8 @@
 	color: #fff;
 	line-height: 30px;
 	margin-right: 15px;
+	display: flex;
+	justify-content: center;
 }
 
 .invoice__icon--warning {
