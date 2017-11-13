@@ -30,7 +30,6 @@
 	}
 }
 
-
 .js-hide-section {
 	display: none;
 	margin-bottom: $margin-default;
@@ -51,7 +50,15 @@
 	}
 }
 
-.table-title {
+.table-pane {
+	display: none;
+
+	&--active {
+		display: block;
+	}
+}
+
+.table__title-block {
 	margin-bottom: 0;
 	padding: $padding-medium;
 	border: 1px solid #a2c3ff;
@@ -67,18 +74,20 @@
 	}
 }
 
-.table-pane {
-	display: none;
-
-	&--active {
-		display: block;
-	}
+.table__text {
+	max-width: 750px;
+	margin-top: 0;
+	margin-bottom: $margin-default;
+	font-family: $basic-heading-family;
+	font-weight: $bold;
+	color: $color-blueberry;
 }
 
-.table-label {
+.table__label {
 	font-weight: $bold;
 }
 
+/* Selects */
 .table-select + .select2 {
 	min-width: 200px;
 
@@ -125,7 +134,12 @@
 	}
 }
 
+/* General table styling */
 .responsive-table {
+	th {
+		white-space: nowrap;
+	}
+
 	td {
 		font-weight: $bold;
 		color: $color-blueberry;
