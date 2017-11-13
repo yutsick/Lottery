@@ -36,53 +36,58 @@ $base-heading-family: 'UniNeueHeavy';
 $semi-heading-family: 'Proxima Nova';
 $basic-heading-family: 'Proxima Nova';
 
+// Icons
+$base-icon-family: "ml-icons";
+$icon-chevron-down: "\e906";
+$icon-chevron-up: "\e909";
+
 /**
  * Colors
  */
 
 // Theme Palette
-$color-snow: #FFFFFF;
-$color-dark-white:#f5f8fa;
+$color-snow: #ffffff;
+$color-dark-white: #f5f8fa;
 $color-space: #000;
 $color-blue-deep: #004673; // *new*
-$color-blue-dark: #006CB0; //  *new*
-$color-blue: #0078C0; // *new*
+$color-blue-dark: #006cb0; //  *new*
+$color-blue: #0078c0; // *new*
 $color-light-blue: #1670f6;
-$color-blue-light: #008EE3; // *new*
-$color-turquoise: #00AFBA; // *new*
+$color-blue-light: #008ee3; // *new*
+$color-turquoise: #00afba; // *new*
 $color-new-turqoiuse: #00b5c1;
-$color-turquoise-light: #A0E4E7; // *new*
-$color-green: #79CD8B;
-$color-green-light: #B3D8A0;
+$color-turquoise-light: #a0e4e7; // *new*
+$color-green: #79cd8b;
+$color-green-light: #b3d8a0;
 $color-light-pink: #fde3f1;
-$color-yellow: #FFD72B; // *new*
-$color-yellow-light: #FFEC9C; // *new*
+$color-yellow: #ffd72b; // *new*
+$color-yellow-light: #ffec9c; // *new*
 $color-light-orange: #fbf1eb;
-$color-orange: #FA640F; // *new*
-$color-head-orange: #FF9148;
-$color-orange-light: #FFAD6C; // *new*
-$color-border-orange: #FAB890;
+$color-orange: #fa640f; // *new*
+$color-head-orange: #ff9148;
+$color-orange-light: #ffad6c; // *new*
+$color-border-orange: #fab890;
 $color-red: #f04c60;
-$color-pink: #DF4D9B; // *new*
-$color-pink-light: #F19FC8; // *new*
-$color-border-pink: #F7A4D1;
-$color-black: #2E3237; // Color dark gray *new*
-$color-black-light: #4A5863;
-$color-gray: #91A5B8; // UI elements
-$color-gray-light: #BDD0DC;
-$color-gray-border: #D8DDE6;
+$color-pink: #df4d9b; // *new*
+$color-pink-light: #f19fc8; // *new*
+$color-border-pink: #f7a4d1;
+$color-black: #2e3237; // Color dark gray *new*
+$color-black-light: #4a5863;
+$color-gray: #91a5b8; // UI elements
+$color-gray-light: #bdd0dc;
+$color-gray-border: #d8dde6;
 
-$color-ocean: #37454E;
+$color-ocean: #37454e;
 $color-blueberry: #536785;
-$color-cloud: #F2F5F7;
-$color-feather: #DEE1E8;
+$color-cloud: #f2f5f7;
+$color-feather: #dee1e8;
 
 $color: #475964; // Color light gray
-$color: #BAD1DE; // Color heaven gray *new*
-$color: #85A3B6; // Color blue gray *new*
+$color: #bad1de; // Color heaven gray *new*
+$color: #85a3b6; // Color blue gray *new*
 
-$color-stone: #F9F9F9;
-$color-gravel: #E5E5E5;
+$color-stone: #f9f9f9;
+$color-gravel: #e5e5e5;
 
 // Base colors
 $color-base-primary: $color-black; // Text
@@ -126,7 +131,7 @@ $opacity-4: 0.22;
 $opacity-5: 0.06;
 
 // Basic colors
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-white-2: rgba(255, 255, 255, $opacity-2);
 $color-white-3: rgba(255, 255, 255, $opacity-3);
 $color-white-4: rgba(255, 255, 255, $opacity-4);
@@ -158,7 +163,6 @@ $delay-faster: 0.05s;
 $delay-fast: 0.26s;
 $delay-normal: 0.6s;
 $delay-slow: 1s;
-
 
 // Easing
 $ease-standard: cubic-bezier(0.17, 0.04, 0.03, 0.94);

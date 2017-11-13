@@ -74,16 +74,12 @@
 	opacity: 0;
 	visibility: hidden;
 	transform: translateX(50px);
-	order: 2;
-	height: 0;
 
 	@include min-screen($screen-sm-min) {
-		height: auto;
 		transition: opacity $duration-fast $ease-in-out,
 		transform $duration-fast $ease-in-out,
 		visibility $duration-fast $ease-in-out;
 		margin-right: 40px;
-		order: 1;
 	}
 
 	a, button {
@@ -98,38 +94,51 @@
 
 .data-list__cell.data-list__cell--actions {
 	color: #77839e;
-	margin-bottom: 0;
-	text-align: right;
 	display: flex;
-	flex-direction: column;
+	flex: 6;
+	justify-content: flex-end;
+	flex-direction: row;
+
+	.btn-data-action {
+		text-align: center;
+	}
+
+	.data-list__sub-actions {
+		display: none;
+
+		@include min-screen($screen-sm-min) {
+			display: flex;
+		}
+	}
+
+}
+
+.data-list__cell.data-list__cell--mobile-actions {
+	width: 100%;
+	flex: 100%;
+	margin: 0;
 
 	@include min-screen($screen-sm-min) {
-		flex: 6;
-		justify-content: flex-end;
+		display: none;
+	}
+
+	.data-list__sub-actions {
+		height: 0;
 		text-align: left;
-		flex-direction: row;
+
+		:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	.btn-data-action {
-		order: 1;
-		text-align: right;
-
-		@include min-screen($screen-sm-min) {
-			margin-bottom: 0px;
-			order: 2;
-			text-align: center;
-		}
+		text-align: left;
+		display: block;
 	}
 }
 
 .data-list__cell.data-list__cell--active {
-	> .btn-data-action {
-		margin-bottom: 20px;
-
-		@include min-screen($screen-sm-min) {
-			margin-bottom: 0;
-		}
-	}
+	> .btn-data-action { }
 
 	.data-list__sub-actions {
 		opacity: 1;
