@@ -54,7 +54,7 @@
 		height: 44px;
 		padding: 5px;
 		border-radius: 4px;
-		border: 1px solid #E5E5E5;
+		border: 1px solid #e5e5e5;
 		line-height: 44px;
 	}
 
@@ -216,12 +216,21 @@
 
 .responsive-table-filter {
 	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include min-screen($screen-sm-min) {
+		display: block;
+	}
+
 	label {
 		color: $color-base-complement;
 		display: inline-block;
-		margin-right: 15px;
 		font-size: 18px;
 		font-weight: $semibold;
+		margin-right: 15px;
+		margin-bottom: 0;
 	}
 
 	.form-control {
@@ -250,6 +259,10 @@
 		}
 	}
 
+	.btn-data-action {
+
+	}
+
 	.invoice-history-dropdown {
 		td {
 			width: 100%;
@@ -269,9 +282,14 @@
 		.dropdown-open + .invoice-history-dropdown { display: block; }
 
 		.invoice-history-dropdown {
+			.invoice-history-dropdown__wrapper {
+				overflow: hidden;
+			}
+
 			.invoice-history-dropdown__cell {
 				padding: 5px 0;
 				width: 50%;
+				float: left;
 
 				span {
 					display: block;
