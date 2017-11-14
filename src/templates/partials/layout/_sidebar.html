@@ -1,7 +1,8 @@
 <aside id="sidebar" class="ml-2017">
 	<div class="sidebar-navigation-wrapper">
+
 		<ul class="sidebar-navigation">
-			<li class="has-content">
+			<li class="sidebar-navigation__item has-content">
 				<a class="logotype" href="/" target="_self">
 					<img src="assets/img/brand/ml-logotype-old.png" alt="Miljonlotteriet">
 				</a>
@@ -12,72 +13,77 @@
 					</form>
 				</div>
 			</li>
-			<li class="has-sub-menu">
-				<a>
-					<i class="icon icon-game"></i>
-					<div>
+
+			<li class="sidebar-navigation__item has-sub-menu">
+				<a class="sidebar-navigation__link" href="/">
+					<i class="sidebar-navigation__icon icon icon-game"></i>
+					<span class="sidebar-navigation__name">
 						Spela
-						<span>Bingo och Lotter</span>
-					</div>
+						<span class="sidebar-navigation__desc">Bingo och Lotter</span>
+					</span>
 				</a>
-				@@include('layout/sidebar/_sub-navigation-collapsed.html')
+				@@include('layout/sidebar/_sub-navigation-play.html')
 			</li>
-			<li>
-				<a href="/">
-					<i class="icon icon-star"></i>
-					<div>
-						<!-- Example: Use if different text in mobile -->
-						<span>Vinster</span>
-						<span>Vinster & inspiration</span>
-					</div>
+
+			<li class="sidebar-navigation__item">
+				<a class="sidebar-navigation__link" href="/">
+					<i class="sidebar-navigation__icon icon icon-star"></i>
+					<span class="sidebar-navigation__name">
+						Vinster
+						<span class="sidebar-navigation__desc">Vinster & inspiration</span>
+					</span>
 				</a>
 			</li>
 
-			<li>
-				<a href="/">
-					<i class="icon icon-heart"></i>
-					<div>
+			<li class="sidebar-navigation__item">
+				<a class="sidebar-navigation__link" href="/">
+					<i class="sidebar-navigation__icon icon icon-heart"></i>
+					<span class="sidebar-navigation__name">
 						Ändamål
-						<span>Du gör skillnad</span>
-					</div>
+						<span class="sidebar-navigation__desc">Du gör skillnad</span>
+					</span>
 				</a>
 			</li>
-			<li class="has-sub-menu">
-				<a>
-					<i class="icon icon-more"></i>
-					<div>
+
+			<li class="sidebar-navigation__item has-sub-menu">
+				<a class="sidebar-navigation__link" href=""/>
+					<i class="sidebar-navigation__icon icon icon-more"></i>
+					<span class="sidebar-navigation__name">
 						Övrigt
-						<span>Mer om oss</span>
-					</div>
+						<span class="sidebar-navigation__desc">Mer om oss</span>
+					</span>
+
 				</a>
-				@@include('layout/sidebar/_sub-navigation.html')
+				@@include('layout/sidebar/_sub-navigation-example.html')
 			</li>
 
 			@@if (logged_in === true) {
-			<li class="has-sub-menu">
-				<a>
-					<i class="icon icon-user">
+			<li class="sidebar-navigation__item has-sub-menu">
+				<a class="sidebar-navigation__link" href="/">
+					<i class="sidebar-navigation__icon icon icon-user">
 						@@include('elements/_notification.html', { "number": "1" })
 					</i>
-					<div>
+					<span class="sidebar-navigation__name">
 						Mina sidor
-						<span>Överföringar mm.</span>
-					</div>
+						<span class="sidebar-navigation__desc">Överföringar mm.</span>
+					</span>
 				</a>
-				@@include('layout/sidebar/_sub-navigation.html')
+				@@include('layout/sidebar/_sub-navigation-my-pages.html')
 			</li>
-			<li>
-				<a href="/">
-					<i class="icon icon-insert"></i>
-					<div>
+
+			<li class="sidebar-navigation__item">
+				<a class="sidebar-navigation__link" href="/">
+					<i class="sidebar-navigation__icon icon icon-insert"></i>
+					<span class="sidebar-navigation__name">
 						Insättning
-						<span>Sätt in pengar</span>
-					</div>
+						<span class="sidebar-navigation__desc">Sätt in pengar</span>
+					</span>
 				</a>
 			</li>
-			<li class="has-content">
+
+			<li class="sidebar-navigation__item has-content">
 				<div class="user">
-					<i class="icon icon-default hidden"></i>
+					<i class="sidebar-navigation__icon icon icon-default hidden"></i>
 					<div>
 						<span class="user__name">Stefan Jakobsson</span>
 						<span class="user__wallet"><a href="/" target="_self">Spelplånbok <span>450kr</span></a></span>
@@ -94,6 +100,6 @@
 			lott</a>
 		@@if (logged_in === true) {
 		<button class="btn btn-default btn-icon js-action-logout"><i class="icon icon-leave"></i>Logga ut</button>
-		</u}
+		}
 	</div>
 </aside>
