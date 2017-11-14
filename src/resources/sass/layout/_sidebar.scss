@@ -16,24 +16,25 @@
 	}
 
 	@include screen($screen-sm-min, $screen-md-max) {
+		width: $sidebar-width-mobile;
 		left: $sidebar-width-mobile;
 		margin-left: -$sidebar-width-mobile;
-		width: $sidebar-width-mobile;
 	}
 
 	&.js-is-active { // on #sidebar
 		@include max-screen($screen-sm-min) {
+			width: $sidebar-width-mobile;
 			left: $sidebar-width-mobile;
 			margin-left: -$sidebar-width-mobile;
-			width: $sidebar-width-mobile;
 		}
 	}
 }
 
-.sidebar-navigation-wrapper{
+.sidebar-navigation-wrapper {
 	position: relative;
 	height: 100%;
 }
 
-@import "sidebar/sidebar-navigation";
+//@import "sidebar/sidebar-navigation";
 @import "sidebar/sidebar-account";
+@import "sidebar/sidebar-navigation-refactored";
