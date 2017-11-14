@@ -12,6 +12,7 @@ export default function () {
 	let $body = $('body');
 	let $page_wrapper = $('#page-wrapper');
 	let $sidebar = $('#sidebar');
+	let $nav = $('.sidebar-navigation');
 	let $nav_items = $('.sidebar-navigation li');
 	let active_class = 'js-is-active';
 	let navigation_trigger = false;
@@ -143,8 +144,10 @@ export default function () {
 
 		if (state_sidebar == 'active') {
 			$sidebar.addClass(active_class);
+            $nav.addClass('js-active-sidebar');
 		} else {
 			$sidebar.removeClass(active_class);
+            $nav.removeClass('js-active-sidebar');
 		}
 	}
 }
