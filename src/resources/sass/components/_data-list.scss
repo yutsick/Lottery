@@ -47,7 +47,10 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	h3 { margin: 0; }
+	h3 {
+		font-family: $base-font-family;
+		margin: 0;
+	}
 }
 
 .data-list__cell {

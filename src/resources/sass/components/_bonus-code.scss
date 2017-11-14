@@ -11,6 +11,12 @@
 	}
 }
 
-.bonus-code__success { display: none; }
+.bonus-code__message { display: none; }
 
-.bonus-code__error { display: none; }
+.bonus-code__error {
+	margin-top: 20px;
+
+	@include min-screen($screen-sm-min) {
+		margin-top: 0;
+	}
+}
