@@ -1,0 +1,68 @@
+<ul class="sub-navigation sub-navigation--first">
+	<li class="sub-navigation__item">
+		<a class="sub-navigation__link" href="logged-in.html">
+			<span class="sub-navigation__name">Startsida</span>
+		</a>
+	</li>
+	<li class="sub-navigation__item">
+		<a class="sub-navigation__link" href="minauppgifter.html">
+			<span class="sub-navigation__name">Mina uppgifter</span>
+		</a>
+	</li>
+	<li class="sub-navigation__item">
+		<a class="sub-navigation__link" href="meddelande.html">
+			<span class="sub-navigation__name">Mina meddelanden</span>
+			<span class="sub-navigation__desc">Överföringar mm.</span>
+			@@include('elements/_notification.html', { "number": "20" })
+		</a>
+	</li>
+	<li class="sub-navigation__item">
+		<a class="sub-navigation__link" href="spelkonto.html">
+			<span class="sub-navigation__name">Spelkonto</span>
+			<span class="sub-navigation__desc">Överföringar mm.</span>
+		</a>
+	</li>
+	<li class="sub-navigation__item sub-navigation__item--has-children">
+		<a class="collapsed sub-navigation__link" data-toggle="collapse" data-parent=".sub-navigation" href="#collapse-navigation-history">
+			<span class="sub-navigation__name">Spelhistorik</span>
+			<span class="sub-navigation__desc">Överföringar mm.</span>
+		</a>
+
+		<ul class="sub-navigation collapse" id="collapse-navigation-history">
+			<li class="sub-navigation__item">
+				<a class="sub-navigation__link" href="spelhistorik-onlinespel.html">
+					<span class="sub-navigation__name">Onlinespel</span>
+				</a>
+			</li>
+			<li class="sub-navigation__item">
+				<a class="sub-navigation__link" href="spelhistorik-registrerade-lotter.html">
+					<span class="sub-navigation__name">Registrerade lotter</span>
+				</a>
+			</li>
+			<li class="sub-navigation__item">
+				<a class="sub-navigation__link" href="spelhistorik-nitlottsmiljonaren.html">
+					<span class="sub-navigation__name">Nitlottsdragningen</span>
+				</a>
+			</li>
+			<li class="sub-navigation__item">
+				<a class="sub-navigation__link" href="spelhistorik-jackpot.html">
+					<span class="sub-navigation__name">Jackpotandelar</span>
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="sub-navigation__item">
+		<a class="sub-navigation__link" href="prenumerationer.html">
+			<span class="sub-navigation__name">Prenumerationer</span>
+			<span class="sub-navigation__desc">Överföringar mm.</span>
+		</a>
+	</li>
+	<li class="sub-navigation__item">
+		<a class="sub-navigation__link" href="bonuskod.html">
+			<span class="sub-navigation__name">Bonuskod</span>
+			<span class="sub-navigation__desc">Överföringar mm.</span>
+		</a>
+	</li>
+</ul>
+
+
