@@ -1,7 +1,7 @@
 {
   "d": {
     "__type": "com.mogul.miljonlotteriet.model.BaseRequest",
-    "BRSuccess": false,
+    "BRSuccess": true,
     "BRSessionExpired": false,
     "BRErrors": [],
     "BRInfo": [],
