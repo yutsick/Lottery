@@ -10,6 +10,10 @@
 	}
 
 	.block-promotion__link {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+
 		@include max-screen($screen-xs-max) {
 			display: block !important;
 		}
