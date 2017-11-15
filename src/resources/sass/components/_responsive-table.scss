@@ -64,6 +64,16 @@
 				font-weight: $bold;
 				color: $color-base-primary;
 			}
+
+			&.table__order-second {
+				order: 2;
+				text-align: right;
+			}
+
+			&.table__order-last {
+				order: 100; // Always last
+				text-align: left;
+			}
 		}
 	}
 }
