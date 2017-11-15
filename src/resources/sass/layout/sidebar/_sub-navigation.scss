@@ -39,9 +39,7 @@
 }
 
 .sub-navigation__item {
-	//&:not(:first-child) {
-		border-bottom: 1px solid $color-border;
-	//}
+	border-bottom: 1px solid $color-border;
 }
 
 /* Sub menu level 2 */
