@@ -31,18 +31,10 @@
 .modal-body,
 .modal-footer {
 	padding: 25px;
-	font-size: 12px;
 	line-height: 20px;
 
 	p {
 		color: $color-base-complement;
-	}
-
-	.account-form__error {
-		p {
-			// color: #77839D;
-			// font-weight: 300;
-		}
 	}
 }
 
@@ -57,7 +49,7 @@
 	font-weight: 500;
 	margin-top: 0;
 	margin-bottom: -10px;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .modal-title1 {
@@ -85,12 +77,9 @@
 .modal-intro {
 	margin-top: -10px;
 	line-height: 2;
-	// margin-bottom: 0;
 }
 
 .modal-body {
-	padding-bottom: 0;
-
 	.form-control {
 		font-size: 12px;
 		line-height: 20px;
@@ -106,8 +95,11 @@
 	border: none;
 
 	.btn {
-		margin-top: $margin-medium + $margin-medium;
 		position: relative;
+
+		&:not(:first-child) {
+			margin-top: $margin-medium + $margin-medium;
+		}
 
 		&:before {
 			content: '';
