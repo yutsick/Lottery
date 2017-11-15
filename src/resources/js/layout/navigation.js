@@ -144,10 +144,10 @@ export default function () {
 
 		if (state_sidebar == 'active') {
 			$sidebar.addClass(active_class);
-            $nav.addClass('js-active-sidebar');
+			$nav.addClass('js-active-sidebar');
 		} else {
 			$sidebar.removeClass(active_class);
-            $nav.removeClass('js-active-sidebar');
+			$nav.removeClass('js-active-sidebar');
 		}
 	}
 }
