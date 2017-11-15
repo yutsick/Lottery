@@ -25,13 +25,14 @@
 		&.top-menu__left {
 			padding: 24px;
 			color: $color-complement-sky;
+			max-height: 70px;
 
-			i {
+			.icon {
 				font-size: 18px;
-				vertical-align: middle;
 			}
 
 			span {
+				vertical-align: top;
 				font-weight: 500;
 				font-size: 12px;
 			}
@@ -54,6 +55,7 @@
 			padding: 24px;
 			font-size: 12px;
 			font-weight: 600;
+			height: 70px;
 		}
 	}
 }
