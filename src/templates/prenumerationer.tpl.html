@@ -16,7 +16,7 @@
 
 		<section class="section block block-content">
 			<div class="data-list">
-				<div class="data-list__header">
+				<div class="data-list__title">
 					<h3 class="h5">Mina prenumerationer</h3>
 				</div>
 
@@ -116,183 +116,132 @@
 		</section>
 
 		<section class="section block block-content">
+
 			<div class="tab-pane" id="account-prizes" role="tabpanel">
 				<div class="form-group responsive-table-filter">
 					<label for="tableSelect">Filtrera:</label>
 					<select id="tableSelect" class="table-select form-control" name="tableSelect">
-						<option value="physicalDelivery" id="physicalDeliveryHistory">Fyisk leverans</option>
+						<option value="physicalDelivery" id="physicalDeliveryHistory">Fysisk</option>
 						<option value="subscriptions" id="subscriptionsHistory">Prenumerationer</option>
 					</select>
 				</div>
 
 				<div id="physicalDelivery" class="table-pane table-pane--active tab-pane" role="tabpanel">
-					<p class="table__title-block">Historik</p>
-					<table class="responsive-table responsive-table--auto-td responsive-table--has-dropdown">
-						<thead>
-						<tr>
-							<th>Tidpunkt</th>
-							<th>Belopp</th>
-							<th>Typ</th>
-							<th>Status</th>
-							<th></th>
-						</tr>
-						</thead>
+					<p class="table__title-block">Fysisk</p>
+					<div class="data-list data-list--table">
+						<div class="data-list__header">
+							<div class="data-list__header-cell">Tidpunkt</div>
+							<div class="data-list__header-cell">Belopp</div>
+							<div class="data-list__header-cell">Typ</div>
+							<div class="data-list__header-cell">Status</div>
+							<div class="data-list__header-cell"></div>
+						</div>
 
-						<!-- data-total-rows needs to be multiplied by 2 here. Since each "row" consists of 2 tr.
-						in order for the "show more" content to work-->
-						<tbody id="invoice-history-table-data" data-total-items="8">
-						<tr>
-							<td data-header="Tidpunkt">Idag 14:01</td>
-							<td data-header="Belopp">40.00kr</td>
-							<td data-header="Typ">Orginal</td>
-							<td data-header="Status"><span class="text-color-orange">Obetald</span></td>
-							<td>
-								<button class="btn btn-data-action btn-with-arrow js-show-invoice-history-details"
-										data-text-toggle="Visa mindre">Visa mer
-								</button>
-							</td>
-						</tr>
-						<tr class="invoice-history-dropdown">
-							<td colspan="6">
-								<hr>
-								<div class="invoice-history-dropdown__wrapper">
-									<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+						<ul id="invoice-history-data" data-total-items="8">
+							<li>
+								<div class="data-list__cell" data-header="Tidpunkt">Idag 14:01</div>
+								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+								<div class="data-list__cell" data-header="Typ">Orginal</div>
+								<div class="data-list__cell" data-header="Status">
+									<span class="text-color-orange">Obetald</span>
 								</div>
-							</td>
-						</tr>
-						<tr>
-							<td data-header="Tidpunkt">Idag 14:01</td>
-							<td data-header="Belopp">40.00kr</td>
-							<td data-header="Typ">Orginal</td>
-							<td data-header="Status"><span class="text-color-green">Betald</span></td>
-							<td>
-								<button class="btn btn-data-action btn-with-arrow js-show-invoice-history-details"
-										data-text-toggle="Visa mindre">Visa mer
-								</button>
-							</td>
-						</tr>
-						<tr class="invoice-history-dropdown">
-							<td colspan="6">
-								<hr>
-								<div class="invoice-history-dropdown__wrapper">
-									<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+								<div class="data-list__cell data-list__cell--actions">
+									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+											data-text-toggle="Visa mindre">Visa mer
+									</button>
 								</div>
-							</td>
-						</tr>
-						<tr>
-							<td data-header="Tidpunkt">Idag 14:01</td>
-							<td data-header="Belopp">40.00kr</td>
-							<td data-header="Typ">Orginal</td>
-							<td data-header="Status"><span class="text-color-green">Betald</span></td>
-							<td>
-								<button class="btn btn-data-action btn-with-arrow js-show-invoice-history-details"
-										data-text-toggle="Visa mindre">Visa mer</i>
-								</button>
-							</td>
-						</tr>
-						<tr class="invoice-history-dropdown">
-							<td colspan="6">
-								<hr>
-								<div class="invoice-history-dropdown__wrapper">
-									<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+
+								<div class="data-list__dropdown">
+									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
 								</div>
-							</td>
-						</tr>
-						</tbody>
-					</table>
-					<div class="entity-collection-actions">
-						<a class="btn btn-primary" data-target="#invoice-history-table-data"
-						   href="/ajax/invoice-history.html">Visa fler</a>
+							</li>
+							<li>
+								<div class="data-list__cell" data-header="Tidpunkt">Idag 14:01</div>
+								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+								<div class="data-list__cell" data-header="Typ">Orginal</div>
+								<div class="data-list__cell" data-header="Status">
+									<span class="text-color-green">Obetald</span>
+								</div>
+								<div class="data-list__cell data-list__cell--actions">
+									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+											data-text-toggle="Visa mindre">Visa mer
+									</button>
+								</div>
+
+								<div class="data-list__dropdown">
+									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
+								</div>
+							</li>
+						</ul>
+
+						<div class="entity-collection-actions">
+							<a class="btn btn-primary" data-target="#invoice-history-data"
+							   href="/ajax/invoice-history.html">Visa fler</a>
+						</div>
 					</div>
 				</div>
-
 				<div id="subscriptions" class="table-pane tab-pane" role="tabpanel">
-					<p class="table__title-block">Historik</p>
-					<table class="responsive-table responsive-table--auto-td responsive-table--has-dropdown">
-						<thead>
-						<tr>
-							<th>Förfallodatum</th>
-							<th>Belopp</th>
-							<th>Typ</th>
-							<th>Status</th>
-							<th></th>
-						</tr>
-						</thead>
+					<p class="table__title-block">Prenumerationer</p>
+					<div class="data-list data-list--table">
+						<div class="data-list__header">
+							<div class="data-list__header-cell">Tidpunkt</div>
+							<div class="data-list__header-cell">Belopp</div>
+							<div class="data-list__header-cell">Typ</div>
+							<div class="data-list__header-cell">Status</div>
+							<div class="data-list__header-cell"></div>
+						</div>
 
-						<!-- data-total-rows needs to be multiplied by 2 here. Since each "row" consists of 2 tr.
-						in order for the "show more" content to work-->
-						<tbody id="subscriptions-history-table-data" data-total-items="8">
-						<tr>
-							<td data-header="Förfallodatum">Idag 14:01</td>
-							<td data-header="Belopp">40.00kr</td>
-							<td data-header="Typ">Orginal</td>
-							<td data-header="Status"><span class="text-color-orange">Obetald</span></td>
-							<td>
-								<button class="btn btn-data-action btn-with-arrow js-show-invoice-history-details"
-										data-text-toggle="Visa mindre">Visa mer
-								</button>
-							</td>
-						</tr>
-						<tr class="invoice-history-dropdown">
-							<td colspan="6">
-								<hr>
-								<div class="invoice-history-dropdown__wrapper">
-									<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+						<ul id="invoice-subscription-data" data-total-items="8">
+							<li>
+								<div class="data-list__cell" data-header="Tidpunkt">Idag 14:01</div>
+								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+								<div class="data-list__cell" data-header="Typ">Orginal</div>
+								<div class="data-list__cell" data-header="Status">
+									<span class="text-color-orange">Obetald</span>
 								</div>
-							</td>
-						</tr>
-						<tr>
-							<td data-header="Förfallodatum">Idag 14:01</td>
-							<td data-header="Belopp">40.00kr</td>
-							<td data-header="Typ">Orginal</td>
-							<td data-header="Status"><span class="text-color-green">Betald</span></td>
-							<td>
-								<button class="btn btn-data-action btn-with-arrow js-show-invoice-history-details"
-										data-text-toggle="Visa mindre">Visa mer
-								</button>
-							</td>
-						</tr>
-						<tr class="invoice-history-dropdown">
-							<td colspan="6">
-								<hr>
-								<div class="invoice-history-dropdown__wrapper">
-									<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+								<div class="data-list__cell data-list__cell--actions">
+									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+											data-text-toggle="Visa mindre">Visa mer
+									</button>
 								</div>
-							</td>
-						</tr>
-						<tr>
-							<td data-header="Förfallodatum">Idag 14:01</td>
-							<td data-header="Belopp">40.00kr</td>
-							<td data-header="Typ">Orginal</td>
-							<td data-header="Status"><span class="text-color-green">Betald</span></td>
-							<td>
-								<button class="btn btn-data-action btn-with-arrow js-show-invoice-history-details"
-										data-text-toggle="Visa mindre">Visa mer</i>
-								</button>
-							</td>
-						</tr>
-						<tr class="invoice-history-dropdown">
-							<td colspan="6">
-								<hr>
-								<div class="invoice-history-dropdown__wrapper">
-									<div class="invoice-history-dropdown__cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="invoice-history-dropdown__cell"><span>Antal:</span> 2st</div>
+
+								<div class="data-list__dropdown">
+									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
 								</div>
-							</td>
-						</tr>
-						</tbody>
-					</table>
-					<div class="entity-collection-actions">
-						<a class="btn btn-primary" data-target="#subscriptions-history-table-data"
-						   href="/ajax/invoice-history.html">Visa fler</a>
+							</li>
+							<li>
+								<div class="data-list__cell" data-header="Tidpunkt">Idag 14:01</div>
+								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+								<div class="data-list__cell" data-header="Typ">Orginal</div>
+								<div class="data-list__cell" data-header="Status">
+									<span class="text-color-green">Obetald</span>
+								</div>
+								<div class="data-list__cell data-list__cell--actions">
+									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+											data-text-toggle="Visa mindre">Visa mer
+									</button>
+								</div>
+
+								<div class="data-list__dropdown">
+									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
+								</div>
+							</li>
+						</ul>
+
+						<div class="entity-collection-actions">
+							<a class="btn btn-primary" data-target="#invoice-subscription-data"
+							   href="/ajax/invoice-history.html">Visa fler</a>
+						</div>
 					</div>
 				</div>
+
 			</div>
+
+
 		</section>
 
 	</div>
