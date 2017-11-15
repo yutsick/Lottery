@@ -27,60 +27,6 @@ label {
 	cursor: pointer;
 }
 
-// Custom checkbox and radio buttons
-.custom-checkbox-radio {
-	label {
-		padding-left: 0;
-
-		&:after {
-			content: '';
-			display: table;
-			clear: both;
-		}
-
-		.cr {
-			position: relative;
-			display: inline-block;
-			border: 1px solid $color-border;
-			background-color: $color-light;
-			border-radius: 3px;
-			width: 15px;
-			height: 15px;
-			float: left;
-			top: 2px;
-			margin-right: 10px;
-
-			.cr-icon {
-				position: absolute;
-				font-size: 12px;
-				line-height: 0;
-				top: 50%;
-				left: 10%;
-				color: #3cb567;
-			}
-		}
-
-		input[type="checkbox"] {
-			display: none;
-
-			& + .cr > .cr-icon {
-				transform: scale(1.1);
-				opacity: 0;
-				transition: all $duration-quick $delay-none $ease-in-out;
-			}
-
-			&:checked + .cr > .cr-icon {
-				transform: scale(1);
-				opacity: 1;
-			}
-
-			&:disabled + .cr {
-				opacity: .5;
-			}
-		}
-	}
-}
-
 .form-control {
 	font-size: $base-font-size;
 	font-weight: 500;

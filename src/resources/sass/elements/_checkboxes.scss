@@ -1,30 +1,109 @@
-.checkbox label {
-	padding-left: 35px;
-	min-height: 30px;
+.checkbox {
+	label {
+		min-height: 30px;
+		padding-left: 35px;
+	}
+
+	input[type="checkbox"] {
+		margin-left: -35px;
+	}
+
+	.custom-checkbox {
+		-webkit-appearance: none;
+		position: relative;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		//padding: 9px;
+		border-radius: 3px;
+		border: 1px solid #cacece;
+		background-color: #fff;
+
+		&:checked:after {
+			content: '\e905';
+			position: absolute;
+			top: 3px;
+			left: 4px;
+			font-size: 16px;
+			font-family: $base-icon-family;
+			color: #A9DB9B;
+		}
+	}
+
+	&--small {
+		label {
+			padding-left: 25px;
+			line-height: 1.5;
+		}
+
+		input[type="checkbox"] {
+			margin-top: 1px;
+			margin-left: -25px;
+		}
+
+		.custom-checkbox {
+			width: 15px;
+			height: 15px;
+
+			&:checked:after {
+				top: 1px;
+				left: 1px;
+				font-size: 12px;
+			}
+		}
+	}
 }
 
-.checkbox input[type="checkbox"] {
-	margin-left: -35px;
-}
+// Custom checkbox and radio buttons
+.custom-checkbox-radio {
+	label {
+		padding-left: 0;
+		line-height: 1.5;
 
-.custom-checkbox {
-	-webkit-appearance: none;
-	background-color: #fff;
-	border: 1px solid #cacece;
-	padding: 9px;
-	border-radius: 3px;
-	display: inline-block;
-	position: relative;
-	width: 24px; height: 24px;
-	
-}
+		&:after {
+			content: '';
+			display: table;
+			clear: both;
+		}
 
-.custom-checkbox:checked:after {
-	content: '\e905';
-	font-size: 16px;
-	font-family: "ml-icons";
-	position: absolute;
-	top: 3px;
-	left: 4px;
-	color: #A9DB9B;
+		.cr {
+			position: relative;
+			display: inline-block;
+			border: 1px solid $color-border;
+			background-color: $color-light;
+			border-radius: 3px;
+			width: 15px;
+			height: 15px;
+			float: left;
+			margin-right: 10px;
+
+			.cr-icon {
+				position: absolute;
+				font-size: 12px;
+				line-height: 0;
+				top: 50%;
+				left: 10%;
+				color: #3cb567;
+			}
+		}
+
+		input[type="checkbox"] {
+			display: none;
+
+			& + .cr > .cr-icon {
+				transform: scale(1.1);
+				opacity: 0;
+				transition: all $duration-quick $delay-none $ease-in-out;
+			}
+
+			&:checked + .cr > .cr-icon {
+				transform: scale(1);
+				opacity: 1;
+			}
+
+			&:disabled + .cr {
+				opacity: .5;
+			}
+		}
+	}
 }
