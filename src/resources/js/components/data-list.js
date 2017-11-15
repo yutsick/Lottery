@@ -9,4 +9,8 @@ export default function () {
 			.find('.data-list__sub-actions')
 			.slideToggle();
 	});
+
+	$(document).on("click", ".js-toggle-data-list-dropdown", function () {
+		$(this).parents('li').find('.data-list__dropdown').slideToggle();
+	});
 }
