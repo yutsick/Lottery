@@ -31,9 +31,6 @@
 		}
 
 		&-icon {
-			padding: 9px 30px;
-			text-align: center;
-
 			@include screen($screen-sm-min, $screen-md-max) {
 				padding: 0 2px;
 			}
