@@ -76,46 +76,129 @@
 						</div>
 
 						<div id="history-current" class="table-pane" role="tabpanel">
-							<p class="table__title-block">Lorem ipsum</p>
+							<p class="table__title-block">Pågående spel</p>
 							<table class="responsive-table">
 								<thead>
-								<tr>
-									<th>Tidpunkt</th>
-									<th>Spel</th>
-									<th>Insats</th>
-									<th>Utfall</th>
-								</tr>
-								</thead>
-								<tbody id="history-current-table-data" data-total-items="12">
-								<tr>
-									<td data-header="Tidpunkt">Idag 14:01</td>
-									<td data-header="Spel">Word o'hoy</td>
-									<td data-header="Insats">145.00 kr</td>
-									<td class="highlight" data-header="Utfall">350.00 kr</td>
-								</tr>
-								<tr>
-									<td data-header="Tidpunkt">Idag 12:00</td>
-									<td data-header="Spel">Femkronan</td>
-									<td data-header="Insats">20.00 kr</td>
-									<td data-header="Utfall">40.00 kr</td>
-								</tr>
-								<tr>
-									<td data-header="Tidpunkt">2017-10-27</td>
-									<td data-header="Spel">Femkronan</td>
-									<td data-header="Insats">30.00 kr</td>
-									<td class="highlight" data-header="Utfall">60.00 kr</td>
-								</tr>
-								<tr>
-									<td data-header="Tidpunkt">2017-10-27</td>
-									<td data-header="Spel">Bingo</td>
-									<td data-header="Insats">50.00 kr</td>
-									<td class="highlight" data-header="Utfall">60.00 kr</td>
-								</tr>
+										<tr>
+											<th>Tidpunkt</th>
+											<th>Spel</th>
+											<th>Insats</th>
+											<th>Utfall</th>
+										</tr>
+									</thead>
+									<tbody id="history-current-table-data" data-total-items="12">
+									<tr>
+										<td data-header="Tidpunkt">Idag 14:01</td>
+										<td data-header="Spel">Vit jul 2017</td>
+										<td data-header="Insats">145.00 kr</td>
+										<td class="highlight" data-header="Utfall">350.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">Idag 12:00</td>
+										<td data-header="Spel">Vit jul 2016</td>
+										<td data-header="Insats">20.00 kr</td>
+										<td data-header="Utfall">40.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Vit jul 2015</td>
+										<td data-header="Insats">30.00 kr</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Vit jul 2014</td>
+										<td data-header="Insats">50.00 kr</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
 								</tbody>
 							</table>
 
 							<div class="entity-collection-actions">
-								<a class="btn btn-primary" data-target="#history-current-table-data" href="/ajax/account-history/history-settled.html" >Visa fler</a>
+								<a class="btn btn-primary" data-target="#history-current-table-data" href="/ajax/account-history/history-current.html" >Visa fler</a>
+							</div>
+						</div>
+
+						<div id="history-won" class="table-pane" role="tabpanel">
+							<p class="table__title-block">Vunna spel</p>
+							<table class="responsive-table">
+								<thead>
+									<tr>
+										<th>Tidpunkt</th>
+										<th>Spel</th>
+										<th>Insats</th>
+										<th>Utfall</th>
+									</tr>
+								</thead>
+								<tbody id="history-won-table-data" data-total-items="12">
+									<tr>
+										<td data-header="Tidpunkt">Idag 14:01</td>
+										<td data-header="Spel">Zoobaloo</td>
+										<td data-header="Insats">145.00 kr</td>
+										<td class="highlight" data-header="Utfall">350.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">Idag 12:00</td>
+										<td data-header="Spel">Bingo</td>
+										<td data-header="Insats">20.00 kr</td>
+										<td data-header="Utfall">40.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Zoobaloo</td>
+										<td data-header="Insats">30.00 kr</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Bingo</td>
+										<td data-header="Insats">50.00 kr</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="entity-collection-actions">
+								<a class="btn btn-primary" data-target="#history-won-table-data" href="/ajax/account-history/history-won.html" >Visa fler</a>
+							</div>
+						</div>
+
+						<div id="history-registered" class="table-pane" role="tabpanel">
+							<p class="table__title-block">Registrerade lotter</p>
+							<table class="responsive-table">
+								<thead>
+									<tr>
+										<th>Tidpunkt</th>
+										<th>Spel</th>
+										<th>Utfall</th>
+									</tr>
+								</thead>
+								<tbody id="history-registered-table-data" data-total-items="12">
+									<tr>
+										<td data-header="Tidpunkt">Idag 14:01</td>
+										<td data-header="Spel">Zoobaloo</td>
+										<td class="highlight" data-header="Utfall">350.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">Idag 12:00</td>
+										<td data-header="Spel">Bingo</td>
+										<td data-header="Utfall">40.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Zoobaloo</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
+									<tr>
+										<td data-header="Tidpunkt">2017-10-27</td>
+										<td data-header="Spel">Bingo</td>
+										<td class="highlight" data-header="Utfall">60.00 kr</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="entity-collection-actions">
+								<a class="btn btn-primary" data-target="#history-registered-table-data" href="/ajax/account-history/history-registered.html" >Visa fler</a>
 							</div>
 						</div>
 					</div>
