@@ -13,7 +13,6 @@ export default function () {
 	$(document).on("click", ".js-toggle-data-list-dropdown", function () {
 		$(this).parents('li')
 			.find('.data-list__dropdown')
-			.toggleClass('data-list__dropdown--active')
-			.slideToggle();
+			.toggleClass('data-list__dropdown--active');
 	});
 }
