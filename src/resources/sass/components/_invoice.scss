@@ -1,9 +1,24 @@
+.invoices {
+
+	> :last-child {
+		@include min-screen($screen-sm-min) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
 .invoice {
 	padding: 20px;
 	border-radius: 10px;
 	border: 1px solid $color-feather;
 	background-color: $color-dark-white;
 	margin-bottom: 20px;
+
+	&:last-of-type {
+		@include min-screen($screen-sm-min) {
+			margin-bottom: 40px;
+		}
+	}
 }
 
 .invoice__header {

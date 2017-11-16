@@ -97,150 +97,165 @@
 		<section class="section block block-content">
 			<h2>Dina fakturor</h2>
 
-			<div class="invoice">
-				<div class="invoice__header">
-					<span class="invoice__icon invoice__icon--warning">!</span>
-					<div class="invoice__status">
-						<h3>Obetald faktura</h3>
-						<p>Du har en obetald faktura.</p>
+			<div class="invoices">
+				<div class="invoice">
+					<div class="invoice__header">
+						<span class="invoice__icon invoice__icon--warning">!</span>
+						<div class="invoice__status">
+							<h3>Obetald faktura</h3>
+							<p>Du har en obetald faktura.</p>
+						</div>
+					</div>
+
+					<div class="invoice__values">
+						<div class="invoice__cell"><span>Förfallodatum: </span> 2017-06-24</div>
+						<div class="invoice__cell"><span>OCR: </span> 024242234-0240</div>
+						<div class="invoice__cell"><span>Bankgiro: </span> 589-68879</div>
+						<div class="invoice__cell"><span>Summa: </span> 250 kr</div>
 					</div>
 				</div>
+				<div class="invoice">
+					<div class="invoice__header">
+						<span class="invoice__icon invoice__icon--warning">!</span>
+						<div class="invoice__status">
+							<h3>Obetald faktura</h3>
+							<p>Du har en obetald faktura.</p>
+						</div>
+					</div>
 
-				<div class="invoice__values">
-					<div class="invoice__cell"><span>Förfallodatum: </span> 2017-06-24</div>
-					<div class="invoice__cell"><span>OCR: </span> 024242234-0240</div>
-					<div class="invoice__cell"><span>Bankgiro: </span> 589-68879</div>
-					<div class="invoice__cell"><span>Summa: </span> 250 kr</div>
+					<div class="invoice__values">
+						<div class="invoice__cell"><span>Förfallodatum: </span> 2017-06-24</div>
+						<div class="invoice__cell"><span>OCR: </span> 024242234-0240</div>
+						<div class="invoice__cell"><span>Bankgiro: </span> 589-68879</div>
+						<div class="invoice__cell"><span>Summa: </span> 250 kr</div>
+					</div>
 				</div>
 			</div>
+			<div class="form-group responsive-table-filter">
+				<label for="tableSelect">Filtrera:</label>
+				<select id="tableSelect" class="table-select form-control" name="tableSelect">
+					<option value="physicalDelivery" id="physicalDeliveryHistory">Fysisk</option>
+					<option value="digital" id="digitalHistory">Digital</option>
+				</select>
+			</div>
+
+			<div id="physicalDelivery" class="table-pane table-pane--active tab-pane" role="tabpanel">
+				<p class="table__title-block">Fysisk</p>
+				<div class="data-list data-list--table">
+					<div class="data-list__header">
+						<div class="data-list__header-cell">Förfallodatum</div>
+						<div class="data-list__header-cell">Belopp</div>
+						<div class="data-list__header-cell">Typ</div>
+						<div class="data-list__header-cell">Status</div>
+						<div class="data-list__header-cell"></div>
+					</div>
+
+					<ul id="invoice-history-data" data-total-items="8">
+						<li>
+							<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
+							<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+							<div class="data-list__cell" data-header="Typ">Orginal</div>
+							<div class="data-list__cell" data-header="Status">
+								<span class="text-color-orange">Obetald</span>
+							</div>
+							<div class="data-list__cell data-list__cell--actions">
+								<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+										data-text-toggle="Visa mindre">Visa mer
+								</button>
+							</div>
+
+							<div class="data-list__dropdown">
+								<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+								<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
+							<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+							<div class="data-list__cell" data-header="Typ">Orginal</div>
+							<div class="data-list__cell" data-header="Status">
+								<span class="text-color-green">Obetald</span>
+							</div>
+							<div class="data-list__cell data-list__cell--actions">
+								<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+										data-text-toggle="Visa mindre">Visa mer
+								</button>
+							</div>
+
+							<div class="data-list__dropdown">
+								<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+								<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
+							</div>
+						</li>
+					</ul>
+
+					<div class="entity-collection-actions">
+						<a class="btn btn-primary" data-target="#invoice-history-data"
+						   href="/ajax/invoice-history.html">Visa fler</a>
+					</div>
+				</div>
+			</div>
+			<div id="digital" class="table-pane tab-pane" role="tabpanel">
+				<p class="table__title-block">Digital</p>
+				<div class="data-list data-list--table">
+					<div class="data-list__header">
+						<div class="data-list__header-cell">Förfallodatum</div>
+						<div class="data-list__header-cell">Belopp</div>
+						<div class="data-list__header-cell">Typ</div>
+						<div class="data-list__header-cell">Status</div>
+						<div class="data-list__header-cell"></div>
+					</div>
+
+					<ul id="invoice-digital-data" data-total-items="8">
+						<li>
+							<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
+							<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+							<div class="data-list__cell" data-header="Typ">Orginal</div>
+							<div class="data-list__cell" data-header="Status">
+								<span class="text-color-orange">Obetald</span>
+							</div>
+							<div class="data-list__cell data-list__cell--actions">
+								<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+										data-text-toggle="Visa mindre">Visa mer
+								</button>
+							</div>
+
+							<div class="data-list__dropdown">
+								<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+								<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
+							</div>
+						</li>
+						<li>
+							<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
+							<div class="data-list__cell" data-header="Belopp">40.00kr</div>
+							<div class="data-list__cell" data-header="Typ">Orginal</div>
+							<div class="data-list__cell" data-header="Status">
+								<span class="text-color-green">Obetald</span>
+							</div>
+							<div class="data-list__cell data-list__cell--actions">
+								<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
+										data-text-toggle="Visa mindre">Visa mer
+								</button>
+							</div>
+
+							<div class="data-list__dropdown">
+								<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
+								<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
+							</div>
+						</li>
+					</ul>
+
+					<div class="entity-collection-actions">
+						<a class="btn btn-primary" data-target="#invoice-digital-data"
+						   href="/ajax/invoice-history.html">Visa fler</a>
+					</div>
+				</div>
+			</div>
+
+
 		</section>
 
 		<section class="section block block-content">
-
-			<div class="tab-pane" id="account-prizes" role="tabpanel">
-				<div class="form-group responsive-table-filter">
-					<label for="tableSelect">Filtrera:</label>
-					<select id="tableSelect" class="table-select form-control" name="tableSelect">
-						<option value="physicalDelivery" id="physicalDeliveryHistory">Fysisk</option>
-						<option value="subscriptions" id="subscriptionsHistory">Digital</option>
-					</select>
-				</div>
-
-				<div id="physicalDelivery" class="table-pane table-pane--active tab-pane" role="tabpanel">
-					<p class="table__title-block">Fysisk</p>
-					<div class="data-list data-list--table">
-						<div class="data-list__header">
-							<div class="data-list__header-cell">Förfallodatum</div>
-							<div class="data-list__header-cell">Belopp</div>
-							<div class="data-list__header-cell">Typ</div>
-							<div class="data-list__header-cell">Status</div>
-							<div class="data-list__header-cell"></div>
-						</div>
-
-						<ul id="invoice-history-data" data-total-items="8">
-							<li>
-								<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
-								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
-								<div class="data-list__cell" data-header="Typ">Orginal</div>
-								<div class="data-list__cell" data-header="Status">
-									<span class="text-color-orange">Obetald</span>
-								</div>
-								<div class="data-list__cell data-list__cell--actions">
-									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
-											data-text-toggle="Visa mindre">Visa mer
-									</button>
-								</div>
-
-								<div class="data-list__dropdown">
-									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
-								</div>
-							</li>
-							<li>
-								<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
-								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
-								<div class="data-list__cell" data-header="Typ">Orginal</div>
-								<div class="data-list__cell" data-header="Status">
-									<span class="text-color-green">Obetald</span>
-								</div>
-								<div class="data-list__cell data-list__cell--actions">
-									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
-											data-text-toggle="Visa mindre">Visa mer
-									</button>
-								</div>
-
-								<div class="data-list__dropdown">
-									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
-								</div>
-							</li>
-						</ul>
-
-						<div class="entity-collection-actions">
-							<a class="btn btn-primary" data-target="#invoice-history-data"
-							   href="/ajax/invoice-history.html">Visa fler</a>
-						</div>
-					</div>
-				</div>
-				<div id="subscriptions" class="table-pane tab-pane" role="tabpanel">
-					<p class="table__title-block">Digital</p>
-					<div class="data-list data-list--table">
-						<div class="data-list__header">
-							<div class="data-list__header-cell">Förfallodatum</div>
-							<div class="data-list__header-cell">Belopp</div>
-							<div class="data-list__header-cell">Typ</div>
-							<div class="data-list__header-cell">Status</div>
-							<div class="data-list__header-cell"></div>
-						</div>
-
-						<ul id="invoice-subscription-data" data-total-items="8">
-							<li>
-								<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
-								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
-								<div class="data-list__cell" data-header="Typ">Orginal</div>
-								<div class="data-list__cell" data-header="Status">
-									<span class="text-color-orange">Obetald</span>
-								</div>
-								<div class="data-list__cell data-list__cell--actions">
-									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
-											data-text-toggle="Visa mindre">Visa mer
-									</button>
-								</div>
-
-								<div class="data-list__dropdown">
-									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
-								</div>
-							</li>
-							<li>
-								<div class="data-list__cell" data-header="Förfallodatum">Idag 14:01</div>
-								<div class="data-list__cell" data-header="Belopp">40.00kr</div>
-								<div class="data-list__cell" data-header="Typ">Orginal</div>
-								<div class="data-list__cell" data-header="Status">
-									<span class="text-color-green">Obetald</span>
-								</div>
-								<div class="data-list__cell data-list__cell--actions">
-									<button class="btn btn-data-action btn-with-arrow js-toggle-data-list-dropdown"
-											data-text-toggle="Visa mindre">Visa mer
-									</button>
-								</div>
-
-								<div class="data-list__dropdown">
-									<div class="data-list__dropdown-cell"><span>OCR:</span> 024242234-0240</div>
-									<div class="data-list__dropdown-cell"><span>Antal:</span> 2st</div>
-								</div>
-							</li>
-						</ul>
-
-						<div class="entity-collection-actions">
-							<a class="btn btn-primary" data-target="#invoice-subscription-data"
-							   href="/ajax/invoice-history.html">Visa fler</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
 
 		</section>
 
