@@ -158,18 +158,22 @@
 		}
 	}
 
-	.data-list__dropdown
-	{
+	.data-list__dropdown {
 		display: none;
 		flex: 100%;
 		padding: 20px 0 0;
-		border-top: 1px solid #eeeeee;
 		font-weight: 600;
+		border-top: 1px solid transparent;
 		color: $color-base-complement;
 		margin-top: 5px;
+		transition: border-color $duration-fast $ease-in-out;
 
 		@include min-screen($screen-sm-min) {
 			margin-top: 20px;
+		}
+
+		&.data-list__dropdown--active {
+			border-color: #eeeeee;
 		}
 	}
 
