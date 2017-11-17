@@ -7,13 +7,10 @@
 
 	@include min-screen($screen-sm-min) {
 		min-height: 220px;
-		margin-bottom: 40px;
+		margin-bottom: 20px;
 	}
-	@media screen and (max-width: $screen-sm) {
-		min-height: 0;
-		margin-bottom: 0;
-	}
-		p {
+
+	p {
 		margin: $margin-small 0 0 0;
 
 		&:first-of-type {
