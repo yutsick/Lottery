@@ -81,13 +81,9 @@
 }
 
 .block-promotion__bingo-column {
-	width: 100%;
-	display: inline-block;
-	text-align: left;
-
-	@include min-screen($screen-sm-min) {
-		width: auto;
-	}
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 
 	p {
 		display: inline-block;
@@ -96,9 +92,8 @@
 	}
 
 	.h4 {
-		margin-top: 0;
-		font-size: 18px;
 		margin-top: 5px;
+		font-size: 18px;
 		line-height: 1;
 	}
 
@@ -134,10 +129,5 @@
 				display: block;
 			}
 		}
-	}
-
-	.btn, button {
-		padding-left: 0;
-		padding-right: 0;
 	}
 }
