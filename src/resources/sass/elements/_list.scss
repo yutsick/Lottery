@@ -9,6 +9,10 @@ ol.index {
 	.list-group-item {
 		border-color: $color-gray-border;
 
+		&[href*="#"] {
+			cursor: pointer;
+		}
+
 		header {
 			font-weight: 800;
 		}
