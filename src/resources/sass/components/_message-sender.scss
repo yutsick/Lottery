@@ -10,11 +10,19 @@
     color: #fff;
   }
 
+  &--yellow {
+    background-color: $color-yellow;
+  }
+
+  &--blue {
+    background-color: $color-blue;
+  }
+
   &--blue-deep {
     background-color: $color-blue-deep;
   }
 
-  &--green {
-    background-color: $color-green;
+  &--turquoise {
+    background-color: $color-turquoise;
   }
 }
