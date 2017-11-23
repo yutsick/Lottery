@@ -1,0 +1,20 @@
+.message-sender {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: $color-pink;
+  text-align: center;
+  line-height: 32px;
+
+  &__initials {
+    color: #fff;
+  }
+
+  &--blue-deep {
+    background-color: $color-blue-deep;
+  }
+
+  &--green {
+    background-color: $color-green;
+  }
+}

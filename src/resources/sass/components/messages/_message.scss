@@ -81,12 +81,6 @@
 	@include min-screen($screen-md-min) {
 		margin-right: 20px;
 	}
-
-	img {
-		width: 30px;
-		height: 30px;
-		margin: 0;
-	}
 }
 
 .message__sender {
