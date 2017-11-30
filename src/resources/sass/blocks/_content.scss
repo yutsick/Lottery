@@ -18,6 +18,16 @@ h4, h5, h6 {
 		display: inline-block;
 		vertical-align: middle;
 		padding-bottom: $padding-small;
+
+		@include max-screen($screen-xs) {
+			padding-bottom: 0;
+		}
+
+		> .btn {
+			@include max-screen($screen-xs) {
+				margin-bottom: 10px;
+			}
+		}
 	}
 
 	&__link {
