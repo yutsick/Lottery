@@ -1,0 +1,110 @@
+@@include('layout/_header.html', {
+	"class": "page-front logged-in"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+		<div class="block block-hero block-hero--mini block-hero--no-margin">
+			<h1 class="block-hero__page-title block-hero__page-title--absolute">
+				Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!
+			</h1>
+		</div>
+		<div class="row equal-height padding-extra">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<div class="block block-promotion block-promotion--image block-promotion--image-dynamic">
+					<div class="block-promotion__image-wrapper">
+						<div class="block-promotion__image block-promotion__image--landscape"
+							 style="background-image: url('assets/img/mockup/car.jpg')">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<div class="row">
+					@@include('blocks/promotion/block/_promotion-split-large.html', {
+					"size": "",
+					"background": "color",
+					"background_color": "blue",
+					"background_color_pattern": "true",
+					"background_image": "",
+					"content_alignment": "bottom",
+					"content_title": "Om vinstshoppen",
+					"content_text": "Här använder du pengarna på ditt vinstkonto för att beställa varor ur Sveriges största vinstsortiment.",
+					"content_link": "true",
+					"content_image": "assets/img/mockup/butterfly.jpg",
+					"text_protection": "",
+					"text_alignment": ""
+					})
+
+					@@include('blocks/promotion/block/_promotion-split-large.html', {
+					"size": "",
+					"background": "color",
+					"background_color": "turquoise",
+					"background_color_pattern": "true",
+					"background_image": "",
+					"content_alignment": "bottom",
+					"content_title": "Drömvinster",
+					"content_text": "När du vinner mellan 5000 och 5 miljoner får du tillgång till våra absolut häftigaste vinster. Drömcoacherna hjälper dig att skräddarsy ditt personliga vinstpaket. Börja drömma redan nu.",
+					"content_link": "true",
+					"content_image": "assets/img/mockup/car.jpg",
+					"text_protection": "",
+					"text_alignment": ""
+					})
+				</div>
+			</div>
+		</div>
+
+		<div class="row equal-height padding-extra">
+			<div class="col-xs-6 col-lg-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">Knivspecial</p>
+							<p class="block-promotion__text">Exklusiva kockknivar i världsklass från de Buyer. Begränsad upplaga!</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-lg-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">2018 års bilmodeller är här</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-lg-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">Sista chansen på pizzaplåten!</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-lg-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">Bjud familjen på skidresa i vinter</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
