@@ -2,14 +2,18 @@
 	<article class="block-product">
 		<a class="block-product__link" href="/" title="">
 			<div class="block-product__image-wrapper">
-				<div class="block-product__image" style="background-image: url('@@image')">
+				<div class="block-product__image">
+					<img src="@@image" alt="">
+					<img class="block-product__hover-image" src="assets/img/mockup/car.jpg" alt="">
+
 					@@if(context.label){
-						<span class="block-product__label background-color-@@color">@@label</span>
+					<span class="block-product__label background-color-@@color">@@label</span>
 					}
+
 				</div>
 			</div>
 			<div class="block-product__content flex-middle">
-				<p class="block-product__title block-product__item">@@title</p>
+				<h3 class="block-product__title block-product__item">@@title</h3>
 				<p class="block-product__price block-product__item">@@price</p>
 			</div>
 		</a>
