@@ -8,10 +8,6 @@ body {
 	}
 }
 
-@import "article";
-@import "front";
-@import "register";
-
 .modal-backdrop {
 	background: $color-overlay-base;
 
@@ -85,7 +81,6 @@ body {
 }
 
 .page--content-only {
-
     #sidebar {
         @include max-screen($screen-sm-max) {
             display: none;
@@ -114,7 +109,24 @@ body {
 		@include max-screen($screen-xs-max) {
             margin-top: 10px;
         }
-
 	}
 }
 
+#page-wrapper.shop {
+	@include max-screen($screen-xs-max) {
+		padding-top: 70px;
+	}
+
+	.container:first-child {
+		position: relative;
+	}
+
+	/* Hide elements on the page */
+	.message-container,
+	.top-account,
+	.alert-info {
+		display: none;
+	}
+}
+
+@import "register";
