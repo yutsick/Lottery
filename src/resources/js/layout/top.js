@@ -2,7 +2,7 @@ import alert from "../components/alert";
 
 export default function () {
 	top_show_hide();
-// 	fixed_menu();
+	// 	fixed_menu();
 
 	$("body").css("overflow-x", "hidden");
 
@@ -20,23 +20,25 @@ export default function () {
 			$(".new-message").addClass("new-message__alone");  //.animate({ left: "-400" }, 500 );
 			second();
 		});
-
 	});
 
 	$(document).ready(function () {
-		var top = $('.message-container').offset().top;
-		$(window).scroll(function (event) {
-			var y = $(this).scrollTop();
-			if (y >= top)
-				$('.message-container').addClass('fixed');
-			else
-				$('.message-container').removeClass('fixed');
-		});
+		if ($('.message-container').length) {
+			var top = $('.message-container').offset().top;
+			$(window).scroll(function (event) {
+				var y = $(this).scrollTop();
+				if (y >= top) {
+					$('.message-container').addClass('fixed');
+				}
+				else {
+					$('.message-container').removeClass('fixed');
+				}
+			});
+		}
 	});
 
-
 	$(window).scroll(function () {
-//box one
+		//box one
 		var $win = $(window);
 		$('.new-message__show').css('right', 20 - $win.scrollLeft());
 	});
@@ -63,7 +65,6 @@ export default function () {
 		});
 	}
 
-
 	// Hide Header on on scroll down
 	function top_show_hide() {
 		let didScroll;
@@ -85,7 +86,6 @@ export default function () {
 			}
 		}, 250);
 
-
 		function hasScrolled() {
 			let st = $(this).scrollTop();
 			let $win = $(window);
@@ -102,7 +102,4 @@ export default function () {
 			lastScrollTop = st;
 		}
 	}
-
-
 }
-
