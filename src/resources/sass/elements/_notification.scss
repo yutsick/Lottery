@@ -46,4 +46,10 @@
 	&--lighter {
 		background-color: $color-head-orange;
 	}
+
+	&--white {
+		background-color: $color-white;
+		color: initial; /* Fallback */
+		color: currentColor;
+	}
 }
