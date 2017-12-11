@@ -1,9 +1,6 @@
 <div id="top" class="ml-2017">
-
-
-
 	<div class="top-menu">
-        <a class="top-menu__left js-toggle-sidebar float-left">
+		<a class="top-menu__left js-toggle-sidebar float-left">
 			<i class="icon icon-burger"></i>
 			<span>Meny</span>
 		</a>
@@ -15,10 +12,12 @@
 		</a>
 	</div>
 
-
-    <div class="alert alert-info" role="alert">
-		<button type="button" class="close js-action-close" aria-label="Close"><span
-			aria-hidden="true"><i class="icon icon-close icon-size-small"></i></span></button>
+	<div class="alert alert-info" role="alert">
+		<button type="button" class="close js-action-close" aria-label="Close">
+			<span aria-hidden="true">
+				<i class="icon icon-close icon-size-small"></i>
+			</span>
+		</button>
 		<a href="/" target="_self"><strong>540 500 kr i Jackpot</strong></a>, dragning 11 Mars
 	</div>
 
@@ -28,9 +27,7 @@
 	"msg_text": "Du har en ny bonus att hämta!"
 	})
 
-
 	<div class="top-account">
-
 		@@if (logged_in === true) {
 		<div class="top-account__user">
 			<div class="user">
@@ -44,32 +41,14 @@
 			</div>
 		</div>
 		}
-        <div class="top-account__buttons">
-			@@if (logged_in === false) {
-				<button id="log-in" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-account-step-3">Logga in</button>
-				<button class="btn btn-success btn-2-line" data-toggle="modal" data-target="#modal-create-account">Skapa konto
-					<span>och få 40 kr</span>
-				</button>
-			}
-			<!--
-			<div class="@@if (logged_in === true) {js-is-active}">
-				<div class="a">
-					<div class="messagetop col-xs-12" style="height: 70px; float:right;width: 270px;position: relative; background-color: #eaedef; border-radius: 10px;">
-						<div class="message text-center row" style="margin-bottom: 10px;">
-							<div class="col-xs-4 text-center"style=" border-radius:50%; width:40px;height:40px;margin-left:10px;color:white;font-size:18px;padding-top:11px;margin-top:15px;background-color: #f19fc8">ML</div>
-							<div class="messagetitle col-xs-8" style="font-size: 14px; font-weight:bolder;padding-top: 10px;">Nytt meddelande</span> </div>
-							</div>
-					</div>
-				</div>
-			</div>
+		@@if (logged_in === false) {
+		<div class="top-account__buttons">
+			<button id="log-in" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-create-account-step-3">Logga in</button>
+			<button class="btn btn-success btn-2-line" data-toggle="modal" data-target="#modal-create-account">Skapa konto
+				<span>och få 40 kr</span>
+			</button>
 		</div>
-		-->
+		}
 	</div>
-</div>
-
-
-
-
-
 </div>
 
