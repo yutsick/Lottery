@@ -37,6 +37,11 @@
 
 	&:hover {
 		border-color: $color-green;
+
+		.block-product__hover-image {
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 }
 
@@ -46,11 +51,6 @@
 
 	&:hover {
 		color: $color-base-primary;
-
-		.block-product__hover-image {
-			opacity: 1;
-			visibility: visible;
-		}
 	}
 }
 
@@ -76,7 +76,8 @@
 		height: 100%;
 		position: absolute;
 		object-fit: cover;
-		transition: opacity $duration-medium $ease-in-out, visibility $duration-medium $ease-in-out;
+		transition: opacity $duration-medium $ease-in-out,
+		visibility $duration-medium $ease-in-out;
 		z-index: 1000;
 		//transition-delay: 0.1s;
 	}
@@ -98,6 +99,7 @@
 	border-radius: 20px 0 0 20px;
 	font-size: 12px;
 	line-height: 1;
+	z-index: 1100;
 }
 
 .block-product__content {
@@ -139,4 +141,16 @@
 
 .block-product__link {
 	font-weight: $bold;
+}
+
+.block-product__dream-button {
+	color: $color-complement-sky;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	z-index: 1200;
+
+	&:hover {
+		color: $color-accent;
+	}
 }
