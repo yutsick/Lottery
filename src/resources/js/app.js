@@ -16,6 +16,7 @@ import slider from './components/slider';
 import toggleContent from './components/toggle-content';
 import walletAccountSwitch from './components/wallet-account-switch';
 import walletTransferAmount from './components/wallet-transfer-amount';
+import scrollToElement from './components/scrollToElement';
 import navigation from './layout/navigation';
 import top from './layout/top';
 import register from './layout/register';
@@ -40,6 +41,7 @@ $(function () {
 	toggleContent();
 	walletAccountSwitch();
 	walletTransferAmount();
+	scrollToElement();
 	dataList();
 	textToggle();
 	entityCollectionActions();
