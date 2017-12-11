@@ -12,12 +12,13 @@
 				Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!
 			</h1>
 		</div>
-		<div class="row equal-height padding-extra">
+		<div class="row row--offset equal-height">
 			<div class="col-xs-12 col-sm-12 col-md-6">
 				<div class="block block-promotion block-promotion--image block-promotion--image-dynamic">
 					<div class="block-promotion__image-wrapper">
 						<div class="block-promotion__image block-promotion__image--landscape"
 							 style="background-image: url('assets/img/mockup/car.jpg')">
+							<button class="btn btn-primary btn--bottom-center js-scroll-to" id="product-list-blocks">Visa alla vinster</button>
 						</div>
 					</div>
 				</div>
@@ -48,7 +49,7 @@
 			</div>
 		</div>
 
-		<div class="row equal-height padding-extra">
+		<div class="row equal-height">
 			<div class="col-xs-6 col-lg-3">
 				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
 					 style="background-image: url('assets/img/mockup/car.jpg')">
@@ -94,10 +95,10 @@
 				</div>
 			</div>
 		</div>
-
-		@@include('blocks/_product-list-with-filter.html')
-
 	</div>
+
+	@@include('blocks/_product-list-with-filter.html')
+
 </div>
 
 @@include('layout/_footer.html', {"show_footer": true})
