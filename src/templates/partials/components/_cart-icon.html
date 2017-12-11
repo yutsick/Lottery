@@ -1,12 +1,22 @@
-<div class="product-cart ml-2017 js-hidden" id="mobile-product-chart">
-	<div class="product-slider-cart">
-		<a href="/" title="">
-			<i class="product-cart__icon icon icon-basket align-vertical">
-				@@include('elements/_notification.html', {
-				"number": "3",
-				"class": "product-cart__notification item-num"
-				})
-			</i>
-		</a>
+<div class="product-cart ml-2017" id="mobile-product-chart">
+	<div class="product-cart__item visible-sm visible-xs">
+		<div class="product-cart__content">
+			<p class="product-cart__title">Vinstkonto</p>
+			<p class="product-cart__meta">450kr</p>
+		</div>
 	</div>
+	<a class="product-cart__item product-cart__item--theme-green" href="#">
+		<div class="product-cart__content">
+			<i class="product-cart__icon icon icon-star"></i>
+			<p class="product-cart__title">Min drömlista</p>
+		</div>
+		@@include('elements/_notification.html', { "number": "1", "class": "notification--white product-cart__notification" })
+	</a>
+	<a class="product-cart__item product-cart__item--theme-blue" href="#">
+		<div class="product-cart__content">
+			<p class="product-cart__title">Kundvagn</p>
+			<p class="product-cart__meta">280kr</p>
+		</div>
+		@@include('elements/_notification.html', { "number": "2", "class": "notification--white product-cart__notification" })
+	</a>
 </div>
