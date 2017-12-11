@@ -26,6 +26,7 @@ import entityCollectionActions from './components/entity-collection-actions';
 import loadSection from './components/load-section';
 import bonusCode from './components/bonus-code';
 import paymentMethod from './components/payment-method';
+import productList from './components/product-list';
 
 $(function () {
 	modernizr();
@@ -49,6 +50,7 @@ $(function () {
 	loadSection();
 	bonusCode();
 	paymentMethod();
+	productList();
 });
 
 /**

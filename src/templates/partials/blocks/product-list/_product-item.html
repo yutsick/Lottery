@@ -1,15 +1,20 @@
 <div class="col-xs-6 col-md-3">
 	<article class="block-product">
+		<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip"
+				data-placement="top" title="Lägg till i min drömlista">
+			<i class="icon icon-dream-star"></i>
+		</button>
+
 		<a class="block-product__link" href="/" title="">
 			<div class="block-product__image-wrapper">
 				<div class="block-product__image">
 					<img src="@@image" alt="">
-					<img class="block-product__hover-image" src="assets/img/mockup/car.jpg" alt="">
-
+					@@if(context.hoverImage){
+					<img class="block-product__hover-image" src="@@hoverImage" alt="">
+					}
 					@@if(context.label){
 					<span class="block-product__label background-color-@@color">@@label</span>
 					}
-
 				</div>
 			</div>
 			<div class="block-product__content flex-middle">
