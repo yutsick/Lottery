@@ -3,7 +3,7 @@ export default function() {
 		let $element = $(this).attr('id');
 
 		$('html, body').animate({
-			scrollTop: $("#" + $element).offset().top
-		}, 350);
+			scrollTop: $("." + $element).offset().top
+		}, 500);
 	});
 }
