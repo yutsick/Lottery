@@ -1,9 +1,9 @@
 /* Bootstrap modifications */
 .btn {
-	font-size: 12px;
+	font-size: $base-font-size;
 	border-radius: 2em;
 	font-weight: $extrabold;
-	padding: 10px 30px;
+	padding: 9px 30px;
 	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	border: none;
 	font-family: $semi-heading-family;
@@ -125,7 +125,6 @@
 	padding: 0;
 	color: #546785;
 	font-weight: 600;
-	font-size: 14px;
 	line-height: 20px;
 	-webkit-appearance: none;
 	border-radius: 0;
@@ -230,7 +229,7 @@
 
 	span {
 		display: block;
-		font-size: 10px;
+		font-size: 12px;
 		font-weight: 400;
 		line-height: 1;
 	}

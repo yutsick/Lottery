@@ -9,13 +9,13 @@
 	}
 
 	@include min-screen($screen-md) {
-		position: absolute;
-		top: auto;
-		right: 20px;
-		z-index: 10;
-		margin-top: 20px;
-		margin-right: 0;
-		margin-left: 0;
+		position: fixed;
+		z-index: 1300;
+		width: 100%;
+		max-width: 1400px;
+		padding-top: 20px;
+		padding-right: 20px;
+		justify-content: flex-end;
 	}
 
 	&__item {
@@ -27,6 +27,7 @@
 		transition: background $duration-quick $delay-none $ease-in-out;
 
 		@include min-screen($screen-md) {
+			flex-basis: auto;
 			border-radius: 2em;
 			padding-right: 15px;
 			padding-left: 15px;

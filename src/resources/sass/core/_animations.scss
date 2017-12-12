@@ -31,3 +31,41 @@
 	transition: transform $duration-fast $ease-standard;
 	transform: rotate(180deg);
 }
+
+/* Rotate and scale */
+@keyframes spinAndScale {
+	50% {
+		transform: rotate(1turn) scale(10);
+	}
+
+	100% {
+		transform: rotate(2turn) scale(0.6);
+	}
+}
+
+.spinAndScale {
+	animation: spinAndScale $duration-slow linear;
+}
+
+/* Pulsate */
+@keyframes pulsate {
+	25% {
+		transform: scale(1.2);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	75% {
+		transform: scale(1.2);
+	}
+
+	100% {
+		 transform: scale(1);
+	}
+}
+
+.pulsate {
+	animation: pulsate $duration-normal linear;
+}
