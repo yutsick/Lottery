@@ -1,0 +1,80 @@
+
+.filters {
+	margin-bottom: 20px;
+
+	.checkbox {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	label {
+		color: $color-black;
+		font-weight: $light;
+
+		i {
+			font-size: 12px;
+		}
+	}
+}
+
+.filters__item {
+	display: inline-block;
+	position: relative;
+	width: 160px;
+	margin-right: 5px;
+}
+
+.filter-dropdown {
+	width: 100%;
+
+	.dropdown-menu {
+		width: 100%;
+		padding: 0 15px 15px;
+		margin-top: 0;
+		border-top: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	&.open {
+		margin-bottom: 1px;
+		width: 200px;
+		z-index: 1000;
+
+		.filter-dropdown__button {
+			width: 100%;
+			border-bottom: none;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
+
+.filter-dropdown__button {
+	position: relative;
+	background-color: white;
+	border: 1px solid $color-gray-border;
+	padding: 10px 15px;
+	text-align: left;
+	font-size: 14px;
+	font-weight: $bold;
+	outline: none;
+	width: 100%;
+	border-radius: 4px;
+
+	&:after {
+		color: $color-blue;
+		font-size: 14px;
+		font-family: "ml-icons";
+		content: "\e906";
+		float: right;
+	}
+}
