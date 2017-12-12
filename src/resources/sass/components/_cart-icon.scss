@@ -10,12 +10,17 @@
 
 	@include min-screen($screen-md) {
 		position: fixed;
-		z-index: 1300;
+		right: 40px;
+		z-index: 800;
+		padding-top: 20px;
+		justify-content: flex-end;
+	}
+
+	@include min-screen(1675px) {
+		right: auto;
 		width: 100%;
 		max-width: 1400px;
-		padding-top: 20px;
 		padding-right: 20px;
-		justify-content: flex-end;
 	}
 
 	&__item {
