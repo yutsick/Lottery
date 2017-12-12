@@ -1,0 +1,24 @@
+<div class="modal fade" id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="modal-cart-label"
+	 aria-hidden="true">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+			@@include('elements/_button-close.html')
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal-cart-label">Kundvagn</h5>
+				</div>
+				<div class="modal-body">
+					<div class="cart__empty hidden">
+						Din kundvagn är tom
+					</div>
+					<div id="cart-products" class="cart__products">
+						@@include('../ajax/cart-items/cart-item.tpl.html')
+					</div>
+				</div>
+				<div class="modal-footer">
+					<a class="btn btn-primary btn-block" href="#" disabled>Till beställning</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
