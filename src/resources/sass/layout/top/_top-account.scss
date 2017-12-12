@@ -65,42 +65,28 @@
 
 	.top-account__buttons {
 		position: absolute;
-		top: auto;
 		right: 0;
-		padding: 0;
-		box-sizing: border-box;
-		text-align: right;
 		width: 100%;
 		height: $account-buttons-height;
-		overflow: auto;
 		zoom: 1;
 
 		@include min-screen($screen-sm-min) {
 			padding: $padding-default;
+			width: auto;
 			height: auto;
 		}
 
-		> * {
-			vertical-align: bottom;
-		}
-
 		.btn {
-			margin: 0;
-			float: left;
-			// Button style modification
-			border-radius: 0;
-			width: 50%;
-			height: 100%;
+			min-height: 42px;
+			margin: 0 5px;
+			font-weight: $bold;
 
-			@include min-screen($screen-sm-min) {
-				float: none;
-				margin: 0 5px;
-				// Button style modification
-				border-radius: 18px;
-				width: auto;
-				height: auto;
-				font-size: 12px;
-				font-weight: 600;
+			@include max-screen($screen-xs-max) {
+				float: left;
+				width: 50%;
+				height: 100%;
+				margin: 0;
+				border-radius: 0;
 			}
 
 			// Button style modification
