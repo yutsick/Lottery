@@ -44,7 +44,7 @@
 }
 
 .spinAndScale {
-	animation: spinAndScale 1s linear;
+	animation: spinAndScale $duration-slow linear;
 }
 
 /* Pulsate */
@@ -67,5 +67,5 @@
 }
 
 .pulsate {
-	animation: pulsate .7s linear;
+	animation: pulsate $duration-normal linear;
 }
