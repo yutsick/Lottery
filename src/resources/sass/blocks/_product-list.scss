@@ -149,15 +149,34 @@
 }
 
 .block-product__dream-button {
-	color: $color-complement-sky;
 	position: absolute;
 	top: 15px;
 	left: 15px;
 	z-index: 1200;
+	color: $color-complement-sky;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: $color-accent;
 	}
+
+	&:focus {
+		outline: 0;
+	}
+
+	&.starred {
+		.dreamlist-icon {
+			color: $color-accent;
+
+			&:before {
+				content: "\e914";
+			}
+		}
+	}
+}
+
+.dreamlist-icon {
+	color: $color-complement-sky;
 }
 
 .block-product--category {
