@@ -1,5 +1,5 @@
 export default function() {
-    $('.js-add-to-dreamlist').on('click', function () {
+    $('.js-add-to-dreamlist').on('click', function() {
         let $target = $('.dreamlist');
         let $number = $target.next('.product-cart__notification');
         let $elem = $(this).find('.dreamlist-icon');
