@@ -78,14 +78,14 @@
 		object-fit: cover;
 		transition: opacity $duration-medium $ease-in-out,
 		visibility $duration-medium $ease-in-out;
-		z-index: 1000;
+		z-index: 10;
 	}
 }
 
 .block-product__hover-image {
 	opacity: 0;
 	visibility: hidden;
-	z-index: 1001;
+	z-index: 20;
 }
 
 .block-product__label {
@@ -98,7 +98,7 @@
 	border-radius: 20px 0 0 20px;
 	font-size: 12px;
 	line-height: 1;
-	z-index: 1100;
+	z-index: 20;
 }
 
 .block-product__content {
@@ -152,7 +152,7 @@
 	position: absolute;
 	top: 15px;
 	left: 15px;
-	z-index: 1200;
+	z-index: 20;
 	color: $color-complement-sky;
 
 	&:hover,
