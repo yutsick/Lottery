@@ -1,47 +1,41 @@
 .product-cart {
 	display: flex;
 	position: fixed;
+	top: $menu-height;
+	left: 0;
+	right: 0;
 	z-index: 800;
-	width: 100%;
-	/* fake full width */
-	margin-right: -10px;
-	margin-left: -10px;
 
 	@include min-screen($screen-sm) {
-		margin-right: -20px;
-		margin-left: -20px;
-	}
-
-	@include min-screen($screen-md) {
 		justify-content: flex-end;
-		right: 40px;
-		z-index: 800;
-		padding-top: 20px;
+		top: auto;
+		left: $sidebar-width-mobile;
+		padding-top: $padding-default;
+		padding-right: $padding-default + 5;
 	}
 
-	@include min-screen(1675px) {
-		right: auto;
+	@include min-screen($screen-lg) {
+		left: $sidebar-width-desktop;
 		max-width: 1400px;
-		padding-right: 20px;
 	}
 
 	&__item {
 		display: flex;
 		flex-basis: 33.3%;
 		justify-content: space-between;
-		padding: 10px;
+		padding: $padding-small;
 		background-color: $color-white;
+		border: 1px solid $color-gray-border;
 		transition: background $duration-quick $delay-none $ease-in-out;
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-sm) {
 			flex-basis: auto;
-			padding-right: 15px;
-			padding-left: 15px;
+			padding-right: $padding-medium;
+			padding-left: $padding-medium;
 			border-radius: 2em;
-			border: 1px solid $color-gray-border;
 
 			&:not(:last-child) {
-				margin-right: 10px;
+				margin-right: $margin-small;
 			}
 		}
 	}
@@ -51,7 +45,7 @@
 		flex-direction: column;
 		color: $color-base-primary;
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-sm) {
 			flex-direction: row;
 			align-items: center;
 		}
@@ -61,9 +55,9 @@
 		order: 2;
 		font-size: inherit;
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-sm) {
 			order: -1;
-			margin-right: 10px;
+			margin-right: $margin-small;
 		}
 	}
 
@@ -72,8 +66,8 @@
 		text-transform: uppercase;
 		color: rgba(0, 0, 0, .7);
 
-		@include min-screen($screen-md) {
-			margin-right: 20px;
+		@include min-screen($screen-sm) {
+			margin-right: $margin-default;
 			text-transform: none;
 			white-space: nowrap;
 		}
@@ -83,8 +77,8 @@
 		margin-bottom: 0;
 		font-weight: $bold;
 
-		@include min-screen($screen-md) {
-			margin-right: 10px;
+		@include min-screen($screen-sm) {
+			margin-right: $margin-small;
 		}
 	}
 
@@ -112,8 +106,9 @@ a.product-cart__item {
  */
 
 .product-cart__item--theme-green {
-	@include max-screen($screen-md) {
+	@include max-screen($screen-sm) {
 		background: $color-green;
+		border-color: $color-green;
 		color: $color-green; /* inheritance for notification */
 
 		.product-cart__content {
@@ -125,7 +120,7 @@ a.product-cart__item {
 		}
 	}
 
-	@include min-screen($screen-md) {
+	@include min-screen($screen-sm) {
 		.product-cart__notification {
 			background-color: $color-green;
 			color: $color-white;
@@ -138,7 +133,7 @@ a.product-cart__item {
 }
 
 a.product-cart__item--theme-green {
-	@include max-screen($screen-md) {
+	@include max-screen($screen-sm) {
 		&:hover,
 		&:focus {
 			background-color: $color-green-light;
