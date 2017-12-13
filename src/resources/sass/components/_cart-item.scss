@@ -1,6 +1,6 @@
 .cart__item {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: $padding-small;
+	padding-bottom: $padding-small;
 	border-bottom: 1px solid $color-feather;
 
 	&-content {
@@ -9,7 +9,7 @@
 	}
 
 	&-image {
-		margin-right: 10px;
+		margin-right: $margin-small;
 		max-width: 80px;
 
 		img {
@@ -28,7 +28,7 @@
 
 	&-input {
 		width: 40px;
-		padding: 10px;
+		padding: $padding-small;
 		border: 1px solid $color-gray-border;
 		text-align: center;
 
@@ -39,7 +39,7 @@
 
 	&-btn {
 		width: 40px;
-		padding: 10px;
+		padding: $padding-small;
 		font-size: 16px;
 		color: $color-primary;
 		border: 1px solid $color-gray-border;
@@ -67,9 +67,7 @@
 	}
 
 	&-price {
-		margin-left: auto;
-		margin-right: 10px;
-		margin-bottom:0;
+		margin: 0 $margin-small 0 auto;
 	}
 
 	&-remove {
@@ -82,11 +80,11 @@
 	}
 
 	&-total  {
-		margin-top: 10px;
+		margin-top: $margin-small;
 	}
 
 	&-sum {
 		float: right;
-		margin-left: 10px;
+		margin-left: $margin-small;
 	}
 }

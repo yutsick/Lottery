@@ -8,12 +8,11 @@
 					<h5 class="modal-title" id="modal-cart-label">Kundvagn</h5>
 				</div>
 				<div class="modal-body">
-					<div class="cart__empty hidden">
-						Din kundvagn är tom
-					</div>
 					<div id="cart-products" class="cart__products">
 						@@include('../partials/cart-items/cart-item.tpl.html')
-
+						<div class="cart__item cart__item--empty hidden">
+							Din kundvagn är tom
+						</div>
 						<div class="cart__item-total">
 							<p class="h5">Total summa: <span class="cart__item-sum">00 kr</span></p>
 
