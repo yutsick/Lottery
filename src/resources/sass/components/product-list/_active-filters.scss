@@ -1,0 +1,38 @@
+.active-filters {
+}
+
+.active-filters__label {
+	position: relative;
+	display: inline-block;
+	background-color: $color-gray;
+	font-size: 14px;
+	color: $color-white;
+	padding: 3px 40px 3px 10px;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	margin-bottom: 10px;
+	cursor: pointer;
+
+	&:after {
+		line-height: 1;
+		font-size: 8px;
+		content: '\e90b';
+		font-family: "ml-icons";
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+	&:hover {
+		background-color: $color-gray-light;
+	}
+}
+
+.active-filters__label--primary {
+	background-color: $color-primary;
+
+	&:hover {
+		background-color: $color-blue-light;
+	}
+}
