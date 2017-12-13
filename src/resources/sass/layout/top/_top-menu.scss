@@ -1,15 +1,15 @@
 .top-menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	position: fixed;
 	top: 0;
+	right: 0;
 	left: 0;
 	z-index: 990;
-	display: block;
-	width: 100%;
 	background-color: $color_light;
-	padding: 0;
-	height: $menu-height;
+	//height: $menu-height;
 	box-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
-	overflow: auto;
 	zoom: 1;
 
 	@include min-screen($screen-sm-min) {
@@ -23,9 +23,9 @@
 		}
 
 		&.top-menu__left {
-			padding: 24px;
+			padding: 20px;
 			color: $color-complement-sky;
-			max-height: 70px;
+			//max-height: 70px;
 
 			.icon {
 				font-size: 18px;
@@ -33,17 +33,11 @@
 
 			span {
 				vertical-align: top;
-				font-weight: 500;
-				font-size: 12px;
 			}
 		}
 
 		&.top-menu__logotype {
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 75px;
-			margin-top: 12px;
+			width: 110px;
 
 			img {
 				width: 100%;
@@ -52,10 +46,8 @@
 		}
 
 		&.top-menu__right {
-			padding: 24px;
-			font-size: 12px;
+			padding: 20px;
 			font-weight: 600;
-			height: 70px;
 		}
 	}
 }

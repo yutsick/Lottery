@@ -14,12 +14,9 @@
 
 .sidebar-navigation__item {
 	display: block;
-	height: $sidebar-item-height;
 
 	&:first-child {
-		height: $sidebar-logo-height - 1; // - border
 		text-align: center;
-		position: relative;
 	}
 
 	&:not(:first-child) {
@@ -31,7 +28,7 @@
 		padding: $padding-medium $padding-default;
 
 		@include min-screen($screen-sm) {
-			padding: $padding-default $padding-small;
+			padding: $padding-default 5px;
 		}
 
 		@include min-screen($screen-md-max) {
@@ -218,14 +215,11 @@
 /* Logotype */
 .logotype {
 	display: inline-block;
-	max-width: 75px;
-	height: auto;
+	max-width: 110px;
 
 	img {
-		display: block;
 		width: 100%;
 		height: auto;
-		border: none;
 	}
 }
 
