@@ -1,7 +1,19 @@
 import isMobile from '../utilities/isMobile'
 
 export default function () {
+	initProductFilterDropdowns();
+
 	$('[data-toggle="tooltip"]').tooltip();
+}
+
+
+/*
+* Initialize dropdowns with filter values for product list
+*/
+function initProductFilterDropdowns() {
+	$('.js-toggle-filters').on('click', function () {
+		$('.filters').toggle();
+	});
 
 	$(".filters .dropdown").on("show.bs.dropdown", function (e) {
 		if (isMobile()) {

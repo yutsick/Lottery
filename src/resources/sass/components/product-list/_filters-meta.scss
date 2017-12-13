@@ -1,0 +1,40 @@
+.filters-meta {
+	position: relative;
+	margin-left: -10px;
+	margin-right: -10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	display: flex;
+
+	@include min-screen($screen-sm-min) {
+		display: none;
+	}
+
+}
+
+.filters-meta__count {
+	background-color: $color-black-light;
+	color: $color-white;
+	flex: 2;
+	padding: 10px;
+}
+
+.filters-meta__button {
+	background: $color-primary;
+	color: $color-white;
+	width: 30%;
+	border: none;
+	padding: 0 10px;
+	height: 40px;
+	text-align: left;
+	flex: 1;
+	outline: 0;
+
+	&:after {
+		color: $color-white;
+		font-size: 14px;
+		font-family: "ml-icons";
+		content: "\e906";
+		float: right;
+	}
+}

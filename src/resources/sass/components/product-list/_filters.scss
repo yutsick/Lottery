@@ -1,4 +1,14 @@
 .filters {
+	@include max-screen($screen-xs-max) {
+		display: none;
+		background-color: $color-cloud;
+		padding: 10px 10px 0;
+		margin: -10px -10px 10px;
+	}
+
+	@include min-screen($screen-sm-min) {
+		display: block !important;
+	}
 
 	.checkbox {
 		margin-top: 0;
