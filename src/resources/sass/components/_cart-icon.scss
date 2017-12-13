@@ -1,7 +1,11 @@
 .product-cart {
 	display: flex;
-	margin-right: -10px; /* fake full width */
-	margin-left: -10px; /* fake full width */
+	position: fixed;
+	z-index: 800;
+	width: 100%;
+	/* fake full width */
+	margin-right: -10px;
+	margin-left: -10px;
 
 	@include min-screen($screen-sm) {
 		margin-right: -20px;
@@ -9,16 +13,14 @@
 	}
 
 	@include min-screen($screen-md) {
-		position: fixed;
+		justify-content: flex-end;
 		right: 40px;
 		z-index: 800;
 		padding-top: 20px;
-		justify-content: flex-end;
 	}
 
 	@include min-screen(1675px) {
 		right: auto;
-		width: 100%;
 		max-width: 1400px;
 		padding-right: 20px;
 	}
@@ -33,9 +35,10 @@
 
 		@include min-screen($screen-md) {
 			flex-basis: auto;
-			border-radius: 2em;
 			padding-right: 15px;
 			padding-left: 15px;
+			border-radius: 2em;
+			border: 1px solid $color-gray-border;
 
 			&:not(:last-child) {
 				margin-right: 10px;
@@ -147,6 +150,7 @@ a.product-cart__item--theme-green {
 /* Blue theme */
 .product-cart__item--theme-blue {
 	background: $color-blue;
+	border-color: $color-blue;
 	color: $color-blue; /* inheritance for notification */
 
 	.product-cart__content {
