@@ -1,13 +1,15 @@
 .cart__item {
-	border-bottom: 1px solid red;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $color-feather;
 
 	&-content {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 	}
 
 	&-image {
+		margin-right: 10px;
 		max-width: 80px;
 
 		img {
@@ -16,30 +18,75 @@
 		}
 	}
 
+	&-title {
+		margin-top: 0;
+	}
+
+	&-quantity {
+		display: flex;
+	}
+
 	&-input {
-		width: 50px;
-		border: 1px solid red;
+		width: 40px;
+		padding: 10px;
+		border: 1px solid $color-gray-border;
+		text-align: center;
+
+		&:focus {
+			outline: 0;
+		}
 	}
 
 	&-btn {
 		width: 40px;
+		padding: 10px;
+		font-size: 16px;
+		color: $color-primary;
+		border: 1px solid $color-gray-border;
 
 		&:first-child {
 			border-top-left-radius: .3em;
 			border-bottom-left-radius: .3em;
+			border-right: 0;
 		}
 
 		&:last-child {
 			border-top-right-radius: .3em;
 			border-bottom-right-radius: .3em;
+			border-left: 0;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $color-cloud;
+		}
+
+		&:focus {
+			outline: 0;
 		}
 	}
 
+	&-price {
+		margin-left: auto;
+		margin-right: 10px;
+		margin-bottom:0;
+	}
+
 	&-remove {
-		width: 13px;
-		height: 13px;
+		width: 14px;
+		height: 14px;
 		padding: 0;
 		border: 0;
-		background: red;
+		font-size: $base-font-size;
+		color: $color-red;
+	}
+
+	&-total  {
+		margin-top: 10px;
+	}
+
+	&-sum {
+		float: right;
+		margin-left: 10px;
 	}
 }
