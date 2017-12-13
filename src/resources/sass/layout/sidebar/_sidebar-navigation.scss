@@ -28,7 +28,7 @@
 		padding: $padding-medium $padding-default;
 
 		@include min-screen($screen-sm) {
-			padding: $padding-default 5px;
+			padding: 22px 5px;
 		}
 
 		@include min-screen($screen-md-max) {
@@ -47,7 +47,7 @@
 }
 
 .js-active-sidebar .sidebar-navigation__item.has-content {
-	padding: $padding-default $padding-small;
+	padding: 22px 5px;
 
 	@include min-screen($screen-md-max) {
 		padding: $padding-medium $padding-default;

@@ -67,7 +67,7 @@
 	flex-wrap: wrap;
 	align-items: center;
 	position: relative;
-	height: $sidebar-item-height - 1; // - border
+	height: $sidebar-item-height;
 	padding: $padding-medium $padding-default;
 	font-weight: $bold;
 	line-height: 1;
@@ -88,7 +88,7 @@
 }
 
 .sub-navigation--first > .sub-navigation__item:first-child > .sub-navigation__link {
-	height: $sidebar-logo-height - 1; // - border
+	height: $sidebar-logo-height;
 }
 
 .sub-navigation__name {
