@@ -1,4 +1,8 @@
 .product-list-blocks {
+	&__title:first-child {
+		margin-top: 0;
+	}
+
 	[class*='col-'] {
 		&:nth-child(even) {
 			@include max-screen($screen-md-max) {
@@ -23,6 +27,7 @@
 }
 
 .block-product {
+	position: relative;
 	border: 1px solid $color-border;
 	margin-bottom: 7.5px;
 	transition: border 0.2s $ease-in-out;
@@ -93,12 +98,12 @@
 	display: inline-block;
 	right: 0;
 	top: 10px;
-	color: $color-light;
-	padding: 10px 20px;
-	border-radius: 20px 0 0 20px;
-	font-size: 12px;
-	line-height: 1;
 	z-index: 20;
+	padding: $padding-medium 30px;
+	border-radius: 2em 0 0 2em;
+	font-family: $base-heading-family;
+	color: $color-light;
+	line-height: 1;
 }
 
 .block-product__content {
@@ -150,9 +155,10 @@
 
 .block-product__dream-button {
 	position: absolute;
-	top: 15px;
-	left: 15px;
+	top: 0;
+	left: 0;
 	z-index: 20;
+	padding: $padding-small;
 	color: $color-complement-sky;
 
 	&:hover,
