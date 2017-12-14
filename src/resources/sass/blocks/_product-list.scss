@@ -93,11 +93,15 @@
 	right: 0;
 	top: 10px;
 	z-index: 20;
-	padding: $padding-medium 30px;
+	padding: $padding-small $padding-small $padding-small $padding-default;
 	border-radius: 2em 0 0 2em;
 	font-family: $base-heading-family;
 	color: $color-light;
 	line-height: 1;
+
+	@include min-screen($screen-sm-min) {
+		padding: $padding-medium 30px;
+	}
 }
 
 .block-product__content {
