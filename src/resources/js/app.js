@@ -16,6 +16,7 @@ import bonusCode from './components/bonus-code';
 import dataList from './components/data-list';
 import entityCollectionActions from './components/entity-collection-actions';
 import form from './components/form';
+import scrolling from './components/is-scrolling';
 import loadSection from './components/load-section';
 import message from './components/message';
 import modal from './components/modal';
@@ -45,6 +46,7 @@ $(function () {
 	dataList();
 	entityCollectionActions();
 	form();
+	scrolling();
 	loadSection();
 	message();
 	modal();
