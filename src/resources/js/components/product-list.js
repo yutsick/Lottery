@@ -5,7 +5,9 @@ let filters = [];
 export default function () {
 	initProductFilterDropdowns();
 
-	$('[data-toggle="tooltip"]').tooltip();
+	$('[data-toggle="tooltip"]').tooltip({
+		trigger: 'hover'
+	});
 
 	$('form[data-filter-type]').on('submit', function (e) {
 		e.preventDefault();
