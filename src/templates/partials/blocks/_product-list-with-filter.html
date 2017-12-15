@@ -22,30 +22,32 @@
 					<div class="dropdown-menu">
 						<div class="filter-dropdown__header">Kategori</div>
 
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Resor <i>(5)</i>
-								</label>
-							</div>
+						<form data-filter-type="category">
+							<div class="form-group">
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="category" value="resor" type="checkbox">
+										Resor <i>(5)</i>
+									</label>
+								</div>
 
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Hus & Hem <i>(4)</i>
-								</label>
-							</div>
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="category" value="hushem" type="checkbox">
+										Hus & Hem <i>(4)</i>
+									</label>
+								</div>
 
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Sport & Fritid <i>(2)</i>
-								</label>
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="category" value="fritid" type="checkbox">
+										Sport & Fritid <i>(2)</i>
+									</label>
+								</div>
 							</div>
-						</div>
+							<button class="btn btn-primary" type="submit">Välj</button>
+						</form>
 
-						<button class="btn btn-primary">Välj</button>
 					</div>
 				</div>
 			</div>
@@ -57,34 +59,34 @@
 
 					<div class="dropdown-menu">
 						<div class="filter-dropdown__header">Pris</div>
+						<form method="post" data-filter-type="price">
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="form-group">
+										<label>Från</label>
+										<input type="text" class="form-control" name="from" placeholder="200 kr">
+									</div>
+								</div>
 
-						<div class="row">
-							<div class="col-xs-6">
-								<div class="form-group">
-									<label>Från</label>
-									<input type="text" class="form-control" placeholder="200 kr">
+								<div class="col-xs-6">
+									<div class="form-group">
+										<label>Till</label>
+										<input type="text" class="form-control" name="to" placeholder="5000 kr">
+									</div>
 								</div>
 							</div>
 
-							<div class="col-xs-6">
-								<div class="form-group">
-									<label>Till</label>
-									<input type="text" class="form-control" placeholder="5000 kr">
+							<div class="form-group">
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" type="checkbox">
+										Endast vinster jag har råd med
+									</label>
 								</div>
 							</div>
-						</div>
 
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Endast vinster jag har råd med
-								</label>
-							</div>
-						</div>
-
-						<button class="btn btn-primary">Välj</button>
-
+							<button class="btn btn-primary" type="submit">Välj</button>
+						</form>
 						<a href="/">Läs om drömvinsterna (över 5000kr)</a>
 					</div>
 				</div>
@@ -96,38 +98,39 @@
 					</button>
 					<div class="dropdown-menu">
 						<div class="filter-dropdown__header">Varumärke</div>
+						<form method="post" data-filter-type="brand">
+							<div class="form-group">
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="brand" value="bodum" type="checkbox">
+										Bodum
+									</label>
+								</div>
 
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Bodum
-								</label>
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="brand" value="bosch" type="checkbox">
+										Bosch
+									</label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="brand" value="electrolux" type="checkbox">
+										Electrolux
+									</label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="brand" value="ernst" type="checkbox">
+										Ernst
+									</label>
+								</div>
 							</div>
 
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Bosch
-								</label>
-							</div>
-
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Electrolux
-								</label>
-							</div>
-
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Ernst
-								</label>
-							</div>
-						</div>
-
-						<button class="btn btn-primary">Välj</button>
+							<button class="btn btn-primary" type="submit">Välj</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -139,30 +142,33 @@
 					<div class="dropdown-menu">
 						<div class="filter-dropdown__header">Kampanjer</div>
 
-						<div class="form-group">
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									de Buyer-knivar
-								</label>
+						<form method="post" data-filter-type="campaigns">
+
+							<div class="form-group">
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="campaigns" value="de-buyer" type="checkbox">
+										de Buyer-knivar
+									</label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="campaigns" value="skidsemester" type="checkbox">
+										Skidsemester
+									</label>
+								</div>
+
+								<div class="checkbox">
+									<label>
+										<input class="custom-checkbox" name="campaigns" value="Matlagningsspecial" type="checkbox">
+										Matlagningsspecial
+									</label>
+								</div>
 							</div>
 
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Skidsemester
-								</label>
-							</div>
-
-							<div class="checkbox">
-								<label>
-									<input class="custom-checkbox" type="checkbox">
-									Matlagningsspecial
-								</label>
-							</div>
-						</div>
-
-						<button class="btn btn-primary">Välj</button>
+							<button class="btn btn-primary" type="submit">Välj</button>
+						</form>
 					</div>
 				</div>
 			</div>
@@ -172,14 +178,17 @@
 						Sök
 					</button>
 					<div class="dropdown-menu">
+
 						<div class="filter-dropdown__header">Sök</div>
 
-						<div class="form-group">
-							<label>Sökord eller vinstnummer</label>
-							<input class="form-control" type="text">
-						</div>
+						<form method="post" data-filter-type="search">
+							<div class="form-group">
+								<label>Sökord eller vinstnummer</label>
+								<input class="form-control" name="search" type="text">
+							</div>
 
-						<button class="btn btn-primary">Sök</button>
+							<button class="btn btn-primary" type="submit">Sök</button>
+						</form>
 					</div>
 				</div>
 			</div>

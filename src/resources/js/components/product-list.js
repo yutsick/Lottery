@@ -1,11 +1,20 @@
 import isMobile from '../utilities/isMobile'
 
+let filters = [];
+
 export default function () {
 	initProductFilterDropdowns();
 
 	$('[data-toggle="tooltip"]').tooltip();
-}
 
+	$('form[data-filter-type]').on('submit', function (e) {
+		e.preventDefault();
+		let filterType = $(this).data('filter-type');
+		let filterValues = $(this).serializeArray();
+
+		filters[filterType] = filterValues;
+	});
+}
 
 /*
 * Initialize dropdowns with filter values for product list
