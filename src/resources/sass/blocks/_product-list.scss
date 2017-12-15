@@ -68,13 +68,9 @@
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	padding-bottom: 100%;
+	padding-bottom: 66.66%; /* 3:2 Aspect Ratio */
 	border-bottom: 1px solid $color-border;
 	transition: border $duration-quick $delay-none $ease-in-out;
-
-	@include min-screen($screen-sm-min) {
-		padding-bottom: 70%;
-	}
 
 	img {
 		width: 100%;
@@ -83,14 +79,12 @@
 		object-fit: cover;
 		transition: opacity $duration-medium $ease-in-out,
 		visibility $duration-medium $ease-in-out;
-		z-index: 10;
 	}
 }
 
 .block-product__hover-image {
 	opacity: 0;
 	visibility: hidden;
-	z-index: 20;
 }
 
 .block-product__label {
@@ -99,23 +93,27 @@
 	right: 0;
 	top: 10px;
 	z-index: 20;
-	padding: $padding-medium 30px;
+	padding: $padding-small $padding-small $padding-small $padding-default;
 	border-radius: 2em 0 0 2em;
 	font-family: $base-heading-family;
 	color: $color-light;
 	line-height: 1;
-}
-
-.block-product__content {
-	padding: $padding-small $padding-small;
-	text-align: center;
-	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
-	display: flex;
-	flex-direction: column;
-	flex: auto;
 
 	@include min-screen($screen-sm-min) {
 		padding: $padding-medium 30px;
+	}
+}
+
+.block-product__content {
+	display: flex;
+	flex-direction: column;
+	flex: auto;
+	padding: $padding-small;
+	text-align: center;
+	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
+
+	@include min-screen($screen-sm-min) {
+		padding: $padding-medium;
 	}
 }
 
@@ -123,16 +121,18 @@
 	margin-bottom: 0;
 	font-weight: $light;
 
-	&:not(:first-child) {
+	&:not(:first-child):not(.block-product__subtitle) {
 		margin-top: 10px;
 	}
 
 	&--highlight {
 		font-weight: $bold;
 	}
+
 }
 
 .block-product__title {
+	margin-top: 0;
 	font-weight: $bold;
 	text-decoration: underline;
 	font-size: 16px;
@@ -141,6 +141,10 @@
 	> a {
 		color: inherit;
 	}
+}
+
+.block-product__subtitle {
+	margin-top: 2px;
 }
 
 .block-product__text {
@@ -199,22 +203,14 @@
 
 	.block-product__image-wrapper {
 		flex: 1 1 auto;
-		width: 100%;
 
 		@include min-screen($screen-sm-min) {
-			min-height: 300px;
 			width: 70%;
 		}
 	}
 
 	.block-product__image {
-		width: 100%;
 		height: 100%;
-		padding-bottom: 70%;
-
-		@include min-screen($screen-sm-min) {
-			padding-bottom: 0;
-		}
 	}
 
 	.block-product__content {
@@ -225,14 +221,5 @@
 		@include min-screen($screen-sm-min) {
 			width: 30%;
 		}
-	}
-
-	.block-product__title {
-		text-decoration: none;
-		margin-top: 0;
-	}
-
-	.btn {
-		font-size: 14px;
 	}
 }
