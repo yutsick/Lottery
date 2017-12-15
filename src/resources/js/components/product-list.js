@@ -21,6 +21,8 @@ export default class ProductList {
 			let parameterUrl = this.createFilterUrl();
 
 			console.log(parameterUrl);
+
+			$('.filters .filter-dropdown').removeClass('open');
 		});
 	}
 

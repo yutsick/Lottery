@@ -19,8 +19,8 @@
 		font-size: 8px;
 	}
 
-	&:hover:after {
-		color: $color-base-primary;
+	&:hover {
+		background-color: $color-gray-light;
 	}
 }
 
@@ -29,5 +29,6 @@
 
 	&:hover {
 		background-color: $color-blue-light;
+		color: #fff;
 	}
 }
