@@ -21,4 +21,8 @@
 			flex: auto;
 		}
 	}
+
+	@include max-screen($screen-sm-max) {
+		margin-bottom: 0;
+	}
 }

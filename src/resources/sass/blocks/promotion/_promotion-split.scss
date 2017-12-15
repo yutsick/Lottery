@@ -55,3 +55,35 @@
 		padding-top: 0;
 	}
 }
+
+.block-promotion--split-compact {
+	@include max-screen($screen-xs-max) {
+		.block-promotion__title {
+			font-size: 18px;
+		}
+	}
+
+	@include max-screen($screen-sm-max) {
+		min-height: 1px;
+
+		.block-promotion__image,
+		.block-promotion__text {
+			display: none;
+		}
+
+		.block-promotion__content {
+			padding-top: 20px;
+			padding-right: 60px;
+		}
+
+		.block-promotion__link:after {
+			opacity: .5;
+			bottom: 50%;
+			transform: translateY(50%);
+
+			@media screen and (max-width: 768px) {
+				display: block;
+			}
+		}
+	}
+}
