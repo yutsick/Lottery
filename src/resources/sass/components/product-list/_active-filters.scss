@@ -7,6 +7,7 @@
 	white-space: nowrap;
 	color: $color-white;
 	cursor: pointer;
+	margin-right: 3px;
 
 	&:after {
 		content: '\e90b';
@@ -18,8 +19,8 @@
 		font-size: 8px;
 	}
 
-	&:hover:after {
-		color: $color-base-primary;
+	&:hover {
+		background-color: $color-gray-light;
 	}
 }
 
@@ -28,5 +29,6 @@
 
 	&:hover {
 		background-color: $color-blue-light;
+		color: #fff;
 	}
 }

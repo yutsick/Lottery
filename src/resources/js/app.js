@@ -21,7 +21,7 @@ import loadSection from './components/load-section';
 import message from './components/message';
 import modal from './components/modal';
 import paymentMethod from './components/payment-method';
-import productList from './components/product-list';
+import ProductList from './components/product-list';
 import scrollToElement from './components/scrollToElement';
 import search from './components/search';
 import slider from './components/slider';
@@ -51,7 +51,7 @@ $(function () {
 	message();
 	modal();
 	paymentMethod();
-	productList();
+	new ProductList();
 	scrollToElement();
 	search();
 	slider();
