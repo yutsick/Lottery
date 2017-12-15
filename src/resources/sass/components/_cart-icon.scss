@@ -91,6 +91,7 @@
 	&__notification {
 		align-self: flex-end;
 		flex: 0 0 auto;
+		line-height: inherit;
 
 		@include min-screen($screen-xs) {
 			align-self: center;
