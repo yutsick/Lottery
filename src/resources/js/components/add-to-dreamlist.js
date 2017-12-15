@@ -6,13 +6,15 @@ export default function() {
         let $sum = $number.text();
 
         if ($(this).hasClass('starred')) {
-            $(this).removeClass('starred');
+            $(this).removeClass('starred')
+                    .attr('data-original-title', 'Lägg till i min drömlista');
 
             // Remove one
             $sum--;
             $number.text($sum);
         } else {
-            $(this).addClass('starred');
+            $(this).addClass('starred')
+                .attr('data-original-title', 'Ta bort från min drömlista');
 
             if ($elem) {
                 $elem.clone()
