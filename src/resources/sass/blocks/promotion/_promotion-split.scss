@@ -59,7 +59,9 @@
 .block-promotion--split-compact {
 	@include max-screen($screen-xs-max) {
 		.block-promotion__title {
-			font-size: 18px;
+			font-family: $semi-heading-family;
+			font-size: $base-font-size;
+			line-height: 1;
 		}
 	}
 
