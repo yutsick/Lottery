@@ -19,16 +19,11 @@
 		font-size: 8px;
 	}
 
-	&:hover {
-		background-color: $color-gray-light;
+	&:hover:after {
+		color: $color-base-primary;
 	}
-}
 
-.active-filters__label--primary {
-	background-color: $color-primary;
-
-	&:hover {
-		background-color: $color-blue-light;
-		color: #fff;
+	&--primary {
+		background-color: $color-primary;
 	}
 }
