@@ -61,9 +61,10 @@
 
 	&__icon {
 		order: 2;
-		font-size: 16px;
+		font-size: 12px;
 
 		@include min-screen($screen-md) {
+			font-size: 14px;
 			order: -1;
 			margin-right: 8px;
 		}
@@ -71,9 +72,10 @@
 
 	&__title {
 		margin-bottom: 0;
+		font-size: 10px;
 		text-transform: uppercase;
 		color: rgba(0, 0, 0, .7);
-		font-size: 10px;
+		line-height: 1;
 
 		@include min-screen($screen-sm) {
 			font-size: $base-font-size;
@@ -89,6 +91,7 @@
 	&__meta {
 		margin-bottom: 0;
 		font-size: 12px;
+		line-height: 1;
 
 		@include min-screen($screen-sm) {
 			font-size: $base-font-size;
@@ -100,6 +103,8 @@
 	}
 
 	&__notification {
+		width: 20px;
+		height: 20px;
 		align-self: center;
 		flex: 0 0 auto;
 		line-height: inherit;
