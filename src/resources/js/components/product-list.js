@@ -64,13 +64,22 @@ export default class ProductList {
 			$('.filters').toggle();
 		});
 
+	// Show overlay when clicking the dropdown
 		$(".filters .dropdown").on("show.bs.dropdown", function (e) {
 			if (isMobile()) {
 				$('<div class="modal-backdrop fade in"></div>').appendTo(document.body);
 			}
 		});
 
+		// Hide overlay when clicking the dropdown
 		$(".filters .dropdown").on("hide.bs.dropdown", function (e) {
+			if (isMobile()) {
+				$(".modal-backdrop").remove();
+			}
+		});
+
+		// Hide overlay when clicking the button
+		$(".js-hide-dropdown").on('click', function (e) {
 			if (isMobile()) {
 				$(".modal-backdrop").remove();
 			}
