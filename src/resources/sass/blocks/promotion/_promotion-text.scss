@@ -1,11 +1,18 @@
 .block-promotion--text {
 	&:not(.text-align-center, .text-align-right) {
 		.block-promotion__content {
-			padding-right: 30%;
+			//padding-right: 30%;
 
 			@include min-screen($screen-sm-min) {
 				padding-right: 60px;
 			}
+		}
+	}
+
+	.block-promotion__title {
+		@include max-screen($screen-sm) {
+			font-size: 15px;
+			line-height: 1.2;
 		}
 	}
 }
