@@ -161,6 +161,7 @@
 	margin-top: $margin-medium;
 
 	@include min-screen($screen-sm-max) {
+		position: relative;
 		width: 240px;
 		margin-top: 0;
 	}
