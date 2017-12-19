@@ -87,7 +87,7 @@ export default class ProductList {
 			}
 		});
 
-		$(".filters .dropdown-menu").on('click', function (e) {
+		$(".dropdown-menu").on('click', function (e) {
 			// Close the dropdown if clicking on the header.
 			if ($(e.target).hasClass('filter-dropdown__header')) {
 				return;
