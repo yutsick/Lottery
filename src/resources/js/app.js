@@ -25,6 +25,7 @@ import ProductList from './components/product-list';
 import scrollToElement from './components/scrollToElement';
 import search from './components/search';
 import slider from './components/slider';
+import sortValue from './components/sort-value';
 import tableSelect from './components/table-select';
 import toggleContent from './components/toggle-content';
 import walletAccountSwitch from './components/wallet-account-switch';
@@ -55,6 +56,7 @@ $(function () {
 	scrollToElement();
 	search();
 	slider();
+	sortValue();
 	tableSelect();
 	toggleContent();
 	walletAccountSwitch();
