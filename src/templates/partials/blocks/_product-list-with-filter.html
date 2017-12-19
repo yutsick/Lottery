@@ -1,6 +1,47 @@
 <section class="section product-list-blocks">
 	<div class="container">
-		<h2 class="product-list-blocks__title h3">Vinster</h2>
+		<h2 class="product-list-blocks__title product-list-blocks__title--left h3">Vinster</h2>
+
+		<div class="sort">
+			<p class="sort__label">Sortera efter</p>
+			<div class="dropdown filter-dropdown js-show-dropdown">
+				<button class="sort__checked filter-dropdown__button js-add-value" type="button" data-toggle="dropdown" data-checked="Rekommenderat">
+					Rekommenderat
+				</button>
+				<div class="dropdown-menu sort__item">
+					<div class="filter-dropdown__header">Sortera efter</div>
+					<form method="post" data-filter-type="sort">
+						<div class="form-group">
+							<div class="sort__choice">
+								<label>
+									<input class="custom-radio js-get-value" name="sort" value="Rekommenderat" type="radio" checked>
+									Rekommenderat
+								</label>
+							</div>
+							<div class="sort__choice">
+								<label>
+									<input class="custom-radio js-get-value" name="sort" value="Högst pris" type="radio">
+									Högst pris
+								</label>
+							</div>
+							<div class="sort__choice">
+								<label>
+									<input class="custom-radio js-get-value" name="sort" value="Lägst pris" type="radio">
+									Lägst pris
+								</label>
+							</div>
+							<div class="sort__choice">
+								<label>
+									<input class="custom-radio js-get-value" name="sort" value="Nyast" type="radio">
+									Nyast
+								</label>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
 		<div class="filters-meta">
 			<div class="filters-meta__count">
 				149 vinster visas
@@ -12,7 +53,7 @@
 
 		<div class="filters">
 			<div class="filters__item">
-				<div class="dropdown filter-dropdown">
+				<div class="dropdown filter-dropdown js-show-dropdown">
 					<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
 						Kategori
 					</button>
@@ -45,7 +86,7 @@
 				</div>
 			</div>
 			<div class="filters__item filters__item--large">
-				<div class="dropdown filter-dropdown">
+				<div class="dropdown filter-dropdown js-show-dropdown">
 					<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
 						Pris
 					</button>
@@ -81,7 +122,7 @@
 				</div>
 			</div>
 			<div class="filters__item">
-				<div class="dropdown filter-dropdown">
+				<div class="dropdown filter-dropdown js-show-dropdown">
 					<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
 						Varumärke
 					</button>
@@ -120,7 +161,7 @@
 				</div>
 			</div>
 			<div class="filters__item">
-				<div class="dropdown filter-dropdown">
+				<div class="dropdown filter-dropdown js-show-dropdown">
 					<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
 						Kampanjer
 					</button>
@@ -153,7 +194,7 @@
 				</div>
 			</div>
 			<div class="filters__item">
-				<div class="dropdown filter-dropdown">
+				<div class="dropdown filter-dropdown js-show-dropdown">
 					<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
 						Sök
 					</button>
@@ -165,46 +206,6 @@
 								<input class="form-control" name="search" type="text">
 							</div>
 							<button class="btn btn-primary js-hide-dropdown" type="submit">Sök</button>
-						</form>
-					</div>
-				</div>
-			</div>
-
-			<div class="filters__item">
-				<div class="dropdown filter-dropdown">
-					<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
-						Sortera efter
-					</button>
-					<div class="dropdown-menu">
-						<div class="filter-dropdown__header">Sortera efter</div>
-						<form method="post" data-filter-type="sort">
-							<div class="form-group">
-								<div class="radio">
-									<label>
-										<input class="custom-radio" name="sort" value="Rekommenderat" type="radio">
-										Rekommenderat
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input class="custom-radio" name="sort" value="Högst pris" type="radio">
-										Högst pris
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input class="custom-radio" name="sort" value="Lägst pris" type="radio">
-										Lägst pris
-									</label>
-								</div>
-								<div class="radio">
-									<label>
-										<input class="custom-radio" name="sort" value="Nyast" type="radio">
-										Nyast
-									</label>
-								</div>
-							</div>
-							<button class="btn btn-primary js-hide-dropdown" type="submit">Välj</button>
 						</form>
 					</div>
 				</div>
