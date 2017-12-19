@@ -10,6 +10,9 @@
 		display: none;
 	}
 
+	@include max-screen($screen-xs-max) {
+		clear: both;
+	}
 }
 
 .filters-meta__count {

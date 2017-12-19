@@ -3,6 +3,12 @@
 		margin-top: 0;
 	}
 
+	&__title--left {
+		@include max-screen($screen-sm-max) {
+			float: left;
+		}
+	}
+
 	/*[class*='col-'] {
 		&:nth-child(even) {
 			@include max-screen($screen-md-max) {
@@ -207,7 +213,7 @@
 		flex: 1 1 auto;
 
 		@include min-screen($screen-sm-min) {
-			width: 70%;
+			flex-basis: 70%;
 		}
 	}
 
@@ -221,7 +227,7 @@
 		text-align: left;
 
 		@include min-screen($screen-sm-min) {
-			width: 30%;
+			flex-basis: 30%;
 		}
 	}
 }
