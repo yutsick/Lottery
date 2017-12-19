@@ -136,35 +136,52 @@
 
 .filter-dropdown__button {
 	position: relative;
-	background-color: white;
-	border: 1px solid $color-gray-border;
+	width: 100%;
 	padding: 10px 15px;
-	text-align: left;
+	border-radius: 4px;
+	border: 1px solid $color-gray-border;
+	background-color: white;
 	font-size: 14px;
 	font-weight: $bold;
+	text-align: left;
 	outline: none;
-	width: 100%;
-	border-radius: 4px;
 
 	&:after {
-		color: $color-blue;
-		font-size: 14px;
-		font-family: $base-icon-family;
 		content: "\e906";
 		float: right;
+		font-size: 14px;
+		font-family: $base-icon-family;
+		color: $color-blue;
 	}
 }
 
 /* Sort */
 .sort {
 	float: right;
-	position: relative;
-	display: inline-block;
-	width: 240px;
+	margin-top: $margin-medium;
+
+	@include min-screen($screen-sm-max) {
+		width: 240px;
+		margin-top: 0;
+	}
+
+	&__checked {
+		@include max-screen($screen-sm-max) {
+			border: none;
+			padding-right: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+
+			&:after {
+				margin-left: $margin-small;
+			}
+		}
+	}
 
 	&__label {
 		display: inline-block;
-		margin-top: 10px;
+		margin-top: $margin-small;
+		margin-bottom: 0;
 		font-size: 12px;
 		color: $color-gray;
 	}
@@ -178,8 +195,14 @@
 	}
 
 	.filter-dropdown {
-		width: 160px;
-		float: right;
+		display: inline-block;
+		width: auto;
+		margin-left: $margin-small;
+
+		@include min-screen($screen-sm-max) {
+			width: 160px;
+			float: right;
+		}
 	}
 
 	.filter-dropdown.open {
