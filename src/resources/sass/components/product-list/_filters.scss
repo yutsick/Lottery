@@ -1,4 +1,8 @@
 .filters {
+	@include max-screen($screen-sm-max) {
+		clear: both;
+	}
+
 	@include max-screen($screen-xs-max) {
 		display: none;
 		background-color: $color-cloud;
@@ -60,9 +64,35 @@
 .filter-dropdown {
 	width: 100%;
 
+	&.open {
+		@include min-screen($screen-sm-min) {
+			margin-bottom: 1px;
+			width: 200px;
+			z-index: 1000;
+
+			.filter-dropdown__button {
+				width: 100%;
+				border-bottom: none;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+
+				&:after {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		.filter-dropdown__button:after {
+			transform: rotate(180deg);
+		}
+	}
+
 	.dropdown-menu {
+		margin-top: 0;
+		padding: 15px;
+		width: 100%;
+
 		@include max-screen($screen-xs-max) {
-			padding: 15px;
 			position: fixed;
 			top: 50%;
 			width: 200px;
@@ -71,15 +101,14 @@
 			z-index: 1050;
 		}
 
-		@include min-screen($screen-sm-min) {
-			padding: 0 15px 15px;
-			width: 100%;
-			margin-top: 0;
-			border-top: none;
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
+		&:not(.sort__item) {
+			@include min-screen($screen-sm-min) {
+				padding-top: 0;
+				border-top: none;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
 		}
-
 	}
 
 	.btn {
@@ -89,8 +118,6 @@
 
 .filter-dropdown__header {
 	background: none;
-	border: none;
-	font-size: 14px;
 	font-weight: $bold;
 	margin-bottom: 10px;
 
@@ -99,11 +126,10 @@
 	}
 
 	&:after {
-		color: $color-blue;
-		font-size: 14px;
-		font-family: "ml-icons";
 		content: "\e906";
 		float: right;
+		font-family: $base-icon-family;
+		color: $color-blue;
 		transform: rotate(180deg);
 	}
 }
@@ -123,31 +149,49 @@
 	&:after {
 		color: $color-blue;
 		font-size: 14px;
-		font-family: "ml-icons";
+		font-family: $base-icon-family;
 		content: "\e906";
 		float: right;
 	}
 }
 
-.filter-dropdown.open {
-	@include min-screen($screen-sm-min) {
-		margin-bottom: 1px;
-		width: 200px;
-		z-index: 1000;
+/* Sort */
+.sort {
+	float: right;
+	position: relative;
+	display: inline-block;
+	width: 240px;
 
-		.filter-dropdown__button {
-			width: 100%;
-			border-bottom: none;
-			border-bottom-left-radius: 0;
-			border-bottom-right-radius: 0;
+	&__label {
+		display: inline-block;
+		margin-top: 10px;
+		font-size: 12px;
+		color: $color-gray;
+	}
 
-			&:after {
-				transform: rotate(180deg);
-			}
+	&__item {
+		top: 0;
+
+		.filter-dropdown__header {
+			display: block;
 		}
 	}
 
-	.filter-dropdown__button:after {
-		transform: rotate(180deg);
+	.filter-dropdown {
+		width: 160px;
+		float: right;
+	}
+
+	.filter-dropdown.open {
+		@include min-screen($screen-sm-min) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 200px;
+		}
+	}
+
+	.form-group {
+		margin-bottom: 0;
 	}
 }
