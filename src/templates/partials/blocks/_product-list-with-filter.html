@@ -213,7 +213,7 @@
 
 		<div class="active-filters"></div>
 
-		<div class="row equal-height">
+		<div class="row equal-height" id="product-list" data-total-items="11">
 			@@include('blocks/product-list/_product-item.html', {
 			"image": "assets/img/mockup/butterfly.jpg",
 			"hoverImage": "assets/img/mockup/car.jpg",
@@ -298,5 +298,10 @@
 			"dreamButton": true
 			})
 		</div>
+
+		<div class="entity-collection-actions block-product__more-button">
+			<a class="btn btn-primary" data-target="#product-list" href="/ajax/all-products.html">Visa alla 25 produkter</a>
+		</div>
+
 	</div>
 </section>
