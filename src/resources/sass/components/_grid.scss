@@ -14,8 +14,10 @@
 			margin-right: -30px;
 		}
 
-		> [class*='col-'] {
-			padding: 0;
+		@include max-screen($screen-xs-max) {
+			> [class*='col-'] {
+				padding: 0;
+			}
 		}
 	}
 
