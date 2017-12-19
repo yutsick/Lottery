@@ -57,22 +57,24 @@ export default class ProductList {
 	}
 
 	/*
-    * Initialize dropdowns with filter values for product list
-    */
+	* Initialize dropdowns with filter values for product list
+	*/
 	initProductFilterDropdowns() {
+		var $showDropdown = $('.js-show-dropdown');
+
 		$('.js-toggle-filters').on('click', function () {
 			$('.filters').toggle();
 		});
 
-	// Show overlay when clicking the dropdown
-		$(".filters .dropdown").on("show.bs.dropdown", function (e) {
+		// Show overlay when clicking the element
+		$showDropdown.on("show.bs.dropdown", function (e) {
 			if (isMobile()) {
 				$('<div class="modal-backdrop fade in"></div>').appendTo(document.body);
 			}
 		});
 
-		// Hide overlay when clicking the dropdown
-		$(".filters .dropdown").on("hide.bs.dropdown", function (e) {
+		// Hide overlay when clicking the element
+		$showDropdown.on("hide.bs.dropdown", function (e) {
 			if (isMobile()) {
 				$(".modal-backdrop").remove();
 			}
