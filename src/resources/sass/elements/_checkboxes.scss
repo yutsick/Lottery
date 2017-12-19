@@ -14,7 +14,6 @@
 		display: inline-block;
 		width: 24px;
 		height: 24px;
-		//padding: 9px;
 		border-radius: 3px;
 		border: 1px solid #cacece;
 		background-color: #fff;
@@ -51,6 +50,37 @@
 				font-size: 12px;
 			}
 		}
+	}
+}
+
+// Custom radio buttons
+.custom-radio {
+	-webkit-appearance: none;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 1px solid #cacece;
+	background-color: #fff;
+
+	&:checked:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: $color-gray;
+		transform: translate(-50%, -50%);
+	}
+
+
+	&[type="radio"] {
+		margin-top: -1px;
+		margin-right: 5px;
 	}
 }
 
