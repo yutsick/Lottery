@@ -31,19 +31,19 @@
 
 #alert-cookie,
 &#alert-cookie {
-	width: 100%;
-	box-sizing: border-box;
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	right: 0;
+	z-index: 100;
 	background-color: $color-cloud;
 	color: $color-complement-sky;
-	z-index: 10;
 
 	@include min-screen($screen-sm-min) {
 		top: 0;
 		position: relative;
 	}
+
 	.close {
 		color: $color-complement-sky;
 	}
