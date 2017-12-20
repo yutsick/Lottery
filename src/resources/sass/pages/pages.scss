@@ -113,6 +113,8 @@ body {
 }
 
 #page-wrapper.shop {
+	overflow: hidden;
+
 	@include max-screen($screen-xs-max) {
 		padding-top: 98px;
 	}
