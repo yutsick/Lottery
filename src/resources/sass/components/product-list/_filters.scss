@@ -42,9 +42,12 @@
 .filters__item {
 	display: inline-block;
 	position: relative;
-	width: 160px;
 	margin-right: 5px;
 	margin-bottom: 10px;
+
+	@include min-screen($screen-sm-min) {
+		width: 160px;
+	}
 }
 
 .filters__item--large {
@@ -117,9 +120,9 @@
 }
 
 .filter-dropdown__header {
+	margin-bottom: $margin-small;
 	background: none;
 	font-weight: $bold;
-	margin-bottom: 10px;
 
 	@include min-screen($screen-sm-min) {
 		display: none;
@@ -149,6 +152,7 @@
 	&:after {
 		content: "\e906";
 		float: right;
+		margin-left: $margin-small;
 		font-size: 14px;
 		font-family: $base-icon-family;
 		color: $color-blue;
