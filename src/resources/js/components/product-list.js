@@ -3,7 +3,6 @@ import isMobile from '../utilities/isMobile'
 export default class ProductList {
 	constructor() {
 		this.filters = [];
-
 		this.initProductFilterDropdowns();
 
 		$('[data-toggle="tooltip"]').tooltip({
@@ -13,19 +12,19 @@ export default class ProductList {
 		$('form[data-filter-type]').on('submit', (e) => {
 			e.preventDefault();
 			let $form = $(e.currentTarget);
-
 			let filterType = $form.data('filter-type');
 			let filterValues = $form.serializeArray();
 
 			this.filters[filterType] = filterValues;
-
 			this.createFilterLabels();
+
 			let parameterUrl = this.createFilterUrl();
 
-			console.log(parameterUrl);
+			//console.log(parameterUrl);
 
 			$('.filters .filter-dropdown').removeClass('open');
 		});
+
 	}
 
 	/*
@@ -36,14 +35,15 @@ export default class ProductList {
 
 		for (let filterType in this.filters) {
 			this.filters[filterType].forEach(function (filter) {
-				html += `<span class="active-filters__label">${filter.value}</span>`;
+				html += `<button class="active-filters__label js-remove-label">${filter.value}</button>`;
 			});
 		}
 
-		html += `<span class="active-filters__label active-filters__label--primary">Ta bort alla filter</span>`;
+		html += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
 
 		$('.active-filters').html(html);
 	}
+
 
 	createFilterUrl() {
 		let url = '?';
@@ -60,7 +60,7 @@ export default class ProductList {
 	* Initialize dropdowns with filter values for product list
 	*/
 	initProductFilterDropdowns() {
-		var $showDropdown = $('.js-show-dropdown');
+		let $showDropdown = $('.js-show-dropdown');
 
 		$('.js-toggle-filters').on('click', function () {
 			$('.filters').toggle();

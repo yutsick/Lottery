@@ -2,12 +2,12 @@
 	position: relative;
 	display: inline-block;
 	margin-bottom: 10px;
+	margin-right: 3px;
 	padding: 3px 40px 3px 10px;
+	border: none;
 	background-color: $color-gray;
 	white-space: nowrap;
 	color: $color-white;
-	cursor: pointer;
-	margin-right: 3px;
 
 	&:after {
 		content: '\e90b';
@@ -15,8 +15,8 @@
 		top: 10px;
 		right: 10px;
 		font-family: $base-icon-family;
-		line-height: 1;
 		font-size: 8px;
+		line-height: 1;
 	}
 
 	&:hover:after {
