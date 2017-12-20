@@ -1,5 +1,11 @@
 .modal-dialog {
-	padding: 0 30px;
+	padding-right: $padding-medium;
+	padding-left: $padding-medium;
+
+	@include min-screen($screen-xs) {
+		padding-right: 30px;
+		padding-left: 30px;
+	}
 
 	@include min-screen($screen-sm-min) {
 		padding: 0;
@@ -29,8 +35,12 @@
 .modal-header,
 .modal-body,
 .modal-footer {
-	padding: 25px;
+	padding: $padding-medium;
 	line-height: 20px;
+
+	@include min-screen($screen-xs) {
+		padding: 25px;
+	}
 
 	p {
 		color: $color-base-complement;
