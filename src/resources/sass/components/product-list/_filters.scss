@@ -157,8 +157,13 @@
 
 /* Sort */
 .sort {
-	float: right;
-	margin-top: $margin-medium;
+	margin-bottom: $margin-small;
+	text-align: right;
+
+	@include min-screen($screen-tiny) {
+		float: right;
+		margin-top: $margin-medium;
+	}
 
 	@include min-screen($screen-sm-max) {
 		position: relative;

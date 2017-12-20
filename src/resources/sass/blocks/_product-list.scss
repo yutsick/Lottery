@@ -4,32 +4,14 @@
 	}
 
 	&__title--left {
-		@include max-screen($screen-sm-max) {
+		@include max-screen($screen-tiny) {
+			margin-bottom: 0;
+		}
+
+		@media (min-width: $screen-tiny) and (max-width: $screen-sm-max) {
 			float: left;
 		}
 	}
-
-	/*[class*='col-'] {
-		&:nth-child(even) {
-			@include max-screen($screen-md-max) {
-				padding-right: 7.5px;
-			}
-
-			@include max-screen($screen-xs-max) {
-				padding-left: 3.75px;
-			}
-		}
-
-		&:nth-child(odd) {
-			@include max-screen($screen-md-max) {
-				padding-right: 7.5px;
-			}
-
-			@include max-screen($screen-xs-max) {
-				padding-right: 3.75px;
-			}
-		}
-	}*/
 }
 
 .block-product {
