@@ -5,7 +5,7 @@ input {
 /* Reset appearance for text and number fields */
 input[type="text"],
 input[type="number"] {
-	-webkit-appearance: none;
+	appearance: none;
 }
 
 // Hide number toggle button
@@ -16,7 +16,7 @@ input[type='number'] {
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button,
 select {
-	-webkit-appearance: none;
+	appearance: none;
 }
 
 label {
