@@ -14,17 +14,46 @@ export default class ProductList {
 			let $form = $(e.currentTarget);
 			let filterType = $form.data('filter-type');
 			let filterValues = $form.serializeArray();
+			let that = this;
 
 			this.filters[filterType] = filterValues;
 			this.createFilterLabels();
 
-			let parameterUrl = this.createFilterUrl();
+			// Removed labels
+			$('.active-filters').on('click', $('.active-filters__label'), function(e) {
+				let $value = $(e.target).text();
 
+				if ($(e.target).hasClass('js-remove-all-labels')) {
+					// Empty array
+					that.filters[filterType] = [];
+
+					// Uncheck item in the form
+					$form.find('.custom-checkbox').each(function() {
+						$(this).prop('checked', false);
+					});
+				} else {
+					that.filters[filterType].forEach(function (filter, index) {
+						if (filter.value == $value ) {
+							that.filters[filterType].splice(index, 1);
+
+							// Uncheck item in the form
+							$form.find('input').each(function() {
+								if ($(this).val() == $value ) {
+									$(this).prop('checked', false);
+								}
+							});
+						}
+					});
+				}
+
+				that.createFilterLabels();
+			});
+
+			let parameterUrl = this.createFilterUrl();
 			//console.log(parameterUrl);
 
 			$('.filters .filter-dropdown').removeClass('open');
 		});
-
 	}
 
 	/*
@@ -37,9 +66,11 @@ export default class ProductList {
 			this.filters[filterType].forEach(function (filter) {
 				html += `<button class="active-filters__label js-remove-label">${filter.value}</button>`;
 			});
-		}
 
-		html += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
+			if (this.filters[filterType].length) {
+				html += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
+			}
+		}
 
 		$('.active-filters').html(html);
 	}
