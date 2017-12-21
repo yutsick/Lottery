@@ -117,7 +117,6 @@
 	&--highlight {
 		font-weight: $bold;
 	}
-
 }
 
 .block-product__title {
@@ -189,6 +188,10 @@
 
 	@include min-screen($screen-sm-min) {
 		flex-direction: row;
+	}
+
+	&[href] {
+		color: inherit;
 	}
 
 	.block-product__image-wrapper {
