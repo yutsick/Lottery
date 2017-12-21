@@ -16,6 +16,8 @@
 
 .block-product {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	border: 1px solid $color-border;
 	margin-bottom: 7.5px;
 	transition: border 0.2s $ease-in-out;
@@ -39,9 +41,11 @@
 }
 
 .block-product__link {
-	display: block;
-	color: $color-base-primary;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
 	font-weight: $bold;
+	color: $color-base-primary;
 
 	&:hover {
 		color: $color-base-primary;
