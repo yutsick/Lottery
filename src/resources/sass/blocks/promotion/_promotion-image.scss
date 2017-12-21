@@ -1,16 +1,17 @@
 .block-promotion--image {
 	min-height: 0;
+
 	@media screen and (max-width: $screen-sm) {
 		padding-top: 10px;
 	}
-
 }
 
 .block-promotion--image-dynamic {
-	@include max-screen($screen-md-max) {
+	border: 10px solid red;
+	/*@include max-screen($screen-md-max) {
 		min-height: 440px;
 		margin-bottom: 15px;
-	}
+	}*/
 
 	.block-promotion__image-wrapper {
 		display: flex;
