@@ -57,11 +57,18 @@
 }
 
 .block-promotion--split-compact {
-	@include max-screen($screen-xs-max) {
-		.block-promotion__title {
-			font-family: $semi-heading-family;
+	.block-promotion__title {
+		@include max-screen($screen-xs-max) {
 			font-size: $base-font-size;
+		}
+
+		@include max-screen($screen-sm-max) {
+			font-family: $semi-heading-family;
 			line-height: 1;
+		}
+
+		@media screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max){
+			font-size: 18px;
 		}
 	}
 
