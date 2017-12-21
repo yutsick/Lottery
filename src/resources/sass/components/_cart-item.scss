@@ -10,13 +10,10 @@
 	}
 
 	&-image {
-		margin-bottom: $margin-small;
-
-		@include min-screen($screen-xs) {
-			margin-bottom: 0;
-			margin-right: $margin-small;
-			max-width: 80px;
-		}
+		margin-bottom: 0;
+		margin-right: $margin-small;
+		max-width: 80px;
+		flex: 2;
 
 		img {
 			max-width: 100%;
@@ -74,7 +71,7 @@
 	}
 
 	&-price {
-		margin: 0 $margin-small 0 auto;
+		margin: 0 $margin-small;
 	}
 
 	&-remove {
