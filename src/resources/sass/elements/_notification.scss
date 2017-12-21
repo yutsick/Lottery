@@ -23,18 +23,18 @@
 }
 
 .notification {
-	border-radius: 100%;
-	background-color: $color-red;
-	color: $color-light;
-	width: 18px;
-	height: 18px;
 	display: inline-block;
 	vertical-align: middle;
-	line-height: 1.7;
-	text-align: center;
+	width: 18px;
+	height: 18px;
+	border-radius: 100%;
+	background-color: $color-red;
 	font-weight: 600;
 	font-size: 11px;
 	font-style: normal;
+	text-align: center;
+	color: $color-light;
+	line-height: 19px;
 
 	&--large {
 		font-size: 1rem;

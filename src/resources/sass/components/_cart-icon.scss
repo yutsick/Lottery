@@ -39,7 +39,7 @@
 
 		@include min-screen($screen-md) {
 			flex-basis: auto;
-			padding: 8px 10px 8px 15px;
+			padding: 7px 10px 7px 15px;
 			border-radius: 2em;
 
 			&:not(:last-child) {
@@ -64,9 +64,9 @@
 		font-size: 12px;
 
 		@include min-screen($screen-md) {
-			font-size: 14px;
+			font-size: 16px;
 			order: -1;
-			margin-right: 8px;
+			margin-right: 5px;
 		}
 	}
 
@@ -99,15 +99,24 @@
 
 		@include min-screen($screen-md) {
 			margin-right: $margin-small;
+			min-width: 60px;
+			text-align: right;
 		}
 	}
 
 	&__notification {
 		width: 20px;
 		height: 20px;
-		align-self: center;
-		flex: 0 0 auto;
-		line-height: inherit;
+		background: #fff;
+		border-radius: 50%;
+		font-size: 12px;
+		text-align: center;
+
+		/* Target only on webkit-based browsers (Chrome, Safari, etc.)
+		   To tackle line-height difference */
+		@media screen and (-webkit-min-device-pixel-ratio:0) {
+			line-height: 22px;
+		}
 	}
 }
 
