@@ -1,9 +1,10 @@
 .active-filters__label {
 	position: relative;
 	display: inline-block;
-	margin-bottom: 10px;
-	margin-right: 3px;
+	margin-bottom: 5px;
+	margin-right: 5px;
 	padding: 3px 40px 3px 10px;
+	border-radius: 0;
 	border: none;
 	background-color: $color-gray;
 	white-space: nowrap;

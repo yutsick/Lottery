@@ -6,7 +6,7 @@
 	@include max-screen($screen-xs-max) {
 		display: none;
 		background-color: $color-cloud;
-		padding: 10px 10px 0;
+		padding: 10px 10px 5px;
 		margin: -10px -10px 10px;
 	}
 
@@ -41,8 +41,8 @@
 .filters__item {
 	display: inline-block;
 	position: relative;
-	margin-right: 5px;
-	margin-bottom: 10px;
+	margin-right: 2px;
+	margin-bottom: 5px;
 
 	@include min-screen($screen-sm-min) {
 		width: 160px;
@@ -82,6 +82,10 @@
 					transform: rotate(180deg);
 				}
 			}
+		}
+
+		.dropdown-menu {
+			border-color: $color-gray;
 		}
 
 		.filter-dropdown__button:after {
@@ -150,24 +154,27 @@
 	border-radius: 4px;
 	border: 1px solid $color-gray-border;
 	background-color: white;
-	font-size: 14px;
 	font-weight: $bold;
 	text-align: left;
 	outline: none;
 
 	&:after {
 		content: "\e906";
-		float: right;
-		margin-left: $margin-small;
-		font-size: 14px;
+		position:absolute;
+		top: 10px;
+		right: 15px;
 		font-family: $base-icon-family;
 		color: $color-blue;
+	}
+
+	&:hover {
+		border-color: $color-gray;
 	}
 }
 
 /* Sort */
 .sort {
-	margin-bottom: $margin-small;
+	margin-bottom: 5px;
 	text-align: right;
 
 	@include min-screen($screen-tiny) {
