@@ -71,20 +71,17 @@
 	}
 
 	&__title {
-		margin-bottom: 0;
+		margin-bottom: 3px;
 		font-size: 10px;
 		text-transform: uppercase;
-		color: rgba(0, 0, 0, .7);
+		color: rgba(35, 35, 35, .5);
 		line-height: 1;
-
-		@include min-screen($screen-sm) {
-			font-size: $base-font-size;
-		}
+		white-space: nowrap;
 
 		@include min-screen($screen-md) {
 			margin-right: 15px;
+			font-size: $base-font-size;
 			text-transform: none;
-			white-space: nowrap;
 		}
 	}
 
@@ -129,7 +126,7 @@ a.product-cart__item {
 
 .product-cart + .block {
 	@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-sm-max){
-		margin-top: 50px;
+		margin-top: 46px;
 	}
 }
 
