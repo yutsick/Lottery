@@ -55,31 +55,40 @@
 
 // Custom radio buttons
 .custom-radio {
-	appearance: none;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	border: 1px solid #cacece;
-	background-color: #fff;
-
-	&:checked:after {
-		content: '';
+	[type="radio"] {
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		background: $color-gray;
-		transform: translate(-50%, -50%);
-	}
+		left: -999em;
 
-	&[type="radio"] {
-		margin-top: -1px;
-		margin-right: 5px;
+		+ label {
+			position: relative;
+			padding-left: 30px;
+			cursor: pointer;
+
+			/* Fake radio */
+			&:before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				border: 1px solid $color-border;
+				background-color: $color-white;
+			}
+		}
+
+		/* Checked icon */
+		&:checked + label:after {
+			content: '';
+			position: absolute;
+			top: 3px;
+			left: 5px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: $color-gray;
+		}
 	}
 }
 
@@ -133,6 +142,44 @@
 			&:disabled + .cr {
 				opacity: .5;
 			}
+		}
+	}
+}
+
+/* Used on Vinstshop atm - to be implemented on other pages later and renamed to .custom-checkbox */
+.custom-checkbox-v2 {
+	[type="checkbox"] {
+		position: absolute;
+		left: -999em;
+
+		+ label {
+			position: relative;
+			padding-left: 35px;
+			cursor: pointer;
+
+			/* Fake checkbox */
+			&:before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				left: 0;
+				width: 24px;
+				height: 24px;
+				border-radius: .2em;
+				border: 1px solid $color-gray-border;
+				background-color: $color-white;
+			}
+		}
+
+		/* Checked icon */
+		&:checked + label:after {
+			content: '\e905';
+			position: absolute;
+			top: 1px;
+			left: 5px;
+			font-size: 16px;
+			font-family: $base-icon-family;
+			color: #A9DB9B;
 		}
 	}
 }

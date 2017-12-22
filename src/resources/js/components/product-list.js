@@ -28,7 +28,7 @@ export default class ProductList {
 					that.filters[filterType] = [];
 
 					// Uncheck item in the form
-					$form.find('.custom-checkbox').each(function() {
+					$form.find('input').each(function() {
 						$(this).prop('checked', false);
 					});
 				} else {

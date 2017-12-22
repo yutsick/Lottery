@@ -12,29 +12,21 @@
 					<div class="filter-dropdown__header">Sortera efter</div>
 					<form method="post" data-filter-type="sort">
 						<div class="form-group">
-							<div class="sort__choice">
-								<label>
-									<input class="custom-radio js-get-value" name="sort" value="Rekommenderat" type="radio" checked>
-									Rekommenderat
-								</label>
+							<div class="custom-radio sort__choice">
+								<input class="custom-radio__input js-get-value" id="recommended" name="sort" value="Rekommenderat" type="radio" checked>
+								<label class="custom-radio__label" for="recommended">Rekommenderat</label>
 							</div>
-							<div class="sort__choice">
-								<label>
-									<input class="custom-radio js-get-value" name="sort" value="Högst pris" type="radio">
-									Högst pris
-								</label>
+							<div class="custom-radio sort__choice">
+								<input class="custom-radio__input js-get-value" id="highest" name="sort" value="Högst pris" type="radio">
+								<label class="custom-radio__label" for="highest">Högst pris</label>
 							</div>
-							<div class="sort__choice">
-								<label>
-									<input class="custom-radio js-get-value" name="sort" value="Lägst pris" type="radio">
-									Lägst pris
-								</label>
+							<div class="custom-radio sort__choice">
+								<input class="custom-radio__input js-get-value" id="lowest" name="sort" value="Lägst pris" type="radio">
+								<label class="custom-radio__label" for="lowest">Lägst pris</label>
 							</div>
-							<div class="sort__choice">
-								<label>
-									<input class="custom-radio js-get-value" name="sort" value="Nyast" type="radio">
-									Nyast
-								</label>
+							<div class="custom-radio sort__choice">
+								<input class="custom-radio__input js-get-value" id="newest" name="sort" value="Nyast" type="radio">
+								<label class="custom-radio__label" for="newest">Nyast</label>
 							</div>
 						</div>
 					</form>
@@ -61,23 +53,17 @@
 						<div class="filter-dropdown__header">Kategori</div>
 						<form data-filter-type="category">
 							<div class="form-group">
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="category" value="Resor" type="checkbox">
-										Resor <i>(5)</i>
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="travels" name="category" value="Resor" type="checkbox">
+									<label class="custom-checkbox__label" for="travels">Resor <i>(5)</i></label>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="category" value="Hus & Hem" type="checkbox">
-										Hus & Hem <i>(4)</i>
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox___input" id="home" name="category" value="Hus & Hem" type="checkbox">
+									<label class="custom-checkbox___label" for="home">Hus & Hem <i>(4)</i></label>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="category" value="Sport & Fritid" type="checkbox">
-										Sport & Fritid <i>(2)</i>
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="sports" name="category" value="Sport & Fritid" type="checkbox">
+									<label class="custom-checkbox__label" for="sports">Sport & Fritid <i>(2)</i></label>
 								</div>
 							</div>
 							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
@@ -130,29 +116,21 @@
 						<div class="filter-dropdown__header">Varumärke</div>
 						<form method="post" data-filter-type="brand">
 							<div class="form-group">
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="brand" value="Bodum" type="checkbox">
-										Bodum
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="bodum" name="brand" value="Bodum" type="checkbox">
+									<label class="custom-checkbox__label" for="bodum">Bodum</label>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="brand" value="Bosch" type="checkbox">
-										Bosch
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="bosch" name="brand" value="Bosch" type="checkbox">
+									<label class="custom-checkbox__label" for="bosch">Bosch</label>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="brand" value="Electrolux" type="checkbox">
-										Electrolux
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="electrolux" name="brand" value="Electrolux" type="checkbox">
+									<label class="custom-checkbox__label" for="electrolux">Electrolux</label>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="brand" value="Ernst" type="checkbox">
-										Ernst
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="ernst" name="brand" value="Ernst" type="checkbox">
+									<label class="custom-checkbox__label" for="ernst">Ernst</label>
 								</div>
 							</div>
 							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
@@ -169,23 +147,17 @@
 						<div class="filter-dropdown__header">Kampanjer</div>
 						<form method="post" data-filter-type="campaigns">
 							<div class="form-group">
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="campaigns" value="de buyer-knivar" type="checkbox">
-										de Buyer-knivar
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="debuyer" name="campaigns" value="de buyer-knivar" type="checkbox">
+									<label class="custom-checkbox__label" for="debuyer">de Buyer-knivar</label>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="campaigns" value="Skidsemester" type="checkbox">
-										Skidsemester
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="skiing" name="campaigns" value="Skidsemester" type="checkbox">
+									<label class="custom-checkbox__label" for="skiing">Skidsemester</label>
 								</div>
-								<div class="checkbox">
-									<label>
-										<input class="custom-checkbox" name="campaigns" value="Matlagningsspecial" type="checkbox">
-										Matlagningsspecial
-									</label>
+								<div class="custom-checkbox-v2">
+									<input class="custom-checkbox__input" id="cooking" name="campaigns" value="Matlagningsspecial" type="checkbox">
+									<label class="custom-checkbox__label" for="cooking">Matlagningsspecial</label>
 								</div>
 							</div>
 							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
