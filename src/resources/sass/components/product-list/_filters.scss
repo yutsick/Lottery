@@ -1,4 +1,6 @@
 .filters {
+	margin-bottom: 5px;
+
 	@include max-screen($screen-sm-max) {
 		clear: both;
 	}
@@ -150,7 +152,7 @@
 .filter-dropdown__button {
 	position: relative;
 	width: 100%;
-	padding: 10px 15px;
+	padding: 10px 40px 10px 15px;
 	border-radius: 4px;
 	border: 1px solid $color-gray-border;
 	background-color: white;
@@ -158,6 +160,9 @@
 	text-align: left;
 	outline: none;
 
+	@include min-screen($screen-sm-min) {
+		padding-right: 15px;
+	}
 	&:after {
 		content: "\e906";
 		position:absolute;
@@ -191,12 +196,12 @@
 	&__checked {
 		@include max-screen($screen-sm-max) {
 			border: none;
-			padding-right: 0;
+			padding-right: 25px;
 			padding-bottom: 0;
 			padding-left: 0;
 
 			&:after {
-				margin-left: $margin-small;
+				right: 0;
 			}
 		}
 	}

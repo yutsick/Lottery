@@ -1,10 +1,10 @@
 .filters-meta {
+	display: flex;
 	position: relative;
 	margin-left: -10px;
 	margin-right: -10px;
 	margin-bottom: 10px;
 	font-size: 12px;
-	display: flex;
 
 	@include min-screen($screen-sm-min) {
 		display: none;
