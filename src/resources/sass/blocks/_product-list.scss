@@ -5,10 +5,10 @@
 
 	&__title--left {
 		@include max-screen($screen-tiny) {
-			margin-bottom: 0;
+			font-size: 18px;
 		}
 
-		@media (min-width: $screen-tiny) and (max-width: $screen-sm-max) {
+		@include max-screen($screen-sm-max) {
 			float: left;
 		}
 	}

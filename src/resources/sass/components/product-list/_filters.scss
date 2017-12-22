@@ -179,12 +179,16 @@
 
 /* Sort */
 .sort {
-	margin-bottom: 5px;
+	float: right;
+	margin-top: -5px;
 	text-align: right;
 
 	@include min-screen($screen-tiny) {
-		float: right;
-		margin-top: $margin-medium;
+		margin-top: 5px;
+	}
+
+	@include min-screen($screen-sm) {
+		margin-top: 20px;
 	}
 
 	@include min-screen($screen-sm-max) {
