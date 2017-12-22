@@ -9,6 +9,10 @@ export default function() {
 
 		// Close the dropdown menu
 		$(this).parents('.dropdown').removeClass('open').find('.filter-dropdown__button').attr('aria-expanded', false);
-	});
 
+		// Remove backdrop
+		if ($('.modal-backdrop')) {
+			$('.modal-backdrop').remove();
+		}
+	});
 }
