@@ -73,11 +73,6 @@
 	@include min-screen($screen-lg-min) {
 		display: none;
 	}
-
-	img {
-		width: 100%;
-		height: auto;
-	}
 }
 
 .block-promotion__bingo-column {
