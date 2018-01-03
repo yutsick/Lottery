@@ -44,22 +44,32 @@
 					<button class="product-info__text-btn js-hide-content" data-content="product-details">Dölj produktfakta</button>
 				</div>
 
-				<div class="product-order">
-					<p>Vinstvärde</p>
-					<p>2400 kr</p>
-					<p>Leveranstid: 10-20 dagar</p>
-					<button class="btn btn-primary btn-large">Beställ denna vinst</button>
-				</div>
+				<ul class="product-order list-unstyled">
+					<li class="product-order__item product-order__item-small">
+						<span class="product-order__label">Vinstvärde:</span>
+						<span class="product-order__value">2400 kr</span>
+					</li>
+					<li class="product-order__item product-order__item-small">
+						<span class="product-order__status">Leveranstid: 10-20 dagar</span>
+					</li>
+					<li class="product-order__item">
+						<button class="btn btn-primary btn-large">Beställ denna vinst</button>
+					</li>
+				</ul>
 
-				<div class="row">
-					<div class="col-xs-12 col-md-6">
-						<h5>Drömlista</h5>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+				<div class="product-dreamlist row">
+					<div class="col-xs-12 col-md-6 hidden-xs hidden-sm">
+						<h5 class="product-dreamlist__title">Drömlista</h5>
+						<p class="product-dreamlist__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
 							ante ultrices pharetra.
 						</p>
 					</div>
-					<div class="col-xs-12 col-md-6">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+					<div class="col-xs-12 col-md-6 ">
+						<div class="product-dreamlist__progress">
+							<div class="product-dreamlist__current" style="width:20%"></div>
+							<span class="product-dreamlist__text">Lägg till i min drömlista</span>
+						</div>
+						<p class="product-dreamlist__desc visible-xs visible-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
 							ante ultrices pharetra.
 						</p>
 					</div>
