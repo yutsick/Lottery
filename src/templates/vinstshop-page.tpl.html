@@ -1,0 +1,123 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+		@@include('components/_cart-icon.html')
+
+		<div class="block block-hero block-hero--mini block-hero--no-margin">
+			<h1 class="block-hero__page-title block-hero__page-title--absolute">
+				Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!
+			</h1>
+		</div>
+
+		<div class="row row--offset">
+			<div class="col-xs-12 col-md-6 pull-right">
+				<img src="http://placehold.it/940x640" alt=""/>
+			</div>
+
+			<div class="col-xs-12 col-md-6 product-info">
+				<div class="product-info__header">
+					<h2 class="product-info__title h3">Produktnamn på två rader</h2>
+					<img class="product-info__logo" src="http://placehold.it/150x50" alt="Logotyp"/>
+				</div>
+
+				<div class="product-info__meta">
+					<span class="product-info__meta-item product-info__label background-color-blue">Nyhet</span>
+					<span class="product-info__meta-item">Märke</span>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+					ante ultrices pharetra. Vivamus at tortor dignissim, faucibus lorem vitae, sagittis arcu. Proin
+					finibus erat nec ex accumsan mattis.
+				</p>
+				<button class="product-info__text-btn js-toggle-content" data-content="product-details">Visa produktfakta</button>
+				<div class="product-info__details" id="product-details">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+						ante ultrices pharetra. Vivamus at tortor dignissim, faucibus lorem vitae, sagittis arcu. Proin
+						finibus erat nec ex accumsan mattis.
+					</p>
+					<p>Vinstnummer: 1234</p>
+					<button class="product-info__text-btn js-hide-content" data-content="product-details">Dölj produktfakta</button>
+				</div>
+
+				<div class="product-order">
+					<p>Vinstvärde</p>
+					<p>2400 kr</p>
+					<p>Leveranstid: 10-20 dagar</p>
+					<button class="btn btn-primary">Beställ denna vinst</button>
+				</div>
+
+				<div class="row">
+					<div class="col-xs-12 col-md-6">
+						<h5>Drömlista</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+							ante ultrices pharetra.
+						</p>
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+							ante ultrices pharetra.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<section class="section product-list-blocks">
+			<div class="row equal-height">
+				<div class="col-xs-12">
+					<h5>Liknande produkter</h5>
+				</div>
+
+				@@include('blocks/product-list/_product-item.html', {
+				"image": "assets/img/mockup/butterfly.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"label": "Nyhet",
+				"color": "blue",
+				"title": "En rad",
+				"subtitle": "Fusce Nibh",
+				"price": "450 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"image": "assets/img/mockup/butterfly.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"price": "200 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"image": "assets/img/mockup/nature.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"subtitle": "Fusce Nibh",
+				"price": "10.000 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"image": "assets/img/mockup/sunset.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"price": "30 kr",
+				"dreamButton": true
+				})
+
+				<div class="col-xs-12">
+					<a class="btn btn-primary" href="/vinstshop-start.html">Visa alla vinster</a>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
+
