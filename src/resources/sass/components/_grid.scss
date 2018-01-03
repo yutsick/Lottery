@@ -15,7 +15,7 @@
 		}
 
 		@include max-screen($screen-xs-max) {
-			> [class*='col-'] {
+			> [class*='col-']:not(.product-info) {
 				padding: 0;
 			}
 		}
