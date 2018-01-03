@@ -15,4 +15,17 @@ export default function () {
 			$content.addClass('js-is-visible');
 		}
 	});
+
+	// Hide content and display button again
+	$('.js-hide-content').on('click', function () {
+		let $id = $(this).attr('data-content');
+		let $content = $('#' + $id);
+
+		if ( $content.hasClass('js-is-visible')) {
+			$content.removeClass('js-is-visible');
+			$('.js-toggle-content').removeClass('js-is-active');
+		} else {
+			$content.addClass('js-is-visible');
+		}
+	});
 }
