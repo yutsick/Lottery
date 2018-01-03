@@ -61,15 +61,12 @@ export default class ProductList {
 	*/
 	createFilterLabels() {
 		let html = '';
+		html += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
 
 		for (let filterType in this.filters) {
 			this.filters[filterType].forEach(function (filter) {
 				html += `<button class="active-filters__label js-remove-label">${filter.value}</button>`;
 			});
-
-			if (this.filters[filterType].length) {
-				html += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
-			}
 		}
 
 		$('.active-filters').html(html);
