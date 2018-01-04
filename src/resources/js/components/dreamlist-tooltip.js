@@ -12,4 +12,8 @@ export default function() {
         }
     }
     positionTooltip();
+
+    $(window).resize(function() {
+        positionTooltip();
+    });
 }
