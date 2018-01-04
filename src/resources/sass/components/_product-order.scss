@@ -44,7 +44,7 @@
 		text-transform: uppercase;
 		color: $color-gray;
 
-		@media (min-width: $screen-tiny) and (max-width: $screen-sm) {
+		@include min-screen($screen-sm) {
 			display: block;
 		}
 	}
