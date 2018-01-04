@@ -14,6 +14,7 @@ import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
 import bonusCode from './components/bonus-code';
 import dataList from './components/data-list';
+import dreamlistTooltip from './components/dreamlist-tooltip';
 import entityCollectionActions from './components/entity-collection-actions';
 import form from './components/form';
 import scrolling from './components/is-scrolling';
@@ -45,6 +46,7 @@ $(function () {
 	alert();
 	bonusCode();
 	dataList();
+	dreamlistTooltip();
 	entityCollectionActions();
 	form();
 	scrolling();
