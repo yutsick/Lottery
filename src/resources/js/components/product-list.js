@@ -4,6 +4,8 @@ export default class ProductList {
 	constructor() {
 		this.filters = [];
 		this.initProductFilterDropdowns();
+        this.disableFilter();
+        
 		$('[data-toggle="tooltip"]').tooltip({
 			trigger: 'hover'
 		});
@@ -20,8 +22,7 @@ export default class ProductList {
 
 			// Removed labels
 			$('.active-filters').on('click', $('.active-filters__label'), function(e) {
-				let $value = $(e.target).text();
-
+				let $value = $(e.target).val();
 				if ($(e.target).hasClass('js-remove-all-labels')) {
 					// Empty array
 					that.filters[filterType] = [];
@@ -38,7 +39,8 @@ export default class ProductList {
 							// Uncheck item in the form
 							$form.find('input').each(function() {
 								if ($(this).val() == $value ) {
-									$(this).prop('checked', false);
+									$(this).prop('checked', false).change();
+									//$form.change();
 								}
 							});
 						}
@@ -65,8 +67,18 @@ export default class ProductList {
 
 		for (let filterType in this.filters) {
 			this.filters[filterType].forEach(function (filter) {
-				if(filter.value != '') {
-                    html += `<button class="active-filters__label js-remove-label">${filter.value}</button>`;
+				if(filter.value !== '') {
+					if(filter.name === 'from') {
+                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Pris från ${filter.value} kr</button>`;
+                    }else if(filter.name === 'to') {
+                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Pris till ${filter.value} kr</button>`;
+                    }else if(filter.name === 'search') {
+                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Sök: ${filter.value}</button>`;
+                    }else if(filter.name === 'campaigns') {
+                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Kampanj: ${filter.value}</button>`;
+                    }else {
+                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">${filter.value}</button>`;
+                    }
                     exitingFilter = true;
                 }
 			});
@@ -133,4 +145,44 @@ export default class ProductList {
 			$(this).parent().is(".open") && e.stopPropagation();
 		});
 	}
+
+	disableFilter() {
+        $('form[data-filter-type]').on('keyup change', (e) => {
+            let $form = $(e.currentTarget);
+			let $submitBtn =  $(e.currentTarget).find('button');
+			let filterType = $form.data('filter-type');
+			let filterValues = $form.serializeArray();
+
+            if(filterType === 'price' || filterType === 'search') {
+                let hasValue = false;
+
+                filterValues.forEach(function (filter) {
+                    if(filter.value !== '') {
+                        hasValue = true;
+                    }
+                });
+
+                if(hasValue) {
+                    this.toggleDisableOnSubmit(true, $submitBtn);
+                }else {
+                    this.toggleDisableOnSubmit(false, $submitBtn);
+                }
+            } else{
+                if(filterValues.length > 0) {
+                    this.toggleDisableOnSubmit(true, $submitBtn);
+                }else {
+                    this.toggleDisableOnSubmit(false, $submitBtn);
+                }
+
+            }
+		});
+	}
+
+	toggleDisableOnSubmit(enable, btn) {
+        if(enable && btn.prop('disabled') ) {
+            btn.prop("disabled", false);
+        } else if (!enable && !btn.prop('disabled')) {
+            btn.prop("disabled", true);
+        }
+    }
 }

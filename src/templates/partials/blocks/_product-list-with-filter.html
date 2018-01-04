@@ -66,7 +66,7 @@
 									<label class="custom-checkbox__label" for="sports">Sport & Fritid <i>(2)</i></label>
 								</div>
 							</div>
-							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit" disabled>Välj</button>
 						</form>
 					</div>
 				</div>
@@ -83,13 +83,13 @@
 								<div class="col-xs-6">
 									<div class="form-group">
 										<label for="from">Från</label>
-										<input class="filter-dropdown__price form-control" id="from" type="text" name="from" placeholder="0 kr">
+										<input class="filter-dropdown__price form-control" id="from" type="number" name="from" placeholder="0 kr">
 									</div>
 								</div>
 								<div class="col-xs-6">
 									<div class="form-group">
 										<label for="to">Till</label>
-										<input class="filter-dropdown__price form-control" id="to" type="text" name="to" placeholder="5000 kr">
+										<input class="filter-dropdown__price form-control" id="to" type="number" min="0" name="to" placeholder="5000 kr">
 									</div>
 								</div>
 							</div>
@@ -101,7 +101,7 @@
 									</label>
 								</div>
 							</div>
-							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit" disabled>Välj</button>
 						</form>
 						<a href="/">Läs om drömvinsterna (över 5000kr)</a>
 					</div>
@@ -133,7 +133,7 @@
 									<label class="custom-checkbox__label" for="ernst">Ernst</label>
 								</div>
 							</div>
-							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit" disabled>Välj</button>
 						</form>
 					</div>
 				</div>
@@ -160,7 +160,7 @@
 									<label class="custom-checkbox__label" for="cooking">Matlagningsspecial</label>
 								</div>
 							</div>
-							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit" disabled>Välj</button>
 						</form>
 					</div>
 				</div>
@@ -177,7 +177,7 @@
 								<label>Sökord eller vinstnummer</label>
 								<input class="form-control" name="search" type="text">
 							</div>
-							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Sök</button>
+							<button class="btn btn-primary btn-block js-hide-dropdown" type="submit" disabled>Sök</button>
 						</form>
 					</div>
 				</div>
