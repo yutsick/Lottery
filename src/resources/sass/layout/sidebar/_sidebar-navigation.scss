@@ -215,7 +215,10 @@
 /* Logotype */
 .logotype {
 	display: inline-block;
-	max-width: 110px;
+
+	> img {
+		width: 110px;
+	}
 }
 
 /* Navigation search */
