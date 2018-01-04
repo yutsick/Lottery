@@ -8,11 +8,9 @@
 	}
 
 	&__header {
-		//@include min-screen($screen-tiny) {
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-start;
-		//}
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
 	}
 
 	&__title {
@@ -52,6 +50,11 @@
 		line-height: 1;
 	}
 
+	&__winning-nr {
+		font-style: italic;
+		text-transform: uppercase;
+	}
+
 	&__text-btn {
 		padding: 0;
 		border: 0;
@@ -65,7 +68,13 @@
 		}
 	}
 
-	&__details:not(.js-is-visible) {
-		display: none;
+	&__details {
+		&:not(.js-is-visible) {
+			display: none;
+		}
+
+		ul {
+			padding-left: 1rem;
+		}
 	}
 }
