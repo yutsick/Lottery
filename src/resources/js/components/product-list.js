@@ -4,7 +4,6 @@ export default class ProductList {
 	constructor() {
 		this.filters = [];
 		this.initProductFilterDropdowns();
-
 		$('[data-toggle="tooltip"]').tooltip({
 			trigger: 'hover'
 		});
@@ -60,16 +59,25 @@ export default class ProductList {
 	* Create and adds filter labels into the HTML.
 	*/
 	createFilterLabels() {
-		let html = '';
-		html += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
+        let html = '';
+        let removeBtn = '';
+		let exitingFilter = false;
 
 		for (let filterType in this.filters) {
 			this.filters[filterType].forEach(function (filter) {
-				html += `<button class="active-filters__label js-remove-label">${filter.value}</button>`;
+				if(filter.value != '') {
+                    html += `<button class="active-filters__label js-remove-label">${filter.value}</button>`;
+                    exitingFilter = true;
+                }
 			});
 		}
 
-		$('.active-filters').html(html);
+		if(exitingFilter) {
+            removeBtn += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
+            html = removeBtn + html;
+        }
+
+        $('.active-filters').html(html);
 	}
 
 
