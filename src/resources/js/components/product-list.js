@@ -5,7 +5,7 @@ export default class ProductList {
 		this.filters = [];
 		this.initProductFilterDropdowns();
         this.disableFilter();
-        
+
 		$('[data-toggle="tooltip"]').tooltip({
 			trigger: 'hover'
 		});
@@ -29,7 +29,7 @@ export default class ProductList {
 
 					// Uncheck item in the form
 					$form.find('input').each(function() {
-						$(this).prop('checked', false);
+						$(this).prop('checked', false).change();
 					});
 				} else {
 					that.filters[filterType].forEach(function (filter, index) {
@@ -40,7 +40,6 @@ export default class ProductList {
 							$form.find('input').each(function() {
 								if ($(this).val() == $value ) {
 									$(this).prop('checked', false).change();
-									//$form.change();
 								}
 							});
 						}
