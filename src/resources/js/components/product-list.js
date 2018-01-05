@@ -62,7 +62,7 @@ export default class ProductList {
 	createFilterLabels() {
         let html = '';
         let removeBtn = '';
-		let exitingFilter = false;
+		let exitingFilter = 0;
 
 		for (let filterType in this.filters) {
 			this.filters[filterType].forEach(function (filter) {
@@ -72,18 +72,18 @@ export default class ProductList {
                     }else if(filter.name === 'to') {
                         html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Pris till ${filter.value} kr</button>`;
                     }else if(filter.name === 'search') {
-                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Sök: ${filter.value}</button>`;
+                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Sök: <span class="italic">${filter.value}</span></button>`;
                     }else if(filter.name === 'campaigns') {
                         html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Kampanj: ${filter.value}</button>`;
                     }else {
                         html += `<button class="active-filters__label js-remove-label" value="${filter.value}">${filter.value}</button>`;
                     }
-                    exitingFilter = true;
+                    exitingFilter += 1;
                 }
 			});
 		}
 
-		if(exitingFilter) {
+		if(exitingFilter > 1) {
             removeBtn += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
             html = removeBtn + html;
         }
