@@ -45,7 +45,7 @@ $(function () {
 	alert();
 	bonusCode();
 	dataList();
-	entityCollectionActions();
+	new entityCollectionActions();
 	form();
 	scrolling();
 	loadSection();

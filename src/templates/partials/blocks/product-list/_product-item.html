@@ -9,9 +9,10 @@
 		<a class="block-product__link" href="/" title="">
 			<div class="block-product__image-wrapper">
 				<div class="block-product__image">
-					<img src="@@image" alt="">
+					<img src="" data-src="@@image" alt="">
+
 					@@if(context.hoverImage){
-					<img class="block-product__hover-image" src="@@hoverImage" alt="">
+					<img src="" class="block-product__hover-image" data-src="@@hoverImage" alt="">
 					}
 					@@if(context.label){
 					<span class="block-product__label background-color-@@color">@@label</span>
