@@ -1,5 +1,3 @@
-
-
 .icon:before {
 	font-family: "ml-icons";
 	-webkit-font-smoothing: antialiased;
@@ -9,10 +7,6 @@
 	font-weight: normal;
 	text-decoration: none;
 	text-transform: none;
-}
-
-.icon-dream-star:before {
-	content: "\e91d";
 }
 
 .icon-eye:before {
@@ -99,10 +93,6 @@
 	content: "\e914";
 }
 
-.icon-star-filled:before {
-	content: "\e920";
-}
-
 .icon-user:before {
 	content: "\e915";
 }
@@ -123,6 +113,14 @@
 	content: "\e919";
 }
 
+.icon-star-filled:before {
+	content: "\e920";
+}
+
+.icon-expand:before {
+	content: "\e921";
+}
+
 .icon-instagram:before {
 	content: "\e91a";
 }
@@ -133,6 +131,10 @@
 
 .icon-linkedin:before {
 	content: "\e91c";
+}
+
+.icon-dream-star:before {
+	content: "\e91d";
 }
 
 .icon-minus:before {
