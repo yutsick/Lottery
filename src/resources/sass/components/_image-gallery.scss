@@ -1,0 +1,42 @@
+.lightgallery {
+  @include min-screen($screen-sm) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__item--large {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  &__item--small {
+    max-width: 20%;
+    max-height: 100px;
+    border: 1px solid $color-cloud;
+
+    @include max-screen($screen-sm) {
+      display: none;
+    }
+
+    > img {
+      max-height: 100px;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    bottom: 20px;
+    background: rgba(21, 32, 54, .6);
+    padding: 10px 20px;
+    color: $color-white;
+
+    @include min-screen($screen-sm) {
+      display: none;
+    }
+  }
+}
