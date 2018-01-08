@@ -49,7 +49,7 @@ $(function () {
 	bonusCode();
 	dataList();
 	dreamlistTooltip();
-	entityCollectionActions();
+	new entityCollectionActions();
 	form();
 	imageGallery();
 	scrolling();

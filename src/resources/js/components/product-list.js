@@ -1,4 +1,4 @@
-import isMobile from '../utilities/isMobile'
+import isMobile from '../utilities/isMobile';
 
 export default class ProductList {
 	constructor() {
@@ -184,4 +184,7 @@ export default class ProductList {
             btn.prop("disabled", true);
         }
     }
+
+
+
 }
