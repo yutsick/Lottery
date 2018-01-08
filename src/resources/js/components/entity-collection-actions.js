@@ -2,6 +2,7 @@ var LazyLoad = require('vanilla-lazyload');
 
 export default class entityCollectionActions {
     constructor() {
+        this.wrapper = document.getElementById('product-list');
         this.lazyload = this.lazyLoad();
         this.collectionActions();
         this.selectTable();
@@ -48,12 +49,12 @@ export default class entityCollectionActions {
         let _this = this;
         $('.table-select').select2({
             minimumResultsForSearch: Infinity,
-            //templateSelection: _this.format(data),
-            //templateResult: format
+            templateSelection: entityCollectionActions.format,
+            templateResult: entityCollectionActions.format
         });
 	}
 
-	format(o) {
+	static format(o) {
 		if (!o.id) {
 			return o.text;
 		} else {
@@ -74,16 +75,20 @@ export default class entityCollectionActions {
 
 
 	lazyLoad() {
-        let wrapper = document.getElementById('product-list');
+        if(this.wrapper) {
+            var loading = new LazyLoad({
+                container: wrapper,
+            });
+            return loading;
+        }else {
+            return false;
+        }
 
-		var loading = new LazyLoad({
-			container: wrapper,
-		});
-
-		return loading;
     }
 
     updateLazyLoad() {
-		this.lazyload.update();
+        if(this.lazyload) {
+            this.lazyload.update();
+        }
 	}
 }
