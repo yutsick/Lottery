@@ -1,0 +1,52 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+    <div class="container container--center">
+        @@include('components/_cart-icon.html')
+
+        <div class="block block-hero block-hero--mini">
+            <h2>Beställning</h2>
+        </div>
+
+        <div class="profile">
+            <div class="profile__header">
+                Kundvagn
+            </div>
+            <div class="profile__row">
+                @@include('cart-items/cart-item.tpl.html', {"order": true})
+                @@include('cart-items/cart-item.tpl.html', {"order": true})
+                <div class="row">
+                    <div class="order-shipping col-xs-12 col-sm-12 col-lg-12">
+                        <p>Frakt <span id="shipping-amount">0</span>kr</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-lg-6">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-lg-6">
+                        <p>Total summa: <span>0</span>kr</p>
+                        <p>Saldo efter köp: <span>0</span>kr</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-lg-12">
+                        <p>Du har vinstpengar kvar efter ditt köp. Vill du lägga till en lott?</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
