@@ -1,10 +1,14 @@
 .product-info {
-	padding: 20px $padding-medium;
+	padding: $padding-default $padding-medium;
 
 	@include min-screen($screen-sm) {
-		padding-top: 40px; // Don't collide with the H1
-		padding-right: 30px;
-		padding-left: 30px;
+		padding-top: $padding-default * 2; // Don't collide with the H1
+		padding-right: $padding-medium * 2;
+		padding-left: $padding-medium * 2;
+	}
+
+	@include min-screen($screen-md) {
+		padding-right: $padding-default;
 	}
 
 	&__header {
