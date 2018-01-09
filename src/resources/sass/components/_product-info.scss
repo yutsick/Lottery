@@ -1,13 +1,13 @@
 .product-info {
-	padding: $padding-default $padding-medium;
+	padding: $padding-small $padding-medium;
 
 	@include min-screen($screen-sm) {
-		padding-top: $padding-default * 2; // Don't collide with the H1
 		padding-right: $padding-medium * 2;
 		padding-left: $padding-medium * 2;
 	}
 
 	@include min-screen($screen-md) {
+		padding-top: $padding-default * 2; // Don't collide with the H1
 		padding-right: $padding-default;
 	}
 
