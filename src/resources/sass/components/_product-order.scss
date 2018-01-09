@@ -2,13 +2,13 @@
 	margin-top: $padding-medium * 2;
 	text-align: center;
 
-	@media (min-width: $screen-tiny) and (max-width: $screen-sm) {
+	@media (min-width: $screen-tiny) and (max-width: $screen-xs) {
 		text-align: left;
 	}
 
 	&__item {
 		&:first-child {
-			@include min-screen($screen-sm) {
+			@include min-screen($screen-xs) {
 				margin-bottom: $margin-small;
 			}
 		}
@@ -16,20 +16,20 @@
 		&:last-child {
 			margin-top: $margin-small;
 
-			@include min-screen($screen-sm) {
+			@include min-screen($screen-xs) {
 				margin-top: $margin-default;
 			}
 		}
 
 		.btn {
-			@include max-screen($screen-sm) {
+			@include max-screen($screen-xs) {
 				width: 100%;
 			}
 		}
 	}
 
 	&__item-small {
-		@media (min-width: $screen-tiny) and (max-width: $screen-sm) {
+		@media (min-width: $screen-tiny) and (max-width: $screen-xs) {
 			display: inline-block;
 			width: 49%;
 
@@ -44,7 +44,7 @@
 		text-transform: uppercase;
 		color: $color-gray;
 
-		@include min-screen($screen-sm) {
+		@include min-screen($screen-xs) {
 			display: block;
 		}
 	}
