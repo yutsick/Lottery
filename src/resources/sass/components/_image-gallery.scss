@@ -18,7 +18,6 @@
   }
 
   &__item--small {
-    max-width: 20%;
     border: 1px solid $color-cloud;
 
     @include max-screen($screen-sm) {
