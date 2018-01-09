@@ -25,21 +25,15 @@
 							<i class="icon icon-expand"></i>
 						</span>
 					</a>
-					<a class="lightgallery__item lightgallery__item--small" href="/assets/img/mockup/friends.jpg">
-						<img src="/assets/img/mockup/friends.jpg" alt=""/>
-					</a>
 					<a class="lightgallery__item lightgallery__item--small" href="/assets/img/mockup/sunset.jpg">
 						<img src="/assets/img/mockup/sunset.jpg" alt=""/>
-					</a>
-					<a class="lightgallery__item lightgallery__item--small" href="/assets/img/mockup/nature.jpg">
-						<img src="/assets/img/mockup/nature.jpg" alt=""/>
 					</a>
 				</div>
 			</div>
 
 			<div class="col-xs-12 col-md-6 product-info">
 				<div class="product-info__header">
-					<h2 class="product-info__title h3">Produktnamn på två rader</h2>
+					<h2 class="product-info__title h3">Produktnamn</h2>
 					<img class="product-info__logo" src="http://placehold.it/150x50" alt="Logotyp"/>
 				</div>
 
@@ -48,15 +42,10 @@
 					<span class="product-info__meta-item">Märke</span>
 				</div>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
-					ante ultrices pharetra. Vivamus at tortor dignissim, faucibus lorem vitae, sagittis arcu. Proin
-					finibus erat nec ex accumsan mattis.
+					ante ultrices pharetra. Vivamus at tortor dignissim, faucibus lorem vitae, sagittis arcu.
 				</p>
 				<button class="product-info__text-btn js-toggle-content" data-content="product-details">Visa produktfakta</button>
 				<div class="product-info__details" id="product-details">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
-						ante ultrices pharetra. Vivamus at tortor dignissim, faucibus lorem vitae, sagittis arcu. Proin
-						finibus erat nec ex accumsan mattis.
-					</p>
 					<p>Fakta</p>
 					<ul>
 						<li>Mått: 100 x 100 cm</li>
@@ -76,7 +65,7 @@
 						<span class="product-order__status product-order__status--few">Leveranstid: 10-20 dagar</span>
 					</li>
 					<li class="product-order__item">
-						<button class="btn btn-primary btn-large" disabled data-toggle="modal" data-target="#modal-cart">Beställ denna vinst</button>
+						<button class="btn btn-primary btn-large" data-toggle="modal" data-target="#modal-cart">Beställ denna vinst</button>
 					</li>
 				</ul>
 
@@ -89,15 +78,13 @@
 					</div>
 					<div class="col-xs-12 col-md-6 ">
 						<div class="product-dreamlist__progress-wrapper">
-							<span class="product-dreamlist__tooltip">
-								100 kr kvar
-							</span>
+							<span class="product-dreamlist__tooltip">Färdigsparat</span>
 							<span class="product-dreamlist__tooltip-arrow"></span>
 							<button class="product-dreamlist__progress js-add-to-dreamlist">
 								<span class="product-dreamlist__dream-button btn-link">
 									<i class="icon icon-dream-star dreamlist-icon"></i>
 								</span>
-								<span class="product-dreamlist__current" style="width:40%"></span>
+								<span class="product-dreamlist__current" style="width: 100%"></span>
 								<span class="product-dreamlist__text">Lägg till i min drömlista</span>
 							</button>
 							<p class="text-center">13  personer sparar till denna i sin drömlista</p>
@@ -118,7 +105,7 @@
 				</div>
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
+				"href": "/vinstshop-page.html",
 				"image": "assets/img/mockup/butterfly.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"label": "Nyhet",
@@ -130,7 +117,7 @@
 				})
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
+				"href": "/vinstshop-page.html",
 				"image": "assets/img/mockup/butterfly.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"title": "Flera rader skulle kunna fungera såhär.",
@@ -139,7 +126,7 @@
 				})
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
+				"href": "/vinstshop-page.html",
 				"image": "assets/img/mockup/nature.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"title": "Flera rader skulle kunna fungera såhär.",
@@ -149,7 +136,7 @@
 				})
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
+				"href": "/vinstshop-page.html",
 				"image": "assets/img/mockup/sunset.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"title": "Flera rader skulle kunna fungera såhär.",
