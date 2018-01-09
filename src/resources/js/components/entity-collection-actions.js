@@ -2,7 +2,7 @@ var LazyLoad = require('vanilla-lazyload');
 
 export default class entityCollectionActions {
     constructor() {
-        this.wrapper = document.getElementById('product-list');
+        this.wrapper = document.querySelector('.product-list-blocks');
         this.lazyload = this.lazyLoad();
         this.collectionActions();
         this.selectTable();
