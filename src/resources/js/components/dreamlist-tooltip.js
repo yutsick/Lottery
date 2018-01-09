@@ -5,15 +5,40 @@ export default function() {
 
         if ($tooltip.length) {
             let $target = $('.product-dreamlist__current');
-            let $width = $tooltip.outerWidth();
-            let $position = $target.position().left + $target.outerWidth();
-            let $leftPos = $position - $width/2;
+            let $toolTipArrow = $('.product-dreamlist__tooltip-arrow');
+            let toolTipWidth = $tooltip.outerWidth();
+            let parentWidth = $tooltip.parent().outerWidth();
+            let parentLeft = $tooltip.parent().position().left;
+            let progressPosition = $target.position().left + $target.outerWidth();
 
-            if ($position >= 5) {
-                $tooltip.css('left', $leftPos);
+            let toolTipArrowLeftPos = progressPosition;
+            let toolTipArrowMinLeftPosition = parentLeft + 10;
+            let toolTipArrowfMaxRightPosition = parentLeft + parentWidth - 30;
+
+            let toolTipLeftPos = progressPosition - toolTipWidth/2;
+            let toolTipLeftBound = toolTipLeftPos;
+            let toolTipRightBound = toolTipLeftPos + toolTipWidth;
+            let toolTipMinLeftPosition = parentLeft - 10;
+            let toolTipMaxRightPosition = parentLeft + parentWidth + 10;
+
+
+            if (toolTipArrowLeftPos < toolTipArrowMinLeftPosition) {
+                toolTipArrowLeftPos = toolTipArrowMinLeftPosition;
             }
-        }
+            if (toolTipArrowLeftPos > toolTipArrowfMaxRightPosition) {
+                toolTipArrowLeftPos = toolTipArrowfMaxRightPosition;
+            }
 
+            $toolTipArrow.css('left', toolTipArrowLeftPos);
+
+            if (toolTipLeftBound < toolTipMinLeftPosition) {
+                toolTipLeftPos = toolTipMinLeftPosition;
+            }
+            if (toolTipRightBound > toolTipMaxRightPosition) {
+                toolTipLeftPos = toolTipMaxRightPosition - toolTipWidth;
+            }
+            $tooltip.css('left', toolTipLeftPos);
+        }
     }
     positionTooltip();
 
