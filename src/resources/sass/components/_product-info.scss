@@ -31,7 +31,11 @@
 	}
 
 	&__meta {
-		margin-bottom: $margin-default;
+		margin-bottom: $margin-small;
+
+		@include min-screen($screen-sm) {
+			margin-bottom: $margin-default;
+		}
 	}
 
 	&__meta-item {
