@@ -1,6 +1,25 @@
 // Different typography styles for content blocks in _content.scss
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	/* Breaking long titles */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-word;
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+
+h1,
 .h1 {
 	font-size: 24px;
 	line-height: 30px;
@@ -17,7 +36,6 @@ h2,
 	font-size: 20px;
 	line-height: 28px;
 	font-weight: 300;
-	word-break: break-word;
 
 	@include min-screen($screen-sm-min) {
 		font-size: 36px;

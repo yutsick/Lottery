@@ -9,12 +9,16 @@
 
 	&__progress-wrapper {
 		position: relative;
-		padding-top: 30px;
+		padding-top: $padding-default;
+
+		@include min-screen($screen-md) {
+			padding-top: 30px;
+		}
 	}
 
 	&__tooltip {
 		position: absolute;
-		top: 0;
+		top: -10px;
 		left: 0;
 		padding: 6px 12px;
 		border-radius: 2em;
@@ -35,6 +39,10 @@
 			border-top: 5px solid $color-green;
 			border-right: 5px solid transparent;
 			border-left: 5px solid transparent;
+		}
+
+		@include min-screen($screen-md) {
+			top: 0;
 		}
 	}
 
