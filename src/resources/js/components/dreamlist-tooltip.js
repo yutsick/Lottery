@@ -19,7 +19,7 @@ export default function() {
             let toolTipLeftBound = toolTipLeftPos;
             let toolTipRightBound = toolTipLeftPos + toolTipWidth;
             let toolTipMinLeftPosition = parentLeft - 10;
-            let toolTipMaxRightPosition = parentLeft + parentWidth + 10;
+            let toolTipMaxRightPosition = parentLeft + parentWidth - 10;
 
 
             if (toolTipArrowLeftPos < toolTipArrowMinLeftPosition) {
