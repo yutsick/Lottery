@@ -38,6 +38,149 @@
     }
   }
 
+  &__payment-block {
+    padding: 20px 0;
+    font-size: 16px;
+    clear: both;
+
+    @include min-screen($screen-md-min) {
+      padding: 20px 120px;
+    }
+    
+    &-label {
+      display: inline-block;
+    }
+    &-value {
+      display: inline-block;
+      float: right;
+    }
+  }
+
+  &__shipping {
+    border-bottom: 1px solid $color-gray-border;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__price {
+    &-total {
+      font-weight: bold;
+    }
+    &-wallet {
+
+    }
+  }
+
+  &__add-more {
+    display: none;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &--open {
+      display: block;
+    }
+
+    &--btn-wrapper {
+      display: block;
+      position: relative;
+      @include min-screen($screen-sm-min) {
+        display: inline-block;
+      }
+    }
+
+    &-btn {
+      display: block;
+      padding: 5px 0;
+
+      @include min-screen($screen-sm-min) {
+        display: inline-block;
+        margin: 5px 10px 5px 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        display: inline-block;
+        max-width: 30px;
+      }
+      &--price {
+        font-weight: 400;
+        margin-left: 10px;
+
+        @include min-screen($screen-md-min) {
+          margin-left: 20px;
+        }
+      }
+
+      .btn {
+        padding: 9px 16px;
+        width: calc(100% - 40px);
+
+        @include min-screen($screen-sm-min) {
+          padding: 9px 30px;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 5px 0;
+
+    .custom-radio {
+      width: 160px;
+    }
+    .form-control {
+      font-size: 16px;
+      flex-grow: 1;
+      width: auto;
+    }
+  }
+  .delivery {
+    &__gift {
+      border: 1px solid transparent;
+      margin-left: -10px;
+      padding: 0 10px;
+
+      &-form {
+        display: none;
+      }
+
+      &--active {
+        padding: 10px;
+        padding-top: 20px;
+        border-color: $color-gray-border;
+        border-radius: 5px;
+
+        margin-top: 20px;
+        position: relative;
+        
+        .delivery__gift-form {
+          display: block;
+        }
+        .delivery__gift-title {
+          position: absolute;
+          top: -10px;
+        }
+      }
+
+      &-title {
+        background: white;
+        position: relative;
+        top: 0;
+
+        label {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
   &__label {
     display: block;
     width: 130px;
@@ -102,31 +245,31 @@
       }
     }
 
-  .checkbox {
-    display: block;
-    overflow: hidden;
-    margin: 0;
-
-    @include min-screen($screen-sm-min) {
-      overflow: initial;
-      display: inline-block;
-    }
-
-    input {
-      display: none;
+    .checkbox {
+      display: block;
+      overflow: hidden;
       margin: 0;
-      outline: none;
-    }
 
-    input:checked + label { display: inline-block; }
+      @include min-screen($screen-sm-min) {
+        overflow: initial;
+        display: inline-block;
+      }
 
-    label {
-      margin: 0;
-      padding: 0;
-      min-height: initial;
-      line-height: 1;
+      input {
+        display: none;
+        margin: 0;
+        outline: none;
+      }
+
+      input:checked + label { display: inline-block; }
+
+      label {
+        margin: 0;
+        padding: 0;
+        min-height: initial;
+        line-height: 1;
+      }
     }
   }
-}
 
 }
