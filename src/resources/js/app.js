@@ -33,7 +33,8 @@ import tableSelect from './components/table-select';
 import toggleContent from './components/toggle-content';
 import walletAccountSwitch from './components/wallet-account-switch';
 import walletTransferAmount from './components/wallet-transfer-amount';
-import orderForm from './components/order-form';
+import orderActions from './components/order-actions';
+import cartQuantity from './components/cart-quantity';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -71,7 +72,8 @@ $(function () {
 	register();
 	top();
 	textToggle();
-	new orderForm();
+    new orderActions();
+    new cartQuantity();
 });
 
 /**
