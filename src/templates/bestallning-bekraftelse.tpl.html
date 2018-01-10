@@ -1,0 +1,47 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+    <div class="container container--center">
+        @@include('components/_cart-icon.html')
+
+        <div class="block block-hero block-hero--mini">
+            <h2>Grattis till dina vinster!</h2>
+        </div>
+
+        <section class="block block-content">
+            <div class="block-content__content">
+                <p class="h5">Ordernummer: 1234567890</p>
+                <p>Ett meddelande med leveransinformation har skickats till<b>magnus.singerer@changetheagency.se</b></p>
+                <p>Dina vinster packas och skickas inom kort i 3 olika försändelser.<br/>
+                 När dina paket har skickats kan du spåra dem under <a href="/">Vinstbeställningar</a> på Mina sidor</p>
+            </div>
+        </section>
+
+        <section class="section article-list-blocks" id="article-list">
+            <i class="icon icon-package"></i>
+            <p>Product name - <span>Brand</span></p>
+            <span class="delivery-status">Leveranstid: 2-4 dagar</span>
+            <span class="delivery-status delivery-status--medium">Leveranstid: 5-8 dagar</span>
+            <span class="delivery-status delivery-status--long">Leveranstid: 9-15 dagar</span>
+        </section>
+
+        <section class="section article-list-blocks" id="article-list">
+            @@include('blocks/article-list/_article-item.html', {
+                "image": "/assets/img/mockup/children.jpg",
+                "title": "Du kan göra skillnad för barn och unga",
+                "text": "Julen är barnens högtid och ska vara magisk och trygg. Tyvärr är det inte så för alla barn, men som kund hos Miljonlotteriet gör du skillnad."
+            })
+        </section>
+
+    </div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
+
+
+
