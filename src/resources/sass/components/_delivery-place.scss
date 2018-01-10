@@ -1,0 +1,63 @@
+.modal-delivery {
+   &__wrapper {
+     max-height: 400px;
+     overflow-y: auto;
+   }
+  &__zip {
+    padding-bottom: $margin-default;
+    border-bottom: 1px solid $color-gray-border;
+    font-weight: $bold;
+    font-size: 16px;
+    display: flex;
+    align-items: baseline;
+    &-title {
+      flex-grow: 1;
+    }
+    &-form {
+      width: 100px;
+      background: transparent;
+      &.form-control {
+        font-weight: $bold;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+  &__place {
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 1px solid $color-gray-border;
+
+    &--active {
+      .btn {
+        background: $color-primary;
+        &:hover {
+          background-color: $color-blue-light;
+          color: $color-light;
+        }
+      }
+    }
+    &-info {
+      width: 70%;
+      width: calc(100% - 80px);
+      display: inline-block;
+      vertical-align: top;
+
+      p {
+        margin-bottom: 5px;
+        color: $color-ocean;
+      }
+
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: $bold;
+    }
+    .btn {
+      min-width: 70px;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+}

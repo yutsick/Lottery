@@ -55,6 +55,13 @@
 
 // Custom radio buttons
 .custom-radio {
+	&__label {
+		&-info {
+			display: block;
+			font-style: italic;
+			font-size: 12px;
+		}
+	}
 	[type="radio"] {
 		position: absolute;
 		left: -999em;

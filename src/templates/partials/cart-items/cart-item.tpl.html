@@ -1,3 +1,67 @@
+@@if(context.order){
+<div class="cart__item">
+	<div class="cart__item-content">
+		<div class="cart__item-container">
+			<div class="cart__item-image cart__item-image--w-border">
+				<img src="assets/img/mockup/car.jpg">
+			</div>
+			<div class="cart__item-info">
+				<p class="cart__item-title">Produktnamn</p>
+				<p class="cart__item-desc">Leveranstid 2-3 dagar</p>
+			</div>
+		</div>
+		<div class="cart__item-container">
+			<p class="cart__item-price">
+				<span class="js-cart-price">100</span> kr
+			</p>
+			<div class="cart__item-quantity">
+				<button class="cart__item-btn cart__item-btn--decrease js-decrease-quantity icon icon-minus" title="Minska antal">
+					<span class="sr-only">Minska antal</span>
+				</button>
+				<input class="cart__item-input js-item-quantity" type="number" value="1" size="2">
+				<button class="cart__item-btn cart__item-btn--increase js-increase-quantity icon icon-plus-simple" title="Öka antal">
+					<span class="sr-only">Öka antal</span>
+				</button>
+			</div>
+
+			<button class="cart__item-remove js-remove-from-cart icon icon-close" title="Ta bort ur kundvagn">
+				<span class="sr-only">Ta bort ur kundvagn</span>
+			</button>
+		</div>
+	</div>
+</div>
+} @@if(!context.order){
+<div class="cart__item cart__item--cart">
+	<p class="cart__item-title h5">Produktnamn</p>
+	<div class="cart__item-content cart__item-content--baseline">
+		<div class="cart__item-image">
+			<img src="assets/img/mockup/car.jpg">
+		</div>
+		<div class="cart__item-manage">
+			<div class="cart__item-quantity">
+				<button class="cart__item-btn cart__item-btn&#45;&#45;decrease js-decrease-quantity icon icon-minus" title="Minska antal">
+					<span class="sr-only">Minska antal</span>
+				</button>
+				<input class="cart__item-input js-item-quantity" type="number" value="1" size="2">
+				<button class="cart__item-btn cart__item-btn&#45;&#45;increase js-increase-quantity icon icon-plus-simple" title="Öka antal">
+					<span class="sr-only">Öka antal</span>
+				</button>
+			</div>
+			<p class="cart__item-price" data-price="100">
+				<span class="js-cart-price">100</span> kr
+			</p>
+			<button class="cart__item-remove js-remove-from-cart icon icon-close" title="Ta bort ur kundvagn">
+				<span class="sr-only">Ta bort ur kundvagn</span>
+			</button>
+		</div>
+	</div>
+
+</div>
+}
+
+
+
+<!--
 <div class="cart__item">
 	<p class="cart__item-title h5">Produktnamn</p>
 	<div class="cart__item-content">
@@ -5,11 +69,11 @@
 			<img src="assets/img/mockup/car.jpg">
 		</div>
 		<div class="cart__item-quantity">
-			<button class="cart__item-btn cart__item-btn--decrease js-decrease-quantity icon icon-minus" title="Minska antal">
+			<button class="cart__item-btn cart__item-btn&#45;&#45;decrease js-decrease-quantity icon icon-minus" title="Minska antal">
 				<span class="sr-only">Minska antal</span>
 			</button>
 			<input class="cart__item-input js-item-quantity" type="number" value="1" size="2">
-			<button class="cart__item-btn cart__item-btn--increase js-increase-quantity icon icon-plus-simple" title="Öka antal">
+			<button class="cart__item-btn cart__item-btn&#45;&#45;increase js-increase-quantity icon icon-plus-simple" title="Öka antal">
 				<span class="sr-only">Öka antal</span>
 			</button>
 		</div>
@@ -20,4 +84,4 @@
 			<span class="sr-only">Ta bort ur kundvagn</span>
 		</button>
 	</div>
-</div>
+</div>-->

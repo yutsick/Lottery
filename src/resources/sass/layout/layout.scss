@@ -10,6 +10,11 @@
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
+	&--center {
+		max-width: 940px;
+		margin: 0 auto;
+	}
 }
 
 .container.container--no-space {

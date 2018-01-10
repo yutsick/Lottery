@@ -1,0 +1,236 @@
+.order-page {
+  .order {
+    &__payment-block {
+      padding: 20px 0;
+      font-size: 16px;
+      clear: both;
+
+      @include min-screen($screen-md-min) {
+        padding: 20px 120px;
+      }
+
+      &-label {
+        display: inline-block;
+      }
+      &-value {
+        display: inline-block;
+        float: right;
+      }
+    }
+
+    &__shipping {
+      border-bottom: 1px solid $color-gray-border;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    &__price {
+      &-total {
+        font-weight: $bold;
+      }
+    }
+
+    &__add-more {
+      display: none;
+      padding-top: 0;
+      padding-bottom: $margin-default;
+
+      &--open {
+        display: block;
+      }
+
+      &--btn-wrapper {
+        display: block;
+        position: relative;
+        @include min-screen($screen-sm-min) {
+          display: inline-block;
+        }
+      }
+
+      &-btn {
+        display: block;
+        padding: 5px 0;
+
+        @include min-screen($screen-sm-min) {
+          display: inline-block;
+          margin: 5px 10px 5px 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          display: inline-block;
+          max-width: 30px;
+        }
+        &--price {
+          font-weight: 400;
+          margin-left: 10px;
+
+          @include min-screen($screen-md-min) {
+            margin-left: 20px;
+          }
+        }
+
+        .btn {
+          padding: 9px 16px;
+          width: calc(100% - 40px);
+
+          @include min-screen($screen-sm-min) {
+            padding: 9px 30px;
+            width: auto;
+          }
+        }
+      }
+    }
+
+    &__input-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      margin: 5px 0;
+
+      .custom-radio {
+        width: 160px;
+      }
+      .form-control {
+        font-size: 16px;
+        width: auto;
+
+        &#phone {
+          max-width: 140px;
+        }
+      }
+    }
+  }
+
+  .delivery {
+    padding-top: $margin-medium;
+    padding-bottom: $margin-medium;
+    border-bottom: 1px solid $color-gray-border;
+    &:last-child {
+      border: none;
+    }
+
+    @include min-screen($screen-md-min) {
+      border-bottom: none;
+    }
+
+    &__title {
+      font-size: 16px;
+      font-weight: $bold;
+      display: inline-block;
+    }
+    .icon {
+      display: inline-block;
+      font-size: 20px;
+      color: $color-complement-sky ;
+      margin: 0 $margin-small;
+    }
+    &__contact {
+      p {
+        margin-bottom: 5px;
+      }
+      &-note {
+        font-style: italic;
+        font-size: 12px;
+        padding-bottom: 5px;
+
+        a {
+          color: $color-base-primary;
+          text-decoration: underline;
+
+        }
+      }
+    }
+
+    &__gift {
+      border: 1px solid transparent;
+      margin-left: -10px;
+      margin-right: -10px;
+      padding: 0 10px;
+
+      @include min-screen($screen-md-min) {
+        margin-right: 0;
+      }
+
+      &-form {
+        display: none;
+        &-title {
+          font-weight: $bold;
+          margin: 10px 0;
+
+        }
+        &-row {
+          display: flex;
+          align-items: baseline;
+          max-width: 360px;
+          margin: 5px;
+        }
+        &-label{
+          min-width: 75px;
+          &--small {
+            min-width: 50px;
+            text-align: center;
+          }
+        }
+        &-input {
+          &--small {
+            max-width: 90px;
+          }
+        }
+      }
+
+      &--active {
+        padding: 10px;
+        padding-top: 20px;
+        border-color: $color-gray-border;
+        border-radius: 5px;
+        margin-top: 15px;
+        position: relative;
+
+        .delivery__gift-form {
+          display: block;
+        }
+        .delivery__gift-title {
+          position: absolute;
+          top: -10px;
+        }
+      }
+
+      &-title {
+        background: white;
+        position: relative;
+        top: 0;
+
+        label {
+          padding-right: 5px;
+
+          //to avoid linebreak on iphone 5 exc.
+          @include max-screen($screen-tiny) {
+            font-size: 12px;
+            padding-right: 2px;
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+  &__submit {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+
+    &-action-wrapper {
+      display: block;
+      margin-bottom: $margin-medium;
+
+      a {
+        color: $color-base-primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
