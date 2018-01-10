@@ -9,7 +9,7 @@
   padding-bottom: 50px;
 
   @include min-screen($screen-sm) {
-    height: 100px;
+    padding-bottom: 100px;
   }
 }
 
