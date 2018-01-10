@@ -1,0 +1,107 @@
+/* Extension of css file in "node_modules/lightgallery.js/ */
+
+.lg-icon {
+  font-family: $base-font-family;
+}
+
+.lg-outer .lg-img-wrap {
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  @include min-screen($screen-sm) {
+    padding-bottom: 100px;
+  }
+}
+
+/* Backdrop */
+.lg-backdrop {
+  background: $color-overlay;
+  transition: opacity $duration-fast $delay-none $ease-in-out, visibility 0s $duration-fast;
+}
+
+.lg-toolbar {
+  background-color: transparent;
+}
+
+/* Don't hide toolbar */
+.lg-hide-items .lg-toolbar {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Toolbar */
+.lg-toolbar .lg-icon {
+  display: block;
+  margin: 0 auto;
+  float: none;
+
+  &:after {
+    font-family: $base-icon-family;
+    font-size: 14px
+  }
+
+  &.lg-close:after {
+    content: "\e90b";
+    display: block;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: $color-blue;
+    color: $color-white;
+    line-height: 40px;
+  }
+}
+
+/* Actions */
+.lg-actions .lg-icon {
+  background-color: transparent;
+
+  &:before,
+  &:after {
+    font-family: $base-icon-family;
+    font-size: 14px
+  }
+
+  &.lg-prev:after {
+    content: "\e907";
+  }
+
+  &.lg-next:before {
+    content: "\e908";
+  }
+}
+
+/* Thumbnails */
+.lg-outer .lg-thumb-outer {
+  background-color: transparent;
+}
+
+.lg-outer .lg-thumb {
+  text-align: center;
+}
+
+.lg-outer .lg-thumb-item {
+  display: inline-block;
+  float: none;
+  width: auto !important;
+  border: 4px solid transparent;
+
+  @include max-screen($screen-sm) {
+    max-width: 50px;
+  }
+
+  &.active,
+  &:hover {
+    border-color: $color-blue;
+  }
+
+  > img {
+    display: block;
+    height: 25px;
+    width: auto;
+
+    @include min-screen($screen-sm) {
+      height: 50px;
+    }
+  }
+}

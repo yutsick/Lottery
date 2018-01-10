@@ -1,7 +1,17 @@
 /* Sass Media Queries */
 @import "../../../node_modules/sass-mediaqueries/media-queries";
+
 /* Config */
 @import "core/core";
+
+/* Light gallery */
+@import "../../../node_modules/lightgallery.js/src/sass/lightgallery.scss";
+
+
+/* Light gallery extension */
+@import "vendor/lightgallery-extension";
+
+
 /* Bootstrap */
 @import "vendor/bootstrap";
 

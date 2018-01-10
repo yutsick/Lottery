@@ -4,7 +4,8 @@ require('bootstrap-validator');
 
 var fizzyUIUtils = require('fizzy-ui-utils');
 var Flickity = require('flickity/dist/flickity.pkgd.js');
-
+require('lightgallery.js/dist/js/lightgallery.min.js');
+require('lg-thumbnail.js/dist/lg-thumbnail.js');
 
 /* Vendor */
 import modernizr from './vendor/modernizr-custom.js';
@@ -14,8 +15,10 @@ import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
 import bonusCode from './components/bonus-code';
 import dataList from './components/data-list';
+import dreamlistTooltip from './components/dreamlist-tooltip';
 import entityCollectionActions from './components/entity-collection-actions';
 import form from './components/form';
+import imageGallery from './components/image-gallery';
 import scrolling from './components/is-scrolling';
 import loadSection from './components/load-section';
 import message from './components/message';
@@ -46,8 +49,10 @@ $(function () {
 	alert();
 	bonusCode();
 	dataList();
-	entityCollectionActions();
+	dreamlistTooltip();
+	new entityCollectionActions();
 	form();
+	imageGallery();
 	scrolling();
 	loadSection();
 	message();
