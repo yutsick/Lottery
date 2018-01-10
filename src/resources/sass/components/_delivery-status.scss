@@ -1,0 +1,21 @@
+.delivery-status {
+	position: relative;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin-right: 5px;
+		border-radius: 50%;
+		background-color: $color-green;
+	}
+
+	&--medium:before {
+		background-color: $color-orange;
+	}
+
+	&--long:before {
+		background-color: $color-red;
+	}
+}
