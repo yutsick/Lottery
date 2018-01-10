@@ -1,6 +1,6 @@
 export default class orderActions {
     constructor() {
-        this.$orderPage = $('.order');
+        this.$orderPage = $('.order-page');
 
         if(this.$orderPage) {
             this.eventListener();
