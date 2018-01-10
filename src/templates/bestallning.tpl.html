@@ -12,66 +12,65 @@
         <div class="block block-hero block-hero--mini">
             <h2>Beställning</h2>
         </div>
-
-        <div class="order">
-            <div class="order__header">
-                <p class="h5">Kundvagn</p>
-            </div>
-            <div class="order__row">
-                @@include('cart-items/cart-item.tpl.html', {"order": true})
-                @@include('cart-items/cart-item.tpl.html', {"order": true})
-                <div class="order__shipping order__payment-block">
-                    <p class="order__payment-block-label">Frakt</p>
-                    <p class="order__payment-block-value"><span>0</span>kr</p>
+        <section class="section order-page">
+            <div class="order frame-box">
+                <div class="frame-box__header">
+                    <p class="h5">Kundvagn</p>
                 </div>
-
-
-                <div class="order__price order__payment-block row">
-                    <div class="col-xs-12 col-sm-12 col-lg-6">
+                <div class="frame-box__row">
+                    @@include('cart-items/cart-item.tpl.html', {"order": true})
+                    @@include('cart-items/cart-item.tpl.html', {"order": true})
+                    <div class="order__shipping order__payment-block">
+                        <p class="order__payment-block-label">Frakt</p>
+                        <p class="order__payment-block-value"><span>0</span>kr</p>
                     </div>
-                    <div class="col-xs-12 col-sm-12 col-lg-6">
-                        <div class="order__price-total">
-                            <p class="order__payment-block-label">Total summa: </p>
-                            <p class="order__payment-block-value"><span>0</span>kr</p>
+
+
+                    <div class="order__price order__payment-block row">
+                        <div class="col-xs-12 col-sm-12 col-lg-6">
                         </div>
-                        <div class="order__price-wallet">
-                            <p class="order__payment-block-label">Saldo efter köp: </p>
-                            <p class="order__payment-block-value"><span>0</span>kr</p>
-                         </div>
-                    </div>
-                </div>
-
-                <div class="order__add-more order__add-more--open order__payment-block row" >
-                    <div class="col-xs-12 col-sm-12 col-lg-12">
-                        <p>Du har vinstpengar kvar efter ditt köp. Vill du lägga till en lott?</p>
-                        <div class="order__add-more--btn-wrapper">
-                            <div class="order__add-more-btn">
-                                <div class="btn btn-default" data-item="miljonlotteriet-orginal" data-value="40">Miljonlotteriet Orginal <span class="order__add-more-btn--price">+40kr</span></div>
-                                <img src="assets/img/mockup/bingo-icon.png">
+                        <div class="col-xs-12 col-sm-12 col-lg-6">
+                            <div class="order__price-total">
+                                <p class="order__payment-block-label">Total summa: </p>
+                                <p class="order__payment-block-value"><span>0</span>kr</p>
                             </div>
-                            <div class="order__add-more-btn">
-                                <div class="btn btn-default" data-item="miljonlotteriet-resa" data-value="40">Miljonlotteriet Resan <span class="order__add-more-btn--price">+40kr</span></div>
-                                <img src="assets/img/mockup/Sommarlovbingo.png">
-                            </div>
+                            <div class="order__price-wallet">
+                                <p class="order__payment-block-label">Saldo efter köp: </p>
+                                <p class="order__payment-block-value"><span>0</span>kr</p>
+                             </div>
                         </div>
                     </div>
+
+                    <div class="order__add-more order__add-more--open order__payment-block row" >
+                        <div class="col-xs-12 col-sm-12 col-lg-12">
+                            <p>Du har vinstpengar kvar efter ditt köp. Vill du lägga till en lott?</p>
+                            <div class="order__add-more--btn-wrapper">
+                                <div class="order__add-more-btn">
+                                    <div class="btn btn-default" data-item="miljonlotteriet-orginal" data-value="40">Miljonlotteriet Orginal <span class="order__add-more-btn--price">+40kr</span></div>
+                                    <img src="assets/img/mockup/bingo-icon.png">
+                                </div>
+                                <div class="order__add-more-btn">
+                                    <div class="btn btn-default" data-item="miljonlotteriet-resa" data-value="40">Miljonlotteriet Resan <span class="order__add-more-btn--price">+40kr</span></div>
+                                    <img src="assets/img/mockup/Sommarlovbingo.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="order">
-            <div class="order__header">
-                <p class="h5">Leverans</p>
-            </div>
-            <div class="order__row">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="delivery">
-                            <p class="h5">Leveransadress</p>
-                            <div class="">
+            <div class="frame-box">
+                <div class="frame-box__header">
+                    <p class="h5">Leveransuppgifter</p>
+                </div>
+                <div class="frame-box__row">
+                    <div class="row">
+                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                            <p class="delivery__title">Leveransadress</p>
+                            <div class="delivery__contact">
                                 <p>Magnus Singerer</p>
                                 <p>Fjärde Långgatat 41 Lgh 1103</p>
                                 <p>413 27 Göteborg</p>
-                                <p class="-note">Din adress ändrar du på <a href="" alt="min sida">Min sida</a></p>
+                                <p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
                             </div>
                             <div class="delivery__gift">
                                 <div class="delivery__gift-title custom-checkbox-v2">
@@ -79,32 +78,43 @@
                                     <label for="gift" class="custom-checkbox__label">Skicka till en annan adress eller som gåva</label>
                                 </div>
                                 <div class="delivery__gift-form">
+                                    <p class="delivery__gift-form-title">Fyll i leveransadress & mobilnummer för avisering</p>
                                     <form>
-                                        <label for="name" >Namn</label>
-                                        <input type="text" id="name" class="form-control"/>
-                                        <label for="address">Adress</label>
-                                        <input type="text" id="address" class="form-control"/>
-                                        <label for="zipcode">Postnr</label>
-                                        <input type="text" id="zipcode" class="form-control"/>
-                                        <label for="city">Ort</label>
-                                        <input type="text" id="city" class="form-control"/>
+                                        <div class="delivery__gift-form-row">
+                                            <label class="delivery__gift-form-label" for="name" >Namn</label>
+                                            <input  class="delivery__gift-form-input form-control" type="text" id="name"/>
+                                        </div>
+                                        <div class="delivery__gift-form-row">
+                                            <label class="delivery__gift-form-label" for="address">Adress</label>
+                                            <input  class="delivery__gift-form-input form-control" type="text" id="address"/>
+                                        </div>
+                                        <div class="delivery__gift-form-row">
+                                            <label class="delivery__gift-form-label" for="zipcode">Postnr</label>
+                                            <input class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="zipcode"/>
+
+                                            <label class="delivery__gift-form-label delivery__gift-form-label--small" for="city">Ort</label>
+                                            <input class="delivery__gift-form-input form-control" type="text" id="city"/>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="">
-                            <p class="h5">Hämtas ut hos</p>
-                            <p>Hemköp Masthugget</p>
-                            <button class="btn btn-default">Välj ett annat ombud</button>
+                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                            <p class="delivery__title">Leveranssätt</p>
+                            <div class="order__input-wrapper custom-radio">
+                                <input type="radio" name="delivery-type" id="delivery-standard" class="custom-radio__input" checked>
+                                <label for="delivery-standard" class="custom-radio__label">Standard</label>
+                            </div>
+                            <div class="order__input-wrapper custom-radio">
+                                <input type="radio" name="delivery-type" id="delivery-prio" class="custom-radio__input">
+                                <label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalining sker efter beställning lagts. </span></label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-6">
-                        <div class="">
-                            <p class="h5">Avansering</p>
+                    <div class="row">
+                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                            <p class="delivery__title">Avisering</p>
+                            <i class="icon icon-info"></i>
                             <div class="order__input-wrapper">
                                 <div class="custom-radio">
                                     <input type="radio" name="notification" id="notify-sms" class="custom-radio__input" checked>
@@ -121,17 +131,27 @@
                             </div>
                             <div class="order__input-wrapper custom-radio">
                                 <input type="radio" name="notification" id="notify-letter" class="custom-radio__input">
-                                <label for="notify-letter" class="custom-radio__label">Skicka Brev:</label>
+                                <label for="notify-letter" class="custom-radio__label">Skicka Brev</label>
                             </div>
+                        </div>
+                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                            <p class="delivery__title">Hämtas ut hos</p>
+                            <p>Hemköp Masthugget</p>
+                            <button class="btn btn-default" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <button class="btn btn-primary">Bekräfta och beställ vinsterna</button>
+            <div class="order-page__submit">
+                <div class="order-page__submit-action-wrapper">
+                    <button class="btn btn-primary">Bekräfta och beställ vinsterna</button>
+                </div>
+                <div class="order-page__submit-action-wrapper">
+                    <a href="#">Avbryt beställning</a>
+                </div>
+            </div>
+        </section>
     </div>
-
-
 </div>
 
 @@include('layout/_footer.html', {"show_footer": true})

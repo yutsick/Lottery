@@ -1,0 +1,37 @@
+.frame-box {
+  margin-bottom: $margin-default;
+
+  &__header {
+    background-color: #d6eeff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #000;
+    border: 1px solid #a2c3ff;
+  }
+
+  &__row {
+    border: 1px solid $color-gray-border;
+    border-top: 0;
+    padding: 0 $margin-medium;
+
+    @include min-screen($screen-sm-min) {
+      padding: 0 $margin-default;
+    }
+
+    &:last-of-type {
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+
+    &.form-group {
+      margin: 0;
+    }
+
+    .profile__submit {
+      display: none;
+    }
+  }
+}
