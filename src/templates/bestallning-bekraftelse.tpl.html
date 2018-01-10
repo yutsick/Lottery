@@ -16,21 +16,44 @@
         <section class="block block-content">
             <div class="block-content__content">
                 <p class="h5">Ordernummer: 1234567890</p>
-                <p>Ett meddelande med leveransinformation har skickats till<b>magnus.singerer@changetheagency.se</b></p>
+                <p>Ett meddelande med leveransinformation har skickats till <b>magnus.singerer@changetheagency.se</b></p>
                 <p>Dina vinster packas och skickas inom kort i 3 olika försändelser.<br/>
                  När dina paket har skickats kan du spåra dem under <a href="/">Vinstbeställningar</a> på Mina sidor</p>
             </div>
+            <ul class="ordered-item-list list-unstyled">
+                <li class="ordered__item">
+                    <i class="ordered__item-icon icon icon-package"></i>
+                    <div class="ordered__item-content">
+                        <p class="ordered__item-title">
+                            <span class="ordered__item-name">Product name</span> - Brand
+                        </p>
+                        <span class="delivery-status">Leveranstid: 2-4 dagar</span>
+                    </div>
+                </li>
+
+                <li class="ordered__item">
+                    <i class="ordered__item-icon icon icon-package"></i>
+                    <div class="ordered__item-content">
+                        <p class="ordered__item-title">
+                            <span class="ordered__item-name">Product name</span> - Brand
+                        </p>
+                        <span class="delivery-status delivery-status--medium">Leveranstid: 5-8 dagar</span>
+                    </div>
+                </li>
+
+                <li class="ordered__item">
+                    <i class="ordered__item-icon icon icon-package"></i>
+                    <div class="ordered__item-content">
+                        <p class="ordered__item-title">
+                            <span class="ordered__item-name">Product name</span>
+                        </p>
+                        <span class="delivery-status delivery-status--long">Leveranstid: 9-15 dagar</span>
+                    </div>
+                </li>
+            </ul>
         </section>
 
-        <section class="section article-list-blocks" id="article-list">
-            <i class="icon icon-package"></i>
-            <p>Product name - <span>Brand</span></p>
-            <span class="delivery-status">Leveranstid: 2-4 dagar</span>
-            <span class="delivery-status delivery-status--medium">Leveranstid: 5-8 dagar</span>
-            <span class="delivery-status delivery-status--long">Leveranstid: 9-15 dagar</span>
-        </section>
-
-        <section class="section article-list-blocks" id="article-list">
+        <section class="section article-list-blocks">
             @@include('blocks/article-list/_article-item.html', {
                 "image": "/assets/img/mockup/children.jpg",
                 "title": "Du kan göra skillnad för barn och unga",
