@@ -1,0 +1,29 @@
+.ordered__item {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+
+  &:not(:first-child) {
+    margin-top: $margin-default;
+  }
+
+  &-title {
+    margin-bottom: 5px;
+    font-size: 1rem;
+  }
+
+  &-name {
+    font-weight: $bold;
+  }
+
+  &-icon {
+    font-size: 40px;
+    color: $color-gray;
+  }
+
+  &-content {
+    &:not(:first-child) {
+      margin-left: $margin-default;
+    }
+  }
+}
