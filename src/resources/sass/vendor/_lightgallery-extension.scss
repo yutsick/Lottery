@@ -64,8 +64,8 @@
 
   &.lg-next,
   &.lg-prev {
-    color: #000;
-    background: #fff;
+    color: $color-black;
+    background: $color-white;
     margin-top: -60px; // Vertical alignment
 
     @include min-screen($screen-sm) {
