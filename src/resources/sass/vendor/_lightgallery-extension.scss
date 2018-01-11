@@ -62,6 +62,17 @@
     font-size: 14px
   }
 
+  &.lg-next,
+  &.lg-prev {
+    color: #000;
+    background: #fff;
+    margin-top: -60px; // Vertical alignment
+
+    @include min-screen($screen-sm) {
+      margin-top: -92px; // Vertical alignment
+    }
+  }
+
   &.lg-prev:after {
     content: "\e907";
   }
