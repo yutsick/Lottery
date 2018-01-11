@@ -63,90 +63,91 @@
                     <p class="h5">Leveransuppgifter</p>
                 </div>
                 <div class="frame-box__row">
-                    <div class="row">
-                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
-                            <p class="delivery__title">Leveransadress</p>
-                            <div class="delivery__contact">
-                                <p>Magnus Singerer</p>
-                                <p>Fjärde Långgatat 41 Lgh 1103</p>
-                                <p>413 27 Göteborg</p>
-                                <p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
-                            </div>
-                            <div class="delivery__gift">
-                                <div class="delivery__gift-title custom-checkbox-v2">
-                                    <input type="checkbox" id="gift" class="custom-checkbox__input" value="gift" />
-                                    <label for="gift" class="custom-checkbox__label">Skicka till en annan adress eller som gåva</label>
+                    <form id="ordering" action="/bestallning-bekraftelse.html" method="post">
+                        <div class="row">
+                            <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                                <p class="delivery__title">Leveransadress</p>
+                                <div class="delivery__contact">
+                                    <p>Magnus Singerer</p>
+                                    <p>Fjärde Långgatat 41 Lgh 1103</p>
+                                    <p>413 27 Göteborg</p>
+                                    <p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
                                 </div>
-                                <div class="delivery__gift-form">
-                                    <p class="delivery__gift-form-title">Fyll i leveransadress & mobilnummer för avisering</p>
-                                    <form>
-                                        <div class="delivery__gift-form-row">
-                                            <label class="delivery__gift-form-label" for="name" >Namn</label>
-                                            <input  class="delivery__gift-form-input form-control" type="text" id="name"/>
-                                        </div>
-                                        <div class="delivery__gift-form-row">
-                                            <label class="delivery__gift-form-label" for="address">Adress</label>
-                                            <input  class="delivery__gift-form-input form-control" type="text" id="address"/>
-                                        </div>
-                                        <div class="delivery__gift-form-row">
-                                            <label class="delivery__gift-form-label" for="zipcode">Postnr</label>
-                                            <input class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="zipcode"/>
+                                <div class="delivery__gift">
+                                    <div class="delivery__gift-title custom-checkbox-v2">
+                                        <input name="gift" type="checkbox" id="gift" value="true" class="custom-checkbox__input"/>
+                                        <label for="gift" class="custom-checkbox__label">Skicka till en annan adress eller som gåva</label>
+                                    </div>
+                                    <div class="delivery__gift-form">
+                                        <p class="delivery__gift-form-title">Fyll i leveransadress & mobilnummer för avisering</p>
+                                            <div class="delivery__gift-form-row">
+                                                <label class="delivery__gift-form-label" for="gift-name" >Namn</label>
+                                                <input name="gift-name" class="delivery__gift-form-input form-control" type="text" id="gift-name"/>
+                                            </div>
+                                            <div class="delivery__gift-form-row">
+                                                <label class="delivery__gift-form-label" for="gift-address">Adress</label>
+                                                <input name="gift-address" class="delivery__gift-form-input form-control" type="text" id="gift-address"/>
+                                            </div>
+                                            <div class="delivery__gift-form-row">
+                                                <label class="delivery__gift-form-label" for="gift-zip">Postnr</label>
+                                                <input name="gift-zip" class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="gift-zip"/>
 
-                                            <label class="delivery__gift-form-label delivery__gift-form-label--small" for="city">Ort</label>
-                                            <input class="delivery__gift-form-input form-control" type="text" id="city"/>
-                                        </div>
-                                    </form>
+                                                <label class="delivery__gift-form-label delivery__gift-form-label--small" for="gift-city">Ort</label>
+                                                <input name="gift-city" class="delivery__gift-form-input form-control" type="text" id="gift-city"/>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                                <p class="delivery__title">Leveranssätt</p>
+                                <div class="order__input-wrapper custom-radio">
+                                    <input type="radio" name="delivery-type" id="delivery-standard" value="standard" class="custom-radio__input" checked>
+                                    <label for="delivery-standard" class="custom-radio__label">Standard</label>
+                                </div>
+                                <div class="order__input-wrapper custom-radio">
+                                    <input type="radio" name="delivery-type" id="delivery-prio" value="prio" class="custom-radio__input">
+                                    <label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalning sker efter beställning lagts. </span></label>
                                 </div>
                             </div>
                         </div>
-                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
-                            <p class="delivery__title">Leveranssätt</p>
-                            <div class="order__input-wrapper custom-radio">
-                                <input type="radio" name="delivery-type" id="delivery-standard" class="custom-radio__input" checked>
-                                <label for="delivery-standard" class="custom-radio__label">Standard</label>
-                            </div>
-                            <div class="order__input-wrapper custom-radio">
-                                <input type="radio" name="delivery-type" id="delivery-prio" class="custom-radio__input">
-                                <label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalning sker efter beställning lagts. </span></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
-                            <p class="delivery__title">Avisering</p>
-                            <span class=" delivery__info" data-toggle="tooltip" data-placement="top" title="" data-original-title="När din order levererats meddelas du om att hämta ut den. Välj hur du vill ha meddelandet.">
-                                <i class="delivery__info-icon icon icon-info"></i>
-                            </span>
-                            <div class="order__input-wrapper order__input-wrapper--w-height">
-                                <div class="custom-radio">
-                                    <input type="radio" name="notification" id="notify-sms" class="custom-radio__input" checked>
-                                    <label for="notify-sms" class="custom-radio__label">Skicka med SMS:</label>
+                        <div class="row">
+                            <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                                <p class="delivery__title">Avisering</p>
+                                <span class=" delivery__info" data-toggle="tooltip" data-placement="top" title="" data-original-title="När din order levererats meddelas du om att hämta ut den. Välj hur du vill ha meddelandet.">
+                                    <i class="delivery__info-icon icon icon-info"></i>
+                                </span>
+                                <div class="order__input-wrapper order__input-wrapper--w-height">
+                                    <div class="custom-radio">
+                                        <input type="radio" name="notification" id="notify-sms" value="sms"  class="custom-radio__input" checked>
+                                        <label for="notify-sms" class="custom-radio__label">Skicka med SMS:</label>
+                                    </div>
+                                    <input type="tel" id="phone" class="form-control" value="070-7654432"/>
                                 </div>
-                                <input type="tel" id="phone" class="form-control" value="070-7654432"/>
+                                <div class="order__input-wrapper order__input-wrapper--w-height">
+                                     <div class="custom-radio">
+                                        <input type="radio" name="notification" id="notify-email" value="email"  class="custom-radio__input">
+                                         <label for="notify-email" class="custom-radio__label">Skicka med e-post:</label>
+                                     </div>
+                                    <input type="email" id="email" class="form-control" value="magnus.singerer@changetheagency.com"/>
+                                </div>
+                                <div class="order__input-wrapper order__input-wrapper--w-height custom-radio">
+                                    <input type="radio" name="notification" id="notify-letter" value="letter" class="custom-radio__input">
+                                    <label for="notify-letter" class="custom-radio__label">Skicka Brev</label>
+                                </div>
                             </div>
-                            <div class="order__input-wrapper order__input-wrapper--w-height">
-                                 <div class="custom-radio">
-                                    <input type="radio" name="notification" id="notify-email" class="custom-radio__input">
-                                     <label for="notify-email" class="custom-radio__label">Skicka med e-post:</label>
-                                 </div>
-                                <input type="email" id="email" class="form-control" value="magnus.singerer@changetheagency.com"/>
-                            </div>
-                            <div class="order__input-wrapper order__input-wrapper--w-height custom-radio">
-                                <input type="radio" name="notification" id="notify-letter" class="custom-radio__input">
-                                <label for="notify-letter" class="custom-radio__label">Skicka Brev</label>
+                            <div class="delivery col-xs-12 col-sm-12 col-md-6">
+                                <p class="delivery__title">Hämtas ut hos</p>
+                                <p class="delivery__place">Hemköp Masthugget</p>
+                                <input name="delivery-place" type="hidden" id="delivery-place" value="Hemköp Masthugget"/>
+                                <button type="button" class="delivery__place-btn btn btn-default" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
                             </div>
                         </div>
-                        <div class="delivery col-xs-12 col-sm-12 col-md-6">
-                            <p class="delivery__title">Hämtas ut hos</p>
-                            <p>Hemköp Masthugget</p>
-                            <button class="btn btn-default" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="order-page__submit">
                 <div class="order-page__submit-action-wrapper">
-                    <button class="btn btn-primary">Bekräfta och beställ vinsterna</button>
+                    <button type="submit" form="ordering" class="btn btn-primary">Bekräfta och beställ vinsterna</button>
                 </div>
                 <div class="order-page__submit-action-wrapper">
                     <a href="#">Avbryt beställning</a>

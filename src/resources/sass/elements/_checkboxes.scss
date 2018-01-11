@@ -178,6 +178,12 @@
 			}
 		}
 
+		/* On Focus */
+		&:focus + label:before {
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px;
+		}
+
 		/* Checked icon */
 		&:checked + label:after {
 			content: '\e905';
@@ -188,5 +194,6 @@
 			font-family: $base-icon-family;
 			color: #A9DB9B;
 		}
+
 	}
 }
