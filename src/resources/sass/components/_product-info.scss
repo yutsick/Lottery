@@ -7,19 +7,15 @@
 		padding-left: 30px;
 	}
 
-	&__header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-
 	&__title {
 		margin-top: 0;
 	}
 
 	&__logo {
+		float: right;
 		max-width: 100px;
-		margin-left: 10px;
+		max-height: 50px;
+		margin-left: $margin-small;
 
 		@include min-screen($screen-tiny) {
 			max-width: 150px;
