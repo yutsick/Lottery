@@ -123,11 +123,20 @@ body {
 		position: relative;
 	}
 
-	/* Hide elements on the page */
-	.message-container,
-	.top-account,
-	.alert-info {
-		display: none;
+	&.logged-in {
+		/* Hide elements on the page */
+		.message-container,
+		.top-account,
+		.alert-info {
+			display: none;
+		}
+	}
+
+	&:not(.logged-in) {
+		/* Hide elements on the page */
+		.product-cart {
+			display: none;
+		}
 	}
 }
 
