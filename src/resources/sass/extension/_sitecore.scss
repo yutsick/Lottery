@@ -20,6 +20,7 @@ body {
 	}
 }
 
-/* Adjust old content styles interfere with new styles */
-.ml-2017 {
+#scPageExtendersForm iframe {
+	position: relative;
+	z-index: 1100;
 }
