@@ -1,9 +1,9 @@
 @@include('layout/_header.html', {
-	"class": "logged-in shop"
+	"class": "shop"
 })
 
-@@include('layout/_top.html', {"logged_in": true})
-@@include('layout/_sidebar.html', {"logged_in": true})
+@@include('layout/_top.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})
 
 <div class="content-wrapper ml-2017">
 	<div class="container">
@@ -18,15 +18,15 @@
 		<div class="row row--offset">
 			<div class="col-xs-12 col-md-6 pull-right">
 				<div class="lightgallery" id="lightgallery">
-					<a class="lightgallery__item lightgallery__item--large" href="/assets/img/mockup/friends.jpg">
-						<img src="/assets/img/mockup/friends.jpg" alt=""/>
+					<a class="lightgallery__item lightgallery__item--large" href="/assets/img/mockup/butterfly.jpg">
+						<img src="/assets/img/mockup/butterfly.jpg" alt=""/>
 						<span class="lightgallery__counter">Bild 1 av
 							<span class="lightgallery__count js-item-count">0</span>
 							<i class="icon icon-expand"></i>
 						</span>
 					</a>
-					<a class="lightgallery__item lightgallery__item--small" href="/assets/img/mockup/friends.jpg">
-						<img src="/assets/img/mockup/friends.jpg" alt=""/>
+					<a class="lightgallery__item lightgallery__item--small" href="/assets/img/mockup/car.jpg">
+						<img src="/assets/img/mockup/car.jpg" alt=""/>
 					</a>
 					<a class="lightgallery__item lightgallery__item--small" href="/assets/img/mockup/sunset.jpg">
 						<img src="/assets/img/mockup/sunset.jpg" alt=""/>
@@ -73,11 +73,11 @@
 						<span class="product-order__value">2400 kr</span>
 					</li>
 					<li class="product-order__item product-order__item-small">
-						<span class="delivery-status delivery-status--long">Leveranstid: 10-20 dagar</span>
+						<span class="product-order__status product-order__status--few">Leveranstid: 10-20 dagar</span>
 					</li>
 					<li class="product-order__item">
 						<button class="product-order__btn btn btn-primary" disabled data-toggle="modal" data-target="#modal-cart">
-							<span class="product-order__btn-inner" data-toggle="tooltip" data-placement="top" data-original-title="För lite pengar på vinskontot">
+							<span class="product-order__btn-inner" data-toggle="tooltip" data-placement="top" data-original-title="Logga in för att beställa vinster">
 								Beställ denna vinst
 							</span>
 						</button>
@@ -85,34 +85,32 @@
 				</ul>
 
 				<div class="product-dreamlist row">
-					<div class="col-xs-12 col-sm-6 hidden-xs">
+					<div class="col-xs-12 col-md-6 hidden-xs hidden-sm">
 						<h5 class="product-dreamlist__title">Drömlista</h5>
 						<p class="product-dreamlist__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
 							ante ultrices pharetra.
 						</p>
 					</div>
-					<div class="col-xs-12 col-sm-6 ">
+					<div class="col-xs-12 col-md-6 ">
 						<div class="product-dreamlist__progress-wrapper">
-							<span class="product-dreamlist__tooltip">
-								100 kr kvar
-							</span>
-							<span class="product-dreamlist__tooltip-arrow"></span>
+							<span class="product-dreamlist__tooltip">100 kr kvar</span>
 							<button class="product-dreamlist__progress js-add-to-dreamlist">
 								<span class="product-dreamlist__dream-button btn-link">
 									<i class="icon icon-dream-star dreamlist-icon"></i>
 								</span>
-								<span class="product-dreamlist__current" style="width:40%"></span>
+								<span class="product-dreamlist__current" style="width:50%"></span>
 								<span class="product-dreamlist__text">Lägg till i min drömlista</span>
 							</button>
 							<p class="text-center">13  personer sparar till denna i sin drömlista</p>
 						</div>
-						<p class="product-dreamlist__desc visible-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+						<p class="product-dreamlist__desc visible-xs visible-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
 							ante ultrices pharetra.
 						</p>
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<section class="section product-list-blocks">
 			<div class="row equal-height">
@@ -121,7 +119,6 @@
 				</div>
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
 				"image": "assets/img/mockup/butterfly.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"label": "Nyhet",
@@ -133,7 +130,6 @@
 				})
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
 				"image": "assets/img/mockup/butterfly.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"title": "Flera rader skulle kunna fungera såhär.",
@@ -142,7 +138,6 @@
 				})
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
 				"image": "assets/img/mockup/nature.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"title": "Flera rader skulle kunna fungera såhär.",
@@ -152,7 +147,6 @@
 				})
 
 				@@include('blocks/product-list/_product-item.html', {
-				"href": "/vinstshop-page-full.html",
 				"image": "assets/img/mockup/sunset.jpg",
 				"hoverImage": "assets/img/mockup/car.jpg",
 				"title": "Flera rader skulle kunna fungera såhär.",

@@ -93,6 +93,11 @@
 		font-weight: $extrabold;
 		color: $color-white;
 		white-space: nowrap;
+
+		/* Avoid collision with icon */
+		@media (min-width: $screen-md) and (max-width: $screen-lg) {
+			padding-left: 20px;
+		}
 	}
 
 	&__dream-button {
