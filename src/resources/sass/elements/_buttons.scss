@@ -12,6 +12,11 @@
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	}
 
+	&[disabled] {
+		opacity: 1;
+		background-color: rgba(0, 120, 192, .65);
+	}
+
 	&:focus,
 	&:hover,
 	&:active,
@@ -20,6 +25,10 @@
 		outline: none;
 		border: none;
 		box-shadow: none;
+
+		&[disabled] {
+			background-color: rgba(0, 120, 192, .65);
+		}
 	}
 }
 
@@ -264,7 +273,11 @@
 
 .btn-disabled {
 	cursor: not-allowed;
-	opacity: 0.65;
+
+	&,
+	&:hover {
+		background-color: rgba(0, 120, 192, .65);
+	}
 }
 
 .btn-large {
