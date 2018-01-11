@@ -82,13 +82,14 @@
 }
 
 .block-hero__page-title {
-	font-size: 11px;
-	line-height: 1;
 	margin: 0;
-	font-weight: 400;
-	color: $color-complement-sky;
 	padding: 20px 15px 0;
+	font-family: $base-font-family;
+	font-weight: 400;
+	font-size: 11px;
 	text-shadow: none;
+	line-height: 1;
+	color: $color-complement-sky;
 
 	@include min-screen($screen-md-min) {
 		padding: 20px 15px 0;

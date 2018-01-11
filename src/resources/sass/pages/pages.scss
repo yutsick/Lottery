@@ -69,14 +69,14 @@ body {
 
 #page-wrapper.page--content-only {
 	@include max-screen($screen-sm-max) {
-		padding-top: 0px;
+		padding-top: 0;
 	}
 
 }
 
 #page-wrapper.page--content-only {
     @include screen($screen-sm-min, $screen-sm-max) {
-		padding-left: 0px;
+		padding-left: 0;
 	}
 }
 
@@ -124,7 +124,7 @@ body {
 	}
 
 	&.logged-in {
-		/* Hide elements on the page */
+		/* Hide elements if logged in */
 		.message-container,
 		.top-account,
 		.alert-info {
@@ -133,7 +133,6 @@ body {
 	}
 
 	&:not(.logged-in) {
-		/* Hide elements on the page */
 		.product-cart {
 			display: none;
 		}

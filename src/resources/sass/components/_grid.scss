@@ -57,3 +57,13 @@
 		padding-left: 5px;
 	}
 }
+
+/* Is this even used? */
+.row.is-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
