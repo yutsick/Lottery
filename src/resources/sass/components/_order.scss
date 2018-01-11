@@ -91,7 +91,10 @@
       flex-wrap: wrap;
       align-items: flex-end;
       margin: 5px 0;
-
+      
+      &--w-height {
+       min-height: 45px;
+      }
       .custom-radio {
         width: 160px;
       }
