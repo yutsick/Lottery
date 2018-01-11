@@ -113,7 +113,6 @@
     &:last-child {
       border: none;
     }
-
     @include min-screen($screen-md-min) {
       border-bottom: none;
     }
