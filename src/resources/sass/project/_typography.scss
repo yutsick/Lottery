@@ -5,7 +5,16 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $base-heading-family;
+	line-height: 1.2em;
+
 	/* Breaking long titles */
 	overflow-wrap: break-word;
 	word-wrap: break-word;
@@ -22,32 +31,25 @@ h6 {
 h1,
 .h1 {
 	font-size: 24px;
-	line-height: 30px;
-	font-weight: 600;
 
 	@include min-screen($screen-sm-min) {
 		font-size: 65px;
-		line-height: 65px;
+		line-height: 1em;
 	}
 }
 
 h2,
 .h2 {
 	font-size: 20px;
-	line-height: 28px;
-	font-weight: 300;
 
 	@include min-screen($screen-sm-min) {
 		font-size: 36px;
-		line-height: 46px;
 	}
 }
 
 h3,
 .h3 {
 	font-size: 30px;
-	line-height: 1.1;
-	font-weight: 600;
 
 	@include min-screen($screen-xs) {
 		font-size: 36px;
@@ -61,36 +63,27 @@ h3,
 h4,
 .h4 {
 	font-size: 28px;
-	line-height: 34px;
-	font-weight: 600;
 
 	@include min-screen($screen-sm-min) {
 		font-size: 30px;
-		line-height: 36px;
 	}
 }
 
 h5,
 .h5 {
 	font-size: 20px;
-	line-height: 26px;
-	font-weight: 600;
 
 	@include min-screen($screen-md-min) {
 		font-size: 24px;
-		line-height: 30px;
 	}
 }
 
 h5,
 .h5 {
 	font-size: 16px;
-	line-height: 20px;
-	font-weight: 600;
 
 	@include min-screen($screen-md-min) {
 		font-size: 16px;
-		line-height: 20px;
 	}
 }
 

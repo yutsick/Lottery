@@ -69,14 +69,14 @@ body {
 
 #page-wrapper.page--content-only {
 	@include max-screen($screen-sm-max) {
-		padding-top: 0px;
+		padding-top: 0;
 	}
 
 }
 
 #page-wrapper.page--content-only {
     @include screen($screen-sm-min, $screen-sm-max) {
-		padding-left: 0px;
+		padding-left: 0;
 	}
 }
 
@@ -116,18 +116,26 @@ body {
 	overflow: hidden;
 
 	@include max-screen($screen-xs-max) {
-		padding-top: 98px;
+		padding-top: 107px;
 	}
 
 	.container:first-child {
 		position: relative;
 	}
 
-	/* Hide elements on the page */
-	.message-container,
-	.top-account,
-	.alert-info {
-		display: none;
+	&.logged-in {
+		/* Hide elements if logged in */
+		.message-container,
+		.top-account,
+		.alert-info {
+			display: none;
+		}
+	}
+
+	&:not(.logged-in) {
+		.product-cart {
+			display: none;
+		}
 	}
 }
 
