@@ -5,23 +5,21 @@
 	padding: $padding-medium 0;
 	font-weight: 200;
 	font-size: 13px;
-	line-height: 20px;
 
 	h5 {
 		font-size: 17px;
-		line-height: 22px;
-		word-break: break-word;
 	}
 
-	p { margin-bottom: 35px; }
+	p {
+		margin-bottom: 35px;
+	}
 
 	a {
 		color: $color-base-complement;
-		font-weight: 400;
+		font-weight: $medium;
 
 		@include min-screen($screen-sm-min) {
 			font-size: $base-font-size;
-			line-height: 20px;
 		}
 
 		&:hover {
@@ -31,13 +29,11 @@
 
 	.block-footer__phone-link {
 		font-size: 16px;
-		line-height: 22px;
-		font-weight: 500;
+		font-weight: $medium;
 		text-decoration: underline;
 
 		@include min-screen($screen-sm-min) {
 			font-size: 18px;
-			line-height: 24px;
 		}
 	}
 
@@ -52,9 +48,6 @@
 	.block-footer__bottom {
 		border-top: 1px solid $color-border;
 		padding: $padding-medium 0 0;
-		font-weight: 200;
-		font-size: 13px;
-		line-height: 23px;
 
 		.row {
 			display: flex;
@@ -73,9 +66,9 @@
 
 	.block-footer__bottom-logos {
 		a {
+			display: inline-block;
 			max-height: 23px;
 			margin-left: 15px;
-			display: inline-block;
 
 			&:first-of-type {
 				margin-left: 0;
