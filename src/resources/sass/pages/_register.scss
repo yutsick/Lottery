@@ -1,8 +1,6 @@
 .page-register {
-	height: 100%;
 	padding-bottom: 50px;
 }
-
 
 .checkbox label {
 	line-height: 30px;
@@ -26,24 +24,16 @@ a.navlink:hover {
 
 .register-content {
 	background-color: #f8f9fb;
-	height: 100%;
 
 	h2 {
 		font-size: 20px;
-		line-height: 30px;
-		font-weight: bold;
 	}
 
 	label {
+		margin-bottom: 4px;
 		color: $color-black;
-		cursor: auto;
 		font-size: 13px;
 		font-weight: 300;
-		margin-bottom: 4px;
-	}
-
-	input {
-		-webkit-appearance: none;
 	}
 
 	p {
@@ -55,7 +45,7 @@ a.navlink:hover {
 	}
 
 	.light-label {
-		color: darkgray;
+		color: $darkgray;
 	}
 
 	.input-group {
@@ -74,8 +64,6 @@ a.navlink:hover {
 	}
 
 	.icon-chevron-up {
-		-ms-transform: rotate(180deg); /* IE 9 */
-		-webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
 		transform: rotate(180deg);
 	}
 
@@ -96,7 +84,7 @@ a.navlink:hover {
 	}
 	.modal-footer .btn:before {
 		content: '';
-		height: 0px;
+		height: 0;
 		width: 100%;
 		position: absolute;
 		left: 0;
@@ -132,11 +120,11 @@ a.navlink:hover {
 	}
 
 	.select2-selection__arrow:before {
-		display: block;
-		color: $color-blue;
-		font-size: 20px;
-		font-family: "ml-icons";
 		content: "\e906";
+		display: block;
+		font-size: 20px;
+		font-family: $base-icon-family;
+		color: $color-blue;
 	}
 
 	.select2-container--default .select2-selection--single .select2-selection__arrow b {
@@ -187,7 +175,6 @@ a.navlink:hover {
 	.btn.disabled:hover {
 		background-color: #90bdd9;
 	}
-
 }
 
 .right-input-group {

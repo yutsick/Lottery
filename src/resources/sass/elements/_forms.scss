@@ -1,10 +1,7 @@
-input {
-	//-webkit-appearance: none;
-}
-
 /* Reset appearance for text and number fields */
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="email"] {
 	appearance: none;
 }
 
