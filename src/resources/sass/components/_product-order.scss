@@ -75,4 +75,15 @@
 			background-color: $color-red;
 		}
 	}
+
+	&__btn {
+		padding: 0;
+		font-size: 1rem;
+		line-height: 1;
+
+		&-inner {
+			display: block;
+			padding: 18px 60px;
+		}
+	}
 }
