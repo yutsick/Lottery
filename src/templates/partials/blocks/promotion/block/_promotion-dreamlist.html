@@ -1,0 +1,52 @@
+<div
+        class="@@if(context.size !== 'medium'){col-xs-12 col-sm-6 col-lg-3}@@if(context.size === 'medium'){col-xs-12 col-md-12 col-lg-6}">
+    <div class="block-promotion block-promotion--dreamlist block
+	@@if(context.background === 'color'){ block--background-color background-color-@@background_color}
+	@@if(context.background === 'color' && context.background_color_pattern === 'true'){ block--background-pattern}
+	@@if(context.background === 'image'){ block--background-image}
+	@@if(context.content_alignment === 'top'){ flex-top}
+	@@if(context.content_alignment === 'middle'){ flex-middle}
+	@@if(context.content_alignment === 'bottom'){ flex-bottom}
+	@@if(context.text_alignment === 'center'){ text-align-center}
+	@@if(context.text_alignment === 'right'){ text-align-right}
+	@@if(context.text_protection === 'true'){ text-protection}"
+         style="@@if(context.background === 'image'){background-image: url('@@background_image')}"
+    >
+
+
+        @@if(context.content_link && context.content_link_type  !== "btn") {
+        <a class="block-promotion__link" href="/" title="Link title">
+        }
+
+        <div class="block-promotion__content">
+            @@if(context.content_title || context.content_text) {
+                <div class="block-promotion__content-text">
+                    @@if(context.content_title){
+                    <h4 class="block-promotion__title">@@content_title</h4>
+                    }
+                    @@if(context.content_text){
+                    <p>@@content_text</p>
+                    }
+                </div>
+            }
+
+            @@if(context.icon && context.icon_name) {
+                <div class="block-promotion__content-icon">
+                    <i class="icon @@icon_name"></i>
+                </div>
+            }
+
+            @@if(context.content_link && context.content_link_type == "btn") {
+                <button class="btn btn-primary">@@content_link_text</button>
+            }
+
+        </div>
+
+        @@if(context.content_link && context.content_link_type  !== "btn") {
+        </a>
+        }
+
+
+    </div>
+</div>
+
