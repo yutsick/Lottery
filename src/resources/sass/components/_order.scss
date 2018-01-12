@@ -1,7 +1,7 @@
 .order-page {
   .order {
     &__payment-block {
-      padding: 20px 0;
+      padding: $margin-small 0;
       font-size: 16px;
       clear: both;
 
@@ -41,10 +41,24 @@
         display: block;
       }
 
+      p {
+        margin-top: $margin-small;
+        margin-bottom: 0px;
+        font-size: 14px;
+
+        @include min-screen($screen-sm-min) {
+          font-size: 16px;
+          margin-top: 0;
+        }
+      }
       &--btn-wrapper {
         display: block;
         position: relative;
+        max-width: 350px;
+        margin: 0 auto;
+
         @include min-screen($screen-sm-min) {
+          max-width: 100%;
           display: inline-block;
         }
       }
