@@ -178,6 +178,24 @@
 	}
 }
 
+.btn-highlight {
+	background-color: $color-complement-lava;
+	color: $color-light;
+
+	&:focus {
+		background-color: $color-complement-lava;
+		color: $color-light;
+	}
+
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: $color-complement-lava-light;
+		color: $color-light;
+	}
+}
+
 .btn-icon {
 	i {
 		font-size: 18px;
@@ -204,6 +222,15 @@
 	i {
 		display: block;
 		font-size: $base-font-size;
+	}
+
+	&--medium {
+		width: 30px;
+		height: 30px;
+
+		i {
+			font-size: 13px;
+		}
 	}
 }
 
