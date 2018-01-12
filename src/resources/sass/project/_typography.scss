@@ -14,6 +14,7 @@ h6,
 .h6 {
 	font-family: $base-heading-family;
 	line-height: 1.2em;
+	font-weight: normal;
 
 	/* Breaking long titles */
 	overflow-wrap: break-word;

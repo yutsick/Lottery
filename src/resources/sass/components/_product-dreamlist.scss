@@ -59,9 +59,22 @@
 		border: 0;
 		border-radius: 2em;
 		background: $color-green url('../img/background/stripes.png');
+		transition: background-color $duration-quick $delay-none $ease-in-out;
 
 		&:focus {
 			outline: 0;
+		}
+
+		&:hover {
+			background-color: $color-green-light;
+
+			.product-dreamlist__current {
+				background-color: $color-green-light;
+
+				&:after {
+					border-bottom-color: $color-green-light;
+				}
+			}
 		}
 	}
 
@@ -71,6 +84,7 @@
 		height: inherit;
 		background: $color-green;
 		filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, .4));
+		transition: background $duration-quick $delay-none $ease-in-out;
 
 		&:after {
 			content: '';
@@ -81,6 +95,7 @@
 			height: 0;
 			border-bottom: 36px solid $color-green;
 			border-right: 10px solid transparent;
+			transition: border-color $duration-quick $delay-none $ease-in-out;
 		}
 	}
 
@@ -107,6 +122,7 @@
 		z-index: 1;
 
 		.icon-dream-star {
+			margin-left: -3px;
 			font-size: 18px;
 			color: $color-white;
 		}
