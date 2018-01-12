@@ -123,7 +123,10 @@
           max-width: 140px;
         }
         &#email {
-          width: 240px;
+          width: 150px;
+          @include min-screen($screen-xs-min) {
+            width: 240px;
+          }
         }
       }
     }
@@ -133,8 +136,8 @@
     padding-top: $margin-medium;
     padding-bottom: $margin-medium;
     border-bottom: 1px solid $color-gray-border;
-    &:last-child {
-      border: none;
+    &--no-border {
+      border-bottom: none;
     }
     @include min-screen($screen-md-min) {
       border-bottom: none;
