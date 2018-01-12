@@ -14,7 +14,7 @@
 	&__logo {
 		float: right;
 		max-width: 100px;
-		max-height: 50px;
+		max-height: 100px;
 		margin-left: $margin-small;
 
 		@include min-screen($screen-tiny) {
