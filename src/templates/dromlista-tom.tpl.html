@@ -1,0 +1,70 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+    <div class="container">
+        @@include('components/_cart-icon.html')
+
+        <div class="block block-hero block-hero--mini">
+            <h2>Min drömlista</h2>
+        </div>
+
+        <section class="block block-content">
+            <div class="row equal-height">
+            @@include('blocks/promotion/block/_promotion-dreamlist.html', {
+            "size": "small",
+            "background": "color",
+            "background_color": "turquoise",
+            "background_color_pattern": "true",
+            "background_image": "",
+            "content_alignment": "top",
+            "content_title": "Det här är din drömlista",
+            "content_text": "Lägg till och spara dina drömvinster här.",
+            "content_link": "",
+            "text_protection": "",
+            "text_alignment": "center",
+            "icon": "true",
+            "icon_name": "icon-cloud"
+            })
+
+            @@include('blocks/promotion/block/_promotion-dreamlist.html', {
+            "size": "small",
+            "background": "color",
+            "background_color": "blue",
+            "background_color_pattern": "true",
+            "background_image": "",
+            "content_alignment": "top",
+            "content_title": "Klicka på stjärnan",
+            "content_text": "för att lägga till vinster i din personliga drömlista.",
+            "content_link": "",
+            "text_protection": "",
+            "text_alignment": "center",
+            "icon": "true",
+            "icon_name": "icon-dream-star"
+            })
+
+            @@include('blocks/promotion/block/_promotion-dreamlist.html', {
+            "size": "small",
+            "background": "color",
+            "background_color": "green",
+            "background_color_pattern": "true",
+            "background_image": "",
+            "content_alignment": "middle",
+            "content_title": "",
+            "content_text": "",
+            "content_link": "true",
+            "content_link_text": "Hitta vinster",
+            "content_link_type": "btn",
+            "text_protection": "",
+            "text_alignment": "center"
+            })
+            </div>
+        </section>
+    </div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})

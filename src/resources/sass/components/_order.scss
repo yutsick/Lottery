@@ -6,7 +6,7 @@
       clear: both;
 
       @include min-screen($screen-md-min) {
-        padding: 20px 120px;
+        padding: 20px 150px;
       }
 
       &-label {
@@ -79,7 +79,7 @@
           width: calc(100% - 40px);
 
           @include min-screen($screen-sm-min) {
-            padding: 9px 30px;
+            padding: 9px 20px;
             width: auto;
           }
         }
@@ -89,11 +89,14 @@
     &__input-wrapper {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-end;
-      margin: 5px 0;
-      
+      align-items: center;
+      margin: $margin-small 0;
+      label {
+        margin-bottom: 0;
+      }
       &--w-height {
        min-height: 45px;
+        margin: 5px 0;
       }
       .custom-radio {
         width: 160px;
@@ -104,6 +107,9 @@
 
         &#phone {
           max-width: 140px;
+        }
+        &#email {
+          width: 240px;
         }
       }
     }
@@ -128,8 +134,8 @@
     .icon {
       display: inline-block;
       font-size: 20px;
-      color: $color-complement-sky ;
-      margin: 0 $margin-small;
+      color: $color-complement-sky;
+      margin: 0 5px;
     }
     &__contact {
       p {
@@ -167,12 +173,13 @@
         }
         &-row {
           display: flex;
-          align-items: baseline;
+          align-items: center;
           max-width: 360px;
           margin: 5px;
         }
         &-label{
           min-width: 75px;
+          margin-bottom: 0;
           &--small {
             min-width: 50px;
             text-align: center;

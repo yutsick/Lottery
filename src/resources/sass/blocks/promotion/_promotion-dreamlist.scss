@@ -1,0 +1,61 @@
+.block-promotion--dreamlist {
+  .block-promotion {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      @include min-screen($screen-sm) {
+        display: block;
+      }
+
+      &-text {
+        padding: 10px;
+        margin-right: 20px;
+
+        @include min-screen($screen-sm) {
+          margin-right: 0;
+        }
+
+        .block-promotion__title {
+          font-size: 16px;
+
+          @include min-screen($screen-sm) {
+            font-size: 24px;
+            margin-bottom: $margin-small;
+          }
+        }
+
+        p {
+          font-size: 14px;
+          padding: 0;
+          margin-bottom: $margin-small;
+          @include min-screen($screen-sm) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      &-icon {
+        padding: 10px;
+        text-align: center;
+        min-width: 100px;
+
+        @include min-screen($screen-sm) {
+          padding: 30px 0;
+        }
+
+        .icon {
+          font-size: 60px;
+
+          @include min-screen($screen-sm) {
+            font-size: 100px;
+          }
+        }
+      }
+    }
+
+
+  }
+}
