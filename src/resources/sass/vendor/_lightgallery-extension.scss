@@ -64,12 +64,16 @@
 
   &.lg-next,
   &.lg-prev {
-    color: $color-black;
+    margin-top: 0;
     background: $color-white;
-    margin-top: -60px; // Vertical alignment
+    transform: translateY(-50%);
 
     @include min-screen($screen-sm) {
-      margin-top: -92px; // Vertical alignment
+      margin-top: -20px;
+    }
+
+    &:hover {
+      color: $color-black;
     }
   }
 
