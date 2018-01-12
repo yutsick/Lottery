@@ -10,10 +10,17 @@
     font-weight: $bold;
     font-size: 16px;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+
+    p {
+      color: $color-base-primary;
+    }
+
     &-title {
       flex-grow: 1;
+      margin-bottom: 0;
     }
+
     &-form {
       width: 100px;
       background: transparent;
@@ -62,7 +69,7 @@
     }
   }
   &__fade-out{
-    background: linear-gradient(to top, $color-stone, transparent);
+    background: linear-gradient(to top, $color-stone,  rgba(249, 249, 249, 0));
     position: absolute;
     width: 100%;
     height: 20px;

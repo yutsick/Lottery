@@ -110,11 +110,12 @@
 
 	&-input {
 		width: 40px;
-		padding: $padding-small;
-		padding-left: 5px;
-		padding-right: 15px;
+		height: 45px;
+		padding: $margin-small;
+		padding-left: 2px;
+		padding-right: 18px;
 		border: 1px solid $color-gray-border;
-		text-align: center;
+		text-align: right;
 		font-weight: $bold;
 
 		&:focus {
@@ -123,7 +124,7 @@
 		&-text {
 			position: absolute;
 			right: 5px;
-			bottom: 10px;
+			bottom: 12px;
 			width: 10px;
 			color: $color-gray;
 		}

@@ -15,7 +15,6 @@
         margin-right: 20px;
 
         @include min-screen($screen-sm) {
-          //padding: 20px;
           margin-right: 0;
         }
 

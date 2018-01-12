@@ -6,7 +6,7 @@
       clear: both;
 
       @include min-screen($screen-md-min) {
-        padding: 20px 120px;
+        padding: 20px 150px;
       }
 
       &-label {
@@ -79,7 +79,7 @@
           width: calc(100% - 40px);
 
           @include min-screen($screen-sm-min) {
-            padding: 9px 30px;
+            padding: 9px 20px;
             width: auto;
           }
         }
@@ -107,6 +107,9 @@
         &#phone {
           max-width: 140px;
         }
+        &#email {
+          width: 240px;
+        }
       }
     }
   }
@@ -130,8 +133,8 @@
     .icon {
       display: inline-block;
       font-size: 20px;
-      color: $color-complement-sky ;
-      margin: 0 $margin-small;
+      color: $color-complement-sky;
+      margin: 0 5px;
     }
     &__contact {
       p {
