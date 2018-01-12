@@ -59,6 +59,7 @@
 		border: 0;
 		border-radius: 2em;
 		background: $color-green url('../img/background/stripes.png');
+		transition: background-color $duration-quick $delay-none $ease-in-out;
 
 		&:focus {
 			outline: 0;
