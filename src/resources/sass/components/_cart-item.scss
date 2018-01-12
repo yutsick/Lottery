@@ -169,12 +169,14 @@
 		}
 	}
 	&-price {
-		font-size: 16px;
-		margin: 5px $margin-small;
-		order: 5;
 		flex-grow: 1;
+		font-size: 16px;
+		margin: 5px 0 5px $margin-small;
 		text-align: right;
+		order: 5;
+
 		@include min-screen($screen-sm-min) {
+			margin: 5px $margin-small;
 			order: 3;
 		}
 	}
