@@ -1,0 +1,197 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+		@@include('components/_cart-icon.html')
+
+		<div class="block block-hero block-hero--mini block-hero--no-margin">
+			<h1 class="block-hero__page-title">
+				Miljonlotteriets vinster - välj vinster ur Sveriges största och bästa vinstsortiment
+			</h1>
+			<h2 class="no-spacing">Min drömlista!</h2>
+		</div>
+
+		<section class="section my-dreamlist">
+			<div class="row equal-height">
+
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<article class="block-product block-product--active block-product--dreamlist">
+						<button class="block-product__btn block-product__btn--remove btn btn-highlight btn-icon-only btn-icon-only--medium js-remove-from-dreamlist">
+							<i class="icon icon-close"></i>
+						</button>
+
+						<a class="block-product__link" href="/" title="">
+							<div class="block-product__wrapper block-product__wrapper--row">
+								<div class="block-product__image-wrapper block-product__row-item">
+									<div class="block-product__image">
+										<img src="assets/img/mockup/butterfly.jpg" alt="">
+										<img src="assets/img/mockup/car.jpg" class="block-product__hover-image" alt="">
+										<span class="block-product__label background-color-blue">Nyhet</span>
+									</div>
+								</div>
+								<div class="block-product__content block-product__content--left block-product__row-item">
+									<h3 class="block-product__title block-product__item">Titel</h3>
+									<div class="block-product__item-wrapper">
+										<p class="block-product__price block-product__item">200 kr</p>
+									</div>
+								</div>
+							</div>
+						</a>
+
+						<div class="product-dreamlist__progress-wrapper">
+							<span class="product-dreamlist__tooltip">Färdigsparat</span>
+							<span class="product-dreamlist__tooltip-arrow"></span>
+							<button class="product-dreamlist__progress js-add-to-dreamlist">
+								<span class="product-dreamlist__dream-button btn-link">
+									<i class="icon icon-dream-star dreamlist-icon"></i>
+								</span>
+								<span class="product-dreamlist__current" style="width: 100%"></span>
+								<span class="product-dreamlist__text">Köp</span>
+							</button>
+						</div>
+					</article>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<article class="block-product block-product--dreamlist">
+						<button class="block-product__btn block-product__btn--remove btn btn-highlight btn-icon-only btn-icon-only--medium js-remove-from-dreamlist">
+							<i class="icon icon-close"></i>
+						</button>
+
+						<a class="block-product__link" href="/" title="">
+							<div class="block-product__wrapper block-product__wrapper--row">
+								<div class="block-product__image-wrapper block-product__row-item">
+									<div class="block-product__image">
+										<img src="assets/img/mockup/butterfly.jpg" alt="">
+										<img src="assets/img/mockup/car.jpg" class="block-product__hover-image" alt="">
+									</div>
+								</div>
+								<div class="block-product__content block-product__content--left block-product__row-item">
+									<h3 class="block-product__title block-product__item">Titel</h3>
+									<div class="block-product__item-wrapper">
+										<p class="block-product__subtitle block-product__item">Subtitel</p>
+										<p class="block-product__price block-product__item">200 kr</p>
+									</div>
+								</div>
+							</div>
+						</a>
+
+						<div class="product-dreamlist__progress-wrapper">
+							<span class="product-dreamlist__tooltip">1234 kr kvar</span>
+							<span class="product-dreamlist__tooltip-arrow"></span>
+							<button class="product-dreamlist__progress js-add-to-dreamlist">
+								<span class="product-dreamlist__dream-button btn-link">
+									<i class="icon icon-dream-star dreamlist-icon"></i>
+								</span>
+								<span class="product-dreamlist__current" style="width: 30%"></span>
+								<span class="product-dreamlist__text">Dröm vidare</span>
+							</button>
+						</div>
+					</article>
+					<p class="block-product__notice text-center">13  personer sparar till denna i sin drömlista</p>
+				</div>
+
+				<div class="col-xs-12 col-sm-6 col-md-3">
+					<article class="block-product block-product--dreamlist">
+						<button class="block-product__btn block-product__btn--remove btn btn-highlight btn-icon-only btn-icon-only--medium js-remove-from-dreamlist">
+							<i class="icon icon-close"></i>
+						</button>
+
+						<a class="block-product__link" href="/" title="">
+							<div class="block-product__wrapper block-product__wrapper--row">
+								<div class="block-product__image-wrapper block-product__row-item">
+									<div class="block-product__image">
+										<img src="assets/img/mockup/butterfly.jpg" alt="">
+										<img src="assets/img/mockup/car.jpg" class="block-product__hover-image" alt="">
+										<p class="block-product__discontinued hidden-xs">Produkten har utgått</p>
+									</div>
+								</div>
+								<div class="block-product__content block-product__content--left block-product__row-item">
+									<h3 class="block-product__title block-product__item">Titel</h3>
+									<div class="block-product__item-wrapper">
+										<p class="block-product__price block-product__item">200 kr</p>
+									</div>
+									<p class="block-product__discontinued block-product__item block-product__item--highlight visible-xs">Produkten har utgått</p>
+								</div>
+							</div>
+						</a>
+
+						<div class="product-dreamlist__progress-wrapper">
+							<button class="product-dreamlist__progress js-add-to-dreamlist" disabled>
+								<span class="product-dreamlist__dream-button btn-link">
+									<i class="icon icon-dream-star dreamlist-icon"></i>
+								</span>
+								<span class="product-dreamlist__current"></span>
+								<span class="product-dreamlist__text">Köp</span>
+							</button>
+						</div>
+					</article>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="section product-list-blocks">
+			<div class="row equal-height">
+				<div class="col-xs-12">
+					<h5>Liknande vinster du har råd med just nu</h5>
+				</div>
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page-full.html",
+				"image": "assets/img/mockup/butterfly.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"label": "Nyhet",
+				"color": "blue",
+				"title": "En rad",
+				"subtitle": "Fusce Nibh",
+				"price": "450 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page-full.html",
+				"image": "assets/img/mockup/butterfly.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"price": "200 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page-full.html",
+				"image": "assets/img/mockup/nature.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"label": "Kampanj",
+				"color": "orange",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"subtitle": "Fusce Nibh",
+				"price": "10.000 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page-full.html",
+				"image": "assets/img/mockup/sunset.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"price": "30 kr",
+				"dreamButton": true
+				})
+			</div>
+
+			<div class="block-product__more-button">
+				<a class="btn btn-primary" href="/vinstshop-start.html#product-list">Visa alla produkter</a>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
+
