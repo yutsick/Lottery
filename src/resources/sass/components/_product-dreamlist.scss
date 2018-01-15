@@ -79,6 +79,17 @@
 				}
 			}
 		}
+
+		&[disabled] {
+			&,
+			.product-dreamlist__current {
+				background: $color-gravel;
+			}
+
+			.product-dreamlist__dream-button {
+				display: none;
+			}
+		}
 	}
 
 	&__current {
