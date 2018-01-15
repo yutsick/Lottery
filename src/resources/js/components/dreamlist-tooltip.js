@@ -4,15 +4,13 @@ export default function() {
         let wrapper = $('.product-dreamlist__progress-wrapper');
 
         if (wrapper.length) {
-            wrapper.each(function(){
+            wrapper.each(function() {
                 let $tooltip = $(this).find('.product-dreamlist__tooltip');
-                console.log('hej' + $tooltip);
-
                 let $target = $(this).find('.product-dreamlist__current');
                 let $toolTipArrow = $(this).find('.product-dreamlist__tooltip-arrow');
+                let parentWidth = $(this).outerWidth();
+                let parentLeft = $(this).position().left;
                 let toolTipWidth = $tooltip.outerWidth();
-                let parentWidth = $tooltip.parent().outerWidth();
-                let parentLeft = $tooltip.parent().position().left;
                 let progressPosition = $target.position().left + $target.outerWidth();
                 let toolTipArrowLeftPos = progressPosition;
                 let toolTipArrowMinLeftPosition = parentLeft + 10;
