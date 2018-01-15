@@ -30,9 +30,12 @@
 		margin-bottom: 20px;
 	}
 
+	&--active,
 	&:hover {
 		border-color: $color-green;
+	}
 
+	&:hover {
 		.block-product__hover-image {
 			opacity: 1;
 			visibility: visible;
@@ -62,6 +65,32 @@
 		top: 10px;
 		left: 10px;
 		z-index: 1;
+	}
+
+	&__item {
+		margin-top: 10px;
+		margin-bottom: 0;
+		font-weight: $light;
+
+		&--highlight {
+			font-weight: $bold;
+		}
+	}
+
+	&__discontinued {
+		margin-top: auto;
+		color: $color-orange;
+
+		@include min-screen($screen-sm) {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			margin-bottom: 0;
+			padding: 10px;
+			background: $color-orange;
+			color: $color-white;
+			text-align: center;
+		}
 	}
 }
 
@@ -136,20 +165,9 @@
 	}
 
 	&--left {
-		text-align: left;
-	}
-}
-
-.block-product__item {
-	margin-bottom: 0;
-	font-weight: $light;
-
-	&:not(:first-child):not(.block-product__subtitle) {
-		margin-top: 10px;
-	}
-
-	&--highlight {
-		font-weight: $bold;
+		@include max-screen($screen-sm) {
+			text-align: left;
+		}
 	}
 }
 
@@ -220,7 +238,45 @@
 }
 
 
-/* Category block */
+/* Dreamlist product block */
+.block-product--dreamlist {
+	@include max-screen($screen-sm) {
+		padding-bottom: 36px; /* Height of dreamlist progress bar */
+	}
+
+	/* Position the progress bar at the bottom of the block */
+	.product-dreamlist__progress-wrapper {
+		bottom: -6px;
+
+		@include max-screen($screen-sm) {
+			position: absolute;
+			width: 100%;
+		}
+	}
+
+
+	.block-product__item-wrapper {
+		@include max-screen($screen-sm) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+
+	.block-product__price {
+		margin-top: 0;
+
+		&:first-child:last-child {
+			@include max-screen($screen-sm) {
+				flex: 1;
+				text-align: right;
+			}
+		}
+	}
+}
+
+
+/* Category product block */
 .block-product--category {
 	display: flex;
 	flex-direction: column;
