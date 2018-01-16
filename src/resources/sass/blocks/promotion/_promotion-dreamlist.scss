@@ -15,7 +15,6 @@
         margin-right: 20px;
 
         @include min-screen($screen-sm) {
-          //padding: 20px;
           margin-right: 0;
         }
 
@@ -56,7 +55,16 @@
         }
       }
     }
+  }
+}
 
+/* Target last item and change behaviour on narrow screens */
+.col-xs-12:last-child .block-promotion--dreamlist {
+  @include max-screen($screen-sm) {
+    background: transparent;
 
+    .block-promotion__content {
+      padding: 0;
+    }
   }
 }
