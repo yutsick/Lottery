@@ -126,9 +126,9 @@ a.product-cart__item {
 	}
 }
 
-.product-cart + .block {
+.logged-in .product-cart + .block {
 	@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-sm-max){
-		margin-top: 45px;
+		margin-top: 42px;
 	}
 }
 
