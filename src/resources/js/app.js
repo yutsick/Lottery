@@ -14,6 +14,7 @@ import modernizr from './vendor/modernizr-custom.js';
 import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
 import bonusCode from './components/bonus-code';
+import checkboxTrigger from './components/checkbox-trigger';
 import dataList from './components/data-list';
 import dreamlistTooltip from './components/dreamlist-tooltip';
 import entityCollectionActions from './components/entity-collection-actions';
@@ -49,6 +50,7 @@ $(function () {
 	addToDreamlist();
 	alert();
 	bonusCode();
+    checkboxTrigger();
 	dataList();
 	dreamlistTooltip();
 	new entityCollectionActions();

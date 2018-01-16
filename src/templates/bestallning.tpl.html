@@ -119,14 +119,14 @@
                                 <div class="order__input-wrapper order__input-wrapper--w-height">
                                     <div class="custom-radio">
                                         <input type="radio" name="notification" id="notify-sms" value="sms"  class="custom-radio__input" checked>
-                                        <label for="notify-sms" class="custom-radio__label">Skicka med SMS:</label>
+                                        <label for="notify-sms" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>SMS:</label>
                                     </div>
                                     <input type="tel" id="phone" class="form-control" value="070-7654432"/>
                                 </div>
                                 <div class="order__input-wrapper order__input-wrapper--w-height">
                                      <div class="custom-radio">
                                         <input type="radio" name="notification" id="notify-email" value="email"  class="custom-radio__input">
-                                         <label for="notify-email" class="custom-radio__label">Skicka med e-post:</label>
+                                         <label for="notify-email" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>e-post:</label>
                                      </div>
                                     <input type="email" id="email" class="form-control" value="magnus.singerer@changetheagency.com"/>
                                 </div>
@@ -147,7 +147,10 @@
             </div>
             <div class="order-page__submit">
                 <div class="order-page__submit-action-wrapper">
-                    <button type="submit" form="ordering" class="btn btn-primary">Bekräfta och beställ vinsterna</button>
+                    <button class="btn btn-primary" type="submit" form="ordering"
+                            data-toggle="tooltip" data-placement="top" data-original-title="Klicka för att  beställa vinsterna">
+                        Bekräfta och beställ vinsterna
+                    </button>
                 </div>
                 <div class="order-page__submit-action-wrapper">
                     <a href="#">Avbryt beställning</a>
