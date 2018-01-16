@@ -43,7 +43,7 @@
 
       p {
         margin-top: $margin-small;
-        margin-bottom: 0px;
+        margin-bottom: 0;
         font-size: 14px;
 
         @include min-screen($screen-sm-min) {
@@ -163,7 +163,6 @@
         a {
           color: $color-base-primary;
           text-decoration: underline;
-
         }
       }
     }
@@ -194,13 +193,17 @@
         &-label{
           min-width: 75px;
           margin-bottom: 0;
+
           &--small {
             min-width: 50px;
             text-align: center;
           }
         }
         &-input {
+          flex: 1 1 auto;
+
           &--small {
+            min-width: 80px;
             max-width: 90px;
           }
         }

@@ -96,7 +96,7 @@
 
 		@include min-screen($screen-sm-min) {
 			order: 3;
-			margin: 0 $margin-small;
+			margin: 0 5px;
 		}
 		button {
 			transition: opacity .4s ease;
@@ -121,13 +121,15 @@
 		font-weight: $bold;
 
 		@include min-screen($screen-sm-min) {
-			width: 40px;
+			width: 45px;
 			height: 45px;
-			padding-right: 18px;
+			padding-right: 20px;
 		}
+
 		&:focus {
 			outline: 0;
 		}
+
 		&-text {
 			position: absolute;
 			right: 10px;
@@ -137,7 +139,7 @@
 
 			@include min-screen($screen-sm-min) {
 				bottom: 12px;
-				right: 5px;
+				right: 10px;
 			}
 		}
 	}
