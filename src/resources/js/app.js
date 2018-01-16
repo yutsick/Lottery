@@ -26,6 +26,7 @@ import message from './components/message';
 import modal from './components/modal';
 import paymentMethod from './components/payment-method';
 import ProductList from './components/product-list';
+import removeFromDreamlist from './components/remove-from-dreamlist';
 import scrollToElement from './components/scrollToElement';
 import search from './components/search';
 import slider from './components/slider';
@@ -62,6 +63,7 @@ $(function () {
 	modal();
 	paymentMethod();
 	new ProductList();
+	removeFromDreamlist();
 	scrollToElement();
 	search();
 	slider();
