@@ -55,7 +55,16 @@
         }
       }
     }
+  }
+}
 
+/* Target last item and change behaviour on narrow screens */
+.col-xs-12:last-child .block-promotion--dreamlist {
+  @include max-screen($screen-sm) {
+    background: transparent;
 
+    .block-promotion__content {
+      padding: 0;
+    }
   }
 }
