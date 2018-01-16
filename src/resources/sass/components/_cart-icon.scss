@@ -5,7 +5,7 @@
  }
 
 .product-cart {
-	display: flex;
+	display: none;
 	position: fixed;
 	top: 62px;
 	left: 0;
@@ -123,12 +123,6 @@ a.product-cart__item {
 	&:hover,
 	&:focus {
 		background-color: $color-dark-white;
-	}
-}
-
-.logged-in .product-cart + .block {
-	@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-sm-max){
-		margin-top: 42px;
 	}
 }
 

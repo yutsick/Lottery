@@ -130,13 +130,18 @@ body {
 		.alert-info {
 			display: none;
 		}
+
+		.product-cart {
+			display: flex;
+		}
 	}
 
-	&:not(.logged-in) {
-		.product-cart {
-			display: none;
+	.product-cart + .block {
+		@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-sm-max){
+			margin-top: 42px;
 		}
 	}
 }
+
 
 @import "register";
