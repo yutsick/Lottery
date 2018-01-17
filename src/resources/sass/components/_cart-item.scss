@@ -7,7 +7,8 @@
 		padding-top: $margin-default;
 		padding-bottom: $margin-default;
 	}
-		&-content {
+
+	&-content {
 		display: flex;
 		align-items: flex-start;
 		flex-wrap: wrap;
@@ -86,6 +87,7 @@
 		font-size: 16px;
 		margin-bottom: 0;
 		font-weight: bold;
+
 		&.h5 {
 			margin-bottom: 10px;
 		}
@@ -103,8 +105,6 @@
 		}
 
 		button {
-			transition: opacity .4s ease;
-
 			&[disabled] {
 				opacity: 0.6;
 			}
@@ -156,6 +156,9 @@
 		color: $color-primary;
 		border: 1px solid $color-gray-border;
 		background: $color-white;
+		transition: background $duration-quick $ease-in-out,
+					color $duration-quick $ease-in-out,
+					opacity $duration-quick $ease-in-out;
 
 		&:first-child {
 			border-top-left-radius: .3em;
@@ -179,6 +182,7 @@
 			outline: 0;
 		}
 	}
+
 	&-manage {
 		align-items: center;
 		display: flex;
@@ -188,6 +192,7 @@
 			margin: 0;
 		}
 	}
+
 	&-price {
 		flex-grow: 1;
 		font-size: 16px;
@@ -211,9 +216,14 @@
 		color: $color-red;
 		margin: $margin-small;
 		order: 4;
+		transition: color $duration-quick $ease-in-out;
 
 		@include min-screen($screen-sm-min) {
 			order: 5;
+		}
+
+		&:hover {
+			color: $color-black;
 		}
 	}
 
