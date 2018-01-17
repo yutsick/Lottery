@@ -2,6 +2,7 @@
 	padding-top: $margin-small;
 	padding-bottom: $margin-small;
 	border-bottom: 1px solid $color-feather;
+
 	@include min-screen($screen-sm-min) {
 		padding-top: $margin-default;
 		padding-bottom: $margin-default;
@@ -15,6 +16,7 @@
 			align-items: flex-end;
 		}
 	}
+
 	&-container {
 		display: flex;
 		width: 100%;
@@ -34,6 +36,7 @@
 			}
 		}
 	}
+
 	&-image {
 		margin-bottom: 0;
 		order: 2;
@@ -98,6 +101,7 @@
 			order: 3;
 			margin: 0 5px;
 		}
+
 		button {
 			transition: opacity .4s ease;
 
@@ -105,6 +109,7 @@
 				opacity: 0.6;
 			}
 		}
+
 		&-value {
 			position: relative;
 		}
@@ -165,6 +170,7 @@
 		}
 
 		&:active,
+		&:hover,
 		&:focus {
 			background-color: $color-cloud;
 		}
