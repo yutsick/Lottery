@@ -1,9 +1,11 @@
 import isMobile from '../utilities/isMobile';
+var LazyLoad = require('vanilla-lazyload');
 
 export default class ProductList {
 	constructor() {
-		this.filters = [];
-		this.initProductFilterDropdowns();
+        this.filters = {};
+        this.wrapper = document.querySelector('.product-list-blocks');
+        this.initProductFilterDropdowns();
         this.disableFilter();
 
 		$('[data-toggle="tooltip"]').tooltip({
@@ -17,19 +19,29 @@ export default class ProductList {
 			let filterValues = $form.serializeArray();
 			let that = this;
 
+
 			this.filters[filterType] = filterValues;
 			this.createFilterLabels();
+            this.filterProducts();
 
 			// Removed labels
 			$('.active-filters').on('click', $('.active-filters__label'), function(e) {
 				let $value = $(e.target).val();
-				if ($(e.target).hasClass('js-remove-all-labels')) {
+                let change = false;
+
+                if ($(e.target).hasClass('js-remove-all-labels')) {
 					// Empty array
-					that.filters[filterType] = [];
+					that.filters = {};
 
 					// Uncheck item in the form
 					$form.find('input').each(function() {
-						$(this).prop('checked', false).change();
+
+						if($(this).attr('type') == 'checkbox') {
+							$(this).prop('checked', false).change();
+						} else {
+							$(this).val('');
+						}
+						change = true;
 					});
 				} else {
 					that.filters[filterType].forEach(function (filter, index) {
@@ -39,14 +51,22 @@ export default class ProductList {
 							// Uncheck item in the form
 							$form.find('input').each(function() {
 								if ($(this).val() == $value ) {
-									$(this).prop('checked', false).change();
-								}
+									if($(this).attr('type') == 'checkbox') {
+                                        $(this).prop('checked', false).change();
+                                    } else {
+                                        $(this).val('');
+                                    }
+                                    change = true;
+                                }
 							});
 						}
 					});
 				}
 
 				that.createFilterLabels();
+                if(change) {
+                    $form.submit();
+                }
 			});
 
 			let parameterUrl = this.createFilterUrl();
@@ -185,6 +205,51 @@ export default class ProductList {
         }
     }
 
+    /**
+	 * Get new products width ajax
+     */
+    filterProducts(){
+    	let source = "";
+    	let hasFilter = false;
 
+    	$.each(this.filters, function( key, value ) {
+    		if(value.length >= 1) {
+				hasFilter = true;
+			}
+        });
+
+    	if(hasFilter){
+            source = "/ajax/filter-products.html";
+		}else {
+            source = "/ajax/all-products.html";
+        }
+        
+        let _this = this;
+
+        $.ajax({
+            url: source,
+            success: function (data) {
+            	if( $(data).find('.block-product').length >= 8 && hasFilter){
+                    $('.entity-collection-actions').hide();
+				} else {
+            		$('.entity-collection-actions').show();
+				}
+
+                $('#product-list').html(data);
+                _this.lazyLoad();
+            },
+        });
+    }
+
+    lazyLoad() {
+        if(this.wrapper) {
+            var loading = new LazyLoad({
+                container: this.wrapper,
+            });
+            return loading;
+        }else {
+            return false;
+        }
+    }
 
 }

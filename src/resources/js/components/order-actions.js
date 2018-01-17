@@ -41,8 +41,8 @@ export default class orderActions {
         $( "#ordering" ).on( "submit", function( event ) {
             event.preventDefault();
             console.log($(this).serializeArray());
-
-            location.href = event.action;
+            let url = $(this)[0].action;
+            location.href = url;
         });
     }
 
