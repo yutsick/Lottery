@@ -86,10 +86,10 @@
 			}
 
 			&:hover {
-				color: $color-black;
+				color: $color-base-primary;
 
 				&:before {
-					border-color: $color-black;
+					border-color: $color-gray;
 				}
 			}
 		}
@@ -187,10 +187,10 @@
 			}
 
 			&:hover {
-				color: $color-black;
+				color: $color-base-primary;
 
 				&:before {
-					border-color: $color-black;
+					border-color: $color-gray;
 				}
 			}
 		}
