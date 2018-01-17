@@ -44,19 +44,19 @@
 
 	&__wrapper {
 		display: flex;
+		flex: 1 1 auto;
 		flex-direction: column;
 
 		&--row {
 			@include max-screen($screen-sm) {
 				flex-direction: row;
-				flex-wrap: wrap;
 			}
 		}
 	}
 
 	&__row-item {
 		@include max-screen($screen-sm) {
-			flex-basis: 50%;
+			width: 50%;
 		}
 	}
 
@@ -79,6 +79,7 @@
 
 	&__discontinued {
 		margin-top: auto;
+		font-size: 0.813rem;
 		color: $color-orange;
 
 		@include min-screen($screen-sm) {
@@ -89,6 +90,7 @@
 			padding: 10px;
 			background: $color-orange;
 			color: $color-white;
+			font-size: 0.875rem;
 			text-align: center;
 		}
 	}
@@ -112,6 +114,7 @@
 
 .block-product__image {
 	position: relative;
+	height: 100%;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -166,6 +169,7 @@
 
 	&--left {
 		@include max-screen($screen-sm) {
+			justify-content: flex-start;
 			text-align: left;
 		}
 	}
@@ -238,20 +242,13 @@
 
 /* Dreamlist product block */
 .block-product--dreamlist {
-	@include max-screen($screen-sm) {
-		padding-bottom: 36px; /* Height of dreamlist progress bar */
-	}
-
-	/* Position the progress bar at the bottom of the block */
 	.product-dreamlist__progress-wrapper {
-		bottom: -6px;
+		margin-top: -20px; /* Same as padding-top, only negative - for alignment */
 
-		@include max-screen($screen-sm) {
-			position: absolute;
-			width: 100%;
+		@include min-screen($screen-lg) {
+			margin-top: -30px;
 		}
 	}
-
 
 	.block-product__item-wrapper {
 		@include max-screen($screen-sm) {
@@ -266,7 +263,7 @@
 
 		&:first-child:last-child {
 			@include max-screen($screen-sm) {
-				flex: 1;
+				flex: 1 1 auto;
 				text-align: right;
 			}
 		}
@@ -293,10 +290,6 @@
 		@include min-screen($screen-sm-min) {
 			flex-basis: 70%;
 		}
-	}
-
-	.block-product__image {
-		height: 100%;
 	}
 
 	.block-product__content {
