@@ -107,7 +107,7 @@
 		left: 15px;
 		z-index: 1;
 
-		.icon-dream-star {
+		.icon {
 			font-size: 18px;
 			color: $color-white;
 		}
@@ -115,7 +115,7 @@
 }
 
 .starred {
-	.dreamlist-icon {
+	.icon {
 		color: $color-white;
 
 		&:before {
