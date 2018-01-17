@@ -19,9 +19,12 @@ export default function() {
 
     $('.product-dreamlist__progress').on('click', function () {
         let $button = $(this);
-        let $icon = $(this).find('.dreamlist-icon');
-        if($button && $icon) {
-            changeDreamlist($button, $icon);
+
+        if ($button.hasClass('js-add-to-dreamlist')) {
+            let $icon = $(this).find('.dreamlist-icon');
+            if($button && $icon) {
+                changeDreamlist($button, $icon);
+            }
         }
     });
 
