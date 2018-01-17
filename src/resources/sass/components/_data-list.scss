@@ -67,7 +67,7 @@
 
 .data-list__header-cell {
 	display: flex;
-	flex: 1;
+	flex: 1 1 auto;
 	font-size: 16px;
 	font-weight: $bold;
 }
@@ -93,7 +93,7 @@
 		width: auto;
 		float: none;
 		display: flex;
-		flex: 1;
+		flex: 1 1 auto;
 		margin-bottom: 0;
 	}
 }
@@ -150,7 +150,7 @@
 		}
 
 		@include min-screen($screen-sm-min) {
-			flex: 1;
+			flex: 1 1 auto;
 		}
 
 		&:last-of-type {
