@@ -7,13 +7,15 @@ $tooltip-border-width: 1px;
 $tooltip-arrow-border-width: ($tooltip-arrow-width + $tooltip-border-width);
 
 /* Do not show on touch screens */
-.touchevents & {
-	& .tooltip {
+.touchevents  & {
+	& :not(.tooltip-on-touch) + .tooltip {
 		display: none !important;
 	}
 }
 
 .tooltip {
+	z-index: 100;
+
 	&.top { padding: $tooltip-arrow-border-width 0; }
 	&.right { padding: 0 $tooltip-arrow-border-width; }
 	&.bottom { padding: $tooltip-arrow-border-width 0; }
