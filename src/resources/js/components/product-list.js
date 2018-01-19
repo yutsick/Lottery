@@ -3,14 +3,10 @@ var LazyLoad = require('vanilla-lazyload');
 
 export default class ProductList {
 	constructor() {
-        this.filters = {};
-        this.wrapper = document.querySelector('.product-list-blocks');
-        this.initProductFilterDropdowns();
-        this.disableFilter();
-
-		$('[data-toggle="tooltip"]').tooltip({
-			trigger: 'hover'
-		});
+		this.filters = {};
+		this.wrapper = document.querySelector('.product-list-blocks');
+		this.initProductFilterDropdowns();
+		this.disableFilter();
 
 		$('form[data-filter-type]').on('submit', (e) => {
 			e.preventDefault();

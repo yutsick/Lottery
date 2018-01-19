@@ -33,6 +33,7 @@ import slider from './components/slider';
 import sortValue from './components/sort-value';
 import tableSelect from './components/table-select';
 import toggleContent from './components/toggle-content';
+import triggerTooltip from './components/trigger-tooltip';
 import walletAccountSwitch from './components/wallet-account-switch';
 import walletTransferAmount from './components/wallet-transfer-amount';
 import orderActions from './components/order-actions';
@@ -70,6 +71,7 @@ $(function () {
 	sortValue();
 	tableSelect();
 	toggleContent();
+	triggerTooltip();
 	walletAccountSwitch();
 	walletTransferAmount();
 	navigation();
