@@ -135,12 +135,10 @@
 
 		&-text {
 			position: absolute;
-			top: 50%;
+			top: 0;
 			right: 10px;
-			width: 10px;
 			color: $color-gray;
-			line-height: 12px;
-			transform: translateY(-50%);
+			line-height: 45px;
 
 			@include min-screen($screen-sm-min) {
 				right: 8px;
