@@ -29,8 +29,7 @@
 
         p {
           font-size: 14px;
-          padding: 0;
-          margin-bottom: $margin-small;
+
           @include min-screen($screen-sm) {
             font-size: 18px;
           }
@@ -60,7 +59,9 @@
 
 /* Target last item and change behaviour on narrow screens */
 .col-xs-12:last-child .block-promotion--dreamlist {
-  @include max-screen($screen-sm) {
+  @include max-screen($screen-md) {
+    min-height: 0;
+    margin-bottom: 0;
     background: transparent;
 
     .block-promotion__content {
