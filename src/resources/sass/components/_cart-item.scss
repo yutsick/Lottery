@@ -16,6 +16,10 @@
 		 &--baseline {
 			align-items: flex-end;
 		}
+
+		@include min-screen($screen-sm-min) {
+			flex-wrap: nowrap;
+		}
 	}
 
 	&-container {
@@ -30,8 +34,8 @@
 		}
 
 		@include min-screen($screen-sm-min) {
-			display: inline-flex;
 			width: auto;
+
 			&:first-child {
 				margin-bottom: 0;
 			}
@@ -39,7 +43,6 @@
 	}
 
 	&-image {
-		margin-bottom: 0;
 		order: 2;
 		width: 90px;
 
@@ -50,30 +53,22 @@
 
 		&.cart__item-image--w-border {
 			border: 1px solid $color-feather;
-			padding: 4px;
-			width: 80px;
-
-			img {
-				display: block;
-				margin: 0 auto;
-				max-height: 45px;
-				padding-right: 0;
-			}
+			flex: 0 0 auto;
 
 			@include min-screen($screen-sm-min) {
 				width: 120px;
 				margin-right: $margin-small;
 				order: 1;
+			}
 
-				img {
-					max-height: 80px;
-				}
+			img {
+				padding-right: 0;
 			}
 		}
 	}
 
 	&-info {
-		flex-grow: 1;
+		margin-right: auto;
 		order: 1;
 
 		@include min-screen($screen-sm-min) {
@@ -86,7 +81,7 @@
 		margin-top: 0;
 		font-size: 16px;
 		margin-bottom: 0;
-		font-weight: bold;
+		font-weight: $bold;
 
 		&.h5 {
 			margin-bottom: 10px;
@@ -96,8 +91,11 @@
 	&-quantity {
 		display: flex;
 		order: 4;
-		margin-right: $margin-default;
 		align-self: flex-end;
+
+		@include min-screen($screen-tiny) {
+			margin-right: $margin-default;
+		}
 
 		@include min-screen($screen-sm-min) {
 			order: 3;
@@ -144,7 +142,7 @@
 
 			@include min-screen($screen-sm-min) {
 				bottom: 12px;
-				right: 10px;
+				right: 8px;
 			}
 		}
 	}
@@ -195,10 +193,11 @@
 
 	&-price {
 		flex-grow: 1;
-		font-size: 16px;
-		margin: 5px 0 5px $margin-small;
-		text-align: right;
 		order: 5;
+		margin: 5px 0 5px $margin-small;
+		font-size: 16px;
+		text-align: right;
+		white-space: nowrap;
 
 		@include min-screen($screen-sm-min) {
 			margin: 5px $margin-small;
