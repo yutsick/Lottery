@@ -260,6 +260,12 @@
 		}
 	}
 
+	.block-product__image {
+		@include max-screen($screen-sm) {
+			border-bottom:  0;
+		}
+	}
+
 	.block-product__price {
 		margin-top: 0;
 
