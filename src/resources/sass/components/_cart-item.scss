@@ -116,9 +116,7 @@
 	&-input {
 		width: 50px;
 		height: 40px;
-		padding: $margin-small;
-		padding-left: 2px;
-		padding-right: 24px;
+		padding: $margin-small 24px $margin-small 2px;
 		border: 1px solid $color-gray-border;
 		text-align: right;
 		font-weight: $bold;
@@ -135,13 +133,21 @@
 
 		&-text {
 			position: absolute;
-			top: 0;
+			top: 50%;
 			right: 10px;
 			color: $color-gray;
-			line-height: 45px;
+			line-height: 40px;
+			transform: translateY(-50%);
 
 			@include min-screen($screen-sm-min) {
 				right: 8px;
+				line-height: 45px;
+			}
+
+			/* Target mozilla to align the value correctly in the browser */
+			@-moz-document url-prefix() {
+				top: 0;
+				transform: translateY(0);
 			}
 		}
 	}
