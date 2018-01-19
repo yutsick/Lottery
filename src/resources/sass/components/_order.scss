@@ -101,6 +101,7 @@
           width: calc(100% - 40px);
           padding: 9px 16px;
           text-align: left;
+          white-space: normal;
 
           @include min-screen($screen-sm-min) {
             width: auto;
