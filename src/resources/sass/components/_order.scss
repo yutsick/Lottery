@@ -55,15 +55,13 @@
           margin-top: 0;
         }
       }
+
       &--btn-wrapper {
-        display: block;
-        position: relative;
-        max-width: 350px;
         margin: 0 auto;
+        max-width: 350px;
 
         @include min-screen($screen-sm-min) {
           max-width: 100%;
-          display: inline-block;
         }
       }
 
@@ -80,32 +78,36 @@
         }
 
         img {
-          display: inline-block;
+          display: none;
           max-width: 30px;
+
+          @include min-screen($screen-tiny) {
+            display: inline-block;
+          }
         }
 
         &--price {
-          margin-left: 10px;
+          position: absolute;
+          right: 16px;
           font-weight: 400;
 
-          @include min-screen($screen-tiny) {
-            float: right;
-          }
-
-          @include min-screen($screen-md-min) {
-            margin-left: 20px;
+          @include min-screen($screen-sm-min) {
+            right: 16px;
           }
         }
 
         .btn {
-          width: calc(100% - 40px);
-          padding: 9px 16px;
+          position: relative;
+          width: 100%;
+          padding: 9px 80px 9px 16px;
           text-align: left;
-          white-space: normal;
+
+          @include min-screen($screen-tiny) {
+            width: calc(100% - 40px);
+          }
 
           @include min-screen($screen-sm-min) {
-            width: auto;
-            padding: 9px 20px;
+            padding-left: 20px;
           }
         }
       }
