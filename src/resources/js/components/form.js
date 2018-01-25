@@ -213,4 +213,65 @@ export default function () {
 			return this;
 		}
 	}(jQuery));
+
+	function validate_my_profile() {
+		let msg = "This page is asking you to confirm that you want to leave - data you have entered may not be saved.";
+
+		let unsaved = false;
+
+		$(document).on('change', 'form[method=post]:not([data-remote]) :input', function () {
+			return unsaved = true;
+		});
+
+		$(document).on('submit', 'form[method=post]', function () {
+			unsaved = false;
+		});
+
+		$(window).bind('beforeunload pagehide', function (e) {
+			if (unsaved) {
+				return msg;
+			}
+		});
+
+		$('form[data-use-ajax]').validator().on('submit', function (e) {
+			if (e.isDefaultPrevented()) {
+			} else {
+				let $this = $(this);
+				let formData = $this.serialize();
+				let formDataArray = $this.serializeArray();
+				let url = $this.attr('action');
+				let $currentRow = $this.parents('.profile__row');
+				let $submitButton = $this.find('[type="submit"]');
+
+				// disable submit button
+				$submitButton.prop('disabled', true);
+
+				$.ajax({
+					type: "POST",
+					url: url,
+					data: formData,
+					success: function (data) {
+						// stop spinner and hide form
+
+						// disable submit button
+						$submitButton.prop('disabled', false);
+						$this.find('input').prop('disabled', true);
+						$currentRow.removeClass('profile__row--active');
+						$('.profile__input').find('input[type="password"]').val('');
+						unsaved = false;
+					},
+					error: function () {
+						// something went wrong on the backend?
+						$submitButton.prop('disabled', false);
+						unsaved = false;
+					},
+					complete: function () {
+						update_phone_placeholder($this, formDataArray);
+					}
+				});
+			}
+
+			return false;
+		});
+	}
 }
