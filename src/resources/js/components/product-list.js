@@ -8,6 +8,10 @@ export default class ProductList {
 		this.initProductFilterDropdowns();
 		//this.disableFilter();
 		this.getMaxAmount();
+		this.removeFilter();
+		this.$form;
+		this.$allForms = $('form[data-filter-type]');
+		let _this = this;
 
 		$('.filter-dropdown').on('hide.bs.dropdown', function(e) {
 			let $form = $(e.currentTarget).find('form');
@@ -16,64 +20,84 @@ export default class ProductList {
 
 		$('form[data-filter-type]').on('submit', (e) => {
 			e.preventDefault();
-			let $form = $(e.currentTarget);
-			let filterType = $form.data('filter-type');
-			let filterValues = $form.serializeArray();
-			let that = this;
+			_this.$form = $(e.currentTarget);
 
-			this.filters[filterType] = filterValues;
+			let filterType = _this.$form.data('filter-type');
+			let filterValues = _this.$form.serializeArray();
+
+			if(_this.filters && filterValues.length > 0) {
+				if(filterType === 'price' || filterType === 'search'){
+					$(filterValues).each(function (index, value) {
+						 // remove it there is no input value.
+						if(!value.value) {
+							filterValues = $.grep(filterValues, function(newvalue) {
+								return newvalue != value;
+							});
+						}
+					})
+				}
+				_this.filters[filterType] = filterValues;
+			}
+
 			this.createFilterLabels();
 			this.filterProducts();
+			
+		// 	let parameterUrl = this.createFilterUrl();
+		// 	//console.log(parameterUrl);
 
-			// Removed labels
-			$('.active-filters').on('click', $('.active-filters__label'), function(e) {
-				let $value = $(e.target).val();
-                let change = false;
+			$('.filters .filter-dropdown').removeClass('open');
+		});
+	}
 
-                if ($(e.target).hasClass('js-remove-all-labels')) {
-					// Empty array
-					that.filters = {};
+	removeFilter() {
+		let _this = this;
+		$('.active-filters').on('click', $('.active-filters__label'), function(e) {
+			let change = false;
+			let $value = $(e.target).val();
+			if ($(e.target).hasClass('js-remove-all-labels')) {
+				//Remove all
+				_this.filters = {};
 
-					// Uncheck item in the form
-					$form.find('input').each(function() {
-
-						if($(this).attr('type') == 'checkbox') {
-							$(this).prop('checked', false).change();
+				_this.$allForms.each(function(index, form) {
+					$(form).find('input').each(function(index, input) {
+						if($(input).attr('type') == 'checkbox') {
+							$(input).prop('checked', false);
 						} else {
-							$(this).val('');
+							$(input).val('');
 						}
 						change = true;
 					});
-				} else {
-					that.filters[filterType].forEach(function (filter, index) {
-						if (filter.value == $value ) {
-							that.filters[filterType].splice(index, 1);
+				})
+			} else {
+				//Remove specific filter
+				let filterType = $(e.target).data("filtertype");
 
-							// Uncheck item in the form
-							$form.find('input').each(function() {
-								if ($(this).val() == $value ) {
-									if($(this).attr('type') == 'checkbox') {
-                                        $(this).prop('checked', false).change();
-                                    } else {
-                                        $(this).val('');
-                                    }
-                                    change = true;
-                                }
-							});
+				_this.filters[filterType].forEach(function (filter, index) {
+					if (filter.value === $value ) {
+						_this.filters[filterType].splice(index, 1);
+
+						// Uncheck item in the form
+						_this.$form.find('input').each(function() {
+							if ($(this).val() === $value ) {
+								if($(this).attr('type')=== 'checkbox') {
+									$(this).prop('checked', false);
+								} else {
+									$(this).val('');
+								}
+								change = true;
+							}
+						});
+
+						if(_this.filters[filterType].length === 0) {
+							delete _this.filters[filterType];
 						}
-					});
-				}
-
-				that.createFilterLabels();
-                if(change) {
-                    $form.submit();
-                }
-			});
-
-			let parameterUrl = this.createFilterUrl();
-			//console.log(parameterUrl);
-
-			$('.filters .filter-dropdown').removeClass('open');
+					}
+				});
+			}
+			if(change) {
+				_this.$form.submit();
+			}
+			_this.createFilterLabels();
 		});
 	}
 
@@ -89,15 +113,15 @@ export default class ProductList {
 			this.filters[filterType].forEach(function (filter) {
 				if(filter.value !== '') {
 					if(filter.name === 'from') {
-                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Pris från ${filter.value} kr</button>`;
+                        html += `<button class="active-filters__label js-remove-label" data-filterType="${filterType}" value="${filter.value}">Pris från ${filter.value} kr</button>`;
                     }else if(filter.name === 'to') {
-                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Pris till ${filter.value} kr</button>`;
+                        html += `<button class="active-filters__label js-remove-label" data-filterType="${filterType}" value="${filter.value}">Pris till ${filter.value} kr</button>`;
                     }else if(filter.name === 'search') {
-                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Sök: <span class="italic">${filter.value}</span></button>`;
+                        html += `<button class="active-filters__label js-remove-label" data-filterType="${filterType}" value="${filter.value}">Sök: <span class="italic">${filter.value}</span></button>`;
                     }else if(filter.name === 'campaigns') {
-                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">Kampanj: ${filter.value}</button>`;
+                        html += `<button class="active-filters__label js-remove-label" data-filterType="${filterType}" value="${filter.value}">Kampanj: ${filter.value}</button>`;
                     }else {
-                        html += `<button class="active-filters__label js-remove-label" value="${filter.value}">${filter.value}</button>`;
+                        html += `<button class="active-filters__label js-remove-label" data-filterType="${filterType}" value="${filter.value}">${filter.value}</button>`;
                     }
                     exitingFilter += 1;
                 }
@@ -164,45 +188,6 @@ export default class ProductList {
 			$(this).parent().is(".open") && e.stopPropagation();
 		});
 	}
-
-	/*disableFilter() {
-        $('form[data-filter-type]').on('keyup change', (e) => {
-            let $form = $(e.currentTarget);
-			let $submitBtn =  $(e.currentTarget).find('button');
-			let filterType = $form.data('filter-type');
-			let filterValues = $form.serializeArray();
-
-            if(filterType === 'price' || filterType === 'search') {
-                let hasValue = false;
-
-                filterValues.forEach(function (filter) {
-                    if(filter.value !== '') {
-                        hasValue = true;
-                    }
-                });
-
-                if(hasValue) {
-                    this.toggleDisableOnSubmit(true, $submitBtn);
-                } else {
-                    this.toggleDisableOnSubmit(false, $submitBtn);
-                }
-            } else{
-                if(filterValues.length > 0) {
-                    this.toggleDisableOnSubmit(true, $submitBtn);
-                } else {
-                    this.toggleDisableOnSubmit(false, $submitBtn);
-                }
-            }
-		});
-	}*/
-
-	/*toggleDisableOnSubmit(enable, btn) {
-        if(enable && btn.prop('disabled') ) {
-            btn.prop("disabled", false);
-        } else if (!enable && !btn.prop('disabled')) {
-            btn.prop("disabled", true);
-        }
-    }*/
 
 	/**
 	 * Get the max amount and use it as the highest value in the filter
