@@ -6,7 +6,13 @@ export default class ProductList {
 		this.filters = {};
 		this.wrapper = document.querySelector('.product-list-blocks');
 		this.initProductFilterDropdowns();
-		this.disableFilter();
+		//this.disableFilter();
+		this.getMaxAmount();
+
+		$('.filter-dropdown').on('hide.bs.dropdown', function(e) {
+			let $form = $(e.currentTarget).find('form');
+			$form.submit();
+		});
 
 		$('form[data-filter-type]').on('submit', (e) => {
 			e.preventDefault();
@@ -15,10 +21,9 @@ export default class ProductList {
 			let filterValues = $form.serializeArray();
 			let that = this;
 
-
 			this.filters[filterType] = filterValues;
 			this.createFilterLabels();
-            this.filterProducts();
+			this.filterProducts();
 
 			// Removed labels
 			$('.active-filters').on('click', $('.active-filters__label'), function(e) {
@@ -107,7 +112,6 @@ export default class ProductList {
         $('.active-filters').html(html);
 	}
 
-
 	createFilterUrl() {
 		let url = '?';
 
@@ -161,7 +165,7 @@ export default class ProductList {
 		});
 	}
 
-	disableFilter() {
+	/*disableFilter() {
         $('form[data-filter-type]').on('keyup change', (e) => {
             let $form = $(e.currentTarget);
 			let $submitBtn =  $(e.currentTarget).find('button');
@@ -179,31 +183,49 @@ export default class ProductList {
 
                 if(hasValue) {
                     this.toggleDisableOnSubmit(true, $submitBtn);
-                }else {
+                } else {
                     this.toggleDisableOnSubmit(false, $submitBtn);
                 }
             } else{
                 if(filterValues.length > 0) {
                     this.toggleDisableOnSubmit(true, $submitBtn);
-                }else {
+                } else {
                     this.toggleDisableOnSubmit(false, $submitBtn);
                 }
-
             }
 		});
-	}
+	}*/
 
-	toggleDisableOnSubmit(enable, btn) {
+	/*toggleDisableOnSubmit(enable, btn) {
         if(enable && btn.prop('disabled') ) {
             btn.prop("disabled", false);
         } else if (!enable && !btn.prop('disabled')) {
             btn.prop("disabled", true);
         }
-    }
+    }*/
 
-    /**
+	/**
+	 * Get the max amount and use it as the highest value in the filter
+	 */
+	getMaxAmount() {
+		$('.js-set-max-amount').on('click', function (e) {
+			let maxAmount = $(this).data('max-amount');
+			let from = $('#from.filter-dropdown__price');
+			let to = $('#to.filter-dropdown__price');
+
+			if ($(this).prop('checked')) {
+				from.val('');
+				to.val(maxAmount);
+			} else {
+				from.val('');
+				to.val('');
+			}
+		});
+	}
+
+	/**
 	 * Get new products width ajax
-     */
+	 */
     filterProducts(){
     	let source = "";
     	let hasFilter = false;
@@ -219,7 +241,7 @@ export default class ProductList {
 		}else {
             source = "/ajax/all-products.html";
         }
-        
+
         let _this = this;
 
         $.ajax({
