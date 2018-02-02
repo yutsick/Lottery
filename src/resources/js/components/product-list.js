@@ -1,5 +1,5 @@
 import isMobile from '../utilities/isMobile';
-var LazyLoad = require('vanilla-lazyload');
+let LazyLoad = require('vanilla-lazyload');
 
 export default class ProductList {
 	constructor() {
@@ -18,7 +18,7 @@ export default class ProductList {
 			let filterValues = $form.serializeArray();
 			let submit = false;
 
-			if(filterValues.length == 0 && _this.filters[filterType].length > 0) {
+			if(filterValues.length === 0 && _this.filters[filterType].length > 0) {
 				submit = true;
 			}
 
@@ -33,7 +33,7 @@ export default class ProductList {
 			}
 		});
 
-		$('form[data-filter-type]').on('submit', (e) => {
+		$allForms.on('submit', (e) => {
 			e.preventDefault();
 			_this.$form = $(e.currentTarget);
 
@@ -74,7 +74,7 @@ export default class ProductList {
 
 				_this.$allForms.each(function(index, form) {
 					$(form).find('input').each(function(index, input) {
-						if($(input).attr('type') == 'checkbox') {
+						if($(input).attr('type') === 'checkbox') {
 							$(input).prop('checked', false);
 						} else {
 							$(input).val('');
@@ -260,7 +260,7 @@ export default class ProductList {
 
     lazyLoad() {
         if(this.wrapper) {
-            var loading = new LazyLoad({
+            let loading = new LazyLoad({
                 container: this.wrapper,
             });
             return loading;
