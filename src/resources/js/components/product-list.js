@@ -14,13 +14,23 @@ export default class ProductList {
 
 		$('.filter-dropdown').on('hide.bs.dropdown', function(e) {
 			let $form = $(e.currentTarget).find('form');
+			let filterType = $form.data('filter-type');
 			let filterValues = $form.serializeArray();
+			let submit = false;
+
+			if(filterValues.length == 0 && _this.filters[filterType].length > 0) {
+				submit = true;
+			}
 
 			$(filterValues).each(function (index, value) {
-				if(value.value) {
-					$form.submit();
+				if(value.value || filterType === 'price'|| filterType === 'search') {
+					submit = true;
 				}
 			});
+
+			if(submit) {
+				$form.submit();
+			}
 		});
 
 		$('form[data-filter-type]').on('submit', (e) => {
