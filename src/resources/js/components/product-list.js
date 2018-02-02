@@ -6,7 +6,6 @@ export default class ProductList {
 		this.filters = {};
 		this.wrapper = document.querySelector('.product-list-blocks');
 		this.initProductFilterDropdowns();
-		//this.disableFilter();
 		this.getMaxAmount();
 		this.removeFilter();
 		this.$form;
@@ -15,7 +14,13 @@ export default class ProductList {
 
 		$('.filter-dropdown').on('hide.bs.dropdown', function(e) {
 			let $form = $(e.currentTarget).find('form');
-			$form.submit();
+			let filterValues = $form.serializeArray();
+
+			$(filterValues).each(function (index, value) {
+				if(value.value) {
+					$form.submit();
+				}
+			});
 		});
 
 		$('form[data-filter-type]').on('submit', (e) => {
@@ -41,7 +46,7 @@ export default class ProductList {
 
 			this.createFilterLabels();
 			this.filterProducts();
-			
+
 		// 	let parameterUrl = this.createFilterUrl();
 		// 	//console.log(parameterUrl);
 
