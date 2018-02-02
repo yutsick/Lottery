@@ -8,7 +8,6 @@ export default class ProductList {
 		this.initProductFilterDropdowns();
 		this.getMaxAmount();
 		this.removeFilter();
-		this.$form;
 		this.$allForms = $('form[data-filter-type]');
 		let _this = this;
 
@@ -18,8 +17,10 @@ export default class ProductList {
 			let filterValues = $form.serializeArray();
 			let submit = false;
 
-			if(filterValues.length === 0 && _this.filters[filterType].length > 0) {
-				submit = true;
+			if(_this.filters[filterType]) {
+				if(filterValues.length === 0 &&  _this.filters[filterType].length > 0) {
+					submit = true;
+				}
 			}
 
 			$(filterValues).each(function (index, value) {
@@ -33,7 +34,7 @@ export default class ProductList {
 			}
 		});
 
-		$allForms.on('submit', (e) => {
+		_this.$allForms.on('submit', (e) => {
 			e.preventDefault();
 			_this.$form = $(e.currentTarget);
 
