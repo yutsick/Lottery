@@ -29,8 +29,7 @@ export default class ProductList {
 
 			let filterType = _this.$form.data('filter-type');
 			let filterValues = _this.$form.serializeArray();
-
-			if(_this.filters && filterValues.length > 0) {
+			if(_this.filters && filterValues.length >= 0) {
 				if(filterType === 'price' || filterType === 'search'){
 					$(filterValues).each(function (index, value) {
 						 // remove it there is no input value.
