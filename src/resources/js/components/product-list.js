@@ -8,7 +8,6 @@ export default class ProductList {
 		this.initProductFilterDropdowns();
 		this.getMaxAmount();
 		this.removeFilter();
-		this.$form;
 		this.$allForms = $('form[data-filter-type]');
 		let _this = this;
 
@@ -35,7 +34,7 @@ export default class ProductList {
 
 		$('form[data-filter-type]').on('submit', (e) => {
 			e.preventDefault();
-			_this.$form = $(e.currentTarget);
+			this.$form = $(e.currentTarget);
 
 			let filterType = _this.$form.data('filter-type');
 			let filterValues = _this.$form.serializeArray();
@@ -91,15 +90,19 @@ export default class ProductList {
 						_this.filters[filterType].splice(index, 1);
 
 						// Uncheck item in the form
-						_this.$form.find('input').each(function() {
-							if ($(this).val() === $value ) {
-								if($(this).attr('type')=== 'checkbox') {
-									$(this).prop('checked', false);
-								} else {
-									$(this).val('');
+						console.log(_this.$allForms);
+						_this.$allForms.each(function(index, form) {
+							$(form).find('input').each(function() {
+
+								if ($(this).val() === $value ) {
+									if($(this).attr('type')=== 'checkbox') {
+										$(this).prop('checked', false);
+									} else {
+										$(this).val('');
+									}
+									change = true;
 								}
-								change = true;
-							}
+							});
 						});
 
 						if(_this.filters[filterType].length === 0) {
