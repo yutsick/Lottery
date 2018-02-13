@@ -1,5 +1,5 @@
 import isMobile from '../utilities/isMobile';
-var LazyLoad = require('vanilla-lazyload');
+let LazyLoad = require('vanilla-lazyload');
 
 export default class ProductList {
 	constructor() {
@@ -17,8 +17,10 @@ export default class ProductList {
 			let filterValues = $form.serializeArray();
 			let submit = false;
 
-			if(filterValues.length == 0 && _this.filters[filterType].length > 0) {
-				submit = true;
+			if(_this.filters[filterType]) {
+				if(filterValues.length === 0 &&  _this.filters[filterType].length > 0) {
+					submit = true;
+				}
 			}
 
 			$(filterValues).each(function (index, value) {
@@ -32,7 +34,7 @@ export default class ProductList {
 			}
 		});
 
-		$('form[data-filter-type]').on('submit', (e) => {
+		_this.$allForms.on('submit', (e) => {
 			e.preventDefault();
 			this.$form = $(e.currentTarget);
 
@@ -70,10 +72,9 @@ export default class ProductList {
 			if ($(e.target).hasClass('js-remove-all-labels')) {
 				//Remove all
 				_this.filters = {};
-
 				_this.$allForms.each(function(index, form) {
 					$(form).find('input').each(function(index, input) {
-						if($(input).attr('type') == 'checkbox') {
+						if($(input).attr('type') === 'checkbox') {
 							$(input).prop('checked', false);
 						} else {
 							$(input).val('');
@@ -85,32 +86,34 @@ export default class ProductList {
 				//Remove specific filter
 				let filterType = $(e.target).data("filtertype");
 
-				_this.filters[filterType].forEach(function (filter, index) {
-					if (filter.value === $value ) {
+				if (filterType) {
+
+					_this.filters[filterType].forEach(function (filter, index) {
+						if (filter.value === $value ) {
 						_this.filters[filterType].splice(index, 1);
 
-						// Uncheck item in the form
-						console.log(_this.$allForms);
-						_this.$allForms.each(function(index, form) {
-							$(form).find('input').each(function() {
-
-								if ($(this).val() === $value ) {
-									if($(this).attr('type')=== 'checkbox') {
-										$(this).prop('checked', false);
-									} else {
-										$(this).val('');
+							// Uncheck item in the form
+							_this.$allForms.each(function(index, form) {
+								$(form).find('input').each(function() {
+									if ($(this).val() === $value ) {
+										if($(this).attr('type')=== 'checkbox') {
+											$(this).prop('checked', false);
+										} else {
+											$(this).val('');
+										}
+										change = true;
 									}
-									change = true;
-								}
+								});
 							});
-						});
 
-						if(_this.filters[filterType].length === 0) {
-							delete _this.filters[filterType];
+							if(_this.filters[filterType].length === 0) {
+								delete _this.filters[filterType];
+							}
 						}
-					}
-				});
+					});
+				}
 			}
+			
 			if(change) {
 				_this.$form.submit();
 			}
@@ -263,7 +266,7 @@ export default class ProductList {
 
     lazyLoad() {
         if(this.wrapper) {
-            var loading = new LazyLoad({
+            let loading = new LazyLoad({
                 container: this.wrapper,
             });
             return loading;
