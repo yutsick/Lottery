@@ -17,7 +17,7 @@
 		left: $sidebar-width-mobile;
 	}
 
-	@include min-screen($screen-md) {
+	@include min-screen($screen-lg) {
 		justify-content: flex-end;
 		max-width: 1400px;
 		padding-top: $padding-default;
@@ -37,7 +37,7 @@
 		border: 1px solid $color-gray-border;
 		transition: background $duration-quick $delay-none $ease-in-out;
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-lg) {
 			flex-basis: auto;
 			padding: 7px 7px 7px 15px;
 			border-radius: 2em;
@@ -53,7 +53,7 @@
 		flex-direction: column;
 		color: $color-base-primary;
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-lg) {
 			flex-direction: row;
 			align-items: center;
 		}
@@ -63,7 +63,7 @@
 		order: 2;
 		font-size: 12px;
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-lg) {
 			font-size: 16px;
 			order: -1;
 			margin-right: 9px;
@@ -79,7 +79,7 @@
 		line-height: 1;
 		white-space: nowrap;
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-lg) {
 			margin-right: 15px;
 			font-size: $base-font-size;
 			text-transform: none;
@@ -96,7 +96,7 @@
 			font-size: $base-font-size;
 		}
 
-		@include min-screen($screen-md) {
+		@include min-screen($screen-lg) {
 			margin-right: $margin-small;
 			min-width: 60px;
 			text-align: right;
@@ -134,7 +134,7 @@ a.product-cart__item {
  */
 
 .product-cart__item--theme-green {
-	@include max-screen($screen-sm-max) {
+	@include max-screen($screen-md-max) {
 		background: $color-green;
 		border-color: $color-green;
 		color: $color-green; /* inheritance for notification */
@@ -148,7 +148,7 @@ a.product-cart__item {
 		}
 	}
 
-	@include min-screen($screen-md) {
+	@include min-screen($screen-lg) {
 		.product-cart__notification {
 			background-color: $color-green;
 			color: $color-white;
@@ -161,7 +161,7 @@ a.product-cart__item {
 }
 
 a.product-cart__item--theme-green {
-	@include max-screen($screen-sm-max) {
+	@include max-screen($screen-md-max) {
 		&:hover,
 		&:focus {
 			background-color: $color-green-light;
@@ -184,7 +184,7 @@ a.product-cart__item--theme-green {
 		color: rgba(255, 255, 255, .7);
 	}
 
-	@include min-screen($screen-md) {
+	@include min-screen($screen-lg) {
 		.product-cart__title {
 			color: $color-white;
 		}
