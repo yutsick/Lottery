@@ -137,7 +137,7 @@ body {
 	}
 
 	.product-cart + .block {
-		@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-sm-max){
+		@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-md-max){
 			margin-top: 42px;
 		}
 	}
