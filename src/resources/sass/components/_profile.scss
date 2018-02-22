@@ -111,6 +111,7 @@
 		@include min-screen($screen-sm-min) {
 			overflow: initial;
 			display: inline-block;
+			vertical-align: middle;
 		}
 
 		input {
@@ -119,13 +120,14 @@
 			outline: none;
 		}
 
-		input:checked + label { display: inline-block; }
+		input:checked + label {
+			display: inline-block;
+			vertical-align: middle;
+		}
 
 		label {
 			margin: 0;
 			padding: 0;
-			min-height: initial;
-			line-height: 1;
 		}
 	}
 }
