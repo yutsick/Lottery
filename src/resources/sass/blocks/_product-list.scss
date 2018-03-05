@@ -36,21 +36,12 @@
 }
 
 .block-product__link {
+	display: block;
+	font-weight: $bold;
 	color: $color-base-primary;
 
 	&:hover {
 		color: $color-base-primary;
-
-		@include min-screen($screen-md-min) {
-			.block-product__content {
-				background-color: $color-primary;
-				color: $color-light;
-			}
-
-			.block-product__image {
-				border-bottom: 1px solid $color-primary;
-			}
-		}
 	}
 }
 
@@ -111,13 +102,12 @@
 }
 
 .block-product__title {
-	font-weight: $bold;
+	margin-top: 0;
+	font-size: 16px;
+	text-decoration: underline;
+	line-height: normal;
 
 	> a {
 		color: inherit;
 	}
-}
-
-.block-product__link {
-	font-weight: $bold;
 }
