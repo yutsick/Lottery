@@ -56,7 +56,7 @@
 
 	&__status {
 		position: relative;
-		
+
 		&:before {
 			content: '';
 			display: inline-block;
@@ -77,13 +77,8 @@
 	}
 
 	&__btn {
-		padding: 0;
+		padding: 18px 60px;
 		font-size: 1rem;
 		line-height: 1;
-
-		&-inner {
-			display: block;
-			padding: 18px 60px;
-		}
 	}
 }
