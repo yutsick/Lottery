@@ -4,7 +4,6 @@ export default function () {
 	form_empty_input();
 	form_active_search();
 	toggle_profile_inputs();
-	validate_my_profile();
 
 	if ($('.my-pages').length) {
 		validate_my_profile();
@@ -224,7 +223,6 @@ export default function () {
 						$submitButton.prop('disabled', false);
 						$this.find('input').prop('disabled', true);
 						$currentRow.removeClass('profile__row--active');
-						$('.profile__input').find('input[type="password"]').val('');
 						unsaved = false;
 					},
 					error: function () {

@@ -12,6 +12,13 @@
 			float: left;
 		}
 	}
+
+	// Dreamlist block specific rules
+	&--dreamlist {
+		.block-product__image {
+			border-bottom:  0;
+		}
+	}
 }
 
 .block-product {
@@ -255,12 +262,6 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-		}
-	}
-
-	.block-product__image {
-		@include max-screen($screen-sm) {
-			border-bottom:  0;
 		}
 	}
 
