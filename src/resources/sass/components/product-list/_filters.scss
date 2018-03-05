@@ -251,3 +251,12 @@
 		margin-bottom: 0;
 	}
 }
+
+/* No results */
+.filter-no-results {
+	margin-bottom: $margin-default;
+	padding-top: 65px;
+	padding-bottom: 65px;
+	border: 1px solid $color-border;
+	text-align: center;
+}
