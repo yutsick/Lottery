@@ -20,7 +20,7 @@
   &__item--small {
     border: 1px solid $color-cloud;
 
-    @include max-screen($screen-sm) {
+    @include max-screen($screen-sm - 1) {
       display: none;
     }
 
