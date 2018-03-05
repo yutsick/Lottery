@@ -13,6 +13,7 @@
 
 	@include min-screen($screen-sm-min) {
 		display: none;
+		height: 0;
 	}
 
 	a {
