@@ -25,7 +25,6 @@
                         <p class="order__payment-block-value"><span>0</span> kr</p>
                     </div>
 
-
                     <div class="order__price order__payment-block row">
                         <div class="col-xs-12 col-sm-12 col-lg-6">
                         </div>
@@ -62,8 +61,8 @@
                 <div class="frame-box__header">
                     <p class="h5">Leveransuppgifter</p>
                 </div>
-                <div class="frame-box__row">
-                    <form id="ordering" action="/bestallning-bekraftelse.html" method="post">
+                <div class="frame-box__row form-group has-feedback">
+                    <form id="ordering" action="/bestallning-bekraftelse.html" method="get" data-toggle="validator" data-use-ajax>
                         <div class="row">
                             <div class="delivery col-xs-12 col-sm-12 col-md-6">
                                 <p class="delivery__title">Leveransadress</p>
@@ -73,6 +72,7 @@
                                     <p>413 27 Göteborg</p>
                                     <p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
                                 </div>
+
                                 <div class="delivery__gift">
                                     <div class="delivery__gift-title custom-checkbox-v2">
                                         <input name="gift" type="checkbox" id="gift" value="true" class="custom-checkbox__input"/>
@@ -80,21 +80,32 @@
                                     </div>
                                     <div class="delivery__gift-form">
                                         <p class="delivery__gift-form-title">Fyll i ny leveransadress och glöm inte att fylla i korrekta aviseringsuppgifter nedan</p>
-                                            <div class="delivery__gift-form-row">
-                                                <label class="delivery__gift-form-label" for="gift-name" >Namn</label>
-                                                <input name="gift-name" class="delivery__gift-form-input form-control" type="text" id="gift-name"/>
-                                            </div>
+
+										<div class="form-group has-feedback">
+											<div class="delivery__gift-form-row ">
+												<label class="delivery__gift-form-label" for="gift-name" >Namn</label>
+												<input data-trigger="manual" name="gift-name" class="delivery__gift-form-input form-control" type="text" id="gift-name" data-required-error="Du måste fylla i fältet för namn." />
+											</div>
+											<div class="help-block with-errors"></div>
+										</div>
+
+										<div class="form-group has-feedback">
                                             <div class="delivery__gift-form-row">
                                                 <label class="delivery__gift-form-label" for="gift-address">Adress</label>
-                                                <input name="gift-address" class="delivery__gift-form-input form-control" type="text" id="gift-address"/>
+                                                <input name="gift-address" class="delivery__gift-form-input form-control" type="text" id="gift-address" data-required-error="Du måste fylla i fältet för adress."/>
                                             </div>
+											<div class="help-block with-errors"></div>
+										</div>
+
+										<div class="form-group has-feedback">
                                             <div class="delivery__gift-form-row">
                                                 <label class="delivery__gift-form-label" for="gift-zip">Postnr</label>
-                                                <input name="gift-zip" class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="gift-zip"/>
-
+                                                <input name="gift-zip" class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="gift-zip" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
                                                 <label class="delivery__gift-form-label delivery__gift-form-label--small" for="gift-city">Ort</label>
-                                                <input name="gift-city" class="delivery__gift-form-input form-control" type="text" id="gift-city"/>
+                                                <input name="gift-city" class="delivery__gift-form-input form-control" type="text" id="gift-city" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
                                             </div>
+											<div class="help-block with-errors"></div>
+										</div>
                                     </div>
                                 </div>
                             </div>
