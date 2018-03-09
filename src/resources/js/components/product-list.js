@@ -5,6 +5,7 @@ export default class ProductList {
 	constructor() {
 		this.filters = {};
 		this.wrapper = document.querySelector('.product-list-blocks');
+		this.sortForm = $('.sort__item form');
 		this.initProductFilterDropdowns();
 		this.getMaxAmount();
 		this.removeFilter();
@@ -17,15 +18,17 @@ export default class ProductList {
 			let filterValues = $form.serializeArray();
 			let submit = false;
 
-			if(_this.filters[filterType]) {
+			if(_this.filters[filterType] && filterType !== 'sort') {
 				if(filterValues.length === 0 &&  _this.filters[filterType].length > 0) {
 					submit = true;
 				}
 			}
 
 			$(filterValues).each(function (index, value) {
-				if(value.value || filterType === 'price'|| filterType === 'search') {
-					submit = true;
+				if(filterType !== 'sort' ) {
+				 	if(value.value || filterType === 'price'|| filterType === 'search') {
+						submit = true;
+					}
 				}
 			});
 
@@ -34,10 +37,16 @@ export default class ProductList {
 			}
 		});
 
+		if(_this.sortForm) {
+			_this.sortForm.on('change', (e) => {
+				let filterValues = _this.sortForm.serializeArray();
+				_this.sortResult(filterValues[0].value);
+			})
+		}
+
 		_this.$allForms.on('submit', (e) => {
 			e.preventDefault();
 			this.$form = $(e.currentTarget);
-
 			let filterType = _this.$form.data('filter-type');
 			let filterValues = _this.$form.serializeArray();
 			if(_this.filters && filterValues.length >= 0) {
@@ -61,6 +70,25 @@ export default class ProductList {
 		// 	//console.log(parameterUrl);
 
 			$('.filters .filter-dropdown').removeClass('open');
+		});
+	}
+
+	//this is only re-reading Ajax request
+	sortResult(value) {
+		let _this = this;
+
+		$.ajax({
+			url: "/ajax/filter-products.html",
+			success: function (data) {
+				if( $(data).find('.block-product').length >= 8){
+					$('.entity-collection-actions').hide();
+				} else {
+					$('.entity-collection-actions').show();
+				}
+
+				$('#product-list').html(data);
+				_this.lazyLoad();
+			},
 		});
 	}
 
@@ -113,7 +141,7 @@ export default class ProductList {
 					});
 				}
 			}
-			
+
 			if(change) {
 				_this.$form.submit();
 			}
