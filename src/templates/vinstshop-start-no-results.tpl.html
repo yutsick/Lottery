@@ -1,0 +1,298 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+		@@include('components/_cart-icon.html')
+
+		<div class="block block-hero block-hero--mini block-hero--no-margin">
+			<h1 class="block-hero__page-title block-hero__page-title--absolute">
+				Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!
+			</h1>
+		</div>
+		<div class="row row--offset equal-height">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<div class="block block-promotion block-promotion--image block-promotion--image-dynamic">
+					<div class="block-promotion__image-wrapper">
+						<div class="block-promotion__image block-promotion__image--landscape"
+							 style="background-image: url('assets/img/mockup/car.jpg')">
+							<a class="btn btn-primary btn--bottom-center js-scroll-to" id="product-list-blocks" href="#product-list-blocks">Visa alla vinster</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<div class="row equal-height no-gutter">
+					@@include('blocks/promotion/block/_promotion-split-large.html', {
+					"background_color": "blue",
+					"background_color_pattern": "true",
+					"content_alignment": "bottom",
+					"content_title": "Om vinstshoppen",
+					"content_text": "Här använder du pengarna på ditt vinstkonto för att beställa varor ur Sveriges största vinstsortiment.",
+					"content_link": "true",
+					"content_image": "assets/img/mockup/butterfly.jpg"
+					})
+
+					@@include('blocks/promotion/block/_promotion-split-large.html', {
+					"background_color": "turquoise",
+					"background_color_pattern": "true",
+					"content_alignment": "bottom",
+					"content_title": "Drömvinster",
+					"content_text": "När du vinner mellan 5000 och 5 miljoner får du tillgång till våra absolut häftigaste vinster. Drömcoacherna hjälper dig att skräddarsy ditt personliga vinstpaket. Börja drömma redan nu.",
+					"content_link": "true",
+					"content_image": "assets/img/mockup/car.jpg"
+					})
+				</div>
+			</div>
+		</div>
+
+		<div class="row equal-height">
+			<div class="col-xs-6 col-md-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">Knivspecial</p>
+							<p class="block-promotion__text">Exklusiva kockknivar i världsklass från de Buyer. Begränsad upplaga!</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">2018 års bilmodeller är här</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">Sista chansen på pizzaplåten!</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<div class="block-promotion block-promotion--text block block--background-image text-protection flex-bottom"
+					 style="background-image: url('assets/img/mockup/car.jpg')">
+					<a class="block-promotion__link" href="/" title="Link title">
+						<div class="block-promotion__content">
+							<p class="block-promotion__title h4">Bjud familjen på skidresa i vinter</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<section class="section product-list-blocks product-list-blocks--dreamlist">
+		<div class="container">
+			<h2 class="product-list-blocks__title product-list-blocks__title--left h3">Vinster</h2>
+
+			<div class="sort">
+				<p class="sort__label">Sortera efter</p>
+				<div class="dropdown filter-dropdown js-show-dropdown">
+					<button class="sort__checked filter-dropdown__button js-add-value" type="button" data-toggle="dropdown" data-checked="Rekommenderat">
+						Rekommenderat
+					</button>
+					<div class="dropdown-menu sort__item">
+						<div class="filter-dropdown__header">Sortera efter</div>
+						<form method="post" data-filter-type="sort">
+							<div class="form-group">
+								<div class="custom-radio sort__choice">
+									<input class="custom-radio__input js-get-value" id="recommended" name="sort" value="Rekommenderat" type="radio" checked>
+									<label class="custom-radio__label" for="recommended">Rekommenderat</label>
+								</div>
+								<div class="custom-radio sort__choice">
+									<input class="custom-radio__input js-get-value" id="highest" name="sort" value="Högst pris" type="radio">
+									<label class="custom-radio__label" for="highest">Högst pris</label>
+								</div>
+								<div class="custom-radio sort__choice">
+									<input class="custom-radio__input js-get-value" id="lowest" name="sort" value="Lägst pris" type="radio">
+									<label class="custom-radio__label" for="lowest">Lägst pris</label>
+								</div>
+								<div class="custom-radio sort__choice">
+									<input class="custom-radio__input js-get-value" id="newest" name="sort" value="Nyast" type="radio">
+									<label class="custom-radio__label" for="newest">Nyast</label>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="filters-meta">
+				<div class="filters-meta__count">
+					149 vinster visas
+				</div>
+				<button class="filters-meta__button js-toggle-filters">
+					Filtrera vinster
+				</button>
+			</div>
+
+			<div class="filters">
+				<div class="filters__item">
+					<div class="dropdown filter-dropdown js-show-dropdown">
+						<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
+							Kategori
+						</button>
+						<div class="dropdown-menu">
+							<div class="filter-dropdown__header">Kategori</div>
+							<form data-filter-type="category">
+								<div class="form-group">
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="travels" name="category" value="Resor" type="checkbox">
+										<label class="custom-checkbox__label" for="travels">Resor <i>(5)</i></label>
+									</div>
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox___input" id="home" name="category" value="Hus & Hem" type="checkbox">
+										<label class="custom-checkbox___label" for="home">Hus & Hem <i>(4)</i></label>
+									</div>
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="sports" name="category" value="Sport & Fritid" type="checkbox">
+										<label class="custom-checkbox__label" for="sports">Sport & Fritid <i>(2)</i></label>
+									</div>
+								</div>
+								<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="filters__item filters__item--large">
+					<div class="dropdown filter-dropdown js-show-dropdown">
+						<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
+							Pris
+						</button>
+						<div class="dropdown-menu">
+							<div class="filter-dropdown__header">Pris</div>
+							<form method="post" data-filter-type="price">
+								<div class="row">
+									<div class="col-xs-6">
+										<div class="form-group">
+											<label for="from">Från</label>
+											<input class="filter-dropdown__price form-control" id="from" type="number" name="from" placeholder="0 kr">
+										</div>
+									</div>
+									<div class="col-xs-6">
+										<div class="form-group">
+											<label for="to">Till</label>
+											<input class="filter-dropdown__price form-control" id="to" type="number" min="0" name="to" placeholder="5000 kr">
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class="checkbox">
+										<label>
+											<input class="custom-checkbox js-set-max-amount" type="checkbox" data-max-amount="450">
+											Endast vinster jag har råd med
+										</label>
+									</div>
+								</div>
+								<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							</form>
+							<a href="/">Läs om drömvinsterna (över 5000kr)</a>
+						</div>
+					</div>
+				</div>
+				<div class="filters__item">
+					<div class="dropdown filter-dropdown js-show-dropdown">
+						<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
+							Varumärke
+						</button>
+						<div class="dropdown-menu">
+							<div class="filter-dropdown__header">Varumärke</div>
+							<form method="post" data-filter-type="brand">
+								<div class="form-group">
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="bodum" name="brand" value="Bodum" type="checkbox">
+										<label class="custom-checkbox__label" for="bodum">Bodum</label>
+									</div>
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="bosch" name="brand" value="Bosch" type="checkbox">
+										<label class="custom-checkbox__label" for="bosch">Bosch</label>
+									</div>
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="electrolux" name="brand" value="Electrolux" type="checkbox">
+										<label class="custom-checkbox__label" for="electrolux">Electrolux</label>
+									</div>
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="ernst" name="brand" value="Ernst" type="checkbox">
+										<label class="custom-checkbox__label" for="ernst">Ernst</label>
+									</div>
+								</div>
+								<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="filters__item">
+					<div class="dropdown filter-dropdown js-show-dropdown">
+						<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
+							Kampanjer
+						</button>
+						<div class="dropdown-menu">
+							<div class="filter-dropdown__header">Kampanjer</div>
+							<form method="post" data-filter-type="campaigns">
+								<div class="form-group">
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="debuyer" name="campaigns" value="de buyer-knivar" type="checkbox">
+										<label class="custom-checkbox__label" for="debuyer">de Buyer-knivar</label>
+									</div>
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="skiing" name="campaigns" value="Skidsemester" type="checkbox">
+										<label class="custom-checkbox__label" for="skiing">Skidsemester</label>
+									</div>
+									<div class="custom-checkbox-v2">
+										<input class="custom-checkbox__input" id="cooking" name="campaigns" value="Matlagningsspecial" type="checkbox">
+										<label class="custom-checkbox__label" for="cooking">Matlagningsspecial</label>
+									</div>
+								</div>
+								<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Välj</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="filters__item filters__item--large">
+					<div class="dropdown filter-dropdown js-show-dropdown">
+						<button class="filter-dropdown__button" type="button" data-toggle="dropdown">
+							Sök
+						</button>
+						<div class="dropdown-menu">
+							<div class="filter-dropdown__header">Sök</div>
+							<form method="post" data-filter-type="search">
+								<div class="form-group">
+									<label>Sökord eller vinstnummer</label>
+									<input class="form-control" name="search" type="text">
+								</div>
+								<button class="btn btn-primary btn-block js-hide-dropdown" type="submit">Sök</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="active-filters"></div>
+
+			<div class="filter-no-results">
+				<h5>Inga vinster matchade filtreringen.</h5>
+				<p>Prova att ta bort alla filer och sök igen.</p>
+			</div>
+		</div>
+	</section>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})

@@ -36,14 +36,6 @@ export default class orderActions {
         $allPlaces.on('click', function () {
             _this.changeDeliveryPlace(this);
         });
-
-        //submit
-        $( "#ordering" ).on( "submit", function( event ) {
-            event.preventDefault();
-            console.log($(this).serializeArray());
-            let url = $(this)[0].action;
-            location.href = url;
-        });
     }
 
     changeDeliveryPlace(place) {
@@ -59,6 +51,5 @@ export default class orderActions {
             $current.removeClass('modal-delivery__place--active');
             $(place).parent().addClass('modal-delivery__place--active');
         }
-
     }
 }

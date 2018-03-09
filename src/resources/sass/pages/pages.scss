@@ -1,3 +1,13 @@
+/* Fix for contain cursors inside input field on iOS */
+html,
+body {
+	@include max-screen($screen-sm) {
+		-webkit-overflow-scrolling : touch !important;
+		overflow: auto !important;
+		height: 100% !important;
+	}
+}
+
 html {
 	-ms-overflow-style: scrollbar;
 }
@@ -134,11 +144,11 @@ body {
 		.product-cart {
 			display: flex;
 		}
-	}
 
-	.product-cart + .block {
-		@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-sm-max){
-			margin-top: 42px;
+		.product-cart + .block {
+			@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-md-max){
+				margin-top: 42px;
+			}
 		}
 	}
 }
