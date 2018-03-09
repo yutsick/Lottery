@@ -65,7 +65,7 @@ export default class entityCollectionActions {
 	// Show selected table
 	showTable() {
         $('.table-select') .on('select2:select', function (evt) {
-            var choice = evt.params.data.id;
+            let choice = evt.params.data.id;
 
             if (choice) {
                 $('#' + choice).addClass('table-pane--active').siblings('.tab-pane').removeClass('table-pane--active');
@@ -76,8 +76,8 @@ export default class entityCollectionActions {
 
 	lazyLoad() {
         if(this.wrapper) {
-            var loading = new LazyLoad({
-                container: this.wrapper,
+            let loading = new LazyLoad({
+                container: document
             });
             return loading;
         }else {
