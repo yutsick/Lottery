@@ -149,6 +149,7 @@
 
 		@include min-screen($screen-sm-min) {
 			flex: 1 1 20%;
+			max-width: 20%;
 		}
 
 		&:last-of-type {
@@ -206,23 +207,36 @@
 }
 
 .data-list__cell.data-list__cell--actions {
-	color: #77839e;
+	position: relative;
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: row;
-
-	@include min-screen($screen-sm-min) {
-		flex: 7;
-	}
-
-	@include min-screen($screen-md-min) {
-		flex: 6;
-	}
+	max-width: 20%;
+	color: #77839e;
 
 	.btn-data-action {
 		text-align: center;
 	}
 
+	&.data-list__cell--active {
+		position: relative;
+
+		.data-list__sub-actions {
+			@include min-screen($screen-sm-min) {
+				position: absolute;
+				top: 0;
+				left: -125px;
+				opacity: 1;
+				transform: translatex(0);
+				visibility: visible;
+				height: auto;
+			}
+		}
+
+		.btn-data-action {
+			color: $color-light-blue;
+		}
+	}
 }
 
 .data-list__cell.data-list__cell--mobile-actions {
@@ -245,21 +259,5 @@
 	.btn-data-action {
 		text-align: left;
 		display: block;
-	}
-}
-
-.data-list__cell.data-list__cell--active {
-
-	.data-list__sub-actions {
-		@include min-screen($screen-sm-min) {
-			opacity: 1;
-			transform: translatex(0);
-			visibility: visible;
-			height: auto;
-		}
-	}
-
-	.btn-data-action {
-		color: $color-light-blue;
 	}
 }
