@@ -6,6 +6,7 @@ export default class orderActions {
             this.$modal = $('.modal-delivery__wrapper');
 
             this.eventListener();
+            this.deliveryInfo();
         }
     }
 
@@ -52,4 +53,19 @@ export default class orderActions {
             $(place).parent().addClass('modal-delivery__place--active');
         }
     }
+
+	deliveryInfo() {
+		let wrapper = $('.order__input-wrapper');
+		let radios = wrapper.find('.custom-radio__input');
+		let inputs = wrapper.find('.form-control');
+
+		radios.on('change', (e) => {
+			let _this = $(e.target);
+
+			if (_this.is(':checked')) {
+				inputs.prop('required', false);
+				_this.parent().next().find('input').prop('required', true);
+			}
+		});
+	}
 }

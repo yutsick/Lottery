@@ -298,11 +298,16 @@
 	transform: translateX(-50%);
 }
 
+.btn.disabled,
 .btn-disabled {
 	cursor: not-allowed;
 
 	&,
-	&:hover {
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus {
 		background-color: rgba(0, 120, 192, .65);
 	}
 }
