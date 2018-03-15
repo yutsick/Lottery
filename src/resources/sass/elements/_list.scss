@@ -30,13 +30,12 @@ ol.index {
 		&.active,
 		&:active {
 			color: $color-base-primary;
-			background-color: $color-white; /* Fallback IE */
-			background-color: initial;
+			background-color: $color-white;
 			border-color: $color-gray-border;
 
-			&:hover, &:focus {
-				background-color: $color-white; /* Fallback IE */
-				background-color: initial;
+			&:hover,
+			&:focus {
+				background-color: $color-white;
 				border-color: $color-gray-border;
 
 				&:nth-of-type(odd) {
