@@ -11,6 +11,7 @@ export default class ProductList {
 		this.removeFilter();
 		this.$allForms = $('form[data-filter-type]');
 		let _this = this;
+		$(".filters :checkbox").attr("autocomplete", "off");
 
 		$('.filter-dropdown').on('hide.bs.dropdown', function(e) {
 			let $form = $(e.currentTarget).find('form');
