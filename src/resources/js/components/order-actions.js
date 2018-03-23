@@ -63,8 +63,10 @@ export default class orderActions {
 			let _this = $(e.target);
 
 			if (_this.is(':checked')) {
-				inputs.prop('required', false);
-				_this.parent().next().find('input').prop('required', true);
+				inputs.prop('required', false).prop('disabled', true).val('');
+				_this.parent().next().find('input').prop('required', true).prop('disabled', false);
+
+				$('#ordering').validator('validate');
 			}
 		});
 	}
