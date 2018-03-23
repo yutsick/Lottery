@@ -7,6 +7,10 @@
 	padding: 0;
 	list-style: none;
 
+	&.js-active-sidebar {
+		overflow: visible;
+	}
+
 	@media (max-height: 580px) and (max-width: $screen-sm-max) {
 		padding-bottom: 120px;
 	}

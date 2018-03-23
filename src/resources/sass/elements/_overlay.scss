@@ -39,10 +39,9 @@
 		.btn.js-action-close {
 			animation: fadeInDownBig 0.23s ease forwards;
 
-			@include max-screen($screen-sm-min) {
+			@include max-screen($screen-sm-min - 1) {
 				left: $sidebar-total-width-mobile;
 			}
 		}
 	}
-
 }
