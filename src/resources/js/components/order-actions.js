@@ -7,6 +7,10 @@ export default class orderActions {
 
             this.eventListener();
             this.deliveryInfo();
+
+            $("#ordering").validator({
+				focus: false
+			})
         }
     }
 
@@ -15,6 +19,7 @@ export default class orderActions {
         let $sendGift = $('.delivery__gift');
         let $sendGiftRadio = $sendGift.find('.custom-checkbox__input');
         let $giftFields = $sendGift.find('input');
+		let $form = $('#ordering');
 
         //toggle gift form and set as required
         $sendGiftRadio.on('change', (e) => {
