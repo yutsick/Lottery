@@ -131,7 +131,7 @@
 			}
 
 			label,
-			.form-group{
+			.form-group {
 				@media (min-width: $screen-tiny) {
 					margin-bottom: 0;
 				}
@@ -146,8 +146,9 @@
 			}
 
 			.form-control {
-				font-size: 16px;
 				width: auto;
+				padding-right: 12px;
+				font-size: 16px;
 
 				&#phone {
 					width: 100%;
@@ -235,10 +236,12 @@
 				}
 
 				&-row {
-					display: flex;
-					align-items: center;
-					max-width: 360px;
-					margin: 5px;
+					@include min-screen(($screen-tiny + 20)) {
+						display: flex;
+						align-items: center;
+						max-width: 360px;
+						margin: 5px;
+					}
 				}
 
 				&-label {
@@ -255,8 +258,13 @@
 					flex: 1 1 auto;
 
 					&--small {
-						min-width: 80px;
-						max-width: 90px;
+						margin-bottom: 5px;
+
+						@include min-screen(($screen-tiny + 20)) {
+							min-width: 80px;
+							max-width: 90px;
+							margin-bottom: 0;
+						}
 					}
 				}
 			}

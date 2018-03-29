@@ -16,7 +16,7 @@ export default function () {
 	let $nav_items = $('.sidebar-navigation li');
 	let active_class = 'js-is-active';
 	let navigation_trigger = false;
-	let mobile_width = 768;
+	let mobile_width = 767;
 
 	// Reset navigation on resize window
 	function reset_nav_on_resize() {

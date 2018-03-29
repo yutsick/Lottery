@@ -118,6 +118,12 @@
 				border-top-right-radius: 0;
 			}
 		}
+
+		.form-group {
+			max-height: 313px;
+			overflow: auto;
+			padding-top: 2px;
+		}
 	}
 
 	&__price {
