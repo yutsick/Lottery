@@ -263,6 +263,13 @@
 		}
 	}
 
+	.block-product__row-item.flex-middle {
+		@include max-screen($screen-sm) {
+			justify-content: flex-start;
+			text-align: left;
+		}
+	}
+
 	.block-product__price {
 		margin-top: 0;
 
