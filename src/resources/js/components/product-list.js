@@ -294,14 +294,14 @@ export default class ProductList {
     }
 
     lazyLoad() {
-        if(this.wrapper) {
-            let loading = new LazyLoad({
-                container: this.wrapper,
-            });
-            return loading;
-        }else {
-            return false;
-        }
+		if(this.wrapper) {
+			let loading = new LazyLoad({
+				elements_selector: ".block-product__image img"
+			});
+			return loading;
+		}else {
+			return false;
+		}
     }
 
 }

@@ -76,14 +76,13 @@ export default class entityCollectionActions {
 
 	lazyLoad() {
         if(this.wrapper) {
-            let loading = new LazyLoad({
-                container: document
-            });
+			let loading = new LazyLoad({
+				elements_selector: ".block-product__image img"
+			});
             return loading;
         }else {
             return false;
         }
-
     }
 
     updateLazyLoad() {
