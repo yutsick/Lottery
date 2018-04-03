@@ -1,0 +1,166 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+		@@include('components/_cart-icon.html')
+
+		<div class="block block-hero block-hero--mini block-hero--no-margin">
+			<h1 class="block-hero__page-title block-hero__page-title--absolute">
+				Spela bingo online hos Miljonlotteriet - vinn fantastiska vinster och jackpottar!
+			</h1>
+		</div>
+
+		<div class="row row--offset">
+			<div class="col-xs-12 col-md-6 pull-right">
+				<div class="lightgallery" id="lightgallery">
+					<a class="lightgallery__item lightgallery__item--large" href="/assets/img/mockup/friends.jpg">
+						<img src="/assets/img/mockup/friends.jpg" alt=""/>
+						<span class="lightgallery__counter">Bild 1 av
+							<span class="lightgallery__count js-item-count">0</span>
+							<i class="icon icon-expand"></i>
+						</span>
+					</a>
+					<a class="lightgallery__item lightgallery__item--small" href="/assets/img/mockup/sunset.jpg">
+						<img src="/assets/img/mockup/sunset.jpg" alt=""/>
+					</a>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-6 product-info">
+				<div class="product-info__header">
+					<img class="product-info__logo" src="http://placehold.it/400x200" alt="Logotyp"/>
+					<h2 class="product-info__title h3">Miljonlotteriet Original Online</h2>
+				</div>
+
+				<div class="product-info__meta">
+					<span class="product-info__meta-item product-info__label background-color-blue">Nyhet</span>
+					<span class="product-info__meta-item">Märke</span>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+					ante ultrices pharetra. Vivamus at tortor dignissim, faucibus lorem vitae, sagittis arcu.
+				</p>
+				<button class="product-info__text-btn js-toggle-content" data-content="product-details">Visa produktfakta</button>
+				<div class="product-info__details" id="product-details">
+					<p>Fakta</p>
+					<ul>
+						<li>Mått: 100 x 100 cm</li>
+						<li>Material: Bomull</li>
+						<li>Design: WMYL</li>
+					</ul>
+					<p class="product-info__winning-nr">Vinstnummer: 1234</p>
+					<button class="product-info__text-btn js-hide-content" data-content="product-details">Dölj produktfakta</button>
+				</div>
+
+				<ul class="product-order list-unstyled">
+					<li class="product-order__item product-order__item-small">
+						<span class="product-order__label">Vinstvärde:</span>
+						<span class="product-order__value">400 kr</span>
+					</li>
+					<li class="product-order__item product-order__item-small">
+						<span class="delivery-status">Leveranstid: 2-4 dagar</span>
+					</li>
+					<li class="product-order__item">
+						<div class="product-order__row">
+							<div class="product-order__btn-wrapper" data-toggle="tooltip" data-placement="top" data-original-title="För lite pengar på vinskontot">
+								<button class="product-order__btn--split product-order__btn btn btn-primary btn-disabled">
+									Beställ denna vinst
+								</button>
+							</div>
+							<div class="product-order__btn-wrapper">
+							<a class="product-order__btn product-order__btn--small product-order__btn--split btn btn-success" href="#">
+								Demo
+							</a></div>
+						</div>
+					</li>
+				</ul>
+
+				<div class="product-dreamlist row">
+					<div class="col-xs-12 col-sm-6 hidden-xs">
+						<h5 class="product-dreamlist__title">Drömlista</h5>
+						<p class="product-dreamlist__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+							ante ultrices pharetra.
+						</p>
+					</div>
+					<div class="col-xs-12 col-sm-6 ">
+						<div class="product-dreamlist__progress-wrapper">
+							<span class="product-dreamlist__tooltip">Färdigsparat</span>
+							<span class="product-dreamlist__tooltip-arrow"></span>
+							<button class="product-dreamlist__progress product-dreamlist__progress--rounded js-add-to-dreamlist">
+								<span class="product-dreamlist__dream-button btn-link">
+									<i class="icon icon-dream-star dreamlist-icon"></i>
+								</span>
+								<span class="product-dreamlist__current" style="width: 40%"></span>
+								<span class="product-dreamlist__text">Lägg till i min drömlista</span>
+							</button>
+							<p class="text-center">13  personer sparar till denna i sin drömlista</p>
+						</div>
+						<p class="product-dreamlist__desc visible-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a dui velit. Nunc quis velit nec
+							ante ultrices pharetra.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="section product-list-blocks product-list-blocks--dreamlist">
+			<div class="row equal-height">
+				<div class="col-xs-12">
+					<h5>Liknande produkter</h5>
+				</div>
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page.html",
+				"image": "assets/img/mockup/butterfly.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"label": "Nyhet",
+				"color": "blue",
+				"title": "En rad",
+				"subtitle": "Fusce Nibh",
+				"price": "450 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page.html",
+				"image": "assets/img/mockup/butterfly.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"price": "200 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page.html",
+				"image": "assets/img/mockup/nature.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"subtitle": "Fusce Nibh",
+				"price": "10.000 kr",
+				"dreamButton": true
+				})
+
+				@@include('blocks/product-list/_product-item.html', {
+				"href": "/vinstshop-page.html",
+				"image": "assets/img/mockup/sunset.jpg",
+				"hoverImage": "assets/img/mockup/car.jpg",
+				"title": "Flera rader skulle kunna fungera såhär.",
+				"price": "30 kr",
+				"dreamButton": true
+				})
+			</div>
+
+			<div class="block-product__more-button">
+				<a class="btn btn-primary" href="/vinstshop-start.html#product-list">Visa alla produkter</a>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
+
