@@ -98,11 +98,14 @@
 	}
 
 	&__btn {
-		padding: 18px 60px;
+		padding: 18px 25px;
 		font-size: 1rem;
 		line-height: 1;
 
-
+		@include min-screen($screen-tiny) {
+			padding-right: 60px;
+			padding-left: 60px;
+		}
 
 		&--small {
 			padding-right: 25px;
