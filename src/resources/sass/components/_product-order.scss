@@ -81,7 +81,7 @@
 		justify-content: center;
 	}
 
-	&__btn-wrapper {
+	&__btn-wrapper--split {
 		&:first-child {
 			 > [class*="__btn"] {
 				border-top-right-radius: 0;
