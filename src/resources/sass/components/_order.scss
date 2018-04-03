@@ -119,7 +119,7 @@
 		}
 
 		&__input-wrapper {
-			@include min-screen($screen-tiny) {
+			@include min-screen(360px) {
 				display: flex;
 				align-items: center;
 				margin: $margin-small 0;
@@ -140,7 +140,7 @@
 			.custom-radio {
 				width: 160px;
 
-				@media (min-width: $screen-tiny) and (max-width: $screen-xs) {
+				@media (min-width: 360px) and (max-width: $screen-xs) {
 					max-width: 80px;
 				}
 			}
@@ -250,7 +250,10 @@
 
 					&--small {
 						min-width: 50px;
-						text-align: center;
+
+						@include min-screen(($screen-tiny + 20)) {
+							text-align: center;
+						}
 					}
 				}
 

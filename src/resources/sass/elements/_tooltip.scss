@@ -6,13 +6,12 @@ $tooltip-inner-color: $color-black;
 $tooltip-border-width: 1px;
 $tooltip-arrow-border-width: ($tooltip-arrow-width + $tooltip-border-width);
 
-/* Do not show on touch screens
+/* Do not show on touch screens */
 .touchevents  & {
 	& :not(.tooltip-on-touch) + .tooltip {
 		display: none !important;
 	}
 }
-*/
 
 .tooltip {
 	z-index: 100;
