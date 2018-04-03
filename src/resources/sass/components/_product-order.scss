@@ -81,22 +81,28 @@
 		justify-content: center;
 	}
 
+	&__btn-wrapper {
+		&:first-child {
+			 > [class*="__btn"] {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		&:last-child {
+			> [class*="__btn"] {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+		}
+	}
+
 	&__btn {
 		padding: 18px 60px;
 		font-size: 1rem;
 		line-height: 1;
 
-		&--split {
-			&:first-child {
-				border-top-right-radius: 0;
-				border-bottom-right-radius: 0;
-			}
 
-			&:last-child {
-				border-top-left-radius: 0;
-				border-bottom-left-radius: 0;
-			}
-		}
 
 		&--small {
 			padding-right: 25px;

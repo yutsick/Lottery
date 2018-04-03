@@ -66,12 +66,16 @@
 					</li>
 					<li class="product-order__item">
 						<div class="product-order__row">
-							<a class="product-order__btn product-order__btn--split btn btn-primary" href="#">
-								Köp lott
-							</a>
-							<a class="product-order__btn product-order__btn--small product-order__btn--split btn btn-success" href="#">
-								Demo
-							</a>
+							<div class="product-order__btn-wrapper" data-toggle="tooltip" data-placement="top" data-original-title="Klicka för att beställa vinsten">
+								<button class="product-order__btn--split product-order__btn btn btn-primary" data-toggle="modal" data-target="#modal-cart">
+									Beställ denna vinst
+								</button>
+							</div>
+							<div class="product-order__btn-wrapper">
+								<a class="product-order__btn product-order__btn--small product-order__btn--split btn btn-success" href="#">
+									Demo
+								</a>
+							</div>
 						</div>
 					</li>
 				</ul>
