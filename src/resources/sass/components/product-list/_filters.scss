@@ -98,10 +98,11 @@
 		@include max-screen($screen-xs-max) {
 			position: fixed;
 			top: 50%;
-			width: 285px;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			left: 10px;
+			right: 10px;
 			z-index: 1050;
+			width: auto;
+			transform: translate(0, -50%);
 		}
 
 		&:not(.sort__item) {
