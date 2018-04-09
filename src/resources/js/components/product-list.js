@@ -209,6 +209,7 @@ export default class ProductList {
 		// Show overlay when clicking the element
 		$showDropdown.on("show.bs.dropdown", function (e) {
 			if (isMobile()) {
+				$('body').addClass('js-overlay-is-active');
 				$('<div class="modal-backdrop fade in"></div>').appendTo(document.body);
 			}
 		});
@@ -216,6 +217,7 @@ export default class ProductList {
 		// Hide overlay when clicking the element
 		$showDropdown.on("hide.bs.dropdown", function (e) {
 			if (isMobile()) {
+				$('body').removeClass('js-overlay-is-active');
 				$(".modal-backdrop").remove();
 			}
 		});
@@ -223,6 +225,7 @@ export default class ProductList {
 		// Hide overlay when clicking the button
 		$(".js-hide-dropdown").on('click', function (e) {
 			if (isMobile()) {
+				$('body').removeClass('js-overlay-is-active');
 				$(".modal-backdrop").remove();
 			}
 		});
