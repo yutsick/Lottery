@@ -15,6 +15,7 @@ html {
 body {
 	&.js-overlay-is-active {
 		overflow: hidden !important;
+		position: fixed;
 	}
 }
 
