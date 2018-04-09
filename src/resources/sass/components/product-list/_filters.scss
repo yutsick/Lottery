@@ -57,12 +57,6 @@
 			width: 275px;
 		}
 	}
-
-	.filter-dropdown .dropdown-menu {
-		@include max-screen($screen-xs-max) {
-			width: 285px;
-		}
-	}
 }
 
 .filter-dropdown {
@@ -104,7 +98,7 @@
 		@include max-screen($screen-xs-max) {
 			position: fixed;
 			top: 50%;
-			width: 200px;
+			width: 285px;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			z-index: 1050;
