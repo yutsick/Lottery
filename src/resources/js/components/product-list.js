@@ -201,6 +201,7 @@ export default class ProductList {
 	*/
 	initProductFilterDropdowns() {
 		let $showDropdown = $('.js-show-dropdown');
+		let _this = this;
 
 		$('.js-toggle-filters').on('click', function () {
 			$('.filters').toggle();
@@ -209,15 +210,16 @@ export default class ProductList {
 		// Show overlay when clicking the element
 		$showDropdown.on("show.bs.dropdown", function (e) {
 			if (isMobile()) {
-				$('body').addClass('js-overlay-is-active');
+				$('body').addClass('modal-open js-overlay-is-active');
 				$('<div class="modal-backdrop fade in"></div>').appendTo(document.body);
+				_this.modalEvent();
 			}
 		});
 
 		// Hide overlay when clicking the element
 		$showDropdown.on("hide.bs.dropdown", function (e) {
 			if (isMobile()) {
-				$('body').removeClass('js-overlay-is-active');
+				$('body').removeClass('modal-open js-overlay-is-active');
 				$(".modal-backdrop").remove();
 			}
 		});
@@ -225,7 +227,7 @@ export default class ProductList {
 		// Hide overlay when clicking the button
 		$(".js-hide-dropdown").on('click', function (e) {
 			if (isMobile()) {
-				$('body').removeClass('js-overlay-is-active');
+				$('body').removeClass('modal-open js-overlay-is-active');
 				$(".modal-backdrop").remove();
 			}
 		});
@@ -238,6 +240,18 @@ export default class ProductList {
 
 			// Prevent closing of dropdown.
 			$(this).parent().is(".open") && e.stopPropagation();
+		});
+
+		_this.modalEvent();
+	}
+
+	modalEvent() {
+		// Hide overlay when clicking the modal
+		$(".modal-backdrop.in").on('click', function (e) {
+			if (isMobile()) {
+				$('body').removeClass('modal-open js-overlay-is-active');
+				$(".modal-backdrop").remove();
+			}
 		});
 	}
 
