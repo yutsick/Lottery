@@ -22,7 +22,6 @@
 
 .block-promotion__content--split {
 	padding-top: calc(50%);
-	padding-right: 30%;
 
 	@include min-screen($screen-sm-min) {
 		padding-top: $padding-default;
