@@ -193,6 +193,13 @@ img.align-center {
 			}
 		}
 	}
+
+	&.block-promotion--color-blue,
+	&.block-promotion--color-black {
+		&:after {
+			background: linear-gradient(transparent 0%, rgba(255, 255, 255, 1) 100%);
+		}
+	}
 }
 
 .text-shadow {

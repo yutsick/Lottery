@@ -20,6 +20,22 @@
 		}
 	}
 
+	&--color-black {
+		color: $color-black;
+
+		> a {
+			color: inherit;
+		}
+	}
+
+	&--color-blue {
+		color: $color-blue;
+
+		> a {
+			color: inherit;
+		}
+	}
+
 	p {
 		margin: $margin-small 0 0 0;
 
@@ -170,7 +186,7 @@
 	position: relative;
 	display: block;
 	width: 100%;
-	color: $color-light;
+	color: inherit;
 	z-index: 3;
 
 	&:after {
@@ -206,7 +222,7 @@
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color-light;
+		color: inherit;
 
 		@include min-screen($screen-sm-min) {
 			&:after {

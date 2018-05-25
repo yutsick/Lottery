@@ -1,5 +1,4 @@
 .block-hero {
-
 	min-height: 150px;
 	margin-bottom: 20px;
 	height: 100%;
@@ -36,6 +35,22 @@
 
 	&.flex-bottom {
 		align-items: flex-end;
+	}
+
+	&--color-black {
+		color: $color-black;
+
+		> a {
+			color: inherit;
+		}
+	}
+
+	&--color-blue {
+		color: $color-blue;
+
+		> a {
+			color: inherit;
+		}
 	}
 
 	.no-spacing {
