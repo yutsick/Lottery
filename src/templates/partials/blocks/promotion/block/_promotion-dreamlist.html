@@ -1,16 +1,17 @@
 <div class="@@if(context.size !== 'medium'){col-xs-12 col-sm-6 col-md-3}@@if(context.size === 'medium'){col-xs-12 col-sm-12 col-md-3}">
     <div class="block-promotion block-promotion--dreamlist block
-	@@if(context.background === 'color'){ block--background-color background-color-@@background_color}
-	@@if(context.background === 'color' && context.background_color_pattern === 'true'){ block--background-pattern}
-	@@if(context.background === 'image'){ block--background-image}
-	@@if(context.content_alignment === 'top'){ flex-top}
-	@@if(context.content_alignment === 'middle'){ flex-middle}
-	@@if(context.content_alignment === 'bottom'){ flex-bottom}
-	@@if(context.text_alignment === 'center'){ text-align-center}
-	@@if(context.text_alignment === 'right'){ text-align-right}
-	@@if(context.text_protection === 'true'){ text-protection}"
-         style="@@if(context.background === 'image'){background-image: url('@@background_image')}"
-    >
+		@@if(context.color === 'blue'){ block-promotion--color-blue}
+		@@if(context.color === 'black'){ block-promotion--color-black}
+		@@if(context.background === 'color'){ block--background-color background-color-@@background_color}
+		@@if(context.background === 'color' && context.background_color_pattern === 'true'){ block--background-pattern}
+		@@if(context.background === 'image'){ block--background-image}
+		@@if(context.content_alignment === 'top'){ flex-top}
+		@@if(context.content_alignment === 'middle'){ flex-middle}
+		@@if(context.content_alignment === 'bottom'){ flex-bottom}
+		@@if(context.text_alignment === 'center'){ text-align-center}
+		@@if(context.text_alignment === 'right'){ text-align-right}
+		@@if(context.text_protection === 'true'){ text-protection}"
+         style="@@if(context.background === 'image'){background-image: url('@@background_image')}">
         @@if(context.content_link && context.content_link_type  !== "btn") {
         <a class="block-promotion__link" href="/" title="Link title">
         }
