@@ -40,6 +40,10 @@
 	&--color-black {
 		color: $color-black;
 
+		&.text-shadow.text-shadow--heavy {
+			text-shadow: none;
+		}
+
 		> a {
 			color: inherit;
 		}
