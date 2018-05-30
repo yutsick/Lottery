@@ -61,10 +61,10 @@
 
 	&__icon {
 		order: 2;
-		font-size: 12px;
+		font-size: $size-smallest;
 
 		@include min-screen($screen-lg) {
-			font-size: 16px;
+			font-size: $base-font-size;
 			order: -1;
 			margin-right: 9px;
 			margin-left: -5px;
@@ -89,7 +89,7 @@
 
 	&__meta {
 		margin-bottom: 0;
-		font-size: 12px;
+		font-size: $size-smallest;
 		line-height: 1;
 
 		@include min-screen($screen-sm) {
@@ -108,7 +108,7 @@
 		height: 20px;
 		background: #fff;
 		border-radius: 50%;
-		font-size: 12px;
+		font-size: $size-smallest;
 		text-align: center;
 
 		/* Target only on webkit-based browsers (Chrome, Safari, etc.)

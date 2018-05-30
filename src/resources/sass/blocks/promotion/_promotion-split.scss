@@ -67,7 +67,7 @@
 		}
 
 		@media screen and (min-width: $screen-xs-max) and (max-width: $screen-sm-max){
-			font-size: 18px;
+			font-size: $size-medium;
 		}
 	}
 

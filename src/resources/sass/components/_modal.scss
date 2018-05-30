@@ -59,7 +59,7 @@
 	font-weight: 500;
 	margin-top: 0;
 	margin-bottom: -10px;
-	font-size: 14px;
+	font-size: $size-small;
 }
 
 .modal-title1 {
@@ -91,7 +91,7 @@
 
 .modal-body {
 	.form-control {
-		font-size: 12px;
+		font-size: $size-smallest;
 		line-height: 20px;
 	}
 
@@ -145,7 +145,7 @@
 		left: 20px;
 		padding: 0;
 		color: #8da7ba;
-		i { font-size: 16px; }
+		i { font-size: $base-font-size }
 	}
 }
 

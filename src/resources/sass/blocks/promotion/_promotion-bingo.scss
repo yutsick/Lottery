@@ -26,7 +26,7 @@
 			position: absolute;
 			right: 0;
 			top: 5px;
-			font-size: 16px;
+			font-size: $base-font-size;
 			background-color: #1f64bb;
 			padding: 10px;
 			border-radius: 20px;
@@ -88,7 +88,7 @@
 
 	.h4 {
 		margin-top: 5px;
-		font-size: 18px;
+		font-size: $size-medium;
 		line-height: 1;
 	}
 

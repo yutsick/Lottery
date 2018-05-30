@@ -19,7 +19,7 @@
         }
 
         .block-promotion__title {
-          font-size: 16px;
+          font-size: $base-font-size;
 
           @include min-screen($screen-sm) {
             font-size: 24px;
@@ -28,10 +28,10 @@
         }
 
         p {
-          font-size: 14px;
+          font-size: $size-small;
 
           @include min-screen($screen-sm) {
-            font-size: 18px;
+            font-size: $size-medium;
           }
         }
       }

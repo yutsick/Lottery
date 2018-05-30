@@ -4,11 +4,7 @@
 	background-color: $color-container-background;
 	padding: $padding-medium 0;
 	font-weight: 200;
-	font-size: 13px;
-
-	h5 {
-		font-size: 17px;
-	}
+	font-size: $size-smaller;
 
 	p {
 		margin-bottom: 35px;
@@ -28,12 +24,12 @@
 	}
 
 	.block-footer__phone-link {
-		font-size: 16px;
+		font-size: $base-font-size;
 		font-weight: $medium;
 		text-decoration: underline;
 
 		@include min-screen($screen-sm-min) {
-			font-size: 18px;
+			font-size: $size-medium;
 		}
 	}
 

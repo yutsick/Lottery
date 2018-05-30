@@ -51,7 +51,7 @@
 			justify-content: space-between;
 			height: inherit;
 			color: black;
-			font-size: 18px;
+			font-size: $size-medium;
 		}
 
 		&--text {
@@ -190,7 +190,7 @@
 	}
 
 	&__amount {
-		font-size: 18px;
+		font-size: $size-medium;
 		font-family: $semi-heading-family;
 		font-weight: $extrabold;
 	}

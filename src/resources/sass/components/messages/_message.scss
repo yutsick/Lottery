@@ -24,7 +24,7 @@
 
 .message {
 	padding: 20px;
-	font-size: 14px;
+	//font-size: $size-small;
 	font-weight: 600;
 	color: $color-base-primary;
 	opacity: 1;
@@ -41,10 +41,13 @@
 		margin-bottom: 20px;
 	}
 
-	p { margin-bottom: 20px; }
+	p {
+		margin-bottom: 20px;
+	}
 
-	strong { font-weight: $extrabold; }
-
+	strong {
+		font-weight: $extrabold;
+	}
 }
 
 .message--fixed-height {
@@ -62,12 +65,12 @@
 
 .message__header {
 	position: relative;
-	font-size: 14px;
 	color: $color-base-secondary;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
 	border-bottom: 1px solid $color-gray-border;
-	font-weight: 600;
+	//font-size: $size-small;
+	font-weight: $bold;
 }
 
 .message__thumbnail {
@@ -81,13 +84,13 @@
 }
 
 .message__sender {
-	font-weight: 800;
+	font-weight: $extrabold;
 	margin-bottom: 5px;
 	overflow: hidden;
 }
 
 .message__date {
-	font-weight: 600;
+	font-weight: $bold;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -121,8 +124,8 @@
 	}
 	h2 {
 		@include max-screen($screen-sm-max) {
-			font-size: 18px;
-			font-weight: 700;
+			font-size: $size-medium;
+			font-weight: $extrabold;
 
 			.icon {
 				display: inline-block;

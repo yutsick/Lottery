@@ -24,7 +24,7 @@
 		padding: 6px 12px;
 		border-radius: 2em;
 		background-color: $color-green;
-		font-size: 12px;
+		font-size: $size-smallest;
 		color: $color-white;
 		line-height: 1;
 		white-space: nowrap;
@@ -137,7 +137,7 @@
 		z-index: 1;
 
 		.icon {
-			font-size: 18px;
+			font-size: $size-medium;
 			color: $color-white;
 		}
 	}

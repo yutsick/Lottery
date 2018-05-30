@@ -81,10 +81,10 @@ h5,
 
 h5,
 .h5 {
-	font-size: 16px;
+	font-size: $base-font-size;
 
 	@include min-screen($screen-md-min) {
-		font-size: 16px;
+		font-size: $base-font-size;
 	}
 }
 
@@ -113,7 +113,7 @@ h5,
 
 	.h4 {
 		@include max-screen($screen-sm) {
-			font-size: 18px;
+			font-size: $size-medium;
 			line-height: 24px;
 		}
 	}

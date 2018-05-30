@@ -69,7 +69,7 @@
 	margin: 0 0 $margin-small;
 
 	@include max-screen($screen-sm-max) {
-		font-size: 18px;
+		font-size: $size-medium;
 		line-height: 24px;
 		max-height: 50px;
 	}

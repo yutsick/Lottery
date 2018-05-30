@@ -37,7 +37,7 @@
 
   &:after {
     font-family: $base-icon-family;
-    font-size: 14px
+    font-size: $size-small;
   }
 
   &.lg-close:after {
@@ -59,7 +59,7 @@
   &:before,
   &:after {
     font-family: $base-icon-family;
-    font-size: 14px
+    font-size: $size-small;
   }
 
   &.lg-next,

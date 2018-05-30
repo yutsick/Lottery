@@ -29,17 +29,17 @@
 	border-radius: 100%;
 	background-color: $color-red;
 	font-weight: 600;
-	font-size: 11px;
+	font-size: $size-smallest;
 	font-style: normal;
 	text-align: center;
 	color: $color-light;
-	line-height: 19px;
+	line-height: 16px;
 
 	&--large {
-		font-size: 1rem;
+		font-size: $base-font-size;
 		width: 1.625em;
 		height: 1.625em;
-		line-height: 1.625em;
+		line-height: 1.5em;
 	}
 
 	&--lighter {

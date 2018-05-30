@@ -5,7 +5,7 @@
 
 	&__title--left {
 		@include max-screen($screen-tiny) {
-			font-size: 18px;
+			font-size: $size-medium;
 		}
 
 		@include max-screen($screen-sm-max) {

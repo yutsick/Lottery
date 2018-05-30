@@ -198,12 +198,12 @@
 
 .btn-icon {
 	i {
-		font-size: 18px;
 		vertical-align: middle;
 		position: absolute;
 		top: 50%;
-		transform: translateY(-50%);
 		left: 0;
+		font-size: $size-medium;
+		transform: translateY(-50%);
 
 		&.icon-right {
 			left: auto;
@@ -314,6 +314,5 @@
 
 .btn-large {
 	padding: 18px 60px;
-	font-size: 1rem;
 	line-height: 1;
 }
