@@ -7,10 +7,8 @@
 /* Light gallery */
 @import "../../../node_modules/lightgallery.js/src/sass/lightgallery.scss";
 
-
 /* Light gallery extension */
 @import "vendor/lightgallery-extension";
-
 
 /* Bootstrap */
 @import "vendor/bootstrap";
@@ -33,6 +31,7 @@
 
 	/* Page layouts */
 	@import "layout/layout";
+
 	font-family: $base-font-family;
 	font-size: $base-font-size;
 	font-weight: $regular;

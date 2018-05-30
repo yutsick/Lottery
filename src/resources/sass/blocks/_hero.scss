@@ -1,5 +1,5 @@
 .block-hero {
-	min-height: 150px;
+	min-height: 320px;
 	margin-bottom: 20px;
 	height: 100%;
 	width: 100%;
@@ -10,10 +10,6 @@
 	justify-content: left;
 	align-items: center;
 
-	@include min-screen($screen-sm-min) {
-		min-height: 220px;
-	}
-
 	@include min-screen($screen-md-min) {
 		display: block;
 		padding-bottom: 36%;
@@ -23,6 +19,28 @@
 		position: absolute;
 		top: 0;
 		left: 0;
+	}
+
+	&--medium {
+		min-height: 150px;
+
+		@include min-screen($screen-sm-min) {
+			min-height: 220px;
+			padding-bottom: 0;
+
+			/* Make sure to override alignment css... */
+			&[class*="flex-"] {
+				.block-hero__content {
+					transform: translateY(0) !important;
+				}
+			}
+
+			.block-hero__content {
+				position: static;
+				padding-top: 40px;
+				padding-bottom: 40px;
+			}
+		}
 	}
 
 	&.flex-top {

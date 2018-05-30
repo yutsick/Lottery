@@ -1,0 +1,33 @@
+@@include('layout/_header.html', {"class": "page-front logged-out"})
+@@include('layout/_top.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})
+
+<div class="content-wrapper ml-2017">
+	No content
+	@@include('blocks/_hero.html', {
+		"hero_type": "medium",
+		"hero_content": false
+	})
+
+	Default
+	@@include('blocks/_hero.html', {
+		"hero_type": "medium",
+		"hero_content": true
+	})
+
+	Color black
+	@@include('blocks/_hero.html', {
+		"hero_type": "medium",
+		"hero_content": true,
+		"hero_color": "black"
+	})
+
+	Color blue
+	@@include('blocks/_hero.html', {
+		"hero_type": "medium",
+		"hero_content": true,
+		"hero_color": "blue"
+	})
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
