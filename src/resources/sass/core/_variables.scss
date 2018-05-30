@@ -13,46 +13,43 @@ $padding-small: 10px;
 
 $block-text-width: 450px;
 
+
 /**
  * Fonts
  */
 
-// Font weights
+/* Font weights */
 $light: 100;
 $regular: 400;
 $medium: 400;
 $bold: 600;
 $semibold: 700;
 $extrabold: 800;
-
-// Base Font
-$base-font-family: 'Proxima Nova'; //  'Montserrat', sans-serif förr
 $base-font-weight: $regular;
-$base-font-size: 16px; /* 14px */
-$base-line-height: 1.25rem; /* 20px */
 
+/* Font family */
+$base-font-family: 'Proxima Nova'; //  'Montserrat', sans-serif förr
+$base-heading-family: 'UniNeueHeavy';
+$semi-heading-family: 'Proxima Nova';
+$basic-heading-family: 'Proxima Nova';
 
 /* Font sizes */
+$base-font-size: 16px;
 $size-medium: 1.125rem;			/* 18px */
-$size-regular: 16px;
 $size-small: .875rem;			/* 14px */
 $size-smaller: .813rem;			/* 13px */
 $size-smallest: .75rem;			/* 12px */
 
-
+/* Line height */
 $base-line-height: 1.6;
 $medium-line-height: 1.5;
 $narrow-line-height: 1.25;
-
-// Base Headings
-$base-heading-family: 'UniNeueHeavy';
-$semi-heading-family: 'Proxima Nova';
-$basic-heading-family: 'Proxima Nova';
 
 // Icons
 $base-icon-family: "ml-icons";
 $icon-chevron-down: "\e906";
 $icon-chevron-up: "\e909";
+
 
 /**
  * Colors
@@ -89,19 +86,15 @@ $color-black-light: #4a5863;
 $color-gray: #6f91a7; // UI elements
 $color-gray-light: #bdd0dc;
 $color-gray-border: #d8dde6;
-
 $color-ocean: #37454e;
 $color-blueberry: #536785;
 $color-cloud: #f2f5f7;
 $color-feather: #dee1e8;
-
 $color: #475964; // Color light gray
 $color: #bad1de; // Color heaven gray *new*
 $color: #85a3b6; // Color blue gray *new*
-
 $color-stone: #f9f9f9;
 $color-gravel: #e5e5e5;
-
 $color-warning: #ffb800;
 
 // Base colors
@@ -151,14 +144,13 @@ $color-white-2: rgba(255, 255, 255, $opacity-2);
 $color-white-3: rgba(255, 255, 255, $opacity-3);
 $color-white-4: rgba(255, 255, 255, $opacity-4);
 $color-white-5: rgba(255, 255, 255, $opacity-5);
-
 $color-black: #000000;
 $color-black-2: rgba(0, 0, 0, $opacity-2);
 $color-black-3: rgba(0, 0, 0, $opacity-3);
 $color-black-4: rgba(0, 0, 0, $opacity-4);
 $color-black-5: rgba(0, 0, 0, $opacity-5);
-
 $color-transparent: rgba(0, 0, 0, $opacity-0);
+
 
 /**
  * Animation

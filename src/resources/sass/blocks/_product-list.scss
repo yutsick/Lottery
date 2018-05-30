@@ -182,9 +182,8 @@
 
 .block-product__title {
 	margin-top: 0;
-	font-size: 16px;
+	font-size: $base-font-size;
 	text-decoration: underline;
-	line-height: normal;
 
 	> a {
 		color: inherit;
@@ -197,8 +196,6 @@
 
 .block-product__text {
 	margin-bottom: 10px;
-	font-size: 14px;
-	font-weight: 400;
 }
 
 .block-product__more-button {

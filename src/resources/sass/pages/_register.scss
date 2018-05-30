@@ -32,16 +32,8 @@ a.navlink:hover {
 	label {
 		margin-bottom: 4px;
 		color: $color-black;
-		font-size: 13px;
-		font-weight: 300;
-	}
-
-	p {
-		font-size: 16px;
-		padding-bottom: 10px;
-	}
-	.form-control {
-		font-weight: 400;
+		font-size: $size-smaller;
+		font-weight: $light;
 	}
 
 	.light-label {
@@ -76,12 +68,14 @@ a.navlink:hover {
 		width: 100%;
 		max-width: 624px;
 	}
+
 	.modal-body p {
 		font-weight: 300;
 		font-size: 13px;
 		text-align: justify;
 		padding: 10px;
 	}
+
 	.modal-footer .btn:before {
 		content: '';
 		height: 0;
@@ -190,7 +184,6 @@ a.navlink:hover {
 
 .select2-results__option {
 	font-size: $base-font-size;
-	line-height: 20px;
 	padding: 15px;
 	vertical-align: middle;
 }
