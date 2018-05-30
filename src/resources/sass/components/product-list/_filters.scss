@@ -61,6 +61,7 @@
 
 .filter-dropdown {
 	width: 100%;
+	font-size: $size-small;
 
 	&.open {
 		@include min-screen($screen-sm-min) {
