@@ -131,10 +131,7 @@
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 			font-family: $base-icon-family;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: normal;
-			font-size: 12px;
+			font-size: $size-smallest;
 			color: $color-border;
 			transform: translate3d(-5px, -50%, 0);
 			transition: color $duration-quick $delay-none $ease-in-out;
@@ -195,10 +192,10 @@
 
 .sidebar-navigation__desc {
 	display: block;
-	font-size: 11px;
-	font-weight: 400;
+	font-size: $size-smaller;
+	font-weight: $regular;
 	color: $color-base-complement;
-	margin-top: 8px;
+	margin-top: 6px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -311,13 +308,12 @@
 	.user__wallet a,
 	.user__winnings,
 	.user__winnings a {
-		font-weight: 400;
-		font-size: 11px;
-		line-height: 17px;
+		font-weight: $regular;
+		font-size: $size-smaller;
 		color: $color-base-complement;
 
 		span {
-			font-weight: bold;
+			font-weight: $bold;
 		}
 	}
 }

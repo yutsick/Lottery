@@ -87,10 +87,6 @@
 	}
 }
 
-.sub-navigation--first > .sub-navigation__item:first-child > .sub-navigation__link {
-	height: $sidebar-logo-height;
-}
-
 .sub-navigation__name {
 	width: 100%;
 	font-weight: $extrabold;
@@ -104,9 +100,9 @@
 .sub-navigation__desc {
 	display: block;
 	width: 100%;
-	font-size: 11px;
+	font-size: $size-small;
 	color: $color-base-complement;
-	margin-top: 8px;
+	margin-top: 6px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -128,7 +124,7 @@
 			font-style: normal;
 			font-variant: normal;
 			font-weight: normal;
-			font-size: 12px;
+			font-size: $size-smallest;
 			color: $color-border;
 			transform: translate3d(-15px, -50%, 0) rotate(0deg);
 			transition: color $duration-quick $delay-none $ease-in-out, transform $duration-quick $delay-none $ease-in-out;
