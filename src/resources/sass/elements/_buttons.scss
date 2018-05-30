@@ -1,12 +1,12 @@
 /* Bootstrap modifications */
 .btn {
-	font-size: $base-font-size;
 	border-radius: 2em;
-	font-weight: $extrabold;
-	padding: 9px 30px;
-	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	border: none;
+	padding: 8px 30px;
 	font-family: $semi-heading-family;
+	font-size: $base-font-size;
+	font-weight: $extrabold;
+	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 
 	i {
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
@@ -145,11 +145,11 @@
 
 .btn-with-arrow {
 	&:after {
-		margin-left: 5px;
-		font-size: 12px;
-		vertical-align: middle;
-		font-family: $base-icon-family;
 		content: $icon-chevron-down;
+		vertical-align: middle;
+		margin-left: 5px;
+		font-size: $size-smallest;
+		font-family: $base-icon-family;
 	}
 
 	&.btn-with-arrow--active {
@@ -221,7 +221,6 @@
 
 	i {
 		display: block;
-		font-size: $base-font-size;
 	}
 
 	&--medium {
@@ -229,7 +228,7 @@
 		height: 30px;
 
 		i {
-			font-size: 13px;
+			font-size: $size-smaller;
 		}
 	}
 }
@@ -242,7 +241,7 @@
 	height: 44px;
 
 	i {
-		font-size: $base-font-size;
+		font-size: $size-regular;
 		line-height: 1.5;
 		color: $color-complement-sky;
 	}
@@ -265,7 +264,7 @@
 
 	span {
 		display: block;
-		font-size: 12px;
+		font-size: $size-smallest;
 		font-weight: 400;
 		line-height: 1;
 	}
