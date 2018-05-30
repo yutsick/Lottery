@@ -38,7 +38,7 @@
 // Pre-defined small and active mobile styles
 @mixin menu-main-link-mobile() {
 	padding: $padding-small 0;
-	font-size: 10px;
+	font-size: $size-smallest;
 	line-height: $base-font-size;
 	text-align: center;
 }

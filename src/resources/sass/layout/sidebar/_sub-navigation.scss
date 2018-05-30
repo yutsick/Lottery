@@ -89,7 +89,7 @@
 
 .sub-navigation__name {
 	width: 100%;
-	font-weight: $extrabold;
+	font-weight: $semibold;
 	line-height: 1;
 
 	.notification {
@@ -100,9 +100,9 @@
 .sub-navigation__desc {
 	display: block;
 	width: 100%;
+	margin-top: 6px;
 	font-size: $size-small;
 	color: $color-base-complement;
-	margin-top: 6px;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -118,7 +118,7 @@
 			width: 10px;
 			height: auto;
 			margin: auto;
-			font-family: "ml-icons";
+			font-family: $base-icon-family;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 			font-style: normal;
