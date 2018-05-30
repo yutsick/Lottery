@@ -114,19 +114,19 @@
 	}
 
 	blockquote {
-		font-size: 30px;
-		line-height: 38px;
-		font-weight: 300;
 		font-style: italic;
 		padding: 10px 0;
 		margin: 0 0 20px;
 		border-left: none;
+		font-size: 30px;
+		line-height: $narrow-line-height;
+		font-weight: $light;
 	}
 
 	.preamble {
-		font-size: 16px;
-		line-height: 20px;
-		font-weight: 600;
+		font-size: $size-medium;
+		line-height: $medium-line-height;
+		font-weight: $bold;
 	}
 
 	ul {
