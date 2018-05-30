@@ -83,7 +83,6 @@
 
 .block-article__entry {
 	margin: 0 0 $margin-small;
-	max-height: 40px;
 
 	@include min-screen($screen-sm-min) {
 		height: auto;
