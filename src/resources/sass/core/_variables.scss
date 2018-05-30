@@ -28,8 +28,21 @@ $extrabold: 800;
 // Base Font
 $base-font-family: 'Proxima Nova'; //  'Montserrat', sans-serif förr
 $base-font-weight: $regular;
-$base-font-size: 14px;
-$base-line-height: 20px;
+$base-font-size: 16px; /* 14px */
+$base-line-height: 1.25rem; /* 20px */
+
+
+/* Font sizes */
+$size-medium: 1.125rem;			/* 18px */
+$size-regular: 16px;
+$size-small: .875rem;			/* 14px */
+$size-smaller: .813rem;			/* 13px */
+$size-smallest: .75rem;			/* 12px */
+
+
+$base-line-height: 1.6;
+$medium-line-height: 1.5;
+$narrow-line-height: 1.25;
 
 // Base Headings
 $base-heading-family: 'UniNeueHeavy';
