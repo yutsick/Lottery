@@ -11,8 +11,7 @@
 
 	.block-promotion__title {
 		@include max-screen($screen-sm) {
-			font-size: 15px;
-			line-height: 1.2;
+			font-size: $size-large;
 		}
 	}
 }

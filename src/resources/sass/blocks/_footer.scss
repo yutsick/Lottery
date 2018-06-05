@@ -3,8 +3,7 @@
 	border-bottom: 1px solid $color-border;
 	background-color: $color-container-background;
 	padding: $padding-medium 0;
-	font-weight: 200;
-	font-size: $size-smaller;
+	font-weight: $light;
 
 	p {
 		margin-bottom: 35px;
@@ -13,10 +12,6 @@
 	a {
 		color: $color-base-complement;
 		font-weight: $medium;
-
-		@include min-screen($screen-sm-min) {
-			font-size: $base-font-size;
-		}
 
 		&:hover {
 			color: darken($color-base-complement, $color-darken-amount);
@@ -37,7 +32,7 @@
 		margin-bottom: 35px;
 
 		.list-links__item {
-			margin-bottom: 15px;
+			margin-bottom: $margin-small;
 		}
 	}
 
