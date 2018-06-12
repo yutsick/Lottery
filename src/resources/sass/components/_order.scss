@@ -82,7 +82,7 @@
 					display: none;
 					max-width: 30px;
 
-					@media screen and (min-width: 359px) {
+					@media screen and (min-width: $screen-xxs) {
 						display: inline-block;
 					}
 				}
@@ -103,7 +103,7 @@
 					padding: 9px 80px 9px 16px;
 					text-align: left;
 
-					@media screen and (min-width: 359px) {
+					@media screen and (min-width: $screen-xxs) {
 						width: calc(100% - 40px);
 					}
 

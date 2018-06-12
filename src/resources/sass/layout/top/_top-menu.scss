@@ -27,7 +27,7 @@
 			padding: 20px;
 			color: $color-complement-sky;
 
-			@include max-screen($screen-tiny) {
+			@include max-screen($screen-xxs) {
 				font-size: $size-small;
 			}
 
@@ -48,7 +48,7 @@
 			padding: 20px 15px;
 			font-weight: 600;
 
-			@include max-screen($screen-tiny) {
+			@include max-screen($screen-xxs) {
 				font-size: $size-small;
 			}
 		}
