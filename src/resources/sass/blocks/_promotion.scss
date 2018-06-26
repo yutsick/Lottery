@@ -20,16 +20,8 @@
 		}
 	}
 
-	&--color-black {
-		color: $color-black;
-
-		> a {
-			color: inherit;
-		}
-	}
-
 	&--color-blue {
-		color: $color-blue;
+		color: $color-blue-deep;
 
 		> a {
 			color: inherit;

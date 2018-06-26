@@ -55,20 +55,8 @@
 		align-items: flex-end;
 	}
 
-	&--color-black {
-		color: $color-black;
-
-		&.text-shadow.text-shadow--heavy {
-			text-shadow: none;
-		}
-
-		> a {
-			color: inherit;
-		}
-	}
-
 	&--color-blue {
-		color: $color-blue;
+		color: $color-blue-deep;
 
 		> a {
 			color: inherit;
