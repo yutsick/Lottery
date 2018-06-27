@@ -1,0 +1,100 @@
+/**
+ * Colors
+ */
+
+// Theme Palette
+$color-snow: #ffffff;
+$color-dark-white: #f5f8fa;
+$color-space: #000;
+$color-blue-deep: #004673; // *new*
+$color-blue-dark: #006cb0; //  *new*
+$color-blue: #0078c0; // *new*
+$color-light-blue: #1670f6;
+$color-blue-light: #008ee3; // *new*
+$color-turquoise: #00afba; // *new*
+$color-new-turqoiuse: #00b5c1;
+$color-turquoise-light: #a0e4e7; // *new*
+$color-green: #79cd8b;
+$color-green-light: #b3d8a0;
+$color-light-pink: #fde3f1;
+$color-yellow: #ffd72b; // *new*
+$color-yellow-light: #ffec9c; // *new*
+$color-light-orange: #fbf1eb;
+$color-orange: #fa640f; // *new*
+$color-head-orange: #ff9148;
+$color-orange-light: #ffad6c; // *new*
+$color-border-orange: #fab890;
+$color-red: #f04c60;
+$color-pink: #df4d9b; // *new*
+$color-pink-light: #f19fc8; // *new*
+$color-border-pink: #f7a4d1;
+$color-black: #2e3237; // Color dark gray *new*
+$color-black-light: #4a5863;
+$color-gray: #6f91a7; // UI elements
+$color-gray-light: #bdd0dc;
+$color-gray-border: #d8dde6;
+$color-ocean: #37454e;
+$color-blueberry: #536785;
+$color-cloud: #f2f5f7;
+$color-feather: #dee1e8;
+$color: #475964; // Color light gray
+$color: #bad1de; // Color heaven gray *new*
+$color: #85a3b6; // Color blue gray *new*
+$color-stone: #f9f9f9;
+$color-gravel: #e5e5e5;
+$color-warning: #ffb800;
+
+// Base colors
+$color-base-primary: $color-black; // Text
+$color-base-secondary: $color-ocean; // Menu links
+$color-base-complement: $color-blueberry; // Menu descriptions, input labels, modal text
+
+// Color Scheme
+$color-primary: $color-blue;
+$color-accent: $color-green;
+$color-complement-coral: $color-turquoise;
+
+// Complement: Sky - Icons
+$color-complement-sky: $color-gray;
+$color-complement-sky-light: $color-gray-light;
+
+// Complement: Lava
+$color-complement-lava: $color-orange;
+$color-complement-lava-light: $color-orange-light;
+
+// Specific
+$color-border: $color-feather;
+$color-container-background: $color-cloud;
+$color-modal-background: $color-stone;
+$color-input-border: $color-gravel;
+
+// Others
+$color-dark: $color-space;
+$color-light: $color-snow;
+$color-overlay-base: rgba(21, 31, 54, 1);
+$color-overlay: rgba(21, 31, 54, 0.8);
+
+// States
+$color-darken-amount: 10%;
+
+// Opacity
+$opacity-0: 0;
+$opacity-1: 1.0;
+$opacity-2: 0.87;
+$opacity-3: 0.54;
+$opacity-4: 0.22;
+$opacity-5: 0.06;
+
+// Basic colors
+$color-white: #ffffff;
+$color-white-2: rgba(255, 255, 255, $opacity-2);
+$color-white-3: rgba(255, 255, 255, $opacity-3);
+$color-white-4: rgba(255, 255, 255, $opacity-4);
+$color-white-5: rgba(255, 255, 255, $opacity-5);
+$color-black: #000000;
+$color-black-2: rgba(0, 0, 0, $opacity-2);
+$color-black-3: rgba(0, 0, 0, $opacity-3);
+$color-black-4: rgba(0, 0, 0, $opacity-4);
+$color-black-5: rgba(0, 0, 0, $opacity-5);
+$color-transparent: rgba(0, 0, 0, $opacity-0);
+

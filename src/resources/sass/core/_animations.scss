@@ -1,3 +1,27 @@
+/**
+ * Animation
+ */
+
+// Duration
+$duration-quicker: 0.1s;
+$duration-quick: 0.1s;
+$duration-fast: 0.26s;
+$duration-medium: 0.4s;
+$duration-normal: 0.6s;
+$duration-slow: 1s;
+
+// Delay
+$delay-none: 0s;
+$delay-faster: 0.05s;
+$delay-fast: 0.26s;
+$delay-normal: 0.6s;
+$delay-slow: 1s;
+
+// Easing
+$ease-standard: cubic-bezier(0.17, 0.04, 0.03, 0.94);
+$ease-in-out: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+/* Fade In */
 @keyframes fadeInDownBig {
 	0% {
 		transform: scale(0);
