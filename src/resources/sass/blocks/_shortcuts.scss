@@ -1,0 +1,88 @@
+.shortcut {
+	background-color: $color-green;
+	color: $color-white;
+
+	&--turquoise {
+		background-color: $color-turquoise;
+	}
+
+	&--blue {
+		background-color: $color-blue;
+	}
+
+	&--orange {
+		background-color: $color-orange;
+	}
+
+	&--pink {
+		background-color: $color-pink;
+	}
+
+	&--blue-deep {
+		background-color: $color-blue-deep;
+	}
+
+	&__link {
+		position: relative;
+		display: flex;
+
+		&:after {
+			content: ' \e908 ';
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			opacity: .6;
+			font-family: $base-icon-family;
+			transform: translateY(-50%);
+			transition: opacity $duration-quick $ease-in-out;
+
+			@include min-screen($screen-xs) {
+				content: ' \e904 ';
+				font-size: 30px;
+			}
+		}
+
+		&,
+		&:hover,
+		&:focus {
+			color: inherit;
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+
+			[class*="__title"] {
+				text-decoration: underline;
+			}
+
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__content {
+		flex: 1;
+		padding: $padding-small 30px $padding-small $padding-small;
+
+		@include min-screen($screen-xs) {
+			padding-right: 50px;
+		}
+	}
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: $base-font-size;
+	}
+
+	&__desc {
+		display: none;
+		margin-bottom: 0;
+
+		@include min-screen($screen-xs) {
+			display: block;
+		}
+	}
+}

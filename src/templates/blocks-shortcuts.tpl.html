@@ -1,0 +1,100 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-in"
+})
+
+@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})
+
+<div class="content-wrapper ml-2017">
+	<h1>Shortcuts</h1>
+	<h2>Gutter</h2>
+	<div class="container">
+		<div class="row no-gutter equal-height">
+			@@loop('blocks/_shortcut.html', [
+				{
+					"background": "green",
+					"title": "Spela bingo",
+					"desc": "Etiam porta sem malesuada magna mollis euismod.",
+					"href": ""
+				},
+				{
+					"background": "turquoise",
+					"title": "Skrapa lotter",
+					"desc": "",
+					"href": "/"
+				},
+				{
+					"background": "blue",
+					"title": "Prenumerera",
+					"desc": "Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+					"href": "/"
+				},
+				{
+					"background": "orange",
+					"title": "Bibendum Quam Pellentesque",
+					"desc": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+					"href": "/"
+				},
+				{
+					"background": "pink",
+					"title": "Euismod Magna Tristique Elit",
+					"desc": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
+					"href": "/"
+				},
+				{
+					"background": "blue-deep",
+					"title": "Elit",
+					"desc": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+					"href": "/"
+				}
+			])
+		</div>
+	</div>
+
+	<h2>No gutter</h2>
+	<div class="container container--no-space">
+		<div class="row no-gutter equal-height">
+			@@loop('blocks/_shortcut.html', [
+				{
+					"background": "green",
+					"title": "Spela bingo",
+					"desc": "Etiam porta sem malesuada magna mollis euismod.",
+					"href": "/"
+				},
+				{
+					"background": "turquoise",
+					"title": "Skrapa lotter",
+					"desc": "",
+					"href": "/"
+				},
+				{
+					"background": "blue",
+					"title": "Prenumerera",
+					"desc": "Pellentesque ornare sem lacinia quam venenatis vestibulum.",
+					"href": "/"
+				},
+				{
+					"background": "orange",
+					"title": "Bibendum Quam Pellentesque",
+					"desc": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+					"href": "/"
+				},
+				{
+					"background": "pink",
+					"title": "Euismod Magna Tristique Elit",
+					"desc": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et.",
+					"href": "/"
+				},
+				{
+					"background": "blue-deep",
+					"title": "Elit",
+					"desc": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
+					"href": "/"
+				}
+			])
+		</div>
+	</div>
+
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})
