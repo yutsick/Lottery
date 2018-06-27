@@ -1,18 +1,13 @@
 <div class="col-xs-4 shortcut @@if(context.background){shortcut--@@background}">
-	@@if(context.href) {
-		<a class="shortcut__link" href="@@href">
-	}
+	<a class="shortcut__link" href="@@href">
+		<div class="shortcut__content">
+			@@if(context.title) {
+				<h3 class="shortcut__title">@@title</h3>
+			}
 
-	<div class="shortcut__content">
-		@@if(context.title) {
-			<h3 class="shortcut__title">@@title</h3>
-		}
-
-		@@if(context.desc) {
-			<p class="shortcut__desc">@@desc</p>
-		}
-	</div>
-	@@if(context.href) {
-		</a>
-	}
+			@@if(context.desc) {
+				<p class="shortcut__desc">@@desc</p>
+			}
+		</div>
+	</a>
 </div>
