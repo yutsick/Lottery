@@ -1,3 +1,8 @@
+/* Set minus margin when positioned below a container */
+.container + .shortcut-wrapper {
+	margin-top: -$margin-default;
+}
+
 .shortcut-wrapper {
 	margin-bottom: $margin-default;
 }
