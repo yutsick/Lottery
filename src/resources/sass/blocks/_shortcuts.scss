@@ -30,14 +30,15 @@
 			content: ' \e908 ';
 			position: absolute;
 			top: 50%;
-			right: 10px;
+			right: 5px;
 			opacity: .6;
 			font-family: $base-icon-family;
 			transform: translateY(-50%);
 			transition: opacity $duration-quick $ease-in-out;
 
 			@include min-screen($screen-xs) {
-				content: ' \e904 ';
+				content: ' \e904';
+				right: 10px;
 				font-size: 30px;
 			}
 		}
@@ -64,7 +65,7 @@
 
 	&__content {
 		flex: 1;
-		padding: $padding-small 30px $padding-small $padding-small;
+		padding: $padding-small $padding-default $padding-small $padding-small;
 
 		@include min-screen($screen-xs) {
 			padding-right: 50px;
@@ -74,7 +75,11 @@
 	&__title {
 		margin-top: 0;
 		margin-bottom: 0;
-		font-size: $base-font-size;
+		font-size: $size-small;
+
+		@include min-screen($screen-xs) {
+			font-size: $base-font-size;
+		}
 	}
 
 	&__desc {
