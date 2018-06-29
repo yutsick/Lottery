@@ -87,7 +87,7 @@
 		font-size: $size-small;
 
 		@include min-screen($screen-xs) {
-			font-size: $base-font-size;
+			font-size: $size-large;
 		}
 	}
 
