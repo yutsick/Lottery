@@ -1,0 +1,156 @@
+.block-hero-reg {
+	background-color: $color-container-background;
+	color: $color-black;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	position: relative;
+
+	a {
+		color: inherit;
+		text-decoration: underline;
+	}
+	.btn {
+		color: $color-white;
+		text-decoration: none;
+	}
+
+
+	&--blue {
+		color: $color-blue-deep;
+	}
+
+	&--white {
+		color: $color-white;
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	}
+
+	.no-spacing {
+		margin: 0;
+		transition: font-size $duration-quick $ease-in-out;
+	}
+	&__container {
+		background-size: cover;
+		background-position: bottom center;
+		position: relative;
+		min-height: 320px;
+
+		@include min-screen($screen-md-min) {
+			background-position: center;
+		}
+		&.flex-middle {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			text-align: center;
+		}
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 500px;
+		padding: 20px 15px;
+		position: relative;
+		top: auto;
+		transform: translateY(0);
+		z-index: 2;
+
+		@include min-screen($screen-md-min) {
+			padding: 60px 15px;
+			width: 55%;
+			max-width: 700px;
+		}
+		.bank-form {
+			margin-top: 50px;
+		}
+		.btn {
+			margin-top: 20px;
+			text-shadow: none;
+
+			@include min-screen($screen-md-min) {
+				margin-top: 30px;
+			}
+		}
+
+		.flex-middle & {
+			@include min-screen($screen-md-min) {
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		line-height: 30px;
+		margin-top: 0;
+		margin-bottom: $padding-small;
+
+		@include min-screen($screen-md-min) {
+			font-size: 46px;
+			line-height: 52px;
+		}
+
+		@include min-screen($screen-lg-min) {
+			font-size: 40px;
+			line-height: 120%;
+		}
+	}
+
+	&__subtitle {
+		text-transform: uppercase;
+		margin-bottom: 0;
+	}
+
+	&__image {
+		position: static;
+		margin: $margin-medium auto;
+		right: 40px;
+		bottom: 40px;
+		max-width: 280px;
+		display: block;
+
+		@include min-screen($screen-md-min) {
+			position: absolute;
+			width: 30%;
+			max-width: 450px;
+		}
+
+		&--left {
+			right: initial;
+			left: 40px;
+			right: auto;
+		}
+		&-txt--middle {
+			@include min-screen($screen-md-min) {
+				width: 20%;
+				bottom: 50%;
+				transform: translateY(50%);
+			}
+
+		}
+	}
+
+	&__tagline {
+		width: 100%;
+		color: $color-white;
+		text-align: center;
+		background: $color-blue-deep;
+		h4 {
+			font-size: 18px;
+			padding: $padding-small;
+			@include min-screen($screen-md-min) {
+				font-size: 24px;
+				padding: $padding-medium;
+			}
+		}
+	}
+}
+
+
+
+

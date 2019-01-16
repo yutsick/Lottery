@@ -103,9 +103,10 @@
 		}
 	}
 }
-
+.btn-target,
 .btn-success {
 	background-color: $color-accent;
+	color: $color-white;
 
 	&:focus {
 		background-color: $color-accent;
@@ -315,4 +316,61 @@
 .btn-large {
 	padding: 18px 60px;
 	line-height: 1;
+}
+
+
+.btn-wide {
+	min-width: 250px;
+	max-width: 100%;
+	color: $color-white;
+	border: 2px solid $color-green;
+	background: $color-green;
+
+	&:hover {
+		color: $color-green;
+		background: $color-white;
+		border: 2px solid $color-green;
+	}
+
+	&--blue {
+		border: 2px solid $color-blue;
+		background: $color-blue;
+
+		&:hover {
+			color: $color-blue;
+			background: $color-white;
+			border: 2px solid $color-blue;
+		}
+	}
+	&--green {
+		border: 2px solid $color-green;
+		background: $color-green;
+
+		&:hover {
+			color: $color-green;
+			background: $color-white;
+			border: 2px solid $color-green;
+		}
+	}
+	&--white {
+		border: 2px solid $color-green;
+		background: $color-white;
+		color: $color-green;
+
+		&:hover {
+			color: $color-white;
+			background: $color-green;
+			border: 2px solid $color-green;
+		}
+	}
+	&--orange {
+		border: 2px solid $color-light-orange;
+		background: $color-orange;
+
+		&:hover {
+			color: $color-orange;
+			background: $color-white;
+			border: 2px solid $color-orange;
+		}
+	}
 }

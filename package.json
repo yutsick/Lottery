@@ -11,7 +11,7 @@
     "gulp-file-include": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "jquery": "^3.1.1",
-    "laravel-elixir": "^6.0.0-15",
+    "laravel-elixir": "^6.0.0-18",
     "laravel-elixir-browsersync-official": "^1.0.0",
     "laravel-elixir-fonts": "^0.1.4",
     "laravel-elixir-webpack-official": "^1.0.10",
@@ -22,6 +22,7 @@
     "flickity": "^2.0.5",
     "lg-thumbnail.js": "^1.0.0",
     "lightgallery.js": "^1.0.1",
+    "natives": "^1.1.6",
     "vanilla-lazyload": "^10.0.1"
   }
 }

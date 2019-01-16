@@ -1,0 +1,24 @@
+.registration-banner {
+	color: $color-black;
+	margin: $padding-medium 0;
+	text-align: center;
+	&.background-color-pink,
+	&.background-color-million {
+		color: $color-white;
+	}
+	a {
+		color: inherit;
+	}
+	.btn {
+		color: $color-white;
+		margin-top: $padding-default;
+		margin-bottom: $padding-default;
+	}
+	&.background-color-newturqiose {
+		.btn-target {
+			color: $color-green;
+			background: $color-white;
+			border-color: $color-green;
+		}
+	}
+}

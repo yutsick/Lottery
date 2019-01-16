@@ -1,0 +1,40 @@
+<div class="container container--no-space">
+	<header class="block block--background-image block-hero-reg block-hero-reg--@@hero_color" >
+		<div class="block-hero-reg__container flex-@@hero_align" style="background-image: url('@@hero_bg_img')">
+			<div class="block-hero-reg__content">
+				<div class="container">
+					@@if (context.hero_subtitle) {
+						<p class="block-hero-reg__subtitle">Subtitle</p>
+					}
+					<h1 class="block-hero-reg__title">Prova sex lotter för halva priset. Och få lika många till på köpet.</h1>
+					<div class="block-hero-reg__text">
+						<p>
+							150kr för första månaden, därefter 300 kr/mån.<br/>
+							Tredje månaden får du 6 extra lotter.
+						</p>
+						<a href="/" title="link">läs mer här</a>
+					</div>
+
+					@@if (context.logged_in === true) {
+						<a href="/" class="btn btn-target" title="">Läs mer</a>
+					}
+					@@if (context.logged_in !== true) {
+						@@include('components/_bank-form.html',{
+							"form_align": "@@hero_align"
+						})
+					}
+
+				</div>
+			</div>
+			@@if (context.hero_img) {
+				<img src="assets/img/mockup/lotter.png" class="block-hero-reg__image block-hero-reg__image--@@image_align block-hero-reg__image-txt--@@hero_align" alt="lotter" />
+			}
+		</div>
+		@@if (context.hero_tagline) {
+			<div class="block-hero-reg__tagline  background-color-blue">
+				<h4>@@hero_tagline</h4>
+			</div>
+		}
+
+	</header>
+</div>

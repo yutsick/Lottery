@@ -1,0 +1,52 @@
+@@include('layout/_header.html', {
+	"class": "page-front logged-out"
+})
+
+@@include('layout/_top.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})
+
+<div class="content-wrapper ml-2017">
+	Content left & content blue
+	@@include('blocks/_hero-registration.html', {
+	"hero_color": "blue",
+	"hero_bg_img": "assets/img/mockup/bg-blue.jpg",
+	"hero_subtitle": "Subtitle",
+	"hero_img": true,
+	"hero_tagline": "tagline"
+	})
+
+	Content left & content white
+	@@include('blocks/_hero-registration.html', {
+	"hero_color": "white",
+	"hero_bg_img": "assets/img/mockup/man.jpg",
+	"hero_img": true
+	})
+
+	Content left & content white & no image
+	@@include('blocks/_hero-registration.html', {
+	"hero_color": "white",
+	"hero_bg_img": "assets/img/mockup/nature.jpg",
+	"hero_tagline": "Ett annorlunda lotteri, där alla vinner"
+	})
+
+	Content center
+	@@include('blocks/_hero-registration.html', {
+	"hero_align": "middle",
+	"hero_color": "white",
+	"hero_bg_img": "assets/img/mockup/nature.jpg",
+	"logged_in": true,
+	"hero_img": true
+	})
+
+	Image left
+	@@include('blocks/_hero-registration.html', {
+	"hero_align": "middle",
+	"hero_subtitle": "Subtitle",
+	"hero_bg_img": "assets/img/mockup/bg-blue.jpg",
+	"image_align": "left",
+	"hero_img": true
+	})
+
+</div>
+
+@@include('layout/_footer.html', {"show_footer": true})

@@ -17,7 +17,7 @@
 </div>
 }
 
-@@if (context.hero_type === "loggedin") {
+@@if (context.logged_in === true) {
 <div class="container container--no-space">
 	<header class="block block--background-image block-hero flex-@@hero_align text-shadow" style="background-image: url('assets/img/mockup/sunset.jpg')">
 		@@if (context.hero_content === true) {

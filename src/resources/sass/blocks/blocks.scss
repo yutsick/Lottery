@@ -30,10 +30,13 @@
 
 .block--background-color {
 	color: $color-light;
+	&.background-color-yellow {
+		color: $color-black;
+	}
 }
 
 .block--background-pattern {
-	background-image: url("../img/background/ricepaper2_@2X.png");
+	background-image: url("../img/background/ricepaper3_@2X.jpg");
 	background-size: 100% 100%;
 	background-repeat: repeat;
 	background-position: top left;
@@ -67,6 +70,7 @@
 }
 
 @import "hero";
+@import "hero-reg";
 @import "article-list";
 @import "promotion";
 @import "product-list";
@@ -76,4 +80,6 @@
 @import "bottom-bar";
 @import "wallet-transfer";
 @import "shortcuts";
+@import "registration-banner";
+@import "button";
 

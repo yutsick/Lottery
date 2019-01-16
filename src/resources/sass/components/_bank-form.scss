@@ -1,0 +1,70 @@
+.bank-form {
+	max-width: 430px;
+	display: block;
+
+	&--middle {
+		margin: $padding-default auto;
+		text-align: center;
+	}
+	form {
+		display: flex;
+		flex-direction: row;
+		overflow: hidden;
+		margin-top: $padding-medium;
+		margin-bottom: $padding-small;
+	}
+
+	input {
+		border: none;
+		font-size: 16px;
+		&[type="text"] {
+			color: $color-black;
+			border-top-left-radius: 40px;
+			border-bottom-left-radius: 40px;
+			border: 2px solid $color-green;
+			border-right: 0;
+			width: 100%;
+			padding: $padding-small $padding-small $padding-small 60px ;
+			background-image: url("../img/icons/bankid.svg");
+			background-repeat: no-repeat;
+			background-size: 34px 31px;
+			background-position: left $padding-small center;
+		}
+
+		&[type="submit"] {
+			background: $color-green;
+			border: 2px solid $color-green;
+			font-weight: bold;
+			color: $color-white;
+			border-top-right-radius: 40px;
+			border-bottom-right-radius: 40px;
+			padding: $padding-small;
+			padding-right: 20px;
+			transition: background $duration-quick $delay-none $ease-in-out;
+			width: 160px;
+			&:hover {
+				background: $color-green-light;
+			}
+
+			@include min-screen($screen-sm-min) {
+				font-size: 20px;
+				padding: $padding-small  30px;
+			}
+
+		}
+	}
+	&__text {
+		font-size: 20px;
+	}
+	a {
+		text-align: center;
+		display: block;
+		text-decoration: underline;
+
+		&:after {
+			content: "»";
+			display: inline-block;
+			padding-left: $padding-small;
+		}
+	}
+}
