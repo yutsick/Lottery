@@ -1,7 +1,7 @@
 .bank-form {
-	max-width: 430px;
+	max-width: 450px;
 	display: block;
-
+	padding: 0 $padding-medium;
 	&--middle {
 		margin: $padding-default auto;
 		text-align: center;
@@ -55,8 +55,15 @@
 		}
 	}
 	&__text {
-		font-size: 20px;
+		font-size: 15px;
+		font-weight: bold;
+
+		@include min-screen($screen-sm-min) {
+			font-size: 20px;
+			font-weight: normal;
+		}
 	}
+
 	&__continue {
 		text-align: center;
 		display: block;

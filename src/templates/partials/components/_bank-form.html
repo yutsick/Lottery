@@ -1,11 +1,12 @@
 <div class="bank-form bank-form--@@form_align">
 	@@if(context.logged_in !== "true"){
 		<p class="bank-form__text" >Gå med Miljonlotteriet i två enkla steg, börja här </p>
-		<form>
+		<form class="form-bankID" action="/register.html" method="GET" data-toggle="validator">
 			<label class="visually-hidden" for="bankid">Personnummer:</label>
-			<input type="text" id="bankid" placeholder="Mitt personnummer"/>
+			<input type="text" id="bankid" placeholder="Mitt personnummer" required/>
 			<input type="submit" value="Nästa steg" />
 		</form>
+		<p class="form-bankID__msg"></p>
 		<a href="/register.html" alt="Registrera utan bankID" class="bank-form__continue">Jag vill inte använda BankID</a>
 	}
 	@@if(context.logged_in === "true") {

@@ -38,6 +38,7 @@ import walletAccountSwitch from './components/wallet-account-switch';
 import walletTransferAmount from './components/wallet-transfer-amount';
 import orderActions from './components/order-actions';
 import cartQuantity from './components/cart-quantity';
+import bankIDForm from './components/bankid-form';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -80,6 +81,7 @@ $(function () {
 	textToggle();
     new orderActions();
     new cartQuantity();
+	bankIDForm();
 });
 
 /**
