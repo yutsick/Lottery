@@ -6,7 +6,7 @@
 @@include('layout/_sidebar.html', {"logged_in": false})
 
 <div class="content-wrapper ml-2017">
-	Content left & content blue
+	Content left, Color blue & Tagline
 	@@include('blocks/_hero-registration.html', {
 	"hero_color": "blue",
 	"hero_bg_img": "assets/img/mockup/bg-blue.jpg",
@@ -22,14 +22,14 @@
 	"hero_img": true
 	})
 
-	Content left & content white & no image
+	Content left, color white, tagline & no image
 	@@include('blocks/_hero-registration.html', {
 	"hero_color": "white",
 	"hero_bg_img": "assets/img/mockup/nature.jpg",
 	"hero_tagline": "Ett annorlunda lotteri, där alla vinner"
 	})
 
-	Content center
+	Content center, color white & logged in
 	@@include('blocks/_hero-registration.html', {
 	"hero_align": "middle",
 	"hero_color": "white",
@@ -38,7 +38,7 @@
 	"hero_img": true
 	})
 
-	Image left
+	Content center & image left
 	@@include('blocks/_hero-registration.html', {
 	"hero_align": "middle",
 	"hero_subtitle": "Subtitle",

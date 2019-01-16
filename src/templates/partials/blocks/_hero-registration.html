@@ -15,15 +15,10 @@
 						<a href="/" title="link">läs mer här</a>
 					</div>
 
-					@@if (context.logged_in === true) {
-						<a href="/" class="btn btn-target" title="">Läs mer</a>
-					}
-					@@if (context.logged_in !== true) {
-						@@include('components/_bank-form.html',{
-							"form_align": "@@hero_align"
-						})
-					}
-
+					@@include('components/_bank-form.html', {
+						"form_align": "@@hero_align",
+						"logged_in": "@@logged_in"
+					})
 				</div>
 			</div>
 			@@if (context.hero_img) {

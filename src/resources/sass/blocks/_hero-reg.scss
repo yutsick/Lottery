@@ -9,16 +9,15 @@
 	margin-bottom: 20px;
 	padding-bottom: 0;
 	position: relative;
+	overflow: hidden;
 
 	a {
 		color: inherit;
 		text-decoration: underline;
+		&.btn {
+			text-decoration: none;
+		}
 	}
-	.btn {
-		color: $color-white;
-		text-decoration: none;
-	}
-
 
 	&--blue {
 		color: $color-blue-deep;
@@ -26,7 +25,11 @@
 
 	&--white {
 		color: $color-white;
-		text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+		.block-hero-reg__title,
+		.block-hero-reg__text {
+			text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		}
 	}
 
 	.no-spacing {
@@ -66,14 +69,6 @@
 		}
 		.bank-form {
 			margin-top: 50px;
-		}
-		.btn {
-			margin-top: 20px;
-			text-shadow: none;
-
-			@include min-screen($screen-md-min) {
-				margin-top: 30px;
-			}
 		}
 
 		.flex-middle & {
@@ -121,7 +116,6 @@
 		}
 
 		&--left {
-			right: initial;
 			left: 40px;
 			right: auto;
 		}

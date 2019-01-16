@@ -40,10 +40,11 @@
 			border-bottom-right-radius: 40px;
 			padding: $padding-small;
 			padding-right: 20px;
-			transition: background $duration-quick $delay-none $ease-in-out;
+			transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 			width: 160px;
 			&:hover {
-				background: $color-green-light;
+				background: $color-white;
+				color: $color-green;
 			}
 
 			@include min-screen($screen-sm-min) {
@@ -56,15 +57,26 @@
 	&__text {
 		font-size: 20px;
 	}
-	a {
+	&__continue {
 		text-align: center;
 		display: block;
 		text-decoration: underline;
+		color: inherit;
 
 		&:after {
 			content: "»";
 			display: inline-block;
 			padding-left: $padding-small;
+		}
+		&:hover {
+			color: inherit;
+		}
+	}
+	.bank-form {
+		display: none;
+		.background-color-newturqiose & {
+
+			display: none;
 		}
 	}
 }

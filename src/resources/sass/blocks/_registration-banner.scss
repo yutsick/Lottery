@@ -6,19 +6,13 @@
 	&.background-color-million {
 		color: $color-white;
 	}
-	a {
-		color: inherit;
-	}
 	.btn {
-		color: $color-white;
 		margin-top: $padding-default;
 		margin-bottom: $padding-default;
 	}
 	&.background-color-newturqiose {
-		.btn-target {
-			color: $color-green;
-			background: $color-white;
-			border-color: $color-green;
+		.btn-wide--green {
+			@extend .btn-wide--white;
 		}
 	}
 }

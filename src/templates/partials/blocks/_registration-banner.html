@@ -1,10 +1,6 @@
 <div class="registration-banner container container--no-space @@if (context.bg_color) { block--background-pattern block--background-color background-color-@@bg_color }">
-		@@if (context.logged_in === true) {
-			<a href="/prenumerationer.html" class="btn btn-wide btn-target" title="Börja prenumerera">Börja prenumerera</a>
-		}
-		@@if (context.logged_in !== true) {
-			@@include('components/_bank-form.html', {
-				"form_align": "middle"
-			})
-		}
+	@@include('components/_bank-form.html', {
+		"form_align": "middle",
+		"logged_in": "@@logged_in"
+	})
 </div>
