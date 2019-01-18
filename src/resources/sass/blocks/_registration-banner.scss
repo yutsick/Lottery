@@ -1,7 +1,8 @@
 .registration-banner {
 	color: $color-black;
-	margin: $padding-medium 0;
+	margin: $padding-large-horizontal 0;
 	text-align: center;
+	padding: $padding-default;
 	&.background-color-pink,
 	&.background-color-million {
 		color: $color-white;
@@ -14,5 +15,8 @@
 		.btn-wide--green {
 			@extend .btn-wide--white;
 		}
+	}
+	.bank-form {
+		padding: $padding-medium;
 	}
 }

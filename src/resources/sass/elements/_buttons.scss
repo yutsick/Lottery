@@ -330,11 +330,15 @@
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 1;
-
+	&:focus {
+		color: $color-white;
+		border-width: 2px;
+	}
 	&:hover {
 		color: $color-green;
 		background: $color-white;
 		border: 2px solid $color-green;
+		border-width: 2px;
 	}
 
 	&--blue {
@@ -361,7 +365,9 @@
 		border: 2px solid $color-green;
 		background: $color-white;
 		color: $color-green;
-
+		&:focus {
+			color: $color-green;
+		}
 		&:hover {
 			color: $color-white;
 			background: $color-green;
@@ -378,4 +384,5 @@
 			border: 2px solid $color-orange;
 		}
 	}
+
 }
