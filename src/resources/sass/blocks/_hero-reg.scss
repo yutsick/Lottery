@@ -93,7 +93,10 @@
 		top: auto;
 		transform: translateY(0);
 		z-index: 2;
-
+		@include min-screen($screen-sm-min) {
+			width: 90%;
+			max-width: 700px;
+		}
 		@include min-screen($screen-md-min) {
 			padding: 60px 15px;
 			width: 55%;
@@ -117,12 +120,7 @@
 		margin-top: 0;
 		margin-bottom: $padding-small;
 
-		@include min-screen($screen-md-min) {
-			font-size: 46px;
-			line-height: 52px;
-		}
-
-		@include min-screen($screen-lg-min) {
+		@include min-screen($screen-sm-min) {
 			font-size: 40px;
 			line-height: 120%;
 		}
