@@ -11,12 +11,7 @@
 		margin-top: $padding-default;
 		margin-bottom: $padding-default;
 	}
-	&.background-color-newturqiose {
-		.btn-wide--green {
-			@extend .btn-wide--white;
-		}
-	}
 	.bank-form {
-		padding: $padding-medium;
+		padding: 0 $padding-medium;
 	}
 }

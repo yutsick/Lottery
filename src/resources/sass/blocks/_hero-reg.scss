@@ -10,6 +10,7 @@
 	padding-bottom: 0;
 	position: relative;
 	overflow: hidden;
+	z-index: 0;
 
 	a {
 		color: inherit;
@@ -37,22 +38,53 @@
 		transition: font-size $duration-quick $ease-in-out;
 	}
 	&__container {
-		background-size: cover;
-		background-position: bottom center;
 		position: relative;
 		min-height: 320px;
 
-		@include min-screen($screen-md-min) {
-			background-position: center;
-		}
 		&.flex-middle {
 			display: flex;
 			flex-wrap: wrap;
+			flex-direction: column;
 			align-items: center;
 			text-align: center;
+			@include min-screen($screen-md-min) {
+				flex-direction: row;
+			}
 		}
 	}
+	&__background {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			font-family: 'object-fit: cover; object-position: center;';
+		}
+		&-desk {
+			display: block;
+		}
+		&-mobile{
+			display: block;
+			@include min-screen($screen-md-min) {
+				display: none;
+			}
+			& +.block-hero-reg__background-desk {
+				display: none;
+				@include min-screen($screen-md-min) {
+					display: block;
+				}
+			}
 
+		}
+
+	}
 	&__content {
 		width: 100%;
 		max-width: 500px;
@@ -65,7 +97,7 @@
 		@include min-screen($screen-md-min) {
 			padding: 60px 15px;
 			width: 55%;
-			max-width: 700px;
+			max-width: 720px;
 		}
 		.bank-form {
 			margin-top: 50px;

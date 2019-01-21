@@ -1,9 +1,9 @@
 .bank-form {
-	max-width: 450px;
+	max-width: 480px;
 	display: block;
 	//padding: 0 $padding-medium;
 	&--middle {
-		margin: $padding-default auto;
+		margin: $padding-medium auto;
 		text-align: center;
 	}
 	form {
@@ -32,12 +32,16 @@
 			border-right: 0;
 			flex-grow: 1;
 			width: calc(100% - 160px);
-			//max-width: 100%;
 			padding: $padding-small $padding-small $padding-small 60px ;
 			background-image: url("../img/icons/bankid.svg");
 			background-repeat: no-repeat;
 			background-size: 34px 31px;
 			background-position: left $padding-small center;
+
+			@include max-screen($screen-xxs) {
+				padding: $padding-small $padding-small $padding-small 40px ;
+				background-size: 25px 25px;
+			}
 		}
 
 		&[type="submit"] {

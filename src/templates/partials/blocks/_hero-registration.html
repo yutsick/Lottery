@@ -1,6 +1,12 @@
 <div class="container container--no-space">
 	<header class="block block--background-image block-hero-reg block-hero-reg--@@hero_color" >
-		<div class="block-hero-reg__container flex-@@hero_align" style="background-image: url('@@hero_bg_img')">
+		<div class="block-hero-reg__container flex-@@hero_align">
+			<div class="block-hero-reg__background">
+				@@if (context.hero_bg_img_mobile) {
+					<img src="@@hero_bg_img_mobile" alt="background" class="block-hero-reg__background-mobile"/>
+				}
+				<img src="@@hero_bg_img" alt="background" class="block-hero-reg__background-desk"/>
+			</div>
 			<div class="block-hero-reg__content">
 				<div class="container">
 					@@if (context.hero_subtitle) {

@@ -2,6 +2,7 @@ window.$ = window.jQuery = require('jquery');
 require('bootstrap-sass');
 require('bootstrap-validator');
 
+var objectFitImages = require('object-fit-images');
 var fizzyUIUtils = require('fizzy-ui-utils');
 var Flickity = require('flickity/dist/flickity.pkgd.js');
 require('lightgallery.js/dist/js/lightgallery.min.js');
@@ -50,6 +51,7 @@ import textToggle from './utilities/textToggle';
 
 $(function () {
 	modernizr();
+	new objectFitImages();
 	addToDreamlist();
 	alert();
 	bonusCode();
