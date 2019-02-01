@@ -72,14 +72,18 @@
 
 		@include min-screen($screen-sm-min) {
 			padding: $padding-default;
+			padding-top: 0;
 			width: auto;
 			height: auto;
 		}
 
 		.btn {
-			min-height: 42px;
-			margin: 0 5px;
+			min-height: 45px;
+			margin: 0 3px;
 			font-weight: $bold;
+			border-radius: 0 0 0.75em 0.75em;
+			border-top: 0;
+			line-height: 95%;
 
 			@include max-screen($screen-xs-max) {
 				float: left;
