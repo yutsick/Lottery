@@ -24,6 +24,6 @@
     "lightgallery.js": "^1.0.1",
     "natives": "^1.1.6",
     "object-fit-images": "^3.2.4",
-    "vanilla-lazyload": "^10.0.1"
+    "vanilla-lazyload": "^10.19.0"
   }
 }

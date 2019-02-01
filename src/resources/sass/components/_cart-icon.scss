@@ -122,12 +122,7 @@
 		border-radius: 50%;
 		font-size: $size-smallest;
 		text-align: center;
-
-		/* Target only on webkit-based browsers (Chrome, Safari, etc.)
-		   To tackle line-height difference */
-		@media screen and (-webkit-min-device-pixel-ratio:0) {
-			line-height: 22px;
-		}
+		line-height: 22px;
 	}
 }
 
@@ -207,6 +202,7 @@ a.product-cart__item--theme-blue {
 	&:hover,
 	&:focus {
 		background-color: $color-blue-light;
+		border-color: $color-blue-light;
 		color: $color-blue-light;
 	}
 }

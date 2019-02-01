@@ -1,4 +1,4 @@
-var LazyLoad = require('vanilla-lazyload');
+let LazyLoad = require('vanilla-lazyload').default;
 
 export default class entityCollectionActions {
     constructor() {
