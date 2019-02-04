@@ -2,11 +2,6 @@
 	min-height: 0;
 
 }
-.equal-height {
-	.block-promotion--image {
-		height: 100%;
-	}
-}
 
 .block-promotion--image-dynamic {
 	/*@include max-screen($screen-md-max) {
