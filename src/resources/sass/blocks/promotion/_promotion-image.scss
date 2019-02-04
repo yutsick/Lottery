@@ -1,5 +1,11 @@
 .block-promotion--image {
 	min-height: 0;
+
+}
+.equal-height {
+	.block-promotion--image {
+		height: 100%;
+	}
 }
 
 .block-promotion--image-dynamic {
