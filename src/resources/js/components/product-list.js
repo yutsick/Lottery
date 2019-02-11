@@ -1,5 +1,5 @@
 import isMobile from '../utilities/isMobile';
-let LazyLoad = require('vanilla-lazyload').default;
+import LazyLoad from "vanilla-lazyload";
 
 export default class ProductList {
 	constructor() {

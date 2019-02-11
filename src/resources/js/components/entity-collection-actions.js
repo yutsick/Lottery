@@ -1,9 +1,9 @@
-let LazyLoad = require('vanilla-lazyload').default;
+import LazyLoad from "vanilla-lazyload";
 
 export default class entityCollectionActions {
     constructor() {
         this.wrapper = document.querySelector('.product-list-blocks');
-        this.lazyload = this.lazyLoad();
+        this.lazyloads = this.lazyLoadFunction();
         this.collectionActions();
         this.selectTable();
         this.showTable();
@@ -74,11 +74,10 @@ export default class entityCollectionActions {
 	}
 
 
-	lazyLoad() {
+	lazyLoadFunction() {
         if(this.wrapper) {
-			let loading = new LazyLoad({
-				elements_selector: ".block-product__image img"
-			});
+        	let options = { elements_selector: ".block-product__image img" };
+			let loading = new LazyLoad(options);
             return loading;
         }else {
             return false;
@@ -86,8 +85,8 @@ export default class entityCollectionActions {
     }
 
     updateLazyLoad() {
-        if(this.lazyload) {
-            this.lazyload.update();
+        if(this.lazyloads) {
+            this.lazyloads.update();
         }
 	}
 }

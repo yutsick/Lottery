@@ -8,7 +8,6 @@ elixir.config.publicPath = 'dist/assets';
 
 // Autoprefixer options
 elixir.config.css.autoprefix.options.browsers = ['last 4 version', 'ie 9', 'ie 10'];
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -28,7 +27,6 @@ elixir((mix) => {
 	], elixir.config.publicPath + '/css/ie-all.css');
 
     mix.webpack('app.js');
-
     mix.fileinclude();
 
     mix.copy(elixir.config.assetsPath + '/img', elixir.config.publicPath + '/img');
