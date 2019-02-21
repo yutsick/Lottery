@@ -1,11 +1,11 @@
 .bank-form {
 	max-width: 480px;
 	display: block;
-	//padding: 0 $padding-medium;
 	&--middle {
 		margin: $padding-medium auto;
 		text-align: center;
 	}
+
 	form {
 		display: flex;
 		flex-direction: row;
@@ -68,6 +68,7 @@
 
 		}
 	}
+
 	&__text {
 		font-size: 15px;
 		font-weight: bold;
@@ -94,8 +95,10 @@
 		}
 		&:hover {
 			color: inherit;
+			text-decoration: underline;
 		}
 	}
+
 	.bank-form {
 		display: none;
 		.background-color-newturqiose & {

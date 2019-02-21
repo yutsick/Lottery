@@ -12,11 +12,10 @@
 	overflow: hidden;
 	z-index: 0;
 
-	a {
-		color: inherit;
-		text-decoration: underline;
-		&.btn {
-			text-decoration: none;
+	&__text {
+		a {
+			color: inherit;
+			text-decoration: underline;
 		}
 	}
 
