@@ -1,0 +1,116 @@
+.block-image-text {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row;
+	margin-bottom: $margin-default;
+	padding: 0 $padding-medium;
+
+	&--align {
+		&-middle {
+			align-items: center;
+		}
+		&-top {
+			align-items: flex-start;
+		}
+		&-bottom {
+			align-items: flex-end;
+		}
+	}
+	&__image {
+		width: 100%;
+		position: relative;
+		order: 1;
+
+		@include min-screen($screen-sm) {
+			width: 50%;
+		}
+		&--mobile {
+			&-top {
+				order: 1;
+			}
+			&-bottom {
+				order: 3;
+			}
+		}
+		@include min-screen($screen-sm) {
+			&--tablet {
+				&-top {
+					order: 1;
+					width: 100%;
+				}
+				&-bottom {
+					order: 3;
+					width: 100%;
+				}
+				&-left {
+					order: 1;
+				}
+				&-right {
+					order: 3;
+				}
+			}
+		}
+		@include min-screen($screen-md) {
+			width: 50%;
+
+			&--desktop {
+				&-left {
+					order: 1;
+				}
+				&-right {
+					order: 3;
+				}
+			}
+		}
+
+		&--size-square {
+			position: relative;
+
+			&:before {
+				content: "";
+				display: block;
+				width: 100%;
+				padding-top: (1 / 1) * 100%;
+			}
+			img {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				object-position: center;
+				font-family: 'object-fit: cover; object-position: center;';
+
+			}
+		}
+		&--size-rect {
+			position: relative;
+
+			&:before {
+				content: "";
+				display: block;
+				width: 100%;
+				padding-top: (1 / 2) * 100%;
+			}
+			img {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				object-position: center;
+				font-family: 'object-fit: cover; object-position: center;';
+			}
+		}
+	}
+	&__text {
+		order: 2;
+		width: 50%;
+		padding: 0 $padding-medium;
+		flex-grow: 1;
+	}
+}
