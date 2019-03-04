@@ -71,7 +71,7 @@
 				content: "";
 				display: block;
 				width: 100%;
-				padding-top: (1 / 1) * 100%;
+				padding-top: 100%;
 			}
 			img {
 				position: absolute;
@@ -85,14 +85,34 @@
 
 			}
 		}
-		&--size-rect {
+		&--size-landscape {
 			position: relative;
 
 			&:before {
 				content: "";
 				display: block;
 				width: 100%;
-				padding-top: (1 / 2) * 100%;
+				padding-top: 66%;
+			}
+			img {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+				object-position: center;
+				font-family: 'object-fit: cover; object-position: center;';
+			}
+		}
+		&--size-portrait {
+			position: relative;
+
+			&:before {
+				content: "";
+				display: block;
+				width: 100%;
+				padding-top: 150%;
 			}
 			img {
 				position: absolute;
