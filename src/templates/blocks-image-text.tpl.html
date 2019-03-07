@@ -9,7 +9,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					Image: square, align: middle, mobile: top, Tablet: right, Desktop: left
+					Image: square, align: middle, mobile: top, Tablet: right, Desktop: left Link: (btnType: target, link: / , btnText: Knapp text)
 				</div>
 				<div class="col-xs-12 col-md-6">
 					@@include('blocks/_image-text.html', {
@@ -28,12 +28,15 @@
 					"mobile-position": "top",
 					"tablet-position": "right",
 					"desktop-position": "left",
-					"align": "middle"
+					"align": "middle",
+					"link": "/",
+					"btnText": "Knapp text",
+					"btnType": "target"
 					})
 				</div>
 
 				<div class="col-xs-12">
-					Image: portrait, align: bottom, mobile: bottom, Tablet: left, Desktop: left
+					Image: portrait, align: bottom, mobile: bottom, Tablet: left, Desktop: left, Link: (btnType: primary, link: / , btnText: Knapp text)
 				</div>
 				<div class="col-xs-12 col-md-6">
 					@@include('blocks/_image-text.html', {
@@ -42,7 +45,10 @@
 					"mobile-position": "bottom",
 					"tablet-position": "left",
 					"desktop-position": "left",
-					"align": "bottom"
+					"align": "bottom",
+					"link": "/",
+					"btnText": "Knapp text",
+					"btnType": "primary"
 					})
 				</div>
 				<div class="col-xs-12 col-md-6">
@@ -113,7 +119,6 @@
 
 
 		</div>
-	</div>
 </section>
 
 @@include('layout/_footer.html', {"show_footer": true})
