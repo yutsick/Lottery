@@ -42,7 +42,7 @@
 					order: 1;
 					width: 100%;
 					& + .block-image-text__text {
-						padding-top: $padding-small;
+						padding-top: $padding-default;
 					}
 				}
 				&-bottom {
@@ -53,14 +53,14 @@
 					order: 1;
 					width: 50%;
 					& + .block-image-text__text {
-						padding-left: $padding-small;
+						padding-left: $padding-default;
 					}
 				}
 				&-right {
 					order: 3;
 					width: 50%;
 					& + .block-image-text__text {
-						padding-right: $padding-small;
+						padding-right: $padding-default;
 					}
 				}
 			}
@@ -71,9 +71,20 @@
 			&--desktop {
 				&-left {
 					order: 1;
+					& + .block-image-text__text {
+						padding-left: $padding-default;
+						padding-right: 0;
+						padding-top: 0;
+					}
 				}
 				&-right {
 					order: 3;
+
+					& + .block-image-text__text {
+						padding-left: 0;
+						padding-right: $padding-default;
+						padding-top: 0;
+					}
 				}
 			}
 		}
@@ -144,11 +155,5 @@
 		order: 2;
 		width: 50%;
 		flex-grow: 1;
-
-		@include min-screen($screen-md) {
-			padding-top: 0;
-			padding-left: $padding-medium;
-			padding-right: $padding-medium;
-		}
 	}
 }
