@@ -4,8 +4,10 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	flex-direction: row;
-	margin-bottom: $margin-default;
-
+	margin-bottom: $margin-small;
+	@include min-screen($screen-sm) {
+		margin-bottom: $margin-default;
+	}
 	&--align {
 		&-middle {
 			align-items: center;
@@ -24,16 +26,17 @@
 		width: 100%;
 		position: relative;
 		order: 1;
-
 		@include min-screen($screen-md) {
-			width: 50%;
+			width: calc(50%);
 		}
+
 		&--mobile {
 			&-top {
 				order: 1;
 			}
 			&-bottom {
 				order: 3;
+
 			}
 		}
 		@include min-screen($screen-sm) {
@@ -42,7 +45,7 @@
 					order: 1;
 					width: 100%;
 					& + .block-image-text__text {
-						padding-top: $padding-default;
+						padding-top: $padding-small;
 					}
 				}
 				&-bottom {
@@ -52,16 +55,23 @@
 				&-left {
 					order: 1;
 					width: 50%;
+					padding-right: $padding-small;
+					padding-left: 0;
+
 					& + .block-image-text__text {
-						padding-left: $padding-default;
+						padding-left: $padding-small;
 					}
 				}
 				&-right {
 					order: 3;
 					width: 50%;
+					padding-left: $padding-small;
+					padding-right: 0;
+
 					& + .block-image-text__text {
-						padding-right: $padding-default;
+						padding-right: $padding-small;
 					}
+
 				}
 			}
 		}
@@ -71,83 +81,96 @@
 			&--desktop {
 				&-left {
 					order: 1;
+					padding-left: 0;
+					padding-right: $padding-small;
+
 					& + .block-image-text__text {
-						padding-left: $padding-default;
+						padding-left: $padding-small;
 						padding-right: 0;
 						padding-top: 0;
 					}
 				}
+
 				&-right {
 					order: 3;
+					padding-left: $padding-small;
+					padding-right: 0;
 
 					& + .block-image-text__text {
 						padding-left: 0;
-						padding-right: $padding-default;
+						padding-right: $padding-small;
 						padding-top: 0;
 					}
+
 				}
 			}
 		}
 
 		&--size-square {
-			position: relative;
+			.block-image-text__image-container {
+				position: relative;
 
-			&:before {
-				content: "";
-				display: block;
-				width: 100%;
-				padding-top: 100%;
-			}
-			img {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				top: 0;
-				left: 0;
-				object-fit: cover;
-				object-position: center;
-				font-family: 'object-fit: cover; object-position: center;';
-
+				&:before {
+					content: "";
+					display: block;
+					width: 100%;
+					padding-top: 100%;
+				}
+				img {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+					object-position: center;
+					font-family: 'object-fit: cover; object-position: center;';
+				}
 			}
 		}
 		&--size-landscape {
-			position: relative;
+			.block-image-text__image-container {
+				position: relative;
 
-			&:before {
-				content: "";
-				display: block;
-				width: 100%;
-				padding-top: 66%;
+				&:before {
+					content: "";
+					display: block;
+					width: 100%;
+					padding-top: 66%;
+				}
+				img {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+					object-position: center;
+					font-family: 'object-fit: cover; object-position: center;';
+				}
 			}
-			img {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				top: 0;
-				left: 0;
-				object-fit: cover;
-				object-position: center;
-				font-family: 'object-fit: cover; object-position: center;';
-			}
+
 		}
 		&--size-portrait {
-			position: relative;
+			.block-image-text__image-container {
+				position: relative;
 
-			&:before {
-				content: "";
-				display: block;
-				width: 100%;
-				padding-top: 150%;
-			}
-			img {
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				top: 0;
-				left: 0;
-				object-fit: cover;
-				object-position: center;
-				font-family: 'object-fit: cover; object-position: center;';
+				&:before {
+					content: "";
+					display: block;
+					width: 100%;
+					padding-top: 150%;
+				}
+				img {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+					object-position: center;
+					font-family: 'object-fit: cover; object-position: center;';
+				}
 			}
 		}
 	}
@@ -155,5 +178,8 @@
 		order: 2;
 		width: 50%;
 		flex-grow: 1;
+		.btn {
+			margin-bottom: $padding-small;
+		}
 	}
 }
