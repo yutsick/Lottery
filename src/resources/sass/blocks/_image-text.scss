@@ -11,6 +11,9 @@
 	&--align {
 		&-middle {
 			align-items: center;
+			.block-image-text__text > h2 {
+				margin-top: $margin-small;
+			}
 		}
 		&-top {
 			align-items: flex-start;
