@@ -12,13 +12,18 @@
 		&-middle {
 			align-items: center;
 			.block-image-text__text > h2 {
-				margin-top: $margin-small;
+				@include min-screen($screen-sm) {
+					margin-top: $margin-small;
+				}
 			}
 		}
 		&-top {
 			align-items: flex-start;
+
 			.block-image-text__text > h2 {
-				margin-top: 0;
+				@include min-screen($screen-sm) {
+					margin-top: 0;
+				}
 			}
 		}
 		&-bottom {
