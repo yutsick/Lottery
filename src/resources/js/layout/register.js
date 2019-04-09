@@ -72,6 +72,19 @@ export default function () {
 		templateSelection: format,
 		templateResult: format
 	});
+
+	$('.chooseAssociation').select2({
+		templateSelection: format,
+		templateResult: format,
+		placeholder: "Välj en förening att stödja"
+	});
+
+	$(".chooseAssociation").on("select2:open", function() {
+		$(".select2-search--dropdown .select2-search__field").attr("placeholder", "Sök stad eller förening");
+	});
+	$(".chooseAssociation").on("select2:close", function() {
+		$(".select2-search--dropdown .select2-search__field").attr("placeholder", null);
+	});
 }
 
 

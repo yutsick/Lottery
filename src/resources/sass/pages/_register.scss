@@ -107,6 +107,19 @@ a.navlink:hover {
 		width: 100%;
 	}
 
+	#chooseAssociation {
+		width: 100%;
+	}
+
+	.chooseAssociationLabel {
+		display: flex;
+		align-items: center;
+
+		.icon {
+			margin-left: 5px;
+		}
+	}
+
 	.input-icon {
 		padding-top: 10px;
 		color: #a9db9b;
@@ -186,6 +199,15 @@ a.navlink:hover {
 	padding: 15px;
 	vertical-align: middle;
 }
+
+
+.select2-search--dropdown .select2-search__field {
+	padding: 10px;
+	outline: 0;
+	font-size: 16px;
+	font-weight: 400;
+}
+
 
 .choice-icon {
 	margin-right: 20px;
