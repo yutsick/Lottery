@@ -1,3 +1,5 @@
+import isMobile from '../utilities/isMobile';
+
 export default function() {
 
 	// Get current element value, add as html on target
@@ -9,6 +11,12 @@ export default function() {
 
 		// Close the dropdown menu
 		$(this).parents('.dropdown').removeClass('open').find('.filter-dropdown__button').attr('aria-expanded', false);
+
+		if (isMobile()) {
+			console.log('tt');
+			$('body').removeClass('modal-open js-overlay-is-active');
+			$(".modal-backdrop").remove();
+		}
 
 		// Remove backdrop
 		if ($('.modal-backdrop')) {
