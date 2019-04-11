@@ -171,7 +171,6 @@
 
 	&.center {
 		.modal__holder {
-			align-items: center;
 			justify-content: center;	
 		}
 	}
@@ -215,8 +214,13 @@
 		}
 
 		a {
-			position: absolute;
 			text-decoration: underline;
+		}
+
+		@include min-screen($screen-sm-min) {
+			a {
+				position: absolute;
+			}
 		}
 	}
 }
