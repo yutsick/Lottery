@@ -161,10 +161,13 @@
 
 	.modal-content {
 		padding: 25px;
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		flex-wrap: nowrap;
 	}
 
 	.modal__holder {
-		display: flex;
 		height: 100%;
 		width: 100%;
 	}
@@ -206,7 +209,6 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: flex-end;
 
 		button {
 			margin: 0 auto;
@@ -215,12 +217,6 @@
 
 		a {
 			text-decoration: underline;
-		}
-
-		@include min-screen($screen-sm-min) {
-			a {
-				position: absolute;
-			}
 		}
 	}
 }
