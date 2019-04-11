@@ -152,3 +152,71 @@
 .modal-page--active {
 	display: block;
 }
+
+#modal__terms-of-services {
+	
+	form {
+		height: 100%;
+	}
+
+	.modal-content {
+		padding: 25px;
+	}
+
+	.modal__holder {
+		display: flex;
+		height: 100%;
+		width: 100%;
+	}
+
+	&.center {
+		.modal__holder {
+			align-items: center;
+			justify-content: center;	
+		}
+	}
+
+	.modal-body {
+		overflow-y: scroll;
+		max-height: 500px;
+		border: 1px solid $color-space;
+	}
+
+	.modal-dialog {
+		padding: 20px;
+		max-width: 800px !important;
+		width: 100%;
+	}
+
+	.modal-header {
+		padding: 0 0 15px;
+
+		.modal-title1 {
+			line-height: 28px;
+			padding: 0;
+			margin-bottom: 25px;
+		}
+
+		p {
+			text-align: left;
+		}
+	}
+
+	.modal-footer {
+		padding: 25px 0 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-end;
+
+		button {
+			margin: 0 auto;
+			width: auto;
+		}
+
+		a {
+			position: absolute;
+			text-decoration: underline;
+		}
+	}
+}

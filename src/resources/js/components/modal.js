@@ -25,4 +25,12 @@ export default function () {
 
 		$modal.find('#' + page).addClass('modal-page--active');
 	})
+
+	let $termsOfServiceModal = $('#modal__terms-of-services');
+	if($termsOfServiceModal.length > 0) {
+		let openedByDefault = $termsOfServiceModal.data('opened-by-default');
+		if(openedByDefault){
+			$termsOfServiceModal.modal('show');
+		}
+	}
 }

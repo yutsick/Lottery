@@ -180,6 +180,32 @@ export default function () {
 		}
 	}(jQuery));
 
+	let $termsOfServiceModal = $('#modal__terms-of-services');
+	if($termsOfServiceModal.length > 0) {
+		let $termsFrom = $termsOfServiceModal.find('form');
+		if($termsFrom.length > 0) {
+			$termsFrom.on('submit', function (e) {
+				e.preventDefault();	
+				let $this = $(this);
+				let formData = $this.serialize();
+				let url = $this.attr('action');
+				let $submitButton = $this.find('[type="submit"]');
+				$submitButton.prop('disabled', true);
+	
+				$.ajax({
+					type: "POST",
+					url: url,
+					data: formData,
+					complete: () => {
+						$('.modal').modal('hide');
+					}
+				});
+				return false;
+			});
+		}
+		
+	}
+
 	function validate_my_profile() {
 		let msg = "This page is asking you to confirm that you want to leave - data you have entered may not be saved.";
 
