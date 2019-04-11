@@ -110,17 +110,19 @@
 	}
 
 	&-input {
-		width: 50px;
+		width: 52px;
 		height: 40px;
-		padding: $margin-small 24px $margin-small 2px;
+		padding: $margin-small 24px $margin-small 6px;
 		border: 1px solid $color-gray-border;
 		text-align: right;
 		font-weight: $bold;
+		text-align: center;
 
 		@include min-screen($screen-sm-min) {
-			width: 45px;
+			width: 47px;
 			height: 45px;
-			padding-right: 20px;
+			padding-right: 22px;
+			padding-left: 4px;
 		}
 
 		&:focus {
