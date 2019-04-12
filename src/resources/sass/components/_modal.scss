@@ -153,7 +153,8 @@
 	display: block;
 }
 
-#modal__terms-of-services {
+
+#modal__terms-of-service {
 	
 	form {
 		height: 100%;
@@ -163,31 +164,46 @@
 		padding: 25px;
 		display: flex;
 		width: 100%;
+		height: 100%;
 		flex-direction: column;
+		align-content: center;
 		flex-wrap: nowrap;
+
+		@include max-screen($screen-sm-min) {
+			padding: 15px;		
+		}
 	}
 
 	.modal__holder {
 		height: 100%;
 		width: 100%;
-	}
-
-	&.center {
-		.modal__holder {
-			justify-content: center;	
-		}
+		display: flex;
+		align-items: center;
 	}
 
 	.modal-body {
 		overflow-y: scroll;
 		max-height: 500px;
 		border: 1px solid $color-space;
+
+		@include max-screen($screen-sm-min) {
+			height: 40vh;
+			max-height: 100%;
+			flex: 1 1 auto;
+		}
+		
 	}
 
 	.modal-dialog {
-		padding: 20px;
+		padding: 25px;
 		max-width: 800px !important;
 		width: 100%;
+
+		@include max-screen($screen-sm-min) {
+			margin: 0;	
+			padding: 15px;	
+			height: 100%;
+		}
 	}
 
 	.modal-header {
@@ -202,10 +218,20 @@
 		p {
 			text-align: left;
 		}
+
+		@include max-screen($screen-sm-min) {
+			padding: 0 0 5px;
+
+			.modal-title1 {
+				margin-bottom: 15px;
+			}
+		}
+
 	}
 
 	.modal-footer {
 		padding: 25px 0 0;
+		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -217,6 +243,17 @@
 
 		a {
 			text-decoration: underline;
+		}
+
+		@include max-screen($screen-sm-min) {
+			padding: 15px 0 0;		
+			flex-direction: column;
+			margin-top: auto;
+			flex-wrap: nowrap;
+			
+			button {
+				margin-bottom: 10px;
+			}
 		}
 	}
 }
