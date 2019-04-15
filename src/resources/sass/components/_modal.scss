@@ -242,6 +242,8 @@
 
 		a {
 			text-decoration: underline;
+			position: absolute;
+			right: 20px;
 		}
 
 		@include max-screen($screen-sm-min) {
@@ -252,6 +254,11 @@
 			
 			button {
 				margin-bottom: 10px;
+			}
+
+			a {
+				position: relative;
+				right: 0;
 			}
 		}
 	}
