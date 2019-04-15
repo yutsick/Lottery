@@ -13,9 +13,9 @@ export default function() {
 		$(this).parents('.dropdown').removeClass('open').find('.filter-dropdown__button').attr('aria-expanded', false);
 
 		if (isMobile()) {
-			console.log('tt');
 			$('body').removeClass('modal-open js-overlay-is-active');
 			$(".modal-backdrop").remove();
+			$(".dropdown-backdrop").remove();
 		}
 
 		// Remove backdrop
