@@ -221,6 +221,7 @@ export default class ProductList {
 			if (isMobile()) {
 				$('body').removeClass('modal-open js-overlay-is-active');
 				$(".modal-backdrop").remove();
+				$(".dropdown-backdrop").remove();
 			}
 		});
 
@@ -229,6 +230,7 @@ export default class ProductList {
 			if (isMobile()) {
 				$('body').removeClass('modal-open js-overlay-is-active');
 				$(".modal-backdrop").remove();
+				$(".dropdown-backdrop").remove();
 			}
 		});
 
@@ -251,6 +253,7 @@ export default class ProductList {
 			if (isMobile()) {
 				$('body').removeClass('modal-open js-overlay-is-active');
 				$(".modal-backdrop").remove();
+				$(".dropdown-backdrop").remove();
 			}
 		});
 	}
