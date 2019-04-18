@@ -2,8 +2,10 @@
 "class": "page-front logged-in"
 })
 
-@@include('layout/_top.html', {"logged_in": true})
-@@include('layout/_sidebar.html', {"logged_in": true})
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
 
 <div class="content-wrapper ml-2017">
 	<div class="my-pages container">
@@ -21,15 +23,15 @@
 				<p>Har du en bonuskod? Skriv in den här så får du din bonus insatt direkt</p>
 
 				<form id="bonus-code-form" action="/ajax/json/bonus-code-response.json" method="get"
-					  data-toggle="validator">
+						data-toggle="validator">
 					<div class="row">
 						<div class="col-xs-12 col-sm-4">
 							<div class="form-group">
 								<input class="form-control"
-									   type="text"
-									   placeholder="Ange bonuskod"
-									   data-required-error="Du måste fylla i detta fält."
-									   required>
+										type="text"
+										placeholder="Ange bonuskod"
+										data-required-error="Du måste fylla i detta fält."
+										required>
 								<div class="help-block with-errors"></div>
 							</div>
 						</div>

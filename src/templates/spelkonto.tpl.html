@@ -2,8 +2,9 @@
 "class": "page-front logged-in"
 })
 
-@@include('layout/_top.html', {"logged_in": true})
-@@include('layout/_sidebar.html', {"logged_in": true})
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
 
 <div class="content-wrapper ml-2017">
 	<div class="my-pages container">
@@ -63,18 +64,18 @@
 								<span class="wallet-switch__label">Från:</span>
 								<span class="wallet-switch__account">Spelplånbok</span>
 								<span class="hidden-xs">(<span class="wallet-switch__balance"
-															   data-balance="200">200</span>kr)</span>
+																data-balance="200">200</span>kr)</span>
 							</p>
 							<button class="wallet-switch__btn js-wallet-switch">
 								<img class="wallet-switch__icon" src="assets/img/icons/arrow-switch-white.svg"
-									 alt="Pilar för att växla mellan konto" width="19px" height="17px">
+										alt="Pilar för att växla mellan konto" width="19px" height="17px">
 								<span class="sr-only">Växla konto</span>
 							</button>
 							<p class="wallet-switch__item" data-account="Vinstkonto">
 								<span class="wallet-switch__label">Till:</span>
 								<span class="wallet-switch__account">Vinstkonto</span>
 								<span class="hidden-xs">(<span class="wallet-switch__balance"
-															   data-balance="100">100</span>kr)</span>
+																data-balance="100">100</span>kr)</span>
 							</p>
 						</div>
 
@@ -103,7 +104,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-3">
 					<ul class="nav list-group" id="account-selector-tab" role="tablist"
-						 aria-orientation="vertical">
+							aria-orientation="vertical">
 						<li class="js-load-section list-group-item" data-toggle="tab" href="#account-wallet" role="tab">
 							<header>Spelplånbok</header>
 							<p>Se över och ändra dina uppgifter</p>

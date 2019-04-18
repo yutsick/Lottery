@@ -16,6 +16,17 @@
 /* Bootstrap */
 @import "vendor/bootstrap";
 
+/* Add breakpoint names to body content */
+@include breakpoints($breakpoints);
+
+.freeze {
+	position: fixed !important;
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	-webkit-overflow-scrolling: touch;
+}
+
+
 .ml-2017 {
 	/* Flickity */
 	@import "vendor/flickity";

@@ -3,7 +3,7 @@ html,
 body {
 	@include max-screen($screen-sm - 1) {
 		-webkit-overflow-scrolling: touch !important;
-		overflow: auto !important;
+		//overflow: auto !important;
 		height: 100% !important;
 	}
 }
@@ -27,7 +27,7 @@ body {
 	}
 }
 
-#page-wrapper {
+/*page-wrapper {
 	padding-left: 0;
 
 	@include min-screen($screen-md-min) {
@@ -75,8 +75,7 @@ body {
 	&.js-is-active #sidebar {
 		transform: translate3d(0, 0, 0);
 	}
-}
-
+}*/
 
 #page-wrapper.page--content-only {
 	@include max-screen($screen-sm-max) {
@@ -126,13 +125,13 @@ body {
 #page-wrapper.shop {
 	overflow: hidden;
 
-	@include max-screen($screen-xs-max) {
+	/*@include max-screen($screen-xs-max) {
 		padding-top: 102px;
 	}
 
 	.container:first-child {
 		position: relative;
-	}
+	}*/
 
 	&.logged-in {
 		/* Hide elements if logged in */

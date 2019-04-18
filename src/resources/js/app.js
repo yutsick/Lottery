@@ -11,6 +11,9 @@ require('lg-thumbnail.js/dist/lg-thumbnail.js');
 /* Vendor */
 import modernizr from './vendor/modernizr-custom.js';
 
+/* Store */
+import storeConfiguration from './store';
+
 /* Components */
 import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
@@ -45,11 +48,17 @@ import bankIDForm from './components/bankid-form';
 import navigation from './layout/navigation';
 import register from './layout/register';
 import top from './layout/top';
+import slideOutNavigation from './layout/slideOutNavigation';
+import navigationControl from './layout/navigationControl';
 
 /* Utilities */
 import textToggle from './utilities/textToggle';
+import breakpointListener from './utilities/breakpointListener';
+import scroller from './utilities/scroller';
 
 $(function () {
+	window.ML = window.ML || {};
+	window.ML.store = storeConfiguration();
 	modernizr();
 	new objectFitImages();
 	addToDreamlist();
@@ -84,6 +93,11 @@ $(function () {
     new orderActions();
     new cartQuantity();
 	bankIDForm();
+	scroller();
+	slideOutNavigation();
+	navigationControl();
+	/* call breakpointListener last */
+	breakpointListener();
 });
 
 /**

@@ -3,8 +3,10 @@
 	"class": "page-register logged-out page--content-only"
 })
 
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+<!--
 @@include('layout/_top.html', {"logged_in": false})
-@@include('layout/_sidebar.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})-->
 
 
 <div class="content-wrapper ml-2017 register-content">
@@ -51,6 +53,122 @@
 						</select>
 						<div class="help-block with-errors"></div>
 					</div>
+				</div>
+
+				<div class="col-12 col-md-4 col-sm-5 col-sm-offset-1 col-md-offset-1 right-input-group" >
+					<div id="payWay" class="form-group has-feedback" >
+						<label for="choosePayWay" style="width: 100%;">
+							Välj betalsätt
+						</label>
+						<select id="choosePayWay" class="form-control choosePayWay" name="choosePayWay" required data-error="Du måste välja betalsätt" style="width: 100%">
+							<option value>Välj betalsätt</option>
+							<option value="faktura" id="faktura">Faktura</option>
+							<option value="betalkort" id="betalkort">Betalkort</option>
+						</select>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div id="loginWay" class="form-group has-feedback" >
+						<label for="chooseLoginWay" style="width: 100%;">
+							Välj inloggningssätt
+						</label>
+						<select id="chooseLoginWay" class="form-control chooseLoginWay" name="chooseLoginWay" required data-error="Du måste välja ett inloggningssätt" style="width: 100%">
+							<option value>Välj inloggningssätt</option>
+							<option value="bankid" id="bankid">Bank Id</option>
+							<option value="password" id="password">Lösenord</option>
+						</select>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div id="deviceId" style="display: none">
+						<label for="chooseDevice">Välj Enhet</label>
+						<select id="chooseDevice" class="fomr-control chooseDevice" name="chooseDevice" style="width: 100%">
+							<option value="1">BankID på denna enhet</option>
+							<option value="2">BankID på annan enhet</option>
+						</select>
+					</div>
+
+					<div id="passwordInputs" style="display: none;">
+						<div class="form-group has-feedback"  id="userPasswordGroup" >
+							<label for="userPassword">Ange lösenord</label><label class="pull-right light-label" for="userPassword">Minst 6 tecken</label>
+							<input type="password" class="form-control" data-minlength="6" id="userPassword"
+								   placeholder="" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 6 tecken.">
+							<div class="help-block with-errors"></div>
+						</div>
+						<div class="form-group has-feedback" id="userPasswordRepeatGroup">
+							<label for="userPasswordRepeat">Ange lösenordet igen</label>
+							<input type="password" class="form-control" id="userPasswordRepeat" type="hidden" data-match="#userPassword" data-match-error=modal-ops
+								   placeholder="" data-required-error="Du måste fylla i detta fält.">
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+					<div class="form-group has-feedback">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" id="userAcceptTerms" class="custom-checkbox" required data-required-error="Du måste fylla i detta fält.">
+								Jag godkänner Miljonlotteriets <a href="#" data-toggle="modal" data-target="#modal-conditions">Villkor</a>
+							</label>
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" class="custom-checkbox" id="newsletterCheckbox"> Jag vill ha nyhetsbrev
+							</label>
+						</div>
+					</div>
+
+					<div class="input-group">
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Slutför</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 text-center" style="margin-top: 70px;">Är du redan kund?<a href="#" class="navlink" data-toggle="modal" data-target="#modal-login"> Klicka här</a> för<br> att logga in.</div>
+			<div class="col-12 col-md-1 col-sm-0"></div>
+		</form>
+	</div>
+	<div class="container">
+		<form id="register-form1" class="register-content" data-toggle="validator" action="/" method="get">
+		
+			<a href="/" id="registerBackButton" class="btn-icon-only">
+				<i id="registerBackButtonIcon" class="icon icon-arrow-button "></i>
+			</a>
+			<div class="row content">
+				<div class="col-12 col-sm-0 col-md-1"></div>
+				<div class="col-12 col-sm-5 col-md-4">
+					<h2>Hej!</h2>
+					<p>Låt oss skapa ditt konto.Det tar bara en minut</p>
+					<div class="form-group has-feedback">
+						<label for="userPersonalNumber">Ange ditt personnummer</label>
+						<input type="text" class="form-control" id="userPersonalNumber"
+							   placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken." data-toggle="popover" data-trigger="manual" data-placement="top">
+						<i class="icon icon-check input-icon form-control-feedback" style="display:none;"></i>
+						<img class="form-control-feedback" id="spinnerPersonalNumber" src="assets/img/icons/spinner.svg" style="display:none;">
+
+						<div class="help-block with-errors"></div>
+					</div>
+					<div class="form-group has-feedback">
+						<label for="userEmail has-feedback">Och din e-postadress</label>
+						<input type="email" class="form-control" id="userEmail"
+							   placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div id="delivery" class="form-group has-feedback" >
+						<label for="chooseDelivery" style="width: 100%;">
+							Välj leveranssätt
+						</label>
+						<select id="chooseDelivery" class="form-control chooseDelivery" name="chooseDelivery" required data-error="Du måste välja ett leveranssätt" style="width: 100%">
+							<option value>Välj leveranssätt</option>
+							<option value="fysiska" id="fysiska">Jag vill ha fysiska lotter</option>
+							<option value="digitala" id="digitala">Jag vill ha digitala lotter</option>
+						</select>
+						<div class="help-block with-errors"></div>
+					</div>
+
 					<div id="association" class="form-group has-feedback" >
 						<label for="chooseAssociation" class="chooseAssociationLabel" style="width: 100%;">
 							Jag önskar stödja följande förening <i class="icon icon-info tooltip-on-touch" data-toggle="tooltip" data-placement="top" data-original-title="Information kring denna funktion"></i>

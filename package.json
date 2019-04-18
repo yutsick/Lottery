@@ -22,8 +22,10 @@
     "flickity": "^2.2.0",
     "lg-thumbnail.js": "^1.1.0",
     "lightgallery.js": "^1.1.3",
+    "lodash.debounce": "^4.0.8",
     "natives": "^1.1.6",
     "object-fit-images": "^3.2.4",
+    "redux": "^4.0.1",
     "vanilla-lazyload": "^10.0.1"
   }
 }

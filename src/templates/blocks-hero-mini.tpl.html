@@ -2,8 +2,9 @@
 	"class": "page-front logged-out"
 })
 
-@@include('layout/_top.html', {"logged_in": false})
-@@include('layout/_sidebar.html', {"logged_in": false})
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})-->
 
 <div class="content-wrapper ml-2017">
 	@@include('blocks/_hero.html', {

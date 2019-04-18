@@ -2,12 +2,13 @@
 	"class": "logged-in shop"
 })
 
-@@include('layout/_top.html', {"logged_in": true})
-@@include('layout/_sidebar.html', {"logged_in": true})
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
 
 <div class="content-wrapper ml-2017">
 	<div class="container">
-		@@include('components/_cart-icon.html')
+		<!--@@include('components/_cart-icon.html')-->
 
 		<div class="block block-hero block-hero--mini block-hero--no-margin">
 			<h1 class="block-hero__page-title block-hero__page-title--absolute">

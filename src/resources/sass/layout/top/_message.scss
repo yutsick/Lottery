@@ -1,138 +1,145 @@
 .message-container{
-    width: 100%;
-    max-width: 1400px;
-    position: relative;
-    z-index: 900;
-    transition: transform $duration-fast $ease-standard $delay-none, right $duration-fast $ease-standard $delay-none;
-    @media screen and (max-width: $screen-sm) {
-      bottom: 0;
-      left: 0;
-    }
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 900;
+  transition: transform $duration-fast $ease-standard $delay-none, right $duration-fast $ease-standard $delay-none;
+  @media screen and (max-width: $screen-sm) {
+    bottom: 0;
+    left: 0;
+  }
+  
 }
 
 .fixed {
-  @media screen and (min-width: 1661px) {
-    position: fixed;
-    top: 0;
-    z-index: 900;
-  }
-  @media screen and (max-width: 1660px) {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 900;
-  }
+@media screen and (min-width: 1661px) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 900;
+}
+@media screen and (max-width: 1660px) {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 900;
+}
 
-  @media screen and (max-width: $screen-sm) {
-    position: relative;
-    top: 0;
-    right: 0;
-    z-index: 900;
-  }
+@media screen and (max-width: $screen-sm) {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 900;
 }
 
 .new-message {
-    display: flex;
-    position:absolute;
-    right:-500px;
-    align-items: center;
-    width: 300px;
-    z-index: 900;
-    top:20px;
-    border-radius: 10px;
-    border: 2px solid $color-feather;
-    background-color: rgba(245, 248, 250, 0.95);
-    opacity: 0;
-    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.1);
-    @media screen and (max-width:1419px) {
-      top:71px;
+  top: 20px;
+  @media screen and (min-width: 1440px) {
+    top: 40px;
+  }
+}
+
+}
+
+.new-message {
+  display: flex;
+  position:absolute;
+  right:-500px;
+  align-items: center;
+  width: 300px;
+  z-index: 900;
+  top:70px;
+  border-radius: 10px;
+  border: 2px solid $color-feather;
+  background-color: rgba(245, 248, 250, 0.95);
+  opacity: 0;
+  box-shadow: 0 6px 6px 0 rgba(0,0,0,0.1);
+
+  @media screen and (max-width: $screen-sm) {
+      position: fixed;
+      bottom: 80px;
+      width: auto;
+      left: 10px;
+      right: 10px !important;
+      top: auto;
     }
 
-    @media screen and (max-width: $screen-sm) {
-        position: fixed;
-        bottom: 80px;
-        width: auto;
-        left: 10px;
-        right: 10px !important;
-        top: auto;
-      }
-
-	@media screen and (min-width: $screen-sm) and (max-width: $screen-md) {
-		left: 80px;
-	}
-
-      & h6{
-          font-size: $base-font-size;
-          line-height: 1;
-          color: $color-ocean;
-      }
+    & h6{
+        font-size: $base-font-size;
+        line-height: 1;
+        color: $color-ocean;
+    }
 }
 
 .new-message__show{
-    opacity: 1;
-    right: 20px;
-    padding-left: 50px;
-    transition: opacity 1s , right 0.6s;
-      @media screen and (max-width: $screen-sm) {
-        right: 10px !important;
-        transition: opacity 0.5s
-      }
+  opacity: 1;
+  right: 20px;
+  padding-left: 50px;
+  transition: opacity 1s , right 0.6s;
+  @media screen and (max-width: $screen-sm) {
+    right: 10px !important;
+    transition: opacity 0.5s
+  }
+  @media screen and (min-width: 1440px) {
+    right: 40px;
+  }
 }
 
 .new-message__remove{
-  @media screen and (max-width: $screen-sm) {
-    bottom: 30px;
-  }
+@media screen and (max-width: $screen-sm) {
+  bottom: 30px;
+}
 }
 
 .new-message__alone{
-    opacity: 0;
-    right:-500px;
-    transition: opacity 0.6s , right 1s;
-      @media screen and (max-width: $screen-sm) {
-        transition: opacity 0.5s;
-        display: none;
-      }
+  opacity: 0;
+  right:-500px;
+  transition: opacity 0.6s , right 1s;
+    @media screen and (max-width: $screen-sm) {
+      transition: opacity 0.5s;
+      display: none;
+    }
 }
 
 .new-message__message-text{
-    font-size: $base-font-size;
-    color: $color-blueberry;
-    line-height: 0.5;
-    padding: 10px;
-    margin-left: 5px;
-    padding-right: 0;
+  font-size: $base-font-size;
+  color: $color-blueberry;
+  line-height: 0.5;
+  padding: 10px;
+  margin-left: 5px;
+  padding-right: 0;
 
-  h6{
-    font-family: $semi-heading-family;
-    font-weight: $extrabold;
-  }
-  p{
-    font-family: $basic-heading-family;
-    font-weight: $bold;
-    line-height: 1.1;
-    margin: -5px 0 10px;
-  }
+h6{
+  font-family: $semi-heading-family;
+  font-weight: $extrabold;
+}
+p{
+  font-family: $basic-heading-family;
+  font-weight: $bold;
+  line-height: 1.1;
+  margin: -5px 0 10px;
+}
 }
 
 .new-message__icon {
-  position: absolute;
-  top: 21px;
-  left: 15px;
+position: absolute;
+top: 21px;
+left: 15px;
 }
 
 
 .new-message__button{
-    background-color: transparent;
-    border: 0;
-    outline: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 6px;
-        & i{
-        font-size:10px;
-        color:$color-gray;
-        font-weight: lighter;
-      }
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 6px;
+      & i{
+      font-size:10px;
+      color:$color-gray;
+      font-weight: lighter;
+    }
 }

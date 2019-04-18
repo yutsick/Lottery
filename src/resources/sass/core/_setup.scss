@@ -85,3 +85,12 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 
 // Set Gutter
 $grid-gutter-width: 20px; // redefining
+
+$breakpoints: (
+  ("tiny", 0px, $screen-tiny),
+  ("thumb", $screen-tiny + 1px, $screen-phone),
+  ("handheld", $screen-phone + 1px, $screen-tablet),
+  ("lap", $screen-tablet + 1px, $screen-desktop),
+  ("desktop", $screen-desktop, $screen-lg-desktop),
+  ("widescreen", $screen-lg-desktop + 1px, null)
+);

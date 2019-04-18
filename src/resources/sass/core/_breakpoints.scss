@@ -1,0 +1,30 @@
+@mixin breakpoints($breakpoints) {
+	body {
+	  &:before {
+	    display: none;
+	  }
+	  @each $name, $breakpointMin, $breakpointMax in $breakpoints {
+	    @if $breakpointMin != null and $breakpointMax != null {
+	      @media screen and (min-width: $breakpointMin) and (max-width: $breakpointMax) {
+	        &:before {
+	          content: $name;
+	        }
+	      }
+	    }
+	    @if $breakpointMin != null and $breakpointMax == null {
+	      @media screen and (min-width: $breakpointMin) {
+	        &:before {
+	          content: $name;
+	        }
+	      }
+	    }
+	    @if $breakpointMin == null and $breakpointMax != null {
+	      @media screen and (max-width: $breakpointMax) {
+	        &:before {
+	          content: $name;
+	        }
+	      }
+	    }
+	  }
+	}
+}

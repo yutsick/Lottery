@@ -1,54 +1,55 @@
 @@include('layout/_header.html', {
-"class": "page-front logged-out"
-})
-
-@@include('layout/_top.html', {"logged_in": false})
-@@include('layout/_sidebar.html', {"logged_in": false})
-
-<div class="content-wrapper ml-2017">
-	Default
-	@@include('blocks/_button.html', {
-	"link": "/",
-	"text": "Börja prenumerera"
+	"class": "page-front logged-out"
 	})
-
-	Set to white & align center
-	@@include('blocks/_button.html', {
-	"color": "white",
-	"link": "/",
-	"text": "Börja prenumerera",
-	"align": "center"
-	})
-
-	Set to blue & align center
-	@@include('blocks/_button.html', {
-	"color": "blue",
-	"link": "/",
-	"text": "Börja prenumerera",
-	"align": "center"
-	})
-
-	Set to green & align center
-	@@include('blocks/_button.html', {
-	"color": "green",
-	"link": "/",
-	"text": "Börja prenumerera",
-	"align": "center"
-	})
-
-	Set to orange
-	@@include('blocks/_button.html', {
-	"color": "orange",
-	"link": "/",
-	"text": "Börja prenumerera"
-	})
-
-	without link
-	@@include('blocks/_button.html', {
-	"color": "blue",
-	"text": "Börja prenumerera"
-	})
-
-</div>
-
-@@include('layout/_footer.html', {"show_footer": true})
+	
+	@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+	<!--@@include('layout/_top.html', {"logged_in": false})
+	@@include('layout/_sidebar.html', {"logged_in": false})-->
+	
+	<div class="content-wrapper ml-2017">
+		Default
+		@@include('blocks/_button.html', {
+		"link": "/",
+		"text": "Börja prenumerera"
+		})
+	
+		Set to white & align center
+		@@include('blocks/_button.html', {
+		"color": "white",
+		"link": "/",
+		"text": "Börja prenumerera",
+		"align": "center"
+		})
+	
+		Set to blue & align center
+		@@include('blocks/_button.html', {
+		"color": "blue",
+		"link": "/",
+		"text": "Börja prenumerera",
+		"align": "center"
+		})
+	
+		Set to green & align center
+		@@include('blocks/_button.html', {
+		"color": "green",
+		"link": "/",
+		"text": "Börja prenumerera",
+		"align": "center"
+		})
+	
+		Set to orange
+		@@include('blocks/_button.html', {
+		"color": "orange",
+		"link": "/",
+		"text": "Börja prenumerera"
+		})
+	
+		without link
+		@@include('blocks/_button.html', {
+		"color": "blue",
+		"text": "Börja prenumerera"
+		})
+	
+	</div>
+	
+	@@include('layout/_footer.html', {"show_footer": true})

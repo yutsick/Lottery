@@ -1,0 +1,161 @@
+<div class="ml-2017">
+    <div class="alert alert-info" role="alert">
+        <button type="button" class="close js-action-close" aria-label="Close">
+            <span aria-hidden="true">
+                <i class="icon icon-close icon-size-small"></i>
+            </span>
+        </button>
+        <a href="/" target="_self"><strong>540 500 kr i Jackpot</strong></a>, dragning 11 Mars
+    </div>
+</div>
+<div id="top" class="ml-2017">
+    <div class="top">
+        <div class="top__holder">
+            <div class="top__menu-toggle">
+                <button class="js-toggle-nav">
+                    <i class="icon icon-burger"></i>
+                    <span>Meny</span>
+                </button>
+            </div>
+            <div class="top__brand">
+                <a href="/" title="Hem" class="top__brand-logotype">
+                    <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
+                </a>
+            </div>
+            <div class="top__contact">
+                <div class="icon">
+                    <img src="assets/img/icons/support.svg" width="30" height="30" alt="Pilikon för att visa innehåll">
+                </div>
+                <div class="text">
+                    <p>Ring in och beställ dina lotter</p>
+                    <a href="tel:+46313880000">031-388 00 00</a>
+                </div>
+            </div>
+            <div class="top__actions">
+                @@if (logged_in === false) {
+                    <div class="top__actions-account">
+                        <button id="log-in" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-login">Logga in</button>
+                        <button class="btn btn-success btn-2-line" data-toggle="modal" data-target="#modal-create-account">Skapa konto
+                            <span>och få 40 kr</span>
+                        </button>
+                    </div>
+                }
+                @@if (logged_in === true) {
+                    <div class="top__actions-account-info visible-md visible-lg">
+                        <div class="top__actions-account-wallet">
+                            <a href="#">
+                                <span>Spelplånbok:</span>
+                                <span>450kr</span>
+                            </a>
+                        </div>
+                        <div class="top__actions-account-winnings">
+                            <a href="#">
+                                <span>Vinstkonto:</span>
+                                <span>450kr</span>
+                            </a>
+                        </div>
+                    </div>
+                    @@if(show_cart === true) {
+                        <div class="top__actions-cart product-cart">
+                            <div class="product-cart__item visible-xs">
+                                <div class="product-cart__content">
+                                    <p class="product-cart__title">Vinstkonto</p>
+                                    <p class="product-cart__meta">450kr</p>
+                                </div>
+                            </div>
+                            <a class="product-cart__item product-cart__item--theme-green" href="#">
+                                <div class="product-cart__content dreamlist">
+                                    <i class="product-cart__icon icon icon-star"></i>
+                                    <p class="product-cart__title">Min drömlista</p>
+                                </div>
+                                <span class="product-cart__notification">0</span>
+                            </a>
+                            <a class="product-cart__item product-cart__item--theme-blue" href="#" data-toggle="modal" data-target="#modal-cart">
+                                <div class="product-cart__content">
+                                    <p class="product-cart__title">Kundvagn</p>
+                                    <p class="product-cart__meta">
+                                        <span class="js-cart-total" data-total="0">0</span> kr
+                                    </p>
+                                </div>
+                                <span class="product-cart__notification">0</span>
+                            </a>
+                        </div>
+                    }
+                    <div class="top__actions-account">
+                        <div class="dropdown js-show-dropdown">
+                            <button class="dropdown__button" type="button" data-toggle="dropdown" aria-expanded="false">
+                                Mina sidor<i class="icon icon-chevron-down icon-size-small"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                                <span class="dropdown-menu-title">Mina sidor</span>
+                                <ul>
+                                    <li>
+                                        <a href="#">Min startsida</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Mina uppgifter</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Mina prenumerationer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Min spelhistorik</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Hämta bonus</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Playscan</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="top__main-nav">
+                @@include('layout/_navigation.html')			
+            </div>
+            <div class="top__quick-nav">
+                <ul>
+                    <li class="top__quick-nav-item">
+                        <a href="#">Prenumerera</a>
+                    </li>
+                    <li class="top__quick-nav-separator"></li>
+                    <li class="top__quick-nav-item">
+                        <a href="#">Spela bingo</a>
+                    </li>
+                    <li class="top__quick-nav-separator"></li>
+                    <li class="top__quick-nav-item">
+                        <a href="#">Våra lotter</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="top__register-scratch">
+                <a href="#">Registrera lott</a>
+            </div>
+            <div class="top__overlay js-top__overlay"></div>
+            <button class="btn btn-primary btn-icon-only top__overlay-btn js-top__overlay-btn">
+                <i class="icon icon-close"></i>
+            </button>
+        </div>
+        @@include('components/_message.html',{
+            "msg_image": "assets/img/mockup/ML.png",
+            "msg_title": "Nytt meddelande",
+            "msg_text": "Du har en ny bonus att hämta!"
+        })
+    </div>
+</div>
+<div class="ml-2017 page-nav">
+    <ul>
+        <li class="navigation__item navigation__item--active">
+            <a href="">Prenumerationslotter</a>
+        </li>
+        <li class="navigation__item">
+            <a href="">5 orsaker att prenumerera</a>
+        </li>
+        <li class="navigation__item">
+            <a href="">Avsluta prenumeration</a>
+        </li>
+    </ul>
+</div>

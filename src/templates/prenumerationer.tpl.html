@@ -2,8 +2,9 @@
 "class": "page-front logged-in"
 })
 
-@@include('layout/_top.html', {"logged_in": true})
-@@include('layout/_sidebar.html', {"logged_in": true})
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
 
 <div class="content-wrapper ml-2017">
 	<div class="my-pages container">
@@ -193,7 +194,7 @@
 
 					<div class="entity-collection-actions">
 						<a class="btn btn-primary" data-target="#invoice-history-data"
-						   href="/ajax/invoice-history.html">Visa fler</a>
+							href="/ajax/invoice-history.html">Visa fler</a>
 					</div>
 				</div>
 			</div>
@@ -249,7 +250,7 @@
 
 					<div class="entity-collection-actions">
 						<a class="btn btn-primary" data-target="#invoice-digital-data"
-						   href="/ajax/invoice-history.html">Visa fler</a>
+							href="/ajax/invoice-history.html">Visa fler</a>
 					</div>
 				</div>
 			</div>
