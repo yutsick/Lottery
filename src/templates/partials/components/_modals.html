@@ -9,7 +9,9 @@
 	@@include('components/modals/_login-bankid.html')
 	@@include('components/modals/_password-set.html')
 	@@include('components/modals/_make-deposit.html')
-	@@include('components/modals/_terms-of-service.html')
+	@@include('components/modals/_terms-of-service.html', {
+		"show_terms_modal": @@show_terms_modal
+	})
 	@@include('components/modals/_make-withdrawal.html')
 	@@include('components/modals/_payment-method.html')
 	@@include('components/modals/_errormodal.html', {

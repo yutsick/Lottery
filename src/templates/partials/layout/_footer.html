@@ -5,7 +5,10 @@
 		}
 	</footer>
 	@@include('components/_overlay.html')
-	@@include('components/_modals.html')
+	@@include('components/_modals.html', {
+		"show_terms_modal": @@show_terms_modal
+	})
+	
 </div><!-- /#page-wrapper -->
 </body>
 <script src="/assets/js/app.js"></script>
