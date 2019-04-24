@@ -145,7 +145,8 @@
     &__actions {
         flex: 0 0 100%;
         order: 5;
-        
+        margin-left: auto;
+
         &-cart {
             width: 100%;
             display: flex;
@@ -258,8 +259,17 @@
         }
     }
     
+    @include min-screen(1036px) {
+        &__contact {
+            display: flex;
+        }
+
+        &__actions {
+            margin-left: 0;
+        }
+    }
+
     @include min-screen($screen-tablet) {
-       
 
         &__holder {
             padding: 0;
@@ -268,7 +278,8 @@
         }
 
         &__brand {
-            flex: 0 0 122px;
+            flex: 0 0 20%;
+            max-width: 20%;
             text-align: left;
             padding: 0 0 0 $padding-default;
             margin: 20px 0 10px;    
@@ -278,7 +289,7 @@
             &-toggle {
                 height: 40px;
                 order: 6;
-                flex: 0;
+                flex: 0 0 auto;
                 padding: 0 15px 0 $padding-default;
                 span {
                     display: none;
@@ -324,9 +335,7 @@
         &__contact {
             margin-left: auto;
             margin-right: 10px;
-            align-items: center;
-            display: flex;
-            
+            align-items: center;            
             .icon {
                 margin-right: 10px;
             }
@@ -339,6 +348,8 @@
             align-items: center;
             padding-right: 20px;
             height: 45px;
+            max-width: 80%;
+            flex: 0 0 80%;
 
             &-cart {
                 width: auto;
@@ -435,6 +446,12 @@
                     border-radius: 0 0 0.75em 0.75em;
                     min-height: 45px;
                     outline: 0;
+                    display: inline-block;
+                    &:after {
+                        content: '';
+                        min-height: inherit;
+                        font-size: 0;
+                    }
                 }
 
                 button + button {
@@ -476,7 +493,7 @@
         }
 
         &__quick-nav {
-            flex: 0 1 auto;
+            flex: 0 0 50%;
             order: 6;
             padding: 0;
             margin-top: 0;
@@ -495,12 +512,28 @@
             }
 
             &:after {
-                left: auto;
-                right: -1px;
+                display: none;
             }
             
             ul {
                 justify-content: flex-start;
+
+                li {
+                    position: relative;
+
+                    &:last-child {
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            right: -15px;
+                            width: 1px;
+                            height: 60%;
+                            background-image: linear-gradient(to top, #D8D8D8, #F5F3F3 80%);
+                        }
+                    }
+                }
+
             }
 
             &-separator {
@@ -585,7 +618,8 @@
             margin-bottom: 0;
             align-self: center;
             height: 100%;
-            
+            flex: 0 0 122px;
+
             a {
                 height: 100%;
                 display: flex;
@@ -605,6 +639,10 @@
             &-btn {
                 display: none;
             }
+        }
+
+        &__actions {
+            flex: 0 1 auto;
         }
 
         &__register-scratch {
@@ -658,15 +696,12 @@
                 }
             }
         }
-        
-        &__actions {
-            //flex: 1 1 calc(100% - 156px);
-        }
 
         &__main-nav {
             padding-left: 148px;
             position: relative;
             order: 5;
+            margin-top: 10px;
 
             &:before {
                 content: '';

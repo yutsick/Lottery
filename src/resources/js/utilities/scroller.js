@@ -7,7 +7,7 @@ export default function() {
     let availableBreakpoints = ['tiny', 'thumb'];
 
     const shouldScroll = () => {
-        return availableBreakpoints.includes(currentBreakpoint());
+        return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
     }
 
     const removeStickyTop = () => {

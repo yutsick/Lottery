@@ -11,7 +11,7 @@ export default function() {
     }
 
     const isWideMenuAvailable = () => {
-        return availableBreakpoints.includes(currentBreakpoint());
+        return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
     }
 
     const currentBreakpoint = () => window.ML.store.breakpoint.getState().currentBreakpointName;
@@ -45,7 +45,7 @@ export default function() {
                         $previousNav.children('.navigation__children').css('max-height', 0);
                     }
                 }
-            });    
+            });
         });
     
     }

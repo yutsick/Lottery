@@ -30,7 +30,7 @@ export default function() {
 
 		//check if slide out navigation should be used
 		const slideOutMenuIsAvailable = () => {
-			return availableBreakpoints.includes(currentBreakpoint());
+			return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
 		}
 
 		//show slide out navigation
