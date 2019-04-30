@@ -5,14 +5,15 @@ export default function() {
         let currentActiveNavItem = null;
 		let $slideOutNavigationBtn = $('.js-toggle-nav');
 		let $overlay = $('.js-top__overlay');
-		let $slideOutNavigation = $('.js-navigation');
+		let $slideOutNavigation = $('.js-main-navigation');
 		let $overlayBtn = $('.js-top__overlay-btn');
-		let $navigationToggleBtns = $('.js-navigation__toggle');
+		let $navigationToggleBtns = $slideOutNavigation.find('.js-navigation__toggle');
 		let showNavigationClassName = 'navigation--show';
 		let overlayClosedClassName = 'top__overlay--closed';
 		let overlayShowClassName = 'top__overlay--show';
 		let overlayBtnShowClassName = 'top__overlay-btn--show';
 		let overlayBtnClosingClassName = 'top__overlay-btn--closing';
+		let overlayBtnLeftClassName = 'top__overlay-btn--left';
 		let navigationItemActiveClassName = 'navigation__item--active';
 		let navigationSlideOutClassName = 'navigation--slide-out';
 		let $openByDefaultMavBtn = null;
@@ -50,6 +51,7 @@ export default function() {
 			if(show) {
 				$overlay.removeClass(overlayClosedClassName);
 				$overlay.addClass(overlayShowClassName);
+				$overlayBtn.addClass(overlayBtnLeftClassName);
 				$overlayBtn.addClass(overlayBtnShowClassName);
 				$('body').addClass('freeze');
 			} else {
@@ -60,6 +62,7 @@ export default function() {
 				setTimeout(() => {
 					$overlay.addClass(overlayClosedClassName);
 					$overlayBtn.removeClass(overlayBtnClosingClassName);
+					$overlayBtn.removeClass(overlayBtnLeftClassName);
 				}, 300);
 				$('body').removeClass('freeze');
 			}
@@ -129,6 +132,7 @@ export default function() {
 		//click events on overlay and slide out button
 		$overlay.on('click', () => dispatchEvents(false));
 		$overlayBtn.on('click', () => dispatchEvents(false));
+
 		$navigationToggleBtns.each((index, item) => {
 			if($(item).parent().data('open-by-default')) {
 				$openByDefaultMavBtn = $(item);

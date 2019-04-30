@@ -114,9 +114,8 @@
 		height: 40px;
 		padding: $margin-small 24px $margin-small 6px;
 		border: 1px solid $color-gray-border;
-		text-align: right;
-		font-weight: $bold;
 		text-align: center;
+		font-weight: $bold;
 
 		@include min-screen($screen-sm-min) {
 			width: 47px;

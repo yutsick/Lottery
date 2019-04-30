@@ -1,185 +1,184 @@
 @@include('layout/_header.html', {
-	"class": "logged-in"
-	})
-	
-	@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
-	<!--@@include('layout/_top.html', {"logged_in": true})
-	@@include('layout/_sidebar.html', {"logged_in": true})-->
-	
-	<div class="content-wrapper ml-2017">
-		<div class="container container--center">
-			<!--@@include('components/_cart-icon.html')-->
-	
-			<div class="block block-hero block-hero--mini">
-				<h2>Beställning</h2>
-			</div>
-			<section class="section order-page">
-				<div class="order frame-box">
+"class": "logged-in"
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+<div class="content-wrapper ml-2017">
+    <div class="container container--center">
+        <!--@@include('components/_cart-icon.html')-->
+
+        <div class="block block-hero block-hero--mini">
+            <h2>Beställning</h2>
+        </div>
+        <section class="section order-page">
+            <div class="order frame-box">
+                <div class="frame-box__header">
+                    <p class="h5">Kundvagn</p>
+                </div>
+                <div class="frame-box__row">
+                    @@include('cart-items/cart-item.tpl.html', {"order": true})
+                    @@include('cart-items/cart-item.tpl.html', {"order": true})
+                    <div class="order__shipping order__payment-block">
+                        <p class="order__payment-block-label">Frakt</p>
+                        <p class="order__payment-block-value"><span>0</span> kr</p>
+                    </div>
+
+                    <div class="order__price order__payment-block row">
+                        <div class="col-xs-12 col-sm-12 col-lg-6">
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-lg-6">
+                            <div class="order__price-total">
+                                <p class="order__payment-block-label">Total summa: </p>
+                                <p class="order__payment-block-value"><span>0</span> kr</p>
+                            </div>
+                            <div class="order__price-wallet">
+                                <p class="order__payment-block-label">Saldo efter köp: </p>
+                                <p class="order__payment-block-value"><span>0</span> kr</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="order__add-more order__add-more--open order__payment-block row" >
+                        <div class="col-xs-12 col-sm-12 col-lg-12">
+                            <p>Du har vinstpengar kvar efter ditt köp. Vill du lägga till en lott?</p>
+                            <div class="order__add-more--btn-wrapper">
+                                <div class="order__add-more-btn">
+                                    <div class="btn btn-default" data-item="miljonlotteriet-orginal" data-value="40">Miljonlotteriet Original <span class="order__add-more-btn--price">+40kr</span></div>
+                                    <img src="assets/img/mockup/ml-original.png">
+                                </div>
+                                <div class="order__add-more-btn">
+                                    <div class="btn btn-default" data-item="miljonlotteriet-resa" data-value="40">Miljonlotteriet Resan <span class="order__add-more-btn--price">+40kr</span></div>
+                                    <img src="assets/img/mockup/ml-resan.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<form id="ordering" action="/bestallning-bekraftelse.html" method="get" data-toggle="validator" data-use-ajax>
+				<div class="frame-box">
 					<div class="frame-box__header">
-						<p class="h5">Kundvagn</p>
+						<p class="h5">Leveransuppgifter</p>
 					</div>
 					<div class="frame-box__row">
-						@@include('cart-items/cart-item.tpl.html', {"order": true})
-						@@include('cart-items/cart-item.tpl.html', {"order": true})
-						<div class="order__shipping order__payment-block">
-							<p class="order__payment-block-label">Frakt</p>
-							<p class="order__payment-block-value"><span>0</span> kr</p>
-						</div>
-	
-						<div class="order__price order__payment-block row">
-							<div class="col-xs-12 col-sm-12 col-lg-6">
-							</div>
-							<div class="col-xs-12 col-sm-12 col-lg-6">
-								<div class="order__price-total">
-									<p class="order__payment-block-label">Total summa: </p>
-									<p class="order__payment-block-value"><span>0</span> kr</p>
+						<div class="row">
+							<div class="delivery col-xs-12 col-sm-12 col-md-6">
+								<p class="delivery__title">Leveransadress</p>
+								<div class="delivery__contact">
+									<p>Magnus Singerer</p>
+									<p>Fjärde Långgatat 41 Lgh 1103</p>
+									<p>413 27 Göteborg</p>
+									<p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
 								</div>
-								<div class="order__price-wallet">
-									<p class="order__payment-block-label">Saldo efter köp: </p>
-									<p class="order__payment-block-value"><span>0</span> kr</p>
-								 </div>
-							</div>
-						</div>
-	
-						<div class="order__add-more order__add-more--open order__payment-block row" >
-							<div class="col-xs-12 col-sm-12 col-lg-12">
-								<p>Du har vinstpengar kvar efter ditt köp. Vill du lägga till en lott?</p>
-								<div class="order__add-more--btn-wrapper">
-									<div class="order__add-more-btn">
-										<div class="btn btn-default" data-item="miljonlotteriet-orginal" data-value="40">Miljonlotteriet Original <span class="order__add-more-btn--price">+40kr</span></div>
-										<img src="assets/img/mockup/ml-original.png">
+
+								<div class="delivery__gift">
+									<div class="delivery__gift-title custom-checkbox-v2">
+										<input name="gift" type="checkbox" id="gift" value="true" class="custom-checkbox__input"/>
+										<label for="gift" class="custom-checkbox__label">Skicka till annan adress eller som gåva</label>
 									</div>
-									<div class="order__add-more-btn">
-										<div class="btn btn-default" data-item="miljonlotteriet-resa" data-value="40">Miljonlotteriet Resan <span class="order__add-more-btn--price">+40kr</span></div>
-										<img src="assets/img/mockup/ml-resan.png">
+									<div class="delivery__gift-form">
+										<p class="delivery__gift-form-title">Fyll i ny leveransadress och glöm inte att fylla i korrekta aviseringsuppgifter nedan</p>
+
+										<div class="form-group">
+											<div class="delivery__gift-form-row ">
+												<label class="delivery__gift-form-label" for="gift-name" >Namn</label>
+												<input data-trigger="manual" name="gift-name" class="delivery__gift-form-input form-control" type="text" id="gift-name" data-required-error="Du måste fylla i fältet för namn." />
+											</div>
+											<div class="help-block with-errors"></div>
+										</div>
+
+										<div class="form-group">
+											<div class="delivery__gift-form-row">
+												<label class="delivery__gift-form-label" for="gift-address">Adress</label>
+												<input name="gift-address" class="delivery__gift-form-input form-control" type="text" id="gift-address" data-required-error="Du måste fylla i fältet för adress."/>
+											</div>
+											<div class="help-block with-errors"></div>
+										</div>
+
+										<div class="form-group">
+											<div class="delivery__gift-form-row">
+												<label class="delivery__gift-form-label" for="gift-zip">Postnr</label>
+												<input name="gift-zip" class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="gift-zip" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
+												<label class="delivery__gift-form-label delivery__gift-form-label--small" for="gift-city">Ort</label>
+												<input name="gift-city" class="delivery__gift-form-input form-control" type="text" id="gift-city" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
+											</div>
+											<div class="help-block with-errors"></div>
+										</div>
 									</div>
 								</div>
+							</div>
+							<div class="delivery col-xs-12 col-sm-12 col-md-6">
+								<p class="delivery__title">Leveranssätt</p>
+								<div class="order__input-wrapper custom-radio">
+									<input type="radio" name="delivery-type" id="delivery-standard" value="standard" class="custom-radio__input" checked>
+									<label for="delivery-standard" class="custom-radio__label">Standard</label>
+								</div>
+								<div class="order__input-wrapper custom-radio">
+									<input type="radio" name="delivery-type" id="delivery-prio" value="prio" class="custom-radio__input">
+									<label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalning sker efter beställning lagts. </span></label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="delivery col-xs-12 col-sm-12 col-md-6">
+								<p class="delivery__title">Avisering</p>
+								<span class=" delivery__info tooltip-on-touch" data-toggle="tooltip" data-placement="top" title="" data-original-title="När din order levererats meddelas du om att hämta ut den. Välj hur du vill ha meddelandet.">
+                                <i class="delivery__info-icon icon icon-info"></i>
+                            	</span>
+
+								<div class="order__input-wrapper order__input-wrapper--w-height">
+									<div class="custom-radio">
+										<input type="radio" name="notification" id="notify-sms" value="sms" class="custom-radio__input" checked>
+										<label for="notify-sms" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>SMS:</label>
+									</div>
+									<div class="form-group">
+										<input type="tel" id="phone" class="form-control" required data-required-error="Du måste fylla i ditt telefonnummer."/>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+
+								<div class="order__input-wrapper order__input-wrapper--w-height">
+									<div class="custom-radio">
+										<input type="radio" name="notification" id="notify-email" value="email"  class="custom-radio__input">
+										<label for="notify-email" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>e-post:</label>
+									</div>
+									<div class="form-group">
+										<input type="email" id="test-email" class="form-control" data-required-error="Du måste fylla i din e-postadress." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."/>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="order__input-wrapper order__input-wrapper--w-height custom-radio">
+									<input type="radio" name="notification" id="notify-letter" value="letter" class="custom-radio__input">
+									<label for="notify-letter" class="custom-radio__label">Skicka Brev</label>
+								</div>
+							</div>
+							<div class="delivery delivery--no-border col-xs-12 col-sm-12 col-md-6">
+								<p class="delivery__title">Hämtas ut hos</p>
+								<p class="delivery__place">Hemköp Masthugget</p>
+								<input name="delivery-place" type="hidden" id="delivery-place" value="Hemköp Masthugget"/>
+								<button type="button" class="delivery__place-btn btn btn-default" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
 							</div>
 						</div>
 					</div>
 				</div>
-	
-				<form id="ordering" action="/bestallning-bekraftelse.html" method="get" data-toggle="validator" data-use-ajax>
-					<div class="frame-box">
-						<div class="frame-box__header">
-							<p class="h5">Leveransuppgifter</p>
-						</div>
-						<div class="frame-box__row">
-							<div class="row">
-								<div class="delivery col-xs-12 col-sm-12 col-md-6">
-									<p class="delivery__title">Leveransadress</p>
-									<div class="delivery__contact">
-										<p>Magnus Singerer</p>
-										<p>Fjärde Långgatat 41 Lgh 1103</p>
-										<p>413 27 Göteborg</p>
-										<p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
-									</div>
-	
-									<div class="delivery__gift">
-										<div class="delivery__gift-title custom-checkbox-v2">
-											<input name="gift" type="checkbox" id="gift" value="true" class="custom-checkbox__input"/>
-											<label for="gift" class="custom-checkbox__label">Skicka till annan adress eller som gåva</label>
-										</div>
-										<div class="delivery__gift-form">
-											<p class="delivery__gift-form-title">Fyll i ny leveransadress och glöm inte att fylla i korrekta aviseringsuppgifter nedan</p>
-	
-											<div class="form-group">
-												<div class="delivery__gift-form-row ">
-													<label class="delivery__gift-form-label" for="gift-name" >Namn</label>
-													<input data-trigger="manual" name="gift-name" class="delivery__gift-form-input form-control" type="text" id="gift-name" data-required-error="Du måste fylla i fältet för namn." />
-												</div>
-												<div class="help-block with-errors"></div>
-											</div>
-	
-											<div class="form-group">
-												<div class="delivery__gift-form-row">
-													<label class="delivery__gift-form-label" for="gift-address">Adress</label>
-													<input name="gift-address" class="delivery__gift-form-input form-control" type="text" id="gift-address" data-required-error="Du måste fylla i fältet för adress."/>
-												</div>
-												<div class="help-block with-errors"></div>
-											</div>
-	
-											<div class="form-group">
-												<div class="delivery__gift-form-row">
-													<label class="delivery__gift-form-label" for="gift-zip">Postnr</label>
-													<input name="gift-zip" class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="gift-zip" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
-													<label class="delivery__gift-form-label delivery__gift-form-label--small" for="gift-city">Ort</label>
-													<input name="gift-city" class="delivery__gift-form-input form-control" type="text" id="gift-city" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
-												</div>
-												<div class="help-block with-errors"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="delivery col-xs-12 col-sm-12 col-md-6">
-									<p class="delivery__title">Leveranssätt</p>
-									<div class="order__input-wrapper custom-radio">
-										<input type="radio" name="delivery-type" id="delivery-standard" value="standard" class="custom-radio__input" checked>
-										<label for="delivery-standard" class="custom-radio__label">Standard</label>
-									</div>
-									<div class="order__input-wrapper custom-radio">
-										<input type="radio" name="delivery-type" id="delivery-prio" value="prio" class="custom-radio__input">
-										<label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalning sker efter beställning lagts. </span></label>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="delivery col-xs-12 col-sm-12 col-md-6">
-									<p class="delivery__title">Avisering</p>
-									<span class=" delivery__info tooltip-on-touch" data-toggle="tooltip" data-placement="top" title="" data-original-title="När din order levererats meddelas du om att hämta ut den. Välj hur du vill ha meddelandet.">
-									<i class="delivery__info-icon icon icon-info"></i>
-									</span>
-	
-									<div class="order__input-wrapper order__input-wrapper--w-height">
-										<div class="custom-radio">
-											<input type="radio" name="notification" id="notify-sms" value="sms" class="custom-radio__input" checked>
-											<label for="notify-sms" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>SMS:</label>
-										</div>
-										<div class="form-group">
-											<input type="tel" id="phone" class="form-control" required data-required-error="Du måste fylla i ditt telefonnummer."/>
-											<div class="help-block with-errors"></div>
-										</div>
-									</div>
-	
-									<div class="order__input-wrapper order__input-wrapper--w-height">
-										<div class="custom-radio">
-											<input type="radio" name="notification" id="notify-email" value="email"  class="custom-radio__input">
-											<label for="notify-email" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>e-post:</label>
-										</div>
-										<div class="form-group">
-											<input type="email" id="test-email" class="form-control" data-required-error="Du måste fylla i din e-postadress." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."/>
-											<div class="help-block with-errors"></div>
-										</div>
-									</div>
-									<div class="order__input-wrapper order__input-wrapper--w-height custom-radio">
-										<input type="radio" name="notification" id="notify-letter" value="letter" class="custom-radio__input">
-										<label for="notify-letter" class="custom-radio__label">Skicka Brev</label>
-									</div>
-								</div>
-								<div class="delivery delivery--no-border col-xs-12 col-sm-12 col-md-6">
-									<p class="delivery__title">Hämtas ut hos</p>
-									<p class="delivery__place">Hemköp Masthugget</p>
-									<input name="delivery-place" type="hidden" id="delivery-place" value="Hemköp Masthugget"/>
-									<button type="button" class="delivery__place-btn btn btn-default" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
-								</div>
-							</div>
-						</div>
+				<div class="order-page__submit">
+					<div class="order-page__submit-action-wrapper">
+						<button class="btn btn-primary" type="submit" form="ordering"
+								data-toggle="tooltip" data-placement="top" data-original-title="Klicka för att  beställa vinsterna">
+							Bekräfta och beställ vinsterna
+						</button>
 					</div>
-					<div class="order-page__submit">
-						<div class="order-page__submit-action-wrapper">
-							<button class="btn btn-primary" type="submit" form="ordering"
-									data-toggle="tooltip" data-placement="top" data-original-title="Klicka för att  beställa vinsterna">
-								Bekräfta och beställ vinsterna
-							</button>
-						</div>
-						<div class="order-page__submit-action-wrapper">
-							<a href="#">Avbryt beställning</a>
-						</div>
+					<div class="order-page__submit-action-wrapper">
+						<a href="#">Avbryt beställning</a>
 					</div>
-				</form>
-			</section>
-		</div>
-	</div>
-	
-	@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
-	
+				</div>
+			</form>
+        </section>
+    </div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

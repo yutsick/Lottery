@@ -62,17 +62,6 @@ export default function () {
 		templateResult: format
 	});
 
-	$('.choosePayWay').select2({
-		minimumResultsForSearch: Infinity,
-		templateSelection: format,
-		templateResult: format
-	});
-	$('.chooseDevice').select2({
-		minimumResultsForSearch: Infinity,
-		templateSelection: format,
-		templateResult: format
-	});
-
 	$('.chooseAssociation').select2({
 		templateSelection: format,
 		templateResult: format,
@@ -84,6 +73,17 @@ export default function () {
 	});
 	$(".chooseAssociation").on("select2:close", function() {
 		$(".select2-search--dropdown .select2-search__field").attr("placeholder", null);
+	});
+
+	$('.choosePayWay').select2({
+		minimumResultsForSearch: Infinity,
+		templateSelection: format,
+		templateResult: format
+	});
+	$('.chooseDevice').select2({
+		minimumResultsForSearch: Infinity,
+		templateSelection: format,
+		templateResult: format
 	});
 }
 

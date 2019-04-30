@@ -128,7 +128,7 @@ a.navlink:hover {
 	.select2-selection__arrow:before {
 		content: "\e906";
 		display: block;
-		font-size: 20px;
+		font-size: 16px;
 		font-family: $base-icon-family;
 		color: $color-blue;
 	}
@@ -200,14 +200,12 @@ a.navlink:hover {
 	vertical-align: middle;
 }
 
-
 .select2-search--dropdown .select2-search__field {
 	padding: 10px;
 	outline: 0;
 	font-size: 16px;
 	font-weight: 400;
 }
-
 
 .choice-icon {
 	margin-right: 20px;

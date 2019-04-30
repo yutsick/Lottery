@@ -1,8 +1,6 @@
 &.navigation {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    transform: translateX(-100vw);
     height: 100vh;
     width: 100%;
     max-width: 85vw;
@@ -17,6 +15,38 @@
     
     &--slide-out {
         transition: transform .3s ease-in-out;
+    }
+
+    &--left {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    &--right {
+        right: 0;
+        transform: translateX(100%);
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            height: calc(100% - 59px);
+        }
+
+        .navigation {
+            &__item {
+                &:last-child {
+                    margin-top: auto;
+                    &:before {
+                        content: '';
+                    }
+                }
+                a {
+                    border-right: none !important;
+                    width: 100% !important;
+                    display: flex;
+                }
+            }
+        }
     }
 
     .top__brand {
@@ -42,7 +72,7 @@
     }
 
     &--show {
-        transform: translateX(0);
+        transform: translateX(100%);
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
@@ -57,6 +87,14 @@
     }
 
     .navigation {
+
+        &__title {
+            padding: 15px 15px;
+            text-align: center;
+            display: block;
+            font-weight: 700;
+            font-size: 22px;
+        }
 
         &__item {
             display: flex;
@@ -88,6 +126,19 @@
                     content: '';
                     top: 0;
                 }
+            }
+
+            &-notification {
+                position: relative;
+                margin-left: auto;
+                width: 20px;
+                height: 20px;
+                background: $color-red;
+                color: $color-snow;
+                border-radius: 50%;
+                font-size: $size-smallest;
+                text-align: center;
+                line-height: 22px;
             }
 
             &--has-children {
@@ -152,7 +203,7 @@
             height: auto;
             overflow: hidden;
             width: 100%;
-            background-color: $color-blue;
+            background-color: $color-blue-deep;
             position: relative;
 
             .navigation__item {
@@ -184,6 +235,7 @@
                 &--active {
                     a {
                         font-weight: 700;
+                        text-decoration: underline;
                     }
                 }
             }
@@ -236,6 +288,10 @@
                     height: 46px;
                 }
             }
+        }
+
+        &--account {
+            display: none !important;
         }
 
         & > ul {
@@ -311,7 +367,7 @@
                 &--only-thumb {
                     display: none;
                 }
-
+                
                 &--active {
                     a {
                         &:after {
@@ -341,6 +397,32 @@
                         a {
                             &:after {
                                 border-top-width: 6px;
+                            }
+                        }
+                    }
+                }
+
+                &--pre-selected {
+                    a {
+                        &:after {
+                            transition: border-top .3s ease-in-out;
+                            width: 0; 
+                            height: 6px;
+                            top: 100%;
+                            right: 50%;
+                            margin-right: -6px;
+                            border-left: 6px solid transparent;
+                            border-right: 6px solid transparent;
+                            border-top: 6px solid #F5F3F3;
+                            z-index: 1000;
+                        }
+                    }
+
+                    & + .navigation__item {
+                        a {
+                            &:before {
+                                display: block;
+                                left: -1px;
                             }
                         }
                     }

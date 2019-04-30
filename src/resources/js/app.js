@@ -48,12 +48,13 @@ import bankIDForm from './components/bankid-form';
 import navigation from './layout/navigation';
 import register from './layout/register';
 import top from './layout/top';
-import slideOutNavigation from './layout/slideOutNavigation';
-import navigationControl from './layout/navigationControl';
+import slideOutNavigation from './layout/slide-out-navigation';
+import slideOutAccountNavigation from './layout/slide-out-account';
+import navigationControl from './layout/navigation-control';
 
 /* Utilities */
 import textToggle from './utilities/textToggle';
-import breakpointListener from './utilities/breakpointListener';
+import breakpointListener from './utilities/breakpoint-listener';
 import scroller from './utilities/scroller';
 
 $(function () {
@@ -95,6 +96,7 @@ $(function () {
 	bankIDForm();
 	scroller();
 	slideOutNavigation();
+	slideOutAccountNavigation();
 	navigationControl();
 	/* call breakpointListener last */
 	breakpointListener();

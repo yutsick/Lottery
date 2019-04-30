@@ -4,9 +4,12 @@ export default class entityCollectionActions {
     constructor() {
         this.wrapper = document.querySelector('.product-list-blocks');
         this.lazyloads = this.lazyLoadFunction();
-        this.collectionActions();
-        this.selectTable();
-        this.showTable();
+        if(this.lazyloads) {
+            this.lazyloads.update();
+            this.collectionActions();
+            this.selectTable();
+            this.showTable();
+        }
 	}
 
 
@@ -76,7 +79,9 @@ export default class entityCollectionActions {
 
 	lazyLoadFunction() {
         if(this.wrapper) {
-        	let options = { elements_selector: ".block-product__image img" };
+        	let options = { 
+                elements_selector: ".block-product__image img"
+            };
 			let loading = new LazyLoad(options);
             return loading;
         }else {

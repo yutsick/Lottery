@@ -26,6 +26,7 @@ export default function () {
 		$modal.find('#' + page).addClass('modal-page--active');
 	})
 
+
 	let $termsOfServiceModal = $('#modal__terms-of-services');
 	if($termsOfServiceModal.length > 0) {
 		let openedByDefault = $termsOfServiceModal.data('opened-by-default');
@@ -33,4 +34,6 @@ export default function () {
 			$termsOfServiceModal.modal('show');
 		}
 	}
+
+
 }

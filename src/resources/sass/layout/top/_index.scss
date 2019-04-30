@@ -4,6 +4,7 @@
 
 .top {
     background-image: linear-gradient($color-snow, #F5F3F3);
+    top: 0;
 
     &:after {
         content: '';
@@ -54,16 +55,23 @@
             display: flex;
             align-items: center;
             justify-content: center;     
-            position: absolute;
+            position: fixed;
             transform: scale(0);
             z-index: 1002;
-            left: 88vw;
             width: 9vw;
             height: 9vw;
             margin-top: -20px !important;
             top: 50vh;
             transition: transform .3s ease-in-out .3s;
-       
+            
+            &--left {
+                left: 88vw;
+            }
+
+            &--right {
+                right: 88vw;             
+            }
+
             &--show {
                 transform: scale(1);
             }
@@ -100,6 +108,34 @@
             .icon {
                 font-size: 18px;
                 margin-right: 5px;
+            }
+
+            &--notify {
+                button {
+                    position: relative;
+                    &:after {
+                        content: '';
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 4px;
+                        background-color: $color-red;
+                        position: absolute;
+                        top: 0;
+                        left: 10px;
+                    }
+                }
+            }
+
+            &--account {
+                order: 3;
+
+                button {
+                    margin-left: auto;
+                    
+                    .icon {
+                        color: #90a9ba;
+                    }
+                }
             }
         }       
     }
@@ -163,6 +199,18 @@
             left: 50%;
             margin-left: -50vw;
             position: relative;
+
+            &-notification {
+                margin-left: 5px;
+                width: 20px;
+                height: 20px;
+                background: $color-red;
+                color: $color-snow;
+                border-radius: 50%;
+                font-size: $size-smallest;
+                text-align: center;
+                line-height: 22px;
+            }
 
             button {
                 flex: 0 0 50%;
@@ -229,7 +277,7 @@
     &__register-scratch {
         flex: 0 0 33.3%;
         padding: 0 $padding-small;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: flex-end;
         order: 3;
@@ -252,9 +300,16 @@
     @include min-screen($screen-xs) {
         &__overlay { 
             &-btn {
-                left: 386px;
                 width: 40px;
                 height: 40px;
+
+                &--left {
+                    left: 386px;
+                }
+
+                &--right {
+                    right: 386px;
+                }
             }
         }
     }
@@ -318,10 +373,15 @@
                         }
                     }
                 }
+
+                &--account {
+                    display: none;
+                }
             }
         }
 
         &__register-scratch {
+            display: flex;
             order: 6;
             margin-left: auto;
             flex: 1 1 auto;
@@ -385,7 +445,15 @@
 
                         .icon {
                             margin-left: 20px;
+                        }
+
+                        .top__actions-account-notification,
+                        .icon {
                             z-index: 401;
+                        }
+
+                        .top__actions-account-notification + .icon{
+                            margin-left: 10px;
                         }
 
                         &:focus {
@@ -404,20 +472,39 @@
                         border: 2px solid $color-blue;
                         border-top: none;
                         border-radius: 0 0 0.75em 0.75em;
-                        min-width: 220px;
+                        min-width: 234px;
                         z-index: 400;
                         box-shadow: none;
 
                         ul {
-                            padding: 10px 20px;
+                            padding: 0;
                             margin: 0;
                             list-style: none;
+                            display: flex;
+                            flex-direction: column;
 
                             li {
-                                margin-bottom: 10px;
+                                padding: 10px 10px 10px 15px;
+                                display: flex;
+                                border-top: 1px solid $color-grey;
+
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+
+                                a {
+                                    display: flex;
+                                    width: calc(100% - 22px);
+                                    align-items: center;
+                                }
+
+                                .top__actions-account-notification {
+                                    margin-left: auto;
+                                }
 
                                 &:last-child {
                                     margin-bottom: 0;
+                                    padding-bottom: 5px;
                                 }
                             }
                         }
@@ -525,7 +612,7 @@
                         &:after {
                             content: '';
                             position: absolute;
-                            bottom: 0;
+                            top: 100%;
                             right: -15px;
                             width: 1px;
                             height: 60%;
@@ -720,7 +807,7 @@
     z-index: 101;
     
     @include min-screen($screen-tablet) {
-        background-color: $color-blue;
+        background-color: $color-blue-deep;
         max-width: 1400px;
         margin: 0 auto;
         display: block;
@@ -748,6 +835,7 @@
                 &.navigation__item--active {
                     a {
                         font-weight: 700;
+                        text-decoration: underline;
                     }
                 }
             }

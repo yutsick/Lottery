@@ -1,126 +1,125 @@
 @@include('layout/_header.html', {
-	"class": "page-front logged-out"
-	})
-	
-	@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
-	<!--@@include('layout/_top.html', {"logged_in": false})
-	@@include('layout/_sidebar.html', {"logged_in": false})-->
-	
-	<section class="content-wrapper ml-2017">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						Image: square, align: middle, mobile: top, Tablet: right, Desktop: left Link: (btnType: target, link: / , btnText: Knapp text)
-					</div>
-					<div class="col-xs-12 col-md-6">
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/man.jpg",
-						"img-size": "square",
-						"mobile-position": "top",
-						"tablet-position": "right",
-						"desktop-position": "left",
-						"align": "middle"
-						})
-					</div>
-					<div class="col-xs-12 col-md-6">
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/nature.jpg",
-						"img-size": "square",
-						"mobile-position": "top",
-						"tablet-position": "right",
-						"desktop-position": "left",
-						"align": "middle",
-						"link": "/",
-						"btnText": "Knapp text",
-						"btnType": "target"
-						})
-					</div>
-	
-					<div class="col-xs-12">
-						Image: portrait, align: bottom, mobile: bottom, Tablet: left, Desktop: left, Link: (btnType: primary, link: / , btnText: Knapp text)
-					</div>
-					<div class="col-xs-12 col-md-6">
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/man.jpg",
-						"img-size": "portrait",
-						"mobile-position": "bottom",
-						"tablet-position": "left",
-						"desktop-position": "left",
-						"align": "bottom",
-						"link": "/",
-						"btnText": "Knapp text",
-						"btnType": "primary"
-						})
-					</div>
-					<div class="col-xs-12 col-md-6">
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/nature.jpg",
-						"img-size": "portrait",
-						"mobile-position": "bottom",
-						"tablet-position": "left",
-						"desktop-position": "left",
-						"align": "bottom"
-						})
-					</div>
-	
-					<div class="col-xs-12">
-						Image: square, align: top, mobile: top, Tablet: top, Desktop: right
-					</div>
-					<div class="col-xs-12 col-md-6">
-	
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/man.jpg",
-						"img-size": "square",
-						"mobile-position": "top",
-						"tablet-position": "top",
-						"desktop-position": "right",
-						"align": "top"
-						})
-					</div>
-					<div class="col-xs-12 col-md-6">
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/nature.jpg",
-						"img-size": "square",
-						"mobile-position": "top",
-						"tablet-position": "top",
-						"desktop-position": "right",
-						"align": "top"
-						})
-					</div>
-	
-	
-					<div class="col-xs-12">
-						Image: landscape, align:bottom,  mobile: bottom, Tablet: left, Desktop: right
-					</div>
-					<div class="col-xs-12">
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/bg-blue.jpg",
-						"img-size": "landscape",
-						"mobile-position": "bottom",
-						"tablet-position": "left",
-						"desktop-position": "right",
-						"align": "bottom"
-						})
-					</div>
-	
-					<div class="col-xs-12">
-						Image: landscape, align: top, mobile: top, Tablet: right, Desktop: left
-					</div>
-					<div class="col-xs-12">
-						@@include('blocks/_image-text.html', {
-						"image": "assets/img/mockup/bg-blue.jpg",
-						"img-size": "landscape",
-						"mobile-position": "top",
-						"tablet-position": "right",
-						"desktop-position": "left",
-						"align": "top"
-						})
-					</div>
+"class": "page-front logged-out"
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})-->
+
+<section class="content-wrapper ml-2017">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					Image: square, align: middle, mobile: top, Tablet: right, Desktop: left Link: (btnType: target, link: / , btnText: Knapp text)
 				</div>
-	
-	
+				<div class="col-xs-12 col-md-6">
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/man.jpg",
+					"img-size": "square",
+					"mobile-position": "top",
+					"tablet-position": "right",
+					"desktop-position": "left",
+					"align": "middle"
+					})
+				</div>
+				<div class="col-xs-12 col-md-6">
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/nature.jpg",
+					"img-size": "square",
+					"mobile-position": "top",
+					"tablet-position": "right",
+					"desktop-position": "left",
+					"align": "middle",
+					"link": "/",
+					"btnText": "Knapp text",
+					"btnType": "target"
+					})
+				</div>
+
+				<div class="col-xs-12">
+					Image: portrait, align: bottom, mobile: bottom, Tablet: left, Desktop: left, Link: (btnType: primary, link: / , btnText: Knapp text)
+				</div>
+				<div class="col-xs-12 col-md-6">
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/man.jpg",
+					"img-size": "portrait",
+					"mobile-position": "bottom",
+					"tablet-position": "left",
+					"desktop-position": "left",
+					"align": "bottom",
+					"link": "/",
+					"btnText": "Knapp text",
+					"btnType": "primary"
+					})
+				</div>
+				<div class="col-xs-12 col-md-6">
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/nature.jpg",
+					"img-size": "portrait",
+					"mobile-position": "bottom",
+					"tablet-position": "left",
+					"desktop-position": "left",
+					"align": "bottom"
+					})
+				</div>
+
+				<div class="col-xs-12">
+					Image: square, align: top, mobile: top, Tablet: top, Desktop: right
+				</div>
+				<div class="col-xs-12 col-md-6">
+
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/man.jpg",
+					"img-size": "square",
+					"mobile-position": "top",
+					"tablet-position": "top",
+					"desktop-position": "right",
+					"align": "top"
+					})
+				</div>
+				<div class="col-xs-12 col-md-6">
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/nature.jpg",
+					"img-size": "square",
+					"mobile-position": "top",
+					"tablet-position": "top",
+					"desktop-position": "right",
+					"align": "top"
+					})
+				</div>
+
+
+				<div class="col-xs-12">
+					Image: landscape, align:bottom,  mobile: bottom, Tablet: left, Desktop: right
+				</div>
+				<div class="col-xs-12">
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/bg-blue.jpg",
+					"img-size": "landscape",
+					"mobile-position": "bottom",
+					"tablet-position": "left",
+					"desktop-position": "right",
+					"align": "bottom"
+					})
+				</div>
+
+				<div class="col-xs-12">
+					Image: landscape, align: top, mobile: top, Tablet: right, Desktop: left
+				</div>
+				<div class="col-xs-12">
+					@@include('blocks/_image-text.html', {
+					"image": "assets/img/mockup/bg-blue.jpg",
+					"img-size": "landscape",
+					"mobile-position": "top",
+					"tablet-position": "right",
+					"desktop-position": "left",
+					"align": "top"
+					})
+				</div>
 			</div>
-	</section>
-	
-	@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
-	
+
+
+		</div>
+</section>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

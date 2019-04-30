@@ -1,5 +1,4 @@
 import isMobile from '../utilities/isMobile';
-
 export default function() {
 
 	// Get current element value, add as html on target

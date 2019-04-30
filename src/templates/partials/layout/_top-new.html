@@ -17,6 +17,13 @@
                     <span>Meny</span>
                 </button>
             </div>
+            <div class="top__menu-toggle top__menu-toggle--notify top__menu-toggle--account">
+                    <button class="js-toggle-account">
+                        <i class="icon icon-user"></i>
+                        <span>Mina sidor</span>
+                    </button>
+                </div>
+                
             <div class="top__brand">
                 <a href="/" title="Hem" class="top__brand-logotype">
                     <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
@@ -84,19 +91,19 @@
                     <div class="top__actions-account">
                         <div class="dropdown js-show-dropdown">
                             <button class="dropdown__button" type="button" data-toggle="dropdown" aria-expanded="false">
-                                Mina sidor<i class="icon icon-chevron-down icon-size-small"></i>
+                                Mina sidor<span class="top__actions-account-notification">3</span><i class="icon icon-chevron-down icon-size-small"></i>
                             </button>
                             <div class="dropdown-menu">
                                 <span class="dropdown-menu-title">Mina sidor</span>
                                 <ul>
                                     <li>
-                                        <a href="#">Min startsida</a>
+                                        <a href="#">Min startsida</a><span class="top__actions-account-notification">2</span>
                                     </li>
                                     <li>
                                         <a href="#">Mina uppgifter</a>
                                     </li>
                                     <li>
-                                        <a href="#">Mina prenumerationer</a>
+                                        <a href="#">Mina prenumerationer</a><span class="top__actions-account-notification">1</span>
                                     </li>
                                     <li>
                                         <a href="#">Min spelhistorik</a>
@@ -106,6 +113,9 @@
                                     </li>
                                     <li>
                                         <a href="#">Playscan</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Logga ut</a>
                                     </li>
                                 </ul>
                             </div>
@@ -126,7 +136,7 @@
                         <a href="#">Spela bingo</a>
                     </li>
                     <li class="top__quick-nav-separator"></li>
-                    <li class="top__quick-nav-item">
+                    <li class="top__quick-nav-item top__quick-nav-item--active">
                         <a href="#">Våra lotter</a>
                     </li>
                 </ul>
@@ -134,7 +144,7 @@
             <div class="top__register-scratch">
                 <a href="#">Registrera lott</a>
             </div>
-            <div class="top__overlay js-top__overlay"></div>
+            <div class="top__overlay top__overlay--closed js-top__overlay"></div>
             <button class="btn btn-primary btn-icon-only top__overlay-btn js-top__overlay-btn">
                 <i class="icon icon-close"></i>
             </button>

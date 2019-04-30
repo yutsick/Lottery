@@ -1,5 +1,5 @@
 import debounce from 'lodash.debounce';
-import { breakpointActions } from '../store/action-names';
+import { breakpointActions } from './../store/action-names';
 export default function () {
 	const getCurrentMediaQueryName = () => {
         let mediaQueryName = window.getComputedStyle(

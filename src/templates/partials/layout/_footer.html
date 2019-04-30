@@ -1,14 +1,14 @@
-	<footer id="footer" class="ml-2017">
-		@@if (show_footer === true) {
-			@@include('blocks/_footer.html')
-			@@include('blocks/_bottom-bar.html')
-		}
-	</footer>
-	@@include('components/_overlay.html')
-	@@include('components/_modals.html', {
-		"show_terms_modal": @@show_terms_modal
-	})
-	
+<footer id="footer" class="ml-2017">
+	@@if (show_footer === true) {
+		@@include('blocks/_footer.html')
+		@@include('blocks/_bottom-bar.html')
+	}
+</footer>
+@@include('components/_overlay.html')
+@@include('components/_modals.html', {
+	"show_terms_modal": @@show_terms_modal
+})
+
 </div><!-- /#page-wrapper -->
 </body>
 <script src="/assets/js/app.js"></script>
