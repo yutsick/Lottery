@@ -34,12 +34,6 @@
 
         .navigation {
             &__item {
-                &:last-child {
-                    margin-top: auto;
-                    &:before {
-                        content: '';
-                    }
-                }
                 a {
                     border-right: none !important;
                     width: 100% !important;
@@ -72,7 +66,7 @@
     }
 
     &--show {
-        transform: translateX(100%);
+        transform: translateX(0);
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
     }
