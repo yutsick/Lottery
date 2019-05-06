@@ -3,7 +3,6 @@ html,
 body {
 	@include max-screen($screen-sm - 1) {
 		-webkit-overflow-scrolling: touch !important;
-		//overflow: auto !important;
 		height: 100% !important;
 	}
 }
@@ -26,56 +25,6 @@ body {
 		opacity: 0.8;
 	}
 }
-
-/*page-wrapper {
-	padding-left: 0;
-
-	@include min-screen($screen-md-min) {
-		padding-left: $sidebar-width-desktop;
-	}
-
-	@include screen($screen-sm-min, $screen-md-max) {
-		padding-left: $sidebar-width-mobile;
-	}
-
-	&.logged-in {
-		padding-top: $top-padding-logged-in;
-
-		@include min-screen($screen-sm-min) {
-			padding-top: 0;
-		}
-	}
-
-	&.logged-out {
-		padding-top: $top-padding-logged-out;
-
-		@include min-screen($screen-sm-min) {
-			padding-top: 0;
-		}
-	}
-
-	&.sidebar-hidden {
-		padding-left: 0;
-
-		#sidebar {
-			display: none;
-		}
-	}
-
-	&.footer-hidden {
-		.block-footer {
-			display: none;
-		}
-
-		.block-bottom-bar {
-			display: none;
-		}
-	}
-
-	&.js-is-active #sidebar {
-		transform: translate3d(0, 0, 0);
-	}
-}*/
 
 #page-wrapper.page--content-only {
 	@include max-screen($screen-sm-max) {
@@ -107,7 +56,13 @@ body {
         @include max-screen($screen-sm-max) {
             display: none;
         }
-    }
+	}
+	
+	.page-nav {
+		@include max-screen($screen-sm-max) {
+            display: none;
+        }
+	}
 
 	#registerBackButton {
         @include min-screen($screen-sm-max) {
@@ -124,14 +79,6 @@ body {
 
 #page-wrapper.shop {
 	overflow: hidden;
-
-	/*@include max-screen($screen-xs-max) {
-		padding-top: 102px;
-	}
-
-	.container:first-child {
-		position: relative;
-	}*/
 
 	&.logged-in {
 		/* Hide elements if logged in */

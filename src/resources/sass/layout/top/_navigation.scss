@@ -151,6 +151,11 @@
             }
 
             &--active {
+
+                a {
+                    color: $color-space;
+                }
+                
                 .navigation__toggle {
                     .icon {
                         transform: rotate(90deg);
@@ -170,14 +175,9 @@
                 }
             }
 
-            &--pre-selected {
-                a {
-                    color: $color-space;
-                }
-                &:hover {
-                    a {
-                        color: $color-space;
-                    }
+            &--default {
+                & > a {
+                    color: $color-space !important;
                 }
             }
 
@@ -337,7 +337,7 @@
                     font-size: 17px;
                     border-right: none;
                     padding: 10px 20px;
-
+                    
                     &:after,
                     &:before {
                         content: '';
@@ -362,42 +362,22 @@
                     display: none;
                 }
                 
-                &--active {
-                    a {
-                        &:after {
-                            transition: border-top .3s ease-in-out;
-                            width: 0; 
-                            height: 6px;
-                            top: 100%;
-                            right: 50%;
-                            margin-right: -6px;
-                            border-left: 6px solid transparent;
-                            border-right: 6px solid transparent;
-                            border-top: 0 solid #F5F3F3;
-                            z-index: 1000;
-                        }
-                    }
+                &--default {
 
-                    & + .navigation__item {
-                        a {
-                            &:before {
-                                display: block;
-                                left: -1px;
-                            }
-                        }
+                    & > a {
+                        color: $color-space;
                     }
 
                     &:hover {
-                        a {
-                            &:after {
-                                border-top-width: 6px;
-                            }
+                        & > a {
+                            color: $color-space;
                         }
                     }
                 }
 
-                &--pre-selected {
+                &--active {
                     a {
+
                         &:after {
                             transition: border-top .3s ease-in-out;
                             width: 0; 
@@ -416,7 +396,7 @@
                         a {
                             &:before {
                                 display: block;
-                                left: -1px;
+                                left: 0px;
                             }
                         }
                     }

@@ -2,7 +2,6 @@ export default function() {
 
     let $navWithSub = $('.navigation__item--has-children');
     let $defaultNav = null;
-    let $previousNav = null;
     let loaded = false;
     let availableBreakpoints = ['desktop', 'widescreen'];
 
@@ -19,31 +18,34 @@ export default function() {
     const loadWideMenu = () => {
         $navWithSub.each((index, item) => {
             let $currentNav = $(item);
-            
-            if(!$defaultNav && $currentNav.data('open-by-default')) {
+
+            if(!$defaultNav && $currentNav.hasClass('navigation__item--active')) {
                 $defaultNav = $currentNav;
+                $defaultNav.addClass('navigation__item--default');
+            } else if($defaultNav && !$currentNav.hasClass('navigation__item--active')) {
+                $defaultNav.addClass('navigation__item--active');
             }
             
             $currentNav.on({
-                mouseenter: () => {
-                    if($previousNav) {
-                        $previousNav.removeClass('navigation__item--active');
-                        $previousNav.children('.navigation__children').css('max-height', 0);
-                    }
-                    if($defaultNav && $defaultNav.hasClass('navigation__item--active') && $defaultNav.index() != $currentNav.index()) {
+                mouseenter: (e) => {
+                    let $currentNavItem = $(e.currentTarget);
+                    if($currentNavItem.index() != $defaultNav.index()) {
                         $defaultNav.removeClass('navigation__item--active');
-                        $defaultNav.children('.navigation__children').css('max-height', 0);
-                    }
-                    $currentNav.addClass('navigation__item--active');
-                    let $children = getSubNavigation($currentNav);
-                    $previousNav = $currentNav;
+                    } 
+                    $currentNavItem.addClass('navigation__item--active');
+                    let $children = getSubNavigation($currentNavItem);
                     $children.css('max-height', $children[0].scrollHeight);
+
                 },
-                mouseleave: () => {
-                    if($previousNav) {
-                        $previousNav.removeClass('navigation__item--active');
-                        $previousNav.children('.navigation__children').css('max-height', 0);
-                    }
+                mouseleave: (e) => {
+                    let $currentNavItem = $(e.currentTarget);
+                    $currentNavItem.removeClass('navigation__item--active')
+                    $currentNavItem.children('.navigation__children').css('max-height', 0);
+
+                    $defaultNav.addClass('navigation__item--active');
+                    let $children = getSubNavigation($defaultNav);
+                    $children.css('max-height', $children[0].scrollHeight);
+
                 }
             });
         });

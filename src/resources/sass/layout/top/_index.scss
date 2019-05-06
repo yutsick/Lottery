@@ -221,6 +221,36 @@
             .dropdown {
                 display: none;
             }
+
+            &-info {
+                display: flex;
+                padding: $padding-small;
+                background-color: $color-cloud;
+
+                div {
+                    width: 50%;
+                }
+            }
+
+            &-wallet,
+            &-winnings {
+                display: flex;
+                
+                a {
+                    font-size: .813rem;
+                    color: $color-black;
+
+                    span {
+                        &:last-child {
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+
+            &-winnings {
+                justify-content: flex-end;
+            }
         }
     }
 
@@ -255,10 +285,10 @@
 
             &--active {
                 color: $color-space;
-                text-decoration: underline;
                 position: relative;
 
                 a {
+                    text-decoration: underline;
                     color: $color-space;
                 }
             }
@@ -322,6 +352,16 @@
 
         &__actions {
             margin-left: 0;
+        }
+    }
+
+    @include max-screen(1050px) {
+        &__contact {
+            display: none;
+        }
+
+        &__actions {
+            margin-left: auto;
         }
     }
 
@@ -431,6 +471,10 @@
                 position: relative;
                 justify-content: flex-end;
                 
+                &-info {
+                    display: none;
+                }
+
                 .dropdown {
                     margin-left: 10px;
                     display: block;
@@ -613,8 +657,8 @@
                         &:after {
                             content: '';
                             position: absolute;
-                            top: 100%;
                             right: -15px;
+                            bottom: 0;
                             width: 1px;
                             height: 60%;
                             background-image: linear-gradient(to top, #D8D8D8, #F5F3F3 80%);
@@ -637,6 +681,9 @@
                 margin: 0 15px;
 
                 &--active {
+                    a {
+                        text-decoration: none;
+                    }
                     &:after {
                         content: '';
                         width: 0; 
@@ -653,7 +700,7 @@
                 }
 
                 a {
-                 font-size: 17px;
+                    font-size: 17px;
                 }
             }
         }
@@ -806,6 +853,16 @@
 &.page-nav {
     display: none;
     z-index: 101;
+
+    .logged-in & {
+        margin-bottom: 20px;
+    }
+    
+    .page-front &,
+    .shop &,
+    .page-old & {
+        margin-bottom: 0;
+    }
     
     @include min-screen($screen-tablet) {
         background-color: $color-blue-deep;
