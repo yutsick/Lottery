@@ -1,4 +1,8 @@
-.content-wrapper {
+&.content-wrapper {
 	overflow-Y: scroll ;
 	height: auto;
+
+	&--spacing-top {
+		margin-top: 20px;
+	}
 }
