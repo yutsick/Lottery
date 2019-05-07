@@ -213,6 +213,7 @@
                 line-height: 22px;
             }
 
+
             button {
                 flex: 0 0 50%;
                 border-radius: 0;
@@ -479,6 +480,7 @@
                     margin-left: 10px;
                     display: block;
 
+
                     &__button {
                         background-color: $color-snow;
                         border: 2px solid $color-blue;
@@ -501,13 +503,26 @@
                             margin-left: 10px;
                         }
 
-                        &:focus {
+                        &.open {
+                            .top__actions-account-notification {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.open {
+                        .dropdown__button {
+                            .top__actions-account-notification {
+                                display: none;
+                            }
+
                             .icon {
                                 transform: rotate(180deg);
                             }
                         }
-
                     }
+
+                    
 
                     &-menu {
                         top: 0;
@@ -518,7 +533,7 @@
                         border-top: none;
                         border-radius: 0 0 0.75em 0.75em;
                         min-width: 234px;
-                        z-index: 400;
+                        z-index: 1000;
                         box-shadow: none;
 
                         ul {
