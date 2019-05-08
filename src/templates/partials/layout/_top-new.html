@@ -11,19 +11,20 @@
 <div id="top" class="ml-2017">
     <div class="top">
         <div class="top__holder">
-            <div class="top__menu-toggle">
+            <div class="top__menu-toggle top__menu-toggle--default top__menu-toggle--active js-top__menu-toggle--active">
                 <button class="js-toggle-nav">
                     <i class="icon icon-burger"></i>
                     <span>Meny</span>
                 </button>
             </div>
-            <div class="top__menu-toggle top__menu-toggle--notify top__menu-toggle--account">
+            @@if (logged_in === true) {
+                <div class="top__menu-toggle top__menu-toggle--notify top__menu-toggle--account">
                     <button class="js-toggle-account">
                         <i class="icon icon-user"></i>
                         <span>Mina sidor</span>
                     </button>
                 </div>
-                
+            }
             <div class="top__brand">
                 <a href="/" title="Hem" class="top__brand-logotype">
                     <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
@@ -38,6 +39,22 @@
                     <a href="tel:+46313880000">031-388 00 00</a>
                 </div>
             </div>
+            @@if (logged_in === true) {
+                <div class="top__account-info @@if(show_cart === true){ hidden-xs}">
+                    <div class="top__account-info-wallet">
+                        <a href="#">
+                            <span>Spelplånbok:</span>
+                            <span>450kr</span>
+                        </a>
+                    </div>
+                    <div class="top__account-info-winnings">
+                        <a href="#">
+                            <span>Vinstkonto:</span>
+                            <span>450kr</span>
+                        </a>
+                    </div>
+                </div>
+            }
             <div class="top__actions">
                 @@if (logged_in === false) {
                     <div class="top__actions-account">
@@ -48,20 +65,6 @@
                     </div>
                 }
                 @@if (logged_in === true) {
-                    <div class="top__actions-account-info">
-                        <div class="top__actions-account-wallet">
-                            <a href="#">
-                                <span>Spelplånbok:</span>
-                                <span>450kr</span>
-                            </a>
-                        </div>
-                        <div class="top__actions-account-winnings">
-                            <a href="#">
-                                <span>Vinstkonto:</span>
-                                <span>450kr</span>
-                            </a>
-                        </div>
-                    </div>
                     @@if(show_cart === true) {
                         <div class="top__actions-cart product-cart">
                             <div class="product-cart__item visible-xs">
@@ -128,15 +131,15 @@
             </div>
             <div class="top__quick-nav">
                 <ul>
-                    <li class="top__quick-nav-item top__quick-nav-item--active">
+                    <li class="top__quick-nav-item js-top__quick-nav-item" data-mega-menu-id="mega-prenumeration">
                         <a href="#">Prenumerera</a>
                     </li>
                     <li class="top__quick-nav-separator"></li>
-                    <li class="top__quick-nav-item">
+                    <li class="top__quick-nav-item js-top__quick-nav-item" data-mega-menu-id="mega-spela-bingo">
                         <a href="#">Spela bingo</a>
                     </li>
                     <li class="top__quick-nav-separator"></li>
-                    <li class="top__quick-nav-item">
+                    <li class="top__quick-nav-item js-top__quick-nav-item" data-mega-menu-id="mega-vara-lotter">
                         <a href="#">Våra lotter</a>
                     </li>
                 </ul>
@@ -148,6 +151,92 @@
             <button class="btn btn-primary btn-icon-only top__overlay-btn js-top__overlay-btn">
                 <i class="icon icon-close"></i>
             </button>
+            <div class="top__mega">
+                <div class="top__mega-holder">
+                    <div id="mega-prenumeration" class="top__mega-item js-top__mega-item">
+                        <ul>
+                            <li class="navigation__item">
+                                <a href="">Prenumerationslotter</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">5 orsaker att prenumerera</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Avsluta prenumeration</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="mega-spela-bingo" class="top__mega-item js-top__mega-item">
+                        <ul>
+                            <li class="navigation__item">
+                                <a href="">Våra bingospel</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Aktuell kampanjer</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Aktuella jackpottar</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Bingoskola</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="mega-vara-lotter" class="top__mega-item js-top__mega-item">
+                        <ul>
+                            <li class="navigation__item">
+                                <a href="">Onlinelotter</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Prenumerationslotter</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Övriga onlinespel</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Skraplott i butik</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Registrera lott</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Aktuella kampanjer</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Nitlottsdragningen</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Jackpott</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="mega-om-miljonlotteriet" class="top__mega-item  top__mega-item--active js-top__mega-item js-top__mega-item--active">
+                        <ul>
+                            <li class="navigation__item navigation__item--active">
+                                <a href="">Om Miljonlotteriet</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Ansvarsfullt spelande</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Vad kan jag vinna?</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Vinnare</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Jobba hos Miljonlotteriet</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Press</a>
+                            </li>
+                            <li class="navigation__item">
+                                <a href="">Kontakta oss</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -157,17 +246,4 @@
         "msg_title": "Nytt meddelande",
         "msg_text": "Du har en ny bonus att hämta!"
     })
-</div>
-<div class="ml-2017 page-nav">
-    <ul>
-        <li class="navigation__item navigation__item--active">
-            <a href="">Prenumerationslotter</a>
-        </li>
-        <li class="navigation__item">
-            <a href="">5 orsaker att prenumerera</a>
-        </li>
-        <li class="navigation__item">
-            <a href="">Avsluta prenumeration</a>
-        </li>
-    </ul>
 </div>

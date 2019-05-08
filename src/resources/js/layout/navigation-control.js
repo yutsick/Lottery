@@ -1,62 +1,163 @@
 export default function() {
 
-    let $navWithSub = $('.navigation__item--has-children');
-    let $defaultNav = null;
-    let loaded = false;
-    let availableBreakpoints = ['desktop', 'widescreen'];
+    //Desktop main navigation
+    let $navWithSub = $('[data-mega-menu-id]').not('.js-navigation__item--active, .js-top__quick-nav-item--active');
+    let $defaultNav = $('.js-navigation__item--active');
+    let $currentNavItem = null;
+    const navigationActiveStateClassName = 'navigation__item--active';
 
-    const getSubNavigation = ($currentNav) => {
-        return $currentNav.children('.navigation__children');
+    //Mega menu (Visible on thumb and up)
+    let $megaNavItems = $('.js-top__mega-item').not('.js-top__mega-item--active');
+    let $defaultMega = $('.js-top__mega-item--active');
+    let $currentMegaItem = null;
+    const megaActiveStateClassName = 'top__mega-item--active';
+
+    //Quick nav (visible on tablets)
+    const quickNavStateClassName = 'js-top__quick-nav-item--active';
+    const quickNavItemClassName = 'js-top__quick-nav-item';
+    let $defaultQuickNav = $(`.${quickNavStateClassName}`);
+    const quickNavActiveStateClassName = 'top__quick-nav-item--active';
+    
+    const $toggleBtnActive = $('.js-top__menu-toggle--active');
+    const toggleBtnActiveClassName = 'top__menu-toggle--active';
+    
+    let loaded = false;
+
+    //Mega menu should only work on tablet and up
+    let availableBreakpoints = ['handheld', 'lap', 'desktop', 'widescreen'];
+
+    let mobileBreakpoints = ['thumb', 'handheld', 'lap'];
+
+    const isMobileMenuAvailable = () => {
+        return mobileBreakpoints.indexOf(currentBreakpoint()) != -1;
     }
 
     const isWideMenuAvailable = () => {
         return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
     }
 
+
+
+    //Get current media query
     const currentBreakpoint = () => window.ML.store.breakpoint.getState().currentBreakpointName;
 
-    const loadWideMenu = () => {
-        $navWithSub.each((index, item) => {
-            let $currentNav = $(item);
-
-            if(!$defaultNav && $currentNav.hasClass('navigation__item--active')) {
-                $defaultNav = $currentNav;
-                $defaultNav.addClass('navigation__item--default');
-            } else if($defaultNav && !$currentNav.hasClass('navigation__item--active')) {
-                $defaultNav.addClass('navigation__item--active');
+    //Show or hide navigation
+    const toggleDefaultNavActiveState = ($selector, className, show) => {
+        if($selector && $selector.length > 0) {
+            if(show) {
+                $selector.addClass(className);
+                $defaultMega.addClass(megaActiveStateClassName);
+            } else {
+                $selector.removeClass(className);
+                $defaultMega.removeClass(megaActiveStateClassName);
             }
-            
-            $currentNav.on({
-                mouseenter: (e) => {
-                    let $currentNavItem = $(e.currentTarget);
-                    if($currentNavItem.index() != $defaultNav.index()) {
-                        $defaultNav.removeClass('navigation__item--active');
-                    } 
-                    $currentNavItem.addClass('navigation__item--active');
-                    let $children = getSubNavigation($currentNavItem);
-                    $children.css('max-height', $children[0].scrollHeight);
-
-                },
-                mouseleave: (e) => {
-                    let $currentNavItem = $(e.currentTarget);
-                    $currentNavItem.removeClass('navigation__item--active')
-                    $currentNavItem.children('.navigation__children').css('max-height', 0);
-
-                    $defaultNav.addClass('navigation__item--active');
-                    let $children = getSubNavigation($defaultNav);
-                    $children.css('max-height', $children[0].scrollHeight);
-
-                }
-            });
-        });
-    
+        }
     }
 
-    const unloadWideMenu = () => {
-        $navWithSub.each((index, item) => {
-            let $currentNav = $(item);       
-            $currentNav.off('mouseenter mouseleave');
+    //Toggle main navigation and quick links
+    const toggleMainNavItem = ($mainNavItem, toggle) => {
+
+        if($mainNavItem.length == 0) {
+            return;
+        }
+
+        $currentNavItem = $mainNavItem;
+        
+        if($currentNavItem && $currentNavItem.length > 0) {
+
+            //check if we are using quick navigation on handheld and lap screen sizes
+            const isQuickNavItem = $currentNavItem.hasClass(quickNavItemClassName);
+            const activeClassName = isQuickNavItem ? quickNavActiveStateClassName : navigationActiveStateClassName;
+
+            //If slide out navigation is active and we are hovering over main navigations within the slide out navigation dont do anything
+            if(!isQuickNavItem && isMobileMenuAvailable()) {
+                return;
+            }
+
+            if(isQuickNavItem) {
+                if(toggle && $currentNavItem.index() != $defaultQuickNav.index() && $defaultQuickNav.hasClass(quickNavActiveStateClassName)) {
+                    toggleDefaultNavActiveState($defaultQuickNav, activeClassName, false);
+                } else if(toggle && $defaultQuickNav.length == 0) {
+                    toggleDefaultNavActiveState($defaultNav, navigationActiveStateClassName, false);
+                }
+                if($toggleBtnActive && $toggleBtnActive.length > 0) {
+                    $toggleBtnActive.removeClass(toggleBtnActiveClassName);
+                }
+            } else {
+                //If hover over other then default lets remove default active state
+                if(toggle && $currentNavItem.index() != $defaultNav.index() && $defaultNav.hasClass(navigationActiveStateClassName)) {
+                    toggleDefaultNavActiveState($defaultNav, activeClassName, false);
+                }
+            }
+
+            //Set new item as active or reset
+            if(toggle) {
+                $currentNavItem.addClass(isQuickNavItem ? quickNavActiveStateClassName : navigationActiveStateClassName);
+                const currentMegaId = $currentNavItem.attr('data-mega-menu-id');
+                $currentMegaItem = $('#' + currentMegaId);
+                if($currentMegaItem && $currentMegaItem.length > 0) {
+                    $currentMegaItem.addClass(megaActiveStateClassName);
+                }
+            } else {
+                $currentNavItem.removeClass(isQuickNavItem ? quickNavActiveStateClassName : navigationActiveStateClassName);
+                if($currentMegaItem && $currentMegaItem.length > 0) {
+                    $currentMegaItem.removeClass(megaActiveStateClassName);
+                    $currentMegaItem = null;
+                }
+                if(isQuickNavItem) {
+                    if($defaultQuickNav.length > 0) {
+                        toggleDefaultNavActiveState($defaultQuickNav, activeClassName, true);
+                    } else {
+                        toggleDefaultNavActiveState($defaultNav, activeClassName, true);
+                    }
+                    if($toggleBtnActive && $toggleBtnActive.length > 0) {
+                        $toggleBtnActive.addClass(toggleBtnActiveClassName);
+                    }
+                } else {
+                    toggleDefaultNavActiveState($defaultNav, activeClassName, true);
+                }
+            }
+        }
+    }
+
+    const initNavItem = item => {
+        $(item).on({
+            mouseenter: (e) => toggleMainNavItem($(e.currentTarget), true),
+            mouseleave: (e) => toggleMainNavItem($(e.currentTarget), false)
         });
+    }
+
+
+    //Mega menu
+    
+    const toggleMegaItem = (e, toggle) => {
+        let $currentMegaItem = $(e.currentTarget);
+        if(toggle) {
+            if($currentMegaItem.length == 0) {
+                return;
+            }
+            const currentMegaId = $currentMegaItem.attr('id');
+            if($currentNavItem.length > 0 && $currentNavItem.attr('data-mega-menu-id') === currentMegaId) {
+                toggleMainNavItem($currentNavItem, true);
+            } else {
+                $currentNavItem = $(`[data-mega-menu-id="${currentMegaId}"]`);
+                toggleMainNavItem($currentNavItem, true);
+            }
+        } else {
+            toggleMainNavItem($currentNavItem, false);
+        }
+    }
+    
+    const initMegaItem = item => {
+        $(item).on({
+            mouseenter: (e) => toggleMegaItem(e, true),
+            mouseleave: (e) => toggleMegaItem(e, false)
+        });
+    }
+
+    const loadWideMenu = () => {
+        $navWithSub.each((index, item) => initNavItem(item));
+        $megaNavItems.each((index, item) => initMegaItem(item));
     }
 
     window.ML.store.breakpoint.subscribe(() => {
@@ -64,11 +165,6 @@ export default function() {
            if(!loaded) {
                loadWideMenu();
                loaded = true
-           }
-       } else {
-           if(loaded) {
-               unloadWideMenu();
-               loaded = false;
            }
        }
     });

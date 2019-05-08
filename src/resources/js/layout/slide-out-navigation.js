@@ -103,11 +103,11 @@ export default function() {
         //Close all active sub navigations
 		const hideSubNavigations = () => {
 			$('.' + navigationItemActiveClassName).each((index, item) => {
-                let $item = $(item);
+				let $item = $(item);
                 let $btn = $item.children('.js-navigation__toggle');
                 if($btn.length > 0) {
                     $btn.trigger('click');
-                }
+				}
             });
 		}
 		
@@ -119,6 +119,10 @@ export default function() {
                     showOverlay(false);
 					hideSubNavigations();
 					$slideOutNavigation.removeClass(showNavigationClassName);
+				} else {
+					if(!$openByDefaultMavBtn.parent().hasClass('navigation__item--active')) {
+						$openByDefaultMavBtn.parent().addClass('navigation__item--active');
+					}
 				}
 				return;
 			}
@@ -148,6 +152,7 @@ export default function() {
 
 		const initSlideOut = () => {
 			const shouldSlideOut = slideOutMenuIsAvailable();
+			
             if(shouldSlideOut && !$slideOutNavigation.hasClass(navigationSlideOutClassName)) {
                 setTimeout(() => {
                     $slideOutNavigation.addClass(navigationSlideOutClassName);
@@ -156,13 +161,17 @@ export default function() {
             if(!shouldSlideOut && $slideOutNavigation.hasClass(navigationSlideOutClassName)){
                 $slideOutNavigation.removeClass(navigationSlideOutClassName);
 			}
+			
 			updateSlideOutNavigation(navigationState());			
 		}
-
-		
 		
 		//Listeners for breakpoint and navigation states
 		window.ML.store.breakpoint.subscribe(() => {
+			
+			if(slideOutMenuIsAvailable() && $overlay.hasClass(overlayShowClassName)) {
+				return;
+			}
+
 			initSlideOut();
 		});
 

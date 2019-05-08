@@ -8,7 +8,7 @@
     padding: 0;
     margin: 0;
     background-color: $color-snow;
-    z-index: 1001;
+    z-index: 1006;
     box-shadow: 0 2px 15px -12px #888888;
     overflow-y: hidden;
     will-change: auto;
@@ -143,17 +143,20 @@
             }
 
             a {
-                padding: 15px 20px;
+                padding: 10px 20px;
                 font-weight: 700;
                 font-size: 16px;
                 border-right: 1px solid #D8D8D8;
                 width: calc(100% - 52px);
+                min-height: 52px;
+                display: flex;
+                align-items: center;
             }
 
             &--active {
 
                 a {
-                    color: $color-space;
+                    color: darken($color-primary, $color-darken-amount);
                 }
                 
                 .navigation__toggle {
@@ -186,6 +189,7 @@
                     color: $color-snow;
                     font-weight: 400;
                     border-right: none;
+                    text-decoration: none;
                 }
             }
         }
@@ -377,6 +381,7 @@
 
                 &--active {
                     a {
+                        color: #00588d;
 
                         &:after {
                             transition: border-top .3s ease-in-out;
@@ -398,17 +403,6 @@
                                 display: block;
                                 left: 0px;
                             }
-                        }
-                    }
-                }
-                
-                &:last-child {
-                    &:after {
-                        display: none;
-                    }
-                    a {
-                        &:after {
-                            display: none;
                         }
                     }
                 }

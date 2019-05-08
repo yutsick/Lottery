@@ -19,7 +19,7 @@ export default function() {
 		let $openByDefaultMavBtn = null;
 
 		//which breakpoints should accept slide out navigation
-		let availableBreakpoints = ['tiny', 'thumb', 'handheld', 'lap'];
+		let availableBreakpoints = ['tiny', 'thumb', 'handheld'];
 
 		//Get navigation and breakpoint states
 		const navigationState = () => window.ML.store.account.getState();
@@ -162,6 +162,11 @@ export default function() {
 		
 		//Listeners for breakpoint and navigation states
 		window.ML.store.breakpoint.subscribe(() => {
+
+			if(slideOutMenuIsAvailable() && $overlay.hasClass(overlayShowClassName)) {
+				return;
+			}
+
 			initSlideOut();
 		});
 

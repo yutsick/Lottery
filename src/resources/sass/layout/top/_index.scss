@@ -7,15 +7,6 @@
     top: 0;
     width: 100%;
 
-    &:after {
-        content: '';
-        width: 100%;
-        height: 4px;
-        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-        position: absolute;
-        margin-top: -4px;
-    }
-
     &__holder {
         display: flex;
         flex-wrap: wrap;
@@ -41,7 +32,7 @@
         transition: opacity .3s ease-in-out;
         top: 0;
         left: 0;
-        z-index: 999;
+        z-index: 1005;
 
         &--closed {
             visibility: hidden;
@@ -58,7 +49,7 @@
             justify-content: center;     
             position: fixed;
             transform: scale(0);
-            z-index: 1002;
+            z-index: 1006;
             width: 9vw;
             height: 9vw;
             margin-top: -20px !important;
@@ -182,7 +173,6 @@
     &__actions {
         flex: 0 0 100%;
         order: 5;
-        margin-left: auto;
 
         &-cart {
             width: 100%;
@@ -222,36 +212,6 @@
             .dropdown {
                 display: none;
             }
-
-            &-info {
-                display: flex;
-                padding: $padding-small;
-                background-color: $color-cloud;
-
-                div {
-                    width: 50%;
-                }
-            }
-
-            &-wallet,
-            &-winnings {
-                display: flex;
-                
-                a {
-                    font-size: .813rem;
-                    color: $color-black;
-
-                    span {
-                        &:last-child {
-                            font-weight: 600;
-                        }
-                    }
-                }
-            }
-
-            &-winnings {
-                justify-content: flex-end;
-            }
         }
     }
 
@@ -290,7 +250,7 @@
 
                 a {
                     text-decoration: underline;
-                    color: $color-space;
+                    color: darken($color-primary, $color-darken-amount);
                 }
             }
 
@@ -307,14 +267,20 @@
     }
 
     &__register-scratch {
+        display: flex;
         flex: 0 0 33.3%;
         padding: 0 $padding-small;
-        display: none;
         align-items: center;
         justify-content: flex-end;
         order: 3;
         font-size: 14px;
         opacity: 1;
+
+        .logged-in & {
+            @include max-screen($screen-sm) {
+                display: none;
+            }
+        }
     }
 
     &--sticky {
@@ -327,6 +293,10 @@
 
     &--hide {
         transform: translateY(-128px);
+    }
+
+    &__mega {
+        display: none;
     }
 
     @include min-screen($screen-xs) {
@@ -344,25 +314,9 @@
                 }
             }
         }
-    }
-    
-    @include min-screen(1036px) {
-        &__contact {
-            display: flex;
-        }
 
-        &__actions {
-            margin-left: 0;
-        }
-    }
-
-    @include max-screen(1050px) {
-        &__contact {
+        &__mega {
             display: none;
-        }
-
-        &__actions {
-            margin-left: auto;
         }
     }
 
@@ -387,12 +341,27 @@
                 height: 40px;
                 order: 6;
                 flex: 0 0 auto;
-                padding: 0 15px 0 $padding-default;
+                padding: 0;
+
                 span {
                     display: none;
                 }
                 .icon {
                     margin-right: 0; 
+                }
+                
+                button {
+                    padding: 0 $padding-default;
+                }
+
+                &--default {
+                    button {
+                        color: $color-space;
+
+                        &:hover {
+                            color: $color-space;
+                        }
+                    }
                 }
 
                 &--active {
@@ -404,8 +373,8 @@
                             content: '';
                             position: absolute;
                             width: 0; 
-                            height: 0; 
-                            bottom: -6px;
+                            height: 6px;
+                            bottom: -8px;
                             right: 50%;
                             margin-right: -6px;
                             border-left: 6px solid transparent;
@@ -435,29 +404,38 @@
         }
 
         &__contact {
-            margin-left: auto;
+            order: 2;
+            display: flex;
             margin-right: 10px;
-            align-items: center;            
+            margin-left: auto;
+            align-items: center; 
+            display: none;
+
             .icon {
                 margin-right: 10px;
             }
         }
 
+        &__account-info { 
+            order: 8;
+            margin-left: auto;
+        }
+
         &__actions {
             display: flex;
             flex: 0 0 auto;
+            width: calc(80% - 20px);
             justify-content: flex-end;
             align-items: center;
-            padding-right: 20px;
+            margin-right: 20px;
             height: 45px;
-            max-width: 80%;
-            flex: 0 0 80%;
 
             &-cart {
                 width: auto;
                 top: 0;
                 left: 0;
                 z-index: 0;
+                margin-right: 10px;
                 position: relative;
                 padding-right: 0;
                 justify-content: flex-end;
@@ -472,14 +450,8 @@
                 position: relative;
                 justify-content: flex-end;
                 
-                &-info {
-                    display: none;
-                }
-
                 .dropdown {
-                    margin-left: 10px;
                     display: block;
-
 
                     &__button {
                         background-color: $color-snow;
@@ -492,12 +464,13 @@
 
                         .icon {
                             margin-left: 20px;
+                            z-index: 1001;
                         }
 
-                        .top__actions-account-notification,
-                        .icon {
+                        .top__actions-account-notification {
                             z-index: 401;
                         }
+                        
 
                         .top__actions-account-notification + .icon{
                             margin-left: 10px;
@@ -521,8 +494,6 @@
                             }
                         }
                     }
-
-                    
 
                     &-menu {
                         top: 0;
@@ -604,43 +575,11 @@
                 button + button {
                     margin-left: 10px;
                 }
-
-                &-info {
-                    flex: 0 0 auto;
-                    margin-right: 20px;
-                }
-                &-wallet,
-                &-winnings {
-                    a {
-                        display: flex;
-                    }
-                    span {
-                     font-size: 12px;
-    
-                     &:first-child {
-                         margin-right: 30px;
-                         text-decoration: underline;
-                     }   
-                    }
-                    span + span {
-                        margin-left: auto;
-                    }
-                }
-                &-winnings {
-                    span {
-                        color: $color-blue;
-                    }
-                }
-                &-wallet {
-                    span {
-                        color: $color-green;
-                    }
-                }
             }
         }
 
         &__quick-nav {
-            flex: 0 0 50%;
+            flex: 0 0 70%;
             order: 6;
             padding: 0;
             margin-top: 0;
@@ -672,7 +611,7 @@
                         &:after {
                             content: '';
                             position: absolute;
-                            right: -15px;
+                            right: 0;
                             bottom: 0;
                             width: 1px;
                             height: 60%;
@@ -693,13 +632,12 @@
                 padding-bottom: 0;
                 display: flex;
                 align-items: center;
-                margin: 0 15px;
 
                 &--active {
                     a {
                         text-decoration: none;
                     }
-                    &:after {
+                    &:before {
                         content: '';
                         width: 0; 
                         height: 0; 
@@ -716,22 +654,38 @@
 
                 a {
                     font-size: 17px;
+                    padding: 10px 20px;
                 }
             }
         }
 
 
         &__page-nav {
-            position: absolute;
-            top: 100%;
-            z-index: 1;
-            width: 100%;
             display: flex;
+            position: relative;
+            top: 100%;
+            width: 100vw;
+            margin-left: -50vw;
+            left: 50%;
             order: 7;
-            flex: 1 1 100%;
             background-color: $color-blue;
             padding: $padding-small $padding-small 0;
-            visibility: hidden;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 4px;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+                position: absolute;
+                margin-top: -4px;
+            }
+
+            &-holder {
+                display: flex;
+                max-width: 1400px;
+                width: 100%;
+                margin: 0 auto;
+            }
 
             &--loaded {
                 transition: transform .3s ease-in-out;
@@ -755,13 +709,81 @@
                 }
             }
         }
+
+        &__mega {
+            display: flex;
+            position: relative;
+            top: 100%;
+            width: 100vw;
+            margin-left: -50vw;
+            left: 50%;
+            order: 7;
+            background-color: $color-blue-deep;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 4px;
+                box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+                position: absolute;
+                margin-top: -4px;
+                top: 0;
+            }
+
+            &-holder {
+                display: flex;
+                max-width: 1400px;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            &-item {
+                width: 100%;
+                display: none;
+                padding: $padding-small $padding-default;
+
+                &--active {
+                    display: flex;
+                }
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+    
+                .navigation__item {
+                    margin: 0 30px 0 0;
+                    min-height: 30px;
+                    display: flex;
+                    align-items: center;
+                    margin-left: 0;
+
+                    a {
+                        color: $color-snow;
+                        font-size: 16px;
+                    }
+
+                    &--active {
+                        a {
+                            text-decoration: underline;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
     }
 
+    
     @include min-screen($screen-desktop) {
-        
+        position: relative;
+        z-index: 999;
+
         &__holder {
             position: relative;
-            padding-bottom: 50px;
         }
 
         &__brand {
@@ -793,14 +815,17 @@
 
         &__actions {
             flex: 0 1 auto;
+            width: auto;
         }
 
         &__register-scratch {
-            position: absolute;
+            position: relative;
             right: 0;
             bottom: 0;
             z-index: 1;
-            
+            order: 7;
+            margin-top: 10px;
+
             a {
                 padding: 10px 0;
             }
@@ -811,12 +836,14 @@
         }
 
         &__main-nav {
-            order: 3;
-            align-self: flex-end;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+            order: 6;
+            position: relative;
             z-index: 1;
+            margin-top: 10px;
+        }
+
+        &__contact {
+            display: flex;
         }
     }
 
@@ -835,6 +862,8 @@
             flex: 0 0 auto;
             display: flex;
             margin: 0;
+            height: calc(100% - 50px);
+            top: 0;
 
             &-logotype {
                 display: flex;
@@ -846,12 +875,11 @@
                 }
             }
         }
-
+        
         &__main-nav {
             padding-left: 148px;
             position: relative;
             order: 5;
-            margin-top: 10px;
 
             &:before {
                 content: '';
@@ -863,71 +891,91 @@
             }
         }
     }
-}
 
-&.page-nav {
-    display: none;
-    z-index: 101;
-
-    .logged-in & {
-        margin-bottom: 20px;
-    }
-    
-    .page-front &,
-    .shop &,
-    .page-old & {
-        margin-bottom: 0;
-    }
-    
-    @include min-screen($screen-tablet) {
-        background-color: $color-blue-deep;
-        max-width: 1400px;
-        margin: 0 auto;
-        display: block;
-
-        ul {
-            padding: 0 10px;
-            margin: 0;
-            list-style: none;
+    @include min-screen(1053px){
+        &__account-info {
             display: flex;
-            flex-wrap: wrap;
-
-            li {
-                min-height: 50px;
+            flex-direction: column;
+            justify-content: center;
+            background-color: transparent;
+            width: auto;
+            margin-left: 0;
+            margin-right: 10px;
+            order: 2;
+            
+            &-wallet,
+            &-winnings {
+                display: block;
+                width: 100% !important;
 
                 a {
-                    color: $color-snow;
-                    font-size: 16px;
-                    padding: 0 10px;
-                    margin-right: 20px;
-                    height: 100%;
                     display: flex;
-                    align-items: center;
                 }
+                span {
+                font-size: 12px;
 
-                &.navigation__item--active {
-                    a {
-                        font-weight: 700;
-                        text-decoration: underline;
-                    }
+                &:first-child {
+                    margin-right: 30px;
+                    text-decoration: underline;
+                }   
+                }
+                span + span {
+                    margin-left: auto;
+                }
+            }
+            &-winnings {
+                span {
+                    color: $color-blue;
+                }
+            }
+            &-wallet {
+                span {
+                    color: $color-green;
                 }
             }
         }
+    }
 
-        .page-nav {
-            &__fly-down-item {
-                display: none;
-
-                &--visible {
-                    display: block;
-                }
+    @include max-screen(1052px) {
+        &__account-info {
+            display: flex;
+            padding: $padding-small;
+            flex-direction: row;
+            justify-content: flex-start;
+            background-color: $color-cloud;
+            width: 100%;
+            order: 8;
+    
+            div {
+                width: 50%;
             }
     
-            &__current {
-                &--hidden {
-                    display: none;
+            &-wallet,
+                &-winnings {
+                    display: flex;
+                    
+                    a {
+                        font-size: .813rem;
+                        color: $color-black;
+    
+                        span {
+                            color: $color-black;
+                            font-size: .813rem;
+                            margin-right: 0 !important;
+
+                            &:last-child {
+                                font-weight: 600;
+                            }
+                        }
+                    }
                 }
-            }
+    
+                &-winnings {
+                    justify-content: flex-end;
+                }
+    
+    
         }
+    
     }
 }
