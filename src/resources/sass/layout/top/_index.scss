@@ -254,6 +254,12 @@
                 }
             }
 
+            &--default {
+                & > a {
+                    color: $color-space !important;
+                }
+            }
+
             a {
                 font-size: 16px;
                 font-weight: 700;
