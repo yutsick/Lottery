@@ -294,7 +294,7 @@
         position: fixed;
         background-color: $color-snow;
         z-index: 999;
-        transform: translateY(0px);
+        transform: translate(0);
     }
 
     &--hide {
