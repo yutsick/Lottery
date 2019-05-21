@@ -59,9 +59,9 @@
                 @@if (logged_in === false) {
                     <div class="top__actions-account">
                         <button id="log-in" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-login">Logga in</button>
-                        <button class="btn btn-success btn-2-line" data-toggle="modal" data-target="#modal-create-account">Skapa konto
+                        <a class="btn btn-success btn-2-line" data-toggle="modal" href="#test" data-target="#modal-create-account">Skapa konto
                             <span>och få 40 kr</span>
-                        </button>
+                        </a>
                     </div>
                 }
                 @@if (logged_in === true) {
