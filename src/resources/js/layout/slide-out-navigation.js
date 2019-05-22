@@ -120,13 +120,13 @@ export default function() {
 					hideSubNavigations();
 					$slideOutNavigation.removeClass(showNavigationClassName);
 				} else {
-					if(!$openByDefaultMavBtn.parent().hasClass('navigation__item--active')) {
-						$openByDefaultMavBtn.parent().addClass('navigation__item--active');
+					if(!$openByDefaultMavBtn.parent().hasClass(navigationItemActiveClassName)) {
+						$openByDefaultMavBtn.parent().addClass(navigationItemActiveClassName);
 					}
 				}
 				return;
 			}
-			if($openByDefaultMavBtn && !$openByDefaultMavBtn.parent().hasClass('navigation__item--active') && navigationState.isOpened) {
+			if($openByDefaultMavBtn && !$openByDefaultMavBtn.parent().hasClass(navigationItemActiveClassName) && navigationState.isOpened) {
 				$openByDefaultMavBtn.click();
 			}
 			//handle slide out

@@ -51,6 +51,7 @@ import top from './layout/top';
 import slideOutNavigation from './layout/slide-out-navigation';
 import slideOutAccountNavigation from './layout/slide-out-account';
 import navigationControl from './layout/navigation-control';
+import navigationItem from './layout/navigation-item';
 
 /* Utilities */
 import textToggle from './utilities/textToggle';
@@ -98,6 +99,7 @@ $(function () {
 	slideOutNavigation();
 	slideOutAccountNavigation();
 	navigationControl();
+	navigationItem();
 	/* call breakpointListener last */
 	breakpointListener();
 });
