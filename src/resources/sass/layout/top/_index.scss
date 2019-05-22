@@ -154,6 +154,10 @@
         align-items: center;
         display: none;
 
+        &--hidden {
+            visibility: hidden;
+        }
+
         .text {
             p, a {
                 color: $color-blue;
@@ -462,9 +466,11 @@
                         border: 2px solid $color-blue;
                         border-top: none;
                         color: $color-blue;
-                        padding: 0 20px;
+                        padding: 7px 7px 7px 15px;
                         display: flex;
                         align-items: center;
+                        flex-direction: row;
+                        height: 100%;
 
                         .icon {
                             margin-left: 20px;
@@ -478,6 +484,7 @@
 
                         .top__actions-account-notification + .icon{
                             margin-left: 10px;
+                            margin-right: 6px;
                         }
 
                         &.open {
@@ -530,7 +537,7 @@
                                 a {
                                     display: flex;
                                     width: calc(100% - 22px);
-                                    align-items: center;
+                                    padding: 0;
                                 }
 
                                 .top__actions-account-notification {
@@ -545,7 +552,7 @@
                         }
 
                         &-title {
-                            padding: 8px 20px;
+                            padding: 8px 20px 8px 15px;
                             color: $color-blue;
                             font-size: 16px;
                             display: inline-block;
