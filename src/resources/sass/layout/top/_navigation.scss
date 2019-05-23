@@ -138,7 +138,6 @@
             &--has-children {
                 & > a {
                     border-right: none;
-                    //flex: 1 1 auto;
                 }
             }
 
@@ -354,6 +353,7 @@
                     
                     &:after {
                         right: -1px;
+                        border-top-color: #F5F3F3;
                     }
 
                     &:before {
@@ -384,7 +384,7 @@
                         color: #00588d;
 
                         &:after {
-                            transition: border-top .3s ease-in-out;
+                            transition: border-top .1s ease-in-out;
                             width: 0; 
                             height: 6px;
                             top: 100%;
