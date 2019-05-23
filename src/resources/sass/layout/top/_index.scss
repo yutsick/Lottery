@@ -872,6 +872,18 @@
         &__contact {
             display: flex;
         }
+
+        &--sticky {
+            position: fixed;
+        }
+
+        &--animate {
+            transition: transform .2s ease;
+        }
+
+        &--show {
+            transform: translateY(0);
+        }
     }
 
     @include min-screen($screen-lg-desktop) {

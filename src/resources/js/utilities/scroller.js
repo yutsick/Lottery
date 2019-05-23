@@ -1,28 +1,44 @@
 export default function() {
     let $top = $('.top');
-    let topBarHeight = $top.height();
+    let $alert = $('.alert');
+    let topBarHeight = $top.outerHeight();
     let loaded = false;
     let didScroll;
     let lastScrollTop = 0;
     let availableBreakpoints = ['tiny', 'thumb'];
+    let $contentWrapper = $('.content-wrapper');
+    let contentTop = $contentWrapper.position().top;
 
-    const shouldScroll = () => {
+    const isMobile = () => {
         return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
-    }
-
-    const removeStickyTop = () => {
-        $top.removeClass('top--sticky');
     }
     
     const hasScrolled = () => {
         
         var scrollTop = $(window).scrollTop();
-
-        if (scrollTop > lastScrollTop && scrollTop > topBarHeight){
-            $top.addClass('top--sticky');
+        if (scrollTop > lastScrollTop && scrollTop > contentTop){
+            if(!isMobile()) {
+                $top.addClass('top--animate');
+                $top.css('transform', 'translateY(-' + topBarHeight + 'px)');
+                setTimeout(() => {
+                    $contentWrapper.css('padding-top', topBarHeight + 'px');
+                    $top.addClass('top--sticky');
+                }, 200)
+            } else {
+                $top.addClass('top--sticky');
+            }
         } else {
-            if(scrollTop < topBarHeight) {
+            if(scrollTop < contentTop) {
+                if(!isMobile()) {
+                    $top.removeClass('top--animate');
+                    $top.css('transform', '');
+                }
                 $top.removeClass('top--sticky');
+                $contentWrapper.css('padding-top', '');
+            } else {
+                if(scrollTop < lastScrollTop && $top.hasClass('top--animate')) {
+                    $top.css('transform', 'translateY(0px)');
+                }
             }
         }
         
@@ -46,22 +62,13 @@ export default function() {
 
     };
 
-    const unloadScroller = () => {
-        $(window).off('scroll');
-        removeStickyTop();
-        loaded = false;
-    };
-
     const currentBreakpoint = () => window.ML.store.breakpoint.getState().currentBreakpointName;
 
     window.ML.store.breakpoint.subscribe(() => {
-
-        if(shouldScroll()){
-            if(!loaded) {
-                loadScroller();
-            }
-        } else {
-            unloadScroller();
+        topBarHeight = $top.outerHeight();
+        contentTop = $contentWrapper.position().top;
+        if(!loaded) {
+            loadScroller();
         }
 
     });
