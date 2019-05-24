@@ -4,11 +4,13 @@
 	border-radius: 0;
 	margin: 0;
 	color: $color-light;
-	text-align: center;
-	padding: $padding-small;
+	text-align: left;
+
+	padding: $padding-medium $padding-default;
 
 	@include min-screen($screen-sm-min) {
 		padding: $padding-default;
+		text-align: center;
 	}
 
 	.close {
@@ -30,31 +32,67 @@
 
 #alert-cookie,
 &#alert-cookie {
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	padding: 20px 50px 20px 20px;
-	z-index: 1100;
-	background-color: $color-river-bed;
-	color: $color-snow;
-	text-align: left;
+	z-index: 100;
+	background-color: $color-cloud;
+	color: $color-complement-sky;
 
-	.close {
-		color: $color-snow;
-		position: absolute;
-		top: 50%;
-		margin-top: -10px;
-		right: 20px;
+	&.alert--happy {
+		background-color: $color-pink;
+	}
+
+	&.alert--regular {
+		background-color: #2e3237;
+	}
+
+	&.alert--error,
+	&.alert--warning {
+		background-color: $color-roman;
+	}
+
+	&.alert--happy,
+	&.alert--regular,
+	&.alert--error,
+	&.alert--warning {
+		color: $color-light;
+		.close {
+			color: $color-light;
+		}
 	}
 
 	@include min-screen($screen-sm-min) {
-		.close {
-			color: $color-gray;
-		}	
+		top: 0;
+		position: relative;
 	}
 
-	@include min-screen($screen-md-min) {
-		text-align: center;
+	.close {
+		color: $color-complement-sky;
+	}
+}
+
+.alert,
+&.alert {
+	&--happy {
+		background-color: $color-pink;
+	}
+	&--regular {
+		background-color: #2e3237;
+	}
+	&--error,
+	&--warning {
+		background-color: $color-roman;
+	}
+
+	&--happy,
+	&--regular,
+	&--error,
+	&--warning {
+		color: $color-light;
+		.icon {
+			color: $color-light;
+		}
 	}
 }
