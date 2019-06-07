@@ -1,0 +1,36 @@
+@@include('layout/_header.html', {
+	"class": "logged-in"
+	})
+	
+	@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+	
+	<div class="content-wrapper ml-2017">
+		<div class="container container--center">
+			<section class="section button-blocks" style="padding: 60px 0;">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-4">
+							<button class="btn-primary">Button Primary</button>
+							<br /><br />
+							<button class="btn-secondary">Button Secondary</button>
+							<br /><br />
+							<button class="btn-success">Button Success</button>
+							<br /><br />
+							<button class="btn-reg-customer">Button Register Customer</button>
+							<br /><br />
+							<button class="btn-invert">Button Invert</button>
+							<br /><br />
+							<button class="btn-bankid">Logga in med BankID</button>
+							<br /><br />
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	
+	@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
+	
+	
+	
+	

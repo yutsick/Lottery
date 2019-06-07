@@ -5,9 +5,9 @@ require('bootstrap-validator');
 var objectFitImages = require('object-fit-images');
 var fizzyUIUtils = require('fizzy-ui-utils');
 var Flickity = require('flickity/dist/flickity.pkgd.js');
+
 require('lightgallery.js/dist/js/lightgallery.min.js');
 require('lg-thumbnail.js/dist/lg-thumbnail.js');
-
 /* Vendor */
 import modernizr from './vendor/modernizr-custom.js';
 
@@ -43,6 +43,7 @@ import walletTransferAmount from './components/wallet-transfer-amount';
 import orderActions from './components/order-actions';
 import cartQuantity from './components/cart-quantity';
 import bankIDForm from './components/bankid-form';
+import Odometer from './components/odometer';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -100,6 +101,7 @@ $(function () {
 	slideOutAccountNavigation();
 	navigationControl();
 	navigationItem();
+	Odometer();
 	/* call breakpointListener last */
 	breakpointListener();
 });

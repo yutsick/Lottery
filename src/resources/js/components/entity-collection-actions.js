@@ -6,10 +6,10 @@ export default class entityCollectionActions {
         this.lazyloads = this.lazyLoadFunction();
         if(this.lazyloads) {
             this.lazyloads.update();
-            this.collectionActions();
-            this.selectTable();
-            this.showTable();
         }
+        this.collectionActions();
+        this.selectTable();
+        this.showTable();
 	}
 
 
@@ -33,7 +33,6 @@ export default class entityCollectionActions {
             _this.showOrHideAction($target, totalItems, $this);
 
             $this.bind('click', function (e) {
-
                 $.ajax({
                     url: source,
                     success: function (data) {

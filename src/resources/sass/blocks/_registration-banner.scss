@@ -14,4 +14,8 @@
 	.bank-form {
 		padding: 0 $padding-medium;
 	}
+
+	.page-front & {
+		margin-top: 0;
+	}
 }

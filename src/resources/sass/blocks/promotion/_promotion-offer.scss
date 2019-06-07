@@ -1,0 +1,65 @@
+.promotion-offer {
+    display: flex;
+    background-color: $color-blue-deep;
+    color: $color-snow;
+    height: 100%;
+    margin-bottom: $margin-small;
+    flex-direction: column;
+    
+    &__content {
+        padding: $padding-default $padding-small;
+        z-index: 100;
+    }
+
+    &__image {
+        padding: 0 $padding-small;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        img {
+            padding-top: $padding-small;
+        }
+    }
+
+    &__subtitle {
+        font-size: 14px;
+        line-height: 22px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    &__title {
+        margin-top: 0;
+    }
+    .btn-invert {
+        margin-top: $margin-default;
+    }
+
+    @include min-screen($screen-sm-min) {
+        margin-bottom: $margin-default;
+        flex-direction: row;
+
+        &__content,
+        &__image {
+            width: 50%;
+            height: 100%;
+        }
+        &__content {
+            padding: $padding-default $padding-small $padding-default $padding-default;
+            display: flex;
+            flex-direction: column;
+        }
+        &__image {
+            padding: 0 $padding-default 0 $padding-small;
+        }
+        &__cta {
+            margin-top: auto;
+        }
+        
+    }
+    
+    @include min-screen($screen-lg-min) {
+        margin-bottom: $margin-default;
+    }
+}

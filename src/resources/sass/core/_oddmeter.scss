@@ -1,0 +1,43 @@
+.oddmeter {
+    display: flex;
+    background: rgb(34,28,12);
+    background: linear-gradient(0deg, rgba(34,28,12,1) 0%, rgba(91,91,91,1) 52%, rgba(15,12,5,1) 100%);
+    padding: 1px 2px;
+    border-radius: 3px;
+
+    &__value {
+        overflow: hidden;
+        height: 24px;
+        display: flex;
+    }
+
+    &__holder {
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(241,197,105,1) 16%, rgba(252,246,150,1) 31%, rgba(247,243,146,1) 45%, rgba(252,221,125,1) 77%, rgba(134,96,24,1) 88%, rgba(0,0,0,1) 100%);
+        margin-right: 2px;
+        border-radius: 2px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        transition: transform .2s ease;
+        margin-top: 3px;
+    }
+
+    &__number {
+        font-weight: 800;
+        padding: 0 2px;
+        color: #3F3F3F;
+        text-align: center;
+    }
+
+    &__currency {
+        font-weight: 800;
+        padding: 0 2px 0 4px;
+        color: $color-snow;
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+    }
+}

@@ -103,18 +103,18 @@
 .modal-footer {
 	padding-top: 0;
 	border: none;
-
+	
 	.btn {
 		position: relative;
 
-		&:before {
+		/*&:before {
 			content: '';
 			position: absolute;
 			left: 0;
 			top: -$margin-medium;
 			width: 100%;
 			height: 1px;
-		}
+		}*/
 
 		+ .btn-block {
 			margin-left: 0;

@@ -1,0 +1,232 @@
+//$bingo-spacing: 15px;
+
+.bingo-tabs {
+    background-color: $color-blue-deep;
+    display: flex;
+    margin-bottom: $margin-small;
+    flex-direction: column;
+
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .title {
+        flex: 1 1 auto;
+        font-size: 20px;
+        line-height: 1.2;
+        font-family: $base-heading-family;
+        color: $color-snow;
+        align-self: flex-start;
+        margin: 10px 0 10px 10px;
+    }
+
+    .nav-tabs {
+        border-bottom: 0;
+        margin: 0 5px 0 auto;
+        align-self: flex-end;
+        display: flex;
+
+        & > li {
+            position: relative;
+            margin: 0 6px;
+            margin-bottom: 0;
+            min-width: 58px;
+            text-align: center;
+
+            &.active {
+                a {
+                    background-color: $color-blue;
+                    color: $color-snow;
+                    border: none;
+                    
+                    &:before,
+                    &:after {
+                        border-bottom-color: $color-blue;
+                    }
+                }   
+            }
+    
+            &:hover {
+                a {
+                    border: 0 !important;
+                    background-color: $color-blue !important;
+                    color: $color-snow !important;
+                    
+                    &:before,
+                    &:after {
+                        border-bottom-color: $color-blue;
+                    }
+                }
+            }
+    
+            & > a {
+                color: $color-snow;
+                border: none;
+                margin-right: 0;
+                padding: 8px 15px;
+                font-family: $base-heading-family;
+                font-weight: 800;
+                font-size: 20px;
+                line-height: 1;
+                background-color: $color-blue-dark;
+
+                &:focus,
+                &:hover {
+                    border: 0 !important;
+                    background-color: $color-blue !important;
+                    color: $color-snow !important;
+                }
+
+                &:after {
+                    content: '';
+                    top: 0;
+                    right: -5px;
+                    position: absolute;
+                    border-left: 0px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-bottom: 36px solid $color-blue-dark;
+                }
+        
+                &:before {
+                    content: '';
+                    top: 0;
+                    left: -5px;
+                    position: absolute;
+                    border-left: 5px solid transparent;
+                    border-right: 0px solid transparent;
+                    border-bottom: 36px solid $color-blue-dark;
+                }
+            }
+        }
+    }
+
+    
+
+    .tab-content {
+        padding: $padding-small;
+        width: 100%;
+        height: 100%;
+        background-color: $color-blue;
+    }
+
+    .tab-pane {
+        height: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    &__price {
+        position: relative;
+        padding-bottom: $padding-small;
+        width: calc(33% - 15px);
+        margin-right: $padding-small;
+        
+        img {
+            margin-top: 5px;
+            width: 100%;
+            height: auto;
+        }
+
+        &-cost {
+            position: absolute;
+            display: flex;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: $color-snow;
+            align-items: center;
+            justify-content: center;
+            left: 50%;
+            margin-left: -22px;
+            bottom: -5px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+
+    &__info {
+        flex: 0 0 66%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+        &__starts {
+            flex: 0 0 50%;
+        }
+
+        &__players {
+            flex: 0 0 50%;
+        }
+
+        &__jackpot {
+            flex: 0 0 100%;
+
+            strong {
+                font-size: 24px;
+            }
+        }
+
+    &__label {
+        color: $color-snow;
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+    }
+
+    strong {
+        color: $color-snow;
+        font-family: $base-heading-family;    
+    }
+
+    &__cta {
+        margin-top: $padding-small;
+        flex: 0 0 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include min-screen($screen-sm-min) {
+
+        &__price {
+            position: absolute;
+        }
+
+        &__info {
+            width: 100%;
+            flex: 0 0 100%;
+            padding-left: calc(33% + 10px);
+        }
+
+        &__cta {
+            align-items: flex-end;
+        }
+        
+    }
+    
+    @include min-screen($screen-sm-min) {
+        margin-bottom: $margin-default;
+
+        .tab-content {
+            padding: $padding-default;
+        }
+
+        &__cta {
+            margin-top: $padding-default;
+        }
+
+        &__info {
+            padding-left: calc(33% + 20px);
+        }
+
+        &__price {
+            padding-bottom: $padding-default;
+            margin-right: $padding-default;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.hero-fullwidth {
+    position: relative;
+    width: 100%;
+    max-width: 2560px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $margin-small;
+
+    &__background {
+        height: 100%;
+        width: 100vw;
+
+        picture {
+            img {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: right;
+              }
+        }
+    }
+
+    &__content {
+        &-inner {
+            background-image: url('/assets/img/background/hero-content-bg.png');
+            background-repeat: repeat;
+            background-size: 760px 340px;
+            color: $color-snow;
+        }
+    }
+
+    @include min-screen($screen-sm-min) { 
+        min-height: 70vh;    
+        
+        &__background {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        &__holder {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 120px 0 240px;
+            min-height: 70vh;
+            height: 100%;
+            
+            & > * {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            position: relative;
+
+            &-inner {
+                color: #fff;
+                position: relative;
+                z-index: 1;
+                overflow: visible;
+                
+                &:after {
+                    background-image: url('/assets/img/background/pattern-blue-deep.png');
+                    background-size: 100px 100px;
+                    content: "";
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    right: -46px;
+                    transform: skew(-5deg);
+                    width: 100%;
+                    border-top-right-radius: 7px;
+                }
+            }
+
+            .block-hero-reg__container {
+                max-width: 700px;
+                width: 100%;
+                margin-left: auto;
+                
+                .block-hero-reg__content {
+                    width: auto;
+                    max-width: auto;
+                    padding: 20px;
+                }
+                
+
+                
+            }
+        }
+
+        & + .container {
+            margin-top: -120px;
+        }
+
+        @include min-screen($screen-md-min) {
+            margin-bottom: 0;
+        }
+    }
+}

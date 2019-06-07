@@ -8,6 +8,10 @@
 	@include min-screen($screen-sm) {
 		margin-bottom: $margin-default;
 	}
+	&--bg-million-deep {
+		background-color: $color-blue-deep;
+		color: $color-snow;
+	}
 	&--align {
 		&-middle {
 			align-items: center;
