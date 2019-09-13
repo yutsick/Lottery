@@ -112,7 +112,7 @@ export default function() {
 		}
 		
 		const updateSlideOutNavigation = (navigationState) => {
-			//if we have slide out navigation active in wider screen we close it
+
 			if(!slideOutMenuIsAvailable()) {
 				if(navigationState.isOpened) {
 					dispatchEvents(false);
@@ -120,12 +120,16 @@ export default function() {
 					hideSubNavigations();
 					$slideOutNavigation.removeClass(showNavigationClassName);
 				} else {
+					if(!$openByDefaultMavBtn) {
+						return;
+					}
 					if(!$openByDefaultMavBtn.parent().hasClass(navigationItemActiveClassName)) {
 						$openByDefaultMavBtn.parent().addClass(navigationItemActiveClassName);
 					}
 				}
 				return;
 			}
+
 			if($openByDefaultMavBtn && !$openByDefaultMavBtn.parent().hasClass(navigationItemActiveClassName) && navigationState.isOpened) {
 				$openByDefaultMavBtn.click();
 			}

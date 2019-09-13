@@ -47,8 +47,10 @@
         .top__brand {
             order: 1;
             flex: 0 0 auto;
-            padding: $padding-small;
-            text-align: center;
+            padding: $padding-medium $padding-default;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
     
         .top__contact {
@@ -137,6 +139,7 @@
                 }
     
                 &--has-children {
+
                     & > a {
                         border-right: none;
                     }
@@ -189,7 +192,6 @@
                         color: $color-snow;
                         font-weight: 400;
                         border-right: none;
-                        text-decoration: none;
                     }
                 }
             }
@@ -224,6 +226,10 @@
                         &:before {
                             display: none;
                         }
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
                     }
     
                     &:last-child {
@@ -362,7 +368,7 @@
                             left: -1px;
                         }
                     }
-    
+
                     &--only-thumb {
                         display: none;
                     }
@@ -377,6 +383,35 @@
                             & > a {
                                 color: $color-space;
                             }
+                        }
+                    }
+
+                    &--has-children {
+                        position: relative;
+
+                        &:after {
+                            position: absolute;
+                            display: block;
+                            border: solid #b8d1dd;
+                            border-width: 0 2px 2px 0;
+                            display: inline-block;
+                            padding: 3px;
+                            transform: rotate(45deg);
+                            height: auto;
+                            width: auto;
+                            background-image: none;
+                            font-size: auto;
+                            left: calc(50% - 4px);
+                            bottom: 8px; 
+                            transition: bottom .2s ease, opacity .2s ease;
+                            opacity: 1;
+                        }
+
+                        &.navigation__item--active {
+                            &:after {
+                                opacity: 0;
+                                bottom: 4px;
+                            }   
                         }
                     }
     

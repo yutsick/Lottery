@@ -112,6 +112,7 @@ export default function() {
 		}
 		
 		const updateSlideOutNavigation = (navigationState) => {
+			
 			//if we have slide out navigation active in wider screen we close it
 			if(!slideOutMenuIsAvailable()) {
 				if(navigationState.isOpened) {
@@ -122,6 +123,7 @@ export default function() {
 				}
 				return;
 			}
+
 			if($openByDefaultMavBtn && !$openByDefaultMavBtn.parent().hasClass('navigation__item--active') && navigationState.isOpened) {
 				$openByDefaultMavBtn.click();
 			}

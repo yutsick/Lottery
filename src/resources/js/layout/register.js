@@ -31,7 +31,6 @@ export default function () {
 
 	$('.chooseLoginWay').on('select2:select', function (evt) {
 		var choice = evt.params.data.id;
-		console.log(choice);
 
 		if (choice === "password") {
 			$('#passwordInputs').show();

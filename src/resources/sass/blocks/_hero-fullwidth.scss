@@ -27,10 +27,79 @@
 
     &__content {
         &-inner {
-            background-image: url('/assets/img/background/hero-content-bg.png');
-            background-repeat: repeat;
-            background-size: 760px 340px;
             color: $color-snow;
+            background-color: $color-blue-deep;
+            
+            &--space {
+                background-color: $color-space;
+                &:after {
+                    background-color: $color-space;
+                }
+            }
+
+            &--black {
+                background-color: $color-black;
+                &:after {
+                    background-color: $color-black;
+                }
+            }
+
+            &--white {
+                background-color: $color-snow;
+                color: $color-black;
+                &:after {
+                    background-color: $color-snow;
+                }
+            }
+
+            &--blue {
+                background-color: $color-blue;
+                &:after {
+                    background-color: $color-blue;
+                }
+            }
+        }
+    }
+
+    &--transparent {
+        .hero-fullwidth__content {
+            &-inner {
+                color: $color-snow;
+                // background-color: rgba($color-blue-deep, .8);
+                
+                &:after {
+                    background-color: rgba($color-blue-deep, .8);
+                }
+
+                &--space {
+                   //  background-color: rgba($color-space, .8);
+                    &:after {
+                        background-color: rgba($color-space, .8);
+                    }
+                }
+    
+                &--black {
+                   //  background-color: rgba($color-black, .8);
+                    &:after {
+                        background-color: rgba($color-black, .8);
+                    }
+                }
+    
+                &--white {
+                    // background-color: rgba($color-snow, .8);
+                    color: $color-black;
+                    &:after {
+                        background-color: rgba($color-snow, .8);
+                    }
+                }
+    
+                &--blue {
+                    // background-color: rgba($color-blue, .8);
+                    &:after {
+                        background-color: rgba($color-blue, .8);
+                    }
+                }
+            }
         }
     }
 
@@ -64,19 +133,44 @@
                 position: relative;
                 z-index: 1;
                 overflow: visible;
-                
+                background-color: transparent;
+                padding: 0 40px;
+                margin-left: -20px;
+
                 &:after {
-                    background-image: url('/assets/img/background/pattern-blue-deep.png');
-                    background-size: 100px 100px;
                     content: "";
+                    background-color: $color-blue-deep;
                     height: 100%;
                     position: absolute;
                     top: 0;
-                    right: -46px;
+                    left: 0;
                     transform: skew(-5deg);
                     width: 100%;
                     border-top-right-radius: 7px;
                 }
+
+                &--space {
+                    &:after {
+                        background-color: $color-space;
+                    }
+                }
+                &--black {
+                    &:after {
+                        background-color: $color-black;
+                    }
+                }
+                &--white {
+                    color: $color-black;
+                    &:after {
+                        background-color: $color-snow;
+                    }
+                }
+                &--blue {
+                    &:after {
+                        background-color: $color-blue;
+                    }
+                }
+                
             }
 
             .block-hero-reg__container {

@@ -44,7 +44,6 @@ export default function () {
 		function addErrorMsg(form) {
 			let msg = $(form).siblings('.form-bankID__msg');
 			msg.text('Detta är inte en korrekt personnummer, se att du har skrivit rätt och försök igen.');
-			console.log(msg)
 		}
 	}
 

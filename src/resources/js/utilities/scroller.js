@@ -17,22 +17,16 @@ export default function() {
         
         var scrollTop = $(window).scrollTop();
         if (scrollTop > lastScrollTop && scrollTop > contentTop){
-            if(!isMobile()) {
-                $top.addClass('top--animate');
-                $top.css('transform', 'translateY(-' + topBarHeight + 'px)');
-                setTimeout(() => {
-                    $contentWrapper.css('padding-top', topBarHeight + 'px');
-                    $top.addClass('top--sticky');
-                }, 200)
-            } else {
+            $top.addClass('top--animate');
+            $top.css('transform', 'translateY(-' + topBarHeight + 'px)');
+            setTimeout(() => {
+                $contentWrapper.css('padding-top', topBarHeight + 'px');
                 $top.addClass('top--sticky');
-            }
+            }, 200)
         } else {
             if(scrollTop < contentTop) {
-                if(!isMobile()) {
-                    $top.removeClass('top--animate');
-                    $top.css('transform', '');
-                }
+                $top.removeClass('top--animate');
+                $top.css('transform', '');
                 $top.removeClass('top--sticky');
                 $contentWrapper.css('padding-top', '');
             } else {

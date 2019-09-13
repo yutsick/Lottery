@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 @@if (logged_in === true) {
-                    <div class="top__account-info @@if(show_cart === true){ hidden-xs}">
+                    <div class="top__account-info">
                         <div class="top__account-info-wallet">
                             <a href="#">
                                 <span>Spelplånbok</span>
@@ -58,9 +58,9 @@
                             </a>
                         </div>
                         <div class="top__account-info-cart">
-                            <a href="#test" data-toggle="modal" data-target="#modal-cart">
+                            <a href="#" data-toggle="modal" data-target="#modal-cart">
                                 <span>Kundvagn<br /><span>230 kr</span></span>
-                                <span>99</span>
+                                <span>2</span>
                             </a>
                         </div>
                     </div>
@@ -76,14 +76,14 @@
                     }
                     @@if (logged_in === true) {
                         @@if(show_cart === true) {
-                            <div class="top__actions-cart product-cart">
+                            <div class="top__actions-cart product-cart hidden-xs">
                                 <div class="product-cart__item visible-xs">
                                     <div class="product-cart__content">
                                         <p class="product-cart__title">Vinstkonto</p>
                                         <p class="product-cart__meta">450kr</p>
                                     </div>
                                 </div>
-                                <a class="product-cart__item product-cart__item--theme-green" href="#">
+                                <a class="product-cart__item product-cart__item--hidden product-cart__item--theme-green " href="#">
                                     <div class="product-cart__content dreamlist">
                                         <i class="product-cart__icon icon icon-star"></i>
                                         <p class="product-cart__title">Min drömlista</p>
@@ -94,10 +94,10 @@
                                     <div class="product-cart__content">
                                         <p class="product-cart__title">Kundvagn</p>
                                         <p class="product-cart__meta">
-                                            <span class="js-cart-total" data-total="0">0</span> kr
+                                            <span class="js-cart-total" data-total="230">230</span> kr
                                         </p>
                                     </div>
-                                    <span class="product-cart__notification">0</span>
+                                    <span class="product-cart__notification">2</span>
                                 </a>
                             </div>
                         }

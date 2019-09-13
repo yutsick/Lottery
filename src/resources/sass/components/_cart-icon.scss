@@ -48,6 +48,11 @@
 		border: 1px solid $color-gray-border;
 		transition: background $duration-quick $delay-none $ease-in-out;
 		border-top: 0;
+		
+		&--hidden {
+			display: none;
+		}
+
 		@include min-screen($screen-tablet) {
 			flex-basis: auto;
 			padding: 7px 7px 7px 15px;
@@ -176,6 +181,7 @@ a.product-cart__item--theme-green {
 		}
 	}
 }
+
 
 /* Blue theme */
 .product-cart__item--theme-blue {

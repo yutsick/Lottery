@@ -1,0 +1,76 @@
+@@include('layout/_header.html', {
+    "class": "page-front logged-in"
+    })
+    
+    @@include('layout/_top-only-cart.html', { "logged_in": true, "show_cart": true })
+
+    <div class="content-wrapper content-wrapper--spacing-top ml-2017">
+        @@include('blocks/_hero.html', {
+        "hero_type": "loggedin",
+        "hero_align": "bottom",
+        "hero_content": true
+        })
+        <div class="container">
+            <div class="row equal-height">
+                @@include('blocks/promotion/block/_promotion-wallet.html', {
+                "size": "medium",
+                "background": "color",
+                "background_color": "lightorange",
+                "background_color_pattern": "true",
+                "background_image": "",
+                "content_alignment": "bottom",
+                "content_title": "Spelplånbok",
+                "content_text": "Här ligger de pengar du kan spela för.",
+                "content_link": "",
+                "content_pris": "412 kr",
+                "content_image": "assets/img/mockup/symbol_spelplanbok_vec.svg",
+                "text_protection": "",
+                "text_alignment": "bottom"
+                })
+    
+                @@include('blocks/promotion/block/_promotion-wallet.html', {
+                "size": "medium",
+                "background": "color",
+                "background_color": "lightpink",
+                "background_color_pattern": "true",
+                "background_image": "",
+                "content_alignment": "bottom",
+                "content_title": "Vinstkonto",
+                "content_text": "Här ligger de pengar som du kan använda i vår vinstshop.",
+                "content_link": "",
+                "content_pris": "444 kr",
+                "content_image": "assets/img/mockup/symbol_vinstkontot.svg",
+                "text_protection": "",
+                "text_alignment": "bottom"
+                })
+    
+                @@include('blocks/promotion/block/_promotion-split.html', {
+                "size": "medium",
+                "background": "color",
+                "background_color": "newturqiose",
+                "background_color_pattern": "true",
+                "background_image": "",
+                "content_alignment": "bottom",
+                "content_title": "Ge ett utsatt barn en fin sommar",
+                "content_text": "Det vet väll att vårat överskott går till IOGT - NTO's arbete.",
+                "content_link": "",
+                "content_image": "assets/img/mockup/image001.jpg",
+                "text_protection": "",
+                "text_alignment": "bottom"
+                })
+    
+                <div class="col-xs-12">
+                    <h4>Mina favoritspel</h4>
+                </div>
+    
+                <div class="favorite-game-list">
+                    @@include('blocks/promotion/block/_promotiom-favgame.html')
+                    @@include('blocks/promotion/block/_promotiom-favgame.html')
+                    @@include('blocks/promotion/block/_promotiom-favgame.html')
+                    @@include('blocks/promotion/block/_promotiom-favgame.html')
+                </div>
+            </div>
+        </div>
+        @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
+    </div>
+    

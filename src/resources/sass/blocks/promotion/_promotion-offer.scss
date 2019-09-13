@@ -6,6 +6,18 @@
     margin-bottom: $margin-small;
     flex-direction: column;
     
+    &--blue {
+        background-color: $color-blue;
+    }
+
+    &--green {
+        background-color: $color-green;
+    }
+
+    &--turquoise {
+        background-color: $color-turquoise;
+    }
+
     &__content {
         padding: $padding-default $padding-small;
         z-index: 100;
@@ -19,6 +31,16 @@
 
         img {
             padding-top: $padding-small;
+        }
+
+        &--middle {
+            align-items: center;
+        }
+        &--bottom {
+            align-items: flex-end;
+        }
+        &--top {
+            align-items: flex-start;
         }
     }
 

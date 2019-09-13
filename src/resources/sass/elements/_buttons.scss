@@ -457,21 +457,20 @@ a.btn {
 .btn-bankid {
 	@extend .btn;
 	position: relative;
-	padding-right: 63px;
-	padding-left: 63px;
+	padding-right: 65px;
+	padding-left: 65px;
 	background-color: $color-green; 
 	color: $color-snow;
 	display: flex;
-	padding-top: 6px;
-	padding-bottom: 6px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 	align-items: center;
-	border: 2px solid transparent;
 	width: 100%;
 	
 	&:before {
 		position: absolute;
 		content: '';
-		right: 1px;
+		right: 3px;
 		background-color: $color-snow;
 		width: 32px;
 		height: 32px;
@@ -483,13 +482,13 @@ a.btn {
 		content: '';
 		height: 22px;
 		width: 22px;
-		right: 6px;
+		right: 7px;
 		background-image: url(/assets/img/icons/bankid.svg);
 	}
 
 	&:hover {
 		background-color: $color-river-bed;
 		color: $color-snow;
-		border: 2px solid $color-river-bed;
+		//border: 2px solid $color-river-bed;
 	}
 }
