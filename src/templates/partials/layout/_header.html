@@ -32,4 +32,5 @@
 
 <body>
 <div class="@@if(context.class){@@class}" id="page-wrapper">
+	@@include('blocks/_balance-bar.html', { "logged_in": "@@logged_in" })
 	@@include('components/_cookie-bar.html')

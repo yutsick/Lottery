@@ -31,7 +31,7 @@ export default function() {
                 $contentWrapper.css('padding-top', '');
             } else {
                 if(scrollTop < lastScrollTop && $top.hasClass('top--animate')) {
-                    $top.css('transform', 'translateY(0px)');
+                    $top.css('transform', `translateY(${window.ML.getBalanceBarHeight()}px)`);
                 }
             }
         }

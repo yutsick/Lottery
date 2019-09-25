@@ -29,6 +29,12 @@
         &-inner {
             color: $color-snow;
             background-color: $color-blue-deep;
+            padding: $padding-small;
+
+            .block-hero-reg__content {
+                padding: 0;
+                margin-left: 0;
+            }
             
             &--space {
                 background-color: $color-space;
@@ -134,8 +140,8 @@
                 z-index: 1;
                 overflow: visible;
                 background-color: transparent;
-                padding: 0 40px;
                 margin-left: -20px;
+                padding: 0 $padding-default;
 
                 &:after {
                     content: "";
@@ -147,6 +153,7 @@
                     transform: skew(-5deg);
                     width: 100%;
                     border-top-right-radius: 7px;
+                    border-bottom-right-radius: 7px;
                 }
 
                 &--space {
@@ -192,9 +199,19 @@
         & + .container {
             margin-top: -120px;
         }
+    }
 
-        @include min-screen($screen-md-min) {
-            margin-bottom: 0;
+    @include min-screen($screen-md-min) {
+        margin-bottom: 0;
+    }
+
+    @include min-screen($screen-lg-min) {
+        &__content {
+            &-inner {
+                padding: 0;
+            }
         }
     }
+
+
 }

@@ -43,7 +43,9 @@ import walletTransferAmount from './components/wallet-transfer-amount';
 import orderActions from './components/order-actions';
 import cartQuantity from './components/cart-quantity';
 import bankIDForm from './components/bankid-form';
+import timeSpent from './components/time-spent';
 import Odometer from './components/odometer';
+import Carousel from './components/carousel';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -62,6 +64,13 @@ import scroller from './utilities/scroller';
 $(function () {
 	window.ML = window.ML || {};
 	window.ML.store = storeConfiguration();
+	window.ML.getBalanceBarHeight = () => {
+        const balanceBar = document.querySelector('.balance-bar');
+        if (balanceBar) {
+            return balanceBar.offsetHeight;
+        }
+        return 0;
+	};
 	modernizr();
 	new objectFitImages();
 	addToDreamlist();
@@ -101,7 +110,11 @@ $(function () {
 	slideOutAccountNavigation();
 	navigationControl();
 	navigationItem();
+	Carousel();
+
+	timeSpent.init('.js-timespent').start();
 	Odometer();
+
 	/* call breakpointListener last */
 	breakpointListener();
 });

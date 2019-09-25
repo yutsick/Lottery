@@ -120,8 +120,12 @@
 		margin-bottom: $padding-small;
 
 		@include min-screen($screen-sm-min) {
-			font-size: 40px;
+			font-size: 32px;
 			line-height: 120%;
+		}
+
+		@include min-screen($screen-md-min) {
+			font-size: 40px;
 		}
 	}
 

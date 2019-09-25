@@ -1,0 +1,59 @@
+.balance-bar {
+    background-color: $color-cloud;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1004;
+
+    &__holder {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 10px 0 0;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 5px 5px;
+
+        &--right {
+            margin-left: auto;
+        }
+
+        span {
+            margin-top: 2px;
+            margin: 2px 5px 0;
+            font-size: 12px;
+            &.text {
+                display: none;
+            }
+        }
+    }
+    
+    @include min-screen($screen-sm-min) {
+        &__holder {
+            padding: 5px $padding-default 0 15px;
+        }
+
+        &__item {
+            span {
+                margin-top: 1px;
+                &.text {
+                    display: inline-block;
+                }
+                &.timespent {
+                    margin: 2px 0 0;
+                }
+            }
+        }
+    }
+
+    @include min-screen($screen-lg-min) {
+        &__holder {
+            padding: 5px $padding-default 0 15px;
+        }
+    }
+}

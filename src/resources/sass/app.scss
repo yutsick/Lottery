@@ -16,6 +16,9 @@
 /* Bootstrap */
 @import "vendor/bootstrap";
 
+/* tiny-slider */
+@import "vendor/tiny-slider";
+
 /* Add breakpoint names to body content */
 @include breakpoints($breakpoints);
 
@@ -24,6 +27,16 @@
 	overflow-x: hidden !important;
 	overflow-y: hidden !important;
 	-webkit-overflow-scrolling: touch;
+}
+
+.object-fit-contain {
+	object-fit: contain;
+	font-family: 'object-fit: contain;';
+}
+
+.object-fit-cover {
+	object-fit: cover;
+	font-family: 'object-fit: cover;';
 }
 
 .ml-2017 {

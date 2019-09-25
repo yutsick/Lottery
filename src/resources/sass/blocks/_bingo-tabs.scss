@@ -35,7 +35,7 @@
             min-width: 58px;
             text-align: center;
 
-            &.active {
+            &.active {                
                 a {
                     background-color: $color-blue;
                     color: $color-snow;
@@ -109,32 +109,39 @@
         width: 100%;
         height: 100%;
         background-color: $color-blue;
+        display: flex;
+        flex-wrap: nowrap;
     }
 
     .tab-pane {
-        height: 100%;
+        flex: 0 0 100%;
+        &.active {
+            display: flex;
+            width: 100%;
+        }
     }
 
     &__content {
         display: flex;
         flex-wrap: wrap;
         height: 100%;
+        width: 100%;
     }
 
     &__price {
         position: relative;
         padding-bottom: $padding-small;
-        width: calc(33% - 15px);
-        margin-right: $padding-small;
+        width: 33.3%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 0 0 33.3%;
         
         img {
             margin-top: 5px;
-            width: 100%;
-            height: auto;
         }
 
         &-cost {
-            position: absolute;
             display: flex;
             width: 45px;
             height: 45px;
@@ -143,20 +150,27 @@
             align-items: center;
             justify-content: center;
             left: 50%;
-            margin-left: -22px;
-            bottom: -5px;
+            margin-top: -15px;
             font-size: 15px;
             font-weight: 700;
+            margin: -15px auto 0;
         }
     }
 
     &__info {
         flex: 0 0 66%;
-        display: flex;
-        flex-wrap: wrap;
+        width: 66%;
+
+        &-holder {
+            padding: 0 0 0 15px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
     }
+
         &__starts {
-            flex: 0 0 50%;
+            flex: 1 0 50%;
         }
 
         &__players {
@@ -164,6 +178,7 @@
         }
 
         &__jackpot {
+            margin-top: 10px;
             flex: 0 0 100%;
 
             strong {
@@ -193,14 +208,10 @@
 
     @include min-screen($screen-sm-min) {
 
-        &__price {
-            position: absolute;
-        }
-
         &__info {
-            width: 100%;
-            flex: 0 0 100%;
-            padding-left: calc(33% + 10px);
+            width: 66.6%;
+            padding-left: 0;
+            flex: 0 0 66.6%;
         }
 
         &__cta {
@@ -214,19 +225,17 @@
 
         .tab-content {
             padding: $padding-default;
+            flex-grow: 1;
+            height: 100%;
         }
 
         &__cta {
             margin-top: $padding-default;
         }
 
-        &__info {
-            padding-left: calc(33% + 20px);
-        }
 
         &__price {
-            padding-bottom: $padding-default;
-            margin-right: $padding-default;
+            padding-bottom: 0;
         }
     }
 }
