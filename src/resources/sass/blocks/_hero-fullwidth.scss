@@ -29,7 +29,7 @@
         &-inner {
             color: $color-snow;
             background-color: $color-blue-deep;
-            padding: $padding-small;
+            padding: $padding-default;
 
             .block-hero-reg__content {
                 padding: 0;
@@ -64,6 +64,20 @@
                     background-color: $color-blue;
                 }
             }
+        }
+
+        .block-hero-reg__container { 
+            min-height: 0;
+            padding: 10p;
+        }
+
+    }
+
+    &__actions {
+        margin-top: 10px;
+
+        a {
+            margin-top: 10px;
         }
     }
 
@@ -110,7 +124,6 @@
     }
 
     @include min-screen($screen-sm-min) { 
-        min-height: 70vh;    
         
         &__background {
             position: absolute;
@@ -123,7 +136,6 @@
             align-items: center;
             width: 100%;
             padding: 120px 0 240px;
-            min-height: 70vh;
             height: 100%;
             
             & > * {
@@ -183,16 +195,26 @@
             .block-hero-reg__container {
                 max-width: 700px;
                 width: 100%;
+                min-height: 320px;
                 margin-left: auto;
-                
+                display: flex;
+                align-items: center;
+
                 .block-hero-reg__content {
                     width: auto;
                     max-width: auto;
                     padding: 20px;
                 }
                 
+                .block-hero-reg__text {
+                    p {
+                        font-size: 16px;
 
-                
+                        @include min-screen($screen-md-min) {
+                            font-size: 20px;
+                        }
+                    }
+                }
             }
         }
 
@@ -203,6 +225,11 @@
 
     @include min-screen($screen-md-min) {
         margin-bottom: 0;
+        min-height: 70vh;
+
+        &__holder {
+            min-height: 70vh;
+        }
     }
 
     @include min-screen($screen-lg-min) {

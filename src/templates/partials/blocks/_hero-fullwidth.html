@@ -9,26 +9,40 @@
             <div class="row no-gutter">
                 <div class="col-xs-12 col-sm-6">
                     <div class="hero-fullwidth__content-inner">
-                        <div class="block-hero-reg__container flex-center">
+                        <div class="block-hero-reg__container">
                             <div class="block-hero-reg__content">
-                                <h1 class="block-hero-reg__title">Prova sex lotter för halva priset. Och få lika många till på köpet.</h1>
-                                <div class="block-hero-reg__text">
-                                    <p>
-                                        150kr för första månaden, därefter 300 kr/mån.<br>
-                                        Tredje månaden får du 6 extra lotter.
-                                    </p>
-                                    <a href="/" title="link">läs mer här</a>
-                                </div>
-                                <div class="bank-form bank-form--@@hero_align">
-                                    <p class="bank-form__text">Gå med Miljonlotteriet i två enkla steg, börja här </p>
-                                    <form class="form-bankID" action="/register.html" method="GET" data-toggle="validator" novalidate="true">
-                                        <label class="visually-hidden" for="bankid">Personnummer:</label>
-                                        <input type="text" id="bankid" placeholder="Personnummer" required="">
-                                        <input type="submit" value="Nästa steg" class="disabled">
-                                    </form>
-                                    <p class="form-bankID__msg"></p>
-                                    <a href="/register.html" title="Registrera utan bankID" class="bank-form__continue">Jag vill inte använda BankID</a>
-                                </div>
+                                @@if (context.logged_in === false) {
+                                    <h1 class="block-hero-reg__title">Prova sex lotter för halva priset. Och få lika många till på köpet.</h1>
+                                    <div class="block-hero-reg__text">
+                                        <p>
+                                            150kr för första månaden, därefter 300 kr/mån.<br>
+                                            Tredje månaden får du 6 extra lotter.
+                                        </p>
+                                        <a href="/" title="link">läs mer här</a>
+                                    </div>
+                                    <div class="bank-form">
+                                        <p class="bank-form__text">Gå med Miljonlotteriet i två enkla steg, börja här </p>
+                                        <form class="form-bankID" action="/register.html" method="GET" data-toggle="validator" novalidate="true">
+                                            <label class="visually-hidden" for="bankid">Personnummer:</label>
+                                            <input type="text" id="bankid" placeholder="Personnummer" required="">
+                                            <input type="submit" value="Nästa steg" class="disabled">
+                                        </form>
+                                        <p class="form-bankID__msg"></p>
+                                        <a href="/register.html" title="Registrera utan bankID" class="bank-form__continue">Jag vill inte använda BankID</a>
+                                    </div>
+                                }
+                                @@if (context.logged_in === true) {
+                                    <h1 class="block-hero-reg__title">Välkommen Armando!</h1>
+                                    <div class="block-hero-reg__text">
+                                        <p>
+                                            Det här är lotteriet för dig som känner att andras välmående är högsta vinsten. Här ger varje lott du köper fler människor stöd att komma till en trygg och drogfri miljö. Tillsammans gör vi skillnad.
+                                        </p>
+                                    </div>
+                                    <div class="hero-fullwidth__actions">
+                                        <a href="#" class="btn-primary">Skrapa lotter</a>
+                                        <a href="#" class="btn-primary">Spela bingo</a>
+                                    </div>
+                                }
                             </div> 
                         </div>
                     </div>
