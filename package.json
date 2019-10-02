@@ -2,12 +2,15 @@
   "name": "ml-frontend-2017",
   "private": true,
   "scripts": {
-    "build": "gulp"
+    "build": "cross-env NODE_ENV=development node_modules/gulp/bin/gulp.js",
+    "watch": "cross-env NODE_ENV=development node_modules/gulp/bin/gulp.js watch"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.4.0",
     "buble-loader": "^0.4.0",
+    "cross-env": "^5.2.0",
     "gulp": "3.9.1",
+    "gulp-cli": "^2.1.0",
     "gulp-file-include": "^1.0.0",
     "gulp-rename": "^1.4.0",
     "jquery": "^3.3.1",
@@ -25,7 +28,9 @@
     "lodash.debounce": "^4.0.8",
     "natives": "^1.1.6",
     "object-fit-images": "^3.2.4",
+    "odometer": "^0.4.8",
     "redux": "^4.0.1",
+    "tiny-slider": "^2.9.2",
     "vanilla-lazyload": "^10.0.1"
   }
 }

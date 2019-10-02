@@ -3,8 +3,8 @@ Miljonlotteriet - Frontend 2017
 
 ## Install
 1. `npm install` to install dev dependencies
-2. `gulp watch` to compile and watch for changes
-    1. (You can also use `gulp --production` to compile assets for production, minify etc.)
+2. `npm run watch` to compile and watch for changes
+    1. (You can also use `npm run build --production` to compile assets for production, minify etc or `npm run watch --production` to watch with assets compiled for production.)
 3. A new browser window/tab will open
 
 ## Code recommendations
