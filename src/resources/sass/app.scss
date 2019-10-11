@@ -29,6 +29,18 @@
 	-webkit-overflow-scrolling: touch;
 }
 
+#confetti {
+	width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+	position: absolute;
+	display: none;
+    touch-action: none;
+    pointer-events: none;
+}
+
 .object-fit-contain {
 	object-fit: contain;
 	font-family: 'object-fit: contain;';

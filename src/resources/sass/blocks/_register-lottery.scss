@@ -1,0 +1,554 @@
+.register-lottery {
+    & > h1 {
+        margin: 20px 0;
+        font-size: 30px;
+    }
+
+    & > p {
+        & > a {
+            color: $color-black;
+            text-decoration: underline;
+        }
+    }
+
+    form {
+        position: relative;
+        margin: 30px 0;
+
+        & > .popover {
+            background-color: $color-gray;
+            border: none;
+
+            & > .popover-content {
+                background-color: $color-gray;
+                color: $color-snow;
+            }
+
+            & > .arrow {
+                border: none;
+
+                &:after {
+                    border-top-color: $color-gray;
+                }
+            }
+        }
+
+        & > input {
+            display: block;
+            height: 54px;
+            width: 100%;
+            border-radius: 30px;
+            border: 3px solid $color-gray;
+            outline: 0;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        & > .btn-success {
+            position: absolute;
+            right: 6px;
+            top: 50%;
+            height: 42px;
+            margin-top: -21px;
+        }
+
+        & > .loader {
+            width: 42px;
+            height: 42px;
+            border-radius: 42px;
+            background-color: $color-gray;
+            position: absolute;
+            top: 50%;
+            margin-top: -21px;
+            right: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: none;
+
+
+            & > .spinner {
+                padding: 10px;
+                border: 4px solid $color-gray;
+                border-top: 4px solid $color-snow;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: none;
+            }
+
+            &--spin {
+                display: flex;
+                
+                & > .spinner {
+                    animation: spin .8s linear infinite;
+                    display: flex;
+                }
+            }
+        }
+    }
+    
+    & > .result {
+        position: relative;
+        width: 100vw;
+        margin-left: -50vw;
+        left: 50%;
+
+        & > .result__item {
+            background-color: #DCE4E9;
+            margin-bottom: 10px;
+            border-bottom: 0 solid #DCE4E9;
+            transition: border-bottom-width .2s ease;
+
+            .content {
+                border: 3px solid #DCE4E9;
+                border-top: 0;
+                border-bottom-width: 0;
+                padding: 20px 20px 10px;
+                background-color: $color-snow;
+
+                .title {
+                    font-size: 24px;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                    display: block;
+                }
+
+                p + .btn-primary {
+                    margin-top: 5px;
+                    margin-bottom: 10px;
+                }
+            }
+
+            & > .header {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                position: relative;
+
+                button {
+                    top: 0;
+                    position: absolute;
+                    width: 20px;
+                    height: 50px;
+                    border: none;
+                    outline: 0;
+                    background-color: #DCE4E9;
+                    border-color: #DCE4E9;
+
+                    .arrow {
+                        border: solid $color-space;
+                        border-width: 0 2px 2px 0;
+                        transition: transform .3s ease;
+                        transform: rotate(-45deg);
+                        width: 8px;
+                        height: 8px;
+                        top: 50%;
+                        margin-top: -4px;
+                        left: 50%;
+                        margin-left: -4px;
+                        position: absolute;
+
+                    }
+                }
+                .title,
+                .number,
+                .prize {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 50px;
+                    flex: 1 1 50%;
+                    text-align: center;
+                    padding: 10px;
+                    font-size: 16px;
+                }
+
+                .title {
+                    flex: 1 1 100%;
+                    font-weight: 700;
+                }
+
+                .number {
+                    background-color: #DCE4E9;
+                    padding-left: 20px;
+                }
+
+                .prize {
+                    background-color: $color-black;
+                    color: $color-snow;
+                }
+            }
+
+            &--grand {
+                & > .header {
+                    .prize {
+                        font-size: 20px;
+                        background-image: linear-gradient(98deg, #C19131 0%, #FCF696 8%, #FCF696 21%, #F8F493 30%, #F7F392 41%, #B98727 60%, #C19131 66%, #FCDD7D 80%, #866018 100%);
+                        color: $color-black;
+                    }
+                }
+            }
+
+            &--regular {
+                & > .header {
+                    .prize {
+                        background-color: $color-green;
+                    }
+                }
+            }
+
+            &--bonus {
+                & > .header {
+                    background-color: #FFD72B;
+
+                    button {
+                        background-color: #FFD72B;
+                    }
+                }
+
+                .content {
+                    padding: 0;
+                    padding: 0 0 0 20px;
+
+                    .title {
+                        padding-top: 20px;
+                    }
+                    
+                    p {
+                        margin-bottom: 20px;
+                    }
+
+                    p + .btn-primary {
+                        margin-top: 0;
+                        margin-bottom: 20px;
+                    }
+
+                    img {
+                        max-width: 100px;
+                        height: auto;
+                        vertical-align: top;
+                        float: right;
+                        padding-left: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
+                
+            }
+
+            &--opened {
+                & > .header {
+                    button {
+                        .arrow {
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+
+                border-bottom-width: 3px;
+
+                & > .content {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    @include max-screen($screen-xs-max) {
+        form {
+            & > input {
+                padding: 0 10px;
+            }
+
+            .btn-success {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    @include min-screen($screen-sm-min) {
+        form {
+            & > input {
+                padding: 0 30px;
+            }
+            .btn-success {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+        & > .result {
+            width: 100%;
+            margin-left: auto;
+            left: 0;
+        }
+    }
+    
+    //958px
+
+    @include min-screen($screen-md-min) {
+        
+        & > h1 {
+            margin: 40px 0 15px;
+            font-size: 40px;
+        }
+        
+        form {
+            position: relative;
+            margin: 30px 0;
+    
+            & > input {
+                font-size: 30px;
+                height: 62px;
+                padding: 0 30px;
+            }
+            .btn-success {
+                height: 50px;
+                margin-top: -25px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            & > .loader {
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                margin-top: -25px;
+                right: 6px;
+            }
+        }
+
+		& > .result {
+
+            & > .result__item {
+                & > .header {
+
+                    button {
+                        width: 40px;
+
+                        .arrow {
+                            width: 12px;
+                            height: 12px;
+                            margin-top: -6px;
+                            margin-left: -6px;
+                            position: absolute;
+    
+                        }
+                    }
+
+                    .number {
+                        padding-left: 40px;
+                    }
+
+                    .title,
+                    .number,
+                    .prize {
+                        font-size: 20px;
+                    }
+                    .prize {
+                        &--grand {
+                            font-size: 24px;             
+                        }
+                    }
+                }
+
+                &--bonus {
+                    .content {
+                        img {
+                            max-width: 213px;
+                        }
+                    }
+                } 
+            }
+        }
+	}
+}
+
+.register-lottery-promotion {
+    display: flex;
+    position: relative;
+    padding: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    height: 100%;
+
+    .image {
+        margin: 10px auto;
+
+        img {
+            margin: 0 10px;
+        }
+    }
+
+    img {
+        height: 110px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: $padding-small;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        flex: 1;
+
+        .oddmeter {
+            margin: 0 auto 0 0;
+        }
+    }
+
+    .status {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        right: 20px;
+        z-index: 899;
+        height: 76px;
+        padding-right: 96px;
+
+        strong {
+            margin-left: 20px;
+            height: 86px;
+            width: 86px;
+            padding: 4px;
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-pink;
+            border-radius: 50% 50%;
+        }
+    }
+
+    &--blank,
+    &--jackpot {
+        color: $color-snow;
+
+        .status {
+            display: none;
+        }
+
+        a {
+            color: $color-snow;
+            text-decoration: underline;
+        }
+    }
+
+    &--jackpot {
+        background-color: $color-blue-deep;
+
+        .image {
+            
+            img {
+                margin-left: -5px;
+            }
+        }
+    }
+
+    &--blank {
+        background-color: $color-blue;
+    }
+
+    @include min-screen($screen-sm-min) {
+        margin: 20px 0;
+        padding: 0 10px;
+        
+        .image  {
+            margin: 0 auto;
+
+            img {
+                margin: 0;
+            }
+        }
+    }
+
+    @include min-screen($screen-md-min) { 
+
+        overflow: hidden;
+        padding: 40px 30px 70px;
+
+        .image {
+            max-width: 239px;
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0 10px;
+        }
+
+        img {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        h4 {
+            font-size: 30px;
+        }
+
+        &--jackpot {
+            img {
+                width: 206px;
+                height: 206px;
+            }
+        }
+
+        &--blank {
+            img {
+                width: 186px;
+                height: 186px;
+            }
+        }
+
+        .content {
+            .oddmeter {
+                padding: 4px;
+
+                &__value {
+                    height: 56px;
+                }
+
+                &__inner {
+                    margin-top: 8px;
+                }
+
+                &__number {
+                    font-size: 30px;
+                    padding: 0 6px;
+                }
+
+                &__currency {
+                    padding: 0 8px;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    @include min-screen($screen-md-min) {
+
+        .status {
+            display: flex;
+            font-weight: 600;
+
+            .number {
+                font-size: 24px;
+                line-height: 1;
+            }
+        }
+    }
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

@@ -11,6 +11,19 @@
 		&.highlight {
 			color: $color-green;
 		}
+
+
+		&.info {
+
+			h4 {
+				font-size: 24px;
+			}
+
+			h4,
+			p {
+				color: $color-space;
+			}
+		}
 	}
 }
 
@@ -74,6 +87,16 @@
 				order: 100; // Always last
 				text-align: left;
 			}
+
+			&.info {
+				width: 100%;
+				text-align: left;
+			}
+
+			&.action {
+				width: 100%;
+				text-align: center;
+			}
 		}
 	}
 }
@@ -115,7 +138,6 @@
 
 		tbody {
 			td {
-				width: 1px;
 				white-space: nowrap;
 				padding: $padding-default;
 				border-bottom: 1px solid $color-gray-border;
@@ -126,6 +148,21 @@
 
 				&:last-child {
 					border-right: 1px solid $color-gray-border;
+				}
+
+				img {
+					float: left;
+					margin-right: 20px;
+					max-width: 120px;
+				}
+
+				h4 {
+					white-space: normal;
+				}
+
+				p {
+					white-space: normal;
+					width: 90%;
 				}
 			}
 

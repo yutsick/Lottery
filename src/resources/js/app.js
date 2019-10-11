@@ -5,7 +5,6 @@ require('bootstrap-validator');
 var objectFitImages = require('object-fit-images');
 var fizzyUIUtils = require('fizzy-ui-utils');
 var Flickity = require('flickity/dist/flickity.pkgd.js');
-
 require('lightgallery.js/dist/js/lightgallery.min.js');
 require('lg-thumbnail.js/dist/lg-thumbnail.js');
 /* Vendor */
@@ -46,6 +45,8 @@ import bankIDForm from './components/bankid-form';
 import timeSpent from './components/time-spent';
 import Odometer from './components/odometer';
 import Carousel from './components/carousel';
+import RegisterLottery from './components/register-lottery';
+import Confetti from './components/confetti';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -71,6 +72,7 @@ $(function () {
         }
         return 0;
 	};
+	window.ML.confetti = Confetti;
 	modernizr();
 	new objectFitImages();
 	addToDreamlist();
@@ -111,7 +113,8 @@ $(function () {
 	navigationControl();
 	navigationItem();
 	Carousel();
-
+	RegisterLottery.init();
+	
 	timeSpent.init('.js-timespent').start();
 	Odometer();
 
