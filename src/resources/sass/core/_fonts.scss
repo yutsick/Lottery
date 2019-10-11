@@ -10,6 +10,28 @@
 }
 
 @font-face {
+	font-family: 'apercu-bold-pro';
+	src: url('../fonts/apercu-bold-pro.woff2') format('woff2'),
+	url('../fonts/apercu-bold-pro.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'apercu-light-pro';
+	src: url('../fonts/apercu-light-pro.woff2') format('woff2'),
+	url('../fonts/apercu-light-pro.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'apercu-regular-pro';
+	src: url('../fonts/apercu-regular-pro.woff2') format('woff2'),
+	url('../fonts/apercu-regular-pro.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'Proxima Nova';
 	src: url('../fonts/ProximaNova-Black.eot');
 	src: url('../fonts/ProximaNova-Black.eot?#iefix') format('embedded-opentype'),

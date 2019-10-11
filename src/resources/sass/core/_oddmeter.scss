@@ -40,4 +40,37 @@
         align-items: center;
         margin-top: 3px;
     }
+
+
+    &--flat {
+        background: $color-snow;
+        .oddmeter {
+            &__holder {
+                margin-right: 0;
+                &:nth-child(odd) {
+                    background: #DCE4E9;
+                }
+                &:nth-child(even) {
+                    background: $color-snow;
+                }
+            }
+
+            &__number {
+                color: $color-blue-deep;
+                font-family: "UniNeueHeavy";
+                font-weight: normal;
+            }
+
+            &__currency {
+                color: $color-blue-deep;
+                padding: 0 6px;
+            }
+
+            @include min-screen($screen-md-min) { 
+                &__currency {
+                    padding: 0 20px !important;
+                }
+            }
+        }
+    }
 }
