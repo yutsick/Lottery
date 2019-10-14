@@ -22,10 +22,18 @@ const ExportLottery = () => {
                 },
                 oncomplete: () => {
                     isValid = true;
+                    hideKeyboard();
                 }
                 
             });
             im.mask($input);
+        }
+    }
+
+    const hideKeyboard = () => {
+        const el = document.querySelector(':focus');
+        if (el) {
+            el.blur();
         }
     }
 
@@ -76,8 +84,8 @@ const ExportLottery = () => {
             'http://www.mocky.io/v2/5da06db63000000f00f89e80',
             'http://www.mocky.io/v2/5da06dea3000005300f89e83',
             'http://www.mocky.io/v2/5da06e393000003800f89e8c',
-            'http://www.mocky.io/v2/5da06e8a3000003800f89e8e',
-            'http://www.mocky.io/v2/5da06f023000002b00f89e94',
+            'http://www.mocky.io/v2/5da4638335000056004a7686',
+            'http://www.mocky.io/v2/5da4635835000054004a7683',
             'http://www.mocky.io/v2/5da06f2e3000006e00f89e99'
         ];
 
@@ -116,6 +124,7 @@ const ExportLottery = () => {
             let value = parseInt($input.val());
             if (!isNaN(value) && value.toString().length == 12) {
                 $input.popover('hide');
+                hideKeyboard();
                 loading(true);
                 hideResultItems();
                 $.ajax({
