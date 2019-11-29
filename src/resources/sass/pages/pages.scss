@@ -57,7 +57,7 @@ body {
             display: none;
         }
 	}
-	
+
 	.page-nav {
 		@include max-screen($screen-sm-max) {
             display: none;
@@ -101,3 +101,4 @@ body {
 }
 
 @import "register";
+@import "registerSubscription"

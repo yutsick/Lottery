@@ -1,10 +1,9 @@
 @@include('layout/_header.html', {
-"class": "page-front logged-out"
+	"class": "page-register logged-out page--content-only",
+	"logged_in": false
 })
 
-@@include('layout/_top.html', {"logged_in": false})
-@@include('layout/_sidebar.html', {"logged_in": false})
-
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 
 <div class="content-wrapper ml-2017 registerSubscription-page">
    <section class="registerSubscription" style="background-image: url('assets/img/background/product-page.png');">
@@ -205,5 +204,4 @@
 
 </div>
 
-
-@@include('layout/_footer.html', {"show_footer": true})
+@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": true })
