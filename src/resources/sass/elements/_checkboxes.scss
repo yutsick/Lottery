@@ -212,6 +212,146 @@
 			font-family: $base-icon-family;
 			color: #A9DB9B;
 		}
-
 	}
+
+// Custom checkboxes for registerSubscription page
+.custom-checkbox-v3 {
+  display: block;
+  //width: 33.3%;
+  &:not(:last-child) {
+    margin-right: 5vw;
+  }
+
+  margin-bottom: 25px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+
+  &-wrap {
+    &--row {
+      display: flex;
+      flex-flow: row wrap;
+      @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+
+      }
+    }
+
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    display: flex;
+    //flex-flow: row nowrap;
+    width: 100%;
+    align-items: center;
+    white-space: nowrap;
+    user-select: none;
+
+  }
+
+  &__icon {
+    position: relative;
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    padding: 0;
+    background: #FFFFFF;
+    border: 1px solid #EAEEF0;
+    border-radius: 100%;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 12px;
+      height: 12px;
+      margin: 0;
+      padding: 0;
+      border-radius: 100%;
+      background-color: #B7C1C7;
+      box-sizing: border-box;
+    }
+
+    &.square {
+      background: #FAFAFA;
+      border: 1px solid #E5E5E5;
+      box-sizing: border-box;
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      margin-right: 10px;
+      &:before {
+        width: 17px;
+        height: 17px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-background-size: contain;
+        background-size: contain;
+      }
+    }
+
+    &.checked {
+      &:before {
+        background-color: #75CA21;
+      }
+
+      &.square {
+        &:before {
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSI+ICA8cGF0aCBmaWxsPSIjNENCMDUwIiBkPSJNNi4xMiAxMmMtLjM1IDAtLjctLjEzLS45Ni0uMzlMLjQgNi45NGExLjMgMS4zIDAgMCAxIDAtMS44OCAxLjM3IDEuMzcgMCAwIDEgMS45MSAwbDMuODIgMy43NUwxNC43LjM5YTEuMzcgMS4zNyAwIDAgMSAxLjkgMCAxLjMgMS4zIDAgMCAxIDAgMS44N0w3LjA3IDExLjZjLS4yNi4yNi0uNi4zOS0uOTUuMzl6Ii8+PC9zdmc+);
+        }
+      }
+    }
+  }
+
+  &__input:checked {
+    & + .custom-checkbox-v3__icon {
+      &:not(.square):before {
+        background-color: #75CA21;
+      }
+
+      &.square {
+        &:before {
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNyIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSI+ICA8cGF0aCBmaWxsPSIjNENCMDUwIiBkPSJNNi4xMiAxMmMtLjM1IDAtLjctLjEzLS45Ni0uMzlMLjQgNi45NGExLjMgMS4zIDAgMCAxIDAtMS44OCAxLjM3IDEuMzcgMCAwIDEgMS45MSAwbDMuODIgMy43NUwxNC43LjM5YTEuMzcgMS4zNyAwIDAgMSAxLjkgMCAxLjMgMS4zIDAgMCAxIDAgMS44N0w3LjA3IDExLjZjLS4yNi4yNi0uNi4zOS0uOTUuMzl6Ii8+PC9zdmc+);
+        }
+      }
+    }
+  }
+
+  &__thumb {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px;
+
+    img {
+      width: 90%;
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0078bf;
+  }
+
+  &__price {
+    display: block;
+  }
 }
