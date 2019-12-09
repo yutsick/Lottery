@@ -1,0 +1,153 @@
+.registration {
+	&-back {
+		background-color: #f8f8f8;
+		background-position: left center;
+		background-size: auto;
+		background-repeat: no-repeat;
+		padding: 4vw 0;
+		@media screen and (min-width: 1300px) {
+			background-position: 0 center;
+		}
+		@media screen and (min-width: 1500px) {
+			background-position: -350% center;
+		}
+		@media screen and (min-width: 1600px) {
+			background-position: 250% center;
+		}
+		@media screen and (min-width: 1700px) {
+			background-position: 150% center;
+		}
+		@media screen and (min-width: 1800px) {
+			background-position: 102% center;
+		}
+	}
+
+	&-container {
+		display: flex;
+		flex-flow: row wrap;
+		@media screen and (min-width: 992px) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&-content {
+		flex: 0 0 100%;
+		@media screen and (min-width: 768px) {
+			padding-right: 45px;
+		}
+		@media screen and (min-width: 992px) {
+			flex: 1 0 40%;
+			//flex: 1 0 100%;
+		}
+		@media screen and (min-width: 1200px) {
+			padding-right: 110px;
+		}
+	}
+
+	&__title.h1 {
+		color: #0078bf;
+		font-size: 26px;
+		margin-bottom: 30px;
+		@media screen and (min-width: 768px) {
+			font-size: 46px;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+	}
+
+	&-callback {
+		position: relative;
+		margin-top: 30px;
+		padding-top: 30px;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 150%;
+			height: 1px;
+			background-color: #C2CBD1;
+		}
+		a {
+			display: block;
+			margin: 10px 0;
+			font-size: 16px;
+			font-weight: bold;
+			color: #393c46;
+			cursor: pointer;
+			//white-space: nowrap;
+			word-break: break-all;
+			@media screen and (min-width: 480px) {
+				font-size: 26px;
+			}
+			.vi {
+				margin-right: 10px;
+			}
+		}
+		.g-account-reg__text {
+			margin-bottom: 25px;
+		}
+	}
+
+	&-form {
+		display: flex;
+		flex-direction: column;
+		//align-items: center;
+		justify-content: space-between;
+		margin-top: 5vw;
+		@media screen and (min-width: 992px) {
+			margin-top: 0;
+		}
+		.select2-container {
+			width: 100%!important;
+		}
+		&-controls {
+			display: flex;
+			flex-flow: row wrap;
+			@media screen and (min-width: 768px) {
+				margin-left: -24px;
+				margin-right: -24px;
+			}
+		}
+		.form__label {
+			//flex: 0 0 48%;
+			@media screen and (min-width: 768px) {
+				width: calc(50% - 2*24px);
+				margin: 0 24px 1.3vw;
+
+			}
+		}
+		&__checkboxes {
+			margin: 0 0 1em;
+		}
+	}
+}
+
+.registration-form {
+	position: relative;
+	padding: 30px 15px;
+	background: #FFFFFF url("../img/background/g-account-reg-form.png") center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 0 4px 100px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	@media screen and (min-width: 768px) {
+		padding: 35px 5% 50px 56px;
+		//flex-wrap: nowrap;
+	}
+
+	&__title.h2{
+		margin-top: 0;
+		margin-bottom: 30px;
+		color: #0078bf;
+		font-size: 30px;
+		text-align: center;
+	}
+
+	.btn-wrap {
+		text-align: center;
+	}
+}

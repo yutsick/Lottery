@@ -212,10 +212,11 @@ select.form-control {
 }
 
 .form {
-	&__item {
+	&__half {
 		display: inline-block;
+		vertical-align: top;
 		width: 100%;
-		margin: 0 0 20px 0;
+		margin: 0 0 10px 0;
 		@media screen and (min-width: 768px) {
 			width: 48%;
 			&:nth-child(even) {
@@ -223,11 +224,22 @@ select.form-control {
 			}
 		}
 	}
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		margin: 0 0 10px 0;
+		&-checkboxes {
+			margin-top: 12px;
+			vertical-align: bottom;
+		}
+	}
 	&__label {
 		color: #393c46;
-		line-height: 2;
 	}
-	&__control {
+
+	&__control,
+	&-control {
 		display: block;
 		width: 100%;
 

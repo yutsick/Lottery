@@ -1,0 +1,154 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-out"
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+<div class="content-wrapper ml-2017 registration registration-back"
+     style="background-image: url('assets/img/background/product-page.png');">
+  <!--	@@include('blocks/_hero-fullwidth.html',{ "logged_in": false })-->
+
+  <div class="container registration-container">
+    <div class="registration-content">
+      <h1 class="registration__title h1">Skapa spelkonto</h1>
+      <p class="registration__text">Vad roligt att du hittat hit. Framför dig har du en hel värld av möjligheter.
+        Kanske vill du ha chans på miljoner? Kanske är du ute efter spänning och underhållning? Hos oss är det
+        möjligt. Men först behöver du skapa ett spelkonto så du kan kliva in i vår spännande värld.
+      </p>
+
+      <div class="registration-callback">
+        <p class="registration__text">Behöver du hjälp med din registrering? Kontakta vårt kundcenter så hjälper
+          vi dig att komma i gång:</p>
+        <a href="tel:0313618584"> <i class="vi vi-phone"></i> 031-361 85 84</a>
+        <a href="mailto:kundcenter@miljonlotteriet.se"> <i class="vi vi-email"></i> kundcenter@miljonlotteriet.se</a>
+      </div>
+    </div>
+    <form class="form registration-form" data-toggle="validator">
+        <h2 class="registration-form__title h2">Registrera din prenumeration idag!</h2>
+
+
+        <div class="registration-form-controls">
+
+          <div class="col-md-6">
+            <div class="form-group form__item has-feedback">
+              <label>Ange ditt personnummer</label>
+              <input type="text" class="form-control" name="Personnummer"
+                     placeholder="ÅÅÅÅMMDD-XXXX"
+                     data-required-error="Du måste fylla i detta fält."
+                     data-error="Minst 13 tecken"
+                     required>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div id="payWay" class="form-group form__item has-feedback">
+              <label for="choosePayWay">Välj betalsätt</label>
+              <select id="choosePayWay" class="form-control choosePayWay" name="choosePayWay" required
+                      data-error="Du måste välja betalsätt">
+                <option value>Välj betalsätt</option>
+                <option value="faktura" id="faktura">Faktura</option>
+                <option value="betalkort" id="betalkort">Betalkort</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div id="loginWay" class="form-group form__item has-feedback">
+              <label for="chooseLoginWay">
+                Välj inloggningssätt
+              </label>
+              <select id="chooseLoginWay" class="form-control chooseLoginWay" name="chooseLoginWay" required
+                      data-error="Du måste välja ett inloggningssätt">
+                <option value>Välj inloggningssätt</option>
+                <option value="bankid" id="bankid">Bank Id</option>
+                <option value="password" id="password">Lösenord</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div id="deviceId" class="form__item" style="display: none">
+              <label for="chooseDevice">Välj Enhet</label>
+              <select id="chooseDevice" class="form-control chooseDevice" name="chooseDevice">
+                <option value="1">BankID på denna enhet</option>
+                <option value="2">BankID på annan enhet</option>
+              </select>
+            </div>
+
+            <div id="passwordInputs" class="form__item" style="display: none;">
+              <div class="form-group has-feedback" id="userPasswordGroup">
+                <label for="userPassword">Ange lösenord</label>
+                <label class="pull-right light-label" for="userPassword">Minst 6 tecken</label>
+                <input type="password" class="form-control" data-minlength="6" id="userPassword"
+                       placeholder="" data-required-error="Du måste fylla i detta fält."
+                       data-minlength-error="Minst 6 tecken.">
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group has-feedback" id="userPasswordRepeatGroup">
+                <label for="userPasswordRepeat">Ange lösenordet igen</label>
+                <input type="password" class="form-control" id="userPasswordRepeat" type="hidden"
+                       data-match="#userPassword" data-match-error=modal-ops
+                       placeholder="" data-required-error="Du måste fylla i detta fält.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group form__item has-feedback">
+              <label for="userEmail">Och din e-postadress</label>
+              <input type="email" class="form-control" id="userEmail"
+                     placeholder="anna.andersson@miljonlotteriet.se" required
+                     data-required-error="Du måste fylla i detta fält."
+                     data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div id="delivery" class="form-group form__item has-feedback">
+              <label for="chooseDelivery">Välj leveranssätt</label>
+              <select id="chooseDelivery" class="form-control chooseDelivery" name="chooseDelivery" required
+                      data-error="Du måste välja ett leveranssätt" style="width: 100%">
+                <option value>Välj leveranssätt</option>
+                <option value="fysiska" id="fysiska">Jag vill ha fysiska lotter</option>
+                <option value="digitala" id="digitala">Jag vill ha digitala lotter</option>
+              </select>
+              <div class="help-block with-errors"></div>
+            </div>
+
+            <div class="form__item-checkboxes">
+
+              <div class="form-group has-feedback">
+                <div class="custom-checkbox-v3">
+                  <label class="custom-checkbox-v3__label">
+                    <input type="checkbox" id="userAcceptTerms" class="custom-checkbox-v3__input" required
+                           data-required-error="Du måste fylla i detta fält.">
+                    <span class="custom-checkbox-v3__icon square"></span>
+                    <span class="custom-checkbox-v3__caption">Jag godkänner Miljonlotteriets
+                      <a href="#" data-toggle="modal" data-target="#modal-conditions">Villkor</a>
+                    </span>
+                  </label>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="custom-checkbox-v3">
+                  <label class="custom-checkbox-v3__label">
+                    <input type="checkbox" class="custom-checkbox-v3__input" id="newsletterCheckbox">
+                    <span class="custom-checkbox-v3__icon square"></span>
+                    <span class="custom-checkbox-v3__caption">Jag vill ha nyhetsbrev</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="btn-wrap">
+          <button type="submit" class="btn-primary">Beställ</button>
+        </div>
+
+    </form>
+  </div>
+
+
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
