@@ -240,21 +240,7 @@ hr.line-gray {
 		}
 
 		.form {
-
-			&__label {
-				width: 100%;
-				@media screen and (min-width: 992px) {
-					width: 49%;
-				}
-			}
-
-			//&__control {
-			//  @media screen and (min-width: 768px) {
-			//    max-width: 380px;
-			//  }
-			//}
-
-			&__item {
+			&-item {
 				&-checkboxes {
 					.custom-checkbox-v3 {
 						margin-bottom: 0;
@@ -276,10 +262,6 @@ hr.line-gray {
 			& > * {
 				vertical-align: bottom;
 			}
-		}
-
-		.form__control {
-			line-height: 2;
 		}
 	}
 }
