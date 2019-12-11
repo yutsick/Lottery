@@ -4,9 +4,19 @@
 
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 
-<div class="content-wrapper ml-2017 registration registration-back" style="background-image: url('assets/img/background/product-page.png');">
+<div class="content-wrapper ml-2017">
 
-		@@include('blocks/_registration-form.html', { "page": "register-new" , "text" : "left" })
+	@@include('blocks/_registration-form.html', {
+	"page" : "register-new",
+	"container" : "row",
+	"callback" : true,
+	"text" : "left",
+	"back-img": "assets/img/background/product-page.png",
+	"h1-size" : "medium",
+
+	"subscription" : false
+
+	})
 
 </div>
 
