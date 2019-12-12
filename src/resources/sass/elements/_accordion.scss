@@ -46,7 +46,6 @@
 		display: none;
 		margin-top: 1.25rem;
 		padding-top: 1.25rem;
-		//border-top: 1px solid #d8dde6;
 		&::before {
 			content: '';
 			position: absolute;
@@ -55,7 +54,6 @@
 			height: 1px;
 			background-color: #d8dde6;
 		}
-		//font-size: 20px;
 
 		&--list {
 			ul {
@@ -111,7 +109,8 @@
 				margin-right: 10px;
 				width: calc(100% - 20px);
 			}
-
+			&.active {
+			}
 		}
 	}
 

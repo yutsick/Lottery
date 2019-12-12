@@ -1,12 +1,5 @@
 export default function() {
-	$('.accordion__content').each(function () {
-		let th = $(this);
-		if(th.is(':visible')) {
-			th.siblings('.accordion__title').addClass('active');
-		} else {
-			th.siblings('.accordion__title').removeClass('active');
-		}
-	});
+	$('.accordion__content').hide();
 
 	$('.accordion__title').click(function () {
 		let th = $(this);
@@ -14,9 +7,9 @@ export default function() {
 
 		if (th.hasClass('active')) {
 			console.log('1');
-			th.siblings('.accordion__content').slideDown('fast');
+			th.siblings('.accordion__content').slideDown('fast').addClass('active');
 		} else {
-			th.siblings('.accordion__content').slideUp('fast');
+			th.siblings('.accordion__content').slideUp('fast').removeClass('active');
 		}
 	})
 }
