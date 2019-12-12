@@ -85,14 +85,15 @@ export default function () {
 		templateResult: format
 	});
 
+
 	$('.js-choose-tickets .custom-checkbox-v3 input[type="checkbox"]').on('change', function() {
-		var th = $(this);
+		let th = $(this);
 		console.log(th);
 		$('.js-choose-tickets input[type="checkbox"]').not(th).prop({
 			checked: false,
 		});
-		var thVal = th.siblings('.custom-checkbox-v3__caption').find('.custom-checkbox-v3__price-value').text();
-		$('.subscription-registration-total__price span').text( + thVal + 'kr');
+		let thVal = th.siblings('.custom-checkbox-v3__caption').find('.custom-checkbox-v3__price-value').text();
+		$('.registration-form-total__price span').text( + thVal + 'kr');
 		console.log(thVal);
 	});
 }
