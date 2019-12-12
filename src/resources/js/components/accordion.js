@@ -1,4 +1,13 @@
 export default function() {
+	$('.accordion__content').each(function () {
+		let th = $(this);
+		if(th.is(':visible')) {
+			th.siblings('.accordion__title').addClass('active');
+		} else {
+			th.siblings('.accordion__title').removeClass('active');
+		}
+	});
+
 	$('.accordion__title').click(function () {
 		let th = $(this);
 		th.toggleClass('active');
