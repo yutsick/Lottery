@@ -17,6 +17,7 @@ import storeConfiguration from './store';
 /* Components */
 import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
+import alert from './components/accordion';
 import bonusCode from './components/bonus-code';
 import checkboxTrigger from './components/checkbox-trigger';
 import dataList from './components/data-list';
