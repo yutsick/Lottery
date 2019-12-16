@@ -195,7 +195,9 @@ hr.line-gray {
 			&-form {
 				width: 100%;
 				margin-top: 45px;
-				background: #FFFFFF url("../img/background/g-account-reg-form.png") no-repeat center bottom;
+				background-color: #FFFFFF;
+				background-repeat:no-repeat;
+				background-position: center bottom;
 				background-size: contain;
 				@media screen and (min-width: 768px) {
 					padding: 25px 5% 50px 56px;
@@ -250,7 +252,8 @@ hr.line-gray {
 				flex-flow: row wrap;
 				justify-content: center;
 				margin-top: 45px;
-				background: #FFFFFF;
+				background-color: #FFFFFF;
+				background-image: none!important;
 				overflow: hidden;
 				@media screen and (min-width: 1200px) {
 					overflow: visible;
