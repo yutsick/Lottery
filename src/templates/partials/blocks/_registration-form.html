@@ -1,16 +1,17 @@
-<div class="registration registration-back registration-back--@@text" style="background-image: url('@@back-img');">
-	<div class="container registration-container--@@container">
+<div class="registration registration--@@container registration-back" style="background-image: url('@@back-img');">
+	<div class="container">
 
-		<div class="registration-content registration-content--@@text">
-			<h1 class="h1 h1--@@h1-size">
-				@@if (page === 'register-subscription') {Du kan göra skillnad… På riktigt!}
-				@@if (page === 'register-new') {Skapa spelkonto}
+		<div class="registration-content">
+			<h1 class="h1">
+				@@if (subscription) {Du kan göra skillnad… På riktigt!}
+				@@if (!subscription) {Skapa spelkonto}
 			</h1>
 			<p class="registration__text">
-				@@if (page === 'register-subscription') {Förutom att du har vinstchans upp till 10
+				@@if (subscription) {Förutom att du har vinstchans upp till 10
 				Miljoner kronor så stöttar du samtidigt vårt arbete för ett nyktert och drogfritt sammhälle! }
-				@@if (page === 'register-new') {Vad roligt att du hittat hit. Framför dig har du en hel värld av möjligheter. Kanske vill du ha chans på miljoner? Kanske är du ute efter spänning och underhållning? Hos oss är det möjligt. Men först behöver du skapa ett spelkonto så du kan kliva in i vår spännande värld. }
+				@@if (!subscription) {Vad roligt att du hittat hit. Framför dig har du en hel värld av möjligheter. Kanske vill du ha chans på miljoner? Kanske är du ute efter spänning och underhållning? Hos oss är det möjligt. Men först behöver du skapa ett spelkonto så du kan kliva in i vår spännande värld. }
 			</p>
+
 			@@if (callback) {
 			<div class="registration-callback">
 				<p class="registration__text">Behöver du hjälp med din registrering? Kontakta vårt kundcenter så hjälper
@@ -22,10 +23,10 @@
 		</div>
 
 
-		<form class="form @@if (subscription) {registration-subscription-form} @@if (!subscription) {registration-form}" data-toggle="validator">
+		<form class="registration-form" data-toggle="validator" style="background-image: url('assets/img/background/g-account-reg-form.png');">
 
 
-			<div class="registration-form-wrap @@if (subscription) {registration-form-fields}">
+			<div class="registration-form-wrap">
 
 				<h2 class="registration-form__title h2">Registrera din prenumeration idag!</h2>
 
@@ -88,7 +89,10 @@
 				<div class="registration-form-controls">
 					<div class="form__half">
 						<div class="form-group form__item has-feedback">
-							<label>@@if (page === 'register-subscription') {Personnummer} @@if (page === 'register-new') {Ange ditt personnummer}</label>
+							<label>
+								@@if (subscription) {Personnummer}
+								@@if (!subscription) {Ange ditt personnummer}
+							</label>
 							<input type="text" class="form-control" name="Personnummer"
 										 placeholder="ÅÅÅÅMMDD-XXXX"
 										 data-required-error="Du måste fylla i detta fält."
@@ -151,7 +155,9 @@
 					</div>
 					<div class="form__half">
 						<div class="form-group has-feedback">
-							<label for="userEmail">@@if (page === 'register-subscription') {Epostadress} @@if (page === 'register-new') {Och din e-postadress}</label>
+							<label for="userEmail">
+							@@if (subscription) {Epostadress}
+							@@if (!subscription) {Och din e-postadress}</label>
 							<input type="email" class="form-control" id="userEmail"
 										 placeholder="anna.andersson@miljonlotteriet.se" required
 										 data-required-error="Du måste fylla i detta fält."
@@ -199,24 +205,21 @@
 			</div>
 
 
-			@@if (subscription) {
+
 			<div class="registration-form-total">
+				@@if (subscription) {
 				<div class="registration-form-total__thumb">
 					<img src="assets/img/subscription/s-reg-total.png" alt="">
 				</div>
 				<div class="registration-form-total__price">
 					Total: <span>200kr</span>
 				</div>
+				}
 				<div class="btn-wrap">
 					<button type="submit" class="btn-success">Beställ</button>
 				</div>
 			</div>
-			}
-			@@if (page === 'register-new') {
-			<div class="btn-wrap">
-				<button type="submit" class="btn-primary">Beställ</button>
-			</div>
-			}
+
 		</form>
 	</div>
 </div>
