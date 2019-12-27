@@ -1,10 +1,10 @@
 export default function() {
 	function accordionToggle (th) {
-		th.next().hide();
+		th.next().slideUp('fast');
 		if (th.hasClass('active')) {
-			th.next('.accordion__content').slideDown('fast').addClass('active');
+			th.next('.accordion-content').slideDown('fast').addClass('active');
 		} else {
-			th.next('.accordion__content').slideUp('fast').removeClass('active');
+			th.next('.accordion-content').slideUp('fast').removeClass('active');
 		}
 	}
 
