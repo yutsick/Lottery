@@ -1,14 +1,14 @@
 export default function() {
 	function accordionToggle (th) {
-		th.next().slideUp('fast');
+		th.children('.accordion-content').slideUp('fast');
 		if (th.hasClass('active')) {
-			th.next('.accordion-content').slideDown('fast').addClass('active');
+			th.children('.accordion-content').slideDown('fast').addClass('active');
 		} else {
-			th.next('.accordion-content').slideUp('fast').removeClass('active');
+			th.children('.accordion-content').slideUp('fast').removeClass('active');
 		}
 	}
 
-	$('.accordion__title').each(function () {
+	$('.accordion-item').each(function () {
 		let th = $(this);
 		accordionToggle (th)
 	}).click(function () {

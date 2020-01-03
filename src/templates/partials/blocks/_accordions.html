@@ -1,11 +1,4 @@
-@@if (context.blocks === 'single') {
-
-@@include('blocks/accordions/_accordion-single.html', {})
-
-}
-
-@@if (context.blocks === 'multi') {
-<div class="accordion">
-	@@include('blocks/accordions/_accordion-multi.html', {})
+<div class="accordion @@if(context.blocks === 'multi'){accordion--multi}">
+	@@include('blocks/accordions/_accordion-items.html', {})
 </div>
-}
+

@@ -1,83 +1,58 @@
-<div class="accordion__title @@if(context.active){active}">
-	<h2 class="h2">@@content_title</h2>
-	<i class="icon icon-chevron-down icon-size-small"></i>
-</div>
+<div class="accordion-item @@if(context.active){active}">
+	<div class="accordion__title">
+		<h2 class="h2">@@content_title</h2>
+		<i class="icon icon-chevron-down icon-size-small"></i>
+	</div>
 
-<div class="accordion-content @@if(context.content_size === 'medium'){accordion-content--column}">
+	<div class="accordion-content @@if(context.content_size === 'medium'){accordion-content--column}">
 
-	@@if(context.content_size === "" && context.content_first === "list" && content_second === "") {
-		<ul class="list-style-check">@@include('blocks/accordions/block/_accordion-list.html')</ul>
-	}
-
-	@@if (context.content_size === "" && context.content_first === "text" && content_second === "") {
-		@@include('blocks/accordions/block/_accordion-text.html')
-	}
-
-	@@if (context.content_size === "" && context.content_first === "img" && content_second === "") {
-		<div class="text-align-center">
-			<img src="@@content_img_url" alt="">
+	@@if(context.content_size === "" && !content_second) {
+		<div class="accordion-inner">
+			<!-- TODO First Content editor field here	-->
+			<p>Accusantium ea obcaecati omnis praesentium vitae! Aliquam atque cum dicta, dolore eius
+				explicabo facere fugiat perspiciatis quisquam, reprehenderit ullam, veritatis! Accusamus alias
+				animi dicta harum perspiciatis repellat reprehenderit ullam veniam.
+			</p>
+			<p>Aliquid at ea incidunt magnam neque similique temporibus veritatis! Beatae error et inventore
+				itaque minima modi placeat, tempore totam ullam velit. Accusantium, commodi doloribus eius
+				officiis placeat ratione sequi suscipit?
+			</p>
+			<p>A alias animi asperiores commodi consequatur delectus, facilis fuga illum in itaque iusto
+				laborum maxime, mollitia nam nemo nesciunt, numquam odio officiis provident quas repudiandae rerum
+				tempora tenetur vitae voluptatibus.
+			</p>
 		</div>
 	}
 
 
-	@@if (context.content_size === "medium" && context.content_first === "list" && context.content_second === "text" ) {
-	<div class="column-2">
-		<ul class="list-style-check list--wFull">
-			@@include('blocks/accordions/block/_accordion-list.html')
-		</ul>
-	</div>
-	<div class="column-2">
-		@@include('blocks/accordions/block/_accordion-text.html')
-	</div>
+	@@if (context.content_size === "medium" && content_second) {
+		<div class="accordion-inner">
+			<!-- TODO First Content editor field here	-->
+			<p>Accusantium ea obcaecati omnis praesentium vitae! Aliquam atque cum dicta, dolore eius
+				explicabo facere fugiat perspiciatis quisquam, reprehenderit ullam, veritatis! Accusamus alias
+				animi dicta harum perspiciatis repellat reprehenderit ullam veniam.
+			</p>
+			<p>Aliquid at ea incidunt magnam neque similique temporibus veritatis! Beatae error et inventore
+				itaque minima modi placeat, tempore totam ullam velit. Accusantium, commodi doloribus eius
+				officiis placeat ratione sequi suscipit?
+			</p>
+			<p>A alias animi asperiores commodi consequatur delectus, facilis fuga illum in itaque iusto
+				laborum maxime, mollitia nam nemo nesciunt, numquam odio officiis provident quas repudiandae rerum
+				tempora tenetur vitae voluptatibus.
+			</p>
+		</div>
+		<div class="accordion-inner">
+			<!-- TODO Second Content editor field here	-->
+			<ul>
+				<li>Hundratusentals vinster nästa månad</li>
+				<li>Du får din vinst automatiskt via vinstbevakning</li>
+				<li>170 kr/mån per lott utan bindningstid</li>
+				<li>Vinstchans varje dag – alla vinster är skattefria</li>
+				<li>Avsluta när du vill via e-post eller telefon</li>
+				<li>Över 30 % av lottpriset till välgörenhet</li>
+			</ul>
+		</div>
 	}
 
-	@@if (context.content_size === "medium" && context.content_first === "text" && context.content_second === "list" ) {
-	<div class="column-2">
-		@@include('blocks/accordions/block/_accordion-text.html')
-	</div>
-	<div class="column-2">
-		<ul class="list-style-check list--wFull">
-			@@include('blocks/accordions/block/_accordion-list.html')
-		</ul>
-	</div>
-	}
-
-	@@if (context.content_size === "medium" && context.content_first === "img" && context.content_second === "list" ) {
-
-	<div class="column-2 column-2--thumb"><img src="@@content_img_url" alt=""></div>
-
-	<div class="column-2">
-		<ul class="list-style-check list--wFull">
-			@@include('blocks/accordions/block/_accordion-list.html')
-		</ul>
-	</div>
-	}
-	@@if (context.content_size === "medium" && context.content_first === "img" && context.content_second === "text" ) {
-
-	<div class="column-2 column-2--thumb"><img src="@@content_img_url" alt=""></div>
-
-	<div class="column-2">
-		@@include('blocks/accordions/block/_accordion-text.html')
-	</div>
-	}
-
-	@@if (context.content_size === "medium" && context.content_first === "text" && context.content_second === "img" ) {
-	<div class="column-2">
-		@@include('blocks/accordions/block/_accordion-text.html')
-	</div>
-
-	<div class="column-2 column-2--thumb"><img src="@@content_img_url" alt=""></div>
-
-	}
-
-	@@if (context.content_size === "medium" && context.content_first === "list" && context.content_second === "img" ) {
-	<div class="column-2">
-		<ul class="list-style-check list--wFull">
-			@@include('blocks/accordions/block/_accordion-list.html')
-		</ul>
-	</div>
-
-	<div class="column-2 column-2--thumb"><img src="@@content_img_url" alt=""></div>
-
-	}
+</div>
 </div>
