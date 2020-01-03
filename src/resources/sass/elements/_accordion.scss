@@ -9,6 +9,13 @@
 		padding: 1.25rem 1.75rem;
 		border: 1px solid #d8dde6;
 		box-shadow: 0 0 1px 0 rgba(0,0,0,0.16), 0 0 5px 0 rgba(0,0,0,0.12);
+		.accordion-item {
+			& + .accordion-item > .accordion__title {
+				& > .icon {
+					top: 25px;
+				}
+			}
+		}
 	}
 	&:not(.accordion--multi) {
 		.accordion-item {
@@ -24,6 +31,7 @@
 				&::before {
 					content: none;
 				}
+
 			}
 		}
 	}
@@ -147,9 +155,7 @@
 				height: 1px;
 				background-color: #d8dde6;
 			}
-			& > .icon {
-				top: 25px;
-			}
+
 		}
 		&.active {
 			.accordion__title {
