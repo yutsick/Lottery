@@ -11,8 +11,8 @@ export default function() {
 	$('.accordion-item').each(function () {
 		let th = $(this);
 		accordionToggle (th)
-	}).click(function () {
-		let th = $(this);
+	}).children('.accordion__title').click(function () {
+		let th = $(this).parent('.accordion-item');
 		th.toggleClass('active');
 		accordionToggle (th)
 	})
