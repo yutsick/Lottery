@@ -1,24 +1,10 @@
-image: wmyl/deploy
-
-cache:
-  key: ${CI_BUILD_REF_NAME}
-  paths:
-  - vendor/
-  - node_modules/
-
-before_script:
-  - npm install
-  - eval $(ssh-agent -s)
-  - ssh-add <(echo "$DEPLOY_KEY")
-
-stages:  
-  - deploy
-
-
-deploy_to_staging:
+pages:
   stage: deploy
-  only:
-    - develop
   script:
-    - npm run build
-    - rsync -rv * serverpilot@stuff.wmyl.se:/srv/users/serverpilot/apps/ml-2017/ --exclude '.git' --exclude '.gitlab-ci.yml' --exclude '.gitignore' --exclude 'node_modules' --exclude 'resources'
+  - npm install
+  - gulp build
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
