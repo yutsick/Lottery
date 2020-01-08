@@ -68,6 +68,8 @@
 		position: relative;
 		display: none;
 		margin-top: 1.25rem;
+		margin-right: -10px;
+		margin-left: -10px;
 		padding-top: 1.25rem;
 		&::before {
 			content: '';
@@ -127,8 +129,7 @@
 		&--column {
 			display: flex;
 			flex-flow: row wrap;
-			margin-left: -10px;
-			margin-right: -10px;
+
 			@media only screen and (min-width: 768px) {
 				flex-flow: row nowrap;
 			}
