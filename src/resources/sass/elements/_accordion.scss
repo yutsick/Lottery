@@ -127,11 +127,12 @@
 		&--column {
 			display: flex;
 			flex-flow: row wrap;
+			margin-left: -10px;
+			margin-right: -10px;
 			@media only screen and (min-width: 768px) {
 				flex-flow: row nowrap;
 			}
-			margin-left: -10px;
-			margin-right: -10px;
+
 			&::before {
 				margin-left: 10px;
 				margin-right: 10px;
@@ -176,6 +177,8 @@
 
 	&-inner {
 		margin: 10px 0;
+		padding-left: 10px;
+		padding-right: 10px;
 		width: 100%;
 
 		&--thumb {
