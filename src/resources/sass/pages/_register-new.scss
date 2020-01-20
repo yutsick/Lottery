@@ -29,9 +29,19 @@ hr.line-gray {
 
     &-callback {
         position: relative;
+        display: none;
         margin-top: 30px;
         padding-top: 30px;
 
+        @media screen and (min-width: 992px){
+            display: block;
+        }
+        &.b-mobile {
+            display: block;
+            @media screen and (min-width: 992px){
+                display: none;
+            }
+        }
         &:before {
             content: '';
             position: absolute;

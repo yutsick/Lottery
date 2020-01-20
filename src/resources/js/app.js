@@ -17,6 +17,7 @@ import storeConfiguration from './store';
 /* Components */
 import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
+import accordion from './components/accordion';
 import bonusCode from './components/bonus-code';
 import checkboxTrigger from './components/checkbox-trigger';
 import dataList from './components/data-list';
@@ -75,8 +76,9 @@ $(function () {
 	new objectFitImages();
 	addToDreamlist();
 	alert();
+	accordion();
 	bonusCode();
-    checkboxTrigger();
+	checkboxTrigger();
 	dataList();
 	dreamlistTooltip();
 	new entityCollectionActions();

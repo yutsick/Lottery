@@ -101,16 +101,14 @@
 							<div class="help-block with-errors"></div>
 						</div>
 
-						<div id="payWay" class="form-group has-feedback">
-							<label for="choosePayWay">
-								Välj betalsätt
-							</label>
-							<select id="choosePayWay" class="form-control choosePayWay" name="choosePayWay" required
-											data-error="Du måste välja betalsätt" style="width: 100%">
-								<option value>Välj betalsätt</option>
-								<option value="faktura" id="faktura">Faktura</option>
-								<option value="betalkort" id="betalkort">Betalkort</option>
-							</select>
+						<div class="form-group has-feedback">
+							<label for="userEmail">
+								@@if (subscription) {Epostadress}
+								@@if (!subscription) {Och din e-postadress}</label>
+							<input type="email" class="form-control" id="userEmail"
+										 placeholder="anna.andersson@miljonlotteriet.se" required
+										 data-required-error="Du måste fylla i detta fält."
+										 data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
 							<div class="help-block with-errors"></div>
 						</div>
 
@@ -154,14 +152,17 @@
 						</div>
 					</div>
 					<div class="form__half">
-						<div class="form-group has-feedback">
-							<label for="userEmail">
-							@@if (subscription) {Epostadress}
-							@@if (!subscription) {Och din e-postadress}</label>
-							<input type="email" class="form-control" id="userEmail"
-										 placeholder="anna.andersson@miljonlotteriet.se" required
-										 data-required-error="Du måste fylla i detta fält."
-										 data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
+
+						<div id="payWay" class="form-group has-feedback">
+							<label for="choosePayWay">
+								Välj betalsätt
+							</label>
+							<select id="choosePayWay" class="form-control choosePayWay" name="choosePayWay" required
+											data-error="Du måste välja betalsätt" style="width: 100%">
+								<option value>Välj betalsätt</option>
+								<option value="faktura" id="faktura">Faktura</option>
+								<option value="betalkort" id="betalkort">Betalkort</option>
+							</select>
 							<div class="help-block with-errors"></div>
 						</div>
 
@@ -221,5 +222,16 @@
 			</div>
 
 		</form>
+
+
+		@@if (callback) {
+		<div class="registration-callback b-mobile">
+			<p class="registration__text">Behöver du hjälp med din registrering? Kontakta vårt kundcenter så hjälper
+				vi dig att komma i gång:</p>
+			<a href="tel:0313618584"> <i class="vi vi-phone"></i> 031-361 85 84</a>
+			<a href="mailto:kundcenter@miljonlotteriet.se"> <i class="vi vi-email"></i> kundcenter@miljonlotteriet.se</a>
+		</div>
+		}
+
 	</div>
 </div>
