@@ -2,6 +2,7 @@ export default function() {
     let $top = $('.top');
     let $alert = $('.alert');
     let topBarHeight = $top.outerHeight();
+    let pageWinFilterHeight = $('.b-filter').outerHeight();
     let loaded = false;
     let didScroll;
     let lastScrollTop = 0;
@@ -67,5 +68,17 @@ export default function() {
 
     });
 
+    const fullHeight = () => {
+        const pageWinContentBoxHeight =  window.innerHeight - topBarHeight;
+        $('.blog-win-hero').height(pageWinContentBoxHeight);
+        $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ));
+        console.log(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ), pageWinContentBoxHeight);
+    }
 
+    if ($(window).width() > 992) {
+        fullHeight();
+        window.onresize = function() {
+            fullHeight();
+        }
+    }
 }
