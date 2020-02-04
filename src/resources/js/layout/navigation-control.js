@@ -161,7 +161,11 @@ export default function() {
     const initMegaItem = item => {
         $(item).on({
             mouseenter: (e) => toggleMegaItem(e, true),
-            mouseleave: (e) => toggleMegaItem(e, false)
+            mouseleave: (e) => {
+                setTimeout(() => {
+                    toggleMegaItem(e, false);
+                }, 200)
+            }
         });
     }
 

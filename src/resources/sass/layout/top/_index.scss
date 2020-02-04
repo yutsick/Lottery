@@ -855,7 +855,7 @@
                 &-item {
                     width: 100%;
                     display: none;
-                    padding: $padding-small $padding-default;
+                    padding: 0 $padding-default;
     
                     &--active {
                         display: flex;
@@ -871,13 +871,16 @@
         
                     .navigation__item {
                         margin: 0 30px 0 0;
-                        min-height: 30px;
+                        min-height: 50px;
                         display: flex;
                         align-items: center;
                         margin-left: 0;
     
                         a {
+                            display: flex;
+                            align-items: center;
                             color: $color-snow;
+                            height: 100%;
                             font-size: 16px;
                             &:hover {
                                 text-decoration: underline;
