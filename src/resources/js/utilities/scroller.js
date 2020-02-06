@@ -71,7 +71,7 @@ export default function() {
     const fullHeight = () => {
         const pageWinContentBoxHeight =  window.innerHeight - topBarHeight;
         $('.blog-win-hero').height(pageWinContentBoxHeight);
-        $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ));
+        $('.blog-win-posts, .win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 40 ));
         console.log(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ), pageWinContentBoxHeight);
     }
 
