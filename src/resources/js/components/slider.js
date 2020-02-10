@@ -15,14 +15,14 @@ export default function () {
 	$flickity.on('select.flickity', function () {
 		let $this = $(this);
 		let flkty = $this.data('flickity');
-		let $previousButton = $this.find('.previous')
+		let $previousButton = $this.find('.previous');
 
 		if (flkty.selectedIndex == 0) {
 			$previousButton.addClass('disabled');
 		} else {
 			$previousButton.removeClass('disabled');
 		}
-	})
+	});
 
 
 	// Slider for post inner page
@@ -50,11 +50,13 @@ export default function () {
 		}
 	};
 
-	captionHeightFn();
-	window.onresize = function() {
-		captionHeightFn();
-	};
 
+	$flickityPostSlider.on( 'ready.flickity', function( event, index ) {
+		captionHeightFn();
+		window.onresize = function() {
+			captionHeightFn();
+		};
+	});
 	$flickityPostSlider.on('select.flickity', function () {
 		let $this = $(this);
 		let flkty = $this.data('flickity');

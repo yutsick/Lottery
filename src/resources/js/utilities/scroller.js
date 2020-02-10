@@ -70,9 +70,11 @@ export default function() {
 
     const fullHeight = () => {
         const pageWinContentBoxHeight =  window.innerHeight - topBarHeight;
-        $('.blog-win-hero, .post-slider__item').height(pageWinContentBoxHeight);
-        $('.blog-win-posts, .win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 40 ));
-        console.log(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ), pageWinContentBoxHeight);
+        $('.blog-win-hero').height(pageWinContentBoxHeight);
+        $('.post-slider__item').height(pageWinContentBoxHeight);
+        $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 40 ));
+        $('.win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 40 ));
+        // console.log(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ), pageWinContentBoxHeight);
     };
 
 
