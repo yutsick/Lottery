@@ -80,13 +80,14 @@ export default function() {
 
 
     if ($(window).width() > 992) {
-
         fullHeight();
-
-        window.onresize = function() {
+    }
+    window.onresize = function() {
+        if ($(window).width() > 992) {
             fullHeight();
+        } else {
+            $('.post-slider__item, .blog-win-posts, .win-single').height('auto');
+            $('.blog-win-hero').height('');
         }
     }
-
-
 }
