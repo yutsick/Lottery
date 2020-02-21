@@ -141,6 +141,7 @@
 }
 
 .blog-win {
+  height: 80vh;
   @media screen and (max-width: 680px) {
     .container-fluid {
       padding: 0;
@@ -251,6 +252,8 @@
 }
 
 .post {
+display: inline-block!important;
+
   .content {
     max-width: 100%;
   }
