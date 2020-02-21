@@ -27,10 +27,10 @@ export default function () {
       window.onload = resizeAllGridItems();
       window.addEventListener("resize", resizeAllGridItems);
 
-      let allItems = document.getElementsByClassName("item");
-      for (let x = 0; x < allItems.length; x++) {
-        imagesLoaded(allItems[x], resizeInstance);
-      }
+      // let allItems = document.getElementsByClassName("item");
+      // for (let x = 0; x < allItems.length; x++) {
+      //   imagesLoaded(allItems[x], resizeInstance);
+      // }
     }
   }
 
@@ -56,7 +56,4 @@ export default function () {
     resizeGrid ();
   });
 
-  // setTimeout(function () {
-  //   $('.blog-win-posts').addClass('js-changed');
-  // }, 2000);
 }

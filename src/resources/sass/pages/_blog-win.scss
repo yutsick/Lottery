@@ -823,7 +823,8 @@
   &__title,
   h2 {
     color: $color-white;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 0;
   }
 
   &__content {
@@ -832,15 +833,12 @@
     @media screen and (min-width: 680px) {
       margin-right: -20px;
       margin-left: -20px;
-      flex-wrap: nowrap;
     }
   }
 
   &__text {
     flex: 1 1 100%;
     position: relative;
-    padding-bottom: 25px;
-    margin-bottom: 40px;
     font-size: 16px;
     line-height: 175%;
     @media screen and (min-width: 680px) {
