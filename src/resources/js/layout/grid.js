@@ -45,7 +45,6 @@ export default function () {
         resizeGrid ();
       }
     }, 500);
-
   }
 
 
