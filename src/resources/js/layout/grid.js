@@ -34,5 +34,30 @@ export default function () {
     }
   }
 
+
   detectIE();
+
+  function resizeGrid () {
+    setTimeout(function () {
+      if($(".blog-win-posts").hasClass("js-changed")) {
+        detectIE();
+      } else {
+        resizeGrid ();
+      }
+    }, 500);
+
+  }
+
+
+  const filterItem = $(".b-filter__item");
+  filterItem.click(function(){
+    let th = $(this);
+    filterItem.removeClass('current');
+    th.addClass('current');
+    resizeGrid ();
+  });
+
+  // setTimeout(function () {
+  //   $('.blog-win-posts').addClass('js-changed');
+  // }, 2000);
 }
