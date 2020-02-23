@@ -10,13 +10,12 @@ require('lightgallery.js/dist/js/lightgallery.min.js');
 require('lg-thumbnail.js/dist/lg-thumbnail.js');
 /* Vendor */
 import modernizr from './vendor/modernizr-custom.js';
-
 /* Store */
 import storeConfiguration from './store';
-
 /* Components */
 import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
+import accordion from './components/accordion';
 import bonusCode from './components/bonus-code';
 import checkboxTrigger from './components/checkbox-trigger';
 import dataList from './components/data-list';
@@ -46,7 +45,6 @@ import bankIDForm from './components/bankid-form';
 import timeSpent from './components/time-spent';
 import Odometer from './components/odometer';
 import Carousel from './components/carousel';
-
 /* Layout */
 import navigation from './layout/navigation';
 import register from './layout/register';
@@ -75,8 +73,9 @@ $(function () {
 	new objectFitImages();
 	addToDreamlist();
 	alert();
+	accordion();
 	bonusCode();
-    checkboxTrigger();
+	checkboxTrigger();
 	dataList();
 	dreamlistTooltip();
 	new entityCollectionActions();
@@ -146,3 +145,6 @@ function changeSlideClasses(slide, method, className) {
 		cellElem.classList[method](className);
 	});
 }
+
+
+

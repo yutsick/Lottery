@@ -1,0 +1,10 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-out",
+"logged_in": false
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+<div class="content-wrapper ml-2017">
+	@@include('blocks/_page-win-single.html', {"blocks": "all"})
+</div>
+@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })

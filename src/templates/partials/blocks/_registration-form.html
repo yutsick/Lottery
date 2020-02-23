@@ -101,63 +101,10 @@
 							<div class="help-block with-errors"></div>
 						</div>
 
-						<div id="payWay" class="form-group has-feedback">
-							<label for="choosePayWay">
-								Välj betalsätt
-							</label>
-							<select id="choosePayWay" class="form-control choosePayWay" name="choosePayWay" required
-											data-error="Du måste välja betalsätt" style="width: 100%">
-								<option value>Välj betalsätt</option>
-								<option value="faktura" id="faktura">Faktura</option>
-								<option value="betalkort" id="betalkort">Betalkort</option>
-							</select>
-							<div class="help-block with-errors"></div>
-						</div>
-
-						<div id="loginWay" class="form-group has-feedback">
-							<label for="chooseLoginWay">
-								Välj inloggningssätt
-							</label>
-							<select id="chooseLoginWay" class="form-control chooseLoginWay" name="chooseLoginWay" required
-											data-error="Du måste välja ett inloggningssätt" style="width: 100%">
-								<option value>Välj inloggningssätt</option>
-								<option value="bankid" id="bankid">Bank Id</option>
-								<option value="password" id="password">Lösenord</option>
-							</select>
-							<div class="help-block with-errors"></div>
-						</div>
-
-						<div id="deviceId" class="form-group" style="display: none">
-							<label for="chooseDevice">Välj Enhet</label>
-							<select id="chooseDevice" class="form-control chooseDevice" name="chooseDevice" style="width: 100%">
-								<option value="1">BankID på denna enhet</option>
-								<option value="2">BankID på annan enhet</option>
-							</select>
-						</div>
-
-						<div id="passwordInputs" class="form-group" style="display: none;">
-							<div class="form-group has-feedback" id="userPasswordGroup">
-								<label for="userPassword">Ange lösenord</label>
-								<label class="pull-right light-label" for="userPassword">Minst 6 tecken</label>
-								<input type="password" class="form-control" data-minlength="6" id="userPassword"
-											 placeholder="" data-required-error="Du måste fylla i detta fält."
-											 data-minlength-error="Minst 6 tecken.">
-								<div class="help-block with-errors"></div>
-							</div>
-							<div class="form-group has-feedback" id="userPasswordRepeatGroup">
-								<label for="userPasswordRepeat">Ange lösenordet igen</label>
-								<input type="password" class="form-control" id="userPasswordRepeat" type="hidden"
-											 data-match="#userPassword" data-match-error=modal-ops
-											 placeholder="" data-required-error="Du måste fylla i detta fält.">
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-					</div>
-					<div class="form__half">
 						<div class="form-group has-feedback">
 							<label for="userEmail">
-							@@if (subscription) {Epostadress}
-							@@if (!subscription) {Och din e-postadress}</label>
+								@@if (subscription) {Epostadress}
+								@@if (!subscription) {Och din e-postadress}</label>
 							<input type="email" class="form-control" id="userEmail"
 										 placeholder="anna.andersson@miljonlotteriet.se" required
 										 data-required-error="Du måste fylla i detta fält."
@@ -177,6 +124,61 @@
 							</select>
 							<div class="help-block with-errors"></div>
 						</div>
+
+					</div>
+					<div class="form__half">
+
+						<div id="payWay" class="form-group has-feedback">
+							<label for="choosePayWay">
+								Välj betalsätt
+							</label>
+							<select id="choosePayWay" class="form-control choosePayWay" name="choosePayWay" required
+											data-error="Du måste välja betalsätt" style="width: 100%">
+								<option value>Välj betalsätt</option>
+								<option value="faktura" id="faktura">Faktura</option>
+								<option value="betalkort" id="betalkort">Betalkort</option>
+							</select>
+							<div class="help-block with-errors"></div>
+						</div>
+
+					<div id="loginWay" class="form-group has-feedback">
+						<label for="chooseLoginWay">
+							Välj inloggningssätt
+						</label>
+						<select id="chooseLoginWay" class="form-control chooseLoginWay" name="chooseLoginWay" required
+										data-error="Du måste välja ett inloggningssätt" style="width: 100%">
+							<option value>Välj inloggningssätt</option>
+							<option value="bankid" id="bankid">Bank Id</option>
+							<option value="password" id="password">Lösenord</option>
+						</select>
+						<div class="help-block with-errors"></div>
+					</div>
+
+					<div id="deviceId" class="form-group" style="display: none">
+						<label for="chooseDevice">Välj Enhet</label>
+						<select id="chooseDevice" class="form-control chooseDevice" name="chooseDevice" style="width: 100%">
+							<option value="1">BankID på denna enhet</option>
+							<option value="2">BankID på annan enhet</option>
+						</select>
+					</div>
+
+					<div id="passwordInputs" class="form-group" style="display: none;">
+						<div class="form-group has-feedback" id="userPasswordGroup">
+							<label for="userPassword">Ange lösenord</label>
+							<label class="pull-right light-label" for="userPassword">Minst 6 tecken</label>
+							<input type="password" class="form-control" data-minlength="6" id="userPassword"
+										 placeholder="" data-required-error="Du måste fylla i detta fält."
+										 data-minlength-error="Minst 6 tecken.">
+							<div class="help-block with-errors"></div>
+						</div>
+						<div class="form-group has-feedback" id="userPasswordRepeatGroup">
+							<label for="userPasswordRepeat">Ange lösenordet igen</label>
+							<input type="password" class="form-control" id="userPasswordRepeat" type="hidden"
+										 data-match="#userPassword" data-match-error=modal-ops
+										 placeholder="" data-required-error="Du måste fylla i detta fält.">
+							<div class="help-block with-errors"></div>
+						</div>
+					</div>
 
 						<div class="form__item-checkboxes">
 							<div class="form-group has-feedback">
@@ -221,5 +223,16 @@
 			</div>
 
 		</form>
+
+
+		@@if (callback) {
+		<div class="registration-callback b-mobile">
+			<p class="registration__text">Behöver du hjälp med din registrering? Kontakta vårt kundcenter så hjälper
+				vi dig att komma i gång:</p>
+			<a href="tel:0313618584"> <i class="vi vi-phone"></i> 031-361 85 84</a>
+			<a href="mailto:kundcenter@miljonlotteriet.se"> <i class="vi vi-email"></i> kundcenter@miljonlotteriet.se</a>
+		</div>
+		}
+
 	</div>
 </div>

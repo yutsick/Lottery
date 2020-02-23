@@ -1,0 +1,31 @@
+@@include('layout/_header.html', {
+"class": "logged-in",
+"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+
+<div class="content-wrapper ml-2017">
+	<div class="container container--center">
+		<section class="section" style="padding: 60px 0;">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2 class="h2">Single</h2>
+						@@include('blocks/_accordions.html', {"blocks":"single"})
+					</div>
+
+
+          <div class="col-xs-12">
+						<h2 class="h2">Multi</h2>
+            @@include('blocks/_accordions.html', {"blocks":"multi"})
+					</div>
+
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

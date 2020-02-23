@@ -29,9 +29,19 @@ hr.line-gray {
 
     &-callback {
         position: relative;
+        display: none;
         margin-top: 30px;
         padding-top: 30px;
 
+        @media screen and (min-width: 992px){
+            display: block;
+        }
+        &.b-mobile {
+            display: block;
+            @media screen and (min-width: 992px){
+                display: none;
+            }
+        }
         &:before {
             content: '';
             position: absolute;
@@ -110,19 +120,13 @@ hr.line-gray {
 
             &__thumb {
                 display: none;
-
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 1100px) {
                     position: relative;
                     display: block;
                     margin: 0 auto;
                     width: 380px;
                     height: 532px;
                 }
-
-                @media screen and (min-width: 992px) {
-                    margin-top: -10%;
-                }
-
                 @media screen and (min-width: 1200px) {
                     margin-top: -35%;
                 }

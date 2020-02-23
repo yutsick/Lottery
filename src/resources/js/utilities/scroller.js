@@ -2,6 +2,7 @@ export default function() {
     let $top = $('.top');
     let $alert = $('.alert');
     let topBarHeight = $top.outerHeight();
+    let pageWinFilterHeight = $('.b-filter').outerHeight();
     let loaded = false;
     let didScroll;
     let lastScrollTop = 0;
@@ -66,6 +67,4 @@ export default function() {
         }
 
     });
-
-
 }
