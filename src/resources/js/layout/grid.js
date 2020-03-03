@@ -41,7 +41,7 @@ export default function () {
       function resizeInstance(instance){
         let item = instance.elements[0];
         resizeGridItem(item);
-        console.log('images are loaded');
+        // console.log('images are loaded');
       }
     }
   }
