@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="41px" viewBox="0 0 40 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Exempelsidor" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.799734933">
+        <g id="D--Artikel---Hus-i-Spanien" transform="translate(-20.000000, -501.000000)" fill="#FFFFFF">
+            <g id="Left-side" transform="translate(0.000000, 142.000000)">
+                <path d="M40,359 C51.045695,359 60,367.966829 60,379.027972 C60,390.089116 51.045695,399.055944 40,399.055944 C28.954305,399.055944 20,390.089116 20,379.027972 C20,367.966829 28.954305,359 40,359 Z M36.6342038,370.614614 C36.1362595,371.093448 36.120226,371.885849 36.598392,372.38449 L43.2318549,379.301993 L36.6349754,385.634851 C36.1366222,386.113259 36.1199118,386.905646 36.5976517,387.404696 C37.0753916,387.903746 37.8666714,387.92048 38.3650246,387.442072 L45.8650246,380.242237 C46.3636793,379.76354 46.3800633,378.970562 45.901608,378.47162 L38.401608,370.650475 C37.9234419,370.151835 37.1321481,370.135779 36.6342038,370.614614 Z" id="Combined-Shape" transform="translate(40.000000, 379.027972) rotate(-180.000000) translate(-40.000000, -379.027972) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
