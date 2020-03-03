@@ -1,6 +1,6 @@
 export default function () {
   function detectIE() {
-    if(navigator.userAgent.match(/Trident.*rv:11\./)) {
+    if (navigator.userAgent.match(/Trident.*rv:11\./)) {
       $('body').addClass('ie11');
     } else {
       // Grid Fix
@@ -26,34 +26,14 @@ export default function () {
 
       window.onload = resizeAllGridItems();
       window.addEventListener("resize", resizeAllGridItems);
-
-      // let allItems = document.getElementsByClassName("item");
-      // for (let x = 0; x < allItems.length; x++) {
-      //   imagesLoaded(allItems[x], resizeInstance);
-      // }
     }
   }
 
-
   detectIE();
 
-  function resizeGrid () {
-    setTimeout(function () {
-      if($(".blog-win-posts").hasClass("js-changed")) {
-        detectIE();
-      } else {
-        resizeGrid ();
-      }
-    }, 500);
-  }
-
-
   const filterItem = $(".b-filter__item");
-  filterItem.click(function(){
-    let th = $(this);
-    filterItem.removeClass('current');
-    th.addClass('current');
-    resizeGrid ();
+  filterItem.click(function () {
+    detectIE();
   });
 
 }
