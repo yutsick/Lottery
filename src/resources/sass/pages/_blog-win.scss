@@ -602,32 +602,32 @@
   }
 
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba($color-white, 0.9);
-    background-color: rgba($color-white, 0.9);
+    -webkit-box-shadow: inset 0 0 6px rgba($color-cloud, 0.9);
+    background-color: rgba($color-gray-light, 0.9);
   }
 
   &::-webkit-scrollbar {
-    width: 1px;
+    width: 5px;
     background-color: rgba($color-white, 0.9);
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $color-white;
+    background-color: $color-primary;
   }
 
   @media only screen and (max-width: 992px) {
     *::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 1px rgba($color-white, 0.9);
-      background-color: rgba($color-white, 0.1);
+      -webkit-box-shadow: inset 0 0 1px rgba($color-cloud, 0.9);
+      background-color: rgba($color-gray-light, 0.1);
     }
 
     *::-webkit-scrollbar {
-      width: 1px;
+      width: 5px;
       background-color: rgba($color-white, 0.9);
     }
 
     *::-webkit-scrollbar-thumb {
-      background-color: $color-white;
+      background-color: $color-primary;
     }
   }
 
