@@ -2,6 +2,7 @@ export default function() {
     let $top = $('.top');
     let $alert = $('.alert');
     let topBarHeight = $top.outerHeight();
+    let balanceBarHeight = $('.balance-bar').outerHeight();
     let pageWinFilterHeight = $('.b-filter').outerHeight();
     let loaded = false;
     let didScroll;
@@ -10,6 +11,7 @@ export default function() {
     let $contentWrapper = $('.content-wrapper');
     let contentTop = $contentWrapper.position().top;
 
+    console.log(topBarHeight);
     const isMobile = () => {
         return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
     }
@@ -71,10 +73,10 @@ export default function() {
 
     const fullHeight = () => {
         const pageWinContentBoxHeight =  window.innerHeight - topBarHeight;
-        $('.blog-win-hero').height(pageWinContentBoxHeight);
-        $('.post-slider__item').height(pageWinContentBoxHeight);
-        $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 40 ));
-        $('.win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 38 ));
+        $('.blog-win-hero').height(pageWinContentBoxHeight - balanceBarHeight + 2);
+        $('.post-slider__item').height(pageWinContentBoxHeight - balanceBarHeight + 2);
+        $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 2 ) - balanceBarHeight);
+        $('.win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 18 ) - balanceBarHeight);
         // console.log(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ), pageWinContentBoxHeight);
     };
 

@@ -22,10 +22,10 @@
 
 .ml-2017 {
   .b-filter {
-    margin-bottom: 40px;
+    margin-bottom: 0;
 
     @media screen and (min-width: 768px) {
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
     }
   }
 
@@ -98,7 +98,9 @@
     @media screen and (min-width: 680px) {
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
-
+    @media screen and (min-width: 992px) {
+      margin-left: 10px;
+    }
     @media screen and (min-width: 1024px) {
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
@@ -183,7 +185,7 @@
     }
 
     @media screen and (min-width: 992px) {
-      margin-right: 10px;
+      padding-right: 10px;
     }
 
     &::-webkit-scrollbar-track {
@@ -219,7 +221,7 @@
 
   &-hero {
     position: relative;
-    z-index: 0;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,7 +244,7 @@
 
     @media screen and (min-width: 1024px) {
       margin-left: -10px;
-      margin-right: 0;
+      //margin-right: 0;
     }
 
     &__title {
@@ -279,13 +281,19 @@
 }
 
 .post {
+  margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 20px;
+  }
+
   .content {
     max-width: 100%;
   }
 
   &__tags {
-    margin-top: 18px;
-    margin-bottom: 5px;
+    margin-top: 17px;
+    margin-bottom: 0;
     font-size: 14px;
     font-weight: bold;
     line-height: 120%;
@@ -304,13 +312,13 @@
     font-family: "Proxima Nova";
     font-weight: 300;
     font-size: 30px;
-    line-height: 113%;
+    line-height: 120%;
     color: $color-black;
   }
 
   &__text {
     margin-top: 15px;
-    padding-bottom: 30px;
+    padding-bottom: 21px;
     font-size: 16px;
     line-height: 137%;
     color: $color-black;
@@ -640,12 +648,16 @@
 
 .win-single {
   overflow-y: auto;
+  padding-bottom: 20px;
   @media screen and (max-width: 680px) {
     margin-left: -5px;
     margin-right: -5px;
   }
   @media screen and (min-width: 992px) {
-
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   &::-webkit-scrollbar-track {
@@ -679,7 +691,7 @@
   }
 
   &__content {
-    padding: 0 20px;
+    padding: 0 30px;
 
     & > div {
       margin-bottom: 40px;
@@ -694,7 +706,10 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+  margin-left: -20px;
+  margin-right: -20px;
   padding: 20px;
   background-color: $color-cloud;
 
@@ -764,8 +779,8 @@
 .boxed-list {
   position: relative;
   border: 10px solid $color-l-blue;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -40px;
+  margin-right: -40px;
 
   &__label {
     position: absolute;
@@ -873,8 +888,8 @@
 .block-info {
   color: $color-white;
   padding: 40px 20px;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -40px;
+  margin-right: -40px;
 
   @media screen and (min-width: 680px) {
     padding: 40px;
@@ -958,8 +973,8 @@
   flex-flow: row wrap;
   align-items: flex-end;
   background-color: $color-l-blue;
-  margin-left: -20px;
-  margin-right: -20px;
+  margin-left: -40px;
+  margin-right: -40px;
   padding: 40px 40px 0 40px;
 
   @media screen and (min-width: 680px) {
