@@ -1,4 +1,6 @@
 export default function () {
+
+
 	let $flickity = $('.block-slider').flickity({
 		cellSelector: '.block-slider__item',
 		cellAlign: 'left',
@@ -6,7 +8,12 @@ export default function () {
 		contain: false,
 		draggable: true,
 		pageDots: true,
-		prevNextButtons: true
+		prevNextButtons: true,
+		on: {
+			ready: function() {
+				captionHeightFn()
+			}
+		}
 	});
 
 	// Disable previous button by default
@@ -24,7 +31,6 @@ export default function () {
 		}
 	});
 
-
 	// Slider for post inner page
 	let $flickityPostSlider = $('.post-slider').flickity({
 		cellSelector: '.post-slider__item',
@@ -39,11 +45,13 @@ export default function () {
 	// Disable previous button by default
 	$flickityPostSlider.find('.previous').addClass('disabled');
 
+
 	const captionHeightFn = () => {
 		let curItem = $flickityPostSlider.data('flickity').selectedElement;
 		let curItemHeight = $(curItem).find('.post-slider__caption').outerHeight();
 
 		if ( $(window).width() < 768 ) {
+			// $(curItem).closest('.post-slider').css('padding-bottom', (curItemHeight + 20));
 			$(".flickity-page-dots").css('bottom', (curItemHeight + 20));
 		} else {
 			$(".flickity-page-dots").css('bottom', 20);
@@ -51,12 +59,16 @@ export default function () {
 	};
 
 
-	$flickityPostSlider.on( 'ready.flickity', function( event, index ) {
-		captionHeightFn();
-		window.onresize = function() {
-			captionHeightFn();
-		};
-	});
+
+	// console.log($flickityPostSlider);
+	// $flickityPostSlider.on('change.flickity', function () {
+	//
+	// 		captionHeightFn();
+	// 	console.log("1");
+	// });
+
+
+
 	$flickityPostSlider.on('select.flickity', function () {
 		let $this = $(this);
 		let flkty = $this.data('flickity');
@@ -70,6 +82,11 @@ export default function () {
 
 		captionHeightFn();
 	});
+
+
+	window.onresize = function() {
+		captionHeightFn();
+	};
 }
 
 

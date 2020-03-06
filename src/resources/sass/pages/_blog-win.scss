@@ -254,6 +254,13 @@
       margin: 0 !important;
       color: $color-white !important;
       text-shadow: 0 0 32px rgba(0, 0, 0, 0.499208);
+      max-width: 95%;
+    }
+    &__subtitle {
+      max-width: 100%;
+      color: $color-white!important;
+      text-align: center;
+      text-shadow: 0 0 32px rgba(0, 0, 0, 0.499208);
     }
 
     img {
@@ -652,15 +659,16 @@
 .win-single {
   overflow-y: auto;
   padding-bottom: 20px;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-right: 10px;
+  padding-left: 10px;
   @media screen and (max-width: 680px) {
     margin-left: -5px;
     margin-right: -5px;
   }
   @media screen and (min-width: 992px) {
-    margin-left: -10px;
-    margin-right: -10px;
-    padding-right: 10px;
-    padding-left: 10px;
+
   }
 
   &::-webkit-scrollbar-track {
@@ -793,6 +801,7 @@
     font-size: 14px;
     color: $color-white;
     line-height: 1;
+    white-space: nowrap;
     text-transform: uppercase;
   }
 
@@ -1109,8 +1118,10 @@
     }
   }
 
-  .flickity-prev-next-button .arrow {
-    //fill: transparent;
+  .flickity-prev-next-button {
+    @media screen and (max-width: 580px) {
+      display: none;
+    }
   }
 
   &__item {
