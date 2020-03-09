@@ -39,7 +39,7 @@ export default function () {
 		contain: false,
 		draggable: true,
 		pageDots: true,
-		adaptiveHeight: true,
+		adaptiveHeight: false,
 		prevNextButtons: true
 	});
 
@@ -52,8 +52,7 @@ export default function () {
 
 	const captionHeightFn = () => {
 		let curItem = $flickityPostSlider.data('flickity').selectedElement;
-
-		// console.log(maxHeight);
+		
 		if ( $(window).width() < 768 ) {
 			$(curItem).closest('.post-slider').css('padding-bottom', (maxHeight));
 			$(curItem).find('.post-slider__caption').css({
@@ -62,7 +61,12 @@ export default function () {
 			});
 			$(".flickity-page-dots").css('bottom', (maxHeight + 20));
 		} else {
+			$(curItem).closest('.post-slider').css('padding-bottom', 0);
 			$(".flickity-page-dots").css('bottom', 20);
+			$(curItem).find('.post-slider__caption').css({
+				'bottom': 0,
+				'height': "auto"
+			});
 		}
 	};
 
@@ -82,9 +86,12 @@ export default function () {
 	});
 
 	captionHeightFn();
-	window.onresize = function() {
-		captionHeightFn();
-	};
+
+	$(window).resize(function() {
+
+			captionHeightFn();
+
+	});
 }
 
 
