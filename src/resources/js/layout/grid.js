@@ -14,6 +14,7 @@ export default function () {
       // Grid Fix
       function resizeGridItem(item) {
         let grid = document.getElementsByClassName("grid")[0];
+        // console.log(typeof (grid));
         let rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
         let rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
         let rowSpan = Math.ceil((item.querySelector('.content').getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));

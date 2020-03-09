@@ -77,6 +77,8 @@ export default function() {
         $('.post-slider__item').height(pageWinContentBoxHeight - balanceBarHeight + 2);
         $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 2 ) - balanceBarHeight);
         $('.win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 18 ) - balanceBarHeight);
+        console.log(pageWinContentBoxHeight);
+
     };
 
 
@@ -88,7 +90,7 @@ export default function() {
         if ($(window).width() > 992) {
             fullHeight();
         } else {
-            $('.post-slider__item, .blog-win-posts, .win-single').height('auto');
+            // $('.post-slider__item, .blog-win-posts, .win-single').height('auto');
             $('.blog-win-hero').height('');
         }
     }
