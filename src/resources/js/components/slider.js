@@ -51,11 +51,22 @@ export default function () {
 		let curItemHeight = $(curItem).find('.post-slider__caption').outerHeight();
 
 		if ( $(window).width() < 768 ) {
+			// $(curItem).closest('.post-slider').css('padding-bottom', (curItemHeight + 20));
 			$(".flickity-page-dots").css('bottom', (curItemHeight + 20));
 		} else {
 			$(".flickity-page-dots").css('bottom', 20);
 		}
 	};
+
+
+
+	// console.log($flickityPostSlider);
+	// $flickityPostSlider.on('change.flickity', function () {
+	//
+	// 		captionHeightFn();
+	// 	console.log("1");
+	// });
+
 
 
 	$flickityPostSlider.on('select.flickity', function () {
