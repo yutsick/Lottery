@@ -39,33 +39,32 @@ export default function () {
 		contain: false,
 		draggable: true,
 		pageDots: true,
+		adaptiveHeight: true,
 		prevNextButtons: true
 	});
 
 	// Disable previous button by default
 	$flickityPostSlider.find('.previous').addClass('disabled');
 
+	let maxHeight = Math.max.apply(null, $(".post-slider__caption").map(function () {
+		return $(this).outerHeight();
+	}).get());
 
 	const captionHeightFn = () => {
 		let curItem = $flickityPostSlider.data('flickity').selectedElement;
-		let curItemHeight = $(curItem).find('.post-slider__caption').outerHeight();
 
+		// console.log(maxHeight);
 		if ( $(window).width() < 768 ) {
-			// $(curItem).closest('.post-slider').css('padding-bottom', (curItemHeight + 20));
-			$(".flickity-page-dots").css('bottom', (curItemHeight + 20));
+			$(curItem).closest('.post-slider').css('padding-bottom', (maxHeight));
+			$(curItem).find('.post-slider__caption').css({
+				'bottom': - (maxHeight),
+				'height': maxHeight
+			});
+			$(".flickity-page-dots").css('bottom', (maxHeight + 20));
 		} else {
 			$(".flickity-page-dots").css('bottom', 20);
 		}
 	};
-
-
-
-	// console.log($flickityPostSlider);
-	// $flickityPostSlider.on('change.flickity', function () {
-	//
-	// 		captionHeightFn();
-	// 	console.log("1");
-	// });
 
 
 
@@ -79,11 +78,10 @@ export default function () {
 		} else {
 			$previousButton.removeClass('disabled');
 		}
-
 		captionHeightFn();
 	});
 
-
+	captionHeightFn();
 	window.onresize = function() {
 		captionHeightFn();
 	};
