@@ -59,16 +59,6 @@ export default function () {
 	};
 
 
-
-	// console.log($flickityPostSlider);
-	// $flickityPostSlider.on('change.flickity', function () {
-	//
-	// 		captionHeightFn();
-	// 	console.log("1");
-	// });
-
-
-
 	$flickityPostSlider.on('select.flickity', function () {
 		let $this = $(this);
 		let flkty = $this.data('flickity');

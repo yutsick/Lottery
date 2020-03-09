@@ -77,7 +77,6 @@ export default function() {
         $('.post-slider__item').height(pageWinContentBoxHeight - balanceBarHeight + 2);
         $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 2 ) - balanceBarHeight);
         $('.win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 18 ) - balanceBarHeight);
-        // console.log(pageWinContentBoxHeight - ( pageWinFilterHeight + 20 ), pageWinContentBoxHeight);
     };
 
 
