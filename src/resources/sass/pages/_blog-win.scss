@@ -263,6 +263,14 @@
       text-shadow: inherit;
     }
 
+    &:not(.text-shadow) {
+      .blog-win-hero__title {
+        text-shadow: 0 0 32px rgba(0, 0, 0, 0.499208);
+      }
+      .blog-win-hero__subtitle {
+        text-shadow: 0 0 32px rgba(0, 0, 0, 0.499208);
+      }
+    }
     img {
       width: 100%;
     }
