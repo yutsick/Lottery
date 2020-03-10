@@ -27,15 +27,16 @@ export default function () {
 	});
 
 	// Slider for post inner page
+	const multiplePosts = $(".post-slider__item").length > 1;
 	let $flickityPostSlider = $('.post-slider').flickity({
 		cellSelector: '.post-slider__item',
 		cellAlign: 'left',
 		wrapAround: true,
 		contain: false,
-		draggable: true,
-		pageDots: true,
+		draggable: multiplePosts,
+		pageDots: multiplePosts,
 		adaptiveHeight: false,
-		prevNextButtons: true
+		prevNextButtons: multiplePosts
 	});
 
 	// Change caption position for mobile
