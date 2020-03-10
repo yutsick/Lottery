@@ -8,12 +8,7 @@ export default function () {
 		contain: false,
 		draggable: true,
 		pageDots: true,
-		prevNextButtons: true,
-		on: {
-			ready: function() {
-				captionHeightFn()
-			}
-		}
+		prevNextButtons: true
 	});
 
 	// Disable previous button by default
@@ -43,13 +38,10 @@ export default function () {
 		prevNextButtons: true
 	});
 
-	// Disable previous button by default
-	$flickityPostSlider.find('.previous').addClass('disabled');
-
+	// Change caption position for mobile
 	let maxHeight = Math.max.apply(null, $(".post-slider__caption").map(function () {
 		return $(this).outerHeight();
 	}).get());
-
 	const captionHeightFn = () => {
 		let curItem = $flickityPostSlider.data('flickity').selectedElement;
 
@@ -72,15 +64,19 @@ export default function () {
 		}
 	};
 
+	// Disable previous button by default
+	$flickityPostSlider.find('.previous').addClass('disabled');
+
 	$flickityPostSlider.on('select.flickity', function () {
 		let $this = $(this);
 		let flkty = $this.data('flickity');
 		let $previousButton = $this.find('.previous');
+		console.log(flkty.selectedIndex);
 
 		if (flkty.selectedIndex == 0) {
-			$previousButton.addClass('disabled');
+			$previousButton.addClass('disabled').fadeOut();
 		} else {
-			$previousButton.removeClass('disabled');
+			$previousButton.removeClass('disabled').fadeIn();
 		}
 		captionHeightFn();
 	});
@@ -91,8 +87,6 @@ export default function () {
 			captionHeightFn();
 		});
 	}
-
-
 }
 
 

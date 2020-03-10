@@ -170,11 +170,12 @@
     margin: 0 auto;
     font-family: "hellolucky";
     font-size: 28px;
-    line-height: 150%;
+    line-height: 168%;
     color: $color-black;
 
     @media screen and (min-width: 680px) {
       font-size: 40px;
+      line-height: 150%;
     }
   }
 }
