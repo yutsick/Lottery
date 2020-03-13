@@ -19,12 +19,96 @@ body {
 }
 
 .modal-backdrop {
-	background: $color-overlay-base;
-
+	background-color: $color-overlay-base;
+	//background-color: $color-snow;
+	//&:before {
+	//	content: '';
+	//	position: absolute;
+	//	top: 0;
+	//	left: 0;
+	//	right: 0;
+	//	bottom: 0;
+	//
+	//	opacity: 0;
+	//	transition: opacity 150ms ease-in;
+	//}
 	&.in {
 		opacity: 0.8;
 	}
+	&-login {
+		top: 33px;
+		//&:before {
+		//
+		//	opacity: 1;
+		//}
+		//&.in {
+		//	opacity: 1;
+		//}
+	}
+
 }
+
+.modal {
+	&-login {
+		.vertical-alignment-helper {
+			width: 100vw;
+		}
+		&-body {
+			display: flex;
+			flex-direction: column;
+			height: calc(100vh - 33px);
+			width: 100%;
+			max-width: 100%;
+			margin-top: 33px;
+			background-image: url(../img/background/bg-modal-login.png);
+			background-size: cover;
+		}
+		&-header {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			max-width: 1362px;
+			margin: 25px auto 10px;
+		}
+		&__logo {
+			max-width: 126px;
+			a {
+				display: block;
+			}
+			img {
+				width: 126px;
+			}
+		}
+
+		&-content {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			flex: 1 0 auto;
+			height: 100%;
+			max-width: 358px;
+			margin: 0 auto;
+			background-color: transparent!important;
+			.account-form {
+				width: 100%;
+			}
+		}
+
+		&-footer {
+			flex: 0 0 auto;
+			max-width: 358px;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
+
+
+
 
 #page-wrapper.page--content-only {
 	@include max-screen($screen-sm-max) {

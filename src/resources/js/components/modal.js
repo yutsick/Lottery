@@ -9,6 +9,13 @@ export default function () {
 		return false;
 	});
 
+	$('#modal-login').on('shown.bs.modal', function (e) {
+		$('.modal-backdrop').addClass('modal-backdrop-login');
+	})
+	// 		.on('hide.bs.modal', function (e) {
+	//
+	// });
+
 	// Hide open modals when toggle.
 	$('.modal').on('show.bs.modal', function (e) {
 		$('.modal').modal('hide');
