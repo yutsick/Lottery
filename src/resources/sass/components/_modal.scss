@@ -449,6 +449,16 @@
 			.account-form {
 				width: 100%;
 			}
+			&.large {
+				.modal-main-inner {
+					max-width: 500px;
+				}
+				.content {
+					max-height: 60vh;
+					padding-right: 10px;
+					overflow-y: auto;
+				}
+			}
 		}
 
 		&-inner {
@@ -554,7 +564,7 @@
 				box-shadow: none;
 				text-align: center;
 				font-size: 14px;
-				font-weight: $medium;
+				font-weight: $regular;
 				color: #053a53;
 				line-height: 1.2;
 				letter-spacing: 1px;
@@ -563,21 +573,25 @@
 				//	outline-color: transparent;
 				//}
 				&::-webkit-input-placeholder {
+					font-weight: $regular;
 					color: #053a53;
 					opacity: 0.5;
 				}
 
 				&:-moz-placeholder {
+					font-weight: $regular;
 					color: #053a53;
 					opacity: 0.5;
 				}
 
 				&::-moz-placeholder {
+					font-weight: $regular;
 					color: #053a53;
 					opacity: 0.5;
 				}
 
 				&:-ms-input-placeholder {
+					font-weight: $regular;
 					color: #053a53;
 					opacity: 0.5;
 				}
@@ -636,24 +650,28 @@
 
 			* {
 				&::-webkit-scrollbar-track {
-					-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
-					background-color: rgba(#999, 0.9);
+					background-color: rgba(#f7f7f7, 0.95);
+					border-radius: 9.5px;
 				}
 
 				&::-webkit-scrollbar {
-					width: 6px;
-					background-color: rgba(#999, 0.9);
+					width: 10px;
+					border-radius: 9.5px;
+					background-color: rgba(#f7f7f7, 0.9);
+					overflow: hidden;
 				}
 
 				&::-webkit-scrollbar-thumb {
+					border-radius: 9.5px;
 					background-color: $color-primary-blue;
 				}
 			}
 
 			@media only screen and (max-width: 992px) {
 				*::-webkit-scrollbar-track {
-					-webkit-box-shadow: inset 0 0 6px rgba(#999, 0.9);
-					background-color: rgba(#999, 0.1);
+					//-webkit-box-shadow: inset 0 0 6px rgba(#999, 0.9);
+					background-color: rgba(#f7f7f7, 0.95);
+
 				}
 
 				*::-webkit-scrollbar {
@@ -662,7 +680,7 @@
 				}
 
 				*::-webkit-scrollbar-thumb {
-					background-color: #001427;
+					background-color: $color-primary-blue;
 				}
 			}
 
