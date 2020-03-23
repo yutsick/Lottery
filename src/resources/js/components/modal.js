@@ -9,12 +9,9 @@ export default function () {
 		return false;
 	});
 
-	$('#modal-login').on('shown.bs.modal', function (e) {
+	$('.modal-login').on('shown.bs.modal', function (e) {
 		$('.modal-backdrop').addClass('modal-backdrop-login');
-	})
-	// 		.on('hide.bs.modal', function (e) {
-	//
-	// });
+	});
 
 	// Hide open modals when toggle.
 	$('.modal').on('show.bs.modal', function (e) {
@@ -31,7 +28,7 @@ export default function () {
 		$modalPages.removeClass('modal-page--active');
 
 		$modal.find('#' + page).addClass('modal-page--active');
-	})
+	});
 
 
 	let $termsOfServiceModal = $('#modal__terms-of-services');
@@ -41,6 +38,4 @@ export default function () {
 			$termsOfServiceModal.modal('show');
 		}
 	}
-
-
 }

@@ -1,4 +1,4 @@
-<div class="modal modal-login fade" id="modal-login-bankId" tabindex="-1" role="dialog" data-backdrop="modal-backdrop-login" aria-labelledby="modal-login-bankId-label" aria-hidden="true">
+<div class="modal modal-login fade" id="modal-login-mobileBankId" tabindex="-1" role="dialog" data-backdrop="modal-backdrop-login" aria-labelledby="modal-login-mobileBankId-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
 
@@ -84,16 +84,17 @@
 
 					<div class="modal-main-inner">
 						<div class="modal-main-center modal-main-center--full">
-							<div class="modal-main__title">Logga in med BankID på denna enhet</div>
+							<div class="modal-main__title">Logga in med mobilt BankID</div>
 							<div class="modal-main__subTitle">
 								<p>Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.</p>
 								<a href="javascript:void(0);"  data-toggle="modal" data-target="#modal-login-about-bank">Läs mer om BankID</a>
 							</div>
+
 							<form id="login-bankid-modal" class="account-form" data-toggle="validator">
 								<div class="form-group">
 									<label class="control-label" for="userPersonalNumber">Ange personnummer</label>
 									<div class="inner-addon">
-										<input type="number" class="form-control" id="userPersonalNumber" placeholder="ÅÅÅÅMMDD-NNNN" data-minlength="12" required>
+										<input type="text" class="form-control" id="userPersonalNumber" placeholder="ÅÅÅÅMMDD-NNNN" data-minlength="10" data-mask="999999-9999" data-mask-selectonfocus="true" required>
 									</div>
 								</div>
 
@@ -107,11 +108,11 @@
 								</div>
 
 								<div class="form-group">
-									<button type="submit" class="btn-new-primary btn-block js-login-submit">Logga in</button>
+									<button type="submit" class="btn-new-primary btn-block">Logga in</button>
 								</div>
 							</form>
 							<div class="modal-body__loading text-align-center hidden">
-								<p class="text-align-center"><strong>Starta din BankId-app <br> (och signera för att logga in)</strong></p>
+								<p class="text-align-center"><strong>Starta din BankId-app</strong></p>
 								<img class="spinner" src="assets/img/icons/spinner.svg" alt="Spinner">
 							</div>
 							<div class="modal-body__error hidden">
@@ -119,13 +120,13 @@
 									Någonting gick
 									<fel class=""></fel>
 								</p>
-								<button type="button" class="btn btn-primary btn-block js-action-reset-journey">Försök igen</button>
+								<button type="button" class="btn-new-primary js-action-reset-journey">Försök igen</button>
 							</div>
 						</div>
 
 						<div class="bottom-links">
 							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-mobileBankId">Logga in med mobilt BankID</button>
+								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-bankId">Logga in med BankID på denna enhet</button>
 							</div>
 							<div class="bottom-links-wrap">
 								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login">Logga in med lösenord</button>

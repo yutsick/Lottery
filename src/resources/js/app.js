@@ -8,8 +8,10 @@ var Flickity = require('flickity/dist/flickity.pkgd.js');
 
 require('lightgallery.js/dist/js/lightgallery.min.js');
 require('lg-thumbnail.js/dist/lg-thumbnail.js');
+
 /* Vendor */
 import modernizr from './vendor/modernizr-custom.js';
+import mask from './vendor/jquery.mask.js';
 /* Store */
 import storeConfiguration from './store';
 /* Components */
@@ -70,6 +72,7 @@ $(function () {
         return 0;
 	};
 	modernizr();
+	mask();
 	new objectFitImages();
 	addToDreamlist();
 	alert();

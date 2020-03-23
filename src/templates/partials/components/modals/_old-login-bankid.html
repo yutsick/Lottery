@@ -1,0 +1,57 @@
+<div class="modal fade" id="modal-old-login-bankid" tabindex="-1" role="dialog" aria-labelledby="modal-login-bankid-label" aria-hidden="true">
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+			@@include('elements/_button-close.html')
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal-login-bankid-label">Logga in med BankID</h5>
+				</div>
+				<div class="modal-body">
+					<form id="login-bankid-modal" class="account-form" data-toggle="validator">
+						<div class="form-group">
+							<label class="control-label" for="userId">Fyll i ditt personnummer och tryck på logga
+								in</label>
+							<div class="inner-addon right-addon">
+								<i class="icon icon-close js-action-empty-input"></i>
+								<input type="number" class="form-control" id="userPersonalNumber"
+									   placeholder="Personnummer (ÅÅÅÅMMDDXXXX)" data-minlength="12" required>
+							</div>
+						</div>
+						<div class="form-group show-touch">
+							<div class="inner-addon right-addon">
+								<i class="icon icon-chevron-down select-arrow"></i>
+								<select class="form-control" id="userBankIDDevice">
+									<option value="this" selected="selected">Jag har BankID på denna enhet</option>
+									<option value="other">Jag har BankID på en annan enhet</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-block">Logga in</button>
+						</div>
+						<button type="button" class="btn btn-link btn-block" data-toggle="modal"
+								data-target="#modal-login">Logga in med lösenord
+						</button>
+					</form>
+					<div class="modal-body__loading text-align-center hidden">
+						<p class="text-align-center">Starta din BankId-app och signera för att logga in.</p>
+						<img class="spinner" src="assets/img/icons/spinner.svg" alt="Spinner">
+					</div>
+					<div class="modal-body__error hidden">
+						<p class="text-align-center">
+							Någonting gick
+							<fel class=""></fel>
+						</p>
+						<button type="button" class="btn btn-primary btn-block js-action-reset-journey">Försök igen
+						</button>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default btn-block" data-toggle="modal"
+							data-target="#modal-create-account">Skapa konto
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

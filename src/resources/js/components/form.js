@@ -11,7 +11,12 @@ export default function () {
 
 	function form_validate() {
 		$('#create-account-modal').validator().on('submit', function (e) {
+			let $form = $(this);
+			let $submit = $form.find('button[type=submit]');
+			$submit.prop('disabled', true);
+
 			if (e.isDefaultPrevented()) {
+				$submit.addClass('js-is-loading');
 			} else {
 				$('#modal-create-account-step-2').modal();
 			}
@@ -44,6 +49,7 @@ export default function () {
 			}
 			return false;
 		});
+		
 
 		$('#login-bankid-modal').validator().on('submit', function (e) {
 			let $form = $(this);
@@ -227,6 +233,7 @@ export default function () {
 
 		$('form[data-use-ajax]').validator().on('submit', function (e) {
 			if (e.isDefaultPrevented()) {
+
 			} else {
 				let $this = $(this);
 				let formData = $this.serialize();
@@ -248,6 +255,7 @@ export default function () {
 						// disable submit button
 						$submitButton.prop('disabled', false);
 						$this.find('input').prop('disabled', true);
+
 						$currentRow.removeClass('profile__row--active');
 						unsaved = false;
 					},
