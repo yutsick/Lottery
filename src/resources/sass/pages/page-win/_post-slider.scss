@@ -1,0 +1,123 @@
+.post-slider {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+
+  .flickity-viewport {
+    height: 100%;
+    overflow: visible;
+  }
+
+  .flickity-slider {
+    //position: relative;
+  }
+
+  .flickity-page-dots {
+    bottom: 20px;
+
+    .dot {
+      margin: 0 5px;
+      background-color: $color-white;
+      border: 1px solid $color-blue;
+      opacity: 1;
+
+      &.is-selected {
+        background-color: $color-blue;
+      }
+    }
+  }
+
+  .flickity-prev-next-button {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+
+    @media screen and (max-width: 580px) {
+      display: none;
+    }
+
+    svg {
+      display: none;
+    }
+
+    &.previous {
+      background-image: url("data:image/svg+xml,%3Csvg width='40px' height='41px' viewBox='0 0 40 41' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 58 (84663) - https://sketch.com --%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Exempelsidor' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.799734933'%3E%3Cg id='D--Artikel---Hus-i-Spanien' transform='translate(-20.000000, -501.000000)' fill='%23FFFFFF'%3E%3Cg id='Left-side' transform='translate(0.000000, 142.000000)'%3E%3Cpath d='M40,359 C51.045695,359 60,367.966829 60,379.027972 C60,390.089116 51.045695,399.055944 40,399.055944 C28.954305,399.055944 20,390.089116 20,379.027972 C20,367.966829 28.954305,359 40,359 Z M36.6342038,370.614614 C36.1362595,371.093448 36.120226,371.885849 36.598392,372.38449 L43.2318549,379.301993 L36.6349754,385.634851 C36.1366222,386.113259 36.1199118,386.905646 36.5976517,387.404696 C37.0753916,387.903746 37.8666714,387.92048 38.3650246,387.442072 L45.8650246,380.242237 C46.3636793,379.76354 46.3800633,378.970562 45.901608,378.47162 L38.401608,370.650475 C37.9234419,370.151835 37.1321481,370.135779 36.6342038,370.614614 Z' id='Combined-Shape' transform='translate(40.000000, 379.027972) rotate(-180.000000) translate(-40.000000, -379.027972) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    &.next {
+      background-image: url("data:image/svg+xml,%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 58 (84663) - https://sketch.com --%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Exempelsidor' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.8'%3E%3Cg id='D--Artikel---Hus-i-Spanien' transform='translate(-770.000000, -501.000000)' fill='%23FFFFFF'%3E%3Cg id='Left-side' transform='translate(0.000000, 142.000000)'%3E%3Cpath d='M789.972067,359 C801.002335,359 809.944134,367.954305 809.944134,379 C809.944134,390.045695 801.002335,399 789.972067,399 C778.941799,399 770,390.045695 770,379 C770,367.954305 778.941799,359 789.972067,359 Z M786.610972,370.598392 C786.113723,371.076558 786.097712,371.867852 786.57521,372.365796 L793.199408,379.273638 L786.611742,385.597652 C786.114085,386.075392 786.097398,386.866671 786.574471,387.365025 C787.051543,387.863378 787.841718,387.880088 788.339375,387.402348 L795.8289,380.212569 C796.326859,379.734541 796.34322,378.942671 795.865433,378.444425 L788.375907,370.634204 C787.898409,370.136259 787.108221,370.120226 786.610972,370.598392 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &.previous {
+        background-image: url("data:image/svg+xml,%3Csvg width='40px' height='41px' viewBox='0 0 40 41' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 58 (84663) - https://sketch.com --%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Exempelsidor' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.799734933'%3E%3Cg id='D--Artikel---Hus-i-Spanien' transform='translate(-20.000000, -501.000000)' fill='%23FFFFFF'%3E%3Cg id='Left-side' transform='translate(0.000000, 142.000000)'%3E%3Cpath d='M40,359 C51.045695,359 60,367.966829 60,379.027972 C60,390.089116 51.045695,399.055944 40,399.055944 C28.954305,399.055944 20,390.089116 20,379.027972 C20,367.966829 28.954305,359 40,359 Z M36.6342038,370.614614 C36.1362595,371.093448 36.120226,371.885849 36.598392,372.38449 L43.2318549,379.301993 L36.6349754,385.634851 C36.1366222,386.113259 36.1199118,386.905646 36.5976517,387.404696 C37.0753916,387.903746 37.8666714,387.92048 38.3650246,387.442072 L45.8650246,380.242237 C46.3636793,379.76354 46.3800633,378.970562 45.901608,378.47162 L38.401608,370.650475 C37.9234419,370.151835 37.1321481,370.135779 36.6342038,370.614614 Z' id='Combined-Shape' transform='translate(40.000000, 379.027972) rotate(-180.000000) translate(-40.000000, -379.027972) '%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      &.next {
+        background-image: url("data:image/svg+xml,%3Csvg width='40px' height='40px' viewBox='0 0 40 40' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3C!-- Generator: Sketch 58 (84663) - https://sketch.com --%3E%3Ctitle%3ECombined Shape%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Exempelsidor' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' opacity='0.8'%3E%3Cg id='D--Artikel---Hus-i-Spanien' transform='translate(-770.000000, -501.000000)' fill='%23FFFFFF'%3E%3Cg id='Left-side' transform='translate(0.000000, 142.000000)'%3E%3Cpath d='M789.972067,359 C801.002335,359 809.944134,367.954305 809.944134,379 C809.944134,390.045695 801.002335,399 789.972067,399 C778.941799,399 770,390.045695 770,379 C770,367.954305 778.941799,359 789.972067,359 Z M786.610972,370.598392 C786.113723,371.076558 786.097712,371.867852 786.57521,372.365796 L793.199408,379.273638 L786.611742,385.597652 C786.114085,386.075392 786.097398,386.866671 786.574471,387.365025 C787.051543,387.863378 787.841718,387.880088 788.339375,387.402348 L795.8289,380.212569 C796.326859,379.734541 796.34322,378.942671 795.865433,378.444425 L788.375907,370.634204 C787.898409,370.136259 787.108221,370.120226 786.610972,370.598392 Z' id='Combined-Shape'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      }
+    }
+
+    &[disabled] {
+      display: none;
+    }
+  }
+
+  &__item {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media screen and (max-width: 768px) {
+      position: relative;
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    bottom: 0;
+    padding: 8px 20px;
+    background-color: $color-pink;
+    color: $color-white;
+
+    @media screen and (min-width: 768px) {
+      left: 10px;
+      bottom: 0;
+      max-width: 220px;
+      padding: 20px 20px 40px;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 109%;
+    margin-bottom: 4px;
+  }
+
+  &__info {
+    font-family: "Proxima Nova";
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+}
