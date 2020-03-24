@@ -1,4 +1,4 @@
-<div class="modal modal-login fade" id="modal-login" tabindex="-1" role="dialog" data-backdrop="modal-backdrop-login" aria-labelledby="modal-login-label" aria-hidden="true">
+<div class="modal modal-login fade" id="modal-select-product" tabindex="-1" role="dialog" data-backdrop="modal-backdrop-login" aria-labelledby="modal-select-product-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
 
@@ -68,59 +68,34 @@
 					</div>
 				</div>
 
-				<div class="modal-content modal-main-content">
-					<div class="modal-main-buttons">
-<!--						<button class="btn-back" data-toggle="modal" data-target="#modal-login-bankid">-->
-<!--							<span class="btn-back__icon"></span> <span class="btn-back__title">Tillbaka</span>-->
-<!--						</button>-->
-						<a href="/" title="Hem" class="modal-btn__logo">
-							<img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-						</a>
-						<div class="close-wrap">
-							<button class="close" data-dismiss="modal" aria-label="Close"></button>
-						</div>
-					</div>
-
+				<div class="modal-content modal-main-content product">
 
 					<div class="modal-main-inner">
+
 						<div class="modal-main-center">
-							<div class="modal-main__title">Logga in</div>
-							<p class="modal-main__subTitle">Välj hur du vill logga in.</p>
-
-							<button class="btn-new-primary btn-bankId" data-toggle="modal" data-target="#modal-login-mobileBankId"><span>BankID</span></button>
-							<button class="btn-new-secondary btn-password" data-toggle="modal" data-target="#modal-login-password"><span>Lösenord</span></button>
+							<div class="modal-main__title">Välkommen!</div>
+							<p class="modal-main__subTitle">Vill du beställa lotter eller spela online? Du kan också göra detta val senare ifrån Mina sidor.</p>
+							<div class="row">
+								<div class="col-sm-6">
+									<figure>
+										<img src="assets/img/background/gp-6.png" alt="">
+									</figure>
+									<a href="" class="btn-new-cta btn-new-cta--full">Läs mer och beställ lotter</a>
+								</div>
+								<div class="col-sm-6">
+									<figure>
+										<img src="assets/img/background/gp-2.png" alt="">
+									</figure>
+									<a href="" class="btn-new-secondary btn-new-secondary--full">Gå till spelplånboken</a>
+								</div>
+							</div>
+							<div class="bottom-links">
+								<div class="bottom-links-wrap">
+									<button class="btn-primary-link" data-toggle="modal" data-target="#modal-create-account">Har du inget konto? Skapa ett!</button>
+								</div>
+							</div>
 						</div>
 
-						<div class="bottom-links">
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-create-account">Har du inget konto? Skapa ett!</button>
-							</div>
-
-
-							<!--			TODO Remove				-->
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-lost-password-success">Success modal</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-forgot-password">Forgot password modal</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-password-set">modal-password-set</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-register">modal-register</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-select">modal-login-select</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-password-set">modal-login-password-set</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-select-product">modal-select-product</button>
-							</div>
-							<!--			END				-->
-						</div>
 					</div>
 
 					<div class="modal-footer modal-main-footer">

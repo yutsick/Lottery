@@ -482,6 +482,7 @@ a.btn {
 	border: none;
 	background-color: $color-secondary-lightBlue;
 	color: $color-primary-blue;
+	text-decoration: none;
 	&:active {
 		border: none;
 		background-color: $color-secondary-lightBlue;
@@ -512,6 +513,9 @@ a.btn {
 			background-color: #C9E8F4;
 		}
 	}
+	&--full {
+		width: 100%;
+	}
 }
 
 .btn-success,
@@ -530,6 +534,8 @@ a.btn {
 .btn-new-cta {
 	@extend .btn-reg-customer;
 	background-color: $color-cta-pink;
+	color: $color-snow;
+	text-decoration: none;
 	&:active {
 		background-color: $color-cta-pink;
 		color: $color-snow;
@@ -559,6 +565,9 @@ a.btn {
 			background-color: #F7D2E6;
 			color: $color-snow;
 		}
+	}
+	&--full {
+		width: 100%;
 	}
 }
 
@@ -651,6 +660,10 @@ a.btn {
 		background-position: center;
 		background-size: contain;
 	}
+	span {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 .btn-password {
 	position: relative;
@@ -665,6 +678,10 @@ a.btn {
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+	}
+	span {
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
 

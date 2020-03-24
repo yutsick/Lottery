@@ -1,9 +1,11 @@
-<div class="modal modal-login fade" id="modal-login" tabindex="-1" role="dialog" data-backdrop="modal-backdrop-login" aria-labelledby="modal-login-label" aria-hidden="true">
+<div class="modal modal-login fade" id="modal-login-select" tabindex="-1" role="dialog" data-backdrop="modal-backdrop-login" aria-labelledby="modal-login-select-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
 
+<!--			@@include('elements/_button-close.html')-->
 			<div class="modal-main-body">
 				<div class="modal-main-header">
+
 					<a href="/" title="Hem" class="modal-main__logo">
 						<img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
 					</a>
@@ -84,9 +86,10 @@
 
 					<div class="modal-main-inner">
 						<div class="modal-main-center">
-							<div class="modal-main__title">Logga in</div>
-							<p class="modal-main__subTitle">Välj hur du vill logga in.</p>
+							<div class="modal-main__title">Välj inloggningssätt</div>
+							<p class="modal-main__subTitle">Slutför din registrering genom att välja inloggningsuppgifter.</p>
 
+							<p class="text-align-center"><strong>Hur vill du logga in?</strong></p>
 							<button class="btn-new-primary btn-bankId" data-toggle="modal" data-target="#modal-login-mobileBankId"><span>BankID</span></button>
 							<button class="btn-new-secondary btn-password" data-toggle="modal" data-target="#modal-login-password"><span>Lösenord</span></button>
 						</div>
@@ -95,31 +98,6 @@
 							<div class="bottom-links-wrap">
 								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-create-account">Har du inget konto? Skapa ett!</button>
 							</div>
-
-
-							<!--			TODO Remove				-->
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-lost-password-success">Success modal</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-forgot-password">Forgot password modal</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-password-set">modal-password-set</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-register">modal-register</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-select">modal-login-select</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-login-password-set">modal-login-password-set</button>
-							</div>
-							<div class="bottom-links-wrap">
-								<button class="btn-primary-link" data-toggle="modal" data-target="#modal-select-product">modal-select-product</button>
-							</div>
-							<!--			END				-->
 						</div>
 					</div>
 
