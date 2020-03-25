@@ -18,26 +18,11 @@ export default function () {
 			if (e.isDefaultPrevented()) {
 				$submit.addClass('js-is-loading');
 			} else {
-				$('#modal-create-account-step-2').modal();
+				$('#modal-login-select').modal();
 			}
 			return false;
 		});
 
-		$('#create-account-modal-step-2').validator().on('submit', function (e) {
-			if (e.isDefaultPrevented()) {
-			} else {
-				$('#modal-create-account-step-3').modal();
-			}
-			return false;
-		});
-
-		$('#create-account-modal-step-3').validator().on('submit', function (e) {
-			if (e.isDefaultPrevented()) {
-			} else {
-				$('#modal-create-account-final').modal();
-			}
-			return false;
-		});
 
 		$('#login-modal').validator().on('submit', function (e) {
 			let $form = $(this);
