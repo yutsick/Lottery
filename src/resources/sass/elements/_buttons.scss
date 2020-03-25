@@ -75,13 +75,22 @@
 			background-color: $color-primary;
 			color: $color-light;
 		}
-	
+		
 		&:hover,
 		&:active,
 		&:active:hover,
 		&:active:focus {
 			background-color: $color-blue-light;
 			color: $color-light;
+		}
+		
+		&[disabled] {
+			background-color: $color-gray;
+
+			&:hover {
+				background-color: $color-gray;
+				cursor: default;
+			}
 		}
 	
 		&.btn--invert {

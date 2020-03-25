@@ -1,3 +1,5 @@
+import debounce from 'lodash.debounce';
+
 export default function() {
 
     let oddmeters = document.querySelectorAll('.js-oddmeter')
@@ -93,9 +95,14 @@ export default function() {
             }
         }
 
+        const resizeListener = () => {
+            window.addEventListener('resize', debounce(() => { reset() }, 400))
+        }
+
         const init = () => {
             initStyle()
             initNumberScroll()
+            resizeListener();
         }
 
         return {
@@ -119,6 +126,4 @@ export default function() {
             currentOddMeter.update(newValue)
         }
     }
-
-
 }

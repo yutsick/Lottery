@@ -12,6 +12,7 @@ export default function() {
     let $megaNavItems = $('.js-top__mega-item').not('.js-top__mega-item--active');
     let $defaultMega = $('.js-top__mega-item--active');
     let $currentMegaItem = null;
+    let previousMegaItemIndex = null;
     const megaActiveStateClassName = 'top__mega-item--active';
     const megaHiddenClassName = 'top__mega--hidden';
 
@@ -25,6 +26,8 @@ export default function() {
     const toggleBtnActiveClassName = 'top__menu-toggle--active';
     
     let loaded = false;
+    let shouldHideMega = true;
+    let hideTimeoutId = null;
 
     //Mega menu should only work on tablet and up
     let availableBreakpoints = ['handheld', 'lap', 'desktop', 'widescreen'];
@@ -66,6 +69,10 @@ export default function() {
         
         if($mainNavItem.length == 0) {
             return;
+        }
+
+        if (hideTimeoutId) {
+            clearTimeout(hideTimeoutId);
         }
 
         $currentNavItem = $mainNavItem;
@@ -132,17 +139,26 @@ export default function() {
 
     const initNavItem = item => {
         $(item).on({
-            mouseenter: (e) => toggleMainNavItem($(e.currentTarget), true),
-            mouseleave: (e) => toggleMainNavItem($(e.currentTarget), false)
+            mouseenter: (e) => {
+                if (hideTimeoutId) {
+                    clearTimeout(hideTimeoutId);
+                    toggleMainNavItem($currentNavItem, false)
+                }
+                toggleMainNavItem($(e.currentTarget), true);
+            },
+            mouseleave: (e) => {
+                toggleMainNavItem($(e.currentTarget), false);
+            }
         });
     }
 
 
-    //Mega menu
-    
+    //Mega menu    
     const toggleMegaItem = (e, toggle) => {
         let $currentMegaItem = $(e.currentTarget);
         if(toggle) {
+            previousMegaItemIndex = $currentMegaItem.index();
+
             if($currentMegaItem.length == 0) {
                 return;
             }
@@ -154,19 +170,33 @@ export default function() {
                 toggleMainNavItem($currentNavItem, true);
             }
         } else {
+            if (previousMegaItemIndex == $currentMegaItem.index()) {
+                hideTimeoutId = setTimeout(() => {
+                    if (shouldHideMega) {
+                        toggleMainNavItem($currentNavItem, false);
+                    }
+                    hideTimeoutId = null;
+                }, 1000);
+                return;
+            }
             toggleMainNavItem($currentNavItem, false);
         }
     }
     
     const initMegaItem = item => {
         $(item).on({
-            mouseenter: (e) => toggleMegaItem(e, true),
-            mouseleave: (e) => toggleMegaItem(e, false)
+            mouseenter: (e) => {
+                shouldHideMega = false
+                toggleMegaItem(e, true);
+            },
+            mouseleave: (e) => {
+                shouldHideMega = true
+                toggleMegaItem(e, false);
+            },
         });
     }
 
     const toggleMega = (e, toggle) => {
-
         if(isMobileMenuAvailable()) {
             return;
         }
@@ -186,7 +216,13 @@ export default function() {
 
     const initNavWithoutSubItem = item => {
         $(item).on({
-            mouseenter: (e) => toggleMega(e, true),
+            mouseenter: (e) => { 
+                if (hideTimeoutId) {
+                    clearTimeout(hideTimeoutId);
+                    toggleMainNavItem($currentNavItem, false)
+                }
+                toggleMega(e, true)
+            },
             mouseleave: (e) => toggleMega(e, false)
         });
     }
