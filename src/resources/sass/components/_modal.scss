@@ -606,10 +606,7 @@
 				color: #053a53;
 				line-height: 1.2;
 				letter-spacing: 1px;
-				//&:focus {
-				//	border: 3px solid #0076FF;
-				//	outline-color: transparent;
-				//}
+
 				&::-webkit-input-placeholder {
 					font-weight: $regular;
 					color: #053a53;
@@ -646,13 +643,14 @@
 
 			.input-group-btn {
 				position: absolute;
-				right: 0;
+				right: 1px;
 				top: 1px;
 				bottom: 1px;
 				z-index: 3;
 				display: block;
-				width: 40px;
-				height: 100%;
+				width: 39px;
+				height: calc(100% - 2px);
+				background-color: #ffffff;
 				button {
 					height: 100%;
 					margin-bottom: 0;
