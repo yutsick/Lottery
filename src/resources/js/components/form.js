@@ -10,22 +10,29 @@ export default function () {
 	}
 
 
+	$('.form-control').keypress(function(event) {
+		if (event.keyCode == 13) {
+			event.preventDefault();
+		}
+	});
+
+
 
 
 
 	function form_validate() {
 
 		$('.account-form').validator().on('submit', function (e) {
-			console.log('e=', e);
 			let $form = $(this);
+			let $formBtn = $(this).find('button');
+			$formBtn.prop('disabled', true);
+
 			if (e.isDefaultPrevented()) {
 				console.log('invalid');
-				// e.preventDefault();
-
 			} else {
 				console.log('valid');
 			}
-			return false;
+			// return false;
 		});
 
 		$('#create-account-modal').validator().on('submit', function (e) {
