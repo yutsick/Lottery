@@ -515,6 +515,7 @@ a.btn {
 		&:hover,
 		&:focus {
 			background-color: #0B3B54;
+			cursor: not-allowed;
 		}
 	}
 }
@@ -553,6 +554,7 @@ a.btn {
 		&:hover,
 		&:focus {
 			background-color: #C9E8F4;
+			cursor: not-allowed;
 		}
 	}
 	&--full {
@@ -612,6 +614,7 @@ a.btn {
 		&:focus {
 			background-color: #F7D2E6;
 			color: $color-snow;
+			cursor: not-allowed;
 		}
 	}
 	&--full {
@@ -640,6 +643,7 @@ a.btn {
 		&:hover,
 		&:focus {
 			background-color: #f7f7f7;
+			cursor: not-allowed;
 		}
 	}
 }

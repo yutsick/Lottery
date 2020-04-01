@@ -13,8 +13,7 @@
 				</div>
 
 				<div class="modal-content modal-main-content">
-					<div class="modal-main-inner">
-						<div class="modal-main-buttons">
+					<div class="modal-main-buttons">
 						<button class="btn-back" data-toggle="modal" data-target="#modal-login">
 							<span class="btn-back__icon"></span> <span class="btn-back__title">Tillbaka</span>
 						</button>
@@ -25,6 +24,7 @@
 							<button class="close" data-dismiss="modal" aria-label="Close"></button>
 						</div>
 					</div>
+					<div class="modal-main-inner">
 
 						<div class="modal-main-center modal-main-center--full">
 							<div class="modal-main__title">Logga in med BankID på denna enhet</div>
@@ -38,7 +38,7 @@
 								<div class="form-group">
 									<label class="control-label" for="userPersonalNumber">Ange personnummer</label>
 									<div class="inner-addon">
-										<input type="number" class="form-control" id="userPersonalNumber" placeholder="ÅÅÅÅMMDD-NNNN" data-mask="99999999-9999" data-minlength="12" required>
+										<input type="number" class="form-control" id="userPersonalNumber" placeholder="ÅÅÅÅMMDD-NNNN" data-mask="00000000-0000" data-mask-selectonfocus="true" data-minlength="12" required>
 									</div>
 								</div>
 

@@ -9,7 +9,25 @@ export default function () {
 		validate_my_profile();
 	}
 
+
+
+
+
 	function form_validate() {
+
+		$('.account-form').validator().on('submit', function (e) {
+			console.log('e=', e);
+			let $form = $(this);
+			if (e.isDefaultPrevented()) {
+				console.log('invalid');
+				// e.preventDefault();
+
+			} else {
+				console.log('valid');
+			}
+			return false;
+		});
+
 		$('#create-account-modal').validator().on('submit', function (e) {
 			let $form = $(this);
 			let $submit = $form.find('button[type=submit]');
@@ -17,12 +35,12 @@ export default function () {
 
 			if (e.isDefaultPrevented()) {
 				$submit.addClass('js-is-loading');
+
 			} else {
 				$('#modal-login-select').modal();
 			}
 			return false;
 		});
-
 
 		$('#login-modal').validator().on('submit', function (e) {
 			let $form = $(this);
@@ -32,19 +50,23 @@ export default function () {
 			} else {
 				$submit.addClass('js-is-loading');
 			}
+
 			return false;
 		});
 		
 
 		$('#login-bankid-modal').validator().on('submit', function (e) {
+
 			let $form = $(this);
 			let $loading = $form.next('.modal-body__loading');
 			let $error = $loading.next('.modal-body__error');
 
 			if (e.isDefaultPrevented()) {
+
 			} else {
 				$form.addClass('hidden');
 				$loading.removeClass('hidden');
+
 				// Test error
 				/*					setTimeout( function () {
 				 $loading.addClass('hidden');
