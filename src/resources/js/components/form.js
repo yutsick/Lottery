@@ -22,6 +22,21 @@ export default function () {
 
 	function form_validate() {
 
+		$('#modal-recover-password').validator().on('submit', function (e) {
+			if (e.isDefaultPrevented()) {
+			} else {
+				$('#modal-recover-password-options').modal();
+			}
+			return false;
+		});
+
+		$('#modal-recover-password-options .group-forgot-password button').on('click', function (e) {
+			$('#modal-recover-password-options-success').modal();
+			return false;
+		});
+
+
+
 		$('.account-form').validator().on('submit', function (e) {
 			let $form = $(this);
 			let $formBtn = $(this).find('button');
