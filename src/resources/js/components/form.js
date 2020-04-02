@@ -16,10 +16,7 @@ export default function () {
 		}
 	});
 
-
-
-
-
+	
 	function form_validate() {
 
 		$('#modal-recover-password').validator().on('submit', function (e) {
@@ -33,21 +30,6 @@ export default function () {
 		$('#modal-recover-password-options .group-forgot-password button').on('click', function (e) {
 			$('#modal-recover-password-options-success').modal();
 			return false;
-		});
-
-
-
-		$('.account-form').validator().on('submit', function (e) {
-			let $form = $(this);
-			let $formBtn = $(this).find('button');
-			$formBtn.prop('disabled', true);
-
-			if (e.isDefaultPrevented()) {
-				console.log('invalid');
-			} else {
-				console.log('valid');
-			}
-			// return false;
 		});
 
 		$('#create-account-modal').validator().on('submit', function (e) {
