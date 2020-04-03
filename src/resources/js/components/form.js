@@ -16,7 +16,7 @@ export default function () {
 		}
 	});
 
-	
+
 	function form_validate() {
 
 		$('#modal-recover-password').validator().on('submit', function (e) {
@@ -42,6 +42,7 @@ export default function () {
 
 			} else {
 				$('#modal-login-select').modal();
+
 			}
 			return false;
 		});

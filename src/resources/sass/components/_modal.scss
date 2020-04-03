@@ -261,8 +261,6 @@
 .modal {
 	&-login {
 
-
-
 		.modal-dialog {
 			padding: 0;
 		}
@@ -304,7 +302,6 @@
 			min-height: calc(100vh - 33px);
 			width: 100%;
 			max-width: 100%;
-			//background-image: url(../img/background/bg-modal-login.png);
 			background-size: cover;
 			padding-left: 10px;
 			padding-right: 10px;
@@ -502,6 +499,17 @@
 			.row {
 				margin-left: 0;
 				margin-right: 0;
+			}
+
+			.desktop {
+				@media screen and (max-width: 1023px){
+					display: none;
+				}
+			}
+			.mobile {
+				@media screen and (min-width: 1024px){
+					display: none;
+				}
 			}
 		}
 
@@ -733,6 +741,10 @@
 				& ~ .bottom-links {
 					margin-top: 10px;
 				}
+			}
+
+			&.btn-bankId-v2 {
+
 			}
 		}
 
