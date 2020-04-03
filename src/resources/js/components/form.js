@@ -10,7 +10,7 @@ export default function () {
 	}
 
 
-	$('.form-control').keypress(function(event) {
+	$('.modal .form-control').keypress(function(event) {
 		if (event.keyCode == 13) {
 			event.preventDefault();
 		}
