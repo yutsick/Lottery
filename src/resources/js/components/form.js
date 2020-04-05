@@ -10,13 +10,6 @@ export default function () {
 	}
 
 
-	$('.modal .form-control').keypress(function(event) {
-		if (event.keyCode == 13) {
-			event.preventDefault();
-		}
-	});
-
-
 	function form_validate() {
 
 		$('#modal-recover-password').validator().on('submit', function (e) {
@@ -29,6 +22,28 @@ export default function () {
 
 		$('#modal-recover-password-options .group-forgot-password button').on('click', function (e) {
 			$('#modal-recover-password-options-success').modal();
+			return false;
+		});
+
+
+
+		$('.account-form').validator().on('submit', function (e) {
+			let $form = $(this);
+			let $formError = $form.closest('.modal-main-center').find('.modal-main__subTitle .modal-form__error');
+			let $formSuccess = $form.closest('.modal-main-center').find('.modal-main__subTitle .modal-form__success');
+
+			if (e.isDefaultPrevented()) {
+				console.log('invalid');
+				$formSuccess.hide();
+				$formError.fadeIn();
+				if (e.keyCode == 13) {
+					e.preventDefault();
+				}
+			} else {
+				console.log('valid');
+				$formError.hide();
+				$formSuccess.fadeIn();
+			}
 			return false;
 		});
 

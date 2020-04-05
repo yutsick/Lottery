@@ -804,6 +804,13 @@
 		font-size: 12px;
 		margin-top: 10px;
 	}
+
+	&-form {
+		&__error {
+			display: none;
+			color: #d90000;
+		}
+	}
 }
 
 .group-forgot-password {
