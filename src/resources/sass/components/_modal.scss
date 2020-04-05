@@ -390,7 +390,6 @@
 					background-repeat: no-repeat;
 					background-position: 40% center;
 					background-size: 7px 12px;
-					border-radius: 100%;
 					transition: all 200ms ease-in;
 				}
 
@@ -551,6 +550,12 @@
 					& > * {
 						width: auto;
 					}
+				}
+			}
+
+			form {
+				.help-block.with-errors {
+					display: none!important;
 				}
 			}
 
