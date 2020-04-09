@@ -303,6 +303,12 @@ display: inline-block!important;
     min-height: 71vh;
     max-width: 640px;
     margin: 20px auto 40px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: $color-black;
+    @media screen and (min-width: 480px) {
+      font-size: 18px;
+    }
     &-action {
       font-size: 14px;
       line-height: 1.2;
@@ -327,21 +333,16 @@ display: inline-block!important;
       }
 
     }
-
-    p {
+    
+    .ingress {
       font-size: 18px;
-      line-height: 1.55;
-      color: $color-black;
       @media screen and (min-width: 480px) {
         font-size: 20px;
       }
     }
 
-    ul {
+    ul, ol {
       padding-left: 15px;
-      font-size: 18px;
-      line-height: 1.55;
-      color: $color-black;
     }
   }
 
