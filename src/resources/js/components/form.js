@@ -9,7 +9,6 @@ export default function () {
 		validate_my_profile();
 	}
 
-
 	function form_validate() {
 
 		$('#modal-recover-password').validator().on('submit', function (e) {
@@ -25,41 +24,29 @@ export default function () {
 			return false;
 		});
 
-
-
 		$('.account-form').validator().on('submit', function (e) {
 			let $form = $(this);
 			let $formError = $form.closest('.modal-main-center').find('.modal-main__subTitle .modal-form__error');
 			let $formSuccess = $form.closest('.modal-main-center').find('.modal-main__subTitle .modal-form__success');
 
 			if (e.isDefaultPrevented()) {
-				console.log('invalid');
 				$formSuccess.hide();
 				$formError.fadeIn();
-				if (e.keyCode == 13) {
-					e.preventDefault();
-					return false;
-				}
 			} else {
-				console.log('valid');
 				$formError.hide();
 				$formSuccess.fadeIn();
 			}
-			// return false;
 		});
 
 		$('#create-account-modal').validator().on('submit', function (e) {
 			let $form = $(this);
 			let $submit = $form.find('button[type=submit]');
-			$submit.prop('disabled', true);
 
 			if (e.isDefaultPrevented()) {
-				$submit.addClass('js-is-loading');
-
+				// if invalid
 			} else {
 				$submit.addClass('js-is-loading');
 				$('#modal-login-select').modal();
-
 			}
 			return false;
 		});
@@ -69,10 +56,10 @@ export default function () {
 			let $submit = $form.find('button[type=submit]');
 
 			if (e.isDefaultPrevented()) {
+			// if invalid
 			} else {
 				$submit.addClass('js-is-loading');
 			}
-
 			return false;
 		});
 		
