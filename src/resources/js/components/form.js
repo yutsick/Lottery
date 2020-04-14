@@ -38,13 +38,14 @@ export default function () {
 				$formError.fadeIn();
 				if (e.keyCode == 13) {
 					e.preventDefault();
+					return false;
 				}
 			} else {
 				console.log('valid');
 				$formError.hide();
 				$formSuccess.fadeIn();
 			}
-			return false;
+			// return false;
 		});
 
 		$('#create-account-modal').validator().on('submit', function (e) {
@@ -56,6 +57,7 @@ export default function () {
 				$submit.addClass('js-is-loading');
 
 			} else {
+				$submit.addClass('js-is-loading');
 				$('#modal-login-select').modal();
 
 			}
