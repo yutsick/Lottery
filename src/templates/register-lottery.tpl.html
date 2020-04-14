@@ -21,7 +21,85 @@
                             <button class="btn-success js-btn-success">Registrera</button>
                         </form>
 
-                        <div class="result js-register-lottery-result"></div>
+                        <div class="result js-register-lottery-result">
+                            <div class="result__item result__item--grand">
+                                <div class="header">
+                                    <button data-toggle="collapse" data-target="#grand1" aria-expanded="false"
+                                            aria-controls="grand1" class="collapse in collapsed" style=""><span
+                                        class="arrow"></span></button>
+                                    <span class="number">0000 - 1234 - 7996</span><span
+                                    class="prize prize--grand"><strong>Högvinst</strong></span></div>
+                                <div class="js-result__content-collapse collapse" id="grand1" aria-expanded="false"
+                                     style="height: 0px;">
+                                    <div class="content"><p><strong>Stort grattis!</strong> Din vinst är
+                                        registrerad. Vänligen skicka in lotten till X i ett rekommenderat brev. När
+                                        vi mottagit din vinstlott sänds en bekräftelse och mer information per post.
+                                        Har du frågor får du gärna höra av dig till X kundcenter för mer
+                                        information. Tel: 031-338 28 20</p></div>
+                                </div>
+                            </div>
+                            <div class="result__item result__item--regular result__item--opened">
+                                <div class="header">
+                                    <button data-toggle="collapse" data-target="#regular1" aria-expanded="true"
+                                            aria-controls="regular1" class="collapse in" style=""><span
+                                        class="arrow"></span></button>
+                                    <span class="number">0000 - 1234 - 7996</span><span
+                                    class="prize"><strong>Vinst!</strong>&nbsp;150kr</span></div>
+                                <div class="js-result__content-collapse collapse in" id="regular1"
+                                     aria-expanded="true" style="">
+                                    <div class="content"><p><strong>Grattis!</strong> Din vinst har satts in på ditt
+                                        Vinstkonto. Utöver den så har du även fått 10 extra chanser i
+                                        Jackpotdragningen.</p></div>
+                                </div>
+                            </div>
+                            <div class="result__item result__item--blank result__item--opened">
+                                <div class="header">
+                                    <button data-toggle="collapse" data-target="#blank" aria-expanded="true"
+                                            aria-controls="blank" class="collapse in" style=""><span
+                                        class="arrow"></span></button>
+                                    <span class="number">0000 - 1234 - 7996</span><span
+                                    class="prize">Ingen vinst</span></div>
+                                <div class="js-result__content-collapse collapse in" id="blank" aria-expanded="true"
+                                     style="">
+                                    <div class="content"><p>Tyvärr blev det ingen vinst på denna lott. Men den har
+                                        gett dig 8 extra chanser i Nitlottsdragningen och 10 extra chanser i
+                                        Jackpotdragningen.</p>
+                                        <a class="btn-primary-v2" href="#">Skrapa lotten nu</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result__item result__item--bonus result__item--opened">
+                                <div class="header">
+                                    <button data-toggle="collapse" data-target="#bonus2" aria-expanded="true"
+                                            aria-controls="bonus" class="collapse in" style=""><span
+                                        class="arrow"></span></button>
+                                    <span class="title">Nitlottsbonus!</span></div>
+                                <div class="js-result__content-collapse collapse in" id="bonus2"
+                                     aria-expanded="true" style="">
+                                    <div class="content"><img src="//via.placeholder.com/213x213"><span
+                                        class="title">Du har vunnit en Flotten-lott!</span>
+                                        <p>Lotten för dig som vill ha extra spänning. När du vinner har du chansen
+                                            att fyrdubbla din vinst.</p><a class="btn-primary-v2" href="#">Skrapa
+                                            lotten nu</a>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="result__item result__item--blank">
+                                <div class="header">
+                                    <button data-toggle="collapse" data-target="#blank" aria-expanded="true"
+                                            aria-controls="blank" class="collapse in" style=""><span
+                                        class="arrow"></span></button>
+                                    <span class="number">0000 - 1234 - 7996</span><span
+                                    class="prize">Ingen vinst</span></div>
+                                <div class="js-result__content-collapse collapse" id="blank" aria-expanded="false"
+                                     style="height: 0px;">
+                                    <div class="content"><p>Tyvärr blev det ingen vinst på denna lott. Men den har
+                                        gett dig 8 extra chanser i Nitlottsdragningen och 10 extra chanser i
+                                        Jackpotdragningen.</p></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
