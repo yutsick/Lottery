@@ -19,15 +19,28 @@ export default function() {
         let activeNumbers = [];
 
         const initNumberScroll = () => {
-
+            let addClassFor = activeNumbers.length - 3;
+            let addClassFor2 = activeNumbers.length - 6;
             for(let i = 0; i < activeNumbers.length; i++) {
                 let currentNumber = activeNumbers[i];
                 let currentInner = currentElement.childNodes[i].childNodes[0];
                 let currentActiveItem = currentInner.childNodes[currentNumber];
                 const offset = currentActiveItem.offsetTop - currentInner.offsetTop;
-                scrollNumber(currentInner, `${1 * i / 10}s`,  `translateY(-${offset}px)`)
+                scrollNumber(currentInner, `${1 * i / 10}s`,  `translateY(-${offset}px)`);
+
+                if(activeNumbers.length >= 7) {
+                    if (i == addClassFor) {
+                        currentInner.parentNode.classList.add("separate");
+                    } else if (i == addClassFor2) {
+                        currentInner.parentNode.classList.add("separate");
+                    }
+                } else if ( activeNumbers.length > 3 ) {
+                    if (i == addClassFor) {
+                        currentInner.parentNode.classList.add("separate");
+                    }
+                }
             }
-        }
+        };
 
         const scrollNumber = (currentHolder, delay, transform) => {
             currentHolder.style.transitionDelay = delay;
