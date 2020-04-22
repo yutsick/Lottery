@@ -9,6 +9,17 @@ export default function () {
 		validate_my_profile();
 	}
 
+	$('.btn-hash').click(function () {
+		const previousModal = $(this).closest(".modal-login").attr("id");
+		const target = $(this).data().target;
+		const previousModalAsId = `#${previousModal}`;
+		history.pushState({ previousModalAsId }, '', target);
+	});
+	$('.btn-back').click(function () {
+		$(history.state.previousModalAsId).modal();
+		history.back();
+	});
+
 	function form_validate() {
 
 		$('#modal-recover-password').validator().on('submit', function (e) {
