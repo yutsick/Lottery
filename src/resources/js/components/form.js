@@ -13,7 +13,8 @@ export default function () {
 		const previousModal = $(this).closest(".modal-login").attr("id");
 		const target = $(this).data().target;
 		const previousModalAsId = `#${previousModal}`;
-		history.pushState({ previousModalAsId }, '', target);
+		console.log('target=' + target + '\n' + 'previousModalAsId =' + previousModalAsId);
+		history.pushState({ previousModalAsId }, '');
 	});
 	$('.btn-back').click(function () {
 		$(history.state.previousModalAsId).modal();
