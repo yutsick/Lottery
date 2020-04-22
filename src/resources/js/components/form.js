@@ -5,21 +5,26 @@ export default function () {
 	form_active_search();
 	toggle_profile_inputs();
 
+
+
 	if ($('.my-pages').length) {
 		validate_my_profile();
 	}
 
-	$('.btn-hash').click(function () {
-		const previousModal = $(this).closest(".modal-login").attr("id");
-		const target = $(this).data().target;
-		const previousModalAsId = `#${previousModal}`;
-		console.log('target=' + target + '\n' + 'previousModalAsId =' + previousModalAsId);
-		history.pushState({ previousModalAsId }, '');
-	});
-	$('.btn-back').click(function () {
-		$(history.state.previousModalAsId).modal();
-		history.back();
-	});
+	modalHistory();
+	function modalHistory() {
+		$('.btn-hash').click(function () {
+			const previousModal = $(this).closest(".modal-login").attr("id");
+			const previousModalAsId = `#${previousModal}`;
+			history.pushState({ previousModalAsId }, '');
+		});
+
+		$('.btn-back').click(function () {
+			$(history.state.previousModalAsId).modal();
+			history.back();
+		});
+	}
+
 
 	function form_validate() {
 
