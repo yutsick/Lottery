@@ -2,6 +2,10 @@
 @import "top-account";
 @import "navigation";
 
+a {
+    color: $color-blue-deep-2;
+}
+
 #top {
     .top {
         background-image: linear-gradient($color-snow, #F5F3F3);
@@ -239,6 +243,22 @@
                 .dropdown {
                     display: none;
                 }
+
+                .btn-success {
+                    background-color: $color-blue-deep-2;
+                    &:hover,
+                    &:focus {
+                        background-color: lighten($color-blue-deep-2, 10%);
+                    }
+                }
+
+                .btn-primary {
+                    background-color: #b8d8eb;
+                    &:hover,
+                    &:focus {
+                        background-color: darken(#b8d8eb, 10%);
+                    }
+                }
             }
 
             @include max-screen(1053px){ 
@@ -313,7 +333,7 @@
             order: 3;
             font-size: 14px;
             opacity: 1;
-    
+
             .logged-in & {
                 @include max-screen($screen-sm) {
                     display: none;
@@ -833,7 +853,7 @@
                 margin-left: -50vw;
                 left: 50%;
                 order: 7;
-                background-color: $color-blue-deep;
+                background-color: $color-blue-deep-2;
                 
                 &:before {
                     content: '';
