@@ -1,0 +1,50 @@
+@@if (context.hero_alignment === "center") {
+<div class="hero-full hero-full--center">
+}
+@@if (context.hero_alignment === "left") {
+<div class="hero-full hero-full--left">
+}
+@@if (context.hero_alignment === "right") {
+<div class="hero-full hero-full--right">
+}
+
+    @@if (context.background_video === false) {
+        <div class="hero-full--bg"></div>
+    }
+
+    @@if (context.background_video === true) {
+        <video class="hero-full__video" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+        </video>
+    }
+
+    @@if (hero_overlay === true) {
+        <div class="hero-full__overlay"></div>
+    }
+
+
+    <div class="hero-full__holder">
+        <div class="hero-full__content">
+
+            @@if (context.logged_in === false) {
+                <h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
+                <div class="block-hero__text">
+                    <p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
+                         oss, och dig, kraften att göra skillnad.
+                    </p>
+                    <a class="btn btn-cta-v2" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
+                </div>
+            }
+            @@if (context.logged_in === true) {
+                <h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
+                <div class="block-hero__text">
+                    <p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
+                         oss, och dig, kraften att göra skillnad.
+                    </p>
+                    <a class="btn btn-cta-v2" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

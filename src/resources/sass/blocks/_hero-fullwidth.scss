@@ -1,3 +1,190 @@
+// New
+.hero-full {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 2560px;
+    min-height: 75vh;
+    margin: 0 auto $margin-small;
+    overflow: hidden;
+    &--bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: $color-blue-deep;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+
+
+    &--center {
+        text-align: center;
+        .hero-full__content {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-full__overlay {
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    &--left {
+        text-align: left;
+        .hero-full__content {
+            text-align: left;
+        }
+        .hero-full__overlay {
+            left: 0;
+            transform: translate(-10%, 0);
+        }
+    }
+
+    &--right {
+        text-align: right;
+        .hero-full__content {
+            text-align: right;
+        }
+        .hero-full__overlay {
+            right: 0;
+            transform: translate(15%, 0);
+        }
+    }
+
+    &__content {
+        max-width: 100%;
+        padding: 0 $padding-default;
+        color: #fff;
+        .block-hero__title {
+            margin-bottom: 10px;
+            font-size: 32px;
+            line-height: 1.06;
+        }
+        .block-hero__text {
+            font-size: 18px;
+        }
+        .btn {
+            margin-top: 20px;
+        }
+    }
+
+    &__holder {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        background-image: linear-gradient(180deg, rgba(46, 50, 55, 0.0001) 13.44%, rgba(26, 29, 32, 0.7) 47.91%, rgba(0, 0, 0, 0.9) 100%);
+    }
+
+    @include min-screen($screen-sm-min) {
+        &--right {
+            .hero-full__content {
+                margin-left: auto;
+                margin-right: 40px;
+            }
+        }
+
+        &--left {
+            .hero-full__content {
+                margin-left: 40px;
+                margin-right: auto;
+            }
+        }
+
+        &__holder {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 180px 0 60px;
+            height: 100%;
+
+            & > * {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            position: relative;
+            max-width: 700px;
+
+            .block-hero__title {
+                margin-bottom: 20px;
+                font-family: $apercu-bold-font;
+                font-size: 64px;
+            }
+
+            .block-hero__text {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @include min-screen($screen-md-min) {
+        margin-bottom: 0;
+        min-height: 70vh;
+
+        &__content {
+            .block-hero__title {
+                margin-bottom: 30px;
+            }
+        }
+
+    }
+
+    @include min-screen($screen-lg-min) {
+        justify-content: center;
+        &__holder {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 180px 0 180px;
+            height: 100%;
+            background-image: none;
+        }
+        &__overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+
+            width: 50%;
+            height: 100%;
+
+
+            background-image: radial-gradient(86.75% 90.75% at 49.24% 45%, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 36.26%, rgba(0, 0, 0, 0.0001) 56%, rgba(0, 0, 0, 0) 100%),
+            radial-gradient(71.73% 71.73% at 49.24% 63.46%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.15) 57.26%, rgba(0, 0, 0, 0.0001) 70%, rgba(0, 0, 0, 0) 100%);
+            background-position: center, center;
+        }
+    }
+}
+
+
+
+
+// old
 .hero-fullwidth {
     position: relative;
     width: 100%;
