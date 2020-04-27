@@ -696,3 +696,18 @@ a.btn {
 	}
 }
 
+.btn-group {
+	display: flex;
+	flex-flow: row wrap;
+	max-width: 100%;
+	margin-left: -10px;
+	margin-right: -10px;
+	&--center {
+		align-items: center;
+		justify-content: center;
+		& > .btn {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+}

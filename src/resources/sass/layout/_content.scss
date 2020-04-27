@@ -8,3 +8,47 @@
 		margin-top: 20px;
 	}
 }
+
+
+.block-title {
+	&-wrap {
+		&--center {
+			text-align: center;
+		}
+	}
+
+	&--marked {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 30px auto;
+		padding: 5px 30px;
+		min-width: 230px;
+		color: #ffffff;
+		background-color: #6fa088;
+		&:before {
+			content: '';
+			position: absolute;
+			left: -1px;
+			top: 0;
+			bottom: 0;
+			display: inline-block;
+			width: 10px;
+			height: 100%;
+			background-color: #fff;
+			clip-path: polygon(0 0, 100% 47%, 0 100%);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			right: -1px;
+			top: 0;
+			bottom: 0;
+			display: inline-block;
+			width: 10px;
+			height: 100%;
+			background-color: #fff;
+			clip-path: polygon(100% 0, 0 50%, 100% 100%);
+		}
+	}
+}

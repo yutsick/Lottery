@@ -1,3 +1,9 @@
+.s-promotion-offer {
+    padding-top: 20px;
+    @include min-screen($screen-md-min) {
+        padding-top: 60px;
+    }
+}
 .promotion-offer {
     display: flex;
     background-color: $color-blue-deep;

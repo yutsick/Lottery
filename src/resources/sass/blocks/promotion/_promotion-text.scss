@@ -37,3 +37,53 @@
 		}
 	}
 }
+
+.block-promotion--text-full {
+	.block-promotion__content {
+		 max-width: 730px;
+		margin: 0 auto;
+	}
+	.block-promotion__title {
+		font-family: $apercu-bold-font;
+	}
+	.btn {
+		margin-top: 20px;
+	}
+}
+
+.block-promotion--text-image {
+	.block-promotion--image {
+		text-align: center;
+	}
+
+	.block-promotion__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.block-promotion__title {
+		font-family: $apercu-bold-font;
+	}
+
+	.btn {
+		margin-top: 20px;
+	}
+
+	@include min-screen($screen-md-min) {
+		.equal-height > div {
+			&:first-child {
+				order: 2
+			}
+			&:nth-child(2) {
+				order:1
+			}
+		}
+		.block-promotion__content {
+			align-items: flex-start;
+			text-align: left;
+		}
+	}
+}

@@ -1,4 +1,8 @@
 <section class="section promotion-blocks">
+
+	@@include('blocks/promotion/_promotion-example-text-image.html')
+	@@include('blocks/promotion/_promotion-example-text-full.html')
+
 	<div class="container">
 		<div class="row equal-height padding-extra">
 			@@if (context.blocks === 'all') {
@@ -31,6 +35,7 @@
 				@@include('blocks/promotion/_promotion-example-image.html')
 				@@include('blocks/promotion/_promotion-example-split.html')
 				@@include('blocks/promotion/_promotion-example-bingo.html')
+				@@include('blocks/promotion/_promotion-example-video.html')
 			}
 
 			@@if (context.blocks === 'example-test') {
@@ -42,11 +47,15 @@
 			@@if (context.blocks === 'example-image') {
 				@@include('blocks/promotion/_promotion-example-image.html')
 			}
+
 			@@if (context.blocks === 'example-split') {
 				@@include('blocks/promotion/_promotion-example-split.html')
 			}
 			@@if (context.blocks === 'example-bingo') {
 				@@include('blocks/promotion/_promotion-example-bingo.html')
+			}
+			@@if (context.blocks === 'example-video') {
+			@@include('blocks/promotion/_promotion-example-video.html')
 			}
 		</div>
 		<div class="row equal-height">
@@ -54,4 +63,5 @@
 			@@include('blocks/promotion/block/_promotion-bingo-blank.html')
 		</div>
 	</div>
+
 </section>

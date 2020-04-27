@@ -13,67 +13,34 @@
   })
 	<div class="container">
 		<div class="row equal-height">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                @@include('blocks/promotion/block/_promotion-offer.html', {
-                    "image": "assets/img/mockup/lotter_second@2x.png" 
-                })
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                @@include('blocks/promotion/block/_promotion-bingo-tabs.html')
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                @@include('blocks/promotion/block/_promotion-campaign.html')
-            </div>
-            <div class="col-xs-12">
-                @@include('blocks/_image-text.html', {
-                    "image": "assets/img/mockup/bg-blue.jpg",
-                    "img-size": "landscape",
-                    "mobile-position": "top",
-                    "tablet-position": "left",
-                    "desktop-position": "right",
-                    "align": "middle"
-                })
-            </div>
-			@@include('blocks/promotion/block/_promotion-bingo-jackpot.html')
-            @@include('blocks/promotion/block/_promotion-bingo-blank.html')
-            <div class="col-xs-12 col-md-6">
-                @@include('blocks/_image-text.html', {
-                    "image": "assets/img/mockup/man.jpg",
-                    "img-size": "square",
-                    "mobile-position": "top",
-                    "tablet-position": "top",
-                    "desktop-position": "right",
-                    "align": "top"
-                })
-            </div>
-            <div class="col-xs-12 col-md-6">
-                @@include('blocks/_image-text.html', {
-                    "image": "assets/img/mockup/nature.jpg",
-                    "img-size": "square",
-                    "mobile-position": "top",
-                    "tablet-position": "top",
-                    "desktop-position": "right",
-                    "align": "top"
-                })
-            </div>
-            <div class="col-xs-12">
-                @@include('blocks/_image-text.html', {
-                    "image": "assets/img/mockup/bg-blue.jpg",
-                    "img-size": "landscape",
-                    "mobile-position": "top",
-                    "tablet-position": "left",
-                    "desktop-position": "right",
-                    "align": "middle"
-                })
-                @@include('blocks/_registration-banner.html', {
-                    "bg_color": "million"
-                })
-            </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          @@include('blocks/promotion/block/_promotion-offer.html', {
+              "image": "assets/img/mockup/lotter_second@2x.png"
+          })
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+          @@include('blocks/promotion/block/_promotion-bingo-tabs.html')
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+          @@include('blocks/promotion/block/_promotion-campaign.html')
+      </div>
 		</div>
+    <div class="row">
+      @@include('blocks/promotion/_promotion-example-video.html')
+    </div>
+    <div class="row">
+
+    </div>
 	</div>
+
   <div class="container">
     @@include('blocks/_slider.html')
   </div>
+
+
+  @@include('blocks/promotion/_promotion-example-text-image.html')
+  @@include('blocks/promotion/_promotion-example-text-full.html')
+
 </div>
 
 @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
