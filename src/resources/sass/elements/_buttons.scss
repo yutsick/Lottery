@@ -327,7 +327,9 @@
 		padding: 18px 60px;
 		line-height: 1;
 	}
-	
+	&--sm {
+		padding: 8px 32px;
+	}
 	
 	&.btn-wide {
 		display: inline-block;

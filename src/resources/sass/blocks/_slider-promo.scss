@@ -1,0 +1,24 @@
+.slider-promo {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;		color: $color-blue-deep-2;
+
+		&-inner {
+			//flex: 0 0;
+			padding-bottom: 20px;
+			@include min-screen($screen-lg) {
+				padding: 20px;
+				max-width: 330px;
+				margin-bottom: 60px;
+			}
+		}
+	}
+	&__title {
+
+		font-family: $apercu-bold-font;
+		font-size: 30px;
+		color: $color-blue-deep-2;
+	}
+}
