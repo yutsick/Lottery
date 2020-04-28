@@ -150,10 +150,15 @@
                     font-weight: 700;
                     font-size: 16px;
                     border-right: 1px solid #D8D8D8;
+                    color: $color-blue;
                     width: calc(100% - 52px);
                     min-height: 52px;
                     display: flex;
                     align-items: center;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
     
                 &--active {
@@ -183,7 +188,7 @@
     
                 &--default {
                     & > a {
-                        color: $color-space !important;
+                        color: $color-blue-dark !important;
                     }
                 }
     
@@ -344,7 +349,7 @@
                     a {
                         flex: 1 1 auto; 
                         position: relative;
-                        font-size: 17px;
+                        //font-size: 17px;
                         border-right: none;
                         padding: 10px 20px;
                         
@@ -376,12 +381,12 @@
                     &--default {
     
                         & > a {
-                            color: $color-space;
+                            color: $color-blue-dark;
                         }
     
                         &:hover {
                             & > a {
-                                color: $color-space;
+                                color: $color-blue-dark;
                             }
                         }
                     }

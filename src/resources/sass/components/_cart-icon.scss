@@ -45,9 +45,10 @@
 		justify-content: space-between;
 		padding: 8px $padding-small;
 		background-color: $color-white;
-		border: 1px solid $color-gray-border;
-		transition: background $duration-quick $delay-none $ease-in-out;
+		border: 2px solid $color-gray-border;
+		transition: all $duration-quick $delay-none $ease-in-out;
 		border-top: 0;
+		font-weight: normal;
 		
 		&--hidden {
 			display: none;
@@ -177,6 +178,7 @@ a.product-cart__item--theme-green {
 		&:hover,
 		&:focus {
 			background-color: $color-green-light;
+			border-color: $color-green-light;
 			color: $color-green-light;
 		}
 	}
@@ -185,8 +187,8 @@ a.product-cart__item--theme-green {
 
 /* Blue theme */
 .product-cart__item--theme-blue {
-	background: $color-blue;
-	border-color: $color-blue;
+	background: $color-primary;
+	border-color: $color-primary;
 	color: $color-blue; /* inheritance for notification */
 
 	.product-cart__content {
@@ -207,8 +209,7 @@ a.product-cart__item--theme-green {
 a.product-cart__item--theme-blue {
 	&:hover,
 	&:focus {
-		background-color: $color-blue-light;
-		border-color: $color-blue-light;
-		color: $color-blue-light;
+		background-color: $color-primary-dark;
+		border-color: $color-primary-dark;
 	}
 }

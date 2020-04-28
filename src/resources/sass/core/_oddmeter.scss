@@ -56,8 +56,8 @@
             }
 
             &__number {
+                @extend .heading;
                 color: $color-blue-deep;
-                font-family: "UniNeueHeavy";
                 font-weight: normal;
             }
 

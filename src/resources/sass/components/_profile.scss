@@ -3,18 +3,20 @@
 }
 
 .profile__header {
-	background-color: #d6eeff;
-	font-size: $base-font-size;
-	font-weight: 600;
-	padding: 15px;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	color: #000;
-	border: 1px solid #a2c3ff;
+	@extend .h5;
+	background-color: $color-secondary-light;
+	margin: 0;
+	padding: 20px;
+	border-top-right-radius: $border-radius;
+	border-top-left-radius: $border-radius;
+//	font-size: $base-font-size;
+//	font-weight: 600;
+//	color: #000;
+//	border: 1px solid #a2c3ff;
 }
 
 .profile__row {
-	border: 1px solid $color-gray-border;
+//	border: 1px solid $color-gray-border;
 	border-top: 0;
 	padding: 16px 15px;
 
@@ -23,11 +25,12 @@
 	}
 
 	&:nth-of-type(odd) {
-		background-color: #f5f8fa; }
+		background-color: $color-grey-light;
+	}
 
 	&:last-of-type {
-		border-bottom-right-radius: 5px;
-		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: $border-radius;
+		border-bottom-left-radius: $border-radius;
 	}
 
 	&.form-group {
@@ -191,7 +194,7 @@
 	}
 
 	.profile__submit {
-		color: $color-light-blue;
+		color: $color-primary-blue;
 	}
 }
 

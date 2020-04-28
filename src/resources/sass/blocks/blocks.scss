@@ -30,36 +30,15 @@
 
 .block--background-color {
 	color: $color-light;
-	&.background-color-yellow {
-		color: $color-black;
+	
+	&.background-color-yellow,
+	&.background-color-newturqiose,
+	&.background-color-turquoise,
+	&.background-color-light-turquoise {
+		color: $color-primary;
 	}
 }
 
-.block--background-pattern {
-	background-size: 100px 100px;
-	background-repeat: repeat;
-	background-position: top left;
-
-	&.background-color-yellow {
-		background-image: url("../img/background/pattern-yellow.png");
-	}
-
-	&.background-color-million {
-		background-image: url("../img/background/pattern-blue-deep.png");
-	}
-
-	&.background-color-orange {
-		background-image: url("../img/background/pattern-orange.png");
-	}
-
-	&.background-color-pink {
-		background-image: url("../img/background/pattern-pink.png");
-	}
-
-	&.background-color-turquoise {
-		background-image: url("../img/background/pattern-turquoise.png");
-	}
-}
 
 .block--background-image {
 	color: $color-light;
@@ -69,6 +48,8 @@
 }
 
 .block--decoration {
+	background: $color-grey-light;
+
 	@include max-screen($screen-sm) {
 		&:not(:first-child) {
 			margin-top: $margin-default;
@@ -78,8 +59,8 @@
 	@include min-screen($screen-sm) {
 		margin-top: 0;
 		padding: $padding-default;
-		border-radius: 10px;
-		border: 1px solid $color-feather;
+		border-radius: $border-radius;
+		//border: $box-border-width solid $color-feather;
 	}
 }
 

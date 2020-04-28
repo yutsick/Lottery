@@ -22,7 +22,7 @@
 
 .alert-info,
 &.alert-info {
-	background-color: $color-complement-coral;
+	background-color: $color-green;
 
 	a,
 	a:hover {
@@ -50,7 +50,7 @@
 
 	&.alert--error,
 	&.alert--warning {
-		background-color: $color-roman;
+		background-color: $color-red;
 	}
 
 	&.alert--happy,
@@ -83,7 +83,7 @@
 	}
 	&--error,
 	&--warning {
-		background-color: $color-roman;
+		background-color: $color-red;
 	}
 
 	&--happy,

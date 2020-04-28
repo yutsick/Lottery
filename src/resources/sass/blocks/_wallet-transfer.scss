@@ -1,5 +1,7 @@
 /* Wallet transfer block */
 .block-wallet-transfer {
+	padding: 20px;
+
 	&__title:first-child {
 		margin-top: 0;
 	}
@@ -106,7 +108,7 @@
 	}
 
 	&__btn {
-		margin-right: 15px;
+		margin-right: 8px;
 		padding: $padding-small;
 		border: 0;
 		border-radius: .3em;
@@ -144,7 +146,7 @@
 			margin-left: 0;
 		}
 
-		@media screen and (max-width: 348px) {
+		@media screen and (max-width: $screen-tiny) {
 			flex: 1;
 			margin-top: 10px;
 		}

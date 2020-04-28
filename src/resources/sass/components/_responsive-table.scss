@@ -48,17 +48,18 @@
 			tr {
 				display: flex;
 				flex-wrap: wrap;
+				/*
 				border-bottom: 1px solid $color-gray-border;
 				border-right: 1px solid $color-gray-border;
 				border-left: 1px solid $color-gray-border;
-
+				*/
 				&:nth-of-type(even) {
 					background-color: $color-dark-white;
 				}
 
 				&:last-child {
-					border-bottom-left-radius: .4em;
-					border-bottom-right-radius: .4em;
+					border-bottom-left-radius: $border-radius;
+					border-bottom-right-radius: $border-radius;
 				}
 			}
 		}
@@ -106,8 +107,8 @@
 	.responsive-table {
 		width: 100%;
 		border-collapse: separate;
-		border-bottom-right-radius: .4em;
-		border-bottom-left-radius: .4em;
+		border-bottom-right-radius: $border-radius;
+		border-bottom-left-radius: $border-radius;
 
 		th:last-child,
 		td:last-child {
@@ -118,20 +119,16 @@
 		thead {
 			th {
 				padding: $padding-default;
-				border-top: 1px solid #a2c3ff;
-				border-bottom: 1px solid #a2c3ff;
-				background-color: #d6eeff;
+				background-color: $color-secondary-light;
 				font-size: $base-font-size;
 				font-weight: $bold;
 
 				&:first-child {
-					border-top-left-radius: .4em;
-					border-left: 1px solid #a2c3ff;
+					border-top-left-radius: $border-radius;
 				}
 
 				&:last-child {
-					border-top-right-radius: .4em;
-					border-right: 1px solid #a2c3ff;
+					border-top-right-radius: $border-radius;
 				}
 			}
 		}
@@ -140,15 +137,6 @@
 			td {
 				white-space: nowrap;
 				padding: $padding-default;
-				border-bottom: 1px solid $color-gray-border;
-
-				&:first-child {
-					border-left: 1px solid $color-gray-border;
-				}
-
-				&:last-child {
-					border-right: 1px solid $color-gray-border;
-				}
 
 				img {
 					float: left;
@@ -167,22 +155,12 @@
 			}
 
 			tr:nth-of-type(even):not(.invoice-history-dropdown) {
-				background-color: #f5f8fa;
+				background-color: $color-grey-light;
 			}
 
 			tr:last-child {
-				border-bottom-left-radius: .4em;
-				border-bottom-right-radius: .4em;
-
-				td {
-					&:first-child {
-						//border-bottom-left-radius: .4em;
-					}
-
-					&:last-child {
-						//border-bottom-right-radius: .4em;
-					}
-				}
+				border-bottom-left-radius: $border-radius;
+				border-bottom-right-radius: $border-radius;
 			}
 		}
 	}

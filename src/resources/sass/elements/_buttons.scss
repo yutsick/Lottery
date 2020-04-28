@@ -1,5 +1,12 @@
 /* Bootstrap modifications */
-.btn {
+.btn,
+.btn-primary,
+.btn-default,
+.btn-target,
+.btn-secondary,
+.btn-success,
+.btn-reg-customer,
+.btn-invert {
 	border-radius: 2em;
 	border: none;
 	padding: 8px 30px;
@@ -7,14 +14,16 @@
 	font-size: $base-font-size;
 	font-weight: 700;
 	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
+	cursor: pointer;
 
 	i {
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	}
 
-	&[disabled] {
-		opacity: 1;
-		background-color: rgba(0, 120, 192, .65);
+	&[disabled],
+	&.btn-disabled,
+	&.disabled {
+		color: rgba($color-light, 0.5);
 	}
 
 	&:focus,
@@ -26,387 +35,359 @@
 		border: none;
 		box-shadow: none;
 
-		&[disabled] {
-			background-color: rgba(0, 120, 192, .65);
+		&[disabled],
+		&.btn-disabled,
+		&.disabled {
+			color: rgba($color-light, 0.5);
 		}
 	}
+}
 
-	&.btn-default {
-		background-color: $color-complement-sky;
-		color: $color-light;
-	
-		&:focus {
-			background-color: $color-complement-sky;
-			color: $color-light;
-		}
-	
-		&:hover,
-		&:active,
-		&:active:hover,
-		&:active:focus {
-			background-color: $color-complement-sky-light;
-			color: $color-light;
-		}
-	
-		&.btn--invert {
-			background-color: $color-light;
-			color: $color-complement-sky;
-	
-			&:focus {
-				background-color: $color-light;
-				color: $color-complement-sky;
-			}
-	
-			&:hover,
-			&:active,
-			&:active:hover,
-			&:active:focus {
-				background-color: $color-light;
-				color: $color-complement-sky;
-			}
-		}
-	}
-	
-	&.btn-primary {
+.btn-default,
+.btn-primary {
+	background-color: $color-primary;
+	color: $color-light;
+
+	&:focus {
 		background-color: $color-primary;
 		color: $color-light;
-	
-		&:focus {
-			background-color: $color-primary;
-			color: $color-light;
-		}
-		
-		&:hover,
-		&:active,
-		&:active:hover,
-		&:active:focus {
-			background-color: $color-blue-light;
-			color: $color-light;
-		}
-		
-		&[disabled] {
-			background-color: $color-gray;
-
-			&:hover {
-				background-color: $color-gray;
-				cursor: default;
-			}
-		}
-	
-		&.btn--invert {
-			background-color: $color-light;
-			color: $color-primary;
-	
-			&:focus {
-				background-color: $color-light;
-				color: $color-primary;
-			}
-	
-			&:hover,
-			&:active,
-			&:active:hover,
-			&:active:focus {
-				background-color: darken($color-light, $color-darken-amount);
-				color: $color-primary;
-			}
-		}
-	}
-	&.btn-target,
-	&.btn-success {
-		background-color: $color-accent;
-		color: $color-white;
-	
-		&:focus {
-			background-color: $color-accent;
-		}
-	
-		&:hover,
-		&:active,
-		&:active:hover,
-		&:active:focus {
-			background-color: $color-green-light;
-			color: $color-white;
-		}
 	}
 	
-	&.btn-link {
-		color: $color-primary;
-	
-		&:hover,
-		&:focus {
-			color: $color-blue-light;
-			text-decoration: none;
-		}
-
-		&.disabled {
-			color: $color-gray;
-			background-color: transparent !important;
-		}
-
-	}
-	
-	&.btn-data-action {
-		background: none;
-		padding: 0;
-		color: #546785;
-		font-weight: 600;
-		line-height: 20px;
-		-webkit-appearance: none;
-		border-radius: 0;
-	
-		&:active, &:focus, &:hover {
-			color: #546785;
-		}
-	}
-	
-	&.btn-with-arrow {
-		&:after {
-			content: $icon-chevron-down;
-			vertical-align: middle;
-			margin-left: 5px;
-			font-size: $size-smallest;
-			font-family: $base-icon-family;
-		}
-	
-		&.btn-with-arrow--active {
-			&:after {
-				content: $icon-chevron-up;
-			}
-		}
-	}
-	
-	/* Custom */
-	&.btn-secondary {
-		background-color: $color-complement-coral;
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: $color-primary-light;
 		color: $color-light;
-	
-		&:focus {
-			background-color: $color-complement-coral;
-			color: $color-light;
-		}
-	
-		&:hover,
-		&:active,
-		&:active:hover,
-		&:active:focus {
-			background-color: $color-gray-light;
-			color: $color-light;
-		}
 	}
 	
-	&.btn-highlight {
-		background-color: $color-complement-lava;
-		color: $color-light;
-	
-		&:focus {
-			background-color: $color-complement-lava;
-			color: $color-light;
-		}
-	
-		&:hover,
-		&:active,
-		&:active:hover,
-		&:active:focus {
-			background-color: $color-complement-lava-light;
-			color: $color-light;
-		}
-	}
-	
-	&.btn-icon {
-		i {
-			vertical-align: middle;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			font-size: $size-medium;
-			transform: translateY(-50%);
-	
-			&.icon-right {
-				left: auto;
-				right: 20px;
-			}
-		}
-	}
-	
-	&.btn-icon-only {
-		position: relative;
-		padding: 0;
-		height: 40px;
-		width: 40px;
-		border-radius: 100%;
-	
-		i {
-			display: block;
-			font-size: inherit;
-		}
-	
-		&--medium {
-			width: 30px;
-			height: 30px;
-	
-			i {
-				font-size: $size-smaller;
-			}
-		}
-	}
-	
-	&.btn-input {
-		background-color: $color-light;
-		border-radius: 4px;
-		padding: 12px 12px;
-		border: 1px solid $color-input-border;
-		height: 44px;
-		display: flex;
-		align-items: center;
-
-		i {
-			font-size: $base-font-size;
-			line-height: 1.5;
-			color: $color-complement-sky;
-		}
-	
-		&:hover,
-		&:focus {
-			box-shadow: none;
-		}
-	
-		&.js-is-active {
-			i {
-				color: $color-primary;
-			}
-		}
-	}
-	
-	&.btn-2-line {
-		padding-top: 5px;
-		padding-bottom: 5px;
-	
-		span {
-			display: block;
-			font-size: $size-smallest;
-			font-weight: 400;
-			line-height: 1;
-		}
-	}
-	
-	
-	
-	&.btn-load {
-		position: relative;
-	
-		.spinner {
-			position: absolute;
-			left: 15px;
-			top: 50%;
-			width: 22px;
-			transform: translateY(-50%);
-			transition: opacity $duration-quick $delay-none $ease-in-out;
-			opacity: 0;
-		}
-	
-		&.js-is-loading {
-			.spinner {
-				opacity: 1;
-			}
-		}
-	}
-	
-	&.btn--bottom-center {
-		position: absolute;
-		bottom: 20px;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-	
-	&.btn.disabled,
+	&[disabled],
+	&.disabled,
 	&.btn-disabled {
-		cursor: not-allowed;
-	
-		&,
-		&:hover,
-		&:focus,
-		&:active,
-		&:active:hover,
-		&:active:focus {
-			background-color: rgba(0, 120, 192, .65);
-		}
-	}
-	
-	&.btn-large {
-		padding: 18px 60px;
-		line-height: 1;
-	}
-	
-	
-	&.btn-wide {
-		display: inline-block;
-		padding: $padding-medium $padding-default;
-		color: $color-white;
-		background: $color-green;
-		border: 2px solid $color-green;
-		min-width: 250px;
-		max-width: 100%;
-		text-decoration: none;
-		font-size: 18px;
-		line-height: 1;
-		&:focus {
-			color: $color-white;
-			border-width: 2px;
-		}
+		color: rgba($color-light, 0.5);
+		background-color: $color-primary-lighter;
+
 		&:hover {
-			color: $color-green;
-			background: $color-white;
-			border: 2px solid $color-green;
-			border-width: 2px;
+			background-color: $color-primary-lighter;
+			cursor: default;
 		}
-	
-		&--blue {
-			border: 2px solid $color-blue;
-			background: $color-blue;
-	
-			&:hover {
-				color: $color-blue;
-				background: $color-white;
-				border: 2px solid $color-blue;
-			}
-		}
-		&--green {
-			border: 2px solid $color-green;
-			background: $color-green;
-	
-			&:hover {
-				color: $color-green;
-				background: $color-white;
-				border: 2px solid $color-green;
-			}
-		}
-		&--white {
-			border: 2px solid $color-green;
-			background: $color-white;
-			color: $color-green;
-			&:focus {
-				color: $color-green;
-			}
-			&:hover {
-				color: $color-white;
-				background: $color-green;
-				border: 2px solid $color-green;
-			}
-		}
-		&--orange {
-			border: 2px solid $color-orange;
-			background: $color-orange;
-	
-			&:hover {
-				color: $color-orange;
-				background: $color-white;
-				border: 2px solid $color-orange;
-			}
-		}
-	
+	}
+}
+
+.btn-target,
+.btn-success,
+.btn-reg-customer {
+	background-color: $color-cta-pink;
+	color: $color-white;
+
+	&:focus {
+		background-color: $color-cta-pink;
+	}
+
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: $color-cta-hover;
+		color: $color-white;
+	}
+
+	&[disabled],
+	&.disabled,
+	&.btn-disabled {
+		color: rgba($color-light, 0.5);
+		background-color: $color-cta-light;
+	}
+}
+
+
+
+.btn-link {
+	color: $color-primary;
+
+	&:hover,
+	&:focus {
+		color: $color-blue-light;
+		text-decoration: none;
+	}
+
+	&[disabled],
+	&.disabled,
+	&.btn-disabled {
+		color: $color-gray;
+		background-color: transparent !important;
 	}
 
 }
+	
+.btn-data-action {
+	background: none;
+	padding: 0;
+	color: #546785;
+	font-weight: 600;
+	line-height: 20px;
+	-webkit-appearance: none;
+	border-radius: 0;
+
+	&:active, &:focus, &:hover {
+		color: #546785;
+	}
+}
+
+.btn-with-arrow {
+	&:after {
+		content: $icon-chevron-down;
+		vertical-align: middle;
+		margin-left: 5px;
+		font-size: $size-smallest;
+		font-family: $base-icon-family;
+	}
+
+	&.btn-with-arrow--active {
+		&:after {
+			content: $icon-chevron-up;
+		}
+	}
+}
+	
+/* Custom */
+.btn-secondary {
+	background-color: $color-secondary;
+	color: $color-primary;
+
+	&:focus {
+		background-color: $color-secondary-dark;
+	}
+
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: $color-secondary-light;
+		color: $color-primary;
+	}
+
+	&[disabled],
+	&.disabled,
+	&.btn-disabled {
+		color: rgba($color-primary, 0.5);
+	}
+}
+	
+.btn-highlight {
+	background-color: $color-complement-lava;
+	color: $color-light;
+
+	&:focus {
+		background-color: $color-complement-lava;
+		color: $color-light;
+	}
+
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: $color-complement-lava-light;
+		color: $color-light;
+	}
+}
+	
+.btn-icon {
+	i {
+		vertical-align: middle;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		font-size: $size-medium;
+		transform: translateY(-50%);
+
+		&.icon-right {
+			left: auto;
+			right: 20px;
+		}
+	}
+}
+	
+.btn-icon-only {
+	position: relative;
+	padding: 0;
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+
+	i {
+		display: block;
+		font-size: inherit;
+	}
+
+	&--medium {
+		width: 30px;
+		height: 30px;
+
+		i {
+			font-size: $size-smaller;
+		}
+	}
+}
+	
+.btn-input {
+	background-color: $color-light;
+	border-radius: $border-radius;
+	padding: 12px 12px;
+	border: 1px solid $color-input-border;
+	height: 44px;
+	display: flex;
+	align-items: center;
+
+	i {
+		font-size: $base-font-size;
+		line-height: 1.5;
+		color: $color-complement-sky;
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
+
+	&.js-is-active {
+		i {
+			color: $color-primary;
+		}
+	}
+}
+	
+.btn-2-line {
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	span {
+		display: block;
+		font-size: $size-smallest;
+		font-weight: 400;
+		line-height: 1;
+	}
+}
+	
+	
+	
+.btn-load {
+	position: relative;
+
+	.spinner {
+		position: absolute;
+		left: 15px;
+		top: 50%;
+		width: 22px;
+		transform: translateY(-50%);
+		transition: opacity $duration-quick $delay-none $ease-in-out;
+		opacity: 0;
+	}
+
+	&.js-is-loading {
+		.spinner {
+			opacity: 1;
+		}
+	}
+}
+	
+.btn--bottom-center {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+/*
+.btn.disabled,
+.btn-disabled {
+	cursor: not-allowed;
+
+	&,
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: rgba(0, 120, 192, .65);
+	}
+}
+*/
+
+.btn-large {
+	padding: 18px 60px;
+	line-height: 1;
+}
+	
+	
+.btn-wide {
+	display: inline-block;
+	padding: $padding-medium $padding-default;
+	color: $color-white;
+	background: $color-cta;
+	border: 2px solid $color-cta;
+	min-width: 250px;
+	max-width: 100%;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 1;
+	&:focus {
+		color: $color-white;
+		border-width: 2px;
+	}
+	&:hover {
+		color: $color-cta;
+		background: $color-white;
+		border: 2px solid $color-cta;
+		border-width: 2px;
+	}
+
+	&--blue {
+		border: 2px solid $color-primary;
+		background: $color-primary;
+
+		&:hover {
+			color: $color-primary;
+			background: $color-white;
+			border: 2px solid $color-primary;
+		}
+	}
+	&--green {
+		border: 2px solid $color-cta; // Green used to be CTA color.
+		background: $color-cta;
+
+		&:hover {
+			color: $color-cta;
+			background: $color-white;
+			border: 2px solid $color-cta;
+		}
+	}
+	&--white {
+		border: 2px solid $color-secondary;
+		background: $color-secondary;
+		color: $color-primary;
+		&:focus {
+			color: $color-primary;
+		}
+		&:hover {
+			color: $color-primary;
+			background: $color-secondary-light;
+			border: 2px solid $color-secondary-light;
+		}
+	}
+	&--orange {
+		border: 2px solid $color-orange;
+		background: $color-orange;
+
+		&:hover {
+			color: $color-orange;
+			background: $color-white;
+			border: 2px solid $color-orange;
+		}
+	}
+
+}
+
+
 
 a.btn {
 	&.btn-2-line {
@@ -416,50 +397,28 @@ a.btn {
 
 
 
-.btn-primary {
-	@extend .btn;
-	&:hover {
-		background-color: $color-river-bed;
-		cursor: pointer;
+
+.btn-invert,
+.btn--invert {
+	background-color: $color-grey-bg;
+	color: $color-primary;
+	&:focus {
+		background-color: $color-grey-bg;
+		color: $color-primary;
 	}
-}
 
-.btn-secondary {
-	@extend .btn;	
-	background-color: $color-snow;
-	border: 2px solid $color-blue;	
-	padding-top: 6px;
-	padding-bottom: 6px;
-	color: $color-blue;
-	&:hover {
-		color: $color-river-bed;
-		border: 2px solid $color-river-bed;
-		background-color: inherit;
-		cursor: pointer;
+	&:hover,
+	&:active,
+	&:active:hover,
+	&:active:focus {
+		background-color: $color-white;
+		color: $color-primary;
 	}
-}
 
-.btn-success,
-.btn-reg-customer {
-	@extend .btn;	
-	background-color: $color-green;
-	color: $color-snow;
-
-	&:hover {
-		cursor: pointer;
-		background-color: $color-river-bed;
-		color: $color-snow;
-	}
-}
-
-.btn-invert {
-	@extend .btn;
-	background-color: $color-snow;
-	color: $color-blue;
-	&:hover {
-		background-color: #B9D1DD;
-		color: $color-blue-deep;
-		cursor: pointer;
+	&[disabled],
+	&.disabled,
+	&.btn-disabled {
+		color: rgba($color-primary, 0.5);
 	}
 }
 
@@ -468,7 +427,7 @@ a.btn {
 	position: relative;
 	padding-right: 65px;
 	padding-left: 65px;
-	background-color: $color-green; 
+	background-color: $color-cta; 
 	color: $color-snow;
 	display: flex;
 	padding-top: 8px;
@@ -491,14 +450,13 @@ a.btn {
 		content: '';
 		height: 22px;
 		width: 22px;
-		right: 7px;
+		right: 8px;
 		background-image: url(/assets/img/icons/bankid.svg);
 	}
 
 	&:hover {
-		background-color: $color-river-bed;
+		background-color: $color-cta-hover;
 		color: $color-snow;
-		//border: 2px solid $color-river-bed;
 	}
 }
 

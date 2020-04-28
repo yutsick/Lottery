@@ -33,11 +33,11 @@
     }
 
     & > .popover {
-      background-color: $color-gray;
+      background-color: $color-blue;
       border: none;
 
       & > .popover-content {
-        background-color: $color-gray;
+        background-color: $color-blue;
         color: $color-snow;
       }
 
@@ -45,7 +45,7 @@
         border: none;
 
         &:after {
-          border-top-color: $color-gray;
+          border-top-color: $color-blue;
         }
       }
     }
@@ -104,7 +104,7 @@
       width: 42px;
       height: 42px;
       border-radius: 42px;
-      background-color: $color-gray;
+      background-color: $color-primary-lighter;
       position: absolute;
       top: 50%;
       margin-top: -21px;
@@ -123,7 +123,7 @@
 
       & > .spinner {
         padding: 10px;
-        border: 4px solid $color-gray;
+        border: 4px solid $color-primary-lighter;
         border-top: 4px solid $color-snow;
         border-radius: 50%;
         width: 30px;
