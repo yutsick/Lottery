@@ -72,8 +72,6 @@ $color-cloud: #f2f5f7;
 $color-feather: #dee1e8;
 $color-l-blue: #bad1de; // Color heaven gray *new*
 $color-blue-gray: #85a3b6; // *newx
-$color-stone: #f9f9f9;
-$color-gravel: #e5e5e5;
 $color-error: $color-red;
 $color-warning: $color-orange-light;
 $color-river-bed: #475965;
@@ -99,8 +97,9 @@ $color-complement-lava-light: $color-orange-light;
 // Specific
 $color-border: $color-feather;
 $color-container-background: $color-cloud;
-$color-modal-background: $color-stone;
-$color-input-border: $color-gravel;
+$color-modal-background: $color-snow;
+$color-input-border: $color-grey-dark;
+$color-input-border-focus: $color-primary;
 
 // Others
 $color-dark: $color-space;

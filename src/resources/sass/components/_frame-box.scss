@@ -12,7 +12,7 @@
   }
 
   &__row {
-    border: 1px solid $color-gray-border;
+    border: $box-border-width solid $color-gray-border;
     border-top: 0;
     padding: 0 $margin-medium;
 

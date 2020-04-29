@@ -95,7 +95,7 @@
 		margin-top: 0;
 		padding: 15px;
 		width: 100%;
-		border-width: $box-border-width;
+		border-width: $form-border-width;
 		box-shadow: none;
 
 		@include max-screen($screen-xs-max) {
@@ -162,7 +162,7 @@
 	width: 100%;
 	padding: 10px 40px 10px 15px;
 	border-radius: $border-radius-forms;
-	border: $box-border-width solid $color-gray-border;
+	border: $form-border-width solid $color-input-border;
 	background-color: white;
 	font-weight: $bold;
 	text-align: left;

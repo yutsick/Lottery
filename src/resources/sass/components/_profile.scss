@@ -80,12 +80,16 @@
 	input:not([type=radio]) {
 		color: #546785;
 		display: inline-block;
-		border: 1px solid $color-feather;
-		border-radius: 5px;
+		border: $form-border-width solid $color-input-border;
+		border-radius: $border-radius-forms;
 		background-color: white;
 		width: 220px;
 		padding: 9px 10px;
 		outline: none;
+
+		&:focus {
+			border-color: $color-input-border-focus;
+		}
 
 		&:disabled {
 			background: transparent;
@@ -211,7 +215,7 @@
 
 	&.has-error {
 		input:not([type=radio]) {
-			border-color: rgba($color-complement-lava, 0.3);
+			border-color: $color-error;
 		}
 	}
 

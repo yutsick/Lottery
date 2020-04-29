@@ -39,7 +39,7 @@
 
 	&--active,
 	&:hover {
-		border-color: $color-grey;
+		border-color: $color-grey-bg;
 	}
 
 	&:hover {
@@ -223,12 +223,12 @@
 	}
 
 	.icon {
-		color: inherit;
+		color: $color-green;
 	}
 
 	&.starred {
 		.dreamlist-icon {
-			color: $color-accent;
+			color: $color-green;
 
 			&:before {
 				content: "\e920";
@@ -238,7 +238,7 @@
 }
 
 .dreamlist-icon {
-	color: $color-complement-sky;
+	color: $color-green;
 }
 
 /* Dreamlist product block */

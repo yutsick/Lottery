@@ -28,12 +28,12 @@ label {
 	font-size: $base-font-size;
 	font-weight: 500;
 	box-shadow: none !important;
-	border: 1px solid $color-input-border;
+	border: $form-border-width solid $color-input-border;
 	height: 44px;
 	padding: 12px 12px;
 
 	&:focus {
-		border-color: $color-primary;
+		border-color: $color-input-border-focus;
 		box-shadow: none;
 	}
 	&[disabled] {

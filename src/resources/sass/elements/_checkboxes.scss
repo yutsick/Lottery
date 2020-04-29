@@ -6,6 +6,11 @@
 
   input[type="checkbox"] {
     margin-left: -35px;
+
+    &:focus {
+      outline: 0;
+      border-color: $color-input-border-focus;
+    }
   }
 
   .custom-checkbox {
@@ -15,7 +20,7 @@
     width: 24px;
     height: 24px;
     border-radius: $border-radius-forms;
-    border: 1px solid #cacece;
+    border: $form-border-width solid $color-input-border;
     background-color: #fff;
 
     &:checked:after {
@@ -55,57 +60,41 @@
 
 // Custom radio buttons
 .custom-radio {
-	&__label {
-		&-info {
-			display: block;
-			font-style: italic;
-			font-size: $size-smallest;
-		}
-	}
+  [type="radio"] {
+    position: absolute;
+    left: -999em;
 
-	[type="radio"] {
-		position: absolute;
-		left: -999em;
+    + label {
+      position: relative;
+      padding-left: 30px;
+      cursor: pointer;
 
-		+ label {
-			position: relative;
-			padding-left: 30px;
-			cursor: pointer;
+      /* Fake radio */
+      &:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: $form-border-width solid $color-input-border;
+        background-color: $color-white;
+      }
+    }
 
-			/* Fake radio */
-			&:before {
-				content: '';
-				position: absolute;
-				top: -2px;
-				left: 0;
-				width: 20px;
-				height: 20px;
-				border-radius: 50%;
-				border: 1px solid $color-border;
-				background-color: $color-white;
-			}
-
-			&:hover {
-				color: $color-base-primary;
-
-				&:before {
-					border-color: $color-gray;
-				}
-			}
-		}
-
-		/* Checked icon */
-		&:checked + label:after {
-			content: '';
-			position: absolute;
-			top: 3px;
-			left: 5px;
-			width: 10px;
-			height: 10px;
-			border-radius: 50%;
-			background: $color-gray;
-		}
-	}
+    /* Checked icon */
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $color-gray;
+    }
+  }
 }
 
 // Custom checkbox and radio buttons
@@ -123,7 +112,7 @@
     .cr {
       position: relative;
       display: inline-block;
-      border: 1px solid $color-border;
+      border: 1px solid $color-input-border;
       background-color: $color-light;
       border-radius: $border-radius-forms;
       width: 15px;
@@ -182,7 +171,7 @@
         width: 24px;
         height: 24px;
         border-radius: $border-radius-forms;
-        border: 1px solid $color-gray-border;
+        border: $form-border-width solid $color-input-border;
         background-color: $color-white;
       }
     }

@@ -32,8 +32,8 @@
 
 		@media screen and (min-width: $screen-xs) {
 			padding: $padding-small;
-			border: 1px solid $color-gravel;
-			border-radius: .3em;
+			border: $form-border-width solid $color-input-border;
+			border-radius: $border-radius-forms;
 		}
 	}
 
@@ -55,12 +55,13 @@
 		border: 0;
 		margin-right: 50px;
 		border-radius: 50%;
-		background-color: $color-gray-light;
+		background-color: $color-secondary;
+		color: $color-primary;
 		transition: background-color $duration-fast $ease-standard;
 
 		&:hover,
 		&:focus {
-			background-color: darken($color-gray, 5%);
+			background-color: $color-secondary-light;
 		}
 
 		&:focus {
@@ -112,15 +113,15 @@
 		padding: $padding-small;
 		border: 0;
 		border-radius: .3em;
-		background-color: $color-gray-light;
 		transition: background-color $duration-fast $ease-standard;
-		color: $color-white;
+		background-color: $color-secondary;
+		color: $color-primary;
 		font-weight: $bold;
 
 		&--active,
 		&:hover,
 		&:focus {
-			background-color: $color-gray;
+			background-color: $color-secondary-light;
 		}
 
 		&:focus {

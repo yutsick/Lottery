@@ -143,8 +143,13 @@ a.navlink:hover {
 		height: 44px;
 		line-height: 44px;
 		border-radius: $border-radius;
-		border: 1px solid #e5e5e5;
+		border: $form-border-width solid $color-input-border;
 		padding: 5px;
+
+		&:focus {
+			outline: 0;
+			border-color: $color-input-border-focus;
+		}
 	}
 
 	.select2-container--default .select2-selection--single .select2-selection__arrow {
