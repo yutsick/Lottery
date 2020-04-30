@@ -23,4 +23,9 @@
 	@include min-screen($screen-md-min) {
 		margin-bottom: 20px;
 	}
+
+	.block-promotion__title {
+		font-family: $apercu-bold-font;
+		font-size: 20px;
+	}
 }

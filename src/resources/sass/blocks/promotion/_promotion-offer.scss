@@ -191,6 +191,20 @@
                 padding-left: 20px;
             }
         }
+
+        &--above {
+            position: relative;
+            .promotion-offer__content {
+                position: relative;
+                left: 50%;
+                transform: translate(-50%,0);
+            }
+            .promotion-offer__image {
+                left: 50%;
+                transform: translate(-50%,0);
+
+            }
+        }
     }
 }
 
