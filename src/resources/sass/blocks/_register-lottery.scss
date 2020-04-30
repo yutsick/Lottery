@@ -1,7 +1,10 @@
 .register-lottery {
   &-wrap {
-    padding-top: 60px;
+    padding-top: 20px;
     color: #003e52;
+    @media screen and (min-width: 992px) {
+      padding-top: 60px;
+    }
   }
 
   & > h1 {
@@ -460,7 +463,7 @@
     &__holder {
       border-radius: 0;
       padding: 0;
-      @media screen and (min-width: 580px) and (max-width: 1023px) {
+      @media screen and (max-width: 1023px) {
         padding: 0 2px;
       }
       @media screen and (min-width: 1200px) {
