@@ -6,7 +6,6 @@
 		justify-content: center;		color: $color-blue-deep-2;
 
 		&-inner {
-			//flex: 0 0;
 			padding-bottom: 20px;
 			@include min-screen($screen-lg) {
 				padding: 20px;
@@ -15,10 +14,13 @@
 			}
 		}
 	}
-	&__title {
 
+	&__title {
 		font-family: $apercu-bold-font;
 		font-size: 30px;
 		color: $color-blue-deep-2;
+	}
+	@include min-screen($screen-md-min) {
+		margin-bottom: 20px;
 	}
 }

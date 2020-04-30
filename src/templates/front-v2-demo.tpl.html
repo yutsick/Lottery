@@ -212,10 +212,78 @@
     </div>
   </section>
 
+  <section class="s-promotion-offer s-promotion-offer--full background-color-blue-deep-2">
+    <div class="container">
+      <div class="row equal-height">
+        <div class="col-xs-12">
+          @@include('blocks/promotion/block/_promotion-offer-column-2.html', {
+          "image": "assets/img/mockup/promotion--image-full.png",
+          "image_position": "bottom",
+          "theme": "dark",
+          "text_alignment": "left",
+          "custom_bg": true,
+          "background-color-class": "background-color-blue-deep-2",
+          "bg_box_image": "",
+          "content_position": "left",
+          "has_content_title": true,
+          "has_content_description": true,
+          "has_content_image": true,
+          "has_link": true,
+          "link_title": "Välj lotter som gör gott"
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer s-promotion-offer--full background-color-light-blue-2">
+    <div class="container">
+      <div class="row equal-height">
+        <div class="col-xs-12">
+          @@include('blocks/promotion/block/_promotion-offer-column-2.html', {
+          "image": "assets/img/mockup/promotion--image-full.png",
+          "image_position": "bottom",
+          "theme": "light",
+          "text_alignment": "left",
+          "custom_bg": true,
+          "background-color-class": "background-color-light-blue-2",
+          "bg_box_image": "",
+          "content_position": "left",
+          "has_content_title": true,
+          "has_content_description": true,
+          "has_content_image": true,
+          "has_link": true,
+          "link_title": "Välj lotter som gör gott"
+          })
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="s-promotion-video">
     <div class="container">
       <div class="row">
-        @@include('blocks/promotion/_promotion-example-video.html')
+        @@include('blocks/promotion/_promotion-example-video.html', {
+        "background_color": "green"
+        })
+      </div>
+    </div>
+  </section>
+  <section class="s-promotion-video">
+    <div class="container">
+      <div class="row">
+        @@include('blocks/promotion/_promotion-example-video.html', {
+        "background_color": "pink"
+        })
+      </div>
+    </div>
+  </section>
+  <section class="s-promotion-video">
+    <div class="container">
+      <div class="row">
+        @@include('blocks/promotion/_promotion-example-video.html', {
+        "background_color": "blue"
+        })
       </div>
     </div>
   </section>
@@ -246,7 +314,7 @@
       <div class="row equal-height">
         <div class="col-xs-12 col-sm-4">
           <div class="s-bullet-points__item">
-            <div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/promotion--image.png);"></div>
+            <div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
             <h3 class="s-bullet-points__title">Varje månad gör du skillnad för barn och vuxna</h3>
             <p class="s-bullet-points__text">Sedan år 2000 har vi delat ut nära 2,3 miljarder till människor i behov av stöd.</p>
           </div>
@@ -261,7 +329,7 @@
         </div>
         <div class="col-xs-12 col-sm-4">
           <div class="s-bullet-points__item">
-            <div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/promotion--image.png);"></div>
+            <div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
             <h3 class="s-bullet-points__title">Ingen bindningstid, var med så länge du vill </h3>
             <p class="s-bullet-points__text">Vi har ingen bindningstid, du väljer själv hur länge du
               vill bidra och skrapa våra lotter.

@@ -17,15 +17,16 @@
 		}
 	}
 
-	&--marked {
+	&-marked {
 		position: relative;
 		display: inline-block;
 		vertical-align: middle;
-		margin: 30px auto;
-		padding: 5px 30px;
+		margin: 0 auto 40px;
+		padding: 8px 30px;
 		min-width: 230px;
+		font-family: $apercu-bold-font;
+		font-size: 20px;
 		color: #ffffff;
-		background-color: #6fa088;
 		&:before {
 			content: '';
 			position: absolute;
@@ -49,6 +50,15 @@
 			height: 100%;
 			background-color: #fff;
 			clip-path: polygon(100% 0, 0 50%, 100% 100%);
+		}
+		&--green {
+			background-color: #6fa088;
+		}
+		&--pink {
+			background-color: $color-cta-pink;
+		}
+		&--blue {
+			background-color: #81b7c8;
 		}
 	}
 }

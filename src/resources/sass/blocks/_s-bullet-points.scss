@@ -3,8 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 270px;
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	&__item {
 		max-width: 380px;
 		margin: 20px auto;
@@ -28,21 +27,15 @@
 		font-weight: bold;
 	}
 
-	&__text {
-
-	}
-
 	@include min-screen($screen-sm-min) {
 		&__title {
 			font-size: 20px;
 		}
 	}
 	@include min-screen($screen-md-min) {
+		margin-bottom: 60px;
 		&__title {
 			font-size: 24px;
 		}
-	}
-	@media screen and (max-width: $screen-sm) {
-
 	}
 }
