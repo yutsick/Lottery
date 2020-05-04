@@ -193,17 +193,25 @@
 }
 	
 .btn-icon {
+	position: relative;
+	padding-left: 30 + 19 + 5px;
+
+	&.icon-right {
+		padding-left: 30px;
+		padding-right: 30 + 19 + 5px;
+	}
+
 	i {
 		vertical-align: middle;
 		position: absolute;
 		top: 50%;
-		left: 0;
+		left: 30px;
 		font-size: $size-medium;
 		transform: translateY(-50%);
 
 		&.icon-right {
 			left: auto;
-			right: 20px;
+			right: 30px;
 		}
 	}
 }

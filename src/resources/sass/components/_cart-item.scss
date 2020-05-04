@@ -113,7 +113,7 @@
 		width: 52px;
 		height: 40px;
 		padding: $margin-small 24px $margin-small 6px;
-		border: 1px solid $color-gray-border;
+		border: $form-border-width solid $color-gray-border;
 		text-align: center;
 		font-weight: $bold;
 
@@ -154,21 +154,21 @@
 		padding: $padding-small;
 		font-size: $base-font-size;
 		color: $color-primary;
-		border: 1px solid $color-gray-border;
+		border: $form-border-width solid $color-gray-border;
 		background: $color-white;
 		transition: background $duration-quick $ease-in-out,
 					color $duration-quick $ease-in-out,
 					opacity $duration-quick $ease-in-out;
 
 		&:first-child {
-			border-top-left-radius: .3em;
-			border-bottom-left-radius: .3em;
+			border-top-left-radius: $border-radius-forms;
+			border-bottom-left-radius: $border-radius-forms;
 			border-right: 0;
 		}
 
 		&:last-child {
-			border-top-right-radius: .3em;
-			border-bottom-right-radius: .3em;
+			border-top-right-radius: $border-radius-forms;
+			border-bottom-right-radius: $border-radius-forms;
 			border-left: 0;
 		}
 

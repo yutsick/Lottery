@@ -19,3 +19,26 @@
 		background-color: $color-red;
 	}
 }
+
+.delivery-express {
+	position: relative;
+
+	&:before {
+		content: '– ';
+		display: inline-block;
+		padding-right: 25px;
+		background: transparent url(/assets/img/icons/express-delivery.svg) no-repeat top right;
+		background-size: 19px 17px;
+		margin-right: 5px;
+
+		@media (max-width: $screen-xs) {
+			content: '\00a0';
+		}
+	}
+
+}
+.icon-expressdelivery {
+	background: transparent url(/assets/img/icons/express-delivery.svg) no-repeat top right;
+	width: 19px;
+	height: 17px;
+}

@@ -104,8 +104,8 @@ $color-input-border-focus: $color-primary;
 // Others
 $color-dark: $color-space;
 $color-light: $color-snow;
-$color-overlay-base: rgba(21, 31, 54, 1);
-$color-overlay: rgba(21, 31, 54, 0.8);
+$color-overlay-base: rgba($color-primary-dark, 1);
+$color-overlay: rgba($color-primary-dark, 0.9);
 
 // States
 $color-darken-amount: 10%;

@@ -28,6 +28,14 @@
 				margin-bottom: 0;
 			}
 		}
+		
+		&__shipping-express {
+			text-align: center;
+
+			p {
+				margin: $margin-small 0;
+			}
+		}
 
 		&__price {
 			&-total {
@@ -164,6 +172,45 @@
 				@include min-screen($screen-xs) {
 					max-width: 240px;
 				}
+			}
+		}
+
+
+		&__installment {
+			padding-top: $margin-medium;
+			padding-bottom: $margin-medium;
+
+			.custom-radio {
+				width: auto;
+				max-width: none;
+			}
+
+			label {
+				img {
+					max-height: 28px;
+				}
+			}
+
+			.form-label {
+				font-size: 12px;
+				font-weight: bold;
+				margin: $margin-medium 0 0;
+			}
+
+			input[type=radio] {
+				& + label + .order__radio-info {
+					display: none;
+				}
+				&:checked {
+					& + label + .order__radio-info {
+						display: block;
+					}
+				}
+			}
+
+			.order__radio-info {
+				padding-left: 30px;
+
 			}
 		}
 	}

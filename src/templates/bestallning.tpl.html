@@ -24,7 +24,12 @@
                     @@include('cart-items/cart-item.tpl.html', {"order": true})
                     <div class="order__shipping order__payment-block">
                         <p class="order__payment-block-label">Frakt</p>
-                        <p class="order__payment-block-value"><span>0</span> kr</p>
+												<p class="order__payment-block-value"><span>0</span> kr</p>
+												
+												<div class="order__shipping-express">
+													<p><a href="#" class="btn btn-secondary btn-icon" data-item="express-shipping" data-value="49"><i class="icon icon-expressdelivery"></i>Lägg till Expressleverans</a></p>
+													<p><small>Vill du lägga till Expressleverans för endast 49 kr?<br>Med Expressleverans lämnar ditt paket vårt lager inom en arbetsdag.</small></p>
+												</div>
                     </div>
 
                     <div class="order__price order__payment-block row">
@@ -60,7 +65,52 @@
                 </div>
             </div>
 
+
 			<form id="ordering" action="/bestallning-bekraftelse.html" method="get" data-toggle="validator" data-use-ajax>
+
+				<div class="order frame-box">
+					<div class="frame-box__header">
+							<p class="h5">Delbetalning</p>
+					</div>
+					<div class="frame-box__row">
+						<div class="row">
+							<div class="order__installment order__installment-summary col-xs-12 col-sm-12 col-md-6">
+								<p>Du saknar pengar på ditt vinstkonto för att beställa varorna i din kundvagn. Du kan genomföra beställningen genom att välja hur du vill delbetala resterande summa.</p>
+								<div class="order__price-total">
+									<p class="order__payment-block-label">Resterande summa:</p>
+									<p class="order__payment-block-value"><span>220</span> kr</p>
+								</div>
+								
+							</div>
+							<div class="order__installment order__installment-payment col-xs-12 col-sm-12 col-md-6">
+
+								<div class="order__input-wrapper">
+									<div class="custom-radio">
+										<input type="radio" name="installment" id="installment-swish" value="swish" required="required" class="custom-radio__input">
+										<label for="installment-swish" class="custom-radio__label">Betala med Swish <img src="/assets/img/logos/swish.svg" alt="Swish"></label>
+
+										<div class="form-group order__radio-info">
+											<p class="form-label">Mobilnummer kopplat till Swish</p>
+											<input type="tel" id="swish-phone" class="form-control" placeholder="0700000000" data-required-error="Du måste fylla i ett mobilnummer." data-error="Detta är inte ett korrekt mobiltelefonnummer."/>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+								</div>
+								<div class="order__input-wrapper">
+									<div class="custom-radio">
+										<input type="radio" name="installment" id="cardbank" value="letter" required="required" class="custom-radio__input">
+										<label for="cardbank" class="custom-radio__label">Direktbetalning via kort eller internetbank <br><img src="/assets/img/logos/card-banks.png"></label>
+										<div class="order__radio-info"><small>Efter du har lagt din beställning tas du till en dialog där du fyller i kortuppgifter eller väljer bank.</small></div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+			
+					</div>
+				</div>
+								
+
 				<div class="frame-box">
 					<div class="frame-box__header">
 						<p class="h5">Leveransuppgifter</p>
@@ -71,7 +121,7 @@
 								<p class="delivery__title">Leveransadress</p>
 								<div class="delivery__contact">
 									<p>Magnus Singerer</p>
-									<p>Fjärde Långgatat 41 Lgh 1103</p>
+									<p>Fjärde Långgatan 41 Lgh 1103</p>
 									<p>413 27 Göteborg</p>
 									<p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
 								</div>
@@ -113,6 +163,7 @@
 								</div>
 							</div>
 							<div class="delivery col-xs-12 col-sm-12 col-md-6">
+							<!--
 								<p class="delivery__title">Leveranssätt</p>
 								<div class="order__input-wrapper custom-radio">
 									<input type="radio" name="delivery-type" id="delivery-standard" value="standard" class="custom-radio__input" checked>
@@ -122,6 +173,7 @@
 									<input type="radio" name="delivery-type" id="delivery-prio" value="prio" class="custom-radio__input">
 									<label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalning sker efter beställning lagts. </span></label>
 								</div>
+							-->
 							</div>
 						</div>
 						<div class="row">
@@ -169,13 +221,18 @@
 				<div class="order-page__submit">
 					<div class="order-page__submit-action-wrapper">
 						<button class="btn btn-primary" type="submit" form="ordering"
-								data-toggle="tooltip" data-placement="top" data-original-title="Klicka för att  beställa vinsterna">
+								data-toggle="tooltip" data-placement="top" data-original-title="Bekräfta och beställ vinsterna">
 							Bekräfta och beställ vinsterna
 						</button>
 					</div>
 					<div class="order-page__submit-action-wrapper">
 						<a href="#">Avbryt beställning</a>
 					</div>
+
+						<p>
+							<a href="#" data-toggle="modal" data-target="#modal-payment-swish">Visa Swish-dialog (endast i testsyfte...)</a>
+						</p>
+
 				</div>
 			</form>
         </section>

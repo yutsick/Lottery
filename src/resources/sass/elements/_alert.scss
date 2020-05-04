@@ -32,13 +32,13 @@
 
 #alert-cookie,
 &#alert-cookie {
-	position: relative;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
-	background-color: $color-cloud;
-	color: $color-complement-sky;
+	z-index: 2100;
+	background-color: $color-secondary;
+	color: $color-primary;
 
 	&.alert--happy {
 		background-color: $color-pink;
@@ -62,14 +62,14 @@
 			color: $color-light;
 		}
 	}
-
+/*
 	@include min-screen($screen-sm-min) {
 		top: 0;
 		position: relative;
 	}
-
+*/
 	.close {
-		color: $color-complement-sky;
+		color: $color-primary;
 	}
 }
 

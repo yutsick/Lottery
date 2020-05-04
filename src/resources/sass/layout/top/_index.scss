@@ -568,11 +568,11 @@
                                 list-style: none;
                                 display: flex;
                                 flex-direction: column;
+                                border-top: 1px solid $color-grey-bg;
     
                                 li {
-                                    padding: 10px 10px 10px 15px;
+                                    padding: 8px 10px 8px 15px;
                                     display: flex;
-                                    border-top: 1px solid $color-grey;
     
                                     &:first-child {
                                         margin-top: 0;

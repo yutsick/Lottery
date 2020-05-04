@@ -89,67 +89,6 @@ h6,
 	line-height: 1.25;
 }
 
-/*
-h1,
-.h1 {
-	font-size: 24px;
-
-	@include min-screen($screen-sm-min) {
-		font-size: 65px;
-		line-height: 1em;
-	}
-}
-
-h2,
-.h2 {
-	font-size: 20px;
-
-	@include min-screen($screen-sm-min) {
-		font-size: 36px;
-	}
-}
-
-h3,
-.h3 {
-	font-size: 30px;
-
-	@include min-screen($screen-xs) {
-		font-size: 36px;
-	}
-
-	@include min-screen($screen-sm-min) {
-		font-size: 48px;
-	}
-}
-
-h4,
-.h4 {
-	font-size: 28px;
-
-	@include min-screen($screen-sm-min) {
-		font-size: 30px;
-	}
-}
-
-h5,
-.h5 {
-	font-size: 20px;
-
-	@include min-screen($screen-md-min) {
-		font-size: 24px;
-	}
-}
-
-h5,
-.h5 {
-	font-size: $base-font-size;
-
-	@include min-screen($screen-md-min) {
-		font-size: $base-font-size;
-	}
-}
-*/
-
 
 /* Custom sizes on .my-pages */
 .my-pages {
@@ -184,4 +123,9 @@ h5,
 
 .italic {
 	font-style: italic;
+}
+
+.small, small { /* "Caption" style from Sketch */
+	font-size: 12px;
+	font-weight: normal;
 }
