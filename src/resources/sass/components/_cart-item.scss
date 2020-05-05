@@ -88,6 +88,12 @@
 		}
 	}
 
+	&-delivery {
+		img {
+			vertical-align: text-bottom;
+		}
+	}
+
 	&-quantity {
 		display: flex;
 		order: 4;

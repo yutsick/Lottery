@@ -40,6 +40,14 @@
 	background-color: $color-secondary;
 	color: $color-primary;
 
+	a {
+		text-decoration: underline;
+	}
+
+	button {
+		margin: $margin-small auto 0;
+	}
+
 	&.alert--happy {
 		background-color: $color-pink;
 	}
