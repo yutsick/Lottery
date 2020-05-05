@@ -70,6 +70,20 @@ export default function () {
 
 		captionHeightFn();
 	});
+
+	$(".js-show-description").click(function (e) {
+		let th = $(this);
+		if (th.attr('href') == '') {
+			e.preventDefault();
+			th.closest(".block-promotion__content").siblings('.block-slider-description').toggleClass("on");
+		}
+	});
+
+	$(".js-hide-description").click(function (e) {
+		e.preventDefault();
+		$(this).parent().toggleClass("on");
+	})
+
 }
 
 
