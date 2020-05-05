@@ -8,11 +8,10 @@
     padding: 15px;
     border-top-right-radius: $border-radius;
     border-top-left-radius: $border-radius;
-    //border: 1px solid #a2c3ff;
   }
 
   &__row {
-    border: $box-border-width solid $color-gray-border;
+    background: $color-grey-light;
     border-top: 0;
     padding: 0 $margin-medium;
 
