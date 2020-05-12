@@ -7,7 +7,6 @@ export default class orderActions {
 
             this.eventListener();
             this.deliveryInfo();
-            this.installmentInfo();
 
             $("#ordering").validator({
 				focus: false
@@ -71,23 +70,6 @@ export default class orderActions {
 			if (_this.is(':checked')) {
 				inputs.prop('required', false).prop('disabled', true);
 				_this.parent().next().find('input').prop('required', true).prop('disabled', false);
-
-				$('#ordering').validator('validate');
-			}
-		});
-	}
-
-	installmentInfo() {
-		let wrapper = $('.order__installment-payment');
-		let radios = wrapper.find('.custom-radio__input');
-		let inputs = wrapper.find('.form-control');
-
-		radios.on('change', (e) => {
-			let _this = $(e.target);
-
-			if (_this.is(':checked')) {
-				inputs.prop('required', false).prop('disabled', true);
-				_this.parent().find('input').not('[type=radio]').prop('required', true).prop('disabled', false);
 
 				$('#ordering').validator('validate');
 			}
