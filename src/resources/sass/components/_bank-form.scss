@@ -28,7 +28,7 @@
 			color: $color-black;
 			border-top-left-radius: 40px;
 			border-bottom-left-radius: 40px;
-			border: 2px solid $color-green;
+			border: 2px solid $color-cta;
 			border-right: 0;
 			flex-grow: 1;
 			width: calc(100% - 160px);
@@ -45,8 +45,8 @@
 		}
 
 		&[type="submit"] {
-			background: $color-green;
-			border: 2px solid $color-green;
+			background: $color-cta;
+			border: 2px solid $color-cta;
 			font-weight: bold;
 			color: $color-white;
 			border-top-right-radius: 40px;
@@ -57,7 +57,7 @@
 			width: 120px;
 			&:hover {
 				background: $color-white;
-				color: $color-green;
+				color: $color-cta;
 			}
 
 			@include min-screen($screen-sm-min) {

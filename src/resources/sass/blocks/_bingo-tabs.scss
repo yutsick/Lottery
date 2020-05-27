@@ -13,10 +13,10 @@
     }
 
     .title {
+        @extend .heading;
         flex: 1 1 auto;
         font-size: 20px;
         line-height: 1.2;
-        font-family: $base-heading-family;
         color: $color-snow;
         align-self: flex-start;
         margin: 10px 0 10px 10px;
@@ -62,11 +62,11 @@
             }
     
             & > a {
+                @extend .heading;
                 color: $color-snow;
                 border: none;
                 margin-right: 0;
                 padding: 8px 15px;
-                font-family: $base-heading-family;
                 font-weight: 800;
                 font-size: 20px;
                 line-height: 1;
@@ -194,8 +194,8 @@
     }
 
     strong {
+        @extend .heading;
         color: $color-snow;
-        font-family: $base-heading-family;    
     }
 
     &__cta {

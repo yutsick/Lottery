@@ -25,7 +25,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	border: 1px solid $color-border;
+	border: $box-border-width solid $color-grey-light;
 	margin-bottom: 7.5px;
 	transition: border 0.2s $ease-in-out;
 
@@ -39,7 +39,7 @@
 
 	&--active,
 	&:hover {
-		border-color: $color-green;
+		border-color: $color-grey-bg;
 	}
 
 	&:hover {
@@ -67,7 +67,7 @@
 		}
 	}
 
-	&__btn--remove {
+	&__btn--remove.btn {
 		position: absolute;
 		top: 10px;
 		left: 10px;
@@ -124,7 +124,7 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	padding-bottom: 66.66%; /* 3:2 Aspect Ratio */
-	border-bottom: 1px solid $color-border;
+	//border-bottom: $box-border-width solid $color-border;
 	transition: border $duration-quick $delay-none $ease-in-out;
 
 	img {
@@ -143,14 +143,13 @@
 }
 
 .block-product__label {
+	@extend .heading;
 	position: absolute;
 	right: 0;
 	top: 20px;
 	z-index: 20;
 	padding: $padding-small $padding-small $padding-small $padding-default;
 	border-radius: 2em 0 0 2em;
-	font-family: $base-heading-family;
-	font-weight: normal;
 	color: $color-light;
 	line-height: 1;
 
@@ -224,12 +223,12 @@
 	}
 
 	.icon {
-		color: inherit;
+		color: $color-green;
 	}
 
 	&.starred {
 		.dreamlist-icon {
-			color: $color-accent;
+			color: $color-green;
 
 			&:before {
 				content: "\e920";
@@ -239,7 +238,7 @@
 }
 
 .dreamlist-icon {
-	color: $color-complement-sky;
+	color: $color-green;
 }
 
 /* Dreamlist product block */

@@ -16,7 +16,7 @@
 	border: none;
 	text-align: left;
 	padding: 15px;
-	border-top: 1px solid $color-gray-border;
+	border-top: $box-border-width solid $color-gray-border;
 	border-radius: 0;
 	outline: none;
 	width: 100%;
@@ -27,7 +27,7 @@
 	}
 
 	&:hover {
-		background-color: #f5f8fa;
+		background-color: $color-grey-light;
 	}
 
 	@include max-screen($screen-sm-max) {
@@ -82,7 +82,7 @@
 	.messages-list__sender:before {
 		content: '';
 		border-radius: 100%;
-		background-color: $color-light-blue;
+		background-color: $color-cta-pink;
 		width: 8px;
 		height: 8px;
 		display: inline-block;
@@ -98,8 +98,8 @@
 
 .messages-list__message--active {
 	@include min-screen($screen-md-min) {
-		border-left: 3px solid $color-light-blue;
-		background-color: $color-dark-white;
+		border-left: 3px solid $color-blue;
+		background-color: $color-grey-light;
 
 		.messages-list__sender {
 			color: $color-base-secondary;
