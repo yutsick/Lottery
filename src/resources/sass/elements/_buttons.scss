@@ -155,6 +155,10 @@
 	background-color: $color-secondary;
 	color: $color-primary;
 
+	&--full {
+		width: 100%;
+	}
+
 	&:focus {
 		background-color: $color-secondary-dark;
 	}
@@ -305,21 +309,7 @@
 	left: 50%;
 	transform: translateX(-50%);
 }
-/*
-.btn.disabled,
-.btn-disabled {
-	cursor: not-allowed;
 
-	&,
-	&:hover,
-	&:focus,
-	&:active,
-	&:active:hover,
-	&:active:focus {
-		background-color: rgba(0, 120, 192, .65);
-	}
-}
-*/
 
 .btn-large {
 	padding: 18px 60px;
@@ -469,83 +459,6 @@ a.btn {
 }
 
 // New buttons 2020
-.btn-primary-v2 {
-	@extend .btn-primary;
-	background-color: $color-primary-blue;
-	&:active {
-		background-color: #032A3D;
-
-		&:hover {
-			background-color: #105C80;
-		}
-		&:focus {
-			background-color: #032a3d;
-		}
-	}
-	&:hover {
-		background-color: #105C80;
-	}
-	&:focus {
-		background-color: #032A3D;
-	}
-	&:disabled,
-	&.disabled {
-		background-color: #0B3B54;
-		pointer-events:none;
-		opacity: 0.5;
-		&:hover,
-		&:focus {
-			background-color: #0B3B54;
-			cursor: not-allowed;
-		}
-	}
-}
-
-.btn-secondary-v2 {
-	@extend .btn-secondary;
-	border: none;
-	background-color: $color-secondary-lightBlue;
-	color: $color-primary-blue;
-	text-decoration: none;
-	&:active {
-		border: none;
-		background-color: $color-secondary-lightBlue;
-		color: $color-primary-blue;
-		&:hover,
-		&:focus {
-			color: $color-primary-blue;
-		}
-	}
-	&:hover {
-		border: none;
-		background-color: #E5F6FE;
-		color: $color-primary-blue;
-	}
-	&:focus {
-		border: none;
-		background-color: #A4D0E3;
-		color: $color-primary-blue;
-	}
-	&:disabled,
-	&.disabled {
-		border: none;
-		background-color: #C9E8F4;
-		color: $color-primary-blue;
-
-		pointer-events:none;
-
-		opacity: 0.5;
-		&:hover,
-		&:focus {
-			background-color: #C9E8F4;
-			cursor: not-allowed;
-		}
-	}
-	&--full {
-		width: 100%;
-	}
-}
-
 .btn-primary-link {
 	display: inline-block;
 	margin-left: auto;
@@ -565,7 +478,7 @@ a.btn {
 	}
 }
 
-.btn-cta-v2 {
+.btn-cta {
 	@extend .btn-reg-customer;
 	background-color: $color-cta-pink;
 	color: $color-snow;
@@ -606,33 +519,7 @@ a.btn {
 	}
 }
 
-.btn-invert-v2 {
-	@extend .btn-invert;
-	background-color: $color-secondary-light;
-	color: $color-primary-blue;
-	&:active {
-		background-color: $color-secondary-light;
-		color: $color-primary-blue;
-	}
-	&:hover {
-		background-color: $color-snow;
-	}
-	&:focus {
-		background-color: #cecece;
-	}
-	&:disabled,
-	&.disabled {
-		background-color: #f7f7f7;
-		opacity: 0.5;
-		&:hover,
-		&:focus {
-			background-color: #f7f7f7;
-			cursor: not-allowed;
-		}
-	}
-}
-
-.btn-bankId-v2 {
+.btn-bankId {
 	position: relative;
 	&:before {
 		content: '';
@@ -671,4 +558,7 @@ a.btn {
 		vertical-align: middle;
 	}
 }
+
+
+
 
