@@ -22,7 +22,7 @@
 
 .alert-info,
 &.alert-info {
-	background-color: $color-complement-coral;
+	background-color: $color-green;
 
 	a,
 	a:hover {
@@ -32,13 +32,21 @@
 
 #alert-cookie,
 &#alert-cookie {
-	position: relative;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	z-index: 100;
-	background-color: $color-cloud;
-	color: $color-complement-sky;
+	z-index: 2100;
+	background-color: $color-secondary;
+	color: $color-primary;
+
+	a {
+		text-decoration: underline;
+	}
+
+	button {
+		margin: $margin-small auto 0;
+	}
 
 	&.alert--happy {
 		background-color: $color-pink;
@@ -50,7 +58,7 @@
 
 	&.alert--error,
 	&.alert--warning {
-		background-color: $color-roman;
+		background-color: $color-red;
 	}
 
 	&.alert--happy,
@@ -62,14 +70,14 @@
 			color: $color-light;
 		}
 	}
-
+/*
 	@include min-screen($screen-sm-min) {
 		top: 0;
 		position: relative;
 	}
-
+*/
 	.close {
-		color: $color-complement-sky;
+		color: $color-primary;
 	}
 }
 
@@ -83,7 +91,7 @@
 	}
 	&--error,
 	&--warning {
-		background-color: $color-roman;
+		background-color: $color-red;
 	}
 
 	&--happy,

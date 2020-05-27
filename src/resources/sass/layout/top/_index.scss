@@ -457,7 +457,7 @@ a {
                 flex: 1 1 auto;
                 padding: 0 20px;
                 a {
-                    font-size: 17px;
+                    font-size: 16px;
                     font-weight: 700;
                 }
             }
@@ -588,11 +588,11 @@ a {
                                 list-style: none;
                                 display: flex;
                                 flex-direction: column;
+                                border-top: 1px solid $color-grey-bg;
     
                                 li {
-                                    padding: 10px 10px 10px 15px;
+                                    padding: 8px 10px 8px 15px;
                                     display: flex;
-                                    border-top: 1px solid $color-grey;
     
                                     &:first-child {
                                         margin-top: 0;
@@ -875,7 +875,7 @@ a {
                 &-item {
                     width: 100%;
                     display: none;
-                    padding: $padding-small $padding-default;
+                    padding: 0 $padding-default;
     
                     &--active {
                         display: flex;
@@ -891,14 +891,19 @@ a {
         
                     .navigation__item {
                         margin: 0 30px 0 0;
-                        min-height: 30px;
+                        min-height: 50px;
                         display: flex;
                         align-items: center;
                         margin-left: 0;
     
                         a {
+                            display: flex;
+                            align-items: center;
                             color: $color-snow;
+                            height: 100%;
                             font-size: 16px;
+                            font-weight: normal;
+
                             &:hover {
                                 text-decoration: underline;
                             }
@@ -979,6 +984,10 @@ a {
                 
                 a {
                     padding: 10px 0;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
     
@@ -1074,7 +1083,7 @@ a {
                 order: 2;
                 padding: 0 10px;
                 border-radius: 0 0 0.75em 0.75em;
-                border: 1px solid $color-gray-border;
+                border: 2px solid $color-gray-border;
                 border-top: none;
                 line-height: 1.2;
                 height: 45px;
@@ -1091,7 +1100,7 @@ a {
                         font-size: 15px;
 
                         &:first-child {
-                            margin-right: 30px;
+                            margin-right: 20px;
                             text-decoration: underline;
                         }
                         

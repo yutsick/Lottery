@@ -14,6 +14,11 @@ $padding-small: 10px;
 
 $block-text-width: 450px;
 
+$border-radius: 5px;
+$border-radius-forms: 3px;
+
+$box-border-width: 2px;
+$form-border-width: 1px;
 
 /**
  * Fonts
@@ -30,12 +35,16 @@ $base-font-weight: $regular;
 
 /* Font family */
 $base-font-family: 'Proxima Nova'; //  'Montserrat', sans-serif förr
-$base-heading-family: 'UniNeueHeavy';
+$base-heading-family: 'apercu-bold-pro';
 $semi-heading-family: 'Proxima Nova';
 $basic-heading-family: 'Proxima Nova';
 $apercu-bold-font: 'apercu-bold-pro';
 $apercu-light-font: 'apercu-light-pro';
 $apercu-regular-font: 'apercu-regular-pro';
+
+$base-letter-spacing: -0.02em;
+$base-word-spacing: -0.03em;
+
 
 /* Font sizes */
 $base-font-size: 16px;

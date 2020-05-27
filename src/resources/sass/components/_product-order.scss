@@ -2,16 +2,12 @@
 	margin-top: $padding-medium * 2;
 	text-align: center;
 
-	@media (min-width: $screen-tiny) and (max-width: $screen-xs) {
+	@media (max-width: $screen-xs) {
 		text-align: left;
 	}
 
 	&__item {
-		&:first-child {
-			@include min-screen($screen-xs) {
-				margin-bottom: $margin-small;
-			}
-		}
+		margin-bottom: $margin-small;
 
 		&:last-child {
 			margin-top: $margin-small;
@@ -29,12 +25,17 @@
 	}
 
 	&__item-small {
-		@media (min-width: $screen-tiny) and (max-width: $screen-xs) {
+		@media (max-width: $screen-xs) {
 			display: inline-block;
-			width: 49%;
+			width: 32%;
 
 			&:nth-child(2n) {
+				width: 66%;
 				text-align: right;
+
+				span {
+					display: block;
+				}
 			}
 		}
 	}
@@ -43,15 +44,12 @@
 		font-size: .75rem;
 		text-transform: uppercase;
 		color: $color-gray;
-
-		@include min-screen($screen-xs) {
-			display: block;
-		}
+		display: block;
 	}
 
 	&__value {
+		@extend .heading;
 		font-size: 1.5rem;
-		font-weight: $bold;
 	}
 
 	&__status {

@@ -95,7 +95,7 @@ img.align-center {
 }
 
 .background-color-blue {
-	background-color: $color-blue;
+	background-color: $color-blue-deep;
 }
 
 .background-color-blue-deep-2 {
@@ -137,15 +137,18 @@ img.align-center {
 }
 
 .background-color-newturqiose {
-	background-color: $color-new-turqoiuse;
+	background-color: $color-turquoise;
+	color: $color-primary;
 }
 
 .background-color-turquoise {
 	background-color: $color-turquoise;
+	color: $color-primary;
 }
 
 .background-color-light-turquoise {
 	background-color: $color-turquoise-light;
+	color: $color-primary;
 }
 .background-color-gray {
 	background-color: $color-gray;

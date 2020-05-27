@@ -2,19 +2,19 @@
 	"class": "sidebar-hidden",
 	"logged_in": false
 	})
-
+	
 	<div class="content-wrapper ml-2017">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-12">
 					<h1>Miljonlotteriet - Frontend 2017</h1>
-
+	
 					<h2>Navigation</h2>
 					<ol class="index">
 						<li><a href="/logged-out.html">Logged out</a></li>
 						<li><a href="/logged-in.html">Logged in</a></li>
 					</ol>
-
+	
 					<h2>Page templates</h2>
 					<ol class="index">
 						<li><a href="/front-v2.html">Front page (new v2 - 2020)</a></li>
@@ -34,15 +34,17 @@
 						<li><a href="/register.html">Register</a></li>
 						<li><a href="/registerSubscription.html">RegisterSubscription</a></li>
 						<li><a href="/spelkonto.html">Spelkonto</a></li>
-
+	
 						<li>Spelhistorik
 							<ol>
 								<li><a href="/spelhistorik-onlinespel.html">Onlinespel</a></li>
 								<li><a href="/spelhistorik-registrerade-lotter.html">Registrerade lotter</a></li>
 								<li><a href="/spelhistorik-nitlottsmiljonaren.html">Nitlottsmiljonären</a></li>
 								<li><a href="/spelhistorik-jackpot.html">Mina jackpotandelar</a></li>
+								<li><a href="/spelhistorik-nitlottsbonusar.html">Nitlottsbonusar</a></li>
 							</ol>
 						</li>
+						<li><a href="/register-lottery.html">Registrera lott</a></li>
 						<li><a href="/page-with-active-cart.html">Sida utanför vinstshoppen med varor i kundkorgen</a></li>
 						<li><a href="/prenumerationer.html">Prenumerationer</a></li>
 						<li><a href="/bonuskod.html">Bonuskod</a></li>
@@ -67,8 +69,9 @@
 						<li>
 							<a href="blocks-win-single.html">Drömvinster Single</a>
 						</li>
+						<li><a href="/storyblok.html">Storyblok</a></li>
 					</ol>
-
+	
 					<h2>Block types</h2>
 					<ol class="index">
 						<!--<li><a href="/blocks-promotion-test.html">Promotion block (Test dynamic images)</a></li>-->
@@ -117,12 +120,11 @@
 						<li>
 							<a href="blocks-buttons.html">Buttons</a>
 						</li>
-
 					</ol>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- /#content-wrapper -->
-
+	
 	@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
