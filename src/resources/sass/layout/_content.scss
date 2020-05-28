@@ -52,13 +52,13 @@
 			clip-path: polygon(100% 0, 0 50%, 100% 100%);
 		}
 		&--green {
-			background-color: #6fa088;
+			background-color: $color-green;
 		}
 		&--pink {
 			background-color: $color-cta-pink;
 		}
 		&--blue {
-			background-color: #81b7c8;
+			background-color: $color-primary-lighter;
 		}
 	}
 }
