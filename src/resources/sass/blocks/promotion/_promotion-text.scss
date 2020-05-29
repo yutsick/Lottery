@@ -73,6 +73,17 @@
 	}
 
 	@include min-screen($screen-md-min) {
+		&.revers {
+			.equal-height > div {
+				&:first-child {
+					order: 1
+				}
+				&:nth-child(2) {
+					order:2
+				}
+			}
+		}
+
 		.equal-height > div {
 			&:first-child {
 				order: 2
