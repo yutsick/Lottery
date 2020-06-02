@@ -20,9 +20,49 @@
         height: 100%;
 
         background-color: $color-blue-deep;
-        background-size: cover;
-        background-position: center top;
         background-repeat: no-repeat;
+        background-size: cover;
+        &.hero-bgp {
+            @media screen and (max-width: $screen-xs-max){
+                &-mobile {
+                    &--left {
+                        background-position: center left;
+                    }
+                    &--right {
+                        background-position: center right;
+                    }
+                    &--center {
+                        background-position: center center;
+                    }
+                }
+            }
+            @media screen and (min-width: $screen-sm){
+                &-tablet {
+                    &--left {
+                        background-position: center left;
+                    }
+                    &--right {
+                        background-position: center right;
+                    }
+                    &--center {
+                        background-position: center center;
+                    }
+                }
+            }
+            @media screen and (min-width: $screen-md){
+                &-desktop {
+                    &--left {
+                        background-position: center left;
+                    }
+                    &--right {
+                        background-position: center right;
+                    }
+                    &--center {
+                        background-position: center center;
+                    }
+                }
+            }
+        }
     }
 
     &__video {
@@ -39,39 +79,126 @@
         overflow: hidden;
     }
 
-
-
-    &--center {
-        text-align: center;
-        .hero-full__content {
-            margin-left: auto;
-            margin-right: auto;
+    &.hero-content {
+        @media screen and (max-width: $screen-xs-max){
+            &-mobile {
+                &--left {
+                    text-align: left;
+                    .hero-full__content {
+                        text-align: left;
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                    .hero-full__overlay {
+                        left: 0;
+                        transform: translate(-10%, 0);
+                    }
+                }
+                &--right {
+                    text-align: right;
+                    .hero-full__content {
+                        text-align: right;
+                        margin-left: auto;
+                        margin-right: 0;
+                    }
+                    .hero-full__overlay {
+                        right: 0;
+                        transform: translate(15%, 0);
+                    }
+                }
+                &--center {
+                    text-align: center;
+                    .hero-full__content {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                    .hero-full__overlay {
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }
         }
-        .hero-full__overlay {
-            left: 50%;
-            transform: translate(-50%, 0);
+        @media screen and (min-width: $screen-sm){
+            &-tablet {
+                &--left {
+                    text-align: left;
+                    .hero-full__content {
+                        text-align: left;
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                    .hero-full__overlay {
+                        left: 0;
+                        transform: translate(-10%, 0);
+                    }
+                }
+                &--right {
+                    text-align: right;
+                    .hero-full__content {
+                        text-align: right;
+                        margin-right: 0;
+                        margin-left: auto;
+                    }
+                    .hero-full__overlay {
+                        right: 0;
+                        transform: translate(15%, 0);
+                    }
+                }
+                &--center {
+                    text-align: center;
+                    .hero-full__content {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                    .hero-full__overlay {
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }
         }
-    }
-
-    &--left {
-        text-align: left;
-        .hero-full__content {
-            text-align: left;
-        }
-        .hero-full__overlay {
-            left: 0;
-            transform: translate(-10%, 0);
-        }
-    }
-
-    &--right {
-        text-align: right;
-        .hero-full__content {
-            text-align: right;
-        }
-        .hero-full__overlay {
-            right: 0;
-            transform: translate(15%, 0);
+        @media screen and (min-width: $screen-md){
+            &-desktop {
+                &--left {
+                    text-align: left;
+                    .hero-full__content {
+                        text-align: left;
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                    .hero-full__overlay {
+                        left: 0;
+                        transform: translate(-10%, 0);
+                    }
+                }
+                &--right {
+                    text-align: right;
+                    .hero-full__content {
+                        text-align: right;
+                        margin-right: 0;
+                        margin-left: auto;
+                    }
+                    .hero-full__overlay {
+                        right: 0;
+                        transform: translate(15%, 0);
+                    }
+                }
+                &--center {
+                    text-align: center;
+                    .hero-full__content {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                    .hero-full__overlay {
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }
         }
     }
 
@@ -169,7 +296,9 @@
     }
 }
 
+.hero-bgp {
 
+}
 
 
 // old

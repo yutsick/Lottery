@@ -1,22 +1,6 @@
-<style>
-    .hero-full--bg {background-image: url(assets/img/background/hero-sektion-mobile.jpeg);}
-    @media screen and (min-width:1024px) {
-        .hero-full--bg {background-image: url(assets/img/background/hero-sektion.jpeg);}
-    }
-</style>
-
-@@if (context.hero_alignment === "center") {
-<div class="hero-full hero-full--center">
-}
-@@if (context.hero_alignment === "left") {
-<div class="hero-full hero-full--left">
-}
-@@if (context.hero_alignment === "right") {
-<div class="hero-full hero-full--right">
-}
-
+<div class="hero-full hero-content-desktop--@@content_alignment_desktop hero-content-tablet--@@content_alignment_tablet hero-content-mobile--@@content_alignment_mobile">
     @@if (context.background_video === false) {
-        <div class="hero-full--bg"></div>
+        <div class="hero-full--bg hero-bgp-desktop--@@background_position_desktop hero-bgp-tablet--@@background_position_tablet hero-bgp-mobile--@@background_position_mobile" style="background-image: url(assets/img/background/hero-sektion.jpeg);"></div>
     }
 
     @@if (context.background_video === true) {
