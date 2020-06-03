@@ -171,7 +171,7 @@
                     }
                     .hero-full__overlay {
                         left: 0;
-                        transform: translate(-10%, 0);
+                        transform: translate(-18%, 0);
                     }
                 }
                 &--right {
@@ -183,7 +183,7 @@
                     }
                     .hero-full__overlay {
                         right: 0;
-                        transform: translate(15%, 0);
+                        transform: translate(-15%, 0);
                     }
                 }
                 &--center {
@@ -200,11 +200,26 @@
                 }
             }
         }
+        @media screen and (min-width: $screen-lg-min) {
+            &-desktop {
+                &--left {
+                    .hero-full__overlay {
+                        left: 0;
+                        transform: translate(-20%, 0);
+                    }
+                }
+                &--right {
+                    .hero-full__overlay {
+                        transform: translate(-10%, 0);
+                    }
+                }
+            }
+        }
     }
 
     &__content {
         max-width: 100%;
-        padding: 0 10px;
+        padding: 0 20px;
         color: #fff;
         .block-hero__title {
             margin-bottom: 10px;
@@ -227,14 +242,14 @@
 
     @include min-screen($screen-sm-min) {
         margin-bottom: 20px;
-        &--right {
+        .hero-content-desktop--right {
             .hero-full__content {
                 margin-left: auto;
                 margin-right: 40px;
             }
         }
 
-        &--left {
+        .hero-content-desktop--left {
             .hero-full__content {
                 margin-left: 40px;
                 margin-right: auto;
@@ -271,7 +286,7 @@
         }
     }
 
-    @include min-screen($screen-md-min) {
+    @media screen and (min-width: $screen-md-min) {
         margin-bottom: 60px;
         min-height: 70vh;
         justify-content: center;
@@ -287,17 +302,13 @@
             content: "";
             position: absolute;
             top: 0;
-            width: 50%;
+            width: 70%;
             height: 100%;
             background-image: radial-gradient(86.75% 90.75% at 49.24% 45%, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 36.26%, rgba(0, 0, 0, 0.0001) 56%, rgba(0, 0, 0, 0) 100%),
             radial-gradient(71.73% 71.73% at 49.24% 63.46%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.15) 57.26%, rgba(0, 0, 0, 0.0001) 70%, rgba(0, 0, 0, 0) 100%);
             background-position: center, center;
         }
     }
-}
-
-.hero-bgp {
-
 }
 
 
