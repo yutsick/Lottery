@@ -22,7 +22,7 @@
 	}
 
 	&__link {
-		font-weight: $extrabold;
+		font-weight: bold;
 
 		&:not(:first-child) {
 			margin-left: $padding-medium;
@@ -32,56 +32,62 @@
 
 .block-content__content,
 .block-promotion--text-rich .block-promotion__rich-text {
-	h2,
-	.h2 {
-		font-size: 30px;
+	h1,
+	.h1 {
+		font-size: 32px;
+		line-height: 1.125;
 
 		@include min-screen($screen-sm-min) {
-			font-size: 65px;
-			line-height: 1em;
+			font-size: 64px;
+			line-height: 1.0625;
+		}
+	}
+
+	h2,
+	.h2 {
+		font-size: 28px;
+		line-height: 1.1428;
+
+		@include min-screen($screen-sm-min) {
+			font-size: 40px;
+			line-height: 1.1;
 		}
 	}
 
 	h3,
 	.h3 {
-		font-size: 25px;
+		font-size: 28px;
+		line-height: 1.1428;
 
 		@include min-screen($screen-sm-min) {
-			font-size: 36px;
+			font-size: 30px;
+			line-height: 1.1333;
 		}
 	}
 
 	h4,
 	.h4 {
-		font-size: 36px;
-
-		@include min-screen($screen-sm-min) {
-			font-size: 48px;
-		}
+		font-size: 24px;
+		line-height: 1.1667;
 	}
 
 	h5,
 	.h5 {
-		font-size: 28px;
+		font-size: 18px;
+		line-height: 1.2222;
 
 		@include min-screen($screen-sm-min) {
-			font-size: 30px;
+			font-size: 20px;
+			line-height: 1.2;
 		}
 	}
 
 	h6,
 	.h6 {
-		font-size: 20px;
-
-		@include min-screen($screen-md-min) {
-			font-size: 24px;
-		}
+		font-size: 16px;
+		line-height: 1.25;
 	}
 
-	h5,
-	.h5 {
-		font-size: 1rem;
-	}
 
 	p {
 		overflow: visible;
@@ -91,12 +97,13 @@
 	a:not(.btn) {
 		position: relative;
 		overflow: visible;
+		font-weight: bold;
 
 		&:before {
 			content: "";
 			position: absolute;
 			width: 100%;
-			height: 2px;
+			height: 1px;
 			bottom: -1px;
 			left: 0;
 			background-color: #D4E9FE;

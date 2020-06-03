@@ -2,18 +2,16 @@
   margin-bottom: $margin-default;
 
   &__header {
-    background-color: #d6eeff;
+    background-color: $color-secondary-light;
     font-size: $base-font-size;
     font-weight: 600;
     padding: 15px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    color: #000;
-    border: 1px solid #a2c3ff;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
   }
 
   &__row {
-    border: 1px solid $color-gray-border;
+    background: $color-grey-light;
     border-top: 0;
     padding: 0 $margin-medium;
 
@@ -22,8 +20,8 @@
     }
 
     &:last-of-type {
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: $border-radius;
+      border-bottom-left-radius: $border-radius;
     }
 
     &.form-group {
