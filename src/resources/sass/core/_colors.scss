@@ -2,53 +2,78 @@
  * Colors
  */
 
+ // New colors 2020
+$color-primary: #003E52;
+$color-primary-light: #06566F;
+$color-primary-lighter: #81B7C8;
+$color-primary-dark: #032A3D;
+
+$color-secondary: #B8D8EB;
+$color-secondary-light: #C9E8F4;
+$color-secondary-lighter: #E5F6FE;
+$color-secondary-dark: #7CB7D0;
+
+$color-cta: #CC5599;
+$color-cta-light: #ECC5DE;
+$color-cta-lighter: #E3BAC5;
+$color-cta-dark: #BA5B80;
+$color-cta-hover: #ED8DC4;
+
+$color-grey-bg: #EEEDEB;
+$color-grey-light: #F7F7F7;
+$color-grey-dark: #CECECE;
+
+$color-orange: #EE7622;
+$color-orange-light: #F09F54;
+$color-orange-lighter: #F8DF8D;
+
+$color-green: #6FA088;
+$color-green-light: #9ED8B3;
+$color-green-lighter: #CEDFD7;
+
+
+
 // Theme Palette
 $color-snow: #ffffff;
-$color-dark-white: #f5f8fa;
+$color-dark-white: $color-grey-light;
 $color-space: #000;
-$color-blue-deep: #004673; // *new*
-$color-blue-dark: #006cb0; //  *new*
-$color-blue: #0078c0; // *new*
-$color-light-blue: #1670f6;
-//$color-blue-light: #008ee3; // *new*
-$color-blue-light: #5bc6e8; // *new*
+$color-blue-deep: $color-primary; // *new*
+$color-blue: $color-primary-light; // *new*
+$color-blue-dark: $color-primary-dark; //darken($color-blue, 15%); //  *new*
+$color-blue-disabled: $color-primary-lighter;
 
-$color-turquoise: #00afba; // *new*
-$color-new-turqoiuse: #00b5c1;
-$color-turquoise-light: #a0e4e7; // *new*
-$color-green: #4CAF50;
-$color-green-light: #68c56b;
-$color-light-pink: #fde3f1;
-//$color-yellow: #ffd72b; // *new*
-$color-yellow: #FDE78C; // *new*
-$color-yellow-light: #ffec9c; // *new*
-$color-light-orange: #fbf1eb;
-$color-orange: #fa640f; // *new*
-$color-head-orange: #ff9148;
-$color-orange-light: #ffad6c; // *new*
-$color-border-orange: #fab890;
-$color-red: #f04c60;
-$color-roman: #d9534f;
-$color-pink: #df4d9b; // *new*
-$color-pink-light: #f19fc8; // *new*
-$color-border-pink: #f7a4d1;
-$color-black: #2e3237; // Color dark gray *new*
+$color-blue-light: $color-secondary; // *new*
+$color-blue-lighter: $color-secondary-light;
+
+$color-turquoise: $color-secondary; // #00afba; // *new*
+$color-new-turqoiuse: $color-turquoise;
+$color-turquoise-light: $color-secondary-light; //#a0e4e7; // *new*
+
+$color-light-pink: $color-cta-light;
+$color-yellow: $color-orange-lighter; // *new*
+$color-light-orange: $color-orange-lighter;
+$color-head-orange: $color-orange-light;
+$color-border-orange: #F7CFA9;
+
+$color-red: #D90000;
+
+$color-pink: $color-cta; // *new*
+$color-pink-light: $color-light-pink; // *new*
+$color-border-pink: $color-pink;
+
+$color-black: $color-blue-deep; //#2e3237; // Color dark gray *new*
 $color-black-light: #4a5863;
 $color-gray: #6f91a7; // UI elements
 $color-gray-light: #bdd0dc;
-$color-gray-border: #d8dde6;
+$color-gray-border: $color-grey-bg;
 $color-ocean: #37454e;
 $color-blueberry: #536785;
 $color-cloud: #f2f5f7;
 $color-feather: #dee1e8;
-$color: #475964; // Color light gray
-$color: #bad1de; // Color heaven gray *new*
 $color-l-blue: #bad1de; // Color heaven gray *new*
 $color-blue-gray: #85a3b6; // *newx
-$color: #85a3b6; // Color blue gray *new*
-$color-stone: #f9f9f9;
-$color-gravel: #e5e5e5;
-$color-warning: #ffb800;
+$color-error: $color-red;
+$color-warning: $color-orange-light;
 $color-river-bed: #475965;
 $color-grey: #CBCBCB;
 
@@ -58,7 +83,6 @@ $color-base-secondary: $color-ocean; // Menu links
 $color-base-complement: $color-blueberry; // Menu descriptions, input labels, modal text
 
 // Color Scheme
-$color-primary: $color-blue;
 $color-accent: $color-green;
 $color-complement-coral: $color-turquoise;
 
@@ -73,14 +97,15 @@ $color-complement-lava-light: $color-orange-light;
 // Specific
 $color-border: $color-feather;
 $color-container-background: $color-cloud;
-$color-modal-background: $color-stone;
-$color-input-border: $color-gravel;
+$color-modal-background: $color-snow;
+$color-input-border: $color-grey-dark;
+$color-input-border-focus: $color-primary;
 
 // Others
 $color-dark: $color-space;
 $color-light: $color-snow;
-$color-overlay-base: rgba(21, 31, 54, 1);
-$color-overlay: rgba(21, 31, 54, 0.8);
+$color-overlay-base: rgba($color-primary-dark, 1);
+$color-overlay: rgba($color-primary-dark, 0.9);
 
 // States
 $color-darken-amount: 10%;
@@ -107,12 +132,13 @@ $color-transparent: rgba(0, 0, 0, $opacity-0);
 
 
 // New colors for modals
-$color-primary-blue: #0b3b54;
-$color-category-orange: #f07e18;
-$color-category-green: #69b47a;
-$color-cta-pink: #da4d96;
-$color-secondary-light: #f7f7f7;
-$color-secondary-lightBlue: #c9e8f4;
+$color-primary-blue: $color-blue-deep;
+$color-category-orange: $color-orange;
+$color-category-green: $color-green;
+$color-cta-pink: $color-pink;
+$color-cta-pink-light: $color-cta-light;
+$color-cta-pink-disabled: $color-cta-lighter;
+$color-secondary-lightBlue: $color-secondary;
 
 
 

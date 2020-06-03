@@ -31,9 +31,9 @@
 	}
 
 	.js-hide-section {
+		@extend .heading;
 		display: none;
 		margin-bottom: $margin-default;
-		font-family: $base-heading-family;
 		font-size: $size-medium;
 		line-height: 1;
 		color: inherit;
@@ -61,10 +61,9 @@
 .table__title-block {
 	margin-bottom: 0;
 	padding: $padding-medium;
-	border: 1px solid #a2c3ff;
-	border-top-right-radius: 5px;
-	border-top-left-radius: 5px;
-	background-color: #d6eeff;
+	border-top-right-radius: $border-radius;
+	border-top-left-radius: $border-radius;
+	background-color: $color-secondary-light;
 	font-size: $base-font-size;
 	font-weight: $bold;
 	color: $color-base-primary;

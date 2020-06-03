@@ -60,7 +60,7 @@ export default class orderActions {
     }
 
 	deliveryInfo() {
-		let wrapper = $('.order__input-wrapper');
+		let wrapper = $('.delivery .order__input-wrapper');
 		let radios = wrapper.find('.custom-radio__input');
 		let inputs = wrapper.find('.form-control');
 

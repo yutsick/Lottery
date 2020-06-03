@@ -1,10 +1,7 @@
 .register-lottery {
   &-wrap {
-    padding-top: 20px;
+    padding-top: 60px;
     color: #003e52;
-    @media screen and (min-width: 992px) {
-      padding-top: 60px;
-    }
   }
 
   & > h1 {
@@ -36,11 +33,11 @@
     }
 
     & > .popover {
-      background-color: $color-gray;
+      background-color: $color-blue;
       border: none;
 
       & > .popover-content {
-        background-color: $color-gray;
+        background-color: $color-blue;
         color: $color-snow;
       }
 
@@ -48,7 +45,7 @@
         border: none;
 
         &:after {
-          border-top-color: $color-gray;
+          border-top-color: $color-blue;
         }
       }
     }
@@ -107,7 +104,7 @@
       width: 42px;
       height: 42px;
       border-radius: 42px;
-      background-color: $color-gray;
+      background-color: $color-primary-lighter;
       position: absolute;
       top: 50%;
       margin-top: -21px;
@@ -126,7 +123,7 @@
 
       & > .spinner {
         padding: 10px;
-        border: 4px solid $color-gray;
+        border: 4px solid $color-primary-lighter;
         border-top: 4px solid $color-snow;
         border-radius: 50%;
         width: 30px;
@@ -463,7 +460,7 @@
     &__holder {
       border-radius: 0;
       padding: 0;
-      @media screen and (max-width: 1023px) {
+      @media screen and (min-width: 580px) and (max-width: 1023px) {
         padding: 0 2px;
       }
       @media screen and (min-width: 1200px) {
@@ -475,6 +472,7 @@
       }
 
       &:first-child {
+        padding: 0 4px;
         @media screen and (max-width: 579px) {
           margin-right: 0;
         }

@@ -1,4 +1,9 @@
 // Different typography styles for content blocks in _content.scss
+.heading {
+	font-family: $base-heading-family;
+	letter-spacing: $base-letter-spacing; //-0.02em;
+	word-spacing: $base-word-spacing; //-0.03em;
+}
 
 h1,
 h2,
@@ -12,7 +17,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-	font-family: $base-heading-family;
+	@extend .heading;
+
 	line-height: 1.2em;
 	font-weight: normal;
 
@@ -27,65 +33,62 @@ h6,
 	-webkit-hyphens: auto;
 	hyphens: auto;
 }
-
 h1,
 .h1 {
-	font-size: 24px;
+	font-size: 32px;
+	line-height: 1.125;
 
 	@include min-screen($screen-sm-min) {
-		font-size: 65px;
-		line-height: 1em;
+		font-size: 64px;
+		line-height: 1.0625;
 	}
 }
 
 h2,
 .h2 {
-	font-size: 20px;
+	font-size: 28px;
+	line-height: 1.1428;
 
 	@include min-screen($screen-sm-min) {
-		font-size: 36px;
+		font-size: 40px;
+		line-height: 1.1;
 	}
 }
 
 h3,
 .h3 {
-	font-size: 30px;
-
-	@include min-screen($screen-xs) {
-		font-size: 36px;
-	}
+	font-size: 28px;
+	line-height: 1.1428;
 
 	@include min-screen($screen-sm-min) {
-		font-size: 48px;
+		font-size: 30px;
+		line-height: 1.1333;
 	}
 }
 
 h4,
 .h4 {
-	font-size: 28px;
+	font-size: 24px;
+	line-height: 1.1667;
+}
+
+h5,
+.h5 {
+	font-size: 18px;
+	line-height: 1.2222;
 
 	@include min-screen($screen-sm-min) {
-		font-size: 30px;
+		font-size: 20px;
+		line-height: 1.2;
 	}
 }
 
-h5,
-.h5 {
-	font-size: 20px;
-
-	@include min-screen($screen-md-min) {
-		font-size: 24px;
-	}
+h6,
+.h6 {
+	font-size: 16px;
+	line-height: 1.25;
 }
 
-h5,
-.h5 {
-	font-size: $base-font-size;
-
-	@include min-screen($screen-md-min) {
-		font-size: $base-font-size;
-	}
-}
 
 /* Custom sizes on .my-pages */
 .my-pages {
@@ -120,4 +123,9 @@ h5,
 
 .italic {
 	font-style: italic;
+}
+
+.small, small { /* "Caption" style from Sketch */
+	font-size: 12px;
+	font-weight: normal;
 }

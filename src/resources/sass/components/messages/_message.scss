@@ -13,7 +13,7 @@
 }
 
 .messages__container {
-	border: 1px solid $color-gray-border;
+	border: $box-border-width solid $color-gray-border;
 	border-radius: 5px;
 	margin-bottom: 25px;
 
@@ -33,7 +33,7 @@
 
 	@include min-screen($screen-md-min) {
 		display: block;
-		border-left: 1px solid $color-gray-border;
+		border-left: $box-border-width solid $color-gray-border;
 		min-height: 600px;
 	}
 

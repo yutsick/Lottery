@@ -60,6 +60,7 @@
                 </div>
             </div>
 
+
 			<form id="ordering" action="/bestallning-bekraftelse.html" method="get" data-toggle="validator" data-use-ajax>
 				<div class="frame-box">
 					<div class="frame-box__header">
@@ -71,7 +72,7 @@
 								<p class="delivery__title">Leveransadress</p>
 								<div class="delivery__contact">
 									<p>Magnus Singerer</p>
-									<p>Fjärde Långgatat 41 Lgh 1103</p>
+									<p>Fjärde Långgatan 41 Lgh 1103</p>
 									<p>413 27 Göteborg</p>
 									<p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
 								</div>
@@ -113,6 +114,7 @@
 								</div>
 							</div>
 							<div class="delivery col-xs-12 col-sm-12 col-md-6">
+							<!--
 								<p class="delivery__title">Leveranssätt</p>
 								<div class="order__input-wrapper custom-radio">
 									<input type="radio" name="delivery-type" id="delivery-standard" value="standard" class="custom-radio__input" checked>
@@ -122,6 +124,7 @@
 									<input type="radio" name="delivery-type" id="delivery-prio" value="prio" class="custom-radio__input">
 									<label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalning sker efter beställning lagts. </span></label>
 								</div>
+							-->
 							</div>
 						</div>
 						<div class="row">
@@ -161,7 +164,7 @@
 								<p class="delivery__title">Hämtas ut hos</p>
 								<p class="delivery__place">Hemköp Masthugget</p>
 								<input name="delivery-place" type="hidden" id="delivery-place" value="Hemköp Masthugget"/>
-								<button type="button" class="delivery__place-btn btn btn-default" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
+								<button type="button" class="delivery__place-btn btn btn-secondary" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
 							</div>
 						</div>
 					</div>
@@ -169,7 +172,7 @@
 				<div class="order-page__submit">
 					<div class="order-page__submit-action-wrapper">
 						<button class="btn btn-primary" type="submit" form="ordering"
-								data-toggle="tooltip" data-placement="top" data-original-title="Klicka för att  beställa vinsterna">
+								data-toggle="tooltip" data-placement="top" data-original-title="Bekräfta och beställ vinsterna">
 							Bekräfta och beställ vinsterna
 						</button>
 					</div>
