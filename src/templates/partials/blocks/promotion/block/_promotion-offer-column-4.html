@@ -1,4 +1,9 @@
-<section class="s-promotion-offer s-promotion-offer--full @@overlay">
+@@if(context.fullWidth === true) {
+<section class="s-promotion-offer s-promotion-offer--full @@background-color-class">
+}
+@@if(context.fullWidth === false) {
+<section class="s-promotion-offer s-promotion-offer--full">
+}
   <div class="container">
     <div class="row equal-height">
       <div class="col-xs-12">
@@ -23,8 +28,7 @@
               </div>
               }
             </div>
-            <div class="promotion-offer__image
-            @@if(context.image !== ''){ image--@@image_position}">
+            <div class="promotion-offer__image">
               @@if(context.has_content_image){
               <img src="@@image" srcset="@@image 2x" />
               }
