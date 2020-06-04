@@ -5,11 +5,16 @@
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 
 <div class="content-wrapper ml-2017">
-	@@include('blocks/_hero-fullwidth-v2.html',{
+  @@include('blocks/_hero-fullwidth-v2.html',{
   "logged_in": false,
   "background_video": false,
   "hero_overlay": true,
-  "hero_alignment": "center"
+  "content_alignment_desktop": "center",
+  "content_alignment_tablet": "left",
+  "content_alignment_mobile": "right",
+  "background_position_desktop": "center",
+  "background_position_tablet": "left",
+  "background_position_mobile": "right"
   })
 
   <section class="s-promotion-offer">
