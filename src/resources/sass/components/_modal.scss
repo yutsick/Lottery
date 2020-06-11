@@ -610,7 +610,7 @@
 				height: auto;
 				padding: 10px 30px;
 				border-radius: 4px!important;
-				border: solid 1px #053a53;
+				border: solid 1px $color-grey-dark;
 				background-color: $color-snow;
 				box-shadow: none;
 				text-align: center;
@@ -620,6 +620,10 @@
 				line-height: 1.2;
 				letter-spacing: 1px;
 				overflow: hidden;
+				transition: all 150ms ease-in;
+				&:focus {
+					border: solid 1px $color-primary;
+				}
 
 				&::-webkit-input-placeholder {
 					font-weight: $regular;
@@ -685,7 +689,6 @@
 
 			.content {
 				color: #053a53;
-				//text-align: center;
 
 				h5 {
 					&:not(:first-child) {
