@@ -655,6 +655,11 @@
 				width: 100%;
 			}
 
+			.checkbox-bold label{
+				font-weight: bold;
+				text-decoration: underline;
+			}
+
 			.input-group-btn {
 				position: absolute;
 				right: 1px;
