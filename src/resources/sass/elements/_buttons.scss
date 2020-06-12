@@ -266,6 +266,7 @@
 	&.js-is-active {
 		i {
 			color: $color-primary;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24px' height='24px' viewBox='0 0 24 24' version='1.1'%3E%3Ctitle%3Eicon-eye%3C/title%3E%3Cg id='icon-eye' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='eye' transform='translate(2.000000, 6.000000)'%3E%3Cpath d='M9.98800127,12 C5.43215962,12 1.10042396,7.29 0,6 C1.09860793,4.70901563 5.42571706,0 9.98800127,0 C15.3186798,0 19.0812649,4.70301563 20,5.973 C18.9391827,7.22198438 14.5825848,12 9.98800127,12 Z' id='Path' stroke='%23053A53' stroke-width='1.8' fill-rule='nonzero'/%3E%3Cellipse id='Oval' fill='%23053A53' cx='10' cy='6' rx='3.68421053' ry='3.81818182'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 		}
 	}
 }

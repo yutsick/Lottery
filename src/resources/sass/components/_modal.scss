@@ -591,7 +591,7 @@
 				width: 16px;
 				height: 16px;
 				background-color: #FFFFFF;
-				border: 1px solid #053A53;
+				//border: 1px solid #053A53;
 				border-radius: 1px;
 
 				&:after {
@@ -604,6 +604,7 @@
 					background-color: #053A53;
 					border-radius: 50%;
 				}
+				&:focus {border: 1px solid #053A53;}
 			}
 
 			.form-control {
@@ -683,7 +684,7 @@
 					cursor: pointer;
 				}
 				.vi {
-					height: 14px;
+					height: 18px;
 				}
 			}
 
