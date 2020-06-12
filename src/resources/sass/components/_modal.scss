@@ -591,8 +591,6 @@
 				width: 16px;
 				height: 16px;
 				background-color: #FFFFFF;
-				//border: 1px solid #053A53;
-				border-radius: 1px;
 
 				&:after {
 					content: '';
@@ -676,6 +674,7 @@
 				height: calc(100% - 2px);
 				border-radius: 0 4px 4px 0;
 				background-color: #ffffff;
+
 				.btn {
 					height: 100%;
 					margin-bottom: 0;
@@ -683,6 +682,7 @@
 					background-color: transparent;
 					cursor: pointer;
 				}
+
 				.vi {
 					height: 18px;
 				}
