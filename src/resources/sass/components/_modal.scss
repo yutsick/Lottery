@@ -826,13 +826,48 @@
 		}
 	}
 
-	&.fade{
+	&-backdrop-login {
 		opacity: 0;
-		transition: all 0.15s;
+	}
+
+	&.fade{
+		transition: all 0ms ease-in-out;
+		.modal-dialog {
+			opacity: 0;
+			transform: translate(0, 0)!important;
+			transition: transform 0s ease-in;
+		}
+		.modal-main-body {
+			background-attachment: fixed;
+
+		}
+		.modal-content {
+			transition: all 0.5s ease-in-out;
+
+		}
+		.modal-main-inner {
+			opacity: 0;
+			transform: translateX(40px);
+			transition: all 0.5s ease-in-out;
+		}
+	}
+	&.out {
+		.modal-main-inner {
+			opacity: 0;
+			transform: translateX(-40px);
+		}
 	}
 
 	&.in {
-		opacity: 1;
+		.modal-dialog {
+			opacity: 1;
+			transform: translate(0, 0)!important;
+		}
+
+		.modal-main-inner {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 }
 

@@ -20,9 +20,12 @@ export default function () {
 		});
 
 
-		$('.btn-back').click(function () {
-			$(stack[stack.length - 1]).modal();
-			stack.pop();
+		$('.btn-back').click(function (event) {
+			$(stack[stack.length - 1]).addClass("out");
+			setTimeout(function () {
+				$(stack[stack.length - 1]).modal();
+				stack.pop();
+			}, 200)
 		});
 
 		$('.modal-login button.close').click(function () {

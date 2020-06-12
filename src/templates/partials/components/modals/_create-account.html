@@ -1,4 +1,4 @@
-<div class="modal modal-login" id="modal-create-account" tabindex="-1" role="dialog" aria-labelledby="modal-create-account-label" aria-hidden="true">
+<div class="modal fade modal-login" id="modal-create-account" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="modal-create-account-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
 
@@ -14,7 +14,7 @@
 
 				<div class="modal-content modal-main-content">
 					<div class="modal-main-buttons">
-						<button class="btn-back" data-orientation="previous" data-toggle="modal" data-target="#modal-login">
+						<button class="btn-back" data-orientation="previous" data-target="#modal-login">
 							<span class="btn-back__icon"></span> <span class="btn-back__title">Tillbaka</span>
 						</button>
 						<a href="/" title="Hem" class="modal-btn__logo">
@@ -39,10 +39,12 @@
 							</div>
 
 							<form id="create-account-modal" class="account-form" data-toggle="validator">
+
 								<div class="form-group">
 									<label class="control-label" for="userId">Ditt personnummer</label>
 									<div class="inner-addon">
-										<input type="text" class="form-control" id="userId" placeholder="ÅÅMMDD-NNNN" data-minlength="10" data-mask="999999-9999" data-mask-selectonfocus="true" required>
+										<input type="text" class="form-control" id="userId" placeholder="ÅÅMMDD-NNNN" data-minlength="10" data-error="Error message" data-mask="999999-9999" data-mask-selectonfocus="true" required>
+										<div class="help-block with-errors"></div>
 									</div>
 									<p class="control-under-text">(Detta fält måste du fylla i. Minst 13 tecken).</p>
 								</div>

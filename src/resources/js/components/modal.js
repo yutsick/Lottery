@@ -11,9 +11,13 @@ export default function () {
 
 	$('.modal-login').on('shown.bs.modal', function (e) {
 		$('.modal-backdrop').addClass('modal-backdrop-login');
+		setTimeout(function () {
+			$('.modal-login').removeClass("out");
+		}, 100)
 	});
 
 	// Hide open modals when toggle.
+
 	$('.modal').on('show.bs.modal', function (e) {
 		$('.modal').modal('hide');
 	});
