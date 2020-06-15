@@ -33,7 +33,7 @@ export default function () {
 		});
 	}
 
-	$('.modal-login input:not([type=radio])').focusin(function () {
+	$('.modal-login input:not([type=radio]), .modal-login input:not([type=checkbox])').focusin(function () {
 		$(this).closest('.form-group').addClass( "focused");
 	}).focusout(function () {
 		$(this).closest('.form-group').removeClass( "focused");

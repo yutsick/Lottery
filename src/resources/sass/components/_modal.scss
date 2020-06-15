@@ -564,7 +564,8 @@
 					color: #053a53;
 				}
 				&.has-error {
-					input:not([type=radio]) {
+					input:not([type=radio]),
+					input:not([type=checkbox]) {
 						border-color: $color-error;
 						&:focus {
 							border-color: $color-primary;
