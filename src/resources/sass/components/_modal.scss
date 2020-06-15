@@ -837,6 +837,9 @@
 		&.disabled {
 			border: 1px solid $color-grey-dark;
 		}
+		&-link {
+			min-height: 1px;
+		}
 	}
 
 	&-backdrop-login {
