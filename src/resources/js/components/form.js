@@ -33,6 +33,12 @@ export default function () {
 		});
 	}
 
+	$('.modal-login input:not([type=radio])').focusin(function () {
+		$(this).closest('.form-group').addClass( "focused");
+	}).focusout(function () {
+		$(this).closest('.form-group').removeClass( "focused");
+	});
+
 
 	function form_validate() {
 

@@ -563,6 +563,19 @@
 					font-weight: $semibold;
 					color: #053a53;
 				}
+				&.has-error {
+					input:not([type=radio]) {
+						border-color: $color-error;
+						&:focus {
+							border-color: $color-primary;
+						}
+					}
+					&.focused {
+						.help-block.with-errors {
+							display: none;
+						}
+					}
+				}
 			}
 
 			.checkbox {
@@ -609,6 +622,8 @@
 				&:focus {border: 1px solid #053A53;}
 			}
 
+
+
 			.form-control {
 				height: auto;
 				padding: 10px 30px;
@@ -652,9 +667,6 @@
 					opacity: 0.5;
 				}
 
-
-				&#userPassword {
-				}
 			}
 
 			.input-group {
