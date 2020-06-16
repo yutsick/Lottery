@@ -1,3 +1,8 @@
+.bs-modal-open {
+	padding-right: 0!important;
+	overflow-y: auto!important;
+}
+
 .modal-dialog {
 	padding-right: $padding-medium;
 	padding-left: $padding-medium;

@@ -18,9 +18,9 @@ export default function () {
 	});
 
 	// Hide open modals when toggle.
-
 	$('.modal').on('show.bs.modal', function (e) {
 		$('.modal').modal('hide');
+		$('body').addClass("bs-modal-open");
 	});
 
 	// Modal-pages functionality.
