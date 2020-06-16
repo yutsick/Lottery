@@ -9,6 +9,7 @@ export default function () {
 		return false;
 	});
 
+
 	$('.modal-login').on('shown.bs.modal', function (e) {
 		$('.modal-backdrop').addClass('modal-backdrop-login');
 		setTimeout(function () {

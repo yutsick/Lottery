@@ -42,14 +42,15 @@
 								<div class="form-group">
 									<label class="control-label" for="userPersonalNumber">Ange personnummer</label>
 									<div class="inner-addon">
-										<input type="text" class="form-control" id="userPersonalNumber" placeholder="ÅÅMMDD-NNNN" data-minlength="10"  data-error="" required>
+										<input type="text" class="form-control" id="userPersonalNumber" placeholder="ÅÅMMDD-NNNN"  data-error="Error message" data-minlength="10"  data-error="" required>
+										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<div class="checkbox checkbox--small">
 										<label for="userRememberDevice">
-											<input class="custom-checkbox" id="userRememberDevice" type="checkbox" data-error="1111111111111111" required>
+											<input class="custom-checkbox" id="userRememberDevice" type="checkbox" data-error="Error message" required>
 											Kom ihåg mitt personnummer på denna enhet
 											<div class="help-block with-errors"></div>
 										</label>
