@@ -16,6 +16,11 @@ body {
 		overflow: hidden !important;
 		position: fixed;
 	}
+
+	&.bs-modal-open {
+		padding-right: 0!important;
+		overflow-y: auto!important;
+	}
 }
 
 .modal-backdrop {
