@@ -138,7 +138,6 @@
             flex: 1 1 auto;
             text-align: center;
             order: 2;
-
             &-logotype {
                 display: inline-block;
 
@@ -928,9 +927,9 @@
                 flex: 0 0 122px;
 
                 a {
+                    display: block;
                     height: 100%;
-                    display: flex;
-                    align-items: center;
+                    max-width: 100%;
                 }
             }
 
