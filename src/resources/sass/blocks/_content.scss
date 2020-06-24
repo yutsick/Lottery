@@ -161,10 +161,17 @@
 		vertical-align: middle;
 		margin: 0 auto 40px;
 		padding: 8px 30px;
-		min-width: 230px;
+		width: 355px;
 		font-family: $apercu-bold-font;
 		font-size: 20px;
 		color: #ffffff;
+		@media screen and (min-width: $screen-sm) {
+			width: 364px;
+			padding: 8px 59px;
+		}
+		@media screen and (min-width: $screen-md) {
+			width: 447px;
+		}
 		&:before {
 			content: '';
 			position: absolute;

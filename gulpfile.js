@@ -30,6 +30,7 @@ elixir((mix) => {
     mix.fileinclude();
 
     mix.copy(elixir.config.assetsPath + '/img', elixir.config.publicPath + '/img');
+    mix.copy(elixir.config.assetsPath + '/video', elixir.config.publicPath + '/video');
 	mix.copy(elixir.config.assetsPath + '/fonts', elixir.config.publicPath + '/fonts');
 	mix.copy('src/templates/ajax/json', 'dist/ajax/json');
 

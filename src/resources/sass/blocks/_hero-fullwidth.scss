@@ -1,4 +1,3 @@
-// New
 .hero-full {
     position: relative;
     z-index: 0;
@@ -10,6 +9,44 @@
     min-height: 75vh;
     margin: 0 auto $margin-small;
     overflow: hidden;
+
+    &__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        overflow: hidden;
+        &.hero-bgp {
+            @media screen and (max-width: $screen-xs-max){
+                &-mobile {
+                    &--left {
+                        left: 100%;
+                    }
+                }
+            }
+            @media screen and (min-width: $screen-sm){
+                &-tablet {
+                    &--left {
+                        left: 70%;
+                    }
+                }
+            }
+            @media screen and (min-width: $screen-md){
+                &-desktop {
+                    &--left {
+                        left: 50%;
+                    }
+                }
+            }
+        }
+    }
+
     &--bg {
         position: absolute;
         top: 0;
@@ -27,10 +64,11 @@
                 &-mobile {
                     &--left {
                         background-position: center left;
+                        &.hero-full__video {
+                            left: 0;
+                        }
                     }
-                    &--right {
-                        background-position: center right;
-                    }
+
                     &--center {
                         background-position: center center;
                     }
@@ -40,10 +78,11 @@
                 &-tablet {
                     &--left {
                         background-position: center left;
+                        &.hero-full__video {
+                            left: 0;
+                        }
                     }
-                    &--right {
-                        background-position: center right;
-                    }
+
                     &--center {
                         background-position: center center;
                     }
@@ -53,9 +92,9 @@
                 &-desktop {
                     &--left {
                         background-position: center left;
-                    }
-                    &--right {
-                        background-position: center right;
+                        &.hero-full__video {
+                            left: 0;
+                        }
                     }
                     &--center {
                         background-position: center center;
@@ -65,19 +104,6 @@
         }
     }
 
-    &__video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-        overflow: hidden;
-    }
 
     &.hero-content {
         @media screen and (max-width: $screen-xs-max){
@@ -89,22 +115,6 @@
                         margin-left: 0;
                         margin-right: auto;
                     }
-                    .hero-full__overlay {
-                        left: 0;
-                        transform: translate(-10%, 0);
-                    }
-                }
-                &--right {
-                    text-align: right;
-                    .hero-full__content {
-                        text-align: right;
-                        margin-left: auto;
-                        margin-right: 0;
-                    }
-                    .hero-full__overlay {
-                        right: 0;
-                        transform: translate(15%, 0);
-                    }
                 }
                 &--center {
                     text-align: center;
@@ -112,10 +122,6 @@
                         margin-left: auto;
                         margin-right: auto;
                         text-align: center;
-                    }
-                    .hero-full__overlay {
-                        left: 50%;
-                        transform: translate(-50%, 0);
                     }
                 }
             }
@@ -129,22 +135,6 @@
                         margin-left: 0;
                         margin-right: auto;
                     }
-                    .hero-full__overlay {
-                        left: 0;
-                        transform: translate(-10%, 0);
-                    }
-                }
-                &--right {
-                    text-align: right;
-                    .hero-full__content {
-                        text-align: right;
-                        margin-right: 0;
-                        margin-left: auto;
-                    }
-                    .hero-full__overlay {
-                        right: 0;
-                        transform: translate(15%, 0);
-                    }
                 }
                 &--center {
                     text-align: center;
@@ -152,10 +142,6 @@
                         margin-left: auto;
                         margin-right: auto;
                         text-align: center;
-                    }
-                    .hero-full__overlay {
-                        left: 50%;
-                        transform: translate(-50%, 0);
                     }
                 }
             }
@@ -169,22 +155,6 @@
                         margin-left: 0;
                         margin-right: auto;
                     }
-                    .hero-full__overlay {
-                        left: 0;
-                        transform: translate(-18%, 0);
-                    }
-                }
-                &--right {
-                    text-align: right;
-                    .hero-full__content {
-                        text-align: right;
-                        margin-right: 0;
-                        margin-left: auto;
-                    }
-                    .hero-full__overlay {
-                        right: 0;
-                        transform: translate(-15%, 0);
-                    }
                 }
                 &--center {
                     text-align: center;
@@ -192,25 +162,6 @@
                         margin-left: auto;
                         margin-right: auto;
                         text-align: center;
-                    }
-                    .hero-full__overlay {
-                        left: 50%;
-                        transform: translate(-50%, 0);
-                    }
-                }
-            }
-        }
-        @media screen and (min-width: $screen-lg-min) {
-            &-desktop {
-                &--left {
-                    .hero-full__overlay {
-                        left: 0;
-                        transform: translate(-20%, 0);
-                    }
-                }
-                &--right {
-                    .hero-full__overlay {
-                        transform: translate(-10%, 0);
                     }
                 }
             }
@@ -273,7 +224,6 @@
             max-width: 700px;
 
             .block-hero__title {
-                //margin-bottom: 20px;
                 font-family: $apercu-bold-font;
                 font-size: 64px;
             }
@@ -302,12 +252,16 @@
             content: "";
             position: absolute;
             top: 0;
-            width: 70%;
-            max-width: 800px;
+            width: 100%;
             height: 100%;
-            background-image: radial-gradient(86.75% 90.75% at 49.24% 45%, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 36.26%, rgba(0, 0, 0, 0.0001) 56%, rgba(0, 0, 0, 0) 100%),
-            radial-gradient(71.73% 71.73% at 49.24% 63.46%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.15) 57.26%, rgba(0, 0, 0, 0.0001) 70%, rgba(0, 0, 0, 0) 100%);
-            background-position: center, center;
+            background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+        }
+        &.hero-content-desktop--left {
+            .hero-full__overlay {
+                width: 150%;
+                right: 0;
+                left: auto;
+            }
         }
     }
 }

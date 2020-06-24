@@ -5,33 +5,36 @@
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 
 <div class="content-wrapper ml-2017">
+  @@include('blocks/_hero-fullwidth-v2.html',{
+  "logged_in": false,
+  "background_video": true,
+  "background_video_link": "assets/video/hemsidebanner_hi3.mp4",
+  "hero_overlay": true,
+  "content_alignment_desktop": "left",
+  "content_alignment_tablet": "center",
+  "content_alignment_mobile": "center",
+  "background_position_desktop": "left",
+  "background_position_tablet": "left",
+  "background_position_mobile": "left"
+  })
+
 	@@include('blocks/_hero-fullwidth-v2.html',{
   "logged_in": false,
   "background_video": false,
   "hero_overlay": true,
-  "content_alignment_desktop": "center",
+  "content_alignment_desktop": "left",
   "content_alignment_tablet": "left",
-  "content_alignment_mobile": "right",
+  "content_alignment_mobile": "center",
   "background_position_desktop": "center",
   "background_position_tablet": "left",
   "background_position_mobile": "right"
   })
-  @@include('blocks/_hero-fullwidth-v2.html',{
-  "logged_in": false,
-  "background_video": true,
-  "hero_overlay": true,
-  "content_alignment_desktop": "left",
-  "content_alignment_tablet": "right",
-  "content_alignment_mobile": "center",
-  "background_position_desktop": "left",
-  "background_position_tablet": "right",
-  "background_position_mobile": "center"
-  })
+
   @@include('blocks/_hero-fullwidth-v2.html',{
   "logged_in": false,
   "background_video": false,
   "hero_overlay": true,
-  "content_alignment_desktop": "right",
+  "content_alignment_desktop": "center",
   "content_alignment_tablet": "center",
   "content_alignment_mobile": "left",
   "background_position_desktop": "right",
@@ -39,247 +42,850 @@
   "background_position_mobile": "left"
   })
 
+  <!-- CTA block -->
   <section class="s-promotion-offer">
     <div class="container">
+      <h2 class="h2">CTA-block-medium</h2>
+      <h3 class="h3">Storleksvarianter och positionering</h3>
       <div class="row equal-height">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          @@include('blocks/promotion/block/_promotion-offer-column-2.html', {
-          "image": "assets/img/mockup/heart-symbol-white.svg",
+
+        @@include('blocks/promotion/block-cta/_cta-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": false,
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/CTA-block-lotter-frilagd.png",
+        "link_title": "Välj lotter som gör gott"
+        })
+
+        @@include('blocks/promotion/block-cta/_cta-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": true,
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+        "link_title": "Välj lotter som gör gott"
+        })
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">CTA-block-large</h2>
+      <h3 class="h3">text left img right</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-cta/_cta-block-large.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": false,
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+        "link_title": "Välj lotter som gör gott"
+        })
+      </div>
+      <h3 class="h3">text right img left</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-cta/_cta-block-large.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": true,
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+        "link_title": "Välj lotter som gör gott"
+        })
+      </div>
+    </div>
+  </section>
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">CTA-block-large-tall</h2>
+      <h3 class="h3">text left img right</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-cta/_cta-block-large-tall.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": false,
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+        "link_title": "Välj lotter som gör gott"
+        })
+      </div>
+      <h3 class="h3">text right img left</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-cta/_cta-block-large-tall.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": true,
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+        "link_title": "Välj lotter som gör gott"
+        })
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">CTA-block-large-text-only</h2>
+      <h3 class="h3">CTA-block-text-only är endast text och knapp</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-cta/_cta-block-large-text-only.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "vertical_alignment": "center",
+        "has_content_title": true,
+        "has_content_description": true,
+        "link_title": "Välj lotter som gör gott"
+        })
+      </div>
+    </div>
+  </section>
+  <!-- End of CTA-block  -->
+
+  <!-- Text-block  -->
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Text-block-small</h2>
+      <h3 class="h3">Övriga färgkombinationer</h3>
+      <div class="row equal-height">
+
+          @@include('blocks/promotion/block-text/_text-block-small.html', {
+          "theme": "light",
+          "text_alignment": "left",
+          "background-color-class": "",
+          "has_content_title": true,
+          "has_content_description": true,
+          "has_link": true,
+          "link_title": "Välj lotter som gör gott"
+          })
+
+          @@include('blocks/promotion/block-text/_text-block-small.html', {
           "theme": "dark",
           "text_alignment": "left",
-          "custom_bg": true,
           "background-color-class": "background-color-blue",
-          "bg_box_image": "",
-          "content_position": "",
           "has_content_title": true,
           "has_content_description": true,
-          "has_content_image": false,
           "has_link": true,
           "link_title": "Välj lotter som gör gott"
           })
-        </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          @@include('blocks/promotion/block/_promotion-campaign.html')
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          @@include('blocks/promotion/block/_promotion-campaign.html')
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="s-promotion-offer">
-      <div class="container">
-      <div class="row equal-height">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          @@include('blocks/promotion/block/_promotion-offer-column-2.html', {
-          "image": "assets/img/mockup/heart-symbol.png",
-          "theme": "dark",
-          "text_alignment": "left",
-          "custom_bg": false,
-          "background-color-class": "",
-          "bg_box_image": "",
-          "content_position": "left",
-          "has_content_title": true,
-          "has_content_description": true,
-          "has_content_image": true,
-          "has_link": true,
-          "link_title": "Välj lotter som gör gott"
-          })
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          @@include('blocks/promotion/block/_promotion-offer-column-1.html', {
-          "image": "assets/img/mockup/heart-symbol.png",
+          @@include('blocks/promotion/block-text/_text-block-small.html', {
           "theme": "light",
-          "text_alignment": "center",
-          "custom_bg": true,
-          "background-color-class": "background-color-light-blue",
-          "bg_box_image": "assets/img/mockup/promo-1.jpg",
+          "text_alignment": "left",
+          "background-color-class": "background-color-white",
           "has_content_title": true,
           "has_content_description": true,
-          "has_content_image": false,
           "has_link": true,
-          "link_title": "Se mer"
+          "link_title": "Välj lotter som gör gott"
           })
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          @@include('blocks/promotion/block/_promotion-offer-column-1.html', {
-          "image": "assets/img/mockup/heart-symbol.png",
-          "theme": "dark",
-          "text_alignment": "right",
-          "custom_bg": false,
-          "background-color-class": "",
-          "bg_box_image": "assets/img/mockup/promo-2.jpg",
+
+          @@include('blocks/promotion/block-text/_text-block-small.html', {
+          "theme": "light",
+          "text_alignment": "left",
+          "background-color-class": "background-color-grey",
           "has_content_title": true,
           "has_content_description": true,
-          "has_content_image": false,
           "has_link": true,
-          "link_title": "Gå till bingorum"
+          "link_title": "Välj lotter som gör gott"
           })
-        </div>
       </div>
     </div>
   </section>
-
 
   <section class="s-promotion-offer">
     <div class="container">
+      <h3 class="h3">Alignment av textinnehåll</h3>
       <div class="row equal-height">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          @@include('blocks/promotion/block/_promotion-offer-column-2.html', {
-          "image": "assets/img/mockup/heart-symbol.svg",
-          "image_position": "center",
+          @@include('blocks/promotion/block-text/_text-block-small.html', {
           "theme": "light",
-          "text_alignment": "center",
-          "custom_bg": true,
-          "background-color-class": "background-color-light-blue",
-          "bg_box_image": "",
-          "content_position": "right",
+          "text_alignment": "left",
+          "background-color-class": "",
           "has_content_title": true,
           "has_content_description": true,
-          "has_content_image": true,
           "has_link": true,
           "link_title": "Välj lotter som gör gott"
           })
-        </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          @@include('blocks/promotion/block/_promotion-offer-column-1.html', {
-          "image": "assets/img/mockup/heart-symbol.png",
-          "theme": "dark",
+          @@include('blocks/promotion/block-text/_text-block-small.html', {
+          "theme": "light",
           "text_alignment": "center",
-          "custom_bg": false,
-          "background-color-class": "background-color-light-blue",
-          "bg_box_image": "assets/img/mockup/promo-1.jpeg",
+          "background-color-class": "",
           "has_content_title": true,
-          "has_content_description": false,
-          "has_content_image": false,
-          "has_link": false,
-          "link_title": "Se mer"
-          })
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          @@include('blocks/promotion/block/_promotion-offer-column-1.html', {
-          "image": "assets/img/mockup/heart-symbol.png",
-          "theme": "dark",
-          "text_alignment": "center",
-          "custom_bg": true,
-          "background-color-class": "background-color-light-blue",
-          "bg_box_image": "assets/img/mockup/promo-2.jpeg",
-          "has_content_title": true,
-          "has_content_description": false,
-          "has_content_image": false,
+          "has_content_description": true,
           "has_link": true,
-          "link_title": "Gå till bingorum"
+          "link_title": "Lorem ipsum sed"
           })
-        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Promotion Full Width blocks -->
-  @@include('blocks/promotion/block/_promotion-offer-column-4.html', {
-  "fullWidth": false,
-  "image": "assets/img/mockup/promotion--image-full.png",
-  "theme": "light",
-  "text_alignment": "center",
-  "custom_bg": true,
-  "background-color-class": "background-color-light-blue",
-  "bg_box_image": "",
-  "content_position": "right",
-  "has_content_title": true,
-  "has_content_description": true,
-  "has_content_image": true,
-  "has_link": true,
-  "link_title": "Välj lotter som gör gott"
-  })
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Text-block-medium</h2>
+      <h3 class="h3">Storleksvarianter och positionering</h3>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-text/_text-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "top",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Välj lotter som gör gott"
+        })
 
 
-  @@include('blocks/promotion/block/_promotion-offer-column-4.html', {
-  "fullWidth": false,
-  "image": "assets/img/mockup/promotion--image-full.png",
-  "theme": "dark",
-  "text_alignment": "left",
-  "custom_bg": true,
-  "background-color-class": "background-color-blue",
-  "bg_box_image": "",
-  "content_position": "left",
-  "has_content_title": true,
-  "has_content_description": true,
-  "has_content_image": true,
-  "has_link": true,
-  "link_title": "Välj lotter som gör gott"
-  })
-
-  @@include('blocks/promotion/block/_promotion-offer-column-4.html', {
-  "fullWidth": true,
-  "image": "assets/img/mockup/promotion--image-full.png",
-  "theme": "dark",
-  "text_alignment": "left",
-  "custom_bg": true,
-  "background-color-class": "background-color-blue",
-  "bg_box_image": "",
-  "content_position": "left",
-  "has_content_title": true,
-  "has_content_description": true,
-  "has_content_image": true,
-  "has_link": true,
-  "link_title": "Välj lotter som gör gott"
-  })
+        @@include('blocks/promotion/block-text/_text-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "vertical_alignment": "top",
+        "background-color-class": "background-color-blue",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Välj lotter som gör gott"
+        })
 
 
-  @@include('blocks/promotion/block/_promotion-offer-column-4.html', {
-  "fullWidth": true,
-  "image": "assets/img/mockup/promotion--image-full.png",
-  "theme": "light",
-  "text_alignment": "left",
-  "custom_bg": true,
-  "background-color-class": "background-color-light-blue",
-  "bg_box_image": "",
-  "content_position": "right",
-  "has_content_title": true,
-  "has_content_description": true,
-  "has_content_image": true,
-  "has_link": true,
-  "link_title": "Välj lotter som gör gott"
-  })
+      </div>
+    </div>
+  </section>
 
-  @@include('blocks/promotion/block/_promotion-offer-column-4.html', {
-  "fullWidth": true,
-  "image": "assets/img/mockup/promotion--image-full.png",
-  "theme": "light",
-  "text_alignment": "left",
-  "custom_bg": true,
-  "background-color-class": "background-color-light-blue",
-  "bg_box_image": "",
-  "content_position": "above",
-  "has_content_title": true,
-  "has_content_description": true,
-  "has_content_image": true,
-  "has_link": true,
-  "link_title": "Välj lotter som gör gott"
-  })
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h3 class="h3">särskild regel vid medium/large = <small>knapp är inte placerad mot botten utan följer texten. Textinnehållet är också centrerat både på bredden och höjden.</small></h3>
+      <div class="row equal-height">
 
-  @@include('blocks/promotion/block/_promotion-offer-column-4.html', {
-  "fullWidth": true,
-  "image": "assets/img/mockup/promotion--image-full.png",
-  "theme": "dark",
-  "text_alignment": "center",
-  "custom_bg": true,
-  "background-color-class": "background-color-blue",
-  "bg_box_image": "",
-  "content_position": "above",
-  "has_content_title": true,
-  "has_content_description": true,
-  "has_content_image": true,
-  "has_link": true,
-  "link_title": "Välj lotter som gör gott"
-  })
+        @@include('blocks/promotion/block-text/_text-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Välj lotter som gör gott"
+        })
 
 
+        @@include('blocks/promotion/block-text/_text-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "vertical_alignment": "center",
+        "background-color-class": "background-color-blue",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Välj lotter som gör gott"
+        })
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Text-block-large</h2>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-text/_text-block-large.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "top",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Välj lotter som gör gott"
+        })
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Text-block-large - center</h2>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-text/_text-block-large.html', {
+        "theme": "light",
+        "text_alignment": "center",
+        "vertical_alignment": "center",
+        "background-color-class": "",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Välj lotter som gör gott"
+        })
+
+      </div>
+    </div>
+  </section>
+  <!-- End of Text-block  -->
+
+  <hr>
+
+  <!-- Img block -->
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Img-block-small</h2>
+      <h3 class="h3">Färgval</h3>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h3 class="h3">Alignment av text / knapp</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h3 class="h3">kolumnvarianter och positioneringar</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Välj lotter som gör gott"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-small.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": false,
+        "has_content_description": false,
+        "has_link": false,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Img-block-medium </h2>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-img/_img-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": false,
+        "has_content_description": false,
+        "has_link": false,
+        "link_title": "Se mer"
+        })
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Img-block-medium-tall</h2>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-img/_img-block-medium-tall.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-medium-tall.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-img/_img-block-medium-tall.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": false,
+        "has_content_description": false,
+        "has_link": false,
+        "link_title": "Se mer"
+        })
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Img-block-large</h2>
+      <h3 class="h3">left</h3>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-img/_img-block-large.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h3 class="h3">Center</h3>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-img/_img-block-large.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": false,
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+      </div>
+    </div>
+  </section>
+
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h3 class="h3">no text/btn</h3>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-img/_img-block-large.html', {
+        "theme": "dark",
+        "text_alignment": "center",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": false,
+        "has_content_description": false,
+        "has_link": false,
+        "link_title": "Se mer"
+        })
+
+      </div>
+    </div>
+  </section>
+  <!-- End of Img-block  -->
+
+  <!-- Split block -->
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Split-block-medium</h2>
+      <h3 class="h3">Storleksvarianter och positionering</h3>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "reversed_content": false,
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": true,
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "reversed_content": false,
+        "background-color-class": "background-color-white",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": true,
+        "background-color-class": "background-color-blue",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "center",
+        "reversed_content": false,
+        "background-color-class": "background-color-grey",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Split-block-large</h2>
+      <h3 class="h3">text left img right</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": false,
+        "image": "assets/img/mockup/split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+      <h3 class="h3">text right img left</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": true,
+        "image": "assets/img/mockup/Split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Split-block-large-tall</h2>
+      <h3 class="h3">text left img right</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large-tall.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": false,
+        "image": "assets/img/mockup/split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+      <h3 class="h3">text right img left</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large-tall.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": true,
+        "image": "assets/img/mockup/Split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+  <!-- End of Split-block  -->
+
+  <!-- CTA block -->
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">CTA-block-medium</h2>
+      <h3 class="h3">Storleksvarianter och positionering</h3>
+      <div class="row equal-height">
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "reversed_content": false,
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": true,
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "reversed_content": false,
+        "background-color-class": "background-color-white",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "dark",
+        "text_alignment": "left",
+        "reversed_content": true,
+        "background-color-class": "background-color-blue",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+
+        @@include('blocks/promotion/block-split/_split-block-medium.html', {
+        "theme": "light",
+        "text_alignment": "center",
+        "reversed_content": false,
+        "background-color-class": "background-color-grey",
+        "image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "assets/img/mockup/heart-symbol.png",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Split-block-large</h2>
+      <h3 class="h3">text left img right</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": false,
+        "image": "assets/img/mockup/split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+      <h3 class="h3">text right img left</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": true,
+        "image": "assets/img/mockup/Split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+  <section class="s-promotion-offer">
+    <div class="container">
+      <h2 class="h2">Split-block-large-tall</h2>
+      <h3 class="h3">text left img right</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large-tall.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": false,
+        "image": "assets/img/mockup/split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+      <h3 class="h3">text right img left</h3>
+      <div class="row equal-height">
+        @@include('blocks/promotion/block-split/_split-block-large-tall.html', {
+        "theme": "light",
+        "text_alignment": "left",
+        "vertical_alignment": "center",
+        "reversed_content": true,
+        "image": "assets/img/mockup/Split-block-vinster.jpg",
+        "has_content_title": true,
+        "has_content_description": true,
+        "content_image": "",
+        "has_link": true,
+        "link_title": "Se mer"
+        })
+      </div>
+    </div>
+  </section>
+  <!-- End of CTA-block  -->
+<!-- TODO  old /// -->
 
   <!-- Promotion video -->
   @@include('blocks/promotion/_promotion-example-video.html', {
@@ -347,17 +953,6 @@
       </div>
     </div>
   </section>
-
-
-  @@include('blocks/promotion/_promotion-example-text-image.html', {
-  "revers": "revers"
-  })
-
-  @@include('blocks/promotion/_promotion-example-text-image.html', {
-  "revers": ""
-  })
-
-  @@include('blocks/promotion/_promotion-example-text-full.html')
 
 </div>
 

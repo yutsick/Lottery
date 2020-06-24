@@ -95,13 +95,15 @@ img.align-center {
 }
 
 .background-color-blue {
-	background-color: $color-blue-deep;
+	background-color: $color-blue-deep!important;
 }
-.background-color-blue-deep {
-	background-color: $color-blue-deep;
-}
+
 .background-color-light-blue {
-	background-color: $color-blue-light;
+	background-color: $color-blue-light!important;
+}
+
+.background-color-grey {
+	background-color: $color-grey-bg!important;
 }
 
 .background-color-green {
@@ -151,7 +153,7 @@ img.align-center {
 }
 
 .background-color-white {
-	background-color: $color-light;
+	background-color: $color-light!important;
 }
 
 .background-color-lightpink {
