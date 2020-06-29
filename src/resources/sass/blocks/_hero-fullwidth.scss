@@ -6,7 +6,8 @@
     justify-content: flex-end;
     width: 100%;
     max-width: 2560px;
-    min-height: 75vh;
+    min-height: 70vh;
+    max-height: 79vh;
     margin: 0 auto $margin-small;
     overflow: hidden;
 
@@ -28,6 +29,9 @@
                     &--left {
                         left: 100%;
                     }
+                    &--right {
+                        left: 0;
+                    }
                     &--center {
                         left: 50%;
                     }
@@ -39,6 +43,9 @@
                     &--left {
                         left: 70%;
                     }
+                    &--right {
+                        left: 30%;
+                    }
                     &--center {
                         left: 50%;
                     }
@@ -48,6 +55,9 @@
             @media screen and (min-width: $screen-md){
                 &-desktop {
                     &--left {
+                        left: 50%;
+                    }
+                    &--right {
                         left: 50%;
                     }
                     &--center {
@@ -79,7 +89,9 @@
                             left: 0;
                         }
                     }
-
+                    &--right {
+                        background-position: center right;
+                    }
                     &--center {
                         background-position: center center;
                     }
@@ -93,7 +105,9 @@
                             left: 0;
                         }
                     }
-
+                    &--right {
+                        background-position: center right;
+                    }
                     &--center {
                         background-position: center center;
                     }
@@ -106,6 +120,9 @@
                         &.hero-full__video {
                             left: 0;
                         }
+                    }
+                    &--right {
+                        background-position: center right;
                     }
                     &--center {
                         background-position: center center;
@@ -163,7 +180,7 @@
                     text-align: left;
                     .hero-full__content {
                         text-align: left;
-                        margin-left: 0;
+                        margin-left: 120px;
                         margin-right: auto;
                     }
                 }
