@@ -31,19 +31,6 @@
     }
   }
 
-  &.vertical {
-    &-top {
-      .text-block__content {
-        justify-content: flex-start;
-      }
-    }
-
-    &-center {
-      .text-block__content {
-        justify-content: center;
-      }
-    }
-  }
 
   &__title {
     margin-top: 18px;
@@ -85,6 +72,7 @@
   &--large {
     .text-block {
       &__content {
+        justify-content: center;
         width: 100%;
         padding: 20px 20px 30px;
         background-repeat: no-repeat;
@@ -98,7 +86,6 @@
         padding-left: 20px;
       }
     }
-
     .btn {
       max-width: 100%;
       word-wrap: break-word;

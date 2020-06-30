@@ -35,19 +35,6 @@
     }
   }
 
-  &.vertical {
-    &-top {
-      .cta-block__content {
-        justify-content: flex-start;
-      }
-    }
-
-    &-center {
-      .cta-block__content {
-        justify-content: center;
-      }
-    }
-  }
 
   &__title {
     margin-top: 18px;
@@ -165,6 +152,7 @@
 
       &__content {
         min-height: 282px;
+        justify-content: center;
       }
     }
 
@@ -254,6 +242,7 @@
 
       &__content {
         min-height: 282px;
+        justify-content: center;
       }
     }
 
@@ -335,6 +324,7 @@
   &--large-text-only {
     .cta-block {
       &__content {
+        justify-content: center;
         padding-top: 60px;
         padding-bottom: 60px;
         max-width: 730px;

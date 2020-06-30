@@ -31,20 +31,6 @@
     }
   }
 
-  &.vertical {
-    &-top {
-      .img-block__content {
-        justify-content: flex-start;
-      }
-    }
-
-    &-center {
-      .img-block__content {
-        justify-content: center;
-      }
-    }
-  }
-
   &__title {
     margin-top: 18px;
     font-size: 28px;
