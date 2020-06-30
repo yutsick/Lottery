@@ -12,12 +12,12 @@
     flex-flow: nowrap;
   }
 
-  &--dark {
-    color: $color-snow !important;
+  &.split-block--dark {
+    color: $color-snow;
   }
 
-  &--light {
-    color: $color-blue-deep !important;
+  &.split-block--light {
+    color: $color-blue-deep;
   }
 
   &.alignment {

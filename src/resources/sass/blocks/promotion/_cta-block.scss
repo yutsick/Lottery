@@ -13,12 +13,12 @@
     flex-flow: nowrap;
   }
 
-  &--dark {
-    color: $color-snow !important;
+  &.cta-block--dark {
+    color: $color-snow;
   }
 
-  &--light {
-    color: $color-blue-deep !important;
+  &.cta-block--light {
+    color: $color-blue-deep;
   }
 
   &.alignment {

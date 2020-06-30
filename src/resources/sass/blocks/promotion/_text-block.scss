@@ -9,12 +9,12 @@
     margin-bottom: $margin-small * 2;
   }
 
-  &--dark {
-    color: $color-snow !important;
+  &.text-block--dark {
+    color: $color-snow;
   }
 
-  &--light {
-    color: $color-blue-deep !important;
+  &.text-block--light {
+    color: $color-blue-deep;
   }
 
   &.alignment {
