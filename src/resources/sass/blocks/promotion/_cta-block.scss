@@ -68,8 +68,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px 20px 30px 20px;
-
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
@@ -79,7 +77,6 @@
     @media screen and (min-width: $screen-sm) {
       width: 50%;
       height: 100%;
-      padding: 20px 20px 30px 10px;
     }
   }
 
@@ -188,18 +185,6 @@
           min-height: 282px;
         }
       }
-
-      &.reversed {
-        .cta-block {
-          &__content {
-
-          }
-
-          &__image {
-
-          }
-        }
-      }
     }
 
     @media screen and (min-width: $screen-md) {
@@ -214,19 +199,13 @@
         &__image {
           width: 50%;
           min-height: auto;
-          padding: 20px 20px 30px 40px;
         }
-
       }
+
       &.reversed {
         .cta-block {
           &__content {
             padding: 20px 20px 30px 40px;
-          }
-
-          &__image {
-            padding: 20px 40px 30px 20px;
-
           }
         }
       }
@@ -277,19 +256,6 @@
           min-height: 390px;
           height: auto;
         }
-
-      }
-
-      &.reversed {
-        .cta-block {
-          &__content {
-
-          }
-
-          &__image {
-
-          }
-        }
       }
     }
 
@@ -300,21 +266,12 @@
         &__content {
           padding: 20px 40px 30px 20px;
         }
-
-        &__image {
-          padding: 20px 20px 30px 40px;
-        }
-
       }
 
       &.reversed {
         .cta-block {
           &__content {
             padding: 20px 20px 30px 40px;
-          }
-
-          &__image {
-            padding: 20px 40px 30px 20px;
           }
         }
       }
