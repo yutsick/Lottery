@@ -5,6 +5,7 @@
   height: 100%;
   margin-bottom: $margin-small;
   min-height: 282px;
+  text-align: center;
   @media screen and (min-width: $screen-sm) {
     margin-bottom: $margin-small * 2;
   }
@@ -18,20 +19,6 @@
 
   &.split-block--light {
     color: $color-blue-deep;
-  }
-
-  &.alignment {
-    &-center {
-      text-align: center;
-    }
-
-    &-right {
-      text-align: right;
-    }
-
-    &-left {
-      text-align: left;
-    }
   }
 
   &__title {
@@ -108,8 +95,6 @@
       }
     }
 
-
-
     .btn {
       max-width: 100%;
       word-wrap: break-word;
@@ -127,6 +112,7 @@
 
     }
     @media screen and (min-width: $screen-md) {
+      text-align: left;
       &__content {
         width: 50%;
       }
@@ -167,6 +153,7 @@
     }
 
     @media screen and (min-width: $screen-sm) {
+      text-align: left;
       .split-block {
         &__content {
           width: 100%;
@@ -238,6 +225,7 @@
     }
 
     @media screen and (min-width: $screen-sm) {
+      text-align: left;
       .split-block {
         &__content {
           width: 100%;
