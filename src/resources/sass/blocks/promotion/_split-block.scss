@@ -62,7 +62,7 @@
 
     overflow: hidden;
     @media screen and (min-width: $screen-sm) {
-      width: 50%;
+      //width: 50%;
       height: 100%;
     }
   }
@@ -109,17 +109,32 @@
       }
     }
     @media screen and (min-width: $screen-sm) {
+      .split-block {
+        &__content {
+          width: calc(50% - 10px);
+          margin-right: 10px;
+        }
+        &__image {
+          margin-left: 10px;
+          width: calc(50% - 10px);
+        }
+      }
 
+      &.reversed {
+        .split-block {
+          &__content {
+            margin-left: 10px;
+            margin-right: 0;
+          }
+          &__image {
+            margin-left: 0;
+            margin-right: 10px;
+          }
+        }
+      }
     }
     @media screen and (min-width: $screen-md) {
       text-align: left;
-      &__content {
-        width: 50%;
-      }
-
-      &__image {
-        width: 50%;
-      }
     }
   }
 
@@ -170,24 +185,26 @@
     }
 
     @media screen and (min-width: $screen-md) {
-
       .split-block {
-
         &__content {
-          width: 50%;
-          padding: 20px 40px 30px 20px;
+          width: calc(50% - 10px);
+          margin-right: 10px;
         }
-
         &__image {
-          width: 50%;
-          min-height: auto;
+          margin-left: 10px;
+          width: calc(50% - 10px);
         }
-
       }
+
       &.reversed {
         .split-block {
           &__content {
-            padding: 20px 20px 30px 40px;
+            margin-left: 10px;
+            margin-right: 0;
+          }
+          &__image {
+            margin-left: 0;
+            margin-right: 10px;
           }
         }
       }
@@ -244,16 +261,25 @@
     @media screen and (min-width: $screen-md) {
       min-height: 390px;
       .split-block {
-
         &__content {
-          padding: 20px 40px 30px 20px;
+          width: calc(50% - 10px);
+          margin-right: 10px;
+        }
+        &__image {
+          margin-left: 10px;
+          width: calc(50% - 10px);
         }
       }
 
       &.reversed {
         .split-block {
           &__content {
-            padding: 20px 20px 30px 40px;
+            margin-left: 10px;
+            margin-right: 0;
+          }
+          &__image {
+            margin-left: 0;
+            margin-right: 10px;
           }
         }
       }

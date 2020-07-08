@@ -40,9 +40,11 @@
     -webkit-background-size: cover;
     background-size: cover;
     @media screen and (min-width: $screen-sm) {
-      width: 50%;
+      width: calc(50% - 10px);
       height: 100%;
-      padding: 20px 40px 30px 20px;
+      margin-left: 0;
+      margin-right: 10px;
+      padding: 20px 20px 30px 20px;
     }
   }
 
@@ -60,7 +62,8 @@
 
     overflow: hidden;
     @media screen and (min-width: $screen-sm) {
-      width: 50%;
+      margin-left: 10px;
+      width: calc(50% - 10px);
       height: 100%;
     }
   }
@@ -76,9 +79,6 @@
     .cta-block {
       &__content {
         order: 2;
-        @media screen and (min-width: $screen-sm) {
-          padding: 20px 20px 30px 40px;
-        }
       }
 
       &__image {
@@ -119,13 +119,29 @@
 
 
 
-    @media screen and (min-width: $screen-md) {
-      &__content {
-        width: 50%;
-      }
+    @media screen and (min-width: $screen-sm) {
+      .cta-block {
+        &__content {
+          width: calc(50% - 10px);
+          margin-right: 10px;
 
-      &__image {
-        width: 50%;
+        }
+        &__image {
+          margin-left: 10px;
+          width: calc(50% - 10px);
+        }
+      }
+      &.reversed {
+        .cta-block {
+          &__content {
+            margin-left: 10px;
+            margin-right: 0;
+          }
+          &__image {
+            margin-left: 0;
+            margin-right: 10px;
+          }
+        }
       }
     }
   }
@@ -146,12 +162,16 @@
       }
     }
 
-
     @media screen and (max-width: $screen-md) {
       .cta-block {
         &__content {
+          margin: 0;
           padding: 20px;
           text-align: center;
+        }
+        &__image {
+          margin: 0;
+          width: 100%;
         }
       }
     }
@@ -183,14 +203,13 @@
     @media screen and (min-width: $screen-md) {
 
       .cta-block {
-
         &__content {
-          width: 50%;
-          padding: 20px 40px 30px 20px;
+          width: calc(50% - 10px);
+          margin-right: 10px;
         }
-
         &__image {
-          width: 50%;
+          margin-left: 10px;
+          width: calc(50% - 10px);
           min-height: auto;
         }
       }
@@ -198,7 +217,12 @@
       &.reversed {
         .cta-block {
           &__content {
-            padding: 20px 20px 30px 40px;
+            margin-left: 10px;
+            margin-right: 0;
+          }
+          &__image {
+            margin-left: 0;
+            margin-right: 10px;
           }
         }
       }
@@ -226,8 +250,13 @@
     @media screen and (max-width: $screen-md) {
       .cta-block {
         &__content {
+          margin: 0;
           padding: 20px;
           text-align: center;
+        }
+        &__image {
+          margin: 0;
+          width: 100%;
         }
       }
     }
@@ -259,16 +288,26 @@
     @media screen and (min-width: $screen-md) {
       min-height: 390px;
       .cta-block {
-
         &__content {
-          padding: 20px 40px 30px 20px;
+          width: calc(50% - 10px);
+          margin-right: 10px;
+          padding: 20px 20px 30px 20px;
+        }
+        &__image {
+          margin-left: 10px;
+          width: calc(50% - 10px);
         }
       }
 
       &.reversed {
         .cta-block {
           &__content {
-            padding: 20px 20px 30px 40px;
+            margin-left: 10px;
+            margin-right: 0;
+          }
+          &__image {
+            margin-left: 0;
+            margin-right: 10px;
           }
         }
       }
