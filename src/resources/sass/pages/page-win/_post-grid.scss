@@ -1,0 +1,46 @@
+.ie11 {
+  .post {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 20px 10px;
+    max-width: 100%;
+
+    @media screen and (min-width: 680px) {
+      width: calc(49% - 20px);
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1399px) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: 1400px) {
+      width: calc(49% - 20px);
+    }
+  }
+}
+.grid {
+  display: block;
+
+  @supports (display: grid) {
+    display: -ms-grid !important;
+    display: grid !important;
+    grid-gap: 10px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-auto-rows: 2px;
+    -ms-grid-rows: 2px;
+
+    @media screen and (min-width: 680px) {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    @media screen and (min-width: 992px) {
+      margin-left: 10px;
+    }
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    @media screen and (min-width: 1300px) {
+      grid-template-columns: repeat(2, minmax(300px, 1fr));
+    }
+  }
+}

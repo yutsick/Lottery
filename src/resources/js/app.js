@@ -55,6 +55,7 @@ import slideOutNavigation from './layout/slide-out-navigation';
 import slideOutAccountNavigation from './layout/slide-out-account';
 import navigationControl from './layout/navigation-control';
 import navigationItem from './layout/navigation-item';
+import grid from './layout/grid';
 
 /* Utilities */
 import textToggle from './utilities/textToggle';
@@ -112,9 +113,10 @@ $(function () {
 	slideOutAccountNavigation();
 	navigationControl();
 	navigationItem();
+	grid();
 	Carousel();
 	RegisterLottery.init();
-	
+
 	timeSpent.init('.js-timespent').start();
 	Odometer();
 
@@ -149,6 +151,3 @@ function changeSlideClasses(slide, method, className) {
 		cellElem.classList[method](className);
 	});
 }
-
-
-

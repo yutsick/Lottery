@@ -1,4 +1,6 @@
 export default function () {
+
+
 	let $flickity = $('.block-slider').flickity({
 		cellSelector: '.block-slider__item',
 		cellAlign: 'left',
@@ -24,52 +26,68 @@ export default function () {
 		}
 	});
 
-
 	// Slider for post inner page
+	const multiplePosts = $(".post-slider__item").length > 1;
 	let $flickityPostSlider = $('.post-slider').flickity({
 		cellSelector: '.post-slider__item',
 		cellAlign: 'left',
 		wrapAround: true,
 		contain: false,
-		draggable: true,
-		pageDots: true,
-		prevNextButtons: true
+		draggable: multiplePosts,
+		pageDots: multiplePosts,
+		adaptiveHeight: false,
+		prevNextButtons: multiplePosts
 	});
+
+	// Change caption position for mobile
+	let maxHeight = Math.max.apply(null, $(".post-slider__caption").map(function () {
+		return $(this).outerHeight();
+	}).get());
+	const captionHeightFn = () => {
+		let curItem = $flickityPostSlider.data('flickity').selectedElement;
+
+		if ( $(window).width() < 768 ) {
+
+			$(curItem).closest('.post-slider').css('padding-bottom', (maxHeight));
+			$(curItem).find('.post-slider__caption').css({
+				'bottom': - (maxHeight),
+				'height': maxHeight
+			});
+			$(".flickity-page-dots").css('bottom', (maxHeight + 20));
+
+		} else {
+			$(curItem).closest('.post-slider').css('padding-bottom', 0);
+			$(".flickity-page-dots").css('bottom', 20);
+			$(curItem).find('.post-slider__caption').css({
+				'bottom': 0,
+				'height': "auto"
+			});
+		}
+	};
 
 	// Disable previous button by default
 	$flickityPostSlider.find('.previous').addClass('disabled');
 
-	const captionHeightFn = () => {
-		let curItem = $flickityPostSlider.data('flickity').selectedElement;
-		let curItemHeight = $(curItem).find('.post-slider__caption').outerHeight();
-
-		if ( $(window).width() < 768 ) {
-			$(".flickity-page-dots").css('bottom', (curItemHeight + 20));
-		} else {
-			$(".flickity-page-dots").css('bottom', 20);
-		}
-	};
-
-
-	$flickityPostSlider.on( 'ready.flickity', function( event, index ) {
-		captionHeightFn();
-		window.onresize = function() {
-			captionHeightFn();
-		};
-	});
 	$flickityPostSlider.on('select.flickity', function () {
 		let $this = $(this);
 		let flkty = $this.data('flickity');
 		let $previousButton = $this.find('.previous');
+		console.log(flkty.selectedIndex);
 
 		if (flkty.selectedIndex == 0) {
-			$previousButton.addClass('disabled');
+			$previousButton.addClass('disabled').fadeOut();
 		} else {
-			$previousButton.removeClass('disabled');
+			$previousButton.removeClass('disabled').fadeIn();
 		}
-
 		captionHeightFn();
 	});
+
+	if ($(".post-slider")[0]){
+		captionHeightFn();
+		$(window).resize(function() {
+			captionHeightFn();
+		});
+	}
 }
 
 
