@@ -1,10 +1,14 @@
+
 .promotion-offer {
     display: flex;
-    background-color: $color-blue-deep;
-    color: $color-snow;
+
     height: 100%;
     margin-bottom: $margin-small;
     flex-direction: column;
+    &:not(.custom-bg) {
+        background-color: $color-blue-deep;
+        color: $color-snow;
+    }
     
     &--blue {
         background-color: $color-blue;
@@ -16,7 +20,7 @@
 
     &--turquoise {
         background-color: $color-turquoise;
-		color: $color-primary;
+		    color: $color-primary;
     }
 
     &__content {
@@ -53,9 +57,12 @@
     }
 
     &__title {
+        font-family: $apercu-bold-font;
+        font-weight: bold;
         margin-top: 0;
     }
-    .btn-invert {
+
+    .btn {
         margin-top: $margin-default;
     }
 

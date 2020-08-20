@@ -75,6 +75,8 @@
 	margin: 0;
 }
 
+
+
 // Large blocks only
 [class*=' col- ']:not(.col-sm-6):not(.col-md-12) {
 	.block-promotion:not(.block-promotion--image) {
@@ -232,3 +234,8 @@
 @import "promotion/promotion-offer";
 @import "promotion/promotion-campaign";
 @import "promotion/promotion-shop";
+@import "promotion/_promotion-video";
+@import "promotion/img-block";
+@import "promotion/split-block";
+@import "promotion/text-block";
+@import "promotion/cta-block";

@@ -1,3 +1,302 @@
+.hero-full {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 2560px;
+    min-height: 70vh;
+    max-height: 79vh;
+    margin: 0 auto $margin-small;
+    overflow: hidden;
+
+    &__video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        overflow: hidden;
+        &.hero-bgp {
+            @media screen and (max-width: $screen-xs-max){
+                &-mobile {
+                    &--left {
+                        left: 100%;
+                    }
+                    &--right {
+                        left: 0;
+                    }
+                    &--center {
+                        left: 50%;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $screen-sm){
+                &-tablet {
+                    &--left {
+                        left: 70%;
+                    }
+                    &--right {
+                        left: 30%;
+                    }
+                    &--center {
+                        left: 50%;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $screen-md){
+                &-desktop {
+                    &--left {
+                        left: 50%;
+                    }
+                    &--right {
+                        left: 50%;
+                    }
+                    &--center {
+                        left: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    &--bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: $color-blue-deep;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &.hero-bgp {
+            @media screen and (max-width: $screen-xs-max){
+                &-mobile {
+                    &--left {
+                        background-position: center left;
+                        &.hero-full__video {
+                            left: 0;
+                        }
+                    }
+                    &--right {
+                        background-position: center right;
+                    }
+                    &--center {
+                        background-position: center center;
+                    }
+                }
+            }
+            @media screen and (min-width: $screen-sm){
+                &-tablet {
+                    &--left {
+                        background-position: center left;
+                        &.hero-full__video {
+                            left: 0;
+                        }
+                    }
+                    &--right {
+                        background-position: center right;
+                    }
+                    &--center {
+                        background-position: center center;
+                    }
+                }
+            }
+            @media screen and (min-width: $screen-md){
+                &-desktop {
+                    &--left {
+                        background-position: center left;
+                        &.hero-full__video {
+                            left: 0;
+                        }
+                    }
+                    &--right {
+                        background-position: center right;
+                    }
+                    &--center {
+                        background-position: center center;
+                    }
+                }
+            }
+        }
+    }
+
+
+    &.hero-content {
+        @media screen and (max-width: $screen-xs-max){
+            &-mobile {
+                &--left {
+                    text-align: left;
+                    .hero-full__content {
+                        text-align: left;
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
+                &--center {
+                    text-align: center;
+                    .hero-full__content {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: $screen-sm){
+            &-tablet {
+                &--left {
+                    text-align: left;
+                    .hero-full__content {
+                        text-align: left;
+                        margin-left: 0;
+                        margin-right: auto;
+                    }
+                }
+                &--center {
+                    text-align: center;
+                    .hero-full__content {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: $screen-md){
+            &-desktop {
+                &--left {
+                    text-align: left;
+                    .hero-full__content {
+                        text-align: left;
+                        margin-left: 120px;
+                        margin-right: auto;
+                    }
+                }
+                &--center {
+                    text-align: center;
+                    .hero-full__content {
+                        margin-left: auto;
+                        margin-right: auto;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    &__content {
+        max-width: 100%;
+        padding: 0 20px;
+        color: #fff;
+        .block-hero__title {
+            margin-bottom: 10px;
+            font-size: 32px;
+            line-height: 1.06;
+        }
+        .block-hero__text {
+            font-size: 18px;
+        }
+        .btn {
+            margin-top: 10px;
+            padding: 12px 30px;
+        }
+    }
+
+    &__holder {
+        padding-top: 80px;
+        padding-bottom: 30px;
+        background-image: linear-gradient(180deg, rgba(46, 50, 55, 0.0001) 13.44%, rgba(26, 29, 32, 0.7) 47.91%, rgba(0, 0, 0, 0.9) 100%);
+    }
+
+    @include min-screen($screen-sm-min) {
+        margin-bottom: 20px;
+        .hero-content-desktop--right {
+            .hero-full__content {
+                margin-left: auto;
+                margin-right: 40px;
+            }
+        }
+
+        .hero-content-desktop--left {
+            .hero-full__content {
+                margin-left: 40px;
+                margin-right: auto;
+            }
+        }
+
+        &__holder {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 180px 0 60px;
+            height: 100%;
+
+            & > * {
+                width: 100%;
+            }
+        }
+
+        &__content {
+            position: relative;
+            max-width: 700px;
+
+            .block-hero__title {
+                font-family: $apercu-bold-font;
+                font-size: 64px;
+            }
+
+            .block-hero__text {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $screen-md-min) {
+        margin-bottom: 60px;
+        min-height: 70vh;
+        justify-content: center;
+        &__holder {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 180px 0 180px;
+            height: 100%;
+            background-image: none;
+        }
+        &__overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0));
+        }
+        &.hero-content-desktop--left {
+            .hero-full__overlay {
+                width: 150%;
+                right: 0;
+                left: auto;
+            }
+        }
+    }
+}
+
+
+// old
 .hero-fullwidth {
     position: relative;
     width: 100%;
@@ -68,7 +367,7 @@
 
         .block-hero-reg__container { 
             min-height: 0;
-            padding: 10p;
+            padding: 10px;
         }
 
     }

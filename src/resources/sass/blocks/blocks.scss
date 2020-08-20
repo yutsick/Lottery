@@ -60,9 +60,9 @@
 		margin-top: 0;
 		padding: $padding-default;
 		border-radius: $border-radius;
-		//border: $box-border-width solid $color-feather;
 	}
 }
+
 
 @import "hero";
 @import "hero-reg";
@@ -81,4 +81,6 @@
 @import "balance-bar";
 @import "bingo-tabs";
 @import "hero-fullwidth";
+@import "s-bullet-points";
+@import "slider-promo";
 @import "register-lottery";

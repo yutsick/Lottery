@@ -1,6 +1,4 @@
 export default function () {
-
-
 	let $flickity = $('.block-slider').flickity({
 		cellSelector: '.block-slider__item',
 		cellAlign: 'left',
@@ -25,6 +23,7 @@ export default function () {
 			$previousButton.removeClass('disabled');
 		}
 	});
+
 
 	// Slider for post inner page
 	const multiplePosts = $(".post-slider__item").length > 1;
@@ -88,6 +87,20 @@ export default function () {
 			captionHeightFn();
 		});
 	}
+
+	$(".js-show-description").click(function (e) {
+		let th = $(this);
+		if (th.attr('href') == '') {
+			e.preventDefault();
+			th.closest(".block-promotion__content").siblings('.block-slider-description').toggleClass("on");
+		}
+	});
+
+	$(".js-hide-description").click(function (e) {
+		e.preventDefault();
+		$(this).parent().toggleClass("on");
+	})
+
 }
 
 
