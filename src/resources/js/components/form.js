@@ -4,32 +4,82 @@ export default function () {
 	form_empty_input();
 	form_active_search();
 	toggle_profile_inputs();
+	modalHistory();
+
 
 	if ($('.my-pages').length) {
 		validate_my_profile();
 	}
 
+	function modalHistory() {
+		const stack = [];
+		$('.btn-hash').click(function () {
+			const previousModal = $(this).closest(".modal-login").attr("id");
+			const previousModalAsId = `#${previousModal}`;
+			stack.push(previousModalAsId);
+		});
+
+
+		$('.btn-back').click(function (event) {
+			$(stack[stack.length - 1]).addClass("out");
+			setTimeout(function () {
+				$(stack[stack.length - 1]).modal();
+				stack.pop();
+			}, 200)
+		});
+
+		$('.modal-login button.close').click(function () {
+			stack.length = 0;
+		});
+	}
+
+	$('.modal-login input').focusin(function () {
+		const hasError = $(this).closest('.form-group').hasClass('has-error');
+		if (!hasError) {
+			$(this).closest('.form-group').addClass("focused");
+		}
+	}).focusout(function () {
+		$(this).closest('.form-group').removeClass("focused");
+	});
+
 	function form_validate() {
+
+		$('#modal-recover-password').validator().on('submit', function (e) {
+			if (e.isDefaultPrevented()) {
+			} else {
+				$('#modal-recover-password-options').modal();
+			}
+			return false;
+		});
+
+		$('#modal-recover-password-options .group-forgot-password button').on('click', function (e) {
+			$('#modal-recover-password-options-success').modal();
+			return false;
+		});
+
+		$('.account-form').validator().on('submit', function (e) {
+			let $form = $(this);
+			let $formError = $form.closest('.modal-main-center').find('.modal-main__subTitle .modal-form__error');
+			let $formSuccess = $form.closest('.modal-main-center').find('.modal-main__subTitle .modal-form__success');
+
+			if (e.isDefaultPrevented()) {
+				$formSuccess.hide();
+				$formError.fadeIn();
+			} else {
+				$formError.hide();
+				$formSuccess.fadeIn();
+			}
+		});
+
 		$('#create-account-modal').validator().on('submit', function (e) {
-			if (e.isDefaultPrevented()) {
-			} else {
-				$('#modal-create-account-step-2').modal();
-			}
-			return false;
-		});
+			let $form = $(this);
+			let $submit = $form.find('button[type=submit]');
 
-		$('#create-account-modal-step-2').validator().on('submit', function (e) {
 			if (e.isDefaultPrevented()) {
+				// if invalid
 			} else {
-				$('#modal-create-account-step-3').modal();
-			}
-			return false;
-		});
-
-		$('#create-account-modal-step-3').validator().on('submit', function (e) {
-			if (e.isDefaultPrevented()) {
-			} else {
-				$('#modal-create-account-final').modal();
+				$submit.addClass('js-is-loading');
+				$('#modal-login-select').modal();
 			}
 			return false;
 		});
@@ -39,21 +89,26 @@ export default function () {
 			let $submit = $form.find('button[type=submit]');
 
 			if (e.isDefaultPrevented()) {
+			// if invalid
 			} else {
 				$submit.addClass('js-is-loading');
 			}
 			return false;
 		});
+		
 
 		$('#login-bankid-modal').validator().on('submit', function (e) {
+
 			let $form = $(this);
 			let $loading = $form.next('.modal-body__loading');
 			let $error = $loading.next('.modal-body__error');
 
 			if (e.isDefaultPrevented()) {
+
 			} else {
 				$form.addClass('hidden');
 				$loading.removeClass('hidden');
+
 				// Test error
 				/*					setTimeout( function () {
 				 $loading.addClass('hidden');
@@ -227,6 +282,7 @@ export default function () {
 
 		$('form[data-use-ajax]').validator().on('submit', function (e) {
 			if (e.isDefaultPrevented()) {
+
 			} else {
 				let $this = $(this);
 				let formData = $this.serialize();
@@ -248,6 +304,7 @@ export default function () {
 						// disable submit button
 						$submitButton.prop('disabled', false);
 						$this.find('input').prop('disabled', true);
+
 						$currentRow.removeClass('profile__row--active');
 						unsaved = false;
 					},

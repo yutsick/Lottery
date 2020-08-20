@@ -1,69 +1,56 @@
-<div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true">
+<div class="modal fade modal-login" id="modal-login" tabindex="-1" role="dialog"  data-backdrop="false" data-keyboard="false" aria-labelledby="modal-login-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
-			@@include('elements/_button-close.html')
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="modal-login-label">Logga in</h5>
-				</div>
-				<div class="modal-body">
-					<p class="modal-intro text-align-center">Dynamisk text som kan bytas ut</p>
-					<form id="login-modal" class="account-form" data-toggle="validator" action="/logged-in.html"
-						  method="get">
-						<div class="form-group">
-							<label class="control-label" for="userId">Kundnummer, e-post eller
-								personnummer</label>
-							<div class="inner-addon right-addon">
-								<i class="icon icon-close js-action-empty-input"></i>
-								<input type="text" class="form-control" id="userId"
-									   placeholder="123456789 ,fia.frid@mail.com, 8808088888" required>
-								<div class="help-block with-errors"></div>
-							</div>
 
-						</div>
-						<div class="form-group">
-							<label class="control-label" for="userPassword">Lösenord</label>
-							<div class="input-group">
-								<div class="inner-addon right-addon">
-									<i class="icon icon-close js-action-empty-input"></i>
-									<input type="password" class="form-control" id="userPassword"
-										   placeholder="*********" data-error="Eget felmeddelande" required>
-								</div>
-								<div class="input-group-btn">
-									<a class="btn btn-input js-action-show-password"><i class="icon icon-eye"></i></a>
-								</div>
-							</div>
-							<div class="help-block with-errors"></div>
-						</div>
-						<div class="form-group">
-							<div class="checkbox checkbox--small">
-								<label for="userRememberDevice">
-									<input class="custom-checkbox" id="userRememberDevice" type="checkbox" >
-									Kom ihåg mig på denna enheten
-								</label>
-							</div>
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary btn-block btn-load"><span>Logga in</span> <img
-								class="spinner" src="assets/img/icons/spinner-white.svg" alt="Spinner"></button>
-						</div>
-						<div class="account-form__error">
-							<p class="text-align-center">
-							</p>
-						</div>
-						<a href="/" class="btn btn-link btn-block">Jag har glömt mitt lösenord</a>
-					</form>
+			<div class="modal-main-body" style="background-image: url(assets/img/background/bg-modal-login.png);">
+				<div class="modal-main-header">
+					<a href="/" title="Hem" class="modal-main__logo">
+						<img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
+					</a>
+					<div class="modal-main__logo-secondary">
+						<img src="assets/img/brand/ml-logo-tagline.svg" alt="Miljonlotteriet">
+					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn-bankid" data-toggle="modal"
-							data-target="#modal-login-bankid">
-						Logga in med BankID
-					</button>
-					<button type="button" class="btn btn-default btn-block" data-toggle="modal"
-							data-target="#modal-create-account">Skapa konto
-					</button>
+
+				<div class="modal-content modal-main-content">
+					<div class="modal-main-buttons">
+						<a href="/" title="Hem" class="modal-btn__logo">
+							<img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
+						</a>
+						<div class="close-wrap">
+							<button class="close" data-dismiss="modal" aria-label="Close"></button>
+						</div>
+					</div>
+
+					<div class="modal-main-inner">
+						<div class="modal-main-center">
+							<div class="modal-main__title">Logga in</div>
+							<p class="modal-main__subTitle">Välj hur du vill logga in.</p>
+
+							<button class="btn-hash btn-primary btn-bankId desktop" data-toggle="modal" data-target="#modal-login-mobileBankId"><span>BankID</span></button>
+							<button class="btn-hash btn-primary btn-bankId mobile" data-toggle="modal" data-target="#modal-login-bankId"><span>BankID</span></button>
+							<button class="btn-hash btn-secondary btn-password" data-toggle="modal" data-target="#modal-login-password"><span>Lösenord</span></button>
+						</div>
+
+						<div class="bottom-links">
+							<div class="bottom-links-wrap">
+								<button class="btn-hash btn-primary-link" data-toggle="modal" data-target="#modal-create-account">Har du inget konto? Skapa ett!</button>
+<!--		TODO modal-password-set-v2 - remove link						-->
+								<div class="">Nav to new modal</div>
+								<button class="btn-hash btn-primary-link" data-toggle="modal" data-target="#modal-password-set-v2">modal-password-set-v2</button>
+<!--		END						-->
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer modal-main-footer">
+						<p><strong>Vill du ha hjälp via mail eller telefon? </strong></p>
+						<p>Välkommen att kontakta oss på kundcenter@miljonlotteriet.se eller</p>
+						<p>tel. 031-338 28 20</p>
+					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </div>

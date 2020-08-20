@@ -16,15 +16,24 @@ body {
 		overflow: hidden !important;
 		position: fixed;
 	}
+
+	&.bs-modal-open {
+		padding-right: 0!important;
+		overflow-y: auto!important;
+	}
 }
 
 .modal-backdrop {
-	background: $color-overlay-base;
-
+	background-color: $color-overlay-base;
 	&.in {
 		opacity: 0.8;
 	}
+	&-login {
+		top: 33px;
+	}
 }
+
+
 
 #page-wrapper.page--content-only {
 	@include max-screen($screen-sm-max) {

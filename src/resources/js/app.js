@@ -9,12 +9,13 @@ require('lightgallery.js/dist/js/lightgallery.min.js');
 require('lg-thumbnail.js/dist/lg-thumbnail.js');
 /* Vendor */
 import modernizr from './vendor/modernizr-custom.js';
+
 /* Store */
 import storeConfiguration from './store';
+
 /* Components */
 import addToDreamlist from './components/add-to-dreamlist';
 import alert from './components/alert';
-import accordion from './components/accordion';
 import bonusCode from './components/bonus-code';
 import checkboxTrigger from './components/checkbox-trigger';
 import dataList from './components/data-list';
@@ -55,7 +56,6 @@ import slideOutNavigation from './layout/slide-out-navigation';
 import slideOutAccountNavigation from './layout/slide-out-account';
 import navigationControl from './layout/navigation-control';
 import navigationItem from './layout/navigation-item';
-import grid from './layout/grid';
 
 /* Utilities */
 import textToggle from './utilities/textToggle';
@@ -77,9 +77,8 @@ $(function () {
 	new objectFitImages();
 	addToDreamlist();
 	alert();
-	accordion();
 	bonusCode();
-	checkboxTrigger();
+    checkboxTrigger();
 	dataList();
 	dreamlistTooltip();
 	new entityCollectionActions();
@@ -113,7 +112,6 @@ $(function () {
 	slideOutAccountNavigation();
 	navigationControl();
 	navigationItem();
-	grid();
 	Carousel();
 	RegisterLottery.init();
 

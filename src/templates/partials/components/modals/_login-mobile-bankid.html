@@ -1,4 +1,4 @@
-<div class="modal fade modal-login" id="modal-login-bankId" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="modal-login-bankId-label" aria-hidden="true">
+<div class="modal fade modal-login" id="modal-login-mobileBankId" tabindex="-1" role="dialog" data-backdrop="false" aria-labelledby="modal-login-mobileBankId-label" aria-hidden="true">
 	<div class="vertical-alignment-helper">
 		<div class="modal-dialog vertical-align-center" role="document">
 
@@ -24,15 +24,14 @@
 							<button class="close" data-dismiss="modal" aria-label="Close"></button>
 						</div>
 					</div>
+
 					<div class="modal-main-inner">
-
 						<div class="modal-main-center modal-main-center--full">
-							<div class="modal-main__title">Logga in med BankID på denna enhet</div>
-
+							<div class="modal-main__title"><span class="desktop">Logga in med mobilt BankID</span><span class="mobile">Logga in med BankID på annan enhet</span></div>
 							<div class="modal-main__subTitle">
 								<div class="modal-form__success">
 									<p>Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.</p>
-									<a class="btn-hash" href="javascript:void(0);"  data-toggle="modal" data-target="#modal-login-about-bank">Läs mer om BankID</a>
+									<a class="btn-hash " href="javascript:void(0);"  data-toggle="modal" data-target="#modal-login-about-bank">Läs mer om BankID</a>
 								</div>
 								<div class="modal-form__error">
 									<p>Något verkar ha blivit fel när du fyllde i lösenordet. Kontrollera att du har skrivit rätt.</p>
@@ -43,26 +42,27 @@
 								<div class="form-group">
 									<label class="control-label" for="userPersonalNumber">Ange personnummer</label>
 									<div class="inner-addon">
-										<input type="number" class="form-control" id="userPersonalNumber" placeholder="ÅÅMMDD-NNNN" data-minlength="10" required>
+										<input type="text" class="form-control" id="userPersonalNumber" placeholder="ÅÅMMDD-NNNN"  data-error="Error message" data-minlength="10"  data-error="" required>
+										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 
 								<div class="form-group">
 									<div class="checkbox checkbox--small">
 										<label for="userRememberDevice">
-											<input class="custom-checkbox" id="userRememberDevice" type="checkbox" >
+											<input class="custom-checkbox" id="userRememberDevice" type="checkbox" data-error="Error message" required>
 											Kom ihåg mitt personnummer på denna enhet
+											<div class="help-block with-errors"></div>
 										</label>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<button type="submit" class="btn-hash btn-primary btn-block js-login-submit">Logga in</button>
+									<button type="submit" class="btn-hash btn-primary btn-block">Logga in</button>
 								</div>
 							</form>
-
 							<div class="modal-body__loading text-align-center hidden">
-								<p class="text-align-center"><strong>Starta din BankId-app <br> (och signera för att logga in)</strong></p>
+								<p class="text-align-center"><strong>Starta din BankId-app</strong></p>
 								<img class="spinner" src="assets/img/icons/spinner.svg" alt="Spinner">
 							</div>
 							<div class="modal-body__error hidden">
@@ -70,13 +70,13 @@
 									Någonting gick
 									<fel class=""></fel>
 								</p>
-								<button type="button" class="btn-hash btn btn-primary btn-block js-action-reset-journey">Försök igen</button>
+								<button type="button" class="btn-primary js-action-reset-journey">Försök igen</button>
 							</div>
 						</div>
 
 						<div class="bottom-links">
 							<div class="bottom-links-wrap">
-								<button class="btn-hash btn-primary-link" data-toggle="modal" data-target="#modal-login-mobileBankId"><span class="desktop">Logga in med mobilt BankID</span><span class="mobile">Logga in med BankID på annan enhet</span></button>
+								<button class="btn-hash btn-primary-link" data-toggle="modal" data-target="#modal-login-bankId">Logga in med BankID på denna enhet</button>
 							</div>
 							<div class="bottom-links-wrap">
 								<button class="btn-hash btn-primary-link" data-toggle="modal" data-target="#modal-login-password">Logga in med lösenord</button>

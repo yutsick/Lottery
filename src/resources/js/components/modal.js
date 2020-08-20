@@ -9,9 +9,18 @@ export default function () {
 		return false;
 	});
 
+
+	$('.modal-login').on('shown.bs.modal', function (e) {
+		$('.modal-backdrop').addClass('modal-backdrop-login');
+		setTimeout(function () {
+			$('.modal-login').removeClass("out");
+		}, 100)
+	});
+
 	// Hide open modals when toggle.
 	$('.modal').on('show.bs.modal', function (e) {
 		$('.modal').modal('hide');
+		$('body').addClass("bs-modal-open");
 	});
 
 	// Modal-pages functionality.
@@ -24,7 +33,7 @@ export default function () {
 		$modalPages.removeClass('modal-page--active');
 
 		$modal.find('#' + page).addClass('modal-page--active');
-	})
+	});
 
 
 	let $termsOfServiceModal = $('#modal__terms-of-services');
@@ -34,6 +43,4 @@ export default function () {
 			$termsOfServiceModal.modal('show');
 		}
 	}
-
-
 }
