@@ -1,10 +1,28 @@
-// Page containers styles
+.ie11 {
+  .post {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    margin: 20px 10px;
+    max-width: 100%;
+
+    @media screen and (min-width: 680px) {
+      width: calc(49% - 20px);
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1399px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1400px) {
+      width: calc(49% - 20px);
+    }
+  }
+}
+
 .ml-2017 {
   .b-filter {
-    margin-bottom: 0;
-
+    margin-bottom: 40px;
     @media screen and (min-width: 768px) {
-      //margin-bottom: 20px;
+      margin-bottom: 20px;
     }
   }
 
@@ -51,6 +69,7 @@
       }
     }
   }
+
   .title__underlined {
     display: inline-block;
     font-size: 16px;
@@ -60,6 +79,69 @@
 
 .block__title {
   color: $color-black;
+}
+
+
+
+.grid {
+  display: block;
+  @supports (display: grid) {
+    display: -ms-grid !important;
+    display: grid !important;
+    grid-gap: 10px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-auto-rows: 2px;
+    -ms-grid-rows: 2px;
+    @media screen and (min-width: 680px) {
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+  }
+}
+
+.b-filter {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  padding: 6px 10px 6px 10px;
+  background-color: #DCE4E9;
+  list-style: none;
+  @media screen and (max-width: 680px) {
+    margin-left: -5px;
+    margin-right: -5px;
+    padding: 6px 20px 6px 10px;
+  }
+  @media screen and (min-width: 580px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 1024px) {
+    margin-left: -20px;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px 1px;
+    padding: 6px 15px 4px;
+    background: $color-white;
+    border-radius: 15px;
+    color: $color-blue-deep;
+    user-select: none;
+    cursor: pointer;
+    transition: all 200ms ease-in;
+
+    &:hover,
+    &:focus,
+    &.current {
+      background-color: $color-blue-deep;
+      color: $color-white;
+    }
+  }
 }
 
 .blog-win {

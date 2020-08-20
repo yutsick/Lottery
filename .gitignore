@@ -16,7 +16,6 @@ error_log
 
 # ignore build tools
 node_modules/
-build/
 dist/
 .sass-cache
 .map
