@@ -26,6 +26,7 @@
   .post__title {
     display: inline;
     vertical-align: top;
+    border-bottom: 1px solid $color-black;
     font-family: "Proxima Nova";
     font-weight: 300;
     font-size: 30px;
@@ -54,12 +55,8 @@
     min-height: 71vh;
     max-width: 640px;
     margin: 20px auto 40px;
-    font-size: 18px;
-    line-height: 1.55;
-    color: $color-black;
     @media screen and (max-width: 480px) {
       margin-top: 23px;
-      font-size: 16px;
     }
     &-action {
       font-size: 14px;
@@ -89,8 +86,11 @@
       }
     }
 
-    .preamble {
+    p {
       font-size: 18px;
+      line-height: 1.55;
+      color: $color-black;
+
       @media screen and (min-width: 480px) {
         font-size: 20px;
       }
@@ -98,10 +98,9 @@
 
     ul {
       padding-left: 15px;
-      list-style-type: disc;
-    }
-    ol {
-      list-style-type: decimal;
+      font-size: 18px;
+      line-height: 1.55;
+      color: $color-black;
     }
   }
 

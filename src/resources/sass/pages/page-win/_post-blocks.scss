@@ -53,6 +53,7 @@
   .b-win-help__title {
     display: inline;
     vertical-align: top;
+    border-bottom: 1px solid $color-black;
     font-family: "Proxima Nova";
     font-weight: 300;
     font-size: 30px;
@@ -167,7 +168,7 @@
   &__text {
     max-width: 640px;
     margin: 0 auto;
-    font-family: "Arsilon";
+    font-family: "hellolucky";
     font-size: 28px;
     line-height: 168%;
     color: $color-black;

@@ -1,0 +1,33 @@
+<div class="hero-full hero-full--bg">
+    <div class="hero-full__overlay"></div>
+
+    <div class="hero-full__holder">
+        <div class="hero-full__content">
+            <div class="hero-full__content-inner">
+                <div class="block-hero__container">
+                    <div class="block-hero__content">
+                        @@if (context.logged_in === false) {
+                            <h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
+                            <div class="block-hero__text">
+                                <p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
+                                    <br> oss, och dig, kraften att göra skillnad.
+                                </p>
+                                <a class="btn btn-cta" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
+                            </div>
+                        }
+                        @@if (context.logged_in === true) {
+                            <h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
+                            <div class="block-hero__text">
+                                <p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
+                                    <br> oss, och dig, kraften att göra skillnad.
+                                </p>
+                                <a class="btn btn-cta" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

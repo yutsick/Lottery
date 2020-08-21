@@ -1,0 +1,28 @@
+<div class="col-xs-12">
+  <div class="split-block split-block--large split-block--@@theme @@background-color-class
+@@if(context.reversed_content){ reversed}">
+    <div class="split-block__content">
+      @@if(context.has_content_title){
+      <h4 class="split-block__title">Varje lott gör skillnad</h4>
+      }
+      @@if(context.has_content_description){
+      <p class="split-block__text">Det här är lotteriet för dig som känner att andras välmående är högsta vinsten. Hos Miljonlotteriet ger varje lott du köper fler människor stöd att komma till en trygg och drogfri miljö. </p>
+      }
+      @@if(context.has_link){
+      <div class="split-block__cta">
+        @@if(context.theme === "light") {
+        <a class="btn btn--sm btn-primary" href="#">@@link_title</a>
+        }
+        @@if(context.theme === "dark") {
+        <a class="btn btn--sm btn-invert" href="#">@@link_title</a>
+        }
+      </div>
+      }
+    </div>
+    <div class="split-block__image" style="background-image: url(@@image);">
+      @@if(context.content_image){
+      <img src="@@content_image" srcset="@@content_image 2x" />
+      }
+    </div>
+  </div>
+</div>
