@@ -1,0 +1,14 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-in",
+"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+<div class="content-wrapper ml-2017">
+	@@include('blocks/_promotion.html', {"blocks": "example-video"})
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

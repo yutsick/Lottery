@@ -1,0 +1,94 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-out"
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+<div class="content-wrapper ml-2017">
+
+
+	<section class="s-promotion-offer">
+		<div class="container">
+			<div class="row equal-height">
+				@@include('blocks/promotion/block-cta/_cta-block-large.html', {
+				"theme": "light",
+				"reversed_content": true,
+				"background-color-class": "background-color-light-blue",
+				"has_content_title": true,
+				"has_content_description": true,
+				"content_image": "assets/img/mockup/CTA-block-winner-bg.jpeg"
+				})
+			</div>
+		</div>
+	</section>
+
+	<section class="s-bullet-points text-align-center">
+		<div class="container">
+			<div class="row equal-height">
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
+						<h3 class="s-bullet-points__title">Varje månad gör du skillnad för barn och vuxna</h3>
+						<p class="s-bullet-points__text">Sedan år 2000 har vi delat ut nära 2,3 miljarder till människor i behov av stöd.</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/promotion--image.png);"></div>
+						<h3 class="s-bullet-points__title">10 miljoner anledningar <br>att gå med</h3>
+						<p class="s-bullet-points__text">Som tack för ditt livsviktiga bidrag har du chans på
+							10 miljoner varje månad.</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
+						<h3 class="s-bullet-points__title">Ingen bindningstid, var med så länge du vill </h3>
+						<p class="s-bullet-points__text">Vi har ingen bindningstid, du väljer själv hur länge du
+							vill bidra och skrapa våra lotter.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Promotion Slider -->
+	<section class="slider-promo">
+		<div class="container-fluid">
+			<div class="row equal-height">
+				<div class="col-xs-12 col-sm-12 col-lg-4">
+					<div class="slider-promo__content">
+						<div class="slider-promo__content-inner">
+							<h2 class="slider-promo__title">Ditt lottköp räddar liv. Varje dag.</h2>
+							<div class="slider-promo__text">
+								<p>Som en del av IOGT-NTO-rörelsen kämpar vi för en bättre värld. Ett samhälle där ingen far illa av alkohol och droger. Det betyder att för varje lott du köper hos Miljonlotteriet, går pengarna till livsviktiga aktiviteter för barn och vuxna. Sedan  år 2000 har vi delat ut nära 2,3 miljarder kronor till IOGT-NTO-rörelsens verksamheter. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-lg-8">
+					@@include('blocks/_slider-block.html')
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-promotion-offer">
+		<div class="container">
+			<div class="row equal-height">
+				@@include('blocks/promotion/block-cta/_cta-block-large.html', {
+				"theme": "dark",
+				"reversed_content": true,
+				"background-color-class": "background-color-blue",
+				"has_content_title": true,
+				"has_content_description": true,
+				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+				"link_title": "Välj lotter som gör gott"
+				})
+			</div>
+		</div>
+	</section>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
