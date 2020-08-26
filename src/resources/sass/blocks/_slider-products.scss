@@ -55,9 +55,6 @@
 	&__inner {
 		text-align: center;
 		padding: 15px;
-		@include min-screen($screen-md-min) {
-			padding: 15px 10%;
-		}
 	}
 	&:not(.is-selected) {
 		.product-slide__title,
