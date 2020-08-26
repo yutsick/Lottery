@@ -1,0 +1,47 @@
+.s-lottery-selection {
+	background-color: $color-primary;
+	padding-bottom: 20px;
+	.products-slider {
+		margin-top: -45px;
+		margin-bottom: 50px;
+		@include min-screen($screen-sm-min) {
+			margin-top: -45px;
+			margin-bottom: 50px;
+		}
+		@include min-screen($screen-md-min) {
+			margin-top: -75px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.ls-checkpoints {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	list-style: none;
+	padding-left: 35px;
+	@include min-screen($screen-sm-min) {
+		flex-direction: row;
+		justify-content: center;
+		padding-left: 0;
+	}
+}
+
+.lsc-item {
+	display: flex;
+	color: #ffffff;
+	font-size: $size-medium;
+	font-weight: 400;
+	line-height: $base-line-height;
+	margin: 5px 18px;
+	@include min-screen($screen-md-min) {
+		font-size: $size-large;
+	}
+	.icon {
+		font-size: $size-large;
+		color: #4caf50;
+		margin-top: 2px;
+		margin-right: 5px;
+	}
+}
