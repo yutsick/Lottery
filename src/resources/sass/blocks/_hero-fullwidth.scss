@@ -132,7 +132,6 @@
         }
     }
 
-
     &.hero-content {
         @media screen and (max-width: $screen-xs-max){
             &-mobile {
@@ -334,7 +333,7 @@
                 padding: 0;
                 margin-left: 0;
             }
-            
+
             &--space {
                 background-color: $color-space;
                 &:after {
@@ -365,7 +364,7 @@
             }
         }
 
-        .block-hero-reg__container { 
+        .block-hero-reg__container {
             min-height: 0;
             padding: 10px;
         }
@@ -385,7 +384,7 @@
             &-inner {
                 color: $color-snow;
                 // background-color: rgba($color-blue-deep, .8);
-                
+
                 &:after {
                     background-color: rgba($color-blue-deep, .8);
                 }
@@ -396,14 +395,14 @@
                         background-color: rgba($color-space, .8);
                     }
                 }
-    
+
                 &--black {
                    //  background-color: rgba($color-black, .8);
                     &:after {
                         background-color: rgba($color-black, .8);
                     }
                 }
-    
+
                 &--white {
                     // background-color: rgba($color-snow, .8);
                     color: $color-black;
@@ -411,7 +410,7 @@
                         background-color: rgba($color-snow, .8);
                     }
                 }
-    
+
                 &--blue {
                     // background-color: rgba($color-blue, .8);
                     &:after {
@@ -422,8 +421,8 @@
         }
     }
 
-    @include min-screen($screen-sm-min) { 
-        
+    @include min-screen($screen-sm-min) {
+
         &__background {
             position: absolute;
             left: 0;
@@ -436,7 +435,7 @@
             width: 100%;
             padding: 120px 0 240px;
             height: 100%;
-            
+
             & > * {
                 width: 100%;
             }
@@ -488,7 +487,7 @@
                         background-color: $color-blue;
                     }
                 }
-                
+
             }
 
             .block-hero-reg__container {
@@ -504,7 +503,7 @@
                     max-width: auto;
                     padding: 20px;
                 }
-                
+
                 .block-hero-reg__text {
                     p {
                         font-size: 16px;
