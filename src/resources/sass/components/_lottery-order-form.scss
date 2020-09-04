@@ -16,23 +16,37 @@
 	.form-row {
 		display: flex;
 		margin: 0 -5px;
-		.input-group {
+		.form-group {
 			margin-left: 5px;
 			margin-right: 5px;
 		}
 	}
-	.input-group {
+	.form-group {
 		display: block;
 		position: relative;
 		width: 100%;
 		margin-bottom: 20px;
 		&.has-error {
-			.input-item {
+			.form-control {
 				border-color: #ffcf34;
-				color: #ffcf34;
+				//color: #ffcf34;
 				background-color: #fff;
-				&::placeholder {
-					color: #ffcf34;
+				//&::placeholder {
+				//	color: #ffcf34;
+				//}
+				&:focus {
+					color: $color-primary;
+				}
+			}
+			.select2-container {
+				.select2-selection {
+					&--single {
+						border-color: #ffcf34;
+						background-color: #ffffff;
+					}
+					&__rendered {
+						//color: #ffcf34;
+					}
 				}
 			}
 		}
@@ -41,34 +55,30 @@
 			top: 29px;
 			right: 10px;
 		}
-		.error-message {
-			//position: absolute;
-			//bottom: 15px;
-			//left: 0;
-			display: none;
+		.with-errors {
 			color: #ffcf34;
 			font-size: $size-smallest;
 			line-height: 1;
 			margin-top: 5px;
 		}
-	}
-	.input-caption {
-		display: block;
-		color: #FFFFFF;
-		font-size: $size-smallest;
-		//font-weight: 700;
-		margin-bottom: 5px;
-		text-align: center;
-		&.with-tooltip {
-			display: flex;
-			align-items: center;
-			.tooltip-second {
-				margin-left: 5px;
-				margin-bottom: 2px;
+		label {
+			display: block;
+			color: #FFFFFF;
+			font-size: $size-smallest;
+			//font-weight: 700;
+			margin-bottom: 5px;
+			text-align: center;
+			&.with-tooltip {
+				display: flex;
+				align-items: center;
+				.tooltip-second {
+					margin-left: 5px;
+					margin-bottom: 2px;
+				}
 			}
 		}
 	}
-	.input-item {
+	.form-control {
 		width: 100%;
 		height: 38px;
 		color: $color-primary;
@@ -127,7 +137,7 @@
 				}
 			}
 		}
-		&--below {
+		&.choice-done {
 			.select2-selection {
 				&--single {
 					background-color: #e8f0fe!important;
@@ -177,7 +187,7 @@
 		}
 	}
 	.lof-btn {
-		&.btn-disabled {
+		&.disabled {
 			color: #ffffff;
 			background-color: $color-cta-light;
 			cursor: default;
@@ -200,6 +210,9 @@
 //			font-weight: 400;
 //			letter-spacing: 1px;
 //			padding: 8px 15px;
+//			&:first-child {
+//				display: none;
+//			}
 //		}
 //	}
 //}
@@ -225,7 +238,7 @@
 		padding: 40px 0 10px;
 
 		.form-row {
-			.input-group {
+			.form-group {
 				&:first-child {
 					width: 135px;
 				}
@@ -239,13 +252,6 @@
 
 .form-tab-second {
 	display: none;
-	.custom-checkbox-type2 {
-		margin-top: 60px;
-		margin-bottom: 30px;
-		label {
-			margin: 0;
-		}
-	}
 	.btn-success {
 		display: flex;
 		align-items: center;
@@ -276,8 +282,16 @@
 			}
 		}
 	}
-	.input-item {
+	.form-control {
 		height: 44px;
+	}
+	.acc-second {
+		margin-bottom: 60px;
+	}
+	.custom-checkbox-type2 {
+		label {
+			margin-bottom: 30px;
+		}
 	}
 }
 
@@ -372,7 +386,7 @@
 
 .payment-by-cart {
 	.first-row {
-		.input-group {
+		.form-group {
 			text-align: left;
 			&:first-child {
 				width: calc(100% - 90px);
@@ -380,15 +394,15 @@
 			&:last-child {
 				width: 70px;
 			}
-		}
-		.input-item {
-			text-align: left;
-		}
-		.input-caption {
-			padding-left: 5px;
-			&.with-tooltip {
-				justify-content: flex-end;
+			label {
+				padding-left: 5px;
+				&.with-tooltip {
+					justify-content: flex-end;
+				}
 			}
+		}
+		.form-control {
+			text-align: left;
 		}
 	}
 	.second-row {
@@ -398,7 +412,7 @@
 			margin-right: 10px;
 			margin-top: 22px;
 		}
-		.input-group {
+		.form-group {
 			width: 80px;
 		}
 		.select2-container {
@@ -431,7 +445,7 @@
 
 .payment-by-direct-debit {
 	.form-row {
-		.input-group {
+		.form-group {
 			text-align: left;
 			&:first-child {
 				width: 70px;
@@ -439,12 +453,12 @@
 			&:last-child {
 				width: calc(100% - 90px);
 			}
+			label {
+				padding-left: 5px;
+			}
 		}
-		.input-item {
+		.form-control {
 			text-align: left;
-		}
-		.input-caption {
-			padding-left: 5px;
 		}
 	}
 }
