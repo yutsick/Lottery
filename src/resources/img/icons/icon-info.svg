@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="Group-5">
+    <path d="M5 10C7.76142 10 10 7.76142 10 5C10 2.23858 7.76142 0 5 0C2.23858 0 0 2.23858 0 5C0 7.76142 2.23858 10 5 10Z" id="Oval" fill="#FFFFFF" stroke="none" />
+    <path d="M1.25 0.5625C1.25 0.8775 0.968543 1.1325 0.620861 1.1325C0.281457 1.1325 0 0.8775 0 0.5625C0 0.2475 0.281457 0 0.620861 0C0.968543 0 1.25 0.2475 1.25 0.5625ZM0.0993652 5.14496L1.15069 5.14496L1.15069 1.52246L0.0993652 1.52246L0.0993652 5.14496Z" transform="translate(4.379883 1.875)" id="i" fill="#0B3B54" fill-rule="evenodd" stroke="none" />
+  </g>
+</svg>

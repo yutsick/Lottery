@@ -334,3 +334,41 @@
     display: block;
   }
 }
+
+// Custom checkboxes for lottery order form
+.custom-checkbox-type2 {
+	position: relative;
+	label {
+		color: #ffffff;
+		font-size: $size-small;
+		font-weight: 400;
+		line-height: 20.6px;
+		padding-left: 26px;
+		cursor: pointer;
+	}
+
+	input[type="checkbox"] {
+		display: block;
+		appearance: none;
+		position: absolute;
+		top: -2px;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		border-radius: 1px;
+		border: solid 1px $color-cta;
+		background-color: #fff;
+		&:checked:after {
+			content: '\e905';
+			position: absolute;
+			top: 1px;
+			left: 1px;
+			font-size: 12px;
+			font-family: $base-icon-family;
+			color: $color-cta;
+		}
+		&:focus {
+			outline: 0;
+		}
+	}
+}

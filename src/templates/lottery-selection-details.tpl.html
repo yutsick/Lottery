@@ -4,7 +4,10 @@
 
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 
+
 <div class="content-wrapper ml-2017 page-lottery-selection">
+	<div class="page-overlay"></div>
+
 	@@include('blocks/_hero-fullwidth-v3.html',{
 	"hero_overlay": true,
 	"content_alignment_desktop": "left",
@@ -44,8 +47,220 @@
 							</div>
 						</div>
 						<div class="product-single__right">
-							<form class="lottery-order-form">
+							<form class="lottery-order-form" data-toggle="validator">
+								<div class="form-tabs">
+									<div class="form-tab-first form-tabs__content">
 
+
+										<div class="form-title">Beställ dina lotter med ett par enkla steg:</div>
+										<div class="form-info-text">Vi behöver dina uppgifter för att kunna skicka lotterna och vinsterna till dig. Det tar bara någon minut!</div>
+
+										<!--<div class="form-group has-feedback">
+											<label for="userPersonalNumber">Ditt personnummer</label>
+											<input type="text" class="form-control" id="userPersonalNumber"
+												   placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken." data-toggle="popover" data-trigger="manual" data-placement="top">
+											<i class="icon icon-check input-icon form-control-feedback" style="display:none;"></i>
+											<img class="form-control-feedback" src="assets/img/icons/spinner.svg" style="display:none;">
+											<div class="help-block with-errors"></div>
+										</div>-->
+
+										<div class="input-group">
+											<span class="input-caption">Ditt personnummer</span>
+											<input type="text" class="social-number-input input-item" placeholder="ÅÅMMDD-NNNN" data-length="10" name="user ID" required>
+											<span class="error-message">error</span>
+										</div>
+
+										<div class="input-group">
+											<span class="input-caption">Din e-postadress</span>
+											<input type="text" class="email-input input-item" placeholder="email@email.com" name="user email" required>
+											<span class="error-message">error</span>
+										</div>
+
+										<div class="address-field">
+											<div>
+												A**a A*******n,<br>
+												A*********n 1A, 1** *5 G******g
+											</div>
+											<div class="change-address-btn">Stämmer inte adressen?</div>
+										</div>
+
+										<div class="address-inputs">
+											<div class="input-group">
+												<span class="input-caption">Namn c/o</span>
+												<input type="text" class="input-item" placeholder="Namn c/o till adress">
+												<span class="error-message">error</span>
+											</div>
+											<div class="input-group">
+												<span class="input-caption">Gatuadress</span>
+												<input type="text" class="input-item" placeholder="Gatuadress">
+												<span class="error-message">error</span>
+											</div>
+											<div class="form-row">
+												<div class="input-group">
+													<span class="input-caption">Postnummer</span>
+													<input type="text" class="zip-cod-input input-item" placeholder="000 00">
+													<span class="error-message">error</span>
+												</div>
+												<div class="input-group">
+													<span class="input-caption">Ort</span>
+													<input type="text" class="input-item" placeholder="Ort">
+													<span class="error-message">error</span>
+												</div>
+											</div>
+										</div>
+
+										<div class="btn-wrap">
+											<div class="lof-btn go-payment-step btn-success btn-disabled">Fortsätt</div>
+										</div>
+									</div>
+
+									<div class="form-tab-second form-tabs__content">
+										<div class="form-title">Beställ dina lotter</div>
+										<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
+
+										<div class="acc-second">
+											<div class="payment-by-cart acc-item">
+												<div class="acc-title active">
+													<div class="acc-title__btn"></div>
+													<div class="acc-title__text">Betala med kort</div>
+												</div>
+												<div class="acc-body" style="display: block">
+													<div class="form-row first-row">
+														<div class="input-group has-error">
+															<span class="input-caption">Kortnummer</span>
+															<input type="text" class="card-number-input input-item" placeholder="0000 0000 0000" required>
+															<div class="icon-cards">
+																<img src="assets/img/icons/icon-cards.svg" alt="">
+															</div>
+															<span class="error-message">Minst XX antal siffror, inklusive clearingsnummer.</span>
+														</div>
+														<div class="input-group">
+															<span class="input-caption with-tooltip">
+																<span>CCV</span>
+																<span class="tooltip-second">
+																	<img src="assets/img/icons/icon-info.svg" alt="">
+																</span>
+															</span>
+															<input type="text" class="ccv-code-input input-item" placeholder="123" required>
+															<span class="error-message">error</span>
+														</div>
+													</div>
+													<div class="form-row second-row">
+														<div class="title">Giltighetstid</div>
+														<div class="input-group">
+															<span class="input-caption">Månad</span>
+															<select class="custom-select choose-month" name="month">
+																<option value="">01</option>
+																<option value="">02</option>
+																<option value="">03</option>
+																<option value="">04</option>
+																<option value="">05</option>
+																<option value="">06</option>
+																<option value="">07</option>
+																<option value="">08</option>
+																<option value="">09</option>
+																<option value="">10</option>
+																<option value="">11</option>
+																<option value="">12</option>
+															</select>
+														</div>
+														<div class="input-group">
+															<span class="input-caption">År</span>
+															<select class="custom-select choose-year" name="year">
+																<option value="">2021</option>
+																<option value="">2022</option>
+																<option value="">2023</option>
+																<option value="">2024</option>
+																<option value="">2025</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="payment-by-invoice acc-item">
+												<div class="acc-title">
+													<div class="acc-title__btn"></div>
+													<div class="acc-title__text">Betala med Faktura</div>
+												</div>
+												<div class="acc-body">
+													<div class="info-text">I samband med att du får dina lotter får du även en faktura att betala inom XX dagar.</div>
+													<div class="address-field">
+														<div>
+															A**a A*******n,<br>
+															A*********n 1A, 1** *5 G******g
+														</div>
+														<div class="change-address-btn">Stämmer inte adressen?</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="payment-by-direct-debit acc-item">
+												<div class="acc-title">
+													<div class="acc-title__btn"></div>
+													<div class="acc-title__text">Betala med Autogiro</div>
+												</div>
+												<div class="acc-body">
+													<div class="form-row">
+														<div class="input-group">
+															<span class="input-caption with-tooltip">
+																<span>Clearing</span>
+																<span class="tooltip-second">
+																	<img src="assets/img/icons/icon-info.svg" alt="">
+																</span>
+															</span>
+															<input type="text" class="clearing-input input-item" placeholder="1234" required>
+															<span class="error-message">error</span>
+														</div>
+														<div class="input-group">
+															<span class="input-caption">Kortnummer</span>
+															<input type="text" class="card-number-input input-item" placeholder="0000 0000 0000 0000" required>
+															<span class="error-message">error</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="custom-checkbox-type2">
+											<label>
+												<input type="checkbox" required>
+												<span>Jag vill få erbjudanden och intressant läsning via Miljonlotteriets nyhetsbrev</span>
+											</label>
+											<span class="error-message">error</span>
+										</div>
+
+										<div class="btn-wrap">
+											<button type="submit" class="btn-success go-last-step">
+												<span>Signera med BankID</span>
+												<span class="icon">
+													<img src="assets/img/icons/bankid-2.png" alt="">
+												</span>
+											</button>
+										</div>
+
+										<div class="subscribe-info-text">Genom att klicka på ”Signera” godkänner du att inleda en prenumeration.
+											<button class="btn btn-data-action js-open-subscription-modal"
+											   data-toggle="modal"
+											   data-target="#modal-payment-method"
+											   data-subscription-id="1">Läs mer om våra villkor här</button>
+										</div>
+									</div>
+
+									<div class="form-tab-last form-tabs__content">
+										<div class="form-title">Signera med mobilt BankID</div>
+										<div class="form-info-text">Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.</div>
+										<a href="#" class="more-info-link">Läs mer om BankID</a>
+
+										<div class="launch-info-text">Starta din BankID-app</div>
+
+										<div class="lof-loader">
+											<img src="assets/img/form-loader.svg" alt="">
+										</div>
+
+										<div class="sing-with-bankid">Signera med BankID på denna enhet</div>
+									</div>
+								</div>
 							</form>
 						</div>
 					</div>

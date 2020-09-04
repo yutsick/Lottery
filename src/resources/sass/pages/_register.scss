@@ -218,3 +218,20 @@ a.navlink:hover {
 	height: 20px;
 	margin-bottom: -4px;
 }
+
+
+.select-dropdown-container {
+	.select2-results {
+		&__options {
+			margin: 0;
+			padding: 0;
+		}
+		&__option {
+			color: $color-primary;
+			font-size: $size-small;
+			font-weight: 400;
+			letter-spacing: 1px;
+			padding: 6px 15px;
+		}
+	}
+}

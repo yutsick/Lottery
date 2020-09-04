@@ -16,4 +16,19 @@ export default function() {
 		th.toggleClass('active');
 		accordionToggle(th);
 	})
+
+	//accordion second variant
+	$('.acc-title').on('click', function (){
+		var th = $(this),
+			accBlock = th.closest('.acc-second'),
+			accTitle = accBlock.find('.acc-title'),
+			accBody = accBlock.find('.acc-body');
+
+		if (!th.hasClass('active')) {
+			accTitle.removeClass('active');
+			accBody.slideUp(300);
+			th.addClass('active');
+			th.closest('.acc-item').find('.acc-body').slideDown(300);
+		}
+	});
 }
