@@ -67,16 +67,39 @@
 	padding-bottom: 60px;
 	z-index: 995;
 	//z-index: 1006;
+	@media (max-width: 991px) {
+		padding-bottom: 0;
+	}
 }
 
 .product-single {
 	display: flex;
+	@media (max-width: 991px) {
+		flex-direction: column;
+		align-items: center;
+	}
 	&__left {
 		width: 55%;
 		display: flex;
+		@media (max-width: 1199px) {
+			flex-direction: column;
+		}
+		@media (max-width: 991px) {
+			flex-direction: row;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		@media (max-width: 767px) {
+			flex-direction: column;
+			align-items: center;
+		}
 		.ls-checkpoints {
 			flex-direction: column;
 			margin-bottom: 50px;
+			@media (max-width: 767px) {
+				margin: 0;
+				padding: 0;
+			}
 			li {
 				margin: 0 0 10px;
 				&:last-child {
@@ -88,6 +111,13 @@
 	&__right {
 		width: 45%;
 		padding: 30px 3% 60px;
+		@media (max-width: 991px) {
+			width: 100%;
+			padding: 30px 0 60px;
+		}
+		@media (max-width: 767px) {
+			padding-bottom: 30px;
+		}
 		.lottery-order-form {
 			max-width: 355px;
 			width: 100%;
@@ -98,6 +128,11 @@
 		width: 50%;
 		position: relative;
 		margin-top: -55px;
+		@media (max-width: 767px) {
+			width: 255px;
+			margin-top: -30px;
+			margin-bottom: 30px;
+		}
 		img {
 			width: 100%;
 		}
@@ -106,10 +141,36 @@
 		width: 50%;
 		padding: 55px 0 0 30px;
 		margin-right: -20px;
+		@media (max-width: 1199px) {
+			margin: 0;
+			width: 100%;
+		}
+		@media (max-width: 991px) {
+			width: 50%;
+		}
+		@media (max-width: 767px) {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			padding: 0 0 0 40px;
+		}
+		@media (max-width: 767px) {
+			display: block;
+		}
 	}
 	&__text {
 		color: #ffffff;
 		font-family: $apercu-bold-font;
+		@media (max-width: 767px) {
+			display: none;
+		}
+		&.mobile {
+			display: none;
+			@media (max-width: 767px) {
+				display: block;
+				margin-top: 130px;
+			}
+		}
 		.old-price {
 			margin-bottom: 10px;
 		}
