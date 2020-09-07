@@ -15,238 +15,6 @@
 	"content_alignment_mobile": "center"
 	})
 
-	<form id="ordering" action="/bestallning-bekraftelse.html" method="get" data-toggle="validator" data-use-ajax>
-		<div class="frame-box">
-			<div class="frame-box__header">
-				<p class="h5">Leveransuppgifter</p>
-			</div>
-			<div class="frame-box__row">
-				<div class="row">
-					<div class="delivery col-xs-12 col-sm-12 col-md-6">
-						<p class="delivery__title">Leveransadress</p>
-						<div class="delivery__contact">
-							<p>Magnus Singerer</p>
-							<p>Fjärde Långgatan 41 Lgh 1103</p>
-							<p>413 27 Göteborg</p>
-							<p class="delivery__contact-note">Din adress ändrar du på <a href="/minauppgifter.html" alt="Min sida">Min sida</a></p>
-						</div>
-
-						<div class="delivery__gift">
-							<div class="delivery__gift-title custom-checkbox-v2">
-								<input name="gift" type="checkbox" id="gift" value="true" class="custom-checkbox__input"/>
-								<label for="gift" class="custom-checkbox__label">Skicka till annan adress eller som gåva</label>
-							</div>
-							<div class="delivery__gift-form">
-								<p class="delivery__gift-form-title">Fyll i ny leveransadress och glöm inte att fylla i korrekta aviseringsuppgifter nedan</p>
-
-								<div class="form-group">
-									<div class="delivery__gift-form-row ">
-										<label class="delivery__gift-form-label" for="gift-name" >Namn</label>
-										<input data-trigger="manual" name="gift-name" class="delivery__gift-form-input form-control" type="text" id="gift-name" data-required-error="Du måste fylla i fältet för namn." />
-									</div>
-									<div class="help-block with-errors"></div>
-								</div>
-
-								<div class="form-group">
-									<div class="delivery__gift-form-row">
-										<label class="delivery__gift-form-label" for="gift-address">Adress</label>
-										<input name="gift-address" class="delivery__gift-form-input form-control" type="text" id="gift-address" data-required-error="Du måste fylla i fältet för adress."/>
-									</div>
-									<div class="help-block with-errors"></div>
-								</div>
-
-								<div class="form-group">
-									<div class="delivery__gift-form-row">
-										<label class="delivery__gift-form-label" for="gift-zip">Postnr</label>
-										<input name="gift-zip" class="delivery__gift-form-input delivery__gift-form-input--small form-control" type="text" id="gift-zip" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
-										<label class="delivery__gift-form-label delivery__gift-form-label--small" for="gift-city">Ort</label>
-										<input name="gift-city" class="delivery__gift-form-input form-control" type="text" id="gift-city" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
-									</div>
-									<div class="help-block with-errors"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="delivery col-xs-12 col-sm-12 col-md-6">
-						<!--
-							<p class="delivery__title">Leveranssätt</p>
-							<div class="order__input-wrapper custom-radio">
-								<input type="radio" name="delivery-type" id="delivery-standard" value="standard" class="custom-radio__input" checked>
-								<label for="delivery-standard" class="custom-radio__label">Standard</label>
-							</div>
-							<div class="order__input-wrapper custom-radio">
-								<input type="radio" name="delivery-type" id="delivery-prio" value="prio" class="custom-radio__input">
-								<label for="delivery-prio" class="custom-radio__label">Prioriterad leverans (+55 kr i tilläggskostnad) <span class="custom-radio__label-info">Kostnaden för prioriterad leverans kan betalas med VISA, MasterCard och Swish. Betalning sker efter beställning lagts. </span></label>
-							</div>
-						-->
-					</div>
-				</div>
-				<div class="row">
-					<div class="delivery col-xs-12 col-sm-12 col-md-6">
-						<p class="delivery__title">Avisering</p>
-						<span class=" delivery__info tooltip-on-touch" data-toggle="tooltip" data-placement="top" title="" data-original-title="När din order levererats meddelas du om att hämta ut den. Välj hur du vill ha meddelandet.">
-                                <i class="delivery__info-icon icon icon-info"></i>
-                            	</span>
-
-						<div class="order__input-wrapper order__input-wrapper--w-height">
-							<div class="custom-radio">
-								<input type="radio" name="notification" id="notify-sms" value="sms" class="custom-radio__input" checked>
-								<label for="notify-sms" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>SMS:</label>
-							</div>
-							<div class="form-group">
-								<input type="tel" id="phone" class="form-control" required data-required-error="Du måste fylla i ditt telefonnummer."/>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-
-						<div class="order__input-wrapper order__input-wrapper--w-height">
-							<div class="custom-radio">
-								<input type="radio" name="notification" id="notify-email" value="email"  class="custom-radio__input">
-								<label for="notify-email" class="custom-radio__label">Skicka <span class="hidden-xs">med </span>e-post:</label>
-							</div>
-							<div class="form-group">
-								<input type="email" id="test-email" class="form-control" data-required-error="Du måste fylla i din e-postadress." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med."/>
-								<div class="help-block with-errors"></div>
-							</div>
-						</div>
-						<div class="order__input-wrapper order__input-wrapper--w-height custom-radio">
-							<input type="radio" name="notification" id="notify-letter" value="letter" class="custom-radio__input">
-							<label for="notify-letter" class="custom-radio__label">Skicka Brev</label>
-						</div>
-					</div>
-					<div class="delivery delivery--no-border col-xs-12 col-sm-12 col-md-6">
-						<p class="delivery__title">Hämtas ut hos</p>
-						<p class="delivery__place">Hemköp Masthugget</p>
-						<input name="delivery-place" type="hidden" id="delivery-place" value="Hemköp Masthugget"/>
-						<button type="button" class="delivery__place-btn btn btn-secondary" data-toggle="modal" data-target="#modal-delivery">Välj ett annat ombud</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="order-page__submit">
-			<div class="order-page__submit-action-wrapper">
-				<button class="btn btn-primary" type="submit" form="ordering"
-						data-toggle="tooltip" data-placement="top" data-original-title="Bekräfta och beställ vinsterna">
-					Bekräfta och beställ vinsterna
-				</button>
-			</div>
-			<div class="order-page__submit-action-wrapper">
-				<a href="#">Avbryt beställning</a>
-			</div>
-		</div>
-	</form>
-	<form id="" class="register-content" data-toggle="validator" action="/" method="get">
-
-		<a href="/" id="registerBackButton" class="btn-icon-only">
-			<i id="registerBackButtonIcon" class="icon icon-arrow-button "></i>
-		</a>
-		<div class="row content">
-			<div class="col-12 col-sm-0 col-md-1"></div>
-			<div class="col-12 col-sm-5 col-md-4">
-				<div class="form-group has-feedback">
-					<label for="userPersonalNumber">Ange ditt personnummer</label>
-					<input type="text" class="form-control" id="userPersonalNumber"
-						   placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken." data-toggle="popover" data-trigger="manual" data-placement="top">
-					<i class="icon icon-check input-icon form-control-feedback" style="display:none;"></i>
-					<img class="form-control-feedback" id="spinnerPersonalNumber" src="assets/img/icons/spinner.svg" style="display:none;">
-
-					<div class="help-block with-errors"></div>
-				</div>
-				<div class="form-group has-feedback">
-					<label for="userEmail">Och din e-postadress</label>
-					<input type="email" class="form-control" id="userEmail"
-						   placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
-					<div class="help-block with-errors"></div>
-				</div>
-
-				<div id="delivery" class="form-group has-feedback" >
-					<label for="chooseDelivery" style="width: 100%;">
-						Välj leveranssätt
-					</label>
-					<select id="chooseDelivery" class="form-control chooseDelivery" name="chooseDelivery" required data-error="Du måste välja ett leveranssätt" style="width: 100%">
-						<option value>Välj leveranssätt</option>
-						<option value="fysiska" id="fysiska">Jag vill ha fysiska lotter</option>
-						<option value="digitala" id="digitala">Jag vill ha digitala lotter</option>
-					</select>
-					<div class="help-block with-errors"></div>
-				</div>
-			</div>
-
-			<div class="col-12 col-md-4 col-sm-5 col-sm-offset-1 col-md-offset-1 right-input-group" >
-				<div id="payWay" class="form-group has-feedback" >
-					<label for="choosePayWay" style="width: 100%;">
-						Välj betalsätt
-					</label>
-					<select id="choosePayWay" class="form-control choosePayWay" name="choosePayWay" required data-error="Du måste välja betalsätt" style="width: 100%">
-						<option value>Välj betalsätt</option>
-						<option value="faktura" id="faktura">Faktura</option>
-						<option value="betalkort" id="betalkort">Betalkort</option>
-					</select>
-					<div class="help-block with-errors"></div>
-				</div>
-
-				<div id="loginWay" class="form-group has-feedback" >
-					<label for="chooseLoginWay" style="width: 100%;">
-						Välj inloggningssätt
-					</label>
-					<select id="chooseLoginWay" class="form-control chooseLoginWay" name="chooseLoginWay" required data-error="Du måste välja ett inloggningssätt" style="width: 100%">
-						<option value>Välj inloggningssätt</option>
-						<option value="bankid" id="bankid">Bank Id</option>
-						<option value="password" id="password">Lösenord</option>
-					</select>
-					<div class="help-block with-errors"></div>
-				</div>
-
-				<div id="deviceId" style="display: none">
-					<label for="chooseDevice">Välj Enhet</label>
-					<select id="chooseDevice" class="fomr-control chooseDevice" name="chooseDevice" style="width: 100%">
-						<option value="1">BankID på denna enhet</option>
-						<option value="2">BankID på annan enhet</option>
-					</select>
-				</div>
-
-				<div id="passwordInputs" style="display: none;">
-					<div class="form-group has-feedback"  id="userPasswordGroup" >
-						<label for="userPassword">Ange lösenord</label><label class="pull-right light-label" for="userPassword">Minst 6 tecken</label>
-						<input type="password" class="form-control" data-minlength="6" id="userPassword"
-							   placeholder="" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 6 tecken.">
-						<div class="help-block with-errors"></div>
-					</div>
-					<div class="form-group has-feedback" id="userPasswordRepeatGroup">
-						<label for="userPasswordRepeat">Ange lösenordet igen</label>
-						<input type="password" class="form-control" id="userPasswordRepeat" type="hidden" data-match="#userPassword" data-match-error=modal-ops
-							   placeholder="" data-required-error="Du måste fylla i detta fält.">
-						<div class="help-block with-errors"></div>
-					</div>
-				</div>
-				<div class="form-group has-feedback">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="userAcceptTerms" class="custom-checkbox" required data-required-error="Du måste fylla i detta fält.">
-							Jag godkänner Miljonlotteriets <a href="#" data-toggle="modal" data-target="#modal-conditions">Villkor</a>
-						</label>
-						<div class="help-block with-errors"></div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" class="custom-checkbox" id="newsletterCheckbox"> Jag vill ha nyhetsbrev
-						</label>
-					</div>
-				</div>
-
-				<div class="input-group">
-					<div class="form-group">
-						<button type="submit" class="btn btn-primary btn-block">Slutför</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-12 text-center" style="margin-top: 70px;">Är du redan kund?<a href="#" class="navlink" data-toggle="modal" data-target="#modal-login"> Klicka här</a> för<br> att logga in.</div>
-		<div class="col-12 col-md-1 col-sm-0"></div>
-	</form>
-
 	<section class="s-lottery-selection-detail">
 		<div class="container">
 			<div class="row-equal-height">
@@ -279,7 +47,7 @@
 							</div>
 						</div>
 						<div class="product-single__right">
-							<form class="lottery-order-form" data-toggle="validator">
+							<form class="lottery-order-form" action="/" method="post" data-toggle="validator">
 								<div class="form-tabs">
 									<div class="form-tab-first form-tabs__content">
 										<div class="form-title">Beställ dina lotter med ett par enkla steg:</div>
@@ -312,7 +80,7 @@
 										<div class="address-inputs">
 											<div class="form-group has-feedback">
 												<label for="gift-name">Namn c/o</label>
-												<input data-trigger="manual" name="gift-name" class="form-control" type="text" id="gift-name" placeholder="Namn c/o till adress" data-required-error="Du måste fylla i fältet för namn." />
+												<input data-trigger="manual" name="name" class="form-control" type="text" id="gift-name" placeholder="Namn c/o till adress" data-required-error="Du måste fylla i fältet för namn." />
 												<div class="help-block with-errors"></div>
 											</div>
 
@@ -402,11 +170,11 @@
 															<label for="chooseYear">År</label>
 															<select id="chooseYear" class="form-control" name="chooseYear" required data-error="Error">
 																<option value>0000</option>
-																<option value="">2021</option>
-																<option value="">2022</option>
-																<option value="">2023</option>
-																<option value="">2024</option>
-																<option value="">2025</option>
+																<option value="2021">2021</option>
+																<option value="2022">2022</option>
+																<option value="2023">2023</option>
+																<option value="2034">2024</option>
+																<option value="2025">2025</option>
 															</select>
 															<div class="help-block with-errors"></div>
 														</div>
@@ -439,7 +207,7 @@
 
 												<div class="acc-body">
 													<div class="form-row">
-														<div class="form-group has-feedback">
+														<div class="form-group">
 															<label for="clearingNumber" class="with-tooltip">
 																<span>Clearing</span>
 																<span class="tooltip-second">
@@ -451,7 +219,7 @@
 															<div class="help-block with-errors"></div>
 														</div>
 
-														<div class="form-group has-feedback">
+														<div class="form-group">
 															<label for="cardNumber2">Kortnummer</label>
 															<input type="text" class="form-control" id="cardNumber2" data-minlength="16"
 																   placeholder="1234 0000 0000 0000" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer." data-toggle="popover" data-trigger="manual" data-placement="top" disabled>
@@ -473,12 +241,14 @@
 										</div>
 
 										<div class="btn-wrap">
-											<button type="submit" class="lof-btn btn-success go-last-step">
+											<div class="lof-btn btn-success go-last-step disabled">
 												<span>Signera med BankID</span>
 												<span class="icon">
 													<img src="assets/img/icons/bankid-2.png" alt="">
 												</span>
-											</button>
+											</div>
+											<button type="submit"></button>
+											<button type="button" class="show-modal" data-toggle="modal" data-target="#modal-lottery-order"></button>
 										</div>
 
 										<div class="subscribe-info-text">Genom att klicka på ”Signera” godkänner du att inleda en prenumeration.

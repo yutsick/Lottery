@@ -1,5 +1,11 @@
 .lottery-order-form {
 	color: #ffffff;
+	button[type="submit"] {
+		display: none;
+	}
+	button.show-modal {
+		display: none;
+	}
 	.form-title {
 		font-family: $apercu-bold-font;
 		font-size: 30px;
@@ -460,6 +466,37 @@
 		.form-control {
 			text-align: left;
 		}
+	}
+}
+
+#modal-lottery-order {
+	padding: 0!important;
+	.modal-main-body {
+		min-height: 100vh;
+		&:before,
+		&:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		&:before {
+			background-color: #fff;
+			opacity: .5;
+			z-index: 1;
+		}
+		&:after {
+			opacity: 0.75;
+			background: radial-gradient(circle, #FFFFFF, rgba(255,255,255,0));
+			z-index: 2;
+		}
+	}
+	.modal-main-header,
+	.modal-main-content {
+		position: relative;
+		z-index: 3;
 	}
 }
 
