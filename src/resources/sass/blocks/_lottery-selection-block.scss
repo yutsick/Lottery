@@ -6,7 +6,8 @@
 	height: 100vh;
 	background-color: #ccc;
 	opacity: .35;
-	z-index: 1005;
+	//z-index: 1005;
+	z-index: 994;
 	&.active {
 		top: 0;
 	}
@@ -64,7 +65,8 @@
 	position: relative;
 	background-color: $color-primary;
 	padding-bottom: 60px;
-	z-index: 1006;
+	z-index: 995;
+	//z-index: 1006;
 }
 
 .product-single {

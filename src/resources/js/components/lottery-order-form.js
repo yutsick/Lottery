@@ -78,10 +78,7 @@ export default function () {
 			accTitle = accBlock.find('.acc-title'),
 			accBody = accBlock.find('.acc-body'),
 			accItem = th.closest('.acc-second').find('.acc-item'),
-			thisAccItem = th.closest('.acc-item'),
-			selectItem = accItem.find('select');
-
-
+			thisAccItem = th.closest('.acc-item');
 
 		if (!th.hasClass('active')) {
 			accTitle.removeClass('active');
@@ -134,13 +131,20 @@ export default function () {
 
 		tabsFinish = 1;
 
-		if ($(this).hasClass('disabled')) {
+		if (th.hasClass('disabled')) {
+			submitButton.trigger('click');
+			th.closest('.form-tabs__content').find('.form-info-text').fadeOut(300);
+			th.closest('.form-tabs__content').find('.form-error-text').fadeIn(300);
 		} else {
+			th.closest('.form-tabs__content').find('.form-info-text').fadeIn(300);
+			th.closest('.form-tabs__content').find('.form-error-text').fadeOut(300);
 			thisTab.fadeOut(300, function () {
 				$('.form-tab-second').fadeIn(300, function () {
 					tabsFinish = 0;
+					$(this).find('.form-group').removeClass('.has-error').removeClass('has-danger');
 				});
 			});
+			$('.form-tab-second').find('.form-group').removeClass('has-error').removeClass('has-danger');
 		}
 	});
 
@@ -164,16 +168,22 @@ export default function () {
 		checkSecondStep();
 	});
 
-
 	$('.go-last-step').on('click', function () {
 		var th = $(this),
 			thisTab = th.closest('.form-tabs__content');
 
-		thisTab.fadeOut(300, function () {
-			$('.form-tab-last').fadeIn(300, function () {
-				tabsFinish = 0;
+		if (th.hasClass('disabled')) {
+			th.closest('.form-tabs__content').find('.form-info-text').fadeOut(300);
+			th.closest('.form-tabs__content').find('.form-error-text').fadeIn(300);
+		} else {
+			th.closest('.form-tabs__content').find('.form-info-text').fadeIn(300);
+			th.closest('.form-tabs__content').find('.form-error-text').fadeOut(300);
+			thisTab.fadeOut(300, function () {
+				$('.form-tab-last').fadeIn(300, function () {
+					tabsFinish = 0;
+				});
 			});
-		});
+		}
 
 		setTimeout(function(){
 			submitButton.trigger('click');
