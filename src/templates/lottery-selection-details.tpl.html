@@ -8,279 +8,274 @@
 <div class="content-wrapper ml-2017 page-lottery-selection">
 	<div class="page-overlay"></div>
 
-	@@include('blocks/_hero-fullwidth-v3.html',{
+	@@include('blocks/_hero-fullwidth-short.html',{
+	"background_video_link": "assets/video/hemsidebanner_hi3.mp4",
 	"hero_overlay": true,
+	"background_video": false,
 	"content_alignment_desktop": "left",
 	"content_alignment_tablet": "center",
-	"content_alignment_mobile": "center"
+	"content_alignment_mobile": "center",
+	"background_position_desktop": "center",
+	"background_position_tablet": "center",
+	"background_position_mobile": "center"
 	})
 
 	<section class="s-lottery-selection-detail">
 		<div class="container">
 			<div class="product-single">
-						<div class="product-single__left">
-							<div class="product-single__img">
-								<img src="assets/img/mockup/product-01-big.png" alt="">
-							</div>
-							<div class="product-single__desc">
-								<ul class="ls-checkpoints">
-									<li class="lsc-item">
-										<i class="icon icon-check"></i>
-										<span>6 lotter i brevlådan varje månad</span>
-									</li>
-									<li class="lsc-item">
-										<i class="icon icon-check"></i>
-										<span>Vinn upp till 10 miljoner</span>
-									</li>
-									<li class="lsc-item">
-										<i class="icon icon-check"></i>
-										<span>Ingen bindningstid</span>
-									</li>
-								</ul>
-								<div class="product-single__text">
-									<div class="old-price">Ord pris: 300 kr / mån.</div>
-									<p>Vill du beställa din prenumeration via telefon?</p>
-									<p>Ring oss så hjälper vi dig: <a href="tel:0313382821">031-338 28 21</a></p>
-								</div>
-							</div>
-						</div>
-						<div class="product-single__right">
-							<form class="lottery-order-form" action="/" method="post" data-toggle="validator">
-								<div class="form-tabs">
-									<div class="form-tab-first form-tabs__content">
-										<div class="form-title">Beställ dina lotter med ett par enkla steg:</div>
-										<div class="form-info-text">Vi behöver dina uppgifter för att kunna skicka lotterna och vinsterna till dig. Det tar bara någon minut!</div>
-										<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
-
-										<div class="form-group has-feedback">
-											<label for="userPersonalNumber">Ditt personnummer</label>
-											<input type="text" class="form-control" id="userPersonalNumber"
-												   placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken." data-toggle="popover" data-trigger="manual" data-placement="top">
-											<i class="icon icon-check input-icon form-control-feedback" style="display:none;"></i>
-											<img class="form-control-feedback" src="assets/img/icons/spinner.svg" style="display:none;">
-											<div class="help-block with-errors"></div>
-										</div>
-
-										<div class="form-group has-feedback">
-											<label for="userEmail">Din e-postadress</label>
-											<input type="email" class="form-control" id="userEmail"
-												   placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
-											<div class="help-block with-errors"></div>
-										</div>
-
-										<div class="address-field">
-											<div>
-												A**a A*******n,<br>
-												A*********n 1A, 1** *5 G******g
-											</div>
-											<div class="change-address-btn">Stämmer inte adressen?</div>
-										</div>
-
-										<div class="address-inputs">
-											<div class="form-group has-feedback">
-												<label for="gift-name">Namn c/o</label>
-												<input data-trigger="manual" name="name" class="form-control" type="text" id="gift-name" placeholder="Namn c/o till adress" data-required-error="Du måste fylla i fältet för namn." />
-												<div class="help-block with-errors"></div>
-											</div>
-
-											<div class="form-group has-feedback">
-												<label for="gift-address">Gatuadress</label>
-												<input name="gift-address" class="form-control" type="text" id="gift-address" placeholder="Gatuadress" data-required-error="Du måste fylla i fältet för adress."/>
-												<div class="help-block with-errors"></div>
-											</div>
-
-											<div class="form-row">
-												<div class="form-group has-feedback">
-													<label class="delivery__gift-form-label" for="gift-zip">Postnummer</label>
-													<input name="gift-zip" class="form-control" type="text" id="gift-zip" placeholder="000 00" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
-													<div class="help-block with-errors"></div>
-												</div>
-												<div class="form-group has-feedback">
-													<label for="gift-city">Ort</label>
-													<input name="gift-city" class="form-control" type="text" id="gift-city" placeholder="Ort" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
-													<div class="help-block with-errors"></div>
-												</div>
-											</div>
-										</div>
-
-										<div class="btn-wrap">
-											<div class="lof-btn go-payment-step btn-success disabled">Fortsätt</div>
-										</div>
-									</div>
-
-									<div class="form-tab-second form-tabs__content">
-										<div class="form-title">Beställ dina lotter</div>
-										<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
-
-										<div class="acc-second">
-											<div class="payment-by-cart acc-item">
-												<div class="acc-title active">
-													<div class="acc-title__btn"></div>
-													<div class="acc-title__text">Betala med kort</div>
-												</div>
-												<div class="acc-body" style="display: block">
-													<div class="form-row first-row">
-														<div class="form-group has-feedback">
-															<label for="cardNumber">Kortnummer</label>
-															<input type="text" class="form-control" id="cardNumber" data-minlength="16"
-																   placeholder="1234 0000 0000 0000" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer." data-toggle="popover" data-trigger="manual" data-placement="top">
-															<div class="icon-cards">
-																<img src="assets/img/icons/icon-cards.svg" alt="">
-															</div>
-															<div class="help-block with-errors"></div>
-														</div>
-
-														<div class="form-group has-feedback">
-															<label for="ccvNumber" class="with-tooltip">
-																<span>CCV</span>
-																<span class="tooltip-second">
-																	<img src="assets/img/icons/icon-info.svg" alt="">
-																</span>
-															</label>
-															<input type="text" class="form-control" id="ccvNumber" data-minlength="3"
-																   placeholder="123" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror" data-toggle="popover" data-trigger="manual" data-placement="top">
-															<div class="help-block with-errors"></div>
-														</div>
-													</div>
-													<div class="form-row second-row">
-														<div class="title">Giltighetstid</div>
-
-														<div class="form-group has-feedback">
-															<label for="chooseMonth">Månad</label>
-															<select id="chooseMonth" class="form-control" name="chooseMonth" required data-error="Error">
-																<option value>00</option>
-																<option value="1">01</option>
-																<option value="2">02</option>
-																<option value="3">03</option>
-																<option value="4">04</option>
-																<option value="5">05</option>
-																<option value="6">06</option>
-																<option value="7">07</option>
-																<option value="8">08</option>
-																<option value="9">09</option>
-																<option value="10">10</option>
-																<option value="11">11</option>
-																<option value="12">12</option>
-															</select>
-															<div class="help-block with-errors"></div>
-														</div>
-
-														<div class="form-group has-feedback">
-															<label for="chooseYear">År</label>
-															<select id="chooseYear" class="form-control" name="chooseYear" required data-error="Error">
-																<option value>0000</option>
-																<option value="2021">2021</option>
-																<option value="2022">2022</option>
-																<option value="2023">2023</option>
-																<option value="2034">2024</option>
-																<option value="2025">2025</option>
-															</select>
-															<div class="help-block with-errors"></div>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="payment-by-invoice acc-item">
-												<div class="acc-title">
-													<div class="acc-title__btn"></div>
-													<div class="acc-title__text">Betala med Faktura</div>
-												</div>
-												<div class="acc-body">
-													<div class="info-text">I samband med att du får dina lotter får du även en faktura att betala inom XX dagar.</div>
-													<div class="address-field">
-														<div>
-															A**a A*******n,<br>
-															A*********n 1A, 1** *5 G******g
-														</div>
-														<div class="change-address-btn">Stämmer inte adressen?</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="payment-by-direct-debit acc-item">
-												<div class="acc-title">
-													<div class="acc-title__btn"></div>
-													<div class="acc-title__text">Betala med Autogiro</div>
-												</div>
-
-												<div class="acc-body">
-													<div class="form-row">
-														<div class="form-group">
-															<label for="clearingNumber" class="with-tooltip">
-																<span>Clearing</span>
-																<span class="tooltip-second">
-																	<img src="assets/img/icons/icon-info.svg" alt="">
-																</span>
-															</label>
-															<input type="text" class="form-control" id="clearingNumber" data-minlength="4"
-																   placeholder="1234" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror" data-toggle="popover" data-trigger="manual" data-placement="top" disabled>
-															<div class="help-block with-errors"></div>
-														</div>
-
-														<div class="form-group">
-															<label for="cardNumber2">Kortnummer</label>
-															<input type="text" class="form-control" id="cardNumber2" data-minlength="16"
-																   placeholder="1234 0000 0000 0000" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer." data-toggle="popover" data-trigger="manual" data-placement="top" disabled>
-															<div class="icon-cards">
-																<img src="assets/img/icons/icon-cards.svg" alt="">
-															</div>
-															<div class="help-block with-errors"></div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="custom-checkbox-type2">
-											<label>
-												<input type="checkbox" name="newsletter">
-												<span>Jag vill få erbjudanden och intressant läsning via Miljonlotteriets nyhetsbrev</span>
-											</label>
-										</div>
-
-										<div class="btn-wrap">
-											<div class="lof-btn btn-success go-last-step disabled">
-												<span>Signera med BankID</span>
-												<span class="icon">
-													<img src="assets/img/icons/bankid-2.png" alt="">
-												</span>
-											</div>
-											<button type="submit"></button>
-											<button type="button" class="show-modal" data-toggle="modal" data-target="#modal-lottery-order"></button>
-										</div>
-
-										<div class="subscribe-info-text">Genom att klicka på ”Signera” godkänner du att inleda en prenumeration.
-											<button class="btn btn-data-action js-open-subscription-modal"
-											   data-toggle="modal"
-											   data-target="#modal-payment-method"
-											   data-subscription-id="1">Läs mer om våra villkor här</button>
-										</div>
-									</div>
-
-									<div class="form-tab-last form-tabs__content">
-										<div class="form-title">Signera med mobilt BankID</div>
-										<div class="form-info-text">Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.</div>
-										<a href="#" class="more-info-link">Läs mer om BankID</a>
-
-										<div class="launch-info-text">Starta din BankID-app</div>
-
-										<div class="lof-loader">
-											<img src="assets/img/form-loader.svg" alt="">
-										</div>
-
-										<div class="sing-with-bankid">Signera med BankID på denna enhet</div>
-									</div>
-								</div>
-							</form>
-
-							<div class="product-single__text mobile">
-								<div class="old-price">Ord pris: 300 kr / mån.</div>
-								<p>Vill du beställa din prenumeration via telefon?</p>
-								<p>Ring oss så hjälper vi dig: <a href="tel:0313382821">031-338 28 21</a></p>
-							</div>
+				<div class="product-single__left">
+					<div class="product-single__img">
+						<img src="assets/img/mockup/product-01-big.png" alt="">
+					</div>
+					<div class="product-single__desc">
+						<ul class="ls-checkpoints">
+							<li class="lsc-item">
+								<i class="icon icon-check"></i>
+								<span>6 lotter i brevlådan varje månad</span>
+							</li>
+							<li class="lsc-item">
+								<i class="icon icon-check"></i>
+								<span>Vinn upp till 10 miljoner</span>
+							</li>
+							<li class="lsc-item">
+								<i class="icon icon-check"></i>
+								<span>Ingen bindningstid</span>
+							</li>
+						</ul>
+						<div class="product-single__text">
+							<div class="old-price">Ord pris: 300 kr / mån.</div>
+							<p>Vill du beställa din prenumeration via telefon?</p>
+							<p>Ring oss så hjälper vi dig: <a href="tel:0313382821">031-338 28 21</a></p>
 						</div>
 					</div>
+				</div>
+				<div class="product-single__right">
+					<form class="lottery-order-form" action="/" method="post" data-toggle="validator">
+						<div class="form-tabs">
+							<div class="form-tab-first form-tabs__content">
+								<div class="form-title">Beställ dina lotter med ett par enkla steg:</div>
+								<div class="form-info-text">Vi behöver dina uppgifter för att kunna skicka lotterna och vinsterna till dig. Det tar bara någon minut!</div>
+								<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
+
+								<div class="form-group has-feedback">
+									<label for="userPersonalNumber2">Ditt personnummer</label>
+									<input type="text" class="form-control" id="userPersonalNumber2" placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken.">
+									<div class="help-block with-errors"></div>
+								</div>
+
+								<div class="form-group has-feedback">
+									<label for="userEmail2">Din e-postadress</label>
+									<input type="email" class="form-control" id="userEmail2" placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
+									<div class="help-block with-errors"></div>
+								</div>
+
+								<div class="address-field">
+									<div>
+										A**a A*******n,<br>
+										A*********n 1A, 1** *5 G******g
+									</div>
+									<div class="change-address-btn">Stämmer inte adressen?</div>
+								</div>
+
+								<div class="address-inputs">
+									<div class="form-group has-feedback">
+										<label for="gift-name">Namn c/o</label>
+										<input data-trigger="manual" name="name" class="form-control" type="text" id="gift-name" placeholder="Namn c/o till adress" data-required-error="Du måste fylla i fältet för namn." />
+										<div class="help-block with-errors"></div>
+									</div>
+
+									<div class="form-group has-feedback">
+										<label for="gift-address">Gatuadress</label>
+										<input name="gift-address" class="form-control" type="text" id="gift-address" placeholder="Gatuadress" data-required-error="Du måste fylla i fältet för adress."/>
+										<div class="help-block with-errors"></div>
+									</div>
+
+									<div class="form-row">
+										<div class="form-group has-feedback">
+											<label class="delivery__gift-form-label" for="gift-zip">Postnummer</label>
+											<input name="gift-zip" class="form-control" type="text" id="gift-zip" placeholder="000 00" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
+											<div class="help-block with-errors"></div>
+										</div>
+										<div class="form-group has-feedback">
+											<label for="gift-city">Ort</label>
+											<input name="gift-city" class="form-control" type="text" id="gift-city" placeholder="Ort" data-required-error="Du måste fylla i fälten för postnummer och stad."/>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+								</div>
+
+								<div class="btn-wrap">
+									<div class="lof-btn go-payment-step btn-success disabled">Fortsätt</div>
+								</div>
+							</div>
+
+							<div class="form-tab-second form-tabs__content">
+								<div class="form-title">Beställ dina lotter</div>
+								<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
+								<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
+
+								<div class="acc-second">
+									<div class="payment-by-cart acc-item">
+										<div class="acc-title active">
+											<div class="acc-title__btn"></div>
+											<div class="acc-title__text">Betala med kort</div>
+										</div>
+										<div class="acc-body" style="display: block">
+											<div class="form-row first-row">
+												<div class="form-group has-feedback">
+													<label for="cardNumber">Kortnummer</label>
+													<input type="text" class="form-control" id="cardNumber" data-minlength="16" placeholder="1234 0000 0000 0000" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer.">
+													<div class="icon-cards">
+														<img src="assets/img/icons/icon-cards.svg" alt="">
+													</div>
+													<div class="help-block with-errors"></div>
+												</div>
+
+												<div class="form-group has-feedback">
+													<label for="ccvNumber" class="with-tooltip">
+														<span>CCV</span>
+														<span class="tooltip-second">
+															<img src="assets/img/icons/icon-info.svg" alt="">
+														</span>
+													</label>
+													<input type="text" class="form-control" id="ccvNumber" data-minlength="3" placeholder="123" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror">
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="form-row second-row">
+												<div class="title">Giltighetstid</div>
+
+												<div class="form-group has-feedback">
+													<label for="chooseMonth">Månad</label>
+													<select id="chooseMonth" class="form-control" name="chooseMonth" required data-error="Error">
+														<option value>00</option>
+														<option value="1">01</option>
+														<option value="2">02</option>
+														<option value="3">03</option>
+														<option value="4">04</option>
+														<option value="5">05</option>
+														<option value="6">06</option>
+														<option value="7">07</option>
+														<option value="8">08</option>
+														<option value="9">09</option>
+														<option value="10">10</option>
+														<option value="11">11</option>
+														<option value="12">12</option>
+													</select>
+													<div class="help-block with-errors"></div>
+												</div>
+
+												<div class="form-group has-feedback">
+													<label for="chooseYear">År</label>
+													<select id="chooseYear" class="form-control" name="chooseYear" required data-error="Error">
+														<option value>0000</option>
+														<option value="2021">2021</option>
+														<option value="2022">2022</option>
+														<option value="2023">2023</option>
+														<option value="2034">2024</option>
+														<option value="2025">2025</option>
+													</select>
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="payment-by-invoice acc-item">
+										<div class="acc-title">
+											<div class="acc-title__btn"></div>
+											<div class="acc-title__text">Betala med Faktura</div>
+										</div>
+										<div class="acc-body">
+											<div class="info-text">I samband med att du får dina lotter får du även en faktura att betala inom XX dagar.</div>
+											<div class="address-field">
+												<div>
+													A**a A*******n,<br>
+													A*********n 1A, 1** *5 G******g
+												</div>
+												<div class="change-address-btn">Stämmer inte adressen?</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="payment-by-direct-debit acc-item">
+										<div class="acc-title">
+											<div class="acc-title__btn"></div>
+											<div class="acc-title__text">Betala med Autogiro</div>
+										</div>
+
+										<div class="acc-body">
+											<div class="form-row">
+												<div class="form-group">
+													<label for="clearingNumber" class="with-tooltip">
+														<span>Clearing</span>
+														<span class="tooltip-second">
+															<img src="assets/img/icons/icon-info.svg" alt="">
+														</span>
+													</label>
+													<input type="text" class="form-control" id="clearingNumber" data-minlength="4" placeholder="1234" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror" disabled>
+													<div class="help-block with-errors"></div>
+												</div>
+
+												<div class="form-group">
+													<label for="cardNumber2">Kortnummer</label>
+													<input type="text" class="form-control" id="cardNumber2" data-minlength="16" placeholder="1234 0000 0000 0000" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer." disabled>
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="custom-checkbox-type2">
+									<label>
+										<input type="checkbox" name="newsletter">
+										<span>Jag vill få erbjudanden och intressant läsning via Miljonlotteriets nyhetsbrev</span>
+									</label>
+								</div>
+
+								<div class="btn-wrap">
+									<div class="lof-btn btn-success go-last-step disabled">
+										<span>Signera med BankID</span>
+										<span class="icon">
+											<img src="assets/img/icons/bankid-2.png" alt="">
+										</span>
+									</div>
+									<button type="submit"></button>
+									<button type="button" class="show-modal" data-toggle="modal" data-target="#modal-lottery-order"></button>
+								</div>
+
+								<div class="subscribe-info-text">Genom att klicka på ”Signera” godkänner du att inleda en prenumeration.
+									<button class="btn btn-data-action js-open-subscription-modal"
+									   data-toggle="modal"
+									   data-target="#modal-payment-method"
+									   data-subscription-id="1">Läs mer om våra villkor här</button>
+								</div>
+							</div>
+
+							<div class="form-tab-last form-tabs__content">
+								<div class="form-title">Signera med mobilt BankID</div>
+								<div class="form-info-text">Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.</div>
+								<a href="#" class="more-info-link">Läs mer om BankID</a>
+
+								<div class="launch-info-text">Starta din BankID-app</div>
+
+								<div class="lof-loader">
+									<img src="assets/img/form-loader.svg" alt="">
+								</div>
+
+								<div class="sing-with-bankid">Signera med BankID på denna enhet</div>
+							</div>
+						</div>
+					</form>
+
+					<div class="product-single__text mobile">
+						<div class="old-price">Ord pris: 300 kr / mån.</div>
+						<p>Vill du beställa din prenumeration via telefon?</p>
+						<p>Ring oss så hjälper vi dig: <a href="tel:0313382821">031-338 28 21</a></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 

@@ -36,11 +36,11 @@ export default function () {
 
 		$('.page-overlay').removeClass('active');
 
-		if ($(this).val() === '') {
-			$(this).removeClass('filled');
-		} else {
-			$(this).addClass('filled');
-		}
+		// if ($(this).val() === '') {
+		// 	$(this).removeClass('filled');
+		// } else {
+		// 	$(this).addClass('filled');
+		// }
 	});
 
 	//select
@@ -90,7 +90,7 @@ export default function () {
 				accItem.find('.form-control').each(function () {
 					$(this).prop('required', false);
 					$(this).prop('disabled', true);
-					$(this).val('').removeClass('filled');
+					// $(this).val('').removeClass('filled');
 				});
 				thisAccItem.find('.form-control').each(function () {
 					$(this).prop('required', true);
@@ -133,18 +133,19 @@ export default function () {
 
 		if (th.hasClass('disabled')) {
 			submitButton.trigger('click');
-			th.closest('.form-tabs__content').find('.form-info-text').fadeOut(300);
-			th.closest('.form-tabs__content').find('.form-error-text').fadeIn(300);
+			th.closest('.form-tabs__content').find('.form-info-text').hide();
+			th.closest('.form-tabs__content').find('.form-error-text').show();
 		} else {
-			th.closest('.form-tabs__content').find('.form-info-text').fadeIn(300);
-			th.closest('.form-tabs__content').find('.form-error-text').fadeOut(300);
+			th.closest('.form-tabs__content').find('.form-info-text').show();
+			th.closest('.form-tabs__content').find('.form-error-text').hide();
 			thisTab.fadeOut(300, function () {
 				$('.form-tab-second').fadeIn(300, function () {
 					tabsFinish = 0;
-					$(this).find('.form-group').removeClass('.has-error').removeClass('has-danger');
+					$(this).find('.form-group').removeClass('has-error').removeClass('has-danger');
 				});
 			});
 			$('.form-tab-second').find('.form-group').removeClass('has-error').removeClass('has-danger');
+			$('.form-tab-second').find('.form-group .with-errors .list-unstyled').hide();
 		}
 	});
 
@@ -153,8 +154,6 @@ export default function () {
 		setTimeout(function () {
 			var numRequiredInputs = $('.form-tab-second .form-control[required]').length,
 				numFilledInputs = $('.form-tab-second .form-control[required]').closest('.form-group.has-success').length;
-
-			console.log(numFilledInputs, numRequiredInputs)
 
 			if (numFilledInputs === numRequiredInputs) {
 				$('.go-last-step').removeClass('disabled');
@@ -173,25 +172,21 @@ export default function () {
 			thisTab = th.closest('.form-tabs__content');
 
 		if (th.hasClass('disabled')) {
-			th.closest('.form-tabs__content').find('.form-info-text').fadeOut(300);
-			th.closest('.form-tabs__content').find('.form-error-text').fadeIn(300);
+			th.closest('.form-tabs__content').find('.form-info-text').hide();
+			th.closest('.form-tabs__content').find('.form-error-text').show();
 		} else {
-			th.closest('.form-tabs__content').find('.form-info-text').fadeIn(300);
-			th.closest('.form-tabs__content').find('.form-error-text').fadeOut(300);
+			th.closest('.form-tabs__content').find('.form-info-text').show();
+			th.closest('.form-tabs__content').find('.form-error-text').hide();
 			thisTab.fadeOut(300, function () {
 				$('.form-tab-last').fadeIn(300, function () {
 					tabsFinish = 0;
 				});
 			});
+			setTimeout(function(){
+				$('.lottery-order-form .show-modal').trigger('click');
+			}, 4000);
 		}
-
-		setTimeout(function(){
-			submitButton.trigger('click');
-		}, 3000);
-
-		setTimeout(function(){
-			$('.lottery-order-form .show-modal').trigger('click');
-		}, 4000);
+		submitButton.trigger('click');
 	});
 
 	$('.lottery-order-form').validator().on('submit', function (e) {

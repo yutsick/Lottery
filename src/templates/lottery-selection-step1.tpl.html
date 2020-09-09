@@ -5,11 +5,17 @@
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 
 <div class="content-wrapper ml-2017 page-lottery-selection">
-	@@include('blocks/_hero-fullwidth-v3.html',{
+
+	@@include('blocks/_hero-fullwidth-short.html',{
+	"background_video_link": "assets/video/hemsidebanner_hi3.mp4",
 	"hero_overlay": true,
+	"background_video": false,
 	"content_alignment_desktop": "center",
 	"content_alignment_tablet": "center",
-	"content_alignment_mobile": "center"
+	"content_alignment_mobile": "center",
+	"background_position_desktop": "center",
+	"background_position_tablet": "center",
+	"background_position_mobile": "center"
 	})
 
 	<section class="s-lottery-selection">

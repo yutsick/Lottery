@@ -1,0 +1,25 @@
+<div class="hero-full-short hero-content-desktop--@@content_alignment_desktop hero-content-tablet--@@content_alignment_tablet hero-content-mobile--@@content_alignment_mobile">
+	@@if (context.background_video === false) {
+		<div class="hero-full--bg hero-bgp-desktop--@@background_position_desktop hero-bgp-tablet--@@background_position_tablet hero-bgp-mobile--@@background_position_mobile" style="background-image: url(assets/img/background/hero-sektion-2.jpeg);"></div>
+	}
+
+	@@if (context.background_video === true) {
+		<video class="hero-full__video hero-bgp-desktop--@@background_position_desktop hero-bgp-tablet--@@background_position_tablet hero-bgp-mobile--@@background_position_mobile" autoplay="autoplay" muted="muted" loop="loop">
+			<source src="@@background_video_link" type="video/mp4">
+		</video>
+	}
+
+	@@if (hero_overlay === true) {
+	<div class="hero-full-short__overlay"></div>
+	}
+
+	<div class="hero-full-short__holder">
+		<div class="hero-full-short__content">
+			<h1 class="block-hero__title">Hjälp oss göra skillnad – välj dina månadslotter</h1>
+			<div class="block-hero__text">
+				<p>Varje månad gör du livet bättre för tusentals barn och vuxna. Samtidigt har du chans på vinster för miljoner.</p>
+
+			</div>
+		</div>
+	</div>
+</div>
