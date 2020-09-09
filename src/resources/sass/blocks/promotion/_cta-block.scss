@@ -329,6 +329,16 @@
         justify-content: center;
       }
     }
+	&.image-left {
+	  .cta-block {
+		&__content {
+		  order: 2;
+		}
+		&__image {
+		  order: 1;
+		}
+	  }
+	}
 
 
     @media screen and (max-width: $screen-md) {
@@ -383,7 +393,7 @@
         }
       }
 
-      &.reversed {
+      &.image-left {
         .cta-block {
           &__content {
             margin-left: 10px;
