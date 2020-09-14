@@ -91,6 +91,12 @@
 					margin-left: 5px;
 					margin-bottom: 2px;
 				}
+				.tooltip-second + .tooltip {
+					.tooltip-inner {
+						width: 100px;
+					}
+				}
+
 			}
 		}
 	}
