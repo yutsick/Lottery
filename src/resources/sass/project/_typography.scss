@@ -89,6 +89,12 @@ h6,
 	line-height: 1.25;
 }
 
+.manualHyphens {
+	-ms-hyphens: manual;
+	-webkit-hyphens: manual;
+	hyphens: manual;
+}
+
 
 /* Custom sizes on .my-pages */
 .my-pages {
