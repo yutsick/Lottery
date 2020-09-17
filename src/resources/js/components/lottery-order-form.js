@@ -8,6 +8,7 @@ export default function () {
 		$(this).closest('.address-field').hide();
 		$(this).closest('.form-tabs__content').find('.address-inputs').show();
 		$('.form-tab-first .address-inputs .form-control').prop('required', true);
+		checkFirsStep();
 	});
 
 	$('.form-tab-second .change-address-btn').on('click', function () {
@@ -35,12 +36,6 @@ export default function () {
 		$(this).removeClass('focused');
 
 		$('.page-overlay').removeClass('active');
-
-		// if ($(this).val() === '') {
-		// 	$(this).removeClass('filled');
-		// } else {
-		// 	$(this).addClass('filled');
-		// }
 	});
 
 	//select
@@ -65,9 +60,7 @@ export default function () {
 		$('.page-overlay').removeClass('active')
 	});
 	customSelect.on('select2:select', function (e) {
-		setTimeout(function () {
-			checkSecondStep();
-		},500)
+		checkSecondStep();
 	});
 
 
@@ -102,23 +95,21 @@ export default function () {
 				})
 				accItem.find('.form-group').removeClass('has-feedback').removeClass('has-success');
 				thisAccItem.find('.form-group').addClass('has-feedback');
-			},500)
-			checkSecondStep();
+				checkSecondStep();
+			})
 		}
 	});
 
 	//first step
 	function checkFirsStep() {
-		setTimeout(function () {
-			var numRequiredInputs = $('.form-tab-first .form-control[required]').length,
-				numFilledInputs = $('.form-tab-first .form-control[required]').closest('.form-group.has-success').length;
+		var numRequiredInputs = $('.form-tab-first .form-control[required]').length,
+			numFilledInputs = $('.form-tab-first .form-control[required]').closest('.form-group.has-success').length;
 
-			if (numFilledInputs !== 0 && numFilledInputs === numRequiredInputs) {
-				$('.go-payment-step').removeClass('disabled');
-			} else {
-				$('.go-payment-step').addClass('disabled');
-			}
-		}, 500)
+		if (numFilledInputs !== 0 && numFilledInputs === numRequiredInputs) {
+			$('.go-payment-step').removeClass('disabled');
+		} else {
+			$('.go-payment-step').addClass('disabled');
+		}
 	}
 
 	$('.form-tab-first .form-control').on('keyup focus', function () {
@@ -151,16 +142,14 @@ export default function () {
 
 	//second step
 	function checkSecondStep() {
-		setTimeout(function () {
-			var numRequiredInputs = $('.form-tab-second .form-control[required]').length,
-				numFilledInputs = $('.form-tab-second .form-control[required]').closest('.form-group.has-success').length;
+		var numRequiredInputs = $('.form-tab-second .form-control[required]').length,
+			numFilledInputs = $('.form-tab-second .form-control[required]').closest('.form-group.has-success').length;
 
-			if (numFilledInputs === numRequiredInputs) {
-				$('.go-last-step').removeClass('disabled');
-			} else {
-				$('.go-last-step').addClass('disabled');
-			}
-		}, 500)
+		if (numFilledInputs === numRequiredInputs) {
+			$('.go-last-step').removeClass('disabled');
+		} else {
+			$('.go-last-step').addClass('disabled');
+		}
 	}
 
 	$('.form-tab-second .form-control').on('keyup focus', function () {
