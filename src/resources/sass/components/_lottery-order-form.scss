@@ -438,44 +438,6 @@
 	display: none;
 }
 
-.payment-by-cart {
-	.first-row {
-		.form-group {
-			text-align: left;
-			&:first-child {
-				width: calc(100% - 90px);
-			}
-			&:last-child {
-				width: 70px;
-			}
-			label {
-				padding-left: 5px;
-				&.with-tooltip {
-					justify-content: flex-end;
-				}
-			}
-		}
-		.form-control {
-			text-align: left;
-		}
-	}
-	.second-row {
-		justify-content: flex-end;
-		.title {
-			font-size: $size-small;
-			margin-right: 10px;
-			margin-top: 22px;
-		}
-		.form-group {
-			width: 80px;
-		}
-		.select2-container {
-			width: 100% !important;
-
-		}
-	}
-}
-
 .payment-by-invoice {
 	.acc-body {
 		padding-left: 30px;
