@@ -237,3 +237,21 @@ a.navlink:hover {
 		}
 	}
 }
+.select-dropdown-container-2 {
+	.select2-results {
+		&__options {
+			margin: 0;
+			padding: 0;
+		}
+		&__option {
+			color: $color-primary;
+			font-size: $size-small;
+			font-weight: 400;
+			letter-spacing: 1px;
+			padding: 13px 15px;
+			&[aria-selected="true"] {
+				display: none;
+			}
+		}
+	}
+}

@@ -26,7 +26,8 @@ export default function () {
 	});
 
 	//select
-	var customSelect = $('.lottery-order-form select');
+	var customSelect = $('.lottery-order-form select'),
+		customSelect2 = $('.choose-bankid-device select');
 
 	customSelect.each(function () {
 		var th = $(this);
@@ -39,6 +40,10 @@ export default function () {
 			th.next('.select2').addClass('choice-done');
 		});
 	})
+
+	customSelect2.select2({
+		minimumResultsForSearch: -1
+	}).data('select2').$dropdown.addClass('select-dropdown-container-2');
 
 	customSelect.on('select2:opening', function (e) {
 		$('.page-overlay').addClass('active');
