@@ -1,11 +1,5 @@
 .lottery-order-form {
 	color: #ffffff;
-	button[type="submit"] {
-		display: none;
-	}
-	button.show-modal {
-		display: none;
-	}
 	.form-title {
 		font-family: $apercu-bold-font;
 		font-size: 30px;
@@ -144,6 +138,54 @@
 			width: 100%;
 		}
 	}
+	.address-block {
+		margin-bottom: 30px;
+		>* {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.text {
+			font-size: $font-size-small;
+			font-weight: 700;
+		}
+	}
+	.go-first-step {
+		display: inline-block;
+		cursor: pointer;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.custom-radio {
+		input[type='radio']:checked + label {
+			&:after {
+				background: $color-primary;
+				transform: scale(1);
+			}
+
+		}
+		&__label {
+			font-size: $size-small!important;
+			font-weight: 700;
+			text-align: left!important;
+			&:after {
+				position: absolute;
+				content: '';
+				top: 3px;
+				left: 5px;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: $color-primary;
+				transform: scale(0);
+				transition: all .3s ease;
+			}
+		}
+	}
 	.select2-container {
 		&--open {
 			.select2-selection {
@@ -181,7 +223,7 @@
 				outline: none;
 				.select2-selection {
 					&__rendered {
-						line-height: 42px;
+						line-height: 43px;
 						color: rgba(11, 59, 84, .5);
 						font-size: $size-small;
 						font-weight: 400;
@@ -221,36 +263,35 @@
 }
 
 .form-tab-first {
-	.address-field {
-		padding: 10px 0 30px;
+	.address-block {
+		padding-top: 15px;
 	}
-	.change-address-btn {
-		display: inline-block;
-		cursor: pointer;
-		text-decoration: underline;
-		margin-top: 10px;
-		&:hover {
-			text-decoration: none;
-		}
-	}
-	.address-inputs {
-		display: none;
-		padding: 40px 0 10px;
+}
 
-		.form-row {
-			.form-group {
-				&:first-child {
-					width: 135px;
-				}
-				&:last-child {
-					width: calc(100% - 155px);
-				}
+.form-tab-second {
+	display: none;
+	.radio-group {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 10px;
+	}
+	.custom-radio {
+		margin-bottom: 10px;
+		width: 50%;
+		@media (max-width: 480px) {
+			width: 100%;
+		}
+		&__label {
+			margin: 0;
+			padding-right: 20px;
+			@media (max-width: 480px) {
+				padding-right: 0;
 			}
 		}
 	}
 }
 
-.form-tab-second {
+.form-tab-third {
 	display: none;
 	.btn-success {
 		display: flex;
@@ -264,6 +305,9 @@
 				margin-left: 2px;
 			}
 		}
+	}
+	.show-modal {
+		display: none;
 	}
 	.subscribe-info-text {
 		font-size: $size-smallest;
@@ -286,14 +330,24 @@
 		height: 44px;
 	}
 	.acc-second {
-		margin-bottom: 60px;
+		margin-bottom: 30px;
 	}
 	.custom-checkbox-type2 {
 		label {
 			margin-bottom: 30px;
 		}
 	}
+	.choose-bankid-device {
+		margin-bottom: 30px;
+		.select2-container {
+			width: 100% !important;
+			.select2-selection--single .select2-selection__rendered {
+				color: $color-primary!important;
+			}
+		}
+	}
 }
+
 
 .form-tab-last {
 	display: none;
@@ -425,18 +479,6 @@
 .payment-by-invoice {
 	.acc-body {
 		padding-left: 30px;
-	}
-	.address-field {
-		padding: 10px 0 20px;
-	}
-	.change-address-btn {
-		display: inline-block;
-		cursor: pointer;
-		text-decoration: underline;
-		margin-top: 10px;
-		&:hover {
-			text-decoration: none;
-		}
 	}
 }
 
