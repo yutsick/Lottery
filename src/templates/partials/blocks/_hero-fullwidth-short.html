@@ -17,7 +17,9 @@
 		<div class="hero-full-short__content">
 			<h1 class="block-hero__title">Hjälp oss göra skillnad – välj dina månadslotter</h1>
 			<div class="block-hero__text">
+				@@if (context.hero_text === true) {
 				<p>Varje månad gör du livet bättre för tusentals barn och vuxna. Samtidigt har du chans på vinster för miljoner.</p>
+				}
 				@@if (context.hero_link === true) {
 				<a class="btn btn-cta" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
 				}
