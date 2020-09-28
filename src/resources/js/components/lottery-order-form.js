@@ -41,9 +41,14 @@ export default function () {
 		});
 	})
 
-	customSelect2.select2({
-		minimumResultsForSearch: -1
-	}).data('select2').$dropdown.addClass('select-dropdown-container-2');
+	customSelect2.each(function () {
+		var th = $(this);
+
+		th.select2({
+			minimumResultsForSearch: -1
+		}).data('select2').$dropdown.addClass('select-dropdown-container-2');
+	})
+
 
 	customSelect.on('select2:opening', function (e) {
 		$('.page-overlay').addClass('active');
