@@ -132,7 +132,6 @@
 		}
 	}
 	.address-block {
-		margin-bottom: 30px;
 		>* {
 			margin-bottom: 10px;
 			&:last-child {
@@ -255,7 +254,10 @@
 
 .form-tab-first {
 	.address-block {
-		padding-top: 15px;
+		padding-top: 10px;
+	}
+	.btn-wrap {
+		margin-top: 30px;
 	}
 }
 
