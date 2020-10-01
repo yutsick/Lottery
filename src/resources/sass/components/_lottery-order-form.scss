@@ -10,14 +10,11 @@
 			font-size: 28px;
 		}
 	}
-	.form-error-text {
-		color: #ffcf34;
-	}
 	.form-info-text {
 		font-size: $base-font-size;
 		font-weight: 400;
 		line-height: 1.428;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 	.form-error-text {
 		display: none;
@@ -25,7 +22,7 @@
 		color: #ffcf34;
 		font-weight: 400;
 		line-height: 1.428;
-		margin-bottom: 20px;
+		margin-bottom: 30px;
 	}
 	.form-row {
 		display: flex;
@@ -39,7 +36,7 @@
 		display: block;
 		position: relative;
 		width: 100%;
-		margin-bottom: 15px;
+		margin-bottom: 20px;
 		&.has-error {
 			.form-control {
 				border-color: #ffcf34;
@@ -66,7 +63,7 @@
 			color: #ffcf34;
 			font-size: $size-smallest;
 			line-height: 1;
-			margin: 5px 0;
+			margin: 5px 0 0;
 			ul {
 				margin: 0;
 			}
@@ -113,10 +110,6 @@
 			letter-spacing: 1px;
 			opacity: .5;
 		}
-		//&.filled {
-		//	border-color: #cecece;
-		//	background-color: #E8F0FE;
-		//}
 		&.focused {
 			border-color: $color-cta;
 			background-color: #fff;
@@ -226,7 +219,6 @@
 						color: rgba(11, 59, 84, .5);
 						font-size: $size-small;
 						font-weight: 400;
-						letter-spacing: 1px;
 						padding-left: 15px;
 					}
 					&__arrow {
@@ -269,10 +261,13 @@
 
 .form-tab-second {
 	display: none;
+	.form-group {
+		margin-bottom: 40px;
+	}
 	.radio-group {
 		display: flex;
 		flex-wrap: wrap;
-		padding-top: 10px;
+		padding-top: 5px;
 	}
 	.custom-radio {
 		margin-bottom: 10px;
@@ -344,6 +339,7 @@
 			width: 100% !important;
 			.select2-selection--single .select2-selection__rendered {
 				color: $color-primary!important;
+				font-weight: 700;
 			}
 		}
 	}
@@ -442,6 +438,9 @@
 .payment-by-invoice {
 	.acc-body {
 		padding-left: 30px;
+		.address-block {
+			margin-bottom: 20px;
+		}
 	}
 }
 

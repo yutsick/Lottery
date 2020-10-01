@@ -229,7 +229,6 @@ a.navlink:hover {
 			color: $color-primary;
 			font-size: $size-small;
 			font-weight: 400;
-			letter-spacing: 1px;
 			padding: 8px 15px;
 			&:first-child {
 				display: none;
@@ -246,8 +245,7 @@ a.navlink:hover {
 		&__option {
 			color: $color-primary;
 			font-size: $size-small;
-			font-weight: 400;
-			letter-spacing: 1px;
+			font-weight: 700;
 			padding: 13px 15px;
 			&[aria-selected="true"] {
 				display: none;
