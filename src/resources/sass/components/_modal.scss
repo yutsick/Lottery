@@ -272,6 +272,35 @@
 			}
 		}
 
+		.modal-main-content {
+			min-height: auto;
+		}
+		.modal-main-inner {
+			flex: none;
+			flex-grow: 1;
+		}
+		.modal-main-center {
+			.btn-hash {
+				&:last-child {
+					@media (max-width: 767px) {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		.modal-main-body {
+			min-height: auto;
+			height: 100%;
+		}
+		.modal-main-footer {
+			flex: none;
+		}
+		.modal-main__title {
+			@media (max-width: 767px) {
+				margin-bottom: 10px;
+			}
+		}
+
 		.modal-body__loading {
 			img {
 				animation: spin 1s linear infinite;
