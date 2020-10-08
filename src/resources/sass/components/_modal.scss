@@ -279,8 +279,10 @@
 			}
 		}
 
-		.modal-main-content {
-			min-height: auto;
+		@include max-screen($screen-md-min) {
+			.modal-main-content {
+				min-height: auto;
+			}
 		}
 		.modal-main-inner {
 			flex: none;
