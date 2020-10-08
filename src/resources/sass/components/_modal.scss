@@ -260,9 +260,16 @@
 
 .modal {
 	&-login {
+		.vertical-alignment-helper {
+			display: block;
+		}
 
 		.modal-dialog {
+			display: block;
+			height: 100%;
+			width: 100%;
 			padding: 0;
+			margin: 0;
 		}
 
 		.modal-body__loading,
@@ -289,8 +296,8 @@
 			}
 		}
 		.modal-main-body {
-			min-height: auto;
-			height: 100%;
+			min-height: 100%;
+			height: auto;
 		}
 		.modal-main-footer {
 			flex: none;
