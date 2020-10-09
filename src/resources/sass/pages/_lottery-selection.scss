@@ -18,15 +18,6 @@
 			margin: 0 0 120px;
 		}
 	}
-	.slider-promo {
-		margin: 0 0 25px;
-		@include min-screen($screen-sm-min) {
-			margin: 0 0 45px;
-		}
-		@include min-screen($screen-md-min) {
-			margin: 0 0 85px;
-		}
-	}
 	.cta-block--large {
 		margin: 0 0 60px;
 		@include min-screen($screen-sm-min) {

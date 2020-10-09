@@ -3,7 +3,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-end;
-		justify-content: center;		color: $color-blue-deep;
+		justify-content: center;
+		color: $color-blue-deep;
 
 		&-inner {
 			padding-bottom: 20px;
@@ -19,9 +20,6 @@
 		font-family: $apercu-bold-font;
 		font-size: 30px;
 		color: $color-blue-deep;
-	}
-	@include min-screen($screen-md-min) {
-		margin-bottom: 20px;
 	}
 
 	.block-promotion__title {
