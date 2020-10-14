@@ -106,9 +106,11 @@
 		padding: 0 15px;
 		transition: all .2s ease;
 		&::placeholder {
-			color: $color-primary;
+			color: rgba(0, 62, 82, .5);
 			letter-spacing: 1px;
-			opacity: .5;
+		}
+		&::-ms-input-placeholder {
+			opacity: 1;
 		}
 		&.focused {
 			border-color: $color-cta;
