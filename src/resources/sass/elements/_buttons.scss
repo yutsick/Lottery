@@ -60,7 +60,7 @@
 		background-color: $color-primary-light;
 		color: $color-light;
 	}
-	
+
 	&[disabled],
 	&.disabled,
 	&.btn-disabled {
@@ -119,7 +119,7 @@
 	}
 
 }
-	
+
 .btn-data-action {
 	background: none;
 	padding: 0;
@@ -149,7 +149,7 @@
 		}
 	}
 }
-	
+
 /* Custom */
 .btn-secondary {
 	background-color: $color-secondary;
@@ -195,7 +195,7 @@
 		color: $color-light;
 	}
 }
-	
+
 .btn-icon {
 	position: relative;
 	padding-left: 30 + 19 + 5px;
@@ -219,7 +219,7 @@
 		}
 	}
 }
-	
+
 .btn-icon-only {
 	position: relative;
 	padding: 0;
@@ -241,7 +241,7 @@
 		}
 	}
 }
-	
+
 .btn-input {
 	background-color: $color-light;
 	border-radius: $border-radius;
@@ -270,7 +270,7 @@
 		}
 	}
 }
-	
+
 .btn-2-line {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -282,9 +282,9 @@
 		line-height: 1;
 	}
 }
-	
-	
-	
+
+
+
 .btn-load {
 	position: relative;
 
@@ -304,7 +304,7 @@
 		}
 	}
 }
-	
+
 .btn--bottom-center {
 	position: absolute;
 	bottom: 20px;
@@ -435,7 +435,7 @@ a.btn {
 	padding-bottom: 8px;
 	align-items: center;
 	width: 100%;
-	
+
 	&:before {
 		position: absolute;
 		content: '';
@@ -559,6 +559,32 @@ a.btn {
 	span {
 		display: inline-block;
 		vertical-align: middle;
+	}
+}
+
+.btn-third {
+	height: 46px;
+	line-height: 46px;
+	border-radius: 23px;
+	padding: 0 30px;
+	text-align: center;
+	&--success {
+		color: $color-white;
+		background-color: $color-cta;
+		&:hover,
+		&:focus {
+			color: $color-white;
+			background-color: #EF9EC5;
+		}
+	}
+	&--white {
+		color: $color-primary;
+		background-color: $color-white;
+		&:hover,
+		&:focus {
+			color: $color-primary;
+			background-color: $color-grey-bg;
+		}
 	}
 }
 

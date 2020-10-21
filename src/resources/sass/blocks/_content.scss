@@ -152,6 +152,13 @@
 	&-wrap {
 		&--center {
 			text-align: center;
+			.block-subtitle {
+				max-width: 640px;
+				width: 100%;
+				font-size: $size-large;
+				font-weight: 400;
+				margin: -10px auto 40px;
+			}
 		}
 	}
 
@@ -204,6 +211,20 @@
 		}
 		&--blue {
 			background-color: $color-primary-lighter;
+		}
+		&--light-blue {
+			background-color: $color-secondary-light;
+		}
+		&--dark-blue {
+			background-color: $color-primary;
+		}
+		&--big {
+			font-size: 24px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+		&--text-dark {
+			color: $color-primary;
 		}
 	}
 }

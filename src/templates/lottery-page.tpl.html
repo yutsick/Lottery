@@ -1,0 +1,127 @@
+@@include('layout/_header.html', {
+"class": "page-lottery logged-out"
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+<div class="content-wrapper ml-2017">
+	<section class="s-new-online-lottery section">
+		<div class="container">
+			<div class="row equal-height">
+				<div class="col-xs-12 block-title-wrap--center">
+					<h2 class="h2 block-title-marked block-title-marked--light-blue block-title-marked--big block-title-marked--text-dark">Prenumerationer</h2>
+				</div>
+
+				@@include('blocks/promotion/block-cta/_cta-block-medium.html', {
+				"theme": "dark",
+				"text_alignment": "left",
+				"reversed_content": true,
+				"background-color-class": "background-color-blue",
+				"has_content_title": true,
+				"has_content_description": true,
+				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+				"link_title": "Prova Stödhjulet nu"
+				})
+
+				@@include('blocks/promotion/block-img/_img-block-medium.html', {
+				"theme": "dark",
+				"text_alignment": "left",
+				"image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+				"has_content_title": true,
+				"has_content_description": false,
+				"has_link": true,
+				"link_title": "Se mer"
+				})
+			</div>
+		</div>
+	</section>
+
+	<section class="s-bullet-points-bar section">
+		<div class="container">
+			<div class="s-bullet-points-bar__list">
+				<div class="s-bullet-points-bar__item">
+					<div class="s-bullet-points-bar__img">
+						<img src="assets/img/bullet-point-01.png" alt="">
+					</div>
+					<div class="s-bullet-points-bar__text">Vinster värda upp till 10 miljoner</div>
+				</div>
+				<div class="s-bullet-points-bar__item">
+					<div class="s-bullet-points-bar__img">
+						<img src="assets/img/bullet-point-02.png" alt="">
+					</div>
+					<div class="s-bullet-points-bar__text">Varje lottköp gör skillnad</div>
+				</div>
+				<div class="s-bullet-points-bar__item">
+					<div class="s-bullet-points-bar__img">
+						<img src="assets/img/bullet-point-03.png" alt="">
+					</div>
+					<div class="s-bullet-points-bar__text">Jackpott- och nitlottschans</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-latest-winners section">
+		<div class="container"></div>
+	</section>
+
+	<section class="s-online-lottery section">
+		<div class="container"></div>
+	</section>
+
+	<section class="s-online-game bg-light-blue section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 block-title-wrap--center">
+					<h2 class="h2 block-title-marked block-title-marked--dark-blue block-title-marked--big">Prenumerationer</h2>
+					<div class="block-subtitle">En annan väg till stora och små vinster är våra underhållande onlinespel. Vilken är du nyfiken på?</div>
+				</div>
+			</div>
+			<div class="online-game-list row equal-height">
+				<div class="col-lg-6">
+					<div class="online-game-item">
+						<div class="game-top">
+							<div class="img" style="background-image: url('assets/img/game-01.jpg')"></div>
+							<div class="lottery-price">50 kr</div>
+							<div class="lottery-info-btn">i</div>
+						</div>
+						<div class="game-bottom">
+							<div class="title">Stödhjulet</div>
+							<div class="text">I Stödhjulet är det du som bestämmer vilka överskottet ska hjälpa. Välj dina rader – dragning varje fredag 20.00!</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Gå till spelet</a>
+								<a class="btn btn-third btn-third--white" href="#">Gå till spelet</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="online-game-item">
+						<div class="game-top">
+							<div class="img" style="background-image: url('assets/img/game-02.jpg')"></div>
+							<div class="lottery-price">5 kr</div>
+							<div class="lottery-info-btn">i</div>
+						</div>
+						<div class="game-bottom">
+							<div class="title">Skattjakten</div>
+							<div class="text">Hitta de gömda skatterna och vinn! Ju ädlare skatter du hittar, desto högre blir vinsten. Börja jakten nu!</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Gå till spelet</a>
+								<a class="btn btn-third btn-third--white" href="#">Gå till spelet</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 bottom-line"></div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-lottery-in-store section">
+		<div class="container"></div>
+	</section>
+</div>
+
+
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
