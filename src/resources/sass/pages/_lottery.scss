@@ -84,6 +84,7 @@
 
 /*online lottery*/
 .s-online-lottery {
+	padding: 60px 0;
 
 }
 
@@ -101,7 +102,6 @@
 
 .online-game-list {
 	>[class*="col-"] {
-		padding-top: 25px;
 		margin-bottom: 60px;
 		&:nth-child(odd) {
 			border-right: 1px solid $color-secondary-dark;
@@ -129,7 +129,8 @@
 	flex-direction: column;
 	max-width: 565px;
 	width: 100%;
-	height: calc(100% - 25px);
+	height: 100%;
+	padding-top: 25px;
 	.game-top {
 		position: relative;
 		margin-bottom: 40px;
@@ -175,5 +176,5 @@
 
 /*lottery in store*/
 .s-lottery-in-store {
-
+	padding: 60px 0;
 }
