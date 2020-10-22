@@ -15,25 +15,27 @@
 
 
     <div class="hero-full__holder">
-        <div class="hero-full__content">
+		<div class="container">
+			<div class="hero-full__content">
 
-            @@if (context.logged_in === false) {
-                <h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
-                <div class="block-hero__text">
-                    <p>Hos oss gör du livet bättre för tusentals barn och vuxna genom att stödja IOGT-NTO-rörelsens viktiga arbete. Som tack kan du skrapa fram vinster för upp till 10 miljoner.
-                    </p>
-                    <a class="btn btn-cta" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
-                </div>
-            }
-            @@if (context.logged_in === true) {
-                <h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
-                <div class="block-hero__text">
-                    <p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
-                         oss, och dig, kraften att göra skillnad.
-                    </p>
-                    <a class="btn btn-cta" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
-                </div>
-            }
-        </div>
+				@@if (context.logged_in === false) {
+				<h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
+				<div class="block-hero__text">
+					<p>Hos oss gör du livet bättre för tusentals barn och vuxna genom att stödja IOGT-NTO-rörelsens viktiga arbete. Som tack kan du skrapa fram vinster för upp till 10 miljoner.
+					</p>
+					<a class="btn btn-cta" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
+				</div>
+				}
+				@@if (context.logged_in === true) {
+				<h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
+				<div class="block-hero__text">
+					<p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
+						oss, och dig, kraften att göra skillnad.
+					</p>
+					<a class="btn btn-cta" href="/" title="Läs mer och gör skillnad">Läs mer och gör skillnad</a>
+				</div>
+				}
+			</div>
+		</div>
     </div>
 </div>

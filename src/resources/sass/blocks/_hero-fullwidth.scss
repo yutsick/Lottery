@@ -139,15 +139,15 @@
                     text-align: left;
                     .hero-full__content {
                         text-align: left;
-                        margin-left: 0;
-                        margin-right: auto;
+                        //margin-left: 0;
+                        //margin-right: auto;
                     }
                 }
                 &--center {
                     text-align: center;
                     .hero-full__content {
-                        margin-left: auto;
-                        margin-right: auto;
+                        //margin-left: auto;
+                        //margin-right: auto;
                         text-align: center;
                     }
                 }
@@ -159,15 +159,15 @@
                     text-align: left;
                     .hero-full__content {
                         text-align: left;
-                        margin-left: 0;
-                        margin-right: auto;
+                        //margin-left: 0;
+                        //margin-right: auto;
                     }
                 }
                 &--center {
                     text-align: center;
                     .hero-full__content {
-                        margin-left: auto;
-                        margin-right: auto;
+                        //margin-left: auto;
+                        //margin-right: auto;
                         text-align: center;
                     }
                 }
@@ -179,15 +179,15 @@
                     text-align: left;
                     .hero-full__content {
                         text-align: left;
-                        margin-left: 120px;
-                        margin-right: auto;
+                        //margin-left: 120px;
+                        //margin-right: auto;
                     }
                 }
                 &--center {
                     text-align: center;
                     .hero-full__content {
-                        margin-left: auto;
-                        margin-right: auto;
+                        //margin-left: auto;
+                        //margin-right: auto;
                         text-align: center;
                     }
                 }
@@ -223,6 +223,7 @@
 	}
 
     &__holder {
+		position: relative;
         padding-top: 80px;
         padding-bottom: 30px;
     }
@@ -282,7 +283,6 @@
             width: 100%;
             padding: 180px 0 180px;
             height: 100%;
-            background-image: none;
         }
         &__overlay {
 			top: 0;
