@@ -2,6 +2,9 @@
   label {
     min-height: 30px;
     padding-left: 35px;
+    a {
+	  text-decoration: none;
+    }
   }
 
   input[type="checkbox"] {
@@ -81,6 +84,9 @@
         border: $form-border-width solid $color-input-border;
         background-color: $color-white;
       }
+	  a {
+		text-decoration: none;
+	  }
     }
 
     /* Checked icon */
@@ -107,6 +113,10 @@
       content: '';
       display: table;
       clear: both;
+    }
+
+    a {
+	  text-decoration: none;
     }
 
     .cr {
@@ -174,6 +184,10 @@
         border: $form-border-width solid $color-input-border;
         background-color: $color-white;
       }
+
+	  a {
+		text-decoration: none;
+	  }
     }
 
     /* Checked icon */
@@ -227,6 +241,9 @@
     white-space: nowrap;
     user-select: none;
 
+    a {
+	  text-decoration: none;
+    }
   }
 
   &__caption {
@@ -345,6 +362,10 @@
 		line-height: 20.6px;
 		padding-left: 26px;
 		cursor: pointer;
+
+		a {
+			text-decoration: none;
+		}
 	}
 
 	input[type="checkbox"] {
