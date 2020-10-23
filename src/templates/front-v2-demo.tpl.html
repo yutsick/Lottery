@@ -730,56 +730,51 @@
 
 
   <!-- Promotion video -->
-	<section class="s-promotion-video">
-		<div class="container">
-			<div class="row">
-				@@include('elements/_title-marked.html', {
-					"background_color": "green"
-				})
+  @@include('blocks/promotion/_promotion-example-video.html', {
+  "background_color": "green"
+  })
 
-				@@include('blocks/promotion/_promotion-example-video.html')
+  @@include('blocks/promotion/_promotion-example-video.html', {
+  "background_color": "pink"
+  })
 
-				@@include('elements/_button-custom.html', {
-					"btn-type": "primary",
-					"btn-align": "center"
-				})
-			</div>
-		</div>
-	</section>
+  @@include('blocks/promotion/_promotion-example-video.html', {
+  "background_color": "blue"
+  })
 
-	<section class="s-promotion-video">
-		<div class="container">
-			<div class="row">
-				@@include('elements/_title-marked.html', {
-					"background_color": "pink"
-				})
+  <!-- Title Banner -->
+  @@include('blocks/_title-banner.html', {
+  "background_color": "green"
+  })
 
-				@@include('blocks/promotion/_promotion-example-video.html')
+  @@include('blocks/_title-banner.html', {
+  "background_color": "pink"
+  })
 
-				@@include('elements/_button-custom.html', {
-					"btn-type": "success",
-					"btn-align": "left"
-				})
-			</div>
-		</div>
-	</section>
+  @@include('blocks/_title-banner.html', {
+  "background_color": "blue"
+  })
 
-	<section class="s-promotion-video">
-		<div class="container">
-			<div class="row">
-				@@include('elements/_title-marked.html', {
-					"background_color": "blue"
-				})
+  <!-- Simple Button -->
+  @@include('blocks/_simple-button.html', {
+  "align": "center",
+  "type": "primary"
+  })
 
-				@@include('blocks/promotion/_promotion-example-video.html')
+  @@include('blocks/_simple-button.html', {
+  "align": "center",
+  "type": "secondary"
+  })
 
-				@@include('elements/_button-custom.html', {
-					"btn-type": "secondary",
-					"btn-align": "right"
-				})
-			</div>
-		</div>
-	</section>
+  @@include('blocks/_simple-button.html', {
+  "align": "left",
+  "type": "cta"
+  })
+
+  @@include('blocks/_simple-button.html', {
+  "align": "right",
+  "type": "invert"
+  })
 
   <!-- Promotion Slider -->
   <section class="slider-promo">

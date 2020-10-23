@@ -44,20 +44,6 @@
 	}
 }
 
-.custom-btn {
-	width: 100%;
-	margin-top: 40px;
-	&.btn-align-left {
-		text-align: left;
-	}
-	&.btn-align-center {
-		text-align: center;
-	}
-	&.btn-align-right {
-		text-align: right;
-	}
-}
-
 .btn-default,
 .btn-primary {
 	background-color: $color-primary;

@@ -1,0 +1,15 @@
+.s-simple-button {
+	margin: 40px 0;
+	@media screen and (min-width: $screen-md) {
+		margin: 60px 0;
+	}
+	&.btn-align-left {
+		text-align: left;
+	}
+	&.btn-align-center {
+		text-align: center;
+	}
+	&.btn-align-right {
+		text-align: right;
+	}
+}
