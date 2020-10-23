@@ -150,15 +150,13 @@
 
 .block-title {
 	&-wrap {
-		&--center {
-			text-align: center;
-			.block-subtitle {
-				max-width: 640px;
-				width: 100%;
-				font-size: $size-large;
-				font-weight: 400;
-				margin: -10px auto 40px;
-			}
+		text-align: center;
+		.block-subtitle {
+			max-width: 640px;
+			width: 100%;
+			font-size: $size-large;
+			font-weight: 400;
+			margin: -10px auto 60px;
 		}
 	}
 
