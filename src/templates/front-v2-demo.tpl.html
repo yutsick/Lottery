@@ -730,18 +730,56 @@
 
 
   <!-- Promotion video -->
-  @@include('blocks/promotion/_promotion-example-video.html', {
-  "background_color": "green"
-  })
+	<section class="s-promotion-video">
+		<div class="container">
+			<div class="row">
+				@@include('elements/_title-marked.html', {
+					"background_color": "green"
+				})
 
+				@@include('blocks/promotion/_promotion-example-video.html')
 
-  @@include('blocks/promotion/_promotion-example-video.html', {
-  "background_color": "pink"
-  })
+				@@include('elements/_button-custom.html', {
+					"btn-type": "primary",
+					"btn-align": "center"
+				})
+			</div>
+		</div>
+	</section>
 
-  @@include('blocks/promotion/_promotion-example-video.html', {
-  "background_color": "blue"
-  })
+	<section class="s-promotion-video">
+		<div class="container">
+			<div class="row">
+				@@include('elements/_title-marked.html', {
+					"background_color": "pink"
+				})
+
+				@@include('blocks/promotion/_promotion-example-video.html')
+
+				@@include('elements/_button-custom.html', {
+					"btn-type": "success",
+					"btn-align": "left"
+				})
+			</div>
+		</div>
+	</section>
+
+	<section class="s-promotion-video">
+		<div class="container">
+			<div class="row">
+				@@include('elements/_title-marked.html', {
+					"background_color": "blue"
+				})
+
+				@@include('blocks/promotion/_promotion-example-video.html')
+
+				@@include('elements/_button-custom.html', {
+					"btn-type": "secondary",
+					"btn-align": "right"
+				})
+			</div>
+		</div>
+	</section>
 
   <!-- Promotion Slider -->
   <section class="slider-promo">
