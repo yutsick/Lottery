@@ -259,6 +259,65 @@
 }
 
 .modal {
+	&-bgp {
+		@media screen and (max-width: $screen-xs-max){
+			&-mobile {
+				&--left {
+					.modal-main-body {
+						background-position: center left;
+					}
+				}
+				&--right {
+					.modal-main-body {
+						background-position: center right;
+					}
+				}
+				&--center {
+					.modal-main-body {
+						background-position: center center;
+					}
+				}
+			}
+		}
+		@media screen and (min-width: $screen-sm){
+			&-tablet {
+				&--left {
+					.modal-main-body {
+						background-position: center left;
+					}
+				}
+				&--right {
+					.modal-main-body {
+						background-position: center right;
+					}
+				}
+				&--center {
+					.modal-main-body {
+						background-position: center center;
+					}
+				}
+			}
+		}
+		@media screen and (min-width: $screen-md){
+			&-desktop {
+				&--left {
+					.modal-main-body {
+						background-position: center left;
+					}
+				}
+				&--right {
+					.modal-main-body {
+						background-position: center right;
+					}
+				}
+				&--center {
+					.modal-main-body {
+						background-position: center center;
+					}
+				}
+			}
+		}
+	}
 	&-login {
 		.vertical-alignment-helper {
 			display: block;
@@ -333,6 +392,84 @@
 		}
 	}
 
+	&-lottery-order {
+		padding: 0!important;
+		.modal-dialog {
+			padding: 0;
+		}
+		.modal-main-body {
+			min-height: 100vh;
+			&:before,
+			&:after {
+				position: absolute;
+				content: '';
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			&:before {
+				background-color: #fff;
+				opacity: .5;
+				z-index: 1;
+				@media (max-width: 767px) {
+					//opacity: .6;
+					display: none;
+				}
+			}
+			&:after {
+				opacity: 0.75;
+				background: radial-gradient(circle, rgba(255,255,255,1), rgba(255,255,255,0));
+				z-index: 2;
+			}
+		}
+		.modal-main-header,
+		.modal-main-content {
+			position: relative;
+			z-index: 3;
+		}
+		.modal-main-header {
+			display: flex!important;
+			@media (max-width: 767px) {
+				justify-content: center;
+				margin-top: 10px;
+			}
+		}
+		.modal-main__logo {
+			@media (max-width: 767px) {
+				max-width: 78px;
+			}
+		}
+		.modal-main__logo-secondary {
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+		.modal-main-content {
+			max-width: 100%!important;
+			.btn-success {
+				max-width: 355px;
+				width: 100%;
+				text-align: center;
+			}
+		}
+		.modal-main-center {
+			margin: 0 0 20px;
+		}
+		.modal-main__title {
+			margin-bottom: 10px;
+		}
+		.modal-main__subTitle {
+			margin-bottom: 20px;
+			>p {
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
 	&-main {
 		&-body {
 			display: flex;
@@ -341,6 +478,7 @@
 			width: 100%;
 			max-width: 100%;
 			background-size: cover;
+			background-repeat: no-repeat;
 			padding-left: 10px;
 			padding-right: 10px;
 
