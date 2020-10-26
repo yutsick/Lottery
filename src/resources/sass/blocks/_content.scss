@@ -154,9 +154,13 @@
 		.block-subtitle {
 			max-width: 640px;
 			width: 100%;
-			font-size: $size-large;
+			font-size: $size-medium;
 			font-weight: 400;
-			margin: -10px auto 60px;
+			margin: -10px auto 30px;
+			@include min-screen($screen-sm-min) {
+				font-size: $size-large;
+				margin: -10px auto 60px;
+			}
 		}
 	}
 

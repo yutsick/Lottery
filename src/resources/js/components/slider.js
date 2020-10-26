@@ -112,6 +112,23 @@ export default function () {
 		pageDots: false,
 		prevNextButtons: true,
 	});
+
+	//new lottery slider
+	let $flickityLotterySlider = $('.online-lottery-slider').flickity({
+		cellSelector: '.online-lottery-item-wrap',
+		cellAlign: 'center',
+		wrapAround: true,
+		contain: false,
+		draggable: false,
+		pageDots: false,
+		prevNextButtons: true,
+		watchCSS: true
+	});
+
+	$('.lottery-slider-nav__list').on( 'click', '.lottery-slider-nav__item', function() {
+		var index = $(this).index();
+		$flickityLotterySlider.flickity( 'select', index );
+	});
 }
 
 
