@@ -139,6 +139,17 @@ export default function () {
 			scrollTop: $('.online-lottery-slider').offset().top - lotterySliderOffset
 		}, 500);
 	});
+
+	//winners slider
+	let $flickityWinnersSlider = $('.winners-slider').flickity({
+		cellSelector: '.winner-item',
+		cellAlign: 'center',
+		wrapAround: true,
+		draggable: false,
+		pageDots: false,
+		prevNextButtons: false,
+		autoPlay: 5000
+	});
 }
 
 
