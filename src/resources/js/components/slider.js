@@ -125,9 +125,19 @@ export default function () {
 		watchCSS: true
 	});
 
+	let lotterySliderOffset;
+	if ($(window).width() < 767) {
+		lotterySliderOffset = 170;
+	} else {
+		lotterySliderOffset = 250;
+	}
+
 	$('.lottery-slider-nav__list').on( 'click', '.lottery-slider-nav__item', function() {
-		var index = $(this).index();
+		let index = $(this).index();
 		$flickityLotterySlider.flickity( 'select', index );
+		$('body,html').animate({
+			scrollTop: $('.online-lottery-slider').offset().top - lotterySliderOffset
+		}, 500);
 	});
 }
 

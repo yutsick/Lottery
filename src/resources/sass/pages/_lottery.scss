@@ -34,7 +34,7 @@
 		line-height: 40px;
 	}
 	&.size-small-sm {
-		@include max-screen($screen-sm-max) {
+		@include max-screen($screen-xs-max) {
 			top: -20px;
 			right: -20px;
 			width: 40px;
@@ -64,12 +64,21 @@
 }
 
 .page-lottery {
-	.bottom-line {
+	overflow-x: hidden;
+	.b-line {
+		position: relative;
 		width: 100%;
-		height: 1px;
 		padding: 0!important;
 		margin: 0!important;
-		background-color: $color-secondary-dark;
+		&:after {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			left: 0;
+			height: 1px;
+			background-color: $color-secondary-dark;
+		}
 	}
 }
 
@@ -140,15 +149,35 @@
 /*online lottery*/
 .s-online-lottery {
 	padding: 60px 0 0;
+	.block-title {
+		&-wrap {
+			.block-subtitle {
+				@include max-screen($screen-sm-max) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+		&-marked {
+			@include max-screen($screen-xs-max) {
+				margin-bottom: 30px;
+			}
+		}
+	}
 }
 
 .online-lottery-slider {
 	margin-bottom: 60px;
 	margin-left: -10px;
 	margin-right: -10px;
+	@include min-screen($screen-sm-min) {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 	@include min-screen($screen-md-min) {
 		display: flex;
 		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
 	}
 	&:after {
 		content: 'flickity';
@@ -159,10 +188,15 @@
 	}
 
 	.flickity-button.flickity-prev-next-button {
+		top: 133px;
+		transform: none;
 		width: 40px;
 		height: 40px;
 		background: $color-primary-dark;
 		opacity: .5;
+		@media (min-width: $screen-sm-min) {
+			top: 185px;
+		}
 
 		&.previous {
 			@include min-screen($screen-sm-min) {
@@ -190,13 +224,20 @@
 	display: flex;
 	justify-content: center;
 	position: relative;
-	width: 50%;
-	padding-right: 10px;
-	padding-left: 10px;
+	padding-right: 0;
+	padding-left: 0;
+	@include min-screen($screen-sm-min) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
+
 	@include min-screen($screen-md-min) {
 		border-right: 1px solid $color-secondary-dark;
 		border-bottom: 1px solid $color-secondary-dark;
+		padding-right: 10px;
+		padding-left: 10px;
 	}
+
 	@media (min-width: $screen-md-min) and (max-width: 1359px) {
 		width: 33.333%;
 		&:nth-child(3n) {
@@ -217,6 +258,7 @@
 			}
 		}
 	}
+
 	@media (min-width: 1360px) {
 		width: 25%;
 		&:nth-child(4n) {
@@ -237,46 +279,88 @@
 			}
 		}
 	}
+
+	@include max-screen($screen-sm-max) {
+		.online-lottery-item {
+			transform: scale(.9) translateY(-10px);
+			transition: all .5s ease;
+			.lottery-bottom,
+			.lottery-price,
+			.lottery-info-btn {
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+		}
+		&.is-selected {
+			.online-lottery-item {
+				transform: scale(1);
+			}
+			.lottery-bottom,
+			.lottery-price,
+			.lottery-info-btn {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 .online-lottery-item {
 	display: flex;
 	flex-direction: column;
-	max-width: 255px;
-	width: 100%;
 	height: 100%;
-	padding-top: 25px;
-	padding-bottom: 60px;
-	margin: 0 15px;
+	padding-top: 27px;
+	@include min-screen($screen-md-min) {
+		padding-bottom: 60px;
+		margin: 0 15px;
+	}
+	@include max-screen($screen-xs-max) {
+		margin-left: -5px;
+		margin-right: -5px;
+	}
 	.lottery-top {
 		position: relative;
-		margin-bottom: 40px;
+		width: 195px;
+		margin: 0 auto 40px;
+		@include min-screen($screen-sm-min) {
+			width: 270px;
+		}
+		@include min-screen($screen-md-min) {
+			width: 255px;
+		}
 	}
 	.lottery-bottom {
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
+		width: 255px;
 		color: $color-primary;
 		text-align: center;
+		margin: 0 auto;
 	}
 	.img {
 		box-shadow: 0 9px 9px #88b4c5;
-		transition: all .4s ease;
-		&:hover {
-			transform: scale(1.05);
+		@include min-screen($screen-md-min) {
+			transition: all .4s ease;
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 		img {
 			width: 100%;
 		}
 	}
 	.title {
-		font-size: 20px;
+		font-size: $size-medium;
 		font-weight: 700;
-		line-height: 24px;
+		line-height: 1.222;
 		margin-bottom: 10px;
+		@include min-screen($screen-sm-min) {
+			font-size: $size-large;
+			line-height: 1.2;
+		}
 	}
 	.text {
-		font-size: 16px;
+		font-size: $base-font-size;
 		font-weight: 400;
 		line-height: 22px;
 		max-height: 66px;
@@ -296,7 +380,6 @@
 }
 
 .lottery-slider-nav {
-	border-top: 1px solid $color-secondary-dark;
 	padding: 60px 0;
 	@include min-screen($screen-md-min) {
 		display: none;
@@ -309,7 +392,7 @@
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
-		margin-bottom: 45px;
+		margin-bottom: 50px;
 	}
 
 	&__list {
@@ -343,15 +426,42 @@
 .online-game-list {
 	>[class*="col-"] {
 		margin-bottom: 60px;
-		&:nth-child(odd) {
-			border-right: 1px solid $color-secondary-dark;
-			.online-game-item {
-				margin: 0 65px 0 auto;
+		padding-bottom: 60px;
+		&:last-child {
+			padding-bottom: 0;
+		}
+		@include max-screen($screen-sm-max) {
+			&:after {
+				position: absolute;
+				content: '';
+				bottom: 0;
+				right: 5px;
+				left: 5px;
+				height: 1px;
+				background-color: $color-secondary-dark;
+
+			}
+			&:last-child {
+				&:after {
+					display: none;
+				}
 			}
 		}
-		&:nth-child(even) {
-			.online-game-item {
-				margin: 0 auto 0 65px;
+		@include min-screen($screen-md-min) {
+			margin-bottom: 60px;
+			padding-bottom: 0;
+			&:nth-child(odd) {
+				border-right: 1px solid $color-secondary-dark;
+				padding-right: 30px;
+				.online-game-item {
+					margin: 0 auto 0 40px;
+				}
+			}
+			&:nth-child(even) {
+				padding-left: 30px;
+				.online-game-item {
+					margin: 0 40px 0 auto;
+				}
 			}
 		}
 	}
@@ -361,11 +471,14 @@
 	display: flex;
 	flex-direction: column;
 	max-width: 565px;
-	width: 100%;
+	//width: 100%;
 	height: 100%;
 	padding-top: 20px;
 	@include min-screen($screen-sm-min) {
 		padding-top: 25px;
+	}
+	@include max-screen($screen-sm-max) {
+		margin: 0 auto;
 	}
 	.game-top {
 		position: relative;
@@ -385,6 +498,13 @@
 		background-position: center;
 		background-size: cover;
 		padding-bottom: 61.5%;
+	}
+	.lottery-price {
+		@include max-screen($screen-xs-max) {
+			left: auto;
+			right: 10px;
+			margin: 0;
+		}
 	}
 	.title {
 		font-size: 24px;
