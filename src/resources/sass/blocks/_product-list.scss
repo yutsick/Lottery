@@ -28,6 +28,7 @@
 	border: $box-border-width solid $color-grey-light;
 	margin-bottom: 7.5px;
 	transition: border 0.2s $ease-in-out;
+	text-decoration: none;
 
 	@include min-screen($screen-sm-min) {
 		margin-bottom: 15px;
@@ -107,9 +108,13 @@
 	display: block;
 	font-weight: $bold;
 	color: $color-base-primary;
+	text-decoration: none;
 
 	&:hover {
 		color: $color-base-primary;
+	}
+	a {
+		text-decoration: none;
 	}
 }
 

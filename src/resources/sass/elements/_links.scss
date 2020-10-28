@@ -1,6 +1,7 @@
 a {
 	cursor: pointer;
 	color: $color-blue-deep;
+	text-decoration: underline;
 
 	&:hover,
 	&:focus {

@@ -12,6 +12,7 @@
 	a {
 		color: $color-blue-deep;
 		font-weight: $medium;
+		text-decoration: none;
 
 		&:hover {
 			color: darken($color-base-complement, $color-darken-amount);

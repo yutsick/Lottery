@@ -1,12 +1,20 @@
 <div id="modals" class="ml-2017">
 	@@include('components/modals/_cart.html')
-	@@include('components/modals/_create-account.html')
+	@@include('components/modals/_create-account.html', {
+		"background_position_desktop": "center",
+		"background_position_tablet": "center",
+		"background_position_mobile": "center"
+	})
 	@@include('components/modals/_create-account-step-2.html')
 	@@include('components/modals/_create-account-step-3.html')
 	@@include('components/modals/_create-account-final.html')
 	@@include('components/modals/_delivery-place.html')
 	@@include('components/modals/_login-select-product.html')
-	@@include('components/modals/_login.html')
+	@@include('components/modals/_login.html', {
+		"background_position_desktop": "center",
+		"background_position_tablet": "center",
+		"background_position_mobile": "center"
+	})
 	@@include('components/modals/_login-register.html')
 	@@include('components/modals/_login-select-login.html')
 	@@include('components/modals/_login-password.html')

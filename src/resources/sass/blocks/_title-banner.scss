@@ -1,0 +1,53 @@
+.s-title-banner {
+	margin: 40px 0;
+	@media screen and (min-width: $screen-md) {
+		margin: 60px 0;
+	}
+	.title-block {
+		position: relative;
+		display: block;
+		margin: 0 auto;
+		padding: 8px 20px;
+		width: 355px;
+		font-family: $apercu-bold-font;
+		font-size: 20px;
+		line-height: 24px;
+		color: #ffffff;
+		text-align: center;
+		@media screen and (min-width: $screen-sm) {
+			width: 364px;
+			padding: 8px 60px;
+		}
+		@media screen and (min-width: $screen-md) {
+			width: 447px;
+		}
+		&:before,
+		&:after {
+			display: inline-block;
+			position: absolute;
+			content: '';
+			top: 0;
+			bottom: 0;
+			width: 10px;
+			height: 100%;
+			background-color: #fff;
+		}
+		&:before {
+			left: -1px;
+			clip-path: polygon(0 0, 100% 47%, 0 100%);
+		}
+		&:after {
+			right: -1px;
+			clip-path: polygon(100% 0, 0 50%, 100% 100%);
+		}
+		&--green {
+			background-color: $color-green;
+		}
+		&--pink {
+			background-color: $color-cta-dark;
+		}
+		&--blue {
+			background-color: $color-primary-lighter;
+		}
+	}
+}

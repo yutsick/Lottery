@@ -15,6 +15,7 @@
 	font-weight: 700;
 	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	cursor: pointer;
+	text-decoration: none;
 
 	i {
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
