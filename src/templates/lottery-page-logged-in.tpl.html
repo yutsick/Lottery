@@ -1,0 +1,430 @@
+@@include('layout/_header.html', {
+"class": "page-lottery logged-out"
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
+
+<div class="content-wrapper ml-2017">
+	<section class="s-new-online-lottery section">
+		<div class="container">
+			<div class="row equal-height">
+				<div class="col-xs-12 block-title-wrap">
+					<h2 class="h2 block-title-marked block-title-marked--light-blue block-title-marked--big block-title-marked--text-dark">Prenumerationer</h2>
+				</div>
+
+				@@include('blocks/promotion/block-cta/_cta-block-medium.html', {
+				"theme": "dark",
+				"text_alignment": "left",
+				"reversed_content": true,
+				"background-color-class": "background-color-blue",
+				"has_content_title": true,
+				"has_content_description": true,
+				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+				"link_title": "Prova Stödhjulet nu"
+				})
+
+				@@include('blocks/promotion/block-img/_img-block-medium.html', {
+				"theme": "dark",
+				"text_alignment": "left",
+				"image": "assets/img/mockup/matthew-henry-tBtuxtLvAZs-unsplash.jpeg",
+				"has_content_title": true,
+				"has_content_description": false,
+				"has_link": true,
+				"link_title": "Se mer"
+				})
+			</div>
+		</div>
+	</section>
+
+	<section class="s-bullet-points-bar section">
+		<div class="container">
+			<div class="s-bullet-points-bar__list">
+				<div class="s-bullet-points-bar__item">
+					<div class="s-bullet-points-bar__img">
+						<img src="assets/img/bullet-point-01.png" alt="">
+					</div>
+					<div class="s-bullet-points-bar__text">Vinster värda upp till 10 miljoner</div>
+				</div>
+				<div class="s-bullet-points-bar__item">
+					<div class="s-bullet-points-bar__img">
+						<img src="assets/img/bullet-point-02.png" alt="">
+					</div>
+					<div class="s-bullet-points-bar__text">Varje lottköp gör skillnad</div>
+				</div>
+				<div class="s-bullet-points-bar__item">
+					<div class="s-bullet-points-bar__img">
+						<img src="assets/img/bullet-point-03.png" alt="">
+					</div>
+					<div class="s-bullet-points-bar__text">Jackpott- och nitlottschans</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-winners section">
+		<div class="container">
+			<div class="s-winners__inner">
+				<div class="winners-title">Senaste vinnarna:</div>
+				<div class="winners-slider">
+					<div class="winner-item style01">
+						<div class="icon">
+							<img src="assets/img/icons/star-01.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Kerstin43 vann 150 kr</p>
+							<p>på Original kl 15:33</p>
+						</div>
+					</div>
+					<div class="winner-item style02">
+						<div class="icon">
+							<img src="assets/img/icons/star-02.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Hans-Erik vann 100 kr </p>
+							<p>på Original kl 15:24</p>
+						</div>
+					</div>
+					<div class="winner-item style01">
+						<div class="icon">
+							<img src="assets/img/icons/star-01.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Linnea1174 vann 50 kr</p>
+							<p>på Kamratstöd kl 15:17</p>
+						</div>
+					</div>
+					<div class="winner-item style02">
+						<div class="icon">
+							<img src="assets/img/icons/star-02.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Håkan P vann 50 kr</p>
+							<p>på Tjugan kl 15:11</p>
+						</div>
+					</div>
+					<div class="winner-item style01">
+						<div class="icon">
+							<img src="assets/img/icons/star-01.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Lena A vann 150 kr</p>
+							<p>på Original kl 15:33</p>
+						</div>
+					</div>
+					<div class="winner-item style02">
+						<div class="icon">
+							<img src="assets/img/icons/star-02.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Hans-Erik vann 100 kr </p>
+							<p>på Original kl 15:24</p>
+						</div>
+					</div>
+					<div class="winner-item style01">
+						<div class="icon">
+							<img src="assets/img/icons/star-01.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Linnea1174 vann 50 kr</p>
+							<p>på Kamratstöd kl 15:17</p>
+						</div>
+					</div>
+					<div class="winner-item style02">
+						<div class="icon">
+							<img src="assets/img/icons/star-02.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Håkan P vann 50 kr</p>
+							<p>på Tjugan kl 15:11</p>
+						</div>
+					</div>
+					<div class="winner-item style01">
+						<div class="icon">
+							<img src="assets/img/icons/star-01.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Lena A vann 150 kr</p>
+							<p>på Original kl 15:33</p>
+						</div>
+					</div>
+					<div class="winner-item style02">
+						<div class="icon">
+							<img src="assets/img/icons/star-02.svg" alt="">
+						</div>
+						<div class="text">
+							<p>Håkan P vann 50 kr</p>
+							<p>på Tjugan kl 15:11</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="s-online-lottery bg-light-blue section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 block-title-wrap">
+					<h2 class="h2 block-title-marked block-title-marked--dark-blue block-title-marked--big">Onlinelotter</h2>
+					<div class="block-subtitle">En av vägarna till de riktigt stora vinsterna i Miljonlotteriet är våra onlinelotter – som du kan skrapa direkt!</div>
+				</div>
+			</div>
+
+			<div class="online-lottery-slider">
+				<div class="online-lottery-item-wrap">
+					<div class="online-lottery-item">
+						<div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/lottery-01.jpeg" alt="">
+							</div>
+							<div class="lottery-price">50 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="lottery-bottom">
+							<div class="title">Miljonlotten</div>
+							<div class="text">Lotten som är fylld till brädden med miljonvinster och Sveriges största utbud av varuvinster.</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Skrapa lott</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="online-lottery-item-wrap">
+					<div class="online-lottery-item">
+						<div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/lottery-02.jpeg" alt="">
+							</div>
+							<div class="lottery-price">50 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="lottery-bottom">
+							<div class="title">Resan</div>
+							<div class="text">Skraplotten som kan ta dig vart du vill i världen! Vinn din drömresa eller en miljonvinst!</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Skrapa lott</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="online-lottery-item-wrap">
+					<div class="online-lottery-item">
+						<div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/lottery-03.jpeg" alt="">
+							</div>
+							<div class="lottery-price">20 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="lottery-bottom">
+							<div class="title">Tjugan</div>
+							<div class="text">Hela överskottet går till IOGT-NTO-rörelsens livsviktiga arbete.</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Skrapa lott</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="online-lottery-item-wrap">
+					<div class="online-lottery-item">
+						<div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/lottery-04.jpeg" alt="">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="lottery-bottom">
+							<div class="title">Tiokronan</div>
+							<div class="text">Ta chansen att vinna 1 miljon i kontanter!</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Skrapa lott</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="online-lottery-item-wrap">
+					<div class="online-lottery-item">
+						<div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/lottery-05.jpeg" alt="">
+							</div>
+							<div class="lottery-price">5 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="lottery-bottom">
+							<div class="title">Femkronan</div>
+							<div class="text">Den här skraplotten kan förvandla din femkrona till en halv miljon!</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Skrapa lott</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="online-lottery-item-wrap">
+					<div class="online-lottery-item">
+						<div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/lottery-06.jpeg" alt="">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="lottery-bottom">
+							<div class="title">Fyrklövern</div>
+							<div class="text">Lotten för dig som vill ha extra spänning. När du vinner har du chansen att fyrdubbla din vinst! </div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Skrapa lott</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="online-lottery-item-wrap">
+					<div class="online-lottery-item">
+						<div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/lottery-07.jpeg" alt="">
+							</div>
+							<div class="lottery-price">20 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="lottery-bottom">
+							<div class="title">Sommarläger</div>
+							<div class="text">Lotten där hela överskottet går till att skapa trygga och roliga aktiviteter för barn i sommar.</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Skrapa lott</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="b-line"></div>
+
+			<div class="lottery-slider-nav">
+				<div class="block-title">Klicka på den lott du är nyfiken på!</div>
+
+				<div class="lottery-slider-nav__list">
+					<div class="lottery-slider-nav__item">
+						<img src="assets/img/mockup/lottery-01.jpeg" alt="">
+						<div class="lottery-price size-small">50 kr</div>
+					</div>
+					<div class="lottery-slider-nav__item">
+						<img src="assets/img/mockup/lottery-02.jpeg" alt="">
+						<div class="lottery-price size-small">50 kr</div>
+					</div>
+					<div class="lottery-slider-nav__item">
+						<img src="assets/img/mockup/lottery-03.jpeg" alt="">
+						<div class="lottery-price size-small">20 kr</div>
+					</div>
+					<div class="lottery-slider-nav__item">
+						<img src="assets/img/mockup/lottery-04.jpeg" alt="">
+						<div class="lottery-price size-small">10 kr</div>
+					</div>
+					<div class="lottery-slider-nav__item">
+						<img src="assets/img/mockup/lottery-05.jpeg" alt="">
+						<div class="lottery-price size-small">5 kr</div>
+					</div>
+					<div class="lottery-slider-nav__item">
+						<img src="assets/img/mockup/lottery-06.jpeg" alt="">
+						<div class="lottery-price size-small">10 kr</div>
+					</div>
+					<div class="lottery-slider-nav__item">
+						<img src="assets/img/mockup/lottery-07.jpeg" alt="">
+						<div class="lottery-price size-small">20 kr</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="b-line"></div>
+		</div>
+	</section>
+
+	<section class="s-online-game bg-light-blue section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 block-title-wrap">
+					<h2 class="h2 block-title-marked block-title-marked--dark-blue block-title-marked--big">Prenumerationer</h2>
+					<div class="block-subtitle">En annan väg till stora och små vinster är våra underhållande onlinespel. Vilken är du nyfiken på?</div>
+				</div>
+			</div>
+			<div class="online-game-list row equal-height">
+				<div class="col-md-6 col-xs-12">
+					<div class="online-game-item">
+						<div class="game-top">
+							<div class="img" style="background-image: url('assets/img/game-01.jpg')"></div>
+							<div class="lottery-price size-small-sm">50 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="game-bottom">
+							<div class="title">Stödhjulet</div>
+							<div class="text">I Stödhjulet är det du som bestämmer vilka överskottet ska hjälpa. Välj dina rader – dragning varje fredag 20.00!</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Gå till spelet</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Så funkar det</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="online-game-item">
+						<div class="game-top">
+							<div class="img" style="background-image: url('assets/img/game-02.jpg')"></div>
+							<div class="lottery-price size-small-sm">5 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+						</div>
+						<div class="game-bottom">
+							<div class="title">Skattjakten</div>
+							<div class="text">Hitta de gömda skatterna och vinn! Ju ädlare skatter du hittar, desto högre blir vinsten. Börja jakten nu!</div>
+							<div class="buttons-group">
+								<a class="btn btn-third btn-third--success" href="#">Gå till spelet</a>
+								<a class="btn btn-third btn-third--white" href="#modal-video"  data-toggle="modal">Demo</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="b-line"></div>
+		</div>
+	</section>
+
+	<section class="s-added-lottery bg-light-blue section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 block-title-wrap">
+					<h2 class="h2 block-title-marked block-title-marked--dark-blue block-title-marked--big">Lotter i butik</h2>
+					<div class="block-subtitle">Vi har också lotter du kan hitta i butik och skrapa fysiskt.</div>
+				</div>
+			</div>
+
+			<div class="added-lottery-list">
+				<div class="added-lottery-item">
+					<div class="lottery-top">
+						<div class="img">
+							<img src="assets/img/mockup/lottery-08.jpeg" alt="">
+						</div>
+						<div class="lottery-price size-small-sm">50 kr</div>
+						<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-lottery-info">i</button>
+					</div>
+					<div class="lottery-bottom">
+						<div class="title">Miljonlotten</div>
+						<div class="text">Lotten som är fylld till brädden med miljonvinster och Sveriges största utbud av varuvinster.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

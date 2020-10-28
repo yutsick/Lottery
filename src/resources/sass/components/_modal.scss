@@ -1080,3 +1080,58 @@
 	font-size: 12px;
 	font-weight: 400;
 }
+
+.modal-secondary {
+	background-color: rgba(#b8d8eb, 0.9);
+	&-dialog {
+		max-width: 915px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 10px 0 0;
+		@include min-screen($screen-sm-min) {
+			padding: 10px 20px 80px;
+		}
+	}
+	&-content {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+	}
+	.modal-dialog-centered {
+		display: table;
+		min-height: 100%;
+	}
+	button.close {
+		display: block;
+		float: none;
+		width: 39px;
+		height: 39px;
+		background-color: #f7f7f7;
+		background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg width='35px' height='35px' viewBox='0 0 35 35' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns='http://www.w3.org/2000/svg'%3E%3Cdesc%3ECreated with Lunacy%3C/desc%3E%3Cg id='kryss' transform='matrix(0.7071068 0.7071068 -0.7071068 0.7071068 17.112 2.262756)'%3E%3Cpath d='M0.4 0L0.4 20.8' transform='translate(10.4 0)' id='Path-5' fill='none' stroke='%23053A53' stroke-width='3.2' stroke-linecap='round' /%3E%3Cpath d='M0.4 0L0.4 20.8' transform='matrix(-4.371139E-08 -1 1 -4.371139E-08 0.3999996 10.8)' id='Path-5-Copy' fill='none' stroke='%23053A53' stroke-width='3.2' stroke-linecap='round' /%3E%3C/g%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 79%;
+		border-radius: 50%;
+		opacity: 1;
+		transition: all 200ms ease-in;
+		margin: 0 auto 15px;
+		&:hover,
+		&:focus {
+			background-color: rgba(#f7f7f7, 0.5);
+			opacity: 1;
+		}
+	}
+}
+
+.modal-video {
+	.m-video {
+		video {
+			display: block;
+			width: 100%;
+			height: auto;
+			max-height: 100%;
+			outline: none;
+			object-fit: cover;
+		}
+	}
+}

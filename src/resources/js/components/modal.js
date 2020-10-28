@@ -43,4 +43,10 @@ export default function () {
 			$termsOfServiceModal.modal('show');
 		}
 	}
+
+	//video
+	$('#modal-video').on('hidden.bs.modal', function (e) {
+		$(this).find('video')[0].pause();
+		$(this).find('video')[0].currentTime = 0;
+	})
 }

@@ -47,20 +47,29 @@
 
 
 .lottery-info-btn {
+	display: block;
 	position: absolute;
 	bottom: -20px;
 	left: 50%;
-	margin-left: -20px;
+	margin-left: -20px!important;
 	width: 40px;
 	height: 40px;
-	color: $color-white;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 40px;
+	color: $color-white!important;
+	font-size: 20px!important;
+	font-weight: 700!important;
+	line-height: 40px!important;
 	border-radius: 50%;
 	background: $color-primary;
 	text-align: center;
+	padding: 0;
+	border: none;
+	outline: none;
+	box-shadow: none;
 	cursor: pointer;
+	transition: opacity .3s ease;
+	&:hover {
+		opacity: .8;
+	}
 }
 
 .page-lottery {
@@ -94,7 +103,7 @@
 
 	}
 	.img-block {
-		@include max-screen($screen-xs) {
+		@include max-screen($screen-xs-max) {
 			min-height: auto;
 			text-align: center!important;
 		}
