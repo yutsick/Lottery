@@ -6,41 +6,43 @@
 	.title-block {
 		position: relative;
 		display: block;
+		height: 40px;
 		margin: 0 auto;
-		padding: 8px 20px;
+		padding: 0 20px;
 		max-width: 355px;
 		width: 100%;
 		font-family: $apercu-bold-font;
 		font-size: 20px;
-		line-height: 24px;
+		line-height: 40px;
 		color: #ffffff;
 		text-align: center;
 		@media screen and (min-width: $screen-sm) {
 			max-width: none;
 			width: 364px;
-			padding: 8px 60px;
 		}
 		@media screen and (min-width: $screen-md) {
 			width: 447px;
 		}
 		&:before,
 		&:after {
-			display: inline-block;
+			display: block;
 			position: absolute;
 			content: '';
 			top: 0;
 			bottom: 0;
-			width: 10px;
-			height: 100%;
-			background-color: #fff;
+			width: 0;
+			height: 0;
+			border-style: solid;
 		}
 		&:before {
-			left: -1px;
-			clip-path: polygon(0 0, 100% 47%, 0 100%);
+			left: 0;
+			border-width: 20px 0 20px 10px;
+			border-color: transparent transparent transparent #ffffff;
 		}
 		&:after {
-			right: -1px;
-			clip-path: polygon(100% 0, 0 50%, 100% 100%);
+			right: 0;
+			border-width: 20px 10px 20px 0;
+			border-color: transparent #ffffff transparent transparent;
 		}
 		&--green {
 			background-color: $color-green;
