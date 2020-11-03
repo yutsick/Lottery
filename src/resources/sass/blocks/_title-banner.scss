@@ -8,13 +8,15 @@
 		display: block;
 		margin: 0 auto;
 		padding: 8px 20px;
-		width: 355px;
+		max-width: 355px;
+		width: 100%;
 		font-family: $apercu-bold-font;
 		font-size: 20px;
 		line-height: 24px;
 		color: #ffffff;
 		text-align: center;
 		@media screen and (min-width: $screen-sm) {
+			max-width: none;
 			width: 364px;
 			padding: 8px 60px;
 		}

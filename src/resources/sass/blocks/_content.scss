@@ -160,11 +160,13 @@
 		vertical-align: middle;
 		margin: 0 auto 40px;
 		padding: 8px 30px;
-		width: 355px;
+		max-width: 355px;
+		width: 100%;
 		font-family: $apercu-bold-font;
 		font-size: 20px;
 		color: #ffffff;
 		@media screen and (min-width: $screen-sm) {
+			max-width: none;
 			width: 364px;
 			padding: 8px 59px;
 		}
