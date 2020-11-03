@@ -127,13 +127,6 @@
     @media screen and (min-width: $screen-md) {
       text-align: left;
     }
-    @media screen and (max-width: $screen-xs-max) {
-	  .split-block {
-		&__image {
-		  order: -1;
-		}
-	  }
-    }
   }
 
   &--large {
