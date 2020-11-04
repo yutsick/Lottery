@@ -73,23 +73,44 @@
   &--medium,
   &--medium-tall,
   &--large {
-
     .btn {
       max-width: 100%;
       word-wrap: break-word;
     }
   }
 
-  &--medium-tall,
-  &--large {
+  &--medium {
+	min-height: 160px;
+    @media screen and (min-width: $screen-sm) {
+	  min-height: 282px;
+    }
+  }
+
+  &--medium-tall {
     @media screen and (min-width: $screen-sm) {
       min-height: 482px;
-      .img-block {
-        &__title {
-          font-size: 40px;
-          margin-top: 38px;
-        }
-      }
+	  .img-block {
+		&__title {
+		  font-size: 40px;
+		  margin-top: 38px;
+		}
+	  }
+    }
+  }
+
+  &--large {
+    min-height: 160px;
+    @media screen and (min-width: $screen-sm) {
+      min-height: 282px;
+    }
+    @media screen and (min-width: $screen-md) {
+      min-height: 482px;
+	  .img-block {
+	    &__title {
+		  font-size: 40px;
+		  margin-top: 38px;
+	    }
+	  }
     }
   }
 }

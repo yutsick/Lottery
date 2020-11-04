@@ -133,7 +133,10 @@
   &--large {
     .split-block {
       &__image {
-        min-height: 282px;
+	    min-height: 160px;
+	    @media screen and (min-width: $screen-md) {
+		  min-height: 282px;
+	    }
       }
       &__content {
         min-height: 282px;
