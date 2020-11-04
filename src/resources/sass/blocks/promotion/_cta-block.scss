@@ -7,10 +7,11 @@
 
   @media screen and (min-width: $screen-sm) {
 	min-height: 282px;
-    margin-bottom: $margin-small * 2;
+    margin-bottom: 20px;
   }
   @media screen and (min-width: $screen-md) {
     flex-flow: nowrap;
+	margin-bottom: 60px;
   }
 
   &.cta-block--dark {

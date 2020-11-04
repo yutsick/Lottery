@@ -7,10 +7,11 @@
   min-height: 282px;
   text-align: center;
   @media screen and (min-width: $screen-sm) {
-    margin-bottom: $margin-small * 2;
+    margin-bottom: 20px;
   }
   @media screen and (min-width: $screen-md) {
     flex-flow: nowrap;
+	margin-bottom: 60px;
   }
 
   &.split-block--dark {

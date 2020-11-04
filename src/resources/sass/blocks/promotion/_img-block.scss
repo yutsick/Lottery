@@ -6,7 +6,11 @@
   min-height: 282px;
 
   @media screen and (min-width: $screen-sm) {
-    margin-bottom: $margin-small * 2;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $screen-md) {
+    margin-bottom: 60px;
   }
 
   &.img-block--dark {
