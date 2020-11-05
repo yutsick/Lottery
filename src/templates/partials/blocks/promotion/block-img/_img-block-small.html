@@ -1,6 +1,9 @@
 <div class="col-xs-12 col-sm-6 col-md-3">
   <div class="img-block img-block--small img-block--@@theme alignment-@@text_alignment">
     <div class="img-block__content" style="background-image: url(@@image);">
+	  @@if(context.overlay === true) {
+	  <div class="img-block__overlay"></div>
+	  }
       @@if(context.has_content_title){
       <h4 class="img-block__title manualHyphens">Lorem ipsum do tempor</h4>
       }
