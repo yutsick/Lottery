@@ -63,6 +63,7 @@
       <div class="row equal-height">
 
         @@include('blocks/promotion/block-cta/_cta-block-medium.html', {
+        "has_link": true,
         "theme": "dark",
         "text_alignment": "left",
         "reversed_content": false,
@@ -70,18 +71,18 @@
         "has_content_title": true,
         "has_content_description": true,
         "content_image": "assets/img/mockup/CTA-block-lotter-frilagd.png",
-        "link_title": "Välj lotter som gör gott"
+        "btn_title": "Välj lotter som gör gott"
         })
 
         @@include('blocks/promotion/block-cta/_cta-block-medium.html', {
+        "has_link": false,
         "theme": "dark",
         "text_alignment": "left",
         "reversed_content": true,
         "background-color-class": "background-color-blue",
         "has_content_title": true,
         "has_content_description": true,
-        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-        "link_title": "Välj lotter som gör gott"
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg"
         })
       </div>
     </div>
@@ -93,6 +94,7 @@
       <h3 class="h3">text left img right</h3>
       <div class="row equal-height">
         @@include('blocks/promotion/block-cta/_cta-block-large.html', {
+        "has_link": true,
         "theme": "dark",
         "text_alignment": "left",
         "reversed_content": false,
@@ -100,19 +102,19 @@
         "has_content_title": true,
         "has_content_description": true,
         "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-        "link_title": "Välj lotter som gör gott"
+        "btn_title": "Välj lotter som gör gott"
         })
       </div>
       <h3 class="h3">text right img left</h3>
       <div class="row equal-height">
         @@include('blocks/promotion/block-cta/_cta-block-large.html', {
+        "has_link": false,
         "theme": "dark",
         "reversed_content": true,
         "background-color-class": "background-color-blue",
         "has_content_title": true,
         "has_content_description": true,
-        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-        "link_title": "Välj lotter som gör gott"
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg"
         })
       </div>
     </div>
@@ -123,25 +125,26 @@
       <h3 class="h3">text left img right</h3>
       <div class="row equal-height">
         @@include('blocks/promotion/block-cta/_cta-block-large-tall.html', {
+        "has_link": true,
         "theme": "dark",
         "reversed_content": false,
         "background-color-class": "background-color-blue",
         "has_content_title": true,
         "has_content_description": true,
         "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-        "link_title": "Välj lotter som gör gott"
+        "btn_title": "Välj lotter som gör gott"
         })
       </div>
       <h3 class="h3">text right img left</h3>
       <div class="row equal-height">
         @@include('blocks/promotion/block-cta/_cta-block-large-tall.html', {
+        "has_link": false,
         "theme": "dark",
         "reversed_content": true,
         "background-color-class": "background-color-blue",
         "has_content_title": true,
         "has_content_description": true,
-        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-        "link_title": "Välj lotter som gör gott"
+        "content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg"
         })
       </div>
     </div>
@@ -153,11 +156,20 @@
       <h3 class="h3">CTA-block-text-only är endast text och knapp</h3>
       <div class="row equal-height">
         @@include('blocks/promotion/block-cta/_cta-block-large-text-only.html', {
+        "has_link": true,
         "theme": "dark",
         "background-color-class": "background-color-blue",
         "has_content_title": true,
         "has_content_description": true,
-        "link_title": "Välj lotter som gör gott"
+        "btn_title": "Välj lotter som gör gott"
+        })
+
+        @@include('blocks/promotion/block-cta/_cta-block-large-text-only.html', {
+        "has_link": false,
+        "theme": "dark",
+        "background-color-class": "background-color-blue",
+        "has_content_title": true,
+        "has_content_description": true
         })
       </div>
     </div>
