@@ -31,11 +31,6 @@
     @media screen and (min-width: $screen-md) {
       flex-flow: nowrap;
     }
-    &[href] {
-      .btn {
-        pointer-events: none;
-      }
-    }
   }
 	
 	&__title {

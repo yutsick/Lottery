@@ -54,11 +54,6 @@
 		padding-bottom: 30px;
 		height: 100%;
 		text-decoration: none;
-		&[href] {
-			.btn {
-				pointer-events: none;
-			}
-		}
 		>*:last-child {
 			margin-bottom: 0;
 		}

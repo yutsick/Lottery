@@ -62,11 +62,6 @@
 		-webkit-background-size: cover;
 		background-size: cover;
 		text-decoration: none;
-		&[href] {
-			.btn {
-				pointer-events: none;
-			}
-		}
 		>*:last-child {
 			margin-bottom: 0;
 		}
