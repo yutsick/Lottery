@@ -79,7 +79,14 @@
 	position: relative;
 	background-color: $color-primary;
 	padding-bottom: 30px;
+	margin-bottom: 10px;
 	z-index: 995;
+	@include min-screen($screen-sm-min) {
+		padding-bottom: 20px;
+	}
+	@include min-screen($screen-md-min) {
+		padding-bottom: 60px;
+	}
 }
 
 .product-single {

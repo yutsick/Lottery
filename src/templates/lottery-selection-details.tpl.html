@@ -13,7 +13,7 @@
 	"hero_overlay": true,
 	"background_video": false,
 	"hero_text": true,
-	"hero_link": true,
+	"has_link": true,
 	"content_alignment_desktop": "left",
 	"content_alignment_tablet": "center",
 	"content_alignment_mobile": "center",
@@ -268,7 +268,7 @@
 				@@include('blocks/promotion/block-split/_split-block-large-tall.html', {
 				"theme": "light",
 				"reversed_content": true,
-				"background-color-class": "background-color-light-blue",
+				"background-color-class": "background-color-grey",
 				"image": "assets/img/mockup/CTA-block-winner-bg.jpeg",
 				"has_content_title": true,
 				"has_content_description": true,
@@ -303,13 +303,14 @@
 		<div class="container">
 			<div class="row equal-height">
 				@@include('blocks/promotion/block-cta/_cta-block-large.html', {
+				"has_link": true,
 				"theme": "dark",
 				"reversed_content": true,
 				"background-color-class": "background-color-blue",
 				"has_content_title": true,
 				"has_content_description": true,
 				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-				"link_title": "Välj lotter som gör gott"
+				"btn_title": "Välj lotter som gör gott"
 				})
 			</div>
 		</div>
