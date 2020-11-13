@@ -170,6 +170,22 @@ export default function () {
 		}
 	});
 
+	//order form simple
+	$('.lottery-order-form-simple button[type="submit"]').on('click', function () {
+		var th = $(this),
+			thisForm = th.closest('.lottery-order-form-simple');
+
+		if (th.hasClass('disabled')) {
+			thisForm.find('.form-info-text').hide();
+			thisForm.find('.form-error-text').show();
+		} else {
+			thisForm.find('.form-info-text').show();
+			thisForm.find('.form-error-text').hide();
+			th.closest('.product-single').hide();
+			$('.s-lottery-selection-detail').addClass('message-visible');
+		}
+	});
+
 	$('.lottery-order-form').validator().on('submit', function (e) {
 		if (e.isDefaultPrevented()) {
 
