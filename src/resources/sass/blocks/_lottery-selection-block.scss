@@ -87,22 +87,12 @@
 	@include min-screen($screen-md-min) {
 		margin-bottom: 60px;
 	}
-	&.message-visible {
-		padding: 95px 0 60px;
-		.product-single {
-			display: none;
-		}
-		.order-form-message {
-			display: block;
-		}
-	}
 }
 
 .order-form-message {
-	display: none;
 	max-width: 355px;
 	color: #ffffff;
-	margin: 0 auto;
+	margin: 95px auto 30px;
 	text-align: center;
 	.message-title {
 		font-family: $apercu-bold-font;
