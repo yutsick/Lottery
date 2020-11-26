@@ -346,6 +346,12 @@
 		.modal-main-inner {
 			flex: none;
 			flex-grow: 1;
+			button {
+				min-height: 46px;
+				@include min-screen($screen-md-min) {
+					min-height: 38px;
+				}
+			}
 		}
 		.modal-main-center {
 			.btn-hash {
@@ -812,19 +818,23 @@
 
 			.form-control {
 				height: auto;
-				padding: 10px 30px;
+				padding: 12.5px 30px;
 				border-radius: 4px!important;
 				border: solid 1px $color-grey-dark;
 				background-color: $color-snow;
 				box-shadow: none;
 				text-align: center;
-				font-size: 14px;
+				font-size: $base-font-size;
 				font-weight: $regular;
 				color: #053a53;
 				line-height: 1.2;
 				letter-spacing: 1px;
 				overflow: hidden;
 				transition: all 150ms ease-in;
+				@include min-screen($screen-md-min) {
+					font-size: $size-small;
+					padding: 10px 30px;
+				}
 				&:focus {
 					border: solid 1px $color-primary;
 				}
