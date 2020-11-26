@@ -1,6 +1,6 @@
 .hero-full-short {
 	width: 100%;
-	
+
 	&__inner {
 		display: flex;
 		flex-direction: column;
@@ -8,7 +8,7 @@
 		position: relative;
 		max-width: 2560px;
 		width: 100%;
-		min-height: 40vh;
+		//min-height: 40vh;
 		color: #ffffff;
 		text-decoration: none;
 		z-index: 0;
@@ -231,7 +231,7 @@
 			padding: 12px 30px;
 		}
 	}
-	
+
 	&__overlay {
 		content: "";
 		position: absolute;
@@ -240,12 +240,12 @@
 		height: 80%;
 		background-image: linear-gradient(180deg, rgba(46, 50, 55, 0.0001) 13.44%, rgba(26, 29, 32, 0.7) 47.91%, rgba(0, 0, 0, 0.9) 100%);
 	}
-	
+
 	&__holder {
 		position: relative;
 		padding: 60px 0;
 	}
-	
+
 	@include min-screen($screen-sm-min) {
 		.hero-content-desktop--left {
 			.hero-full-short__content {
@@ -255,7 +255,7 @@
 		}
 
 		&__holder {
-			padding: 60px 0 90px;
+			padding: 60px 0 85px;
 			& > * {
 				width: 100%;
 			}
@@ -279,9 +279,6 @@
 	}
 
 	@media screen and (min-width: $screen-md-min) {
-		&__holder {
-			padding: 60px 0 120px;
-		}
 		&__overlay {
 			top: 0;
 			width: 100%;
