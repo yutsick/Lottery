@@ -57,6 +57,18 @@ export default function () {
 		$('.page-overlay').removeClass('active')
 	});
 
+	//back button
+	$('.lottery-order-form .btn-back').on('click', function (){
+		var th = $(this),
+			thisTab = th.closest('.form-tabs__content');
+
+		thisTab.fadeOut(300, function () {
+			thisTab.prev().fadeIn(300, function () {
+				tabsFinish = 0;
+			});
+		});
+	});
+
 
 	//accordion
 	$('.lottery-order-form .acc-title').on('click', function (){
