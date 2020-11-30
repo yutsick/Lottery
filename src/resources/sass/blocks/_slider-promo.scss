@@ -5,9 +5,9 @@
 		align-items: flex-end;
 		justify-content: center;
 		color: $color-blue-deep;
-		margin-bottom: 80px;
+		margin-bottom: 0;
 
-		@include min-screen($screen-md-min) {
+		@include min-screen($screen-lg) {
 			margin-bottom: 110px;
 		}
 
