@@ -68,10 +68,14 @@
 		line-height: 1.3;
 	}
 	.icon {
-		font-size: $size-large;
-		color: #4caf50;
+		align-self: flex-start;
+		width: 21px;
 		margin-top: 2px;
-		margin-right: 10px;
+		margin-right: 7px;
+		img {
+			display: block;
+			width: 100%;
+		}
 	}
 }
 
@@ -156,7 +160,7 @@
 		}
 		.ls-checkpoints {
 			flex-direction: column;
-			margin-bottom: 50px;
+			margin: 0 0 50px;
 			@media (max-width: 767px) {
 				margin: 0;
 				padding: 0;
