@@ -747,27 +747,28 @@
 					font-weight: $semibold;
 					color: #053a53;
 				}
+
 				&.has-error {
-					input {
+					input:not([type=radio]),
+					input:not([type=checkbox]) {
 						border-color: $color-error;
+
 						&:focus {
 							border-color: $color-primary;
 						}
 					}
+
 					&.focused {
 						.help-block.with-errors {
 							display: none;
 						}
-						input[type="checkbox"] + .help-block.with-errors {
-							display: none!important;
-						}
 					}
 				}
-				&.focused {
+			}
+			&.focused {
 					input[type="checkbox"] + .help-block.with-errors {
-						display: none!important;
+							display: none !important;
 					}
-				}
 			}
 
 			.checkbox {
