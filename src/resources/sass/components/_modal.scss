@@ -148,6 +148,10 @@
 }
 
 #modal__terms-of-services {
+	/* COAB */
+	em {
+		font-style: italic;
+	}
 
 	form {
 		height: 100%;
@@ -319,6 +323,9 @@
 		}
 	}
 	&-login {
+		/* This is to show modals on top of #cention-chat-container */
+		z-index: 2001;
+
 		.vertical-alignment-helper {
 			display: block;
 		}
@@ -522,6 +529,7 @@
 
 			img {
 				width: 126px;
+				pointer-events: auto;
 			}
 		}
 
@@ -686,6 +694,8 @@
 				margin-right: 0;
 			}
 
+			// FRONTEND REPO ONLY - DO NOT COPY TO MAIN PROJECT
+			// ---------------------------- 
 			.desktop {
 				@media screen and (max-width: 1023px){
 					display: none;
@@ -696,6 +706,7 @@
 					display: none;
 				}
 			}
+			// ----------------------------
 		}
 
 		&-inner {
@@ -814,8 +825,6 @@
 				}
 				&:focus {border: 1px solid #053A53;}
 			}
-
-
 
 			.form-control {
 				height: auto;
