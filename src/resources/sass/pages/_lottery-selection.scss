@@ -1,5 +1,4 @@
 .page-lottery-selection {
-	overflow-y: auto!important;
 	@include min-screen($screen-sm-min) {
 		padding-bottom: 40px;
 	}
