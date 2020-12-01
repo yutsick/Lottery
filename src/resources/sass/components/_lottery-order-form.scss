@@ -23,6 +23,10 @@
 		font-weight: 400;
 		line-height: 1.428;
 		margin-bottom: 30px;
+		
+		a {
+			color: white;
+		}
 	}
 	.form-row {
 		display: flex;
@@ -109,6 +113,11 @@
 			height: 38px;
 			font-size: 14px;
 		}
+
+		&:disabled {
+			cursor: default
+		}
+
 		&::placeholder {
 			font-size: $base-font-size;
 			color: rgba(0, 62, 82, .5);
@@ -257,11 +266,12 @@
 		}
 	}
 	.lof-btn {
+		opacity: 1.0;
 		padding: 12.5px 30px;
 		@include min-screen($screen-md-min) {
 			padding: 8px 30px;
 		}
-		&.disabled {
+		&.disabled, &:disabled {
 			color: #ffffff;
 			background-color: $color-cta-light;
 			cursor: default;
