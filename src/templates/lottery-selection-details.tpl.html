@@ -6,343 +6,341 @@
 
 
 <div class="content-wrapper ml-2017">
-	<div class="page-lottery-selection">
-		<div class="page-overlay"></div>
+	<div class="page-overlay"></div>
 
-		@@include('blocks/_hero-fullwidth-short.html',{
-		"hero_overlay": true,
-		"background_video": false,
-		"hero_text": false,
-		"has_link": false,
-		"content_alignment_desktop": "left",
-		"content_alignment_tablet": "center",
-		"content_alignment_mobile": "center",
-		"background_position_desktop": "center",
-		"background_position_tablet": "center",
-		"background_position_mobile": "center"
-		})
+	@@include('blocks/_hero-fullwidth-short.html',{
+	"hero_overlay": true,
+	"background_video": false,
+	"hero_text": false,
+	"has_link": false,
+	"content_alignment_desktop": "left",
+	"content_alignment_tablet": "center",
+	"content_alignment_mobile": "center",
+	"background_position_desktop": "center",
+	"background_position_tablet": "center",
+	"background_position_mobile": "center"
+	})
 
-		<section class="s-lottery-selection-detail">
-			<div class="container">
-				<div class="product-single">
-					<div class="product-single__left">
-						<div class="product-single__img">
-							<img src="assets/img/mockup/product-01-big.png" alt="">
-						</div>
-						<div class="product-single__desc">
-							<ul class="ls-checkpoints">
-								<li class="lsc-item">
-									<i class="icon">
-										<img src="assets/img/icons/icon-check.svg" alt="">
-									</i>
-									<span>6 lotter i brevlådan varje månad</span>
-								</li>
-								<li class="lsc-item">
-									<i class="icon">
-										<img src="assets/img/icons/icon-check.svg" alt="">
-									</i>
-									<span>Vinn upp till 10 miljoner</span>
-								</li>
-								<li class="lsc-item">
-									<i class="icon">
-										<img src="assets/img/icons/icon-check.svg" alt="">
-									</i>
-									<span>Ingen bindningstid</span>
-								</li>
-							</ul>
-							<div class="product-single__text">
-								<div class="old-price">Ord pris: 300 kr / mån.</div>
-								<p>Vill du beställa din prenumeration via telefon?</p>
-								<p>Ring oss så hjälper vi dig: <a href="tel:0313382821" class="phone-link">031-338 28 21</a></p>
-							</div>
-						</div>
-						<div class="info-text">Just nu betalar du halva priset när du beställer 6 lotter för 150 kr i tre månader (ord pris: 300 kr). Dessutom får du ett par trådlösa hörlurar värda 1000 kr den tredje månaden!</div>
+	<section class="s-lottery-selection-detail">
+		<div class="container">
+			<div class="product-single">
+				<div class="product-single__left">
+					<div class="product-single__img">
+						<img src="assets/img/mockup/product-01-big.png" alt="">
 					</div>
-					<div class="product-single__right">
-						<div class="form-tabs">
-							<div class="form-tab-first form-tabs__content">
-								<form id="lottery-order-form-1" class="lottery-order-form">
-									<div class="form-title">Beställ dina lotter med ett par enkla steg:</div>
-									<div class="form-info-text">Vi behöver dina uppgifter för att kunna skicka lotterna och vinsterna till dig. Det tar bara någon minut!</div>
-									<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
-
-									<div class="form-group has-feedback">
-										<label for="userPersonalNumber2">Ditt personnummer</label>
-										<input type="text" class="form-control" id="userPersonalNumber2" placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken.">
-										<div class="help-block with-errors"></div>
-									</div>
-
-									<div class="form-group has-feedback">
-										<label for="userEmail2">Din e-postadress</label>
-										<input type="email" class="form-control" id="userEmail2" placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
-										<div class="help-block with-errors"></div>
-									</div>
-
-									<div class="address-block">
-										<div class="text"><strong>Kontrollera din adress:</strong></div>
-
-										<div class="address-field">
-											A**a A*******n,<br>
-											A*********n 1A, 1** *5 G******g
-										</div>
-
-										<div class="text"><strong>Stämmer ej adressen?</strong> Kontrollera att du fyllt i rätt personnummer eller kontakta kundservice 031-338 28 21.</div>
-									</div>
-
-									<div class="btn-wrap">
-										<button type="submit" class="lof-btn go-delivery-step btn-success disabled">Fortsätt</button>
-									</div>
-								</form>
-							</div>
-							<div class="form-tab-second form-tabs__content">
-								<form id="lottery-order-form-2" class="lottery-order-form">
-									<button class="btn-back">
-										<span class="btn-back__icon"></span>
-										<span class="btn-back__title">Tillbaka</span>
-									</button>
-									<div class="form-title">Hur vill du ha dina lotter?</div>
-									<div class="form-info-text">Välj om du vill ha dina lotter hem i brevlådan, eller om du vill skrapa dem digitalt.</div>
-									<div class="form-group radio-group">
-										<div class="custom-radio">
-											<input class="custom-radio__input" id="tickets-home" name="delivery-type" value="" type="radio" checked>
-											<label class="custom-radio__label" for="tickets-home">Jag vill ha lotterna hem i brevlådan</label>
-										</div>
-										<div class="custom-radio">
-											<input class="custom-radio__input" id="tickets-digitally" name="delivery-type" value="" type="radio">
-											<label class="custom-radio__label" for="tickets-digitally">Jag vill skrapa lotterna digitalt</label>
-										</div>
-									</div>
-									<div class="btn-wrap">
-										<button type="submit" class="lof-btn go-payment-step btn-success">Fortsätt</button>
-									</div>
-								</form>
-							</div>
-
-							<div class="form-tab-third form-tabs__content">
-								<form id="lottery-order-form-3" class="lottery-order-form">
-									<button class="btn-back">
-										<span class="btn-back__icon"></span>
-										<span class="btn-back__title">Tillbaka</span>
-									</button>
-									<div class="form-title">Beställ dina lotter</div>
-									<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
-									<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
-
-									<div class="acc-second">
-										<div class="payment-by-cart acc-item">
-											<div class="acc-title active">
-												<div class="acc-title__btn"></div>
-												<div class="acc-title__text">Betala med kort</div>
-											</div>
-										</div>
-
-										<div class="payment-by-invoice acc-item">
-											<div class="acc-title">
-												<div class="acc-title__btn"></div>
-												<div class="acc-title__text">Betala med Faktura</div>
-											</div>
-											<div class="acc-body">
-												<div class="address-block">
-													<div class="text">I samband med att du får dina lotter får du även en faktura att betala inom XX dagar.</div>
-													<div class="text"><strong>Fakturan skickas till din adress:</strong></div>
-
-													<div class="address-field">
-														A**a A*******n,<br>
-														A*********n 1A, 1** *5 G******g
-													</div>
-
-													<div class="text"><strong>Stämmer ej adressen?</strong> Kontrollera att du fyllt i rätt <span class="go-first-step">personnummer</span> eller kontakta kundservice 031-338 28 21.</div>
-												</div>
-											</div>
-										</div>
-
-										<div class="payment-by-direct-debit acc-item">
-											<div class="acc-title">
-												<div class="acc-title__btn"></div>
-												<div class="acc-title__text">Betala med Autogiro</div>
-											</div>
-
-											<div class="acc-body">
-												<div class="form-row">
-													<div class="form-group">
-														<label for="clearingNumber" class="with-tooltip">
-															<span>Clearing</span>
-															<span class="tooltip-second" data-toggle="tooltip" data-placement="top" data-original-title="Ta bort från min drömlista Ta bort från min drömlista">
-														<img src="assets/img/icons/icon-info.svg" alt="">
-													</span>
-														</label>
-														<input type="text" class="form-control" id="clearingNumber" data-minlength="4" placeholder="1234" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror" disabled>
-														<div class="help-block with-errors"></div>
-													</div>
-
-													<div class="form-group">
-														<label for="cardNumber2">Kortnummer</label>
-														<input type="text" class="form-control" id="cardNumber2" data-minlength="16" placeholder="1234 0000 0000 0000" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer." disabled>
-														<div class="help-block with-errors"></div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="custom-checkbox-type2">
-										<label>
-											<input type="checkbox" name="newsletter">
-											<span>Jag vill få erbjudanden och intressant läsning via Miljonlotteriets nyhetsbrev</span>
-										</label>
-									</div>
-
-
-									<div class="form-group choose-bankid-device">
-										<label for="chooseBankidDevice">Välj BankID-enhet</label>
-										<select id="chooseBankidDevice" class="form-control" name="chooseDevice">
-											<option value="1">BankID på annan enhet</option>
-											<option value="1">BankID på annan enhet1</option>
-										</select>
-									</div>
-
-									<div class="btn-wrap">
-										<button type="submit" class="lof-btn btn-success go-last-step disabled">
-											<span>Signera med BankID</span>
-											<span class="icon">
-											<img src="assets/img/icons/bankid-2.svg" alt="">
-										</span>
-										</button>
-										<!--hidden button-->
-										<button type="button" class="show-modal" data-toggle="modal" data-target="#modal-lottery-order"></button>
-									</div>
-
-									<div class="subscribe-info-text">Genom att klicka på ”Signera” godkänner du att inleda en prenumeration.
-										<a href="#modal-conditions" data-toggle="modal">Läs mer om våra villkor här</a>
-									</div>
-								</form>
-							</div>
-
-							<div class="form-tab-last form-tabs__content">
-								<div class="lottery-order-form">
-									<div class="form-title">Signera med mobilt BankID</div>
-									<div class="form-info-text">Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.</div>
-									<a href="#" class="more-info-link">Läs mer om BankID</a>
-
-									<div class="launch-info-text">Starta din BankID-app</div>
-
-									<div class="lof-loader">
-										<img src="assets/img/form-loader.svg" alt="">
-									</div>
-
-									<div class="sing-with-bankid">Signera med BankID på denna enhet</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="product-single__text mobile">
+					<div class="product-single__desc">
+						<ul class="ls-checkpoints">
+							<li class="lsc-item">
+								<i class="icon">
+									<img src="assets/img/icons/icon-check.svg" alt="">
+								</i>
+								<span>6 lotter i brevlådan varje månad</span>
+							</li>
+							<li class="lsc-item">
+								<i class="icon">
+									<img src="assets/img/icons/icon-check.svg" alt="">
+								</i>
+								<span>Vinn upp till 10 miljoner</span>
+							</li>
+							<li class="lsc-item">
+								<i class="icon">
+									<img src="assets/img/icons/icon-check.svg" alt="">
+								</i>
+								<span>Ingen bindningstid</span>
+							</li>
+						</ul>
+						<div class="product-single__text">
 							<div class="old-price">Ord pris: 300 kr / mån.</div>
 							<p>Vill du beställa din prenumeration via telefon?</p>
-							<p>Ring oss så hjälper vi dig: <a href="tel:0313382821">031-338 28 21</a></p>
+							<p>Ring oss så hjälper vi dig: <a href="tel:0313382821" class="phone-link">031-338 28 21</a></p>
 						</div>
 					</div>
+					<div class="info-text">Just nu betalar du halva priset när du beställer 6 lotter för 150 kr i tre månader (ord pris: 300 kr). Dessutom får du ett par trådlösa hörlurar värda 1000 kr den tredje månaden!</div>
 				</div>
+				<div class="product-single__right">
+					<div class="form-tabs">
+						<div class="form-tab-first form-tabs__content">
+							<form id="lottery-order-form-1" class="lottery-order-form">
+								<div class="form-title">Beställ dina lotter med ett par enkla steg:</div>
+								<div class="form-info-text">Vi behöver dina uppgifter för att kunna skicka lotterna och vinsterna till dig. Det tar bara någon minut!</div>
+								<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
 
-				<div class="order-form-message" style="display: none">
-					<div class="message-title">Du kan tyvärr inte ta del av detta erbjudande</div>
-					<div class="message-top-text">
-						<p>Det kan bero på att du redan har en prenumeration på denna lott, eller tagit del av ett erbjudande de senaste 3 månaderna.</p>
-						<p>Logga in för att se vad du kan ta del av!</p>
-					</div>
-					<a type="button" class="btn btn-success" data-toggle="modal" href="#modal-login">Logga in och se dina lottval</a>
-					<div class="message-bottom-text">
-						<p>Du kan också ringa oss så hjälper vi dig:</p>
-						<p>031-338 28 21</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-bullet-points text-align-center">
-			<div class="container">
-				<div class="row equal-height">
-					<div class="col-xs-12 col-sm-4">
-						<div class="s-bullet-points__item">
-							<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
-							<h3 class="s-bullet-points__title">Varje månad gör du skillnad för barn och vuxna</h3>
-							<p class="s-bullet-points__text">Sedan år 2000 har vi delat ut nära 2,3 miljarder till människor i behov av stöd.</p>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-4">
-						<div class="s-bullet-points__item">
-							<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/promotion--image.png);"></div>
-							<h3 class="s-bullet-points__title">10 miljoner anledningar <br>att gå med</h3>
-							<p class="s-bullet-points__text">Som tack för ditt livsviktiga bidrag har du chans på
-								10 miljoner varje månad.</p>
-						</div>
-					</div>
-					<div class="col-xs-12 col-sm-4">
-						<div class="s-bullet-points__item">
-							<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
-							<h3 class="s-bullet-points__title">Ingen bindningstid, var med så länge du vill </h3>
-							<p class="s-bullet-points__text">Vi har ingen bindningstid, du väljer själv hur länge du
-								vill bidra och skrapa våra lotter.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="s-promotion-offer">
-			<div class="container">
-				<div class="row equal-height">
-					@@include('blocks/promotion/block-split/_split-block-large-tall.html', {
-					"theme": "light",
-					"reversed_content": true,
-					"background-color-class": "background-color-grey",
-					"image": "assets/img/mockup/CTA-block-winner-bg.jpeg",
-					"has_content_title": true,
-					"has_content_description": true,
-					"has_link": false
-					})
-				</div>
-			</div>
-		</section>
-
-		<!-- Promotion Slider -->
-		<section class="slider-promo">
-			<div class="container-fluid">
-				<div class="row equal-height">
-					<div class="col-xs-12 col-sm-12 col-lg-4">
-						<div class="slider-promo__content">
-							<div class="slider-promo__content-inner">
-								<h2 class="slider-promo__title">Ditt lottköp räddar liv. Varje dag.</h2>
-								<div class="slider-promo__text">
-									<p>Som en del av IOGT-NTO-rörelsen kämpar vi för en bättre värld. Ett samhälle där ingen far illa av alkohol och droger. Det betyder att för varje lott du köper hos Miljonlotteriet, går pengarna till livsviktiga aktiviteter för barn och vuxna. Sedan  år 2000 har vi delat ut nära 2,3 miljarder kronor till IOGT-NTO-rörelsens verksamheter. </p>
+								<div class="form-group has-feedback">
+									<label for="userPersonalNumber2">Ditt personnummer</label>
+									<input type="text" class="form-control" id="userPersonalNumber2" placeholder="ÅÅMMDD-NNNN" data-minlength="10" required data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst 10 tecken.">
+									<div class="help-block with-errors"></div>
 								</div>
+
+								<div class="form-group has-feedback">
+									<label for="userEmail2">Din e-postadress</label>
+									<input type="email" class="form-control" id="userEmail2" placeholder="namn@email.se" required data-required-error="Du måste fylla i detta fält." data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med.">
+									<div class="help-block with-errors"></div>
+								</div>
+
+								<div class="address-block">
+									<div class="text"><strong>Kontrollera din adress:</strong></div>
+
+									<div class="address-field">
+										A**a A*******n,<br>
+										A*********n 1A, 1** *5 G******g
+									</div>
+
+									<div class="text"><strong>Stämmer ej adressen?</strong> Kontrollera att du fyllt i rätt personnummer eller kontakta kundservice 031-338 28 21.</div>
+								</div>
+
+								<div class="btn-wrap">
+									<button type="submit" class="lof-btn go-delivery-step btn-success disabled">Fortsätt</button>
+								</div>
+							</form>
+						</div>
+						<div class="form-tab-second form-tabs__content">
+							<form id="lottery-order-form-2" class="lottery-order-form">
+								<button class="btn-back">
+									<span class="btn-back__icon"></span>
+									<span class="btn-back__title">Tillbaka</span>
+								</button>
+								<div class="form-title">Hur vill du ha dina lotter?</div>
+								<div class="form-info-text">Välj om du vill ha dina lotter hem i brevlådan, eller om du vill skrapa dem digitalt.</div>
+								<div class="form-group radio-group">
+									<div class="custom-radio">
+										<input class="custom-radio__input" id="tickets-home" name="delivery-type" value="" type="radio" checked>
+										<label class="custom-radio__label" for="tickets-home">Jag vill ha lotterna hem i brevlådan</label>
+									</div>
+									<div class="custom-radio">
+										<input class="custom-radio__input" id="tickets-digitally" name="delivery-type" value="" type="radio">
+										<label class="custom-radio__label" for="tickets-digitally">Jag vill skrapa lotterna digitalt</label>
+									</div>
+								</div>
+								<div class="btn-wrap">
+									<button type="submit" class="lof-btn go-payment-step btn-success">Fortsätt</button>
+								</div>
+							</form>
+						</div>
+
+						<div class="form-tab-third form-tabs__content">
+							<form id="lottery-order-form-3" class="lottery-order-form">
+								<button class="btn-back">
+									<span class="btn-back__icon"></span>
+									<span class="btn-back__title">Tillbaka</span>
+								</button>
+								<div class="form-title">Beställ dina lotter</div>
+								<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
+								<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
+
+								<div class="acc-second">
+									<div class="payment-by-cart acc-item">
+										<div class="acc-title active">
+											<div class="acc-title__btn"></div>
+											<div class="acc-title__text">Betala med kort</div>
+										</div>
+									</div>
+
+									<div class="payment-by-invoice acc-item">
+										<div class="acc-title">
+											<div class="acc-title__btn"></div>
+											<div class="acc-title__text">Betala med Faktura</div>
+										</div>
+										<div class="acc-body">
+											<div class="address-block">
+												<div class="text">I samband med att du får dina lotter får du även en faktura att betala inom XX dagar.</div>
+												<div class="text"><strong>Fakturan skickas till din adress:</strong></div>
+
+												<div class="address-field">
+													A**a A*******n,<br>
+													A*********n 1A, 1** *5 G******g
+												</div>
+
+												<div class="text"><strong>Stämmer ej adressen?</strong> Kontrollera att du fyllt i rätt <span class="go-first-step">personnummer</span> eller kontakta kundservice 031-338 28 21.</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="payment-by-direct-debit acc-item">
+										<div class="acc-title">
+											<div class="acc-title__btn"></div>
+											<div class="acc-title__text">Betala med Autogiro</div>
+										</div>
+
+										<div class="acc-body">
+											<div class="form-row">
+												<div class="form-group">
+													<label for="clearingNumber" class="with-tooltip">
+														<span>Clearing</span>
+														<span class="tooltip-second" data-toggle="tooltip" data-placement="top" data-original-title="Ta bort från min drömlista Ta bort från min drömlista">
+													<img src="assets/img/icons/icon-info.svg" alt="">
+												</span>
+													</label>
+													<input type="text" class="form-control" id="clearingNumber" data-minlength="4" placeholder="1234" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror" disabled>
+													<div class="help-block with-errors"></div>
+												</div>
+
+												<div class="form-group">
+													<label for="cardNumber2">Kortnummer</label>
+													<input type="text" class="form-control" id="cardNumber2" data-minlength="16" placeholder="1234 0000 0000 0000" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer." disabled>
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="custom-checkbox-type2">
+									<label>
+										<input type="checkbox" name="newsletter">
+										<span>Jag vill få erbjudanden och intressant läsning via Miljonlotteriets nyhetsbrev</span>
+									</label>
+								</div>
+
+
+								<div class="form-group choose-bankid-device">
+									<label for="chooseBankidDevice">Välj BankID-enhet</label>
+									<select id="chooseBankidDevice" class="form-control" name="chooseDevice">
+										<option value="1">BankID på annan enhet</option>
+										<option value="1">BankID på annan enhet1</option>
+									</select>
+								</div>
+
+								<div class="btn-wrap">
+									<button type="submit" class="lof-btn btn-success go-last-step disabled">
+										<span>Signera med BankID</span>
+										<span class="icon">
+										<img src="assets/img/icons/bankid-2.svg" alt="">
+									</span>
+									</button>
+									<!--hidden button-->
+									<button type="button" class="show-modal" data-toggle="modal" data-target="#modal-lottery-order"></button>
+								</div>
+
+								<div class="subscribe-info-text">Genom att klicka på ”Signera” godkänner du att inleda en prenumeration.
+									<a href="#modal-conditions" data-toggle="modal">Läs mer om våra villkor här</a>
+								</div>
+							</form>
+						</div>
+
+						<div class="form-tab-last form-tabs__content">
+							<div class="lottery-order-form">
+								<div class="form-title">Signera med mobilt BankID</div>
+								<div class="form-info-text">Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.</div>
+								<a href="#" class="more-info-link">Läs mer om BankID</a>
+
+								<div class="launch-info-text">Starta din BankID-app</div>
+
+								<div class="lof-loader">
+									<img src="assets/img/form-loader.svg" alt="">
+								</div>
+
+								<div class="sing-with-bankid">Signera med BankID på denna enhet</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-xs-12 col-sm-12 col-lg-8">
-						@@include('blocks/_slider-block.html')
+
+					<div class="product-single__text mobile">
+						<div class="old-price">Ord pris: 300 kr / mån.</div>
+						<p>Vill du beställa din prenumeration via telefon?</p>
+						<p>Ring oss så hjälper vi dig: <a href="tel:0313382821">031-338 28 21</a></p>
 					</div>
 				</div>
 			</div>
-		</section>
 
-		<section class="s-promotion-offer">
-			<div class="container">
-				<div class="row equal-height">
-					@@include('blocks/promotion/block-cta/_cta-block-large.html', {
-					"has_link": true,
-					"theme": "dark",
-					"reversed_content": true,
-					"background-color-class": "background-color-blue",
-					"has_content_title": true,
-					"has_content_description": true,
-					"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-					"btn_title": "Välj lotter som gör gott"
-					})
+			<div class="order-form-message" style="display: none">
+				<div class="message-title">Du kan tyvärr inte ta del av detta erbjudande</div>
+				<div class="message-top-text">
+					<p>Det kan bero på att du redan har en prenumeration på denna lott, eller tagit del av ett erbjudande de senaste 3 månaderna.</p>
+					<p>Logga in för att se vad du kan ta del av!</p>
+				</div>
+				<a type="button" class="btn btn-success" data-toggle="modal" href="#modal-login">Logga in och se dina lottval</a>
+				<div class="message-bottom-text">
+					<p>Du kan också ringa oss så hjälper vi dig:</p>
+					<p>031-338 28 21</p>
 				</div>
 			</div>
-		</section>
-	</div>
+		</div>
+	</section>
+
+	<section class="s-bullet-points text-align-center">
+		<div class="container">
+			<div class="row equal-height">
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
+						<h3 class="s-bullet-points__title">Varje månad gör du skillnad för barn och vuxna</h3>
+						<p class="s-bullet-points__text">Sedan år 2000 har vi delat ut nära 2,3 miljarder till människor i behov av stöd.</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/promotion--image.png);"></div>
+						<h3 class="s-bullet-points__title">10 miljoner anledningar <br>att gå med</h3>
+						<p class="s-bullet-points__text">Som tack för ditt livsviktiga bidrag har du chans på
+							10 miljoner varje månad.</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
+						<h3 class="s-bullet-points__title">Ingen bindningstid, var med så länge du vill </h3>
+						<p class="s-bullet-points__text">Vi har ingen bindningstid, du väljer själv hur länge du
+							vill bidra och skrapa våra lotter.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-promotion-offer">
+		<div class="container">
+			<div class="row equal-height">
+				@@include('blocks/promotion/block-split/_split-block-large-tall.html', {
+				"theme": "light",
+				"reversed_content": true,
+				"background-color-class": "background-color-grey",
+				"image": "assets/img/mockup/CTA-block-winner-bg.jpeg",
+				"has_content_title": true,
+				"has_content_description": true,
+				"has_link": false
+				})
+			</div>
+		</div>
+	</section>
+
+	<!-- Promotion Slider -->
+	<section class="slider-promo">
+		<div class="container-fluid">
+			<div class="row equal-height">
+				<div class="col-xs-12 col-sm-12 col-lg-4">
+					<div class="slider-promo__content">
+						<div class="slider-promo__content-inner">
+							<h2 class="slider-promo__title">Ditt lottköp räddar liv. Varje dag.</h2>
+							<div class="slider-promo__text">
+								<p>Som en del av IOGT-NTO-rörelsen kämpar vi för en bättre värld. Ett samhälle där ingen far illa av alkohol och droger. Det betyder att för varje lott du köper hos Miljonlotteriet, går pengarna till livsviktiga aktiviteter för barn och vuxna. Sedan  år 2000 har vi delat ut nära 2,3 miljarder kronor till IOGT-NTO-rörelsens verksamheter. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-lg-8">
+					@@include('blocks/_slider-block.html')
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s-promotion-offer">
+		<div class="container">
+			<div class="row equal-height">
+				@@include('blocks/promotion/block-cta/_cta-block-large.html', {
+				"has_link": true,
+				"theme": "dark",
+				"reversed_content": true,
+				"background-color-class": "background-color-blue",
+				"has_content_title": true,
+				"has_content_description": true,
+				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+				"btn_title": "Välj lotter som gör gott"
+				})
+			</div>
+		</div>
+	</section>
 </div>
 
 @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
