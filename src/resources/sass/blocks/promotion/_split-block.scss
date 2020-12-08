@@ -26,7 +26,6 @@
     min-height: 282px;
 		height: 100%;
 		text-decoration: none;
-    text-align: center;
 		@media screen and (min-width: $screen-md) {
 			flex-flow: nowrap;
 		}
@@ -88,6 +87,12 @@
 	}
 	
 	&--medium {
+		text-align: left;
+
+		@media screen and (max-width: $screen-sm) {
+				text-align: center;
+		}
+
 		.split-block {
 			&__image {
 				min-height: 282px;
@@ -140,9 +145,6 @@
 					}
 				}
 			}
-		}
-		@media screen and (min-width: $screen-md) {
-			text-align: left;
 		}
 	}
 	
