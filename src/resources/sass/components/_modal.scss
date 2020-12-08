@@ -353,7 +353,7 @@
 		.modal-main-inner {
 			flex: none;
 			flex-grow: 1;
-			button {
+			button:not(.btn-primary-link) {
 				min-height: 46px;
 				@include min-screen($screen-md-min) {
 					min-height: 38px;
@@ -695,7 +695,7 @@
 			}
 
 			// FRONTEND REPO ONLY - DO NOT COPY TO MAIN PROJECT
-			// ---------------------------- 
+			// ----------------------------
 			.desktop {
 				@media screen and (max-width: 1023px){
 					display: none;
