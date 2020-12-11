@@ -163,7 +163,7 @@
 			margin: 0 0 50px;
 			@media (max-width: 767px) {
 				margin: 0;
-				padding: 0;
+				padding: 0 0 0 40px;
 			}
 			li {
 				margin: 0 0 10px;
@@ -222,36 +222,45 @@
 			width: 50%;
 		}
 		@media (max-width: 767px) {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-			padding: 0 0 0 40px;
-		}
-		@media (max-width: 767px) {
 			display: block;
+			width: 100%;
+			padding: 0;
 		}
 	}
 	&__text {
 		color: #ffffff;
 		font-family: $apercu-bold-font;
 		@media (max-width: 767px) {
-			display: none;
+		    	&:not(.mobile) {
+			    	margin-top: 30px;
+				>*:not(.top-line) {
+				    display: none;
+				}
+			}
 		}
 		&.mobile {
 			display: none;
 			@media (max-width: 767px) {
 				display: block;
-				margin-top: 130px;
+			    	margin-top: 120px;
+			}
+		}
+	    	.top-line {
+			margin-bottom: 10px;
+			@media (max-width: 767px) {
+			    	margin-bottom: 0;
 			}
 		}
 		.old-price {
+		    	display: inline-block;
 			font-family: $base-font-family;
-			margin-bottom: 10px;
+		    	margin-right: 5px;
 		}
 		p {
 			margin-bottom: 0;
 		}
 		a {
+		    	white-space: nowrap;
 			color: #ffffff;
 		}
 		.phone-link {
