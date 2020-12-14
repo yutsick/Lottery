@@ -125,6 +125,10 @@
 	.btn {
 		width: 100%;
 		margin-bottom: 65px;
+	    	padding: 12.5px 30px;
+		@include min-screen($screen-md-min) {
+		    padding: 8px 30px;
+		}
 	}
 	.message-bottom-text {
 		font-family: $apercu-bold-font;
