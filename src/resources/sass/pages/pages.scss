@@ -16,6 +16,11 @@ body {
 		overflow: hidden !important;
 		position: fixed;
 	}
+	&.backdrop-invisible {
+		.modal-backdrop {
+			opacity: 0!important;
+		}
+	}
 }
 
 .modal-backdrop {
