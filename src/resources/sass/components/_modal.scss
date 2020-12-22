@@ -1194,13 +1194,15 @@
 		font-weight: 700;
 		line-height: 22px;
 		background-color: $color-primary;
-		padding: 30px 20px;
 		@include min-screen($screen-sm-min) {
-			padding: 50px 20px;
 			max-height: calc(100vh - 85px);
 		}
 		&-inner {
 			position: relative;
+			padding: 30px 20px;
+			@include min-screen($screen-sm-min) {
+				padding: 50px 20px;
+			}
 		}
 	}
 	.bg-img {
