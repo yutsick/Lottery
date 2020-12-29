@@ -21,6 +21,11 @@ export default function () {
 	$('.modal').on('show.bs.modal', function (e) {
 		$('.modal').modal('hide');
 		$('body').addClass("bs-modal-open");
+
+		//modal secondary - hide backdrop
+		if ($(this).hasClass('modal-secondary')) {
+			$('body').addClass("backdrop-invisible");
+		}
 	});
 
 	// Modal-pages functionality.

@@ -5,15 +5,14 @@
 @@include('layout/_top-simple.html')
 
 
-<div class="content-wrapper ml-2017 page-lottery-selection">
+<div class="content-wrapper ml-2017">
 	<div class="page-overlay"></div>
 
 	@@include('blocks/_hero-fullwidth-short.html',{
-	"background_video_link": "assets/video/hemsidebanner_hi3.mp4",
 	"hero_overlay": true,
 	"background_video": false,
-	"hero_text": true,
-	"hero_link": true,
+	"hero_text": false,
+	"has_link": false,
 	"content_alignment_desktop": "left",
 	"content_alignment_tablet": "center",
 	"content_alignment_mobile": "center",
@@ -32,20 +31,29 @@
 					<div class="product-single__desc">
 						<ul class="ls-checkpoints">
 							<li class="lsc-item">
-								<i class="icon icon-check"></i>
+								<i class="icon">
+									<img src="assets/img/icons/icon-check.svg" alt="">
+								</i>
 								<span>6 lotter i brevlådan varje månad</span>
 							</li>
 							<li class="lsc-item">
-								<i class="icon icon-check"></i>
+								<i class="icon">
+									<img src="assets/img/icons/icon-check.svg" alt="">
+								</i>
 								<span>Vinn upp till 10 miljoner</span>
 							</li>
 							<li class="lsc-item">
-								<i class="icon icon-check"></i>
+								<i class="icon">
+									<img src="assets/img/icons/icon-check.svg" alt="">
+								</i>
 								<span>Ingen bindningstid</span>
 							</li>
 						</ul>
 						<div class="product-single__text">
-							<div class="old-price">Ord pris: 300 kr / mån.</div>
+							<div class="top-line">
+								<div class="old-price">Ord pris: 300 kr / mån.</div>
+								<a href="#modal-lottery-info" data-toggle="modal">Läs mer om Miljonlotten</a>
+							</div>
 							<p>Vill du beställa din prenumeration via telefon?</p>
 							<p>Ring oss så hjälper vi dig: <a href="tel:0313382821" class="phone-link">031-338 28 21</a></p>
 						</div>
@@ -90,6 +98,10 @@
 						</div>
 						<div class="form-tab-second form-tabs__content">
 							<form id="lottery-order-form-2" class="lottery-order-form">
+								<button class="btn-back">
+									<span class="btn-back__icon"></span>
+									<span class="btn-back__title">Tillbaka</span>
+								</button>
 								<div class="form-title">Hur vill du ha dina lotter?</div>
 								<div class="form-info-text">Välj om du vill ha dina lotter hem i brevlådan, eller om du vill skrapa dem digitalt.</div>
 								<div class="form-group radio-group">
@@ -110,6 +122,10 @@
 
 						<div class="form-tab-third form-tabs__content">
 							<form id="lottery-order-form-3" class="lottery-order-form">
+								<button class="btn-back">
+									<span class="btn-back__icon"></span>
+									<span class="btn-back__title">Tillbaka</span>
+								</button>
 								<div class="form-title">Beställ dina lotter</div>
 								<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
 								<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
@@ -154,8 +170,8 @@
 													<label for="clearingNumber" class="with-tooltip">
 														<span>Clearing</span>
 														<span class="tooltip-second" data-toggle="tooltip" data-placement="top" data-original-title="Ta bort från min drömlista Ta bort från min drömlista">
-														<img src="assets/img/icons/icon-info.svg" alt="">
-													</span>
+													<img src="assets/img/icons/icon-info.svg" alt="">
+												</span>
 													</label>
 													<input type="text" class="form-control" id="clearingNumber" data-minlength="4" placeholder="1234" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror" disabled>
 													<div class="help-block with-errors"></div>
@@ -190,9 +206,9 @@
 								<div class="btn-wrap">
 									<button type="submit" class="lof-btn btn-success go-last-step disabled">
 										<span>Signera med BankID</span>
-											<span class="icon">
-											<img src="assets/img/icons/bankid-2.svg" alt="">
-										</span>
+										<span class="icon">
+										<img src="assets/img/icons/bankid-2.svg" alt="">
+									</span>
 									</button>
 									<!--hidden button-->
 									<button type="button" class="show-modal" data-toggle="modal" data-target="#modal-lottery-order"></button>
@@ -222,10 +238,22 @@
 					</div>
 
 					<div class="product-single__text mobile">
-						<div class="old-price">Ord pris: 300 kr / mån.</div>
 						<p>Vill du beställa din prenumeration via telefon?</p>
 						<p>Ring oss så hjälper vi dig: <a href="tel:0313382821">031-338 28 21</a></p>
 					</div>
+				</div>
+			</div>
+
+			<div class="order-form-message" style="display: none">
+				<div class="message-title">Du kan tyvärr inte ta del av detta erbjudande</div>
+				<div class="message-top-text">
+					<p>Det kan bero på att du redan har en prenumeration på denna lott, eller tagit del av ett erbjudande de senaste 3 månaderna.</p>
+					<p>Logga in för att se vad du kan ta del av!</p>
+				</div>
+				<a type="button" class="btn btn-success" data-toggle="modal" href="#modal-login">Logga in och se dina lottval</a>
+				<div class="message-bottom-text">
+					<p>Du kan också ringa oss så hjälper vi dig:</p>
+					<p>031-338 28 21</p>
 				</div>
 			</div>
 		</div>
@@ -268,7 +296,7 @@
 				@@include('blocks/promotion/block-split/_split-block-large-tall.html', {
 				"theme": "light",
 				"reversed_content": true,
-				"background-color-class": "background-color-light-blue",
+				"background-color-class": "background-color-grey",
 				"image": "assets/img/mockup/CTA-block-winner-bg.jpeg",
 				"has_content_title": true,
 				"has_content_description": true,
@@ -277,6 +305,8 @@
 			</div>
 		</div>
 	</section>
+
+	<div class="space-60"></div>
 
 	<!-- Promotion Slider -->
 	<section class="slider-promo">
@@ -299,21 +329,26 @@
 		</div>
 	</section>
 
+	<div class="space-60"></div>
+
 	<section class="s-promotion-offer">
 		<div class="container">
 			<div class="row equal-height">
 				@@include('blocks/promotion/block-cta/_cta-block-large.html', {
+				"has_link": true,
 				"theme": "dark",
 				"reversed_content": true,
 				"background-color-class": "background-color-blue",
 				"has_content_title": true,
 				"has_content_description": true,
 				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-				"link_title": "Välj lotter som gör gott"
+				"btn_title": "Välj lotter som gör gott"
 				})
 			</div>
 		</div>
 	</section>
+
+	<div class="space-60"></div>
 </div>
 
 @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

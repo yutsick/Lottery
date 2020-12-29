@@ -57,6 +57,18 @@ export default function () {
 		$('.page-overlay').removeClass('active')
 	});
 
+	//back button
+	$('.lottery-order-form .btn-back').on('click', function (){
+		var th = $(this),
+			thisTab = th.closest('.form-tabs__content');
+
+		thisTab.fadeOut(300, function () {
+			thisTab.prev().fadeIn(300, function () {
+				tabsFinish = 0;
+			});
+		});
+	});
+
 
 	//accordion
 	$('.lottery-order-form .acc-title').on('click', function (){
@@ -167,6 +179,22 @@ export default function () {
 			setTimeout(function(){
 				$('.lottery-order-form .show-modal').trigger('click');
 			}, 4000);
+		}
+	});
+
+	//order form simple
+	$('.lottery-order-form-simple button[type="submit"]').on('click', function () {
+		var th = $(this),
+			thisForm = th.closest('.lottery-order-form-simple');
+
+		if (th.hasClass('disabled')) {
+			thisForm.find('.form-info-text').hide();
+			thisForm.find('.form-error-text').show();
+		} else {
+			thisForm.find('.form-info-text').show();
+			thisForm.find('.form-error-text').hide();
+			th.closest('.product-single').hide();
+			$('.s-lottery-selection-detail').addClass('message-visible');
 		}
 	});
 

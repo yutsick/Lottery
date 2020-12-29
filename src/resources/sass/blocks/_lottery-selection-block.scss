@@ -15,18 +15,29 @@
 
 .s-lottery-selection {
 	background-color: $color-primary;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
+	margin-bottom: 10px;
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 20px;
+	}
+	@include min-screen($screen-md-min) {
+		margin-bottom: 60px;
+	}
 	.products-slider {
-		margin-top: -45px;
-		margin-bottom: 50px;
-		@include min-screen($screen-sm-min) {
-			margin-top: -45px;
-			margin-bottom: 50px;
-		}
+		margin-top: -30px;
+		margin-bottom: 60px;
 		@include min-screen($screen-md-min) {
-			margin-top: -75px;
-			margin-bottom: 50px;
+			margin-top: -60px;
+			margin-bottom: 60px;
 		}
+	}
+}
+
+.ls-checkpoints-wrap {
+	display: flex;
+	justify-content: center;
+	@include min-screen($screen-sm-min) {
+		display: block;
 	}
 }
 
@@ -35,11 +46,13 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	list-style: none;
-	padding-left: 35px;
+	margin: -5px 0;
+	padding: 0;
 	@include min-screen($screen-sm-min) {
 		flex-direction: row;
 		justify-content: center;
-		padding-left: 0;
+		margin-left: -20px;
+		margin-right: -20px;
 	}
 }
 
@@ -48,16 +61,21 @@
 	color: #ffffff;
 	font-size: $size-medium;
 	font-weight: 400;
-	line-height: $base-line-height;
-	margin: 5px 18px;
+	line-height: 1.333;
+	margin: 5px 20px;
 	@include min-screen($screen-md-min) {
 		font-size: $size-large;
+		line-height: 1.3;
 	}
 	.icon {
-		font-size: $size-large;
-		color: #4caf50;
+		align-self: flex-start;
+		width: 21px;
 		margin-top: 2px;
-		margin-right: 5px;
+		margin-right: 7px;
+		img {
+			display: block;
+			width: 100%;
+		}
 	}
 }
 
@@ -65,7 +83,62 @@
 	position: relative;
 	background-color: $color-primary;
 	padding-bottom: 30px;
+	margin-bottom: 10px;
 	z-index: 995;
+	@include min-screen($screen-sm-min) {
+		margin-bottom: 20px;
+	}
+	@include min-screen($screen-md-min) {
+		margin-bottom: 60px;
+	}
+}
+
+.order-form-message {
+	max-width: 355px;
+	color: #ffffff;
+	margin: 30px auto;
+	text-align: center;
+	.message-title {
+		font-family: $apercu-bold-font;
+		font-size: 28px;
+		line-height: 1.111;
+		margin-bottom: 10px;
+		@include min-screen($screen-sm-min) {
+			font-size: 30px;
+			line-height: 1.333;
+		}
+	}
+	.message-top-text {
+		font-size: $size-small;
+		line-height: 1.428;
+		margin-bottom: 25px;
+		@include min-screen($screen-sm-min) {
+			padding: 0 8px;
+		}
+
+		> * {
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.btn {
+		width: 100%;
+		margin-bottom: 65px;
+	  padding: 12.5px 30px;
+		@include min-screen($screen-md-min) {
+			padding: 8px 30px;
+		}
+	}
+	.message-bottom-text {
+		font-family: $apercu-bold-font;
+		line-height: 1.25;
+
+		> * {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .product-single {
@@ -93,10 +166,10 @@
 		}
 		.ls-checkpoints {
 			flex-direction: column;
-			margin-bottom: 50px;
+			margin: 0 0 50px;
 			@media (max-width: 767px) {
 				margin: 0;
-				padding: 0;
+				padding: 0 0 0 40px;
 			}
 			li {
 				margin: 0 0 10px;
@@ -125,6 +198,9 @@
 			max-width: 355px;
 			width: 100%;
 			margin: 0 auto;
+			@media (max-width: 767px) {
+				max-width: none;
+			}
 		}
 	}
 	&__img {
@@ -132,7 +208,7 @@
 		position: relative;
 		margin-top: -55px;
 		@media (max-width: 767px) {
-			width: 255px;
+			width: 226px;
 			margin-top: -30px;
 			margin-bottom: 30px;
 		}
@@ -152,37 +228,55 @@
 			width: 50%;
 		}
 		@media (max-width: 767px) {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-			padding: 0 0 0 40px;
-		}
-		@media (max-width: 767px) {
 			display: block;
+			width: 100%;
+			padding: 0;
 		}
 	}
 	&__text {
 		color: #ffffff;
 		font-family: $apercu-bold-font;
 		@media (max-width: 767px) {
-			display: none;
+			&:not(.mobile) {
+				margin-top: 30px;
+
+				> *:not(.top-line) {
+					display: none;
+				}
+			}
 		}
 		&.mobile {
 			display: none;
 			@media (max-width: 767px) {
 				display: block;
-				margin-top: 130px;
+				margin-top: 120px;
+			}
+		}
+
+		.top-line {
+			margin-bottom: 10px;
+			@media (max-width: 767px) {
+				margin-bottom: 0;
+			}
+			@media (min-width: 991px) {
+				white-space: nowrap;
 			}
 		}
 		.old-price {
+			display: inline-block;
 			font-family: $base-font-family;
-			margin-bottom: 10px;
+			margin-right: 5px;
 		}
 		p {
 			margin-bottom: 0;
 		}
 		a {
+			white-space: nowrap;
 			color: #ffffff;
+
+			&:focus {
+				text-decoration: underline;
+			}
 		}
 		.phone-link {
 			text-decoration: none;

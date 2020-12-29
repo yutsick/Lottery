@@ -16,6 +16,11 @@ body {
 		overflow: hidden !important;
 		position: fixed;
 	}
+	&.backdrop-invisible {
+		.modal-backdrop {
+			opacity: 0!important;
+		}
+	}
 }
 
 .modal-backdrop {
@@ -103,5 +108,4 @@ body {
 @import "register";
 @import "register-new";
 @import "blog-win";
-@import "lottery-selection";
 @import "lottery";

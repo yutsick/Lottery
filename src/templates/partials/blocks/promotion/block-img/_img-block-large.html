@@ -1,22 +1,39 @@
 <div class="col-xs-12">
   <div class="img-block img-block--large img-block--@@theme alignment-@@text_alignment">
-    <div class="img-block__content"  style="background-image: url(@@image);">
-      @@if(context.has_content_title){
-      <h4 class="img-block__title manualHyphens">Varje lott gör skillnad</h4>
-      }
-      @@if(context.has_content_description){
-      <p class="img-block__text">Det här är lotteriet för dig som känner att andras välmående är högsta vinsten. Hos Miljonlotteriet ger varje lott du köper fler människor stöd att komma till en trygg och drogfri miljö. </p>
-      }
-      @@if(context.has_link){
-      <div class="img-block__cta">
-        @@if(context.theme === "light") {
-        <a class="btn btn--sm btn-primary" href="#">@@link_title</a>
+    @@if(context.has_link === true){
+      <a href="#" class="img-block__content"  style="background-image: url(@@image);">
+        @@if(context.overlay === true) {
+          <div class="img-block__overlay"></div>
         }
-        @@if(context.theme === "dark") {
-        <a class="btn btn--sm btn-invert" href="#">@@link_title</a>
+        @@if(context.has_content_title){
+          <h4 class="img-block__title manualHyphens">Varje lott gör skillnad</h4>
+        }
+        @@if(context.has_content_description){
+          <p class="img-block__text">Det här är lotteriet för dig som känner att andras välmående är högsta vinsten. Hos Miljonlotteriet ger varje lott du köper fler människor stöd att komma till en trygg och drogfri miljö. </p>
+        }
+        <div class="img-block__cta">
+          @@if(context.theme === "light") {
+            <div class="btn btn--sm btn-primary">@@btn_title</div>
+          }
+          @@if(context.theme === "dark") {
+            <div class="btn btn--sm btn-invert">@@btn_title</div>
+          }
+        </div>
+      </a>
+    }
+
+    @@if(context.has_link === false){
+      <div class="img-block__content"  style="background-image: url(@@image);">
+        @@if(context.overlay === true) {
+          <div class="img-block__overlay"></div>
+        }
+        @@if(context.has_content_title){
+          <h4 class="img-block__title manualHyphens">Varje lott gör skillnad</h4>
+        }
+        @@if(context.has_content_description){
+          <p class="img-block__text">Det här är lotteriet för dig som känner att andras välmående är högsta vinsten. Hos Miljonlotteriet ger varje lott du köper fler människor stöd att komma till en trygg och drogfri miljö. </p>
         }
       </div>
-      }
-    </div>
+    }
   </div>
 </div>

@@ -23,6 +23,10 @@
 		font-weight: 400;
 		line-height: 1.428;
 		margin-bottom: 30px;
+		
+		a {
+			color: white;
+		}
 	}
 	.form-row {
 		display: flex;
@@ -72,7 +76,7 @@
 			display: block;
 			color: #FFFFFF;
 			font-size: $size-smallest;
-			//font-weight: 700;
+			font-weight: 700;
 			margin-bottom: 5px;
 			text-align: center;
 			&.with-tooltip {
@@ -93,9 +97,9 @@
 	}
 	.form-control {
 		width: 100%;
-		height: 38px;
+		height: 46px;
 		color: $color-primary;
-		font-size: 14px;
+		font-size: 16px;
 		letter-spacing: 1px;
 		border-radius: 4px;
 		border: solid 1px #cecece;
@@ -105,9 +109,22 @@
 		text-align: center;
 		padding: 0 15px;
 		transition: all .2s ease;
+		@include min-screen($screen-md-min) {
+			height: 38px;
+			font-size: 14px;
+		}
+
+		&:disabled {
+			cursor: default
+		}
+
 		&::placeholder {
+			font-size: $base-font-size;
 			color: rgba(0, 62, 82, .5);
 			letter-spacing: 1px;
+			@include min-screen($screen-md-min) {
+				font-size: $size-small;
+			}
 		}
 		&::-ms-input-placeholder {
 			opacity: 1;
@@ -209,18 +226,24 @@
 		.select2-selection {
 			text-align: left;
 			&--single {
-				height: 44px;
+				height: 46px;
 				border-radius: 4px;
 				border: solid 1px #cecece;
 				background-color: #E8F0FE;
 				outline: none;
+				@include min-screen($screen-md-min) {
+					height: 44px;
+				}
 				.select2-selection {
 					&__rendered {
 						line-height: 43px;
 						color: rgba(11, 59, 84, .5);
-						font-size: $size-small;
+						font-size: $base-font-size;
 						font-weight: 400;
 						padding-left: 15px;
+						@include min-screen($screen-md-min) {
+							font-size: $size-small;
+						}
 					}
 					&__arrow {
 						height: 100%;
@@ -243,13 +266,53 @@
 		}
 	}
 	.lof-btn {
-		&.disabled {
+		opacity: 1.0;
+		padding: 12.5px 30px;
+		@include min-screen($screen-md-min) {
+			padding: 8px 30px;
+		}
+		&.disabled, &:disabled {
 			color: #ffffff;
 			background-color: $color-cta-light;
 			cursor: default;
 			&:hover {
 				background-color: $color-cta-light;
 			}
+		}
+	}
+	.btn-back {
+		border: none;
+		justify-self: flex-start;
+		background-color: transparent;
+		padding-left: 0;
+		margin: 0 0 30px;
+		&__icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: 24px;
+			height: 24px;
+			border-radius: 100%;
+			background-color: $color-secondary-lightBlue;
+			background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1L1 6L6 11' stroke='%23053A53' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-position: 40% center;
+			background-size: 7px 12px;
+			transition: all 200ms ease-in;
+		}
+		&:hover,
+		&:focus {
+			.btn-back__icon {
+				background-color: rgba($color-secondary-lightBlue, 0.5);
+			}
+		}
+		&__title {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 7px;
+			margin-right: 10px;
+			font-size: 16px;
+			font-weight: $semibold;
+			color: #ffffff;
 		}
 	}
 }
@@ -265,6 +328,7 @@
 
 .form-tab-second {
 	display: none;
+	margin-top: -10px;
 	.form-group {
 		margin-bottom: 40px;
 	}
@@ -278,6 +342,10 @@
 		width: 50%;
 		@media (max-width: 480px) {
 			width: 100%;
+			margin-bottom: 25px;
+			&:last-child {
+				margin-bottom: 10px;
+			}
 		}
 		&__label {
 			margin: 0;
@@ -291,16 +359,20 @@
 
 .form-tab-third {
 	display: none;
+	margin-top: -10px;
 	.btn-success {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 4px 30px;
-		height: 38px;
+		height: 46px;
+		@include min-screen($screen-md-min) {
+			height: 38px;
+		}
 		.icon {
 			width: 23px;
+			font-size: 0;
 			margin-left: 8px;
-			margin-bottom: 2px;
 			img {
 				width: 100%;
 			}
@@ -325,9 +397,6 @@
 				text-decoration: none;
 			}
 		}
-	}
-	.form-control {
-		height: 44px;
 	}
 	.acc-second {
 		margin-bottom: 30px;

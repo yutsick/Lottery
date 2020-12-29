@@ -380,13 +380,16 @@
 		border: solid 1px $color-cta;
 		background-color: #fff;
 		&:checked:after {
-			content: '\e905';
 			position: absolute;
-			top: 1px;
-			left: 1px;
-			font-size: 12px;
-			font-family: $base-icon-family;
-			color: $color-cta;
+			content: '';
+			top: 50%;
+			left: 50%;
+			width: 8px;
+			height: 8px;
+			margin-top: -4px;
+			margin-left: -4px;
+			background-color: #053A53;
+			border-radius: 50%;
 		}
 		&:focus {
 			outline: 0;

@@ -5,6 +5,15 @@
 		align-items: flex-end;
 		justify-content: center;
 		color: $color-blue-deep;
+		margin-bottom: 0;
+
+		@include min-screen($screen-lg) {
+			margin-bottom: 110px;
+		}
+
+		&.flickity-enabled {
+			opacity: 1;
+		}
 
 		&-inner {
 			width: 100%;
@@ -12,7 +21,6 @@
 			@include min-screen($screen-lg) {
 				padding: 20px;
 				max-width: 330px;
-				margin-bottom: 60px;
 			}
 		}
 	}
@@ -22,10 +30,6 @@
 		font-size: 30px;
 		color: $color-blue-deep;
 		margin-top: 0;
-
-		@include min-screen($screen-lg) {
-			margin-top: 20px;
-		}
 	}
 
 	.block-promotion__title {
