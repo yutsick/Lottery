@@ -616,6 +616,12 @@
 		background-position: center;
 		background-size: cover;
 		padding-bottom: 61.5%;
+		@include min-screen($screen-md-min) {
+			transition: all .4s ease;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
 	}
 	.lottery-price {
 		@include max-screen($screen-xs-max) {
