@@ -119,7 +119,7 @@ export default function () {
 		cellAlign: 'center',
 		wrapAround: true,
 		contain: false,
-		draggable: false,
+		draggable: true,
 		pageDots: false,
 		prevNextButtons: true,
 		watchCSS: true
