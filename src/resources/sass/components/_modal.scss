@@ -1302,8 +1302,7 @@
 			}
 			&.active {
 				.arrow {
-					top: 8px;
-					transform: rotate(225deg);
+					transform: rotate(180deg);
 				}
 			}
 		}
@@ -1316,16 +1315,13 @@
 			}
 			.arrow {
 				position: absolute;
-				top: 2px;
+				top: 7px;
 				left: 1px;
-				width: 11px;
-				height: 11px;
-				border: 2px solid #ffffff;
-				border-left: none;
-				border-top: none;
-				text-decoration: none;
-				border-radius: 2px;
-				transform: rotate(45deg);
+				width: 14px;
+				img {
+					display: block;
+					width: 100%;
+				}
 			}
 			.title-text {
 				text-decoration: underline;
