@@ -1347,6 +1347,21 @@
 			>.margin-none {
 				margin-bottom: 0!important;
 			}
+			.font-bold {
+				font-weight: bold;
+			}
+			a {
+				color: #FFFFFF;
+				text-decoration: underline;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+			table {
+				td, th {
+					padding-right: 20px;
+				}
+			}
 			ul, ol {
 				position: static;
 				margin: 0 0 22px 0!important;
