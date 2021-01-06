@@ -146,6 +146,7 @@
 		}
 	}
 	&__text {
+		font-family: $apercu-bold-font;
 		max-width: 115px;
 		width: 100%;
 		@include min-screen($screen-sm-min) {
@@ -179,6 +180,7 @@
 		width: auto;
 		font-size: $size-small;
 		line-height: 18px;
+		font-weight: bold;
 		text-transform: uppercase;
 		letter-spacing: 0.5px;
 		padding: 0 10px;
@@ -254,6 +256,9 @@
 	.text {
 		>* {
 			margin: 0;
+			&:first-child {
+				font-weight: bold;
+			}
 		}
 	}
 }
