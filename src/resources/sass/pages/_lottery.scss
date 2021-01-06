@@ -68,9 +68,9 @@
 	outline: none;
 	box-shadow: none;
 	cursor: pointer;
-	transition: opacity .3s ease;
+	transition: background-color .3s ease;
 	&:hover {
-		opacity: .8;
+		background-color: $color-primary-light;
 	}
 }
 
