@@ -1141,6 +1141,18 @@
 }
 
 .modal-video {
+	&.fade {
+		transition: opacity .2s linear;
+		.modal-secondary-content {
+			transform: scale(.9);
+			transition: all .2s linear;
+		}
+		&.in {
+			.modal-secondary-content {
+				transform: scale(1);
+			}
+		}
+	}
 	.modal-secondary-dialog {
 		max-width: 915px;
 		@include min-screen($screen-sm-min) {
@@ -1160,6 +1172,9 @@
 }
 
 .modal-lottery-info {
+	&.fade {
+		transition: opacity .2s linear;
+	}
 	.modal-secondary-dialog {
 		max-width: 390px;
 	}
