@@ -221,9 +221,15 @@
 			background-color: $color-primary;
 		}
 		&--big {
+			height: 50px;
 			font-size: 24px;
-			padding-top: 12px;
-			padding-bottom: 12px;
+			line-height: 50px;
+			&:before {
+				border-width: 25px 0 25px 12px;
+			}
+			&:after {
+				border-width: 25px 12px 25px 0;
+			}
 		}
 		&--text-dark {
 			color: $color-primary;

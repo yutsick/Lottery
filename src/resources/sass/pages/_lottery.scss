@@ -3,9 +3,11 @@
 		background-color: $color-secondary-light;
 		.block-title {
 			&-marked {
-				&:before,
+				&:before {
+					border-color: transparent transparent transparent $color-secondary-light;
+				}
 				&:after {
-					background-color: $color-secondary-light;
+					border-color: transparent $color-secondary-light transparent transparent;
 				}
 			}
 		}
@@ -96,7 +98,6 @@
 	padding-top: 30px;
 	@include min-screen($screen-md-min) {
 		padding-top: 60px;
-		margin-bottom: 40px;
 	}
 	.block-title-marked {
 		margin-bottom: 30px;
