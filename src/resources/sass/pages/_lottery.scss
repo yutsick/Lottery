@@ -523,6 +523,7 @@
 	&__item {
 		position: relative;
 		width: calc(50% - 40px);
+		box-shadow: 0px 6px 6px #88b4c5;
 		margin: 20px;
 		@include min-screen($screen-xs-min) {
 			width: calc(33.333% - 40px);
