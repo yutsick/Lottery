@@ -620,7 +620,7 @@
 		@include min-screen($screen-md-min) {
 			transition: all .4s ease;
 			&:hover {
-				transform: scale(1.05);
+				transform: scale(1.03);
 			}
 		}
 	}
