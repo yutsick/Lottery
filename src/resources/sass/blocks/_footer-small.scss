@@ -5,8 +5,6 @@
 	border-right: none;
 	font-weight: $light;
 	padding-top: 60px;
-
-	margin-bottom: 200px;
 	&__item {
 		margin-bottom: 30px;
 		@include min-screen($screen-md-min) {
