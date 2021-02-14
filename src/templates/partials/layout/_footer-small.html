@@ -1,0 +1,17 @@
+<footer id="footer" class="ml-2017">
+	@@if (show_footer === true) {
+	@@include('blocks/_footer-small.html')
+	@@include('blocks/_bottom-bar.html')
+	}
+</footer>
+@@include('components/_overlay.html')
+@@include('components/_modals.html', {
+"show_terms_modal": @@show_terms_modal
+})
+
+</div><!-- /#page-wrapper -->
+</body>
+<script src="/assets/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+</html>
+
