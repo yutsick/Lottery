@@ -26,8 +26,8 @@ export default function () {
 	});
 
 	//select
-	var customSelect = $('.lottery-order-form select'),
-		customSelect2 = $('.choose-bankid-device select');
+	var customSelect = $('.first-select-style select'),
+		customSelect2 = $('.second-select-style select');
 
 	customSelect.each(function () {
 		var th = $(this);
@@ -72,6 +72,13 @@ export default function () {
 
 	//accordion
 	$('.lottery-order-form .acc-title').on('click', function (){
+		customSelect2.each(function () {
+			var th = $(this);
+
+			th.select2({
+				minimumResultsForSearch: -1
+			}).data('select2').$dropdown.addClass('select-dropdown-container-2');
+		})
 		var th = $(this),
 			accBlock = th.closest('.acc-second'),
 			accTitle = accBlock.find('.acc-title'),
@@ -94,7 +101,7 @@ export default function () {
 					$(this).prop('required', true);
 					$(this).prop('disabled', false);
 				});
-				accItem.find('select').each(function () {
+				accItem.find('.form-group:not(.second-select-style) select').each(function () {
 					$(this).val('').trigger('change');
 					$(this).next('.select2').removeClass('choice-done')
 				})

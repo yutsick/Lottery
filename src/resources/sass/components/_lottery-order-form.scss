@@ -414,8 +414,7 @@
 			margin-bottom: 30px;
 		}
 	}
-	.choose-bankid-device {
-		margin-bottom: 30px;
+	.second-select-style {
 		.select2-container {
 			width: 100% !important;
 			.select2-selection--single .select2-selection__rendered {
@@ -423,6 +422,9 @@
 				font-weight: 700;
 			}
 		}
+	}
+	.choose-bankid-device {
+		margin-bottom: 30px;
 	}
 }
 
@@ -518,7 +520,6 @@
 
 .payment-by-invoice {
 	.acc-body {
-		padding-left: 30px;
 		.address-block {
 			margin-bottom: 20px;
 		}
