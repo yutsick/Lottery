@@ -99,10 +99,10 @@
 						</div>
 						<div class="form-tab-second form-tabs__content">
 							<form id="lottery-order-form-2" class="lottery-order-form">
-								<button class="btn-back">
+								<div class="btn-back">
 									<span class="btn-back__icon"></span>
 									<span class="btn-back__title">Tillbaka</span>
-								</button>
+								</div>
 								<div class="form-title">Hur vill du ha dina lotter?</div>
 								<div class="form-info-text">Välj om du vill ha dina lotter hem i brevlådan, eller om du vill skrapa dem digitalt.</div>
 								<div class="form-group radio-group">
@@ -123,10 +123,10 @@
 
 						<div class="form-tab-third form-tabs__content">
 							<form id="lottery-order-form-3" class="lottery-order-form">
-								<button class="btn-back">
+								<div class="btn-back">
 									<span class="btn-back__icon"></span>
 									<span class="btn-back__title">Tillbaka</span>
-								</button>
+								</div>
 								<div class="form-title">Beställ dina lotter</div>
 								<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
 								<div class="form-error-text">Något blev fel eller saknas i fälten nedan. Kontrollera att du fyllt i alla uppgifter rätt.</div>
@@ -171,30 +171,16 @@
 										</div>
 
 										<div class="acc-body">
-											<div class="form-row">
-												<div class="form-group">
-													<label for="clearingNumber" class="with-tooltip">
-														<span>Clearing</span>
-														<span class="tooltip-second" data-toggle="tooltip" data-placement="top" data-original-title="Ta bort från min drömlista Ta bort från min drömlista">
-													<img src="assets/img/icons/icon-info.svg" alt="">
-												</span>
-													</label>
-													<input type="text" class="form-control" id="clearingNumber" data-minlength="4" placeholder="1234" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror" disabled>
-													<div class="help-block with-errors"></div>
-												</div>
-
-												<div class="form-group">
-													<label for="cardNumber2">Kortnummer</label>
-													<input type="text" class="form-control" id="cardNumber2" data-minlength="16" placeholder="1234 0000 0000 0000" data-required-error="Du måste fylla i detta fält." data-minlength-error="Minst XX antal siffror, inklusive clearingsnummer." disabled>
-													<div class="help-block with-errors"></div>
-												</div>
+											<div class="form-group second-select-style choose-bank">
+												<label for="chooseBank2">Välj bank</label>
+												<select id="chooseBank2" class="form-control" name="chooseBank">
+													<option value="1">Välj bank</option>
+													<option value="1">1</option>
+													<option value="1">2</option>
+												</select>
 											</div>
 										</div>
 									</div>
-								</div>
-
-								<div class="link-wrap">
-									<a href="#" class="f-link">Välj fysiska lotter för fler betalsätt</a>
 								</div>
 
 								<div class="custom-checkbox-type2">
@@ -204,10 +190,85 @@
 									</label>
 								</div>
 
-
 								<div class="form-group second-select-style choose-bankid-device">
 									<label for="chooseBankidDevice">Välj BankID-enhet</label>
 									<select id="chooseBankidDevice" class="form-control" name="chooseDevice">
+										<option value="1">BankID på annan enhet</option>
+										<option value="1">BankID på annan enhet1</option>
+									</select>
+								</div>
+
+								<div class="btn-wrap">
+									<button type="submit" class="lof-btn btn-success go-fourth-step disabled">
+										<span>Signera med BankID</span>
+											<span class="icon">
+											<img src="assets/img/icons/bankid-2.svg" alt="">
+										</span>
+									</button>
+								</div>
+
+								<div class="subscribe-info-text">Genom att klicka på ”Signera” godkänner du att inleda en prenumeration.
+									<a href="#modal-conditions" data-toggle="modal">Läs mer om våra villkor här</a>
+								</div>
+							</form>
+						</div>
+
+						<div class="form-tab-fourth form-tabs__content">
+							<form id="lottery-order-form-4" class="lottery-order-form">
+								<div class="btn-back">
+									<span class="btn-back__icon"></span>
+									<span class="btn-back__title">Tillbaka</span>
+								</div>
+								<div class="form-title">Beställ dina lotter</div>
+								<div class="form-info-text">Välj hur du vill betala dina lotter. Hos oss spelar du tryggt och säkert och du är med så länge du vill.</div>
+								<div class="form-error-text">NDu behöver välja kontonummer innan du går vidare.</div>
+
+								<div class="acc-second">
+									<div class="payment-by-direct-debit acc-item">
+										<div class="acc-title active">
+											<div class="acc-title__btn"></div>
+											<div class="acc-title__text">Betala med Autogiro</div>
+										</div>
+
+										<div class="acc-body">
+											<table class="user-info">
+												<tr>
+													<td>Namn:</td>
+													<td>Anna Andersson</td>
+												</tr>
+												<tr>
+													<td>Personnummer:</td>
+													<td>19800101-0101</td>
+												</tr>
+												<tr>
+													<td>Bank:</td>
+													<td>Swedbank</td>
+												</tr>
+											</table>
+
+											<div class="form-group has-feedback first-select-style">
+												<label for="userPersonalNumber3">Välj kontonummer</label>
+												<select id="userPersonalNumber3" class="form-control" name="chooseBank" required data-error="error">
+													<option value>Välj kontonummer</option>
+													<option value="1">1</option>
+													<option value="1">2</option>
+												</select>
+												<div class="help-block with-errors"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="custom-checkbox-type2">
+									<label>
+										<input type="checkbox" name="newsletter">
+										<span>Jag vill få erbjudanden och intressant läsning via Miljonlotteriets nyhetsbrev</span>
+									</label>
+								</div>
+
+								<div class="form-group second-select-style choose-bankid-device">
+									<label for="chooseBankidDevice2">Välj BankID-enhet</label>
+									<select id="chooseBankidDevice2" class="form-control" name="chooseDevice">
 										<option value="1">BankID på annan enhet</option>
 										<option value="1">BankID på annan enhet1</option>
 									</select>

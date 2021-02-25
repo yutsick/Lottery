@@ -72,13 +72,6 @@ export default function () {
 
 	//accordion
 	$('.lottery-order-form .acc-title').on('click', function (){
-		customSelect2.each(function () {
-			var th = $(this);
-
-			th.select2({
-				minimumResultsForSearch: -1
-			}).data('select2').$dropdown.addClass('select-dropdown-container-2');
-		})
 		var th = $(this),
 			accBlock = th.closest('.acc-second'),
 			accTitle = accBlock.find('.acc-title'),
@@ -168,6 +161,25 @@ export default function () {
 
 
 	//third step
+	$('.go-fourth-step').on('click', function () {
+		var th = $(this),
+			thisTab = th.closest('.form-tabs__content');
+
+		if (th.hasClass('disabled')) {
+			th.closest('.form-tabs__content').find('.form-info-text').hide();
+			th.closest('.form-tabs__content').find('.form-error-text').show();
+		} else {
+			th.closest('.form-tabs__content').find('.form-info-text').show();
+			th.closest('.form-tabs__content').find('.form-error-text').hide();
+			thisTab.fadeOut(300, function () {
+				$('.form-tab-fourth').fadeIn(300, function () {
+					tabsFinish = 0;
+				});
+			});
+		}
+	});
+
+	//fourth step
 	$('.go-last-step').on('click', function () {
 		var th = $(this),
 			thisTab = th.closest('.form-tabs__content');

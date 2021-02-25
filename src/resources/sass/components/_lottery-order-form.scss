@@ -1,5 +1,56 @@
 .lottery-order-form {
 	color: #ffffff;
+	.show-modal {
+		display: none;
+	}
+	.subscribe-info-text {
+		font-size: $size-smallest;
+		line-height: 16px;
+		text-align: center;
+		margin-top: 10px;
+		a {
+			display: inline-block;
+			font-size: $size-smallest;
+			line-height: 16px;
+			color: #ffffff;
+			font-weight: 400;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.custom-checkbox-type2 {
+		label {
+			margin-bottom: 30px;
+		}
+	}
+	.first-select-style,
+	.second-select-style {
+		.select2-container {
+			width: 100% !important;
+			.select2-selection--single .select2-selection__rendered {
+				color: $color-primary!important;
+				font-weight: 700;
+			}
+		}
+	}
+	.user-info {
+		font-size: $size-smallest;
+		line-height: 16px;
+		margin-bottom: 20px;
+		td {
+			padding-top: 2px;
+			padding-bottom: 2px;
+			&:first-child {
+				font-weight: 700;
+				padding-right: 14px;
+			}
+		}
+	}
+	.choose-bankid-device {
+		margin-bottom: 30px;
+	}
 	.form-title {
 		font-family: $apercu-bold-font;
 		font-size: 30px;
@@ -232,16 +283,17 @@
 				background-color: #E8F0FE;
 				outline: none;
 				@include min-screen($screen-md-min) {
-					height: 44px;
+					height: 38px;
 				}
 				.select2-selection {
 					&__rendered {
-						line-height: 43px;
+						line-height: 44px;
 						color: rgba(11, 59, 84, .5);
 						font-size: $base-font-size;
 						font-weight: 400;
 						padding-left: 15px;
 						@include min-screen($screen-md-min) {
+							line-height: 36px;
 							font-size: $size-small;
 						}
 					}
@@ -256,6 +308,9 @@
 							font-family: 'ml-icons' !important;
 							font-size: 12px;
 							color: #979797;
+							@include min-screen($screen-md-min) {
+								top: 10px;
+							}
 						}
 						b {
 							display: none;
@@ -266,10 +321,22 @@
 		}
 	}
 	.lof-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 46px;
+		padding: 4px 30px;
 		opacity: 1.0;
-		padding: 12.5px 30px;
 		@include min-screen($screen-md-min) {
-			padding: 8px 30px;
+			height: 38px;
+		}
+		.icon {
+			width: 23px;
+			font-size: 0;
+			margin-left: 8px;
+			img {
+				width: 100%;
+			}
 		}
 		&.disabled, &:disabled {
 			color: #ffffff;
@@ -368,63 +435,25 @@
 .form-tab-third {
 	display: none;
 	margin-top: -10px;
-	.btn-success {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 4px 30px;
-		height: 46px;
-		@include min-screen($screen-md-min) {
-			height: 38px;
-		}
-		.icon {
-			width: 23px;
-			font-size: 0;
-			margin-left: 8px;
-			img {
-				width: 100%;
-			}
-		}
-	}
-	.show-modal {
-		display: none;
-	}
-	.subscribe-info-text {
-		font-size: $size-smallest;
-		line-height: 16px;
-		text-align: center;
-		margin-top: 10px;
-		a {
-			display: inline-block;
-			font-size: $size-smallest;
-			line-height: 16px;
-			color: #ffffff;
-			font-weight: 400;
-			text-decoration: underline;
-			&:hover {
-				text-decoration: none;
-			}
-		}
-	}
 	.acc-second {
 		margin-bottom: 30px;
 	}
-	.custom-checkbox-type2 {
-		label {
-			margin-bottom: 30px;
-		}
-	}
-	.second-select-style {
-		.select2-container {
-			width: 100% !important;
-			.select2-selection--single .select2-selection__rendered {
-				color: $color-primary!important;
-				font-weight: 700;
-			}
-		}
-	}
-	.choose-bankid-device {
+}
+
+.form-tab-fourth {
+	display: none;
+	margin-top: -10px;
+	.acc-second {
 		margin-bottom: 30px;
+	}
+	.acc-item {
+		border-bottom: none;
+	}
+	.acc-body {
+		display: block;
+		*>:last-child {
+			margin-bottom: 0;
+		}
 	}
 }
 
