@@ -29,6 +29,10 @@
   .post {
     position: relative;
 
+    &-link {
+	  text-decoration: none;
+    }
+
     &__thumb {
       max-width: 100%;
 

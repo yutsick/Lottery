@@ -1,8 +1,11 @@
 .block-slider {
-	padding-bottom: 7px;
-	margin-bottom: calc(40px + 20px);
+	margin-bottom: 80px;
 	opacity: 0;
 	transition: opacity $duration-fast $delay-none $ease-in-out;
+
+	@include min-screen($screen-md-min) {
+		margin-bottom: 110px;
+	}
 
 	&.flickity-enabled {
 		opacity: 1;
@@ -87,6 +90,11 @@
 	}
 
 	.flickity-page-dots {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		height: 10px;
+		bottom: -45px;
 		.dot {
 			background: $color-complement-sky;
 
@@ -112,12 +120,13 @@
 	}
 
 	@include min-screen($screen-md-min) {
-		min-height: 450px;
+		min-height: 500px;
 		width: 36%;
 	}
 
 	.block-promotion {
 		min-height: inherit;
+		margin: 0;
 	}
 
 	.block-promotion__image {

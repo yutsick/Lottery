@@ -15,6 +15,7 @@ import storeConfiguration from './store';
 
 /* Components */
 import addToDreamlist from './components/add-to-dreamlist';
+import accordion from './components/accordion';
 import alert from './components/alert';
 import bonusCode from './components/bonus-code';
 import checkboxTrigger from './components/checkbox-trigger';
@@ -22,6 +23,7 @@ import dataList from './components/data-list';
 import dreamlistTooltip from './components/dreamlist-tooltip';
 import entityCollectionActions from './components/entity-collection-actions';
 import form from './components/form';
+import lotteryOrderForm from './components/lottery-order-form';
 import imageGallery from './components/image-gallery';
 import scrolling from './components/is-scrolling';
 import loadSection from './components/load-section';
@@ -76,6 +78,7 @@ $(function () {
 	window.ML.confetti = Confetti;
 	modernizr();
 	new objectFitImages();
+	new accordion();
 	addToDreamlist();
 	alert();
 	bonusCode();
@@ -84,6 +87,7 @@ $(function () {
 	dreamlistTooltip();
 	new entityCollectionActions();
 	form();
+	new lotteryOrderForm();
 	imageGallery();
 	scrolling();
 	loadSection();

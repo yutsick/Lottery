@@ -15,6 +15,7 @@
 	font-weight: 700;
 	transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
 	cursor: pointer;
+	text-decoration: none;
 
 	i {
 		transition: background $duration-quick $delay-none $ease-in-out, color $duration-quick $delay-none $ease-in-out;
@@ -60,7 +61,7 @@
 		background-color: $color-primary-light;
 		color: $color-light;
 	}
-	
+
 	&[disabled],
 	&.disabled,
 	&.btn-disabled {
@@ -119,7 +120,7 @@
 	}
 
 }
-	
+
 .btn-data-action {
 	background: none;
 	padding: 0;
@@ -149,7 +150,7 @@
 		}
 	}
 }
-	
+
 /* Custom */
 .btn-secondary {
 	background-color: $color-secondary;
@@ -195,7 +196,7 @@
 		color: $color-light;
 	}
 }
-	
+
 .btn-icon {
 	position: relative;
 	padding-left: 30 + 19 + 5px;
@@ -219,7 +220,7 @@
 		}
 	}
 }
-	
+
 .btn-icon-only {
 	position: relative;
 	padding: 0;
@@ -241,7 +242,7 @@
 		}
 	}
 }
-	
+
 .btn-input {
 	background-color: $color-light;
 	border-radius: $border-radius;
@@ -270,7 +271,7 @@
 		}
 	}
 }
-	
+
 .btn-2-line {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -282,9 +283,9 @@
 		line-height: 1;
 	}
 }
-	
-	
-	
+
+
+
 .btn-load {
 	position: relative;
 
@@ -304,7 +305,7 @@
 		}
 	}
 }
-	
+
 .btn--bottom-center {
 	position: absolute;
 	bottom: 20px;
@@ -435,7 +436,7 @@ a.btn {
 	padding-bottom: 8px;
 	align-items: center;
 	width: 100%;
-	
+
 	&:before {
 		position: absolute;
 		content: '';

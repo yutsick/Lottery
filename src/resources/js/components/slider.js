@@ -101,6 +101,17 @@ export default function () {
 		$(this).parent().toggleClass("on");
 	})
 
+
+	// Products slider
+	let $flickityProductSlider = $('.products-slider').flickity({
+		cellSelector: '.product-slide',
+		cellAlign: 'center',
+		wrapAround: true,
+		contain: false,
+		draggable: false,
+		pageDots: false,
+		prevNextButtons: true,
+	});
 }
 
 

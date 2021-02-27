@@ -1,12 +1,20 @@
 <div id="modals" class="ml-2017">
 	@@include('components/modals/_cart.html')
-	@@include('components/modals/_create-account.html')
+	@@include('components/modals/_create-account.html', {
+		"background_position_desktop": "center",
+		"background_position_tablet": "center",
+		"background_position_mobile": "center"
+	})
 	@@include('components/modals/_create-account-step-2.html')
 	@@include('components/modals/_create-account-step-3.html')
 	@@include('components/modals/_create-account-final.html')
 	@@include('components/modals/_delivery-place.html')
 	@@include('components/modals/_login-select-product.html')
-	@@include('components/modals/_login.html')
+	@@include('components/modals/_login.html', {
+		"background_position_desktop": "center",
+		"background_position_tablet": "center",
+		"background_position_mobile": "center"
+	})
 	@@include('components/modals/_login-register.html')
 	@@include('components/modals/_login-select-login.html')
 	@@include('components/modals/_login-password.html')
@@ -20,6 +28,11 @@
 	@@include('components/modals/_password-set.html')
 	@@include('components/modals/_password-set-v2.html')
 	@@include('components/modals/_make-deposit.html')
+	@@include('components/modals/_lottery-order-modal.html', {
+		"background_position_desktop": "center",
+		"background_position_tablet": "center",
+		"background_position_mobile": "center"
+	})
 	@@include('components/modals/_terms-of-service.html', {
 		"show_terms_modal": @@show_terms_modal
 	})
@@ -35,4 +48,5 @@
 		"info_title": "Villkor",
 		"info_content": "Lorem ipsum dolor sit amet, Lorem ctor nec eget tortor. Cras commodo aliquet vehicula. Nam ex nunc, sollicitudin id lectus quis, posuere consequat elit. Sed malesuada mi eu augue dignissim, non posuere nunc fringilla. Praesent eget nunc vitae purus dignissim rutrum. Phasellus molestie felis a nisi facilisis venenatis. Quisque odio lorem, suscipit at lectus id, convallis maximus dui. Mauris neque neque, convallis nec nisl non, vulputate auctor tortor. Donec convallis velit eros, sit amet faucibus augue blandit in. In placerat augue at facilisis auctor.Nulla scelerisque tortor vitae elit porttitor aliquam. Sed lobortis lorem vel arcu tempor dignissim. In hac habitasse platea dictumst. Phasellus lobortis scelerisque ante, consectetur sa"
 	})
+	@@include('components/modals/_lottery-info.html')
 </div>

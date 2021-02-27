@@ -2,6 +2,9 @@
   label {
     min-height: 30px;
     padding-left: 35px;
+    a {
+	  text-decoration: none;
+    }
   }
 
   input[type="checkbox"] {
@@ -81,6 +84,9 @@
         border: $form-border-width solid $color-input-border;
         background-color: $color-white;
       }
+	  a {
+		text-decoration: none;
+	  }
     }
 
     /* Checked icon */
@@ -107,6 +113,10 @@
       content: '';
       display: table;
       clear: both;
+    }
+
+    a {
+	  text-decoration: none;
     }
 
     .cr {
@@ -174,6 +184,10 @@
         border: $form-border-width solid $color-input-border;
         background-color: $color-white;
       }
+
+	  a {
+		text-decoration: none;
+	  }
     }
 
     /* Checked icon */
@@ -227,6 +241,9 @@
     white-space: nowrap;
     user-select: none;
 
+    a {
+	  text-decoration: none;
+    }
   }
 
   &__caption {
@@ -333,4 +350,49 @@
   &__price {
     display: block;
   }
+}
+
+// Custom checkboxes for lottery order form
+.custom-checkbox-type2 {
+	position: relative;
+	label {
+		color: #ffffff;
+		font-size: $size-small;
+		font-weight: 400;
+		line-height: 20.6px;
+		padding-left: 26px;
+		cursor: pointer;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	input[type="checkbox"] {
+		display: block;
+		appearance: none;
+		position: absolute;
+		top: -2px;
+		left: 0;
+		width: 16px;
+		height: 16px;
+		border-radius: 1px;
+		border: solid 1px $color-cta;
+		background-color: #fff;
+		&:checked:after {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 50%;
+			width: 8px;
+			height: 8px;
+			margin-top: -4px;
+			margin-left: -4px;
+			background-color: #053A53;
+			border-radius: 50%;
+		}
+		&:focus {
+			outline: 0;
+		}
+	}
 }

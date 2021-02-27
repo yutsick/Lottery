@@ -13,6 +13,9 @@
 	-webkit-overflow-scrolling: touch;
 }
 
+a.navlink {
+	text-decoration: none;
+}
 a.navlink:visited,
 a.navlink:link {
 	color: #2e3237;
@@ -217,4 +220,39 @@ a.navlink:hover {
 	width: 20px;
 	height: 20px;
 	margin-bottom: -4px;
+}
+
+.select-dropdown-container {
+	.select2-results {
+		&__options {
+			margin: 0;
+			padding: 0;
+		}
+		&__option {
+			color: $color-primary;
+			font-size: $size-small;
+			font-weight: 400;
+			padding: 8px 15px;
+			&:first-child {
+				display: none;
+			}
+		}
+	}
+}
+.select-dropdown-container-2 {
+	.select2-results {
+		&__options {
+			margin: 0;
+			padding: 0;
+		}
+		&__option {
+			color: $color-primary;
+			font-size: $size-small;
+			font-weight: 700;
+			padding: 8px 15px;
+			&[aria-selected="true"] {
+				display: none;
+			}
+		}
+	}
 }

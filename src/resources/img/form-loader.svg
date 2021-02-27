@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M3.36538 11.6947C3.36538 12.2674 2.64788 12.7404 1.76275 12.7404L1.6025 12.7404C0.717375 12.7404 0 12.2674 0 11.6947L0 1.01662C0 0.444125 0.717375 0 1.6025 0L1.76275 0C2.64788 0 3.36538 0.444125 3.36538 1.01662L3.36538 11.6947Z"
+          transform="translate(23.317383 0)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.9375s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M4.13957 0.546858C4.35869 0.0178582 5.20219 -0.168017 6.01982 0.170733L6.16794 0.231983C6.98569 0.570733 7.46782 1.30573 7.24869 1.83473L3.16244 11.7C2.94332 12.229 2.09482 12.3784 1.27707 12.0396L1.12894 11.9784C0.311316 11.6396 -0.165934 10.9411 0.0531908 10.4121L4.13957 0.546858Z"
+          transform="translate(28.460693 1.6733398)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.875s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M7.76886 0.225207C8.17361 -0.179668 9.02423 -0.0285428 9.64999 0.597332L9.76336 0.710582C10.3892 1.33646 10.5534 2.19996 10.1485 2.60496L2.59798 10.1555C2.19311 10.5603 1.35198 10.3736 0.726109 9.74771L0.612859 9.63433C-0.0130163 9.00858 -0.186641 8.18058 0.218359 7.77571L7.76886 0.225207Z"
+          transform="translate(32.962646 6.6401367)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.8125s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M10.391 0.0540863C10.9199 -0.165039 11.6479 0.299961 11.9866 1.11771L12.048 1.26571C12.3866 2.08346 12.2079 2.94421 11.6789 3.16334L1.8136 7.24959C1.2846 7.46871 0.578975 6.97434 0.24035 6.15659L0.178975 6.00859C-0.15965 5.19084 -0.00327537 4.35946 0.525725 4.14034L10.391 0.0540863Z"
+          transform="translate(36.07617 14.212402)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.75s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M11.7132 0C12.2859 0 12.7804 0.688125 12.7804 1.57325L12.7804 1.7335C12.7804 2.61863 12.2859 3.36538 11.7132 3.36538L1.03512 3.36538C0.462625 3.36538 0 2.61863 0 1.7335L0 1.57325C0 0.688125 0.462625 0 1.03512 0L11.7132 0Z"
+          transform="translate(37.219727 23.317383)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.6875s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M11.6724 4.13867C12.2013 4.35779 12.3894 5.21229 12.0506 6.03004L11.9894 6.17804C11.6506 6.99567 10.9135 7.46704 10.3845 7.24792L0.519147 3.16167C-0.00972779 2.94254 -0.156978 2.10479 0.181772 1.28717L0.243022 1.13917C0.581772 0.321417 1.27815 -0.166708 1.80715 0.052417L11.6724 4.13867Z"
+          transform="translate(36.081055 28.436035)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.625s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M10.1452 7.76561C10.5501 8.17036 10.3968 9.03186 9.77108 9.65774L9.6577 9.77099C9.03183 10.3969 8.17045 10.5501 7.76558 10.1452L0.215077 2.59473C-0.189924 2.18986 -0.00529849 1.35973 0.620577 0.733859L0.733827 0.620609C1.3597 -0.00526568 2.18983 -0.189891 2.5947 0.214984L10.1452 7.76561Z"
+          transform="translate(32.9646 32.94043)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.5625s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M7.24791 10.3845C7.46704 10.9133 6.99579 11.6507 6.17804 11.9893L6.03004 12.0507C5.21229 12.3893 4.35778 12.2013 4.13866 11.6723L0.0524088 1.80709C-0.166716 1.27809 0.321534 0.581711 1.13916 0.243086L1.28716 0.181711C2.10491 -0.156914 2.94253 -0.00978899 3.16166 0.519211L7.24791 10.3845Z"
+          transform="translate(28.463135 36.05713)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.5s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M3.36538 11.687C3.36538 12.2596 2.64788 12.7804 1.76275 12.7804L1.6025 12.7804C0.717375 12.7804 0 12.2596 0 11.687L0 1.00887C0 0.436375 0.717375 0 1.6025 0L1.76275 0C2.64788 0 3.36538 0.436375 3.36538 1.00887L3.36538 11.687Z"
+          transform="translate(23.317383 37.219727)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.4375s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M4.13966 0.515454C4.35878 -0.0135459 5.18403 -0.155296 6.00166 0.183329L6.14978 0.244704C6.96753 0.583329 7.46791 1.27433 7.24891 1.80333L3.16253 11.6686C2.94341 12.1976 2.09203 12.354 1.27428 12.0152L1.12628 11.954C0.308532 11.6152 -0.165718 10.9096 0.0534072 10.3807L4.13966 0.515454Z"
+          transform="translate(14.220215 36.083984)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.375s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M7.77043 0.214855C8.17531 -0.189895 8.99206 -0.00514472 9.61781 0.62073L9.73118 0.73398C10.3571 1.35986 10.5549 2.18973 10.1502 2.59461L2.59956 10.1451C2.19468 10.55 1.34818 10.3686 0.722309 9.74286L0.609059 9.62948C-0.0168161 9.00373 -0.184941 8.17035 0.219934 7.76536L7.77043 0.214855Z"
+          transform="translate(6.6481934 32.96289)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.3125s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M10.396 0.0527528C10.925 -0.166372 11.6088 0.317003 11.9475 1.13463L12.0088 1.28275C12.3475 2.1005 12.2129 2.94288 11.6839 3.162L1.81866 7.24825C1.28966 7.46738 0.576908 6.976 0.238283 6.15838L0.176908 6.01025C-0.161717 5.1925 0.0017829 4.35825 0.530783 4.13913L10.396 0.0527528Z"
+          transform="translate(1.6918945 28.454102)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.25s" repeatCount="indefinite"/>
+    </path>
+
+
+    <path d="M11.721 0C12.2936 0 12.7404 0.688125 12.7404 1.57325L12.7404 1.7335C12.7404 2.61863 12.2936 3.36538 11.721 3.36538L1.04287 3.36538C0.470375 3.36538 0 2.61863 0 1.7335L0 1.57325C0 0.688125 0.470375 0 1.04287 0L11.721 0Z"
+          transform="translate(0 23.317383)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.1875s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M11.6773 4.13888C12.2063 4.358 12.3503 5.19425 12.0116 6.01188L11.9503 6.16C11.6116 6.97763 10.9184 7.46713 10.3894 7.24813L0.52419 3.16175C-0.00481002 2.94263 -0.15906 2.10213 0.17969 1.2845L0.24094 1.13638C0.57969 0.318628 1.28306 -0.166497 1.81207 0.0526283L11.6773 4.13888Z"
+          transform="translate(1.6967773 14.1953125)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.125s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M10.1469 7.76721C10.5517 8.17208 10.3647 8.99971 9.73886 9.62558L9.62562 9.73883C8.99974 10.3647 8.17212 10.5517 7.76712 10.1468L0.216616 2.59633C-0.188259 2.19146 -0.00913398 1.35583 0.616741 0.730085L0.730116 0.61671C1.35587 -0.00904033 2.19149 -0.18829 2.59637 0.216585L10.1469 7.76721Z"
+          transform="translate(6.6501465 6.6259766)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="-0.0625s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M7.24812 10.3895C7.46724 10.9183 6.97775 11.6115 6.16 11.9502L6.01199 12.0116C5.19424 12.3503 4.358 12.2063 4.13887 11.6773L0.05262 1.8121C-0.166505 1.2831 0.318745 0.579723 1.13637 0.240973L1.28449 0.179598C2.10225 -0.159027 2.94275 -0.0047771 3.16187 0.524223L7.24812 10.3895Z"
+          transform="translate(14.222412 1.6728516)" stroke="none">
+        <animate attributeType="CSS" attributeName="fill" from="#000000" to="#ffffff" keyTimes="0;1" dur="1s"
+                 begin="0s" repeatCount="indefinite"/>
+    </path>
+</svg>

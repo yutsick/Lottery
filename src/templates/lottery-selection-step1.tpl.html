@@ -5,18 +5,110 @@
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 
 <div class="content-wrapper ml-2017">
+	@@include('blocks/_hero-fullwidth-short.html',{
+	"background_video_link": "assets/video/hemsidebanner_hi3.mp4",
+	"hero_overlay": true,
+	"background_video": false,
+	"hero_text": true,
+	"has_link": false,
+	"content_alignment_desktop": "center",
+	"content_alignment_tablet": "center",
+	"content_alignment_mobile": "center",
+	"background_position_desktop": "center",
+	"background_position_tablet": "center",
+	"background_position_mobile": "center"
+	})
 
+	<section class="s-lottery-selection">
+		<div class="container">
+			<div class="products-slider">
+				<div class="product-slide product-hidden">
+					<div class="ph-message">
+						<div class="ph-message__title">Du prenumererar redan på denna lott</div>
+					</div>
+					<div class="product-slide__inner">
+						<a href="/lottery-selection-details.html" class="product-slide__image">
+							<img src="assets/img/mockup/product-02.png" alt="">
+						</a>
+						<div class="product-slide__content">
+							<div class="product-slide__title">Miljonlotten – 6 st per månad</div>
+							<div class="product-slide__price">Ord pris: 300 kr / mån</div>
+							<a href="/lottery-selection-details.html" class="product-btn btn-success">Välj 6 st Miljonlotter</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="product-slide product-hidden">
+					<div class="ph-message">
+						<div class="ph-message__title">Du prenumererar redan på denna lott</div>
+						<div class="ph-message__text">
+							<p>Vill du ändra lottantalet?</p>
+							<p>Ri 21ng oss så hjälper vi dig: 031-338 28</p>
+						</div>
+					</div>
+					<div class="product-slide__inner">
+						<a href="/lottery-selection-details.html" class="product-slide__image">
+							<img src="assets/img/mockup/product-03.png" alt="">
+						</a>
+						<div class="product-slide__content">
+							<div class="product-slide__title">Miljonlotten – 8 st per månad</div>
+							<div class="product-slide__price">Pris: 400 kr / mån</div>
+							<a href="/lottery-selection-details.html" class="product-btn btn-secondary">Välj 8 st Miljonlotter</a>
+						</div>
+					</div>
+
+				</div>
+				<div class="product-slide">
+					<div class="product-slide__inner">
+						<a href="/lottery-selection-details.html" class="product-slide__image">
+							<img src="assets/img/mockup/product-01.png" alt="">
+						</a>
+						<div class="product-slide__content">
+							<div class="product-slide__title">Tjuganlotten – 10 st per månad</div>
+							<div class="product-slide__price">Pris: 200 kr / mån</div>
+							<a href="/lottery-selection-details.html" class="product-btn btn-secondary">Välj 10 st Tjuganlotter</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="ls-checkpoints-wrap">
+				<ul class="ls-checkpoints">
+					<li class="lsc-item">
+						<i class="icon">
+							<img src="assets/img/icons/icon-check.svg" alt="">
+						</i>
+						<span>Jackpott- och nitlottschans</span>
+					</li>
+					<li class="lsc-item">
+						<i class="icon">
+							<img src="assets/img/icons/icon-check.svg" alt="">
+						</i>
+						<span>Vinster för miljoner</span>
+					</li>
+					<li class="lsc-item">
+						<i class="icon">
+							<img src="assets/img/icons/icon-check.svg" alt="">
+						</i>
+						<span>Ingen bindningstid</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
 	<section class="s-promotion-offer">
 		<div class="container">
 			<div class="row equal-height">
 				@@include('blocks/promotion/block-cta/_cta-block-large.html', {
+				"has_link": true,
 				"theme": "light",
 				"reversed_content": true,
 				"background-color-class": "background-color-light-blue",
 				"has_content_title": true,
 				"has_content_description": true,
-				"content_image": "assets/img/mockup/CTA-block-winner-bg.jpeg"
+				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
+				"btn_title": "Välj lotter som gör gott"
 				})
 			</div>
 		</div>
@@ -53,6 +145,24 @@
 		</div>
 	</section>
 
+	<section class="s-promotion-offer">
+		<div class="container">
+			<div class="row equal-height">
+				@@include('blocks/promotion/block-split/_split-block-large-tall.html', {
+				"theme": "light",
+				"reversed_content": true,
+				"background-color-class": "background-color-grey",
+				"image": "assets/img/mockup/CTA-block-winner-bg.jpeg",
+				"has_content_title": true,
+				"has_content_description": true,
+				"has_link": false
+				})
+			</div>
+		</div>
+	</section>
+
+	<div class="space-60"></div>
+
 	<!-- Promotion Slider -->
 	<section class="slider-promo">
 		<div class="container-fluid">
@@ -74,21 +184,26 @@
 		</div>
 	</section>
 
+	<div class="space-60"></div>
+
 	<section class="s-promotion-offer">
 		<div class="container">
 			<div class="row equal-height">
 				@@include('blocks/promotion/block-cta/_cta-block-large.html', {
+				"has_link": true,
 				"theme": "dark",
 				"reversed_content": true,
 				"background-color-class": "background-color-blue",
 				"has_content_title": true,
 				"has_content_description": true,
 				"content_image": "assets/img/mockup/CTA-block-lotter-bg.jpg",
-				"link_title": "Välj lotter som gör gott"
+				"btn_title": "Välj lotter som gör gott"
 				})
 			</div>
 		</div>
 	</section>
+
+	<div class="space-60"></div>
 </div>
 
 @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

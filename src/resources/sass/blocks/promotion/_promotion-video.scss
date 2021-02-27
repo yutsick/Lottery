@@ -1,14 +1,18 @@
 .s-promotion-video {
 	margin-top: 60px;
-	padding-bottom: 60px;
 	margin-bottom: 60px;
-
 
 	@media screen and (max-width: $screen-xs-max){
 		.container {
 			padding-left: 0;
 			padding-right: 0;
 		}
+	}
+	.block-title-wrap {
+		padding: 0 15px;
+	}
+	.block-promotion {
+		margin-bottom: 0;
 	}
 }
 
@@ -20,6 +24,11 @@
 			width: 100%;
 			max-width: 900px;
 			margin: 0 auto;
+			&:last-child {
+				.block-promotion__video-wrapper {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		&-wrapper {

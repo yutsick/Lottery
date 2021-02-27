@@ -1,0 +1,580 @@
+.lottery-order-form {
+	color: #ffffff;
+	.show-modal {
+		display: none;
+	}
+	.subscribe-info-text {
+		font-size: $size-smallest;
+		line-height: 16px;
+		text-align: center;
+		margin-top: 10px;
+		a {
+			display: inline-block;
+			font-size: $size-smallest;
+			line-height: 16px;
+			color: #ffffff;
+			font-weight: 400;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.custom-checkbox-type2 {
+		label {
+			margin-bottom: 30px;
+		}
+	}
+	.first-select-style,
+	.second-select-style {
+		.select2-container {
+			width: 100% !important;
+			.select2-selection--single .select2-selection__rendered {
+				color: $color-primary!important;
+				font-weight: 700;
+			}
+		}
+	}
+	.user-info {
+		font-size: $size-smallest;
+		line-height: 16px;
+		margin-bottom: 20px;
+		td {
+			padding-top: 2px;
+			padding-bottom: 2px;
+			&:first-child {
+				font-weight: 700;
+				padding-right: 14px;
+			}
+		}
+	}
+	.choose-bankid-device {
+		margin-bottom: 30px;
+	}
+	.form-title {
+		font-family: $apercu-bold-font;
+		font-size: 30px;
+		font-weight: 400;
+		line-height: 1.1333;
+		margin-bottom: 10px;
+		@media (max-width: 991px) {
+			font-size: 28px;
+		}
+	}
+	.form-info-text {
+		font-size: $base-font-size;
+		font-weight: 400;
+		line-height: 1.428;
+		margin-bottom: 30px;
+	}
+	.form-error-text {
+		display: none;
+		font-size: $base-font-size;
+		color: #ffcf34;
+		font-weight: 400;
+		line-height: 1.428;
+		margin-bottom: 30px;
+
+		a {
+			color: white;
+		}
+	}
+	.form-row {
+		display: flex;
+		margin: 0 -5px;
+		.form-group {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+	}
+	.form-group {
+		display: block;
+		position: relative;
+		width: 100%;
+		margin-bottom: 20px;
+		&.has-error {
+			.form-control {
+				border-color: #ffcf34;
+				background-color: #fff;
+				&:focus {
+					color: $color-primary;
+				}
+			}
+			.select2-container {
+				.select2-selection {
+					&--single {
+						border-color: #ffcf34;
+						background-color: #ffffff;
+					}
+				}
+			}
+		}
+		.icon-cards {
+			position: absolute;
+			top: 29px;
+			right: 10px;
+		}
+		.with-errors {
+			color: #ffcf34;
+			font-size: $size-smallest;
+			line-height: 1;
+			margin: 5px 0 0;
+			ul {
+				margin: 0;
+			}
+		}
+		label {
+			display: block;
+			color: #FFFFFF;
+			font-size: $size-smallest;
+			font-weight: 700;
+			margin-bottom: 5px;
+			text-align: center;
+			&.with-tooltip {
+				display: flex;
+				align-items: center;
+				.tooltip-second {
+					margin-left: 5px;
+					margin-bottom: 2px;
+				}
+				.tooltip-second + .tooltip {
+					.tooltip-inner {
+						width: 100px;
+					}
+				}
+
+			}
+		}
+	}
+	.form-control {
+		width: 100%;
+		height: 46px;
+		color: $color-primary;
+		font-size: 16px;
+		letter-spacing: 1px;
+		border-radius: 4px;
+		border: solid 1px #cecece;
+		background-color: #E8F0FE;
+		outline: none;
+		box-shadow: none;
+		text-align: center;
+		padding: 0 15px;
+		transition: all .2s ease;
+		@include min-screen($screen-md-min) {
+			height: 38px;
+			font-size: 14px;
+		}
+
+		&:disabled {
+			cursor: default
+		}
+
+		&::placeholder {
+			font-size: $base-font-size;
+			color: rgba(0, 62, 82, .5);
+			letter-spacing: 1px;
+			@include min-screen($screen-md-min) {
+				font-size: $size-small;
+			}
+		}
+		&::-ms-input-placeholder {
+			opacity: 1;
+		}
+		&.focused {
+			border-color: $color-cta;
+			background-color: #fff;
+		}
+	}
+	.btn-wrap {
+		>* {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.tooltip-second {
+		width: 10px;
+		height: 10px;
+		min-width: 10px;
+		cursor: pointer;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	.address-block {
+		>* {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.text {
+			font-size: $font-size-small;
+		}
+	}
+	.go-first-step {
+		display: inline-block;
+		cursor: pointer;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.custom-radio {
+		input[type='radio']:checked + label {
+			&:after {
+				background: $color-primary;
+				transform: scale(1);
+			}
+
+		}
+		&__label {
+			font-size: $size-small!important;
+			font-weight: 700;
+			text-align: left!important;
+			&:after {
+				position: absolute;
+				content: '';
+				top: 3px;
+				left: 5px;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: $color-primary;
+				transform: scale(0);
+				transition: all .3s ease;
+			}
+		}
+	}
+	.select2-container {
+		&--open {
+			.select2-selection {
+				&--single {
+					.select2-selection {
+						&__arrow {
+							&:before {
+								top: 12px!important;
+								transform: rotate(180deg);
+							}
+						}
+					}
+				}
+			}
+		}
+		&.choice-done {
+			.select2-selection {
+				&--single {
+					background-color: #e8f0fe!important;
+					.select2-selection {
+						&__rendered {
+							color: $color-primary!important;
+						}
+					}
+				}
+			}
+		}
+		.select2-selection {
+			text-align: left;
+			&--single {
+				height: 46px;
+				border-radius: 4px;
+				border: solid 1px #cecece;
+				background-color: #E8F0FE;
+				outline: none;
+				@include min-screen($screen-md-min) {
+					height: 38px;
+				}
+				.select2-selection {
+					&__rendered {
+						line-height: 44px;
+						color: rgba(11, 59, 84, .5);
+						font-size: $base-font-size;
+						font-weight: 400;
+						padding-left: 15px;
+						@include min-screen($screen-md-min) {
+							line-height: 36px;
+							font-size: $size-small;
+						}
+					}
+					&__arrow {
+						height: 100%;
+						width: 20px;
+						&:before {
+							position: absolute;
+							content: $icon-chevron-down;
+							top: 14px;
+							left: 0;
+							font-family: 'ml-icons' !important;
+							font-size: 12px;
+							color: #979797;
+							@include min-screen($screen-md-min) {
+								top: 10px;
+							}
+						}
+						b {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.lof-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 46px;
+		padding: 4px 30px;
+		opacity: 1.0;
+		@include min-screen($screen-md-min) {
+			height: 38px;
+		}
+		.icon {
+			width: 23px;
+			font-size: 0;
+			margin-left: 8px;
+			img {
+				width: 100%;
+			}
+		}
+		&.disabled, &:disabled {
+			color: #ffffff;
+			background-color: $color-cta-light;
+			cursor: default;
+			&:hover {
+				background-color: $color-cta-light;
+			}
+		}
+	}
+	.btn-back {
+		border: none;
+		justify-self: flex-start;
+		background-color: transparent;
+		padding-left: 0;
+		margin: 0 0 30px;
+		&__icon {
+			display: inline-block;
+			vertical-align: middle;
+			width: 24px;
+			height: 24px;
+			border-radius: 100%;
+			background-color: $color-secondary-lightBlue;
+			background-image: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 1L1 6L6 11' stroke='%23053A53' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-position: 40% center;
+			background-size: 7px 12px;
+			transition: all 200ms ease-in;
+		}
+		&:hover,
+		&:focus {
+			.btn-back__icon {
+				background-color: rgba($color-secondary-lightBlue, 0.5);
+			}
+		}
+		&__title {
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 7px;
+			margin-right: 10px;
+			font-size: 16px;
+			font-weight: $semibold;
+			color: #ffffff;
+		}
+	}
+	.link-wrap {
+		margin: -10px 0 60px;
+	}
+	.f-link {
+		display: inline-block;
+		color: #FFFFFF;
+		font-weight: 700;
+	}
+}
+
+.form-tab-first {
+	.address-block {
+		padding-top: 10px;
+	}
+	.btn-wrap {
+		margin-top: 30px;
+	}
+}
+
+.form-tab-second {
+	display: none;
+	margin-top: -10px;
+	.form-group {
+		margin-bottom: 40px;
+	}
+	.radio-group {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 5px;
+	}
+	.custom-radio {
+		margin-bottom: 10px;
+		width: 50%;
+		@media (max-width: 480px) {
+			width: 100%;
+			margin-bottom: 25px;
+			&:last-child {
+				margin-bottom: 10px;
+			}
+		}
+		&__label {
+			margin: 0;
+			padding-right: 20px;
+			@media (max-width: 480px) {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+.form-tab-third {
+	display: none;
+	margin-top: -10px;
+	.acc-second {
+		margin-bottom: 30px;
+	}
+}
+
+.form-tab-fourth {
+	display: none;
+	margin-top: -10px;
+	.acc-second {
+		margin-bottom: 30px;
+	}
+	.acc-item {
+		border-bottom: none;
+	}
+	.acc-body {
+		display: block;
+		*>:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+.form-tab-last {
+	display: none;
+	text-align: center;
+	.form-title {
+
+	}
+	.form-info-text {
+		margin-bottom: 0;
+	}
+	.more-info-link {
+		display: inline-block;
+		color: #ffffff;
+		font-weight: 400;
+		line-height: 1.428;
+		text-decoration: underline;
+		margin-bottom: 60px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.launch-info-text {
+		margin-bottom: 30px;
+	}
+	.lof-loader {
+		margin-bottom: 120px;
+	}
+	.sing-with-bankid {
+		text-decoration: underline;
+		cursor: pointer;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.acc-item {
+	border-bottom: 1px solid #ffffff;
+	&:first-child {
+		border-top: 1px solid #ffffff;
+	}
+}
+
+.acc-title {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+	cursor: pointer;
+	&.active {
+		.acc-title__btn {
+			border-color: $color-cta;
+			&:before {
+				transform: scale(1);
+			}
+		}
+	}
+	&__btn {
+		position: relative;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: solid 1px #cecece;
+		background: #ffffff;
+		margin-right: 10px;
+		transition: all .3s ease;
+		&:before {
+			position: absolute;
+			content: '';
+			top: 4px;
+			left: 4px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: $color-primary;
+			transform: scale(0);
+			transition: all .3s ease;
+		}
+	}
+	&__text {
+		color: #ffffff;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 18px;
+	}
+}
+
+.acc-body {
+	display: none;
+}
+
+.payment-by-invoice {
+	.acc-body {
+		.address-block {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.payment-by-direct-debit {
+	.form-row {
+		.form-group {
+			text-align: left;
+			&:first-child {
+				width: 70px;
+			}
+			&:last-child {
+				width: calc(100% - 90px);
+				label {
+					text-align: left;
+				}
+			}
+			label {
+				padding-left: 5px;
+			}
+		}
+		.form-control {
+			text-align: left;
+		}
+	}
+}
+
