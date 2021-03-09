@@ -36,13 +36,17 @@
         -webkit-transform: translateX(-50%) translateY(-50%);
         transform: translateX(-50%) translateY(-50%);
         min-width: 100%;
+
         min-height: 100%;
         width: auto;
         height: auto;
         z-index: -1;
         overflow: hidden;
+		@media screen and (min-width: $screen-md){
+			max-width: 100%;
+		}
         &.hero-bgp {
-            @media screen and (max-width: $screen-xs-max){
+            @media screen and (max-width: $screen-xs-min){
                 &-mobile {
                     &--left {
                         left: 100%;
