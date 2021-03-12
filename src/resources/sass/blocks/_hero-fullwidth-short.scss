@@ -22,63 +22,6 @@
 		}
 	}
 
-	&__video {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		-webkit-transform: translateX(-50%) translateY(-50%);
-		transform: translateX(-50%) translateY(-50%);
-		min-width: 100%;
-		min-height: 100%;
-		width: auto;
-		height: auto;
-		z-index: -1;
-		overflow: hidden;
-		&.hero-bgp {
-			@media screen and (max-width: $screen-xs-max){
-				&-mobile {
-					&--left {
-						left: 100%;
-					}
-					&--right {
-						left: 0;
-					}
-					&--center {
-						left: 50%;
-					}
-				}
-			}
-
-			@media screen and (min-width: $screen-sm){
-				&-tablet {
-					&--left {
-						left: 70%;
-					}
-					&--right {
-						left: 30%;
-					}
-					&--center {
-						left: 50%;
-					}
-				}
-			}
-
-			@media screen and (min-width: $screen-md){
-				&-desktop {
-					&--left {
-						left: 50%;
-					}
-					&--right {
-						left: 50%;
-					}
-					&--center {
-						left: 50%;
-					}
-				}
-			}
-		}
-	}
-
 	&--bg {
 		position: absolute;
 		top: 0;
