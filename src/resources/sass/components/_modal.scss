@@ -1172,8 +1172,21 @@
 }
 
 .modal-lottery-info {
+	&:before {
+		content: '';
+		clear: both;
+		display: table;
+	}
 	&.fade {
 		transition: opacity .2s linear;
+	}
+	.modal-secondary-header {
+		&:after,
+		&:before {
+			content: '';
+			clear: both;
+			display: table;
+		}
 	}
 	.modal-secondary-dialog {
 		max-width: 390px;
