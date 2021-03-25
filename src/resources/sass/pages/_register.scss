@@ -223,6 +223,10 @@ a.navlink:hover {
 }
 
 .select-dropdown-container {
+	.select2-dropdown {
+		border: solid 1px $color-grey-dark;
+		margin-top: -1px;
+	}
 	.select2-results {
 		&__options {
 			margin: 0;
@@ -234,13 +238,21 @@ a.navlink:hover {
 			font-size: $size-small;
 			font-weight: 400;
 			padding: 8px 15px;
+			border-bottom: solid 1px $color-grey-dark;
 			&:first-child {
 				display: none;
+			}
+			&:last-child {
+				border-bottom: none;
 			}
 		}
 	}
 }
 .select-dropdown-container-2 {
+	.select2-dropdown {
+		border: solid 1px $color-grey-dark;
+		margin-top: -1px;
+	}
 	.select2-results {
 		&__options {
 			margin: 0;
@@ -252,8 +264,12 @@ a.navlink:hover {
 			font-size: $size-small;
 			font-weight: 700;
 			padding: 8px 15px;
+			border-bottom: solid 1px $color-grey-dark;
 			&[aria-selected="true"] {
 				display: none;
+			}
+			&:last-child {
+				border-bottom: none;
 			}
 		}
 	}
