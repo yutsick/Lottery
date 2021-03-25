@@ -229,6 +229,7 @@ a.navlink:hover {
 			padding: 0;
 		}
 		&__option {
+			font-family: $base-font-family;
 			color: $color-primary;
 			font-size: $size-small;
 			font-weight: 400;
@@ -246,6 +247,7 @@ a.navlink:hover {
 			padding: 0;
 		}
 		&__option {
+			font-family: $base-font-family;
 			color: $color-primary;
 			font-size: $size-small;
 			font-weight: 700;
