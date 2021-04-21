@@ -1188,6 +1188,9 @@
 			display: table;
 		}
 	}
+	&.fade {
+		transition: opacity .2s linear;
+	}
 	.modal-secondary-dialog {
 		max-width: 390px;
 	}
@@ -1315,7 +1318,8 @@
 			}
 			&.active {
 				.arrow {
-					transform: rotate(180deg);
+					top: 8px;
+					transform: rotate(225deg);
 				}
 			}
 		}
@@ -1328,13 +1332,16 @@
 			}
 			.arrow {
 				position: absolute;
-				top: 7px;
+				top: 2px;
 				left: 1px;
-				width: 14px;
-				img {
-					display: block;
-					width: 100%;
-				}
+				width: 11px;
+				height: 11px;
+				border: 2px solid #ffffff;
+				border-left: none;
+				border-top: none;
+				text-decoration: none;
+				border-radius: 2px;
+				transform: rotate(45deg);
 			}
 			.title-text {
 				text-decoration: underline;
@@ -1355,21 +1362,6 @@
 			}
 			>.margin-none {
 				margin-bottom: 0!important;
-			}
-			.font-bold {
-				font-weight: bold;
-			}
-			a {
-				color: #FFFFFF;
-				text-decoration: underline;
-				&:hover {
-					text-decoration: none;
-				}
-			}
-			table {
-				td, th {
-					padding-right: 20px;
-				}
 			}
 			ul, ol {
 				position: static;

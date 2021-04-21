@@ -20,3 +20,4 @@ dist/
 .sass-cache
 .map
 .js.map
+/temp.php
