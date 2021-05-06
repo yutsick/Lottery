@@ -563,6 +563,32 @@ a.btn {
 	}
 }
 
+.btn-third {
+	height: 46px;
+	line-height: 46px;
+	border-radius: 23px;
+	padding: 0 30px;
+	text-align: center;
+	&--success {
+		color: $color-white;
+		background-color: $color-cta;
+		&:hover,
+		&:focus {
+			color: $color-white;
+			background-color: #EF9EC5;
+		}
+	}
+	&--white {
+		color: $color-primary;
+		background-color: $color-white;
+		&:hover,
+		&:focus {
+			color: $color-primary;
+			background-color: $color-grey-bg;
+		}
+	}
+}
+
 
 
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L29.04 0L29.04 29.04L0 29.04L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="Group-11">
+    <g id="Decor-elements/Drop">
+      <path d="M0 0L29.04 0L29.04 29.04L0 29.04L0 0Z" id="Clip-2" fill="none" stroke="none" />
+      <g clip-path="url(#mask_1)">
+        <path d="M17.2086 22.8412C21.3381 20.9344 24.2 16.7876 24.2 11.979C24.2 5.36318 18.7826 0 12.1 0C5.41735 0 0 5.36318 0 11.979C0 16.7507 2.81819 20.8708 6.89668 22.7969C6.85154 22.837 6.83261 22.8619 6.84444 22.869C9.04835 23.8155 11.071 25.9714 11.9778 27.83C12.8673 25.9714 14.849 23.8155 17.2333 22.869C17.2364 22.8667 17.2277 22.8572 17.2086 22.8412Z" transform="translate(2.42 0.605)" id="Combined-Shape" fill="#003E52" fill-rule="evenodd" stroke="none" />
+      </g>
+    </g>
+    <path d="M8.47 12.705L3.49146 15.3224L4.44228 9.77869L0.414551 5.85263L5.98073 5.04381L8.47 0L10.9593 5.04381L16.5255 5.85263L12.4977 9.77869L13.4485 15.3224L8.47 12.705Z" transform="translate(6.0498047 3.6298828)" id="Star" fill="#9ED8B3" stroke="none" />
+  </g>
+</svg>

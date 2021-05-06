@@ -152,6 +152,17 @@
 .block-title {
 	&-wrap {
 		text-align: center;
+		.block-subtitle {
+			max-width: 640px;
+			width: 100%;
+			font-size: $size-medium;
+			font-weight: 400;
+			margin: -10px auto 30px;
+			@include min-screen($screen-sm-min) {
+				font-size: $size-large;
+				margin: -10px auto 60px;
+			}
+		}
 	}
 
 	&-marked {
@@ -202,6 +213,26 @@
 		}
 		&--blue {
 			background-color: $color-primary-lighter;
+		}
+		&--light-blue {
+			background-color: $color-secondary-light;
+		}
+		&--dark-blue {
+			background-color: $color-primary;
+		}
+		&--big {
+			height: 50px;
+			font-size: 24px;
+			line-height: 50px;
+			&:before {
+				border-width: 25px 0 25px 12px;
+			}
+			&:after {
+				border-width: 25px 12px 25px 0;
+			}
+		}
+		&--text-dark {
+			color: $color-primary;
 		}
 	}
 }
