@@ -166,6 +166,18 @@ export default function () {
 		prevNextButtons: false,
 		autoPlay: 5000
 	});
+
+	//
+	$('.sbs').flickity({
+		cellSelector: '.sbs__item',
+		cellAlign: 'left',
+		wrapAround: true,
+		// draggable: false,
+		pageDots: false,
+		prevNextButtons: false,
+		autoPlay: 5000
+	});
+
 }
 
 

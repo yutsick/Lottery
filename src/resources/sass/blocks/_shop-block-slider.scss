@@ -1,0 +1,33 @@
+.sbs__item {
+	width: 25%;
+	padding: 0 10px;
+}
+
+.sbs__item .block-product {
+	min-height: 316px;
+}
+
+@media (max-width: 1024px){
+	.sbs__item {
+		width: 50%;
+	}
+	.sbs__item .block-product {
+		min-height: 350px;
+	}
+}
+@media (max-width: 768px){
+	.sbs {
+		margin-bottom: 20px;
+	}
+	.sbs__item {
+		width: 100%;
+	}
+	.sbs__item .block-product {
+		min-height: 330px;
+	}
+}
+@media (max-width: 575px){
+	.sbs__item {
+		padding: 0;
+	}
+}
