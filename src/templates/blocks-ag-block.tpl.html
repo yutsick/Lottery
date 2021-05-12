@@ -1,0 +1,83 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop",
+"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+		<section class="section">
+			<div class="row m-5">
+				<div class="m-2 col-md-6 col-xs-12">
+					<div class="ag__check">
+						<div class="ag__check_imag">
+							<div class="ag__check_imag-head text-align-center">
+								<h4>Välj en premie</h4>
+							</div>
+							<div class="ag__check_imag-text text-align-center">
+								värde 500 kr
+							</div>
+							<div class="ag__check_imag-text text-align-center">
+								när du ansluter autogiro
+							</div>
+							<div class="ag__check_imag-imag">
+								<img src="assets/img/newsletter-form-02.png" alt="img">
+							</div>
+						</div>
+						<div class="ag__check_form">
+							<div class="ag__check_form-form">
+								<form>
+									<div class="ag__sform_head">
+										<h5>Få mer av våra nyhetsbrev!</h5>
+									</div>
+									<div class="ag__sform_text">
+										<p>Du får därefter 500 kr laddat på ditt vinstkonto för att välja valfri premie ur <a href="#">vinstshopen.</a></p>
+									</div>
+
+									<div class="form-group responsive-table-filter ag-tab">
+										<label class="form_label" for="tableSelect">Välj Bank</label>
+										<select id="tableSelect" class="table-select form-control" name="tableSelect">
+											<option value="b_0" id="b_0">Välj din bank</option>
+											<option value="b_1" id="b_1">Swedbank</option>
+											<option value="b_2" id="b_2">Handelsbanken</option>
+											<option value="b_3" id="b_3">Nordea</option>
+											<option value="b_4" id="b_4">SEB</option>
+										</select>
+									</div>
+									<div class="form-group responsive-table-filter ag-tab">
+										<label class="form_label" for="tableSelect2">Välj BankID-enhet</label>
+										<select id="tableSelect2" class="table-select form-control" name="tableSelect">
+											<option value="o_0" id="o_0">BankID på annan enhet</option>
+											<option value="o_1" id="o_1">Option 1</option>
+											<option value="o_2" id="o_2">Option 2</option>
+											<option value="o_3" id="o_3">Option 3</option>
+											<option value="o_4" id="o_4">Option 4</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<div class="ag-tab-text">
+											Genom att klicka på ”Fortsätt” godkänner du att vi hämtar dina bankuppgifter. <a href="#">Läs mer om våra villkor</a>
+										</div>
+									</div>
+									<div class="justify-content-center">
+										<button type="submit" class="btn-ag">
+											Fortsätt med BankID
+											<img src="/assets/img/icons/bankid_v_high_rgb.svg" alt="img">
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

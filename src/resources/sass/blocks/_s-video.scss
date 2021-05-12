@@ -1,0 +1,25 @@
+.s-video {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	min-height: 383px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.s-video{
+		min-height: 383px;
+	}
+}
+
+@media (max-width: 575px) {
+	.s-video{
+		min-height: 212px;
+	}
+}

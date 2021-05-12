@@ -1,0 +1,220 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop",
+"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+
+
+<div class="content-wrapper ml-2017">
+	@@include('layout/_top_hi-block.html')
+	<div class="container">
+		<section class="section">
+			<div class="row m-5">
+				<div class="m-2 col-md-6 col-xs-12">
+					<div class="s-video" style="background-image: url('/assets/img/background/bg-video.jpg')">
+						<a href="https://www.youtube.com/channel/UCpGFUSVoWeh_KMESbQMZWSA" target="_blank">
+							<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M32 64C14.3269 64 0 49.6731 0 32C0 14.3269 14.3269 0 32 0C49.6731 0 64 14.3269 64 32C64 49.6731 49.6731 64 32 64ZM24.32 20.4186C24.32 18.8129 26.1168 17.8618 27.4446 18.7647L44.8789 30.6201C46.0592 31.4226 46.043 33.1676 44.8482 33.9482L27.4139 45.3387C26.0836 46.2077 24.32 45.2533 24.32 43.6643V20.4186Z" fill="#003E52"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<div class="m-2 col-md-6 col-xs-12">
+					<div class="newsletter__check">
+						<div class="newsletter__check_imag">
+							<div class="newsletter__check_imag-head text-align-center">
+								<h4>Välj en premie</h4>
+							</div>
+							<div class="newsletter__check_imag-text text-align-center">
+								värde 100 kr
+							</div>
+							<div class="newsletter__check_imag-text text-align-center">
+								när du registrerar dig till våra nyhetsbrev
+							</div>
+							<div class="newsletter__check_imag-imag">
+								<img src="assets/img/newsletter-form-01.png" alt="img">
+							</div>
+						</div>
+						<div class="newsletter__check_form">
+							<div class="newsletter__check_form-form">
+								<form>
+									<div class="newsletter__sform_head">
+										<h4>Få mer av våra nyhetsbrev!</h4>
+									</div>
+									<div class="newsletter__sform_text">
+										<p>Ta del av våra nyhetsbrev fyllda med inspiraion och erbjudanden! Registrerar du dig nu får du dessutom 100 kr laddat på ditt vinstkonto för att välja valfri
+											premie ur vinstshoppen.</p>
+									</div>
+									<div class="form-group">
+										<label class="form_label" for="in-mail2">Ange din e-postadress</label>
+										<input type="email" class="form-control" id="in-mail2">
+									</div>
+									<div class="justify-content-center">
+										<button type="submit" class="btn btn-primary text-center">Registrera</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="m-2 col-md-3 col-xs-12">
+					<div class="newsletter__sform">
+						<form>
+							<div class="newsletter__sform_head">
+								<h4>Få mer av våra nyhetsbrev!</h4>
+							</div>
+							<div class="newsletter__sform_text">
+								<p>Registrera dig till våra nyhetsbrev fyllda med inspiraion och erbjudanden:</p>
+							</div>
+							<div class="form-group">
+								<label class="form_label" for="in-mail">Din e-postadress</label>
+								<input type="email" class="form-control" id="in-mail">
+							</div>
+							<div class="justify-content-center">
+								<button type="submit" class="btn btn-primary text-center">Registrera</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="m-2 col-md-3 col-xs-12">
+					<div class="newsletter__success">
+						<div class="newsletter__success_head text-align-center">
+							<h4>Du är nu registrerad</h4>
+						</div>
+						<div class="newsletter__success_text text-align-center">
+							<p>Snart kommer ditt första nyhetsbrev trilla in i din inbox!</p>
+						</div>
+					</div>
+				</div>
+				<div class="m-2 col-md-3 col-xs-12">
+					<div class="wallet">
+						<div class="wallet__pink">
+							<div class="wallet__pink_icon">
+								<img src="/assets/img/icons/wallet-spel.svg" alt="img">
+							</div>
+							<div class="wallet__pink_name">
+								Vinstkonto:
+							</div>
+							<div class="wallet__pink_numb">0 kr</div>
+						</div>
+						<div class="wallet__text">
+							Här samlas de vinster som du kan använda för att beställa produkter ur vår vinstshop.
+						</div>
+					</div>
+					<div class="wallet">
+						<div class="wallet__yellow">
+							<div class="wallet__yellow_icon ">
+								<img src="/assets/img/icons/wallet-vinst.svg" alt="img">
+							</div>
+							<div class="wallet__yellow_name">
+								Spelplånbok:
+							</div>
+							<div class="wallet__yellow_numb">20 kr</div>
+						</div>
+						<div class="wallet__text">
+							I spelplånboken finns de pengar du kan använda till våra spel och lotter online.
+						</div>
+					</div>
+				</div>
+				<div class="m-2 col-md-3 col-xs-12">
+					<div class="wallet">
+						<div class="wallet__yellow">
+							<div class="wallet__yellow_icon ">
+								<img src="/assets/img/icons/wallet-vinst.svg" alt="img">
+							</div>
+							<div class="wallet__yellow_name">
+								Spelplånbok:
+							</div>
+							<div class="wallet__yellow_numb">20 kr</div>
+						</div>
+						<div class="wallet__text">
+							I spelplånboken finns de pengar du kan använda till våra spel och lotter online.
+						</div>
+					</div>
+					<div class="wallet">
+						<div class="wallet__pink">
+							<div class="wallet__pink_icon">
+								<img src="/assets/img/icons/wallet-spel.svg" alt="img">
+							</div>
+							<div class="wallet__pink_name">
+								Vinstkonto:
+							</div>
+							<div class="wallet__pink_numb">0 kr</div>
+						</div>
+						<div class="wallet__text">
+							Här samlas de vinster som du kan använda för att beställa produkter ur vår vinstshop.
+						</div>
+					</div>
+				</div>
+				<div class="m-2 col-md-6 col-xs-12">
+					<div class="ag__check">
+						<div class="ag__check_imag">
+							<div class="ag__check_imag-head text-align-center">
+								<h4>Välj en premie</h4>
+							</div>
+							<div class="ag__check_imag-text text-align-center">
+								värde 500 kr
+							</div>
+							<div class="ag__check_imag-text text-align-center">
+								när du ansluter autogiro
+							</div>
+							<div class="ag__check_imag-imag">
+								<img src="assets/img/newsletter-form-02.png" alt="img">
+							</div>
+						</div>
+						<div class="ag__check_form">
+							<div class="ag__check_form-form">
+								<form>
+									<div class="ag__sform_head">
+										<h5>Få mer av våra nyhetsbrev!</h5>
+									</div>
+									<div class="ag__sform_text">
+										<p>Du får därefter 500 kr laddat på ditt vinstkonto för att välja valfri premie ur <a href="#">vinstshopen.</a></p>
+									</div>
+
+									<div class="form-group responsive-table-filter ag-tab">
+										<label class="form_label" for="tableSelect">Välj Bank</label>
+										<select id="tableSelect" class="table-select form-control" name="tableSelect">
+											<option value="b_0" id="b_0">Välj din bank</option>
+											<option value="b_1" id="b_1">Swedbank</option>
+											<option value="b_2" id="b_2">Handelsbanken</option>
+											<option value="b_3" id="b_3">Nordea</option>
+											<option value="b_4" id="b_4">SEB</option>
+										</select>
+									</div>
+									<div class="form-group responsive-table-filter ag-tab">
+										<label class="form_label" for="tableSelect2">Välj BankID-enhet</label>
+										<select id="tableSelect2" class="table-select form-control" name="tableSelect">
+											<option value="o_0" id="o_0">BankID på annan enhet</option>
+											<option value="o_1" id="o_1">Option 1</option>
+											<option value="o_2" id="o_2">Option 2</option>
+											<option value="o_3" id="o_3">Option 3</option>
+											<option value="o_4" id="o_4">Option 4</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<div class="ag-tab-text">
+											Genom att klicka på ”Fortsätt” godkänner du att vi hämtar dina bankuppgifter. <a href="#">Läs mer om våra villkor</a>
+										</div>
+									</div>
+									<div class="justify-content-center">
+										<button type="submit" class="btn-ag">
+											Fortsätt med BankID
+											<img src="/assets/img/icons/bankid_v_high_rgb.svg" alt="img">
+										</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

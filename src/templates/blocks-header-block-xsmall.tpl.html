@@ -1,0 +1,22 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop",
+"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+
+
+<div class="content-wrapper ml-2017">
+	@@include('layout/_top_hi-block.html')
+	<div class="container">
+		<section class="section">
+			<div class="row m-5">
+			</div>
+		</section>
+	</div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

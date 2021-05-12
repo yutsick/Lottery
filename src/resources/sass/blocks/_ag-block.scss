@@ -1,0 +1,192 @@
+.form-group.responsive-table-filter.ag-tab .table-select + .select2 {
+	min-width: 100%;
+}
+
+.form-group.responsive-table-filter.ag-tab label {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.ag__sform form {
+	padding: 40px 20px 30px;
+	background: #CEDFD7;
+	width: 100%;
+	max-width: 330px;
+	height: auto;
+}
+
+.form_label {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	color: #003E52;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+.ag__success {
+	padding: 40px 20px 30px;
+	background: #CEDFD7;
+	width: 100%;
+	max-width: 330px;
+	height: auto;
+	min-height: 294px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ag__check {
+	padding: 20px;
+	background: #003E52;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.ag__check_imag {
+	width: calc(50% - 20px);
+	margin-right: 20px;
+}
+
+.ag__check_form {
+	width: calc(50% - 20px);
+	margin-left: 20px;
+}
+
+.ag__check_imag-head h4 {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+}
+
+.ag__sform_head h5 {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+
+.ag__check_imag-text {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+}
+
+.ag__sform_text p {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+
+.ag__sform_text p a{
+	color: #FFFFFF;
+}
+
+.ag__check_imag-imag {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.not-valid {
+	border: 1px solid #D90000;
+}
+
+.text-not-valid {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #D90000;
+}
+
+.ag-tab-text {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.ag-tab-text a {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.btn-ag {
+	width: 100%;
+	height: 38px;
+	border: none;
+	border-radius: 38px;
+	background-color: #CC5599;
+
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: center;
+	color: #FFFFFF;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-ag img{
+	margin-top: 5px;
+}
+
+@media (max-width: 575px) {
+	.ag__sform {
+		display: flex;
+		justify-content: center;
+	}
+	.ag__sform form {
+		max-width: 100%;
+	}
+	.ag__success {
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.ag__check {
+		flex-direction: column;
+	}
+	.ag__check_imag {
+		width: 100%;
+		margin-right: 0;
+	}
+	.ag__check_form {
+		width: 100%;
+		margin-left: 0;
+	}
+}

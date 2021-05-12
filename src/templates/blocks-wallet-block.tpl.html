@@ -1,0 +1,81 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop",
+"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+		<section class="section">
+			<div class="row m-5">
+				<div class="m-2 col-md-3 col-xs-12">
+					<div class="wallet">
+						<div class="wallet__pink">
+							<div class="wallet__pink_icon">
+								<img src="/assets/img/icons/wallet-spel.svg" alt="img">
+							</div>
+							<div class="wallet__pink_name">
+								Vinstkonto:
+							</div>
+							<div class="wallet__pink_numb">0 kr</div>
+						</div>
+						<div class="wallet__text">
+							Här samlas de vinster som du kan använda för att beställa produkter ur vår vinstshop.
+						</div>
+					</div>
+					<div class="wallet">
+						<div class="wallet__yellow">
+							<div class="wallet__yellow_icon ">
+								<img src="/assets/img/icons/wallet-vinst.svg" alt="img">
+							</div>
+							<div class="wallet__yellow_name">
+								Spelplånbok:
+							</div>
+							<div class="wallet__yellow_numb">20 kr</div>
+						</div>
+						<div class="wallet__text">
+							I spelplånboken finns de pengar du kan använda till våra spel och lotter online.
+						</div>
+					</div>
+				</div>
+				<div class="m-2 col-md-3 col-xs-12">
+					<div class="wallet">
+						<div class="wallet__yellow">
+							<div class="wallet__yellow_icon ">
+								<img src="/assets/img/icons/wallet-vinst.svg" alt="img">
+							</div>
+							<div class="wallet__yellow_name">
+								Spelplånbok:
+							</div>
+							<div class="wallet__yellow_numb">20 kr</div>
+						</div>
+						<div class="wallet__text">
+							I spelplånboken finns de pengar du kan använda till våra spel och lotter online.
+						</div>
+					</div>
+					<div class="wallet">
+						<div class="wallet__pink">
+							<div class="wallet__pink_icon">
+								<img src="/assets/img/icons/wallet-spel.svg" alt="img">
+							</div>
+							<div class="wallet__pink_name">
+								Vinstkonto:
+							</div>
+							<div class="wallet__pink_numb">0 kr</div>
+						</div>
+						<div class="wallet__text">
+							Här samlas de vinster som du kan använda för att beställa produkter ur vår vinstshop.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

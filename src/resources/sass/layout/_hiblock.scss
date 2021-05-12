@@ -1,0 +1,43 @@
+.hi__block {
+	background-color: #B8D8EB;
+	padding: 30px 0;
+}
+
+.hi__block_info-head {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	color: #003E52;
+}
+
+.hi__block_info-text {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 26px;
+	text-align: center;
+	color: #003E52;
+	margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+	.hi__block_info-head {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	.hi__block_info-text {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+@media (max-width: 575px) {
+	.hi__block {
+		padding: 20px 0;
+	}
+}
