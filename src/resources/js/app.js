@@ -59,6 +59,7 @@ import slideOutAccountNavigation from './layout/slide-out-account';
 import navigationControl from './layout/navigation-control';
 import navigationItem from './layout/navigation-item';
 import grid from './layout/grid';
+import registerInformation from './layout/register-information';
 
 /* Utilities */
 import textToggle from './utilities/textToggle';
@@ -69,11 +70,11 @@ $(function () {
 	window.ML = window.ML || {};
 	window.ML.store = storeConfiguration();
 	window.ML.getBalanceBarHeight = () => {
-        const balanceBar = document.querySelector('.balance-bar');
-        if (balanceBar) {
-            return balanceBar.offsetHeight;
-        }
-        return 0;
+		const balanceBar = document.querySelector('.balance-bar');
+		if (balanceBar) {
+			return balanceBar.offsetHeight;
+		}
+		return 0;
 	};
 	window.ML.confetti = Confetti;
 	modernizr();
@@ -109,8 +110,8 @@ $(function () {
 	register();
 	top();
 	textToggle();
-    new orderActions();
-    new cartQuantity();
+	new orderActions();
+	new cartQuantity();
 	bankIDForm();
 	scroller();
 	slideOutNavigation();
@@ -155,3 +156,10 @@ function changeSlideClasses(slide, method, className) {
 		cellElem.classList[method](className);
 	});
 }
+
+// Information list menu open
+$('.information__list_link a ').click(function () {
+	$(this).toggleClass('active');
+	$('.information__list_menu').toggleClass('active');
+});
+
