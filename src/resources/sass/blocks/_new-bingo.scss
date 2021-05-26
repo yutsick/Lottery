@@ -1,0 +1,176 @@
+.new-bingo {
+	width: 100%;
+	height: auto;
+	min-height: 282px;
+	background-image: url('/assets/img/background/bg-bingo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	padding: 132px 10px 10px;
+}
+
+.the-game-name {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	height: 38px;
+	display: flex;
+	align-items: center;
+}
+
+.the-game-name span {
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.victory-money {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	height: 38px;
+	display: flex;
+	align-items: center;
+}
+
+.victory-money span {
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+
+.victory-game {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	height: 38px;
+	display: flex;
+	align-items: center;
+	float: right;
+}
+
+.victory-game span {
+	font-weight: bold;
+	margin-left: 5px;
+}
+
+.the-game-money {
+	padding: 7px 12px;
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 24px;
+	color: #003E52;
+
+	background: #B8D8EB;
+	border-radius: 100px;
+	width: max-content;
+	float: right;
+}
+
+.to-game {
+	display: flex;
+}
+
+.to-game-time {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 44px;
+	color: #FFFFFF;
+}
+
+.play-bingo{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #003E52;
+}
+
+.play-bingo-one {
+	width: 100%;
+	max-width: calc(50% - 20px);
+	height: auto;
+	min-height: 282px;
+
+	background-image: url('/assets/img/background/bg-bingo-2.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-right: 20px;
+}
+
+.play-bingo-two {
+	width: 100%;
+	max-width: 50%;
+	height: auto;
+	min-height: 282px;
+}
+
+.play-bingo-head {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 40px 20px 0;
+}
+
+.play-bingo-text-1 {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 5px 20px 0;
+}
+
+.play-bingo-text-2 {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: center;
+	color: #FFFFFF;
+	margin: 5px 20px 0;
+}
+
+@media (max-width: 767px) {
+	.play-bingo-one {
+		max-width: 100%;
+	}
+
+	.play-bingo-two{
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 575px){
+	.play-bingo-head {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.play-bingo-text-1 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	.play-bingo-text-2 {
+		font-size: 18px;
+		line-height: 22px;
+	}
+}

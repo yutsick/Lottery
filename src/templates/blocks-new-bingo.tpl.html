@@ -1,0 +1,123 @@
+@@include('layout/_header.html', {
+"class": "logged-in shop",
+"logged_in": true
+})
+
+@@include('layout/_top-new2.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+
+
+<div class="content-wrapper ml-2017">
+	@@include('layout/_top_hi-block.html')
+	<div class="container">
+		<section class="section">
+			<div class="row m-5">
+				<div class="m-2 col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="new-bingo">
+						<div class="the-game">
+							<div class="col-xs-8 col-md-8 col-lg-8">
+								<div class="the-game-name">
+									Nästa spel: <span>Zoobaloo</span>
+								</div>
+							</div>
+							<div class="col-xs-4 col-md-4 col-lg-4">
+								<div class="the-game-money">
+									2 kr
+								</div>
+							</div>
+						</div>
+						<div class="victory">
+							<div class="col-xs-8 col-md-8 col-lg-8">
+								<div class="victory-money">
+									Jackpot: <span> 5 515 kr</span>
+								</div>
+							</div>
+							<div class="col-xs-4 col-md-4 col-lg-4">
+								<div class="victory-game">
+									Spelare: <span>22</span>
+								</div>
+							</div>
+						</div>
+						<div class="to-game">
+							<div class="col-xs-6 col-md-6 col-lg-6">
+								<div class="to-game-time">
+									01:17
+								</div>
+							</div>
+							<div class="col-xs-6 col-md-6 col-lg-6">
+								<div class="to-game-go">
+									<div class="block-promotion__bingo-column">
+										<a href="/" class="btn btn-primary btn--invert">Till spelet</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="m-2 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+					<div class="play-bingo">
+						<div class="play-bingo-one">
+							<div class="play-bingo-head">
+								Spela bingo
+							</div>
+							<div class="play-bingo-text-1">
+								och bli en av vinnarna!
+							</div>
+							<div class="play-bingo-text-2">
+								17 000 kr i jackpotten
+							</div>
+						</div>
+						<div class="play-bingo-two">
+							<div class="new-bingo">
+								<div class="the-game">
+									<div class="col-xs-8 col-md-8 col-lg-8">
+										<div class="the-game-name">
+											Nästa spel: <span>Zoobaloo</span>
+										</div>
+									</div>
+									<div class="col-xs-4 col-md-4 col-lg-4">
+										<div class="the-game-money">
+											2 kr
+										</div>
+									</div>
+								</div>
+								<div class="victory">
+									<div class="col-xs-8 col-md-8 col-lg-8">
+										<div class="victory-money">
+											Jackpot: <span> 5 515 kr</span>
+										</div>
+									</div>
+									<div class="col-xs-4 col-md-4 col-lg-4">
+										<div class="victory-game">
+											Spelare: <span>22</span>
+										</div>
+									</div>
+								</div>
+								<div class="to-game">
+									<div class="col-xs-6 col-md-6 col-lg-6">
+										<div class="to-game-time">
+											01:17
+										</div>
+									</div>
+									<div class="col-xs-6 col-md-6 col-lg-6">
+										<div class="to-game-go">
+											<div class="block-promotion__bingo-column">
+												<a href="/" class="btn btn-success">Till spelet</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
