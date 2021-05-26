@@ -52,7 +52,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 }
 
 .ag__check_imag {
@@ -190,3 +190,215 @@
 		margin-left: 0;
 	}
 }
+
+.ag-multi-head {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+	color: #FFFFFF;
+	margin-bottom: 5px;
+}
+
+.ag-multi-text {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+}
+
+
+/* Style the input fields */
+.ag-col.col-cvv input.form-control,
+.ag-col.col-num input.form-control {
+	padding: 10px;
+	width: 100%;
+	font-size: 17px;
+	border: 1px solid #CECECE;
+	background: #E8F0FE;
+}
+
+
+.ag-col.col-cvv input.form-control:focus {
+	border: 1px solid #CC5599;
+	background: #fff;
+}
+
+/* Mark input boxes that gets an error on validation: */
+.ag-col.col-cvv input.form-control.invalid,
+.ag-col.col-num input.form-control.invalid {
+	border: 1px solid #FFCE00;
+}
+
+#prevBtnAG {
+	display: none !important;
+}
+
+/* Hide all steps by default: */
+.tab {
+	display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbbbbb;
+	border: none;
+	border-radius: 50%;
+	display: inline-block;
+	opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+	opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+	background-color: #4CAF50;
+}
+
+.ag-form-row {
+	display: flex;
+	align-items: flex-end;
+}
+
+.col-ag-reset {
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+button.ag-reset {
+	padding: 0;
+	margin-right: 9px;
+	border: none;
+	background: transparent;
+
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+
+	color: #FFFFFF;
+}
+
+label.ag-label {
+	padding: 0;
+	margin-right: 9px;
+	border: none;
+	background: transparent;
+
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	color: #FFFFFF;
+}
+
+.ag-col.col-cvv {
+	width: 100%;
+	max-width: 70px;
+	margin-right: 10px;
+	position: relative;
+}
+
+.form-text.text-muted {
+	position: absolute;
+	bottom: -20px;
+
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 16px;
+	color: #FFCE00;
+	opacity: 0;
+}
+
+.form-control.invalid + .form-text.text-muted {
+	opacity: 1;
+}
+
+.ag-col.col-num {
+	width: 100%;
+}
+
+.ag-col.invalid-text {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	color: #FFCE00;
+	margin: 36px 0 23px;
+	opacity: 0;
+}
+
+.ag-col.invalid-text.visible {
+	opacity: 1;
+}
+
+.ag-form-submit-text {
+	font-family: "Proxima Nova", sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+
+.ag-form-submit-text a {
+	font-family: "Proxima Nova", sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.ag-form-submit-btn .btn.btn-wide.btn-wide--\@\@color {
+	width: 100%;
+	background-color: #ECC5DE;
+	border: 2px solid #ECC5DE;
+}
+
+.ag-form-submit-btn .btn.btn-wide.btn-wide--\@\@color:hover{
+	background-color: #fff;
+	color: #ECC5DE;
+}
+
+.ag-multi-head2 {
+	font-family: 'Apercu Pro', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+
+.ag-multi-textag-multi-text2 {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: center;
+	color: #FFFFFF;
+	margin-bottom: 30px;
+}
+

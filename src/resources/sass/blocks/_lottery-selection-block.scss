@@ -272,7 +272,15 @@
 			margin-right: 5px;
 			white-space: normal;
 			width: 344px;
-			word-break: break-all;
+
+			.more-info-link {
+				white-space: nowrap;
+				color: #FFFFFF;
+
+				&:focus {
+					text-decoration: underline;
+				}
+			}
 		}
 		p {
 			margin-bottom: 0;
