@@ -1,3 +1,6 @@
+.w-100 {
+	width: 100%;
+}
 .form-group.responsive-table-filter.ag-tab .table-select + .select2 {
 	min-width: 100%;
 }
@@ -369,17 +372,6 @@ label.ag-label {
 	color: #FFFFFF;
 }
 
-.ag-form-submit-btn .btn.btn-wide.btn-wide--\@\@color {
-	width: 100%;
-	background-color: #ECC5DE;
-	border: 2px solid #ECC5DE;
-}
-
-.ag-form-submit-btn .btn.btn-wide.btn-wide--\@\@color:hover{
-	background-color: #fff;
-	color: #ECC5DE;
-}
-
 .ag-multi-head2 {
 	font-family: 'Apercu Pro', sans-serif;
 	font-style: normal;
@@ -402,3 +394,9 @@ label.ag-label {
 	margin-bottom: 30px;
 }
 
+.ag-form-submit-btn .btn-wide.disabled {
+	background-color: #ECC5DE;
+	border: 2px solid #ECC5DE;
+	color: #ffffff;
+	opacity: 1;
+}

@@ -59,7 +59,7 @@
 
 												<div class="ag-col col-num">
 													<label class="ag-label" for="in_card_num">Kontonummer</label>
-													<input id="in_card_num" type="text" class="form-control" placeholder="1234 0000 0000 0000">
+													<input id="in_card_num" type="text" class="form-control" placeholder="1234 0000 0000 0000" onchange='eventForm()'>
 												</div>
 											</div>
 											<div id="inval-txt" class="ag-col invalid-text">
@@ -82,7 +82,7 @@
 										<div class="ag-form-submit">
 
 											<div class="ag-form-submit-btn">
-												<button type="button" id="nextBtn" class="btn btn-wide btn-wide--@@color" onclick="nextPrev(1)">Slutför</button>
+												<a href="#" id="nextBtn" class="btn btn-wide disabled w-100" onclick="nextPrev(1)">Slutför</a>
 											</div>
 										</div>
 
@@ -172,6 +172,19 @@
 		//... and adds the "active" class to the current step:
 		x[n].className += " active";
 	}
+
+	function eventForm(){
+		let a = document.getElementById('in_card_num');
+
+		if(a.value == ''){
+			console.log(123);
+			document.getElementById('nextBtn').classList.add('disabled');
+		} else {
+			document.getElementById('nextBtn').classList.remove('disabled');
+			console.log(456)
+		}
+	}
+
 
 	document.getElementById("ag-reset").onclick = function(){
 		document.getElementById('in_cvv').classList.remove('invalid');
