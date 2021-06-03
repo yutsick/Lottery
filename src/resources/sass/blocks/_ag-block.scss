@@ -1,6 +1,7 @@
 .w-100 {
 	width: 100%;
 }
+
 .form-group.responsive-table-filter.ag-tab .table-select + .select2 {
 	min-width: 100%;
 }
@@ -91,8 +92,8 @@
 	font-family: 'Apercu Pro', sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 24px;
-	line-height: 28px;
+	font-size: 20px;
+	line-height: 24px;
 	text-align: center;
 	color: #fff;
 }
@@ -106,7 +107,7 @@
 	color: #FFFFFF;
 }
 
-.ag__sform_text p a{
+.ag__sform_text p a {
 	color: #FFFFFF;
 }
 
@@ -165,7 +166,7 @@
 	align-items: center;
 }
 
-.btn-ag img{
+.btn-ag img {
 	margin-top: 5px;
 }
 
@@ -399,4 +400,144 @@ label.ag-label {
 	border: 2px solid #ECC5DE;
 	color: #ffffff;
 	opacity: 1;
+}
+
+.contain-form-checkbox{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.form-checkbox {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	border-top: 0.5px solid #fff;
+	border-bottom: 0.5px solid #fff;
+	margin-bottom: -1px;
+}
+
+/* для элемента input c type="checkbox" */
+.form_input_checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+/* для элемента label, связанного с .form_input_checkbox */
+.form_input_checkbox + label {
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.form_input_checkbox + label::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	flex-shrink: 0;
+	flex-grow: 0;
+	border: 1px solid #CECECE;
+	margin-right: 11px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	//background-size: 50% 50%;
+	background-color: #FFFFFF;
+}
+
+label.form_label_checkbox {
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 18px;
+	color: #FFFFFF;
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+/* стили при наведении курсора на checkbox */
+.form_input_checkbox:not(:disabled):not(:checked) + label:hover::before {
+	border-color: #b3d7ff;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.form_input_checkbox:not(:disabled):active + label::before {
+	background-color: #b3d7ff;
+	border-color: #b3d7ff;
+}
+
+///* стили для чекбокса, находящегося в фокусе */
+//.form_input_checkbox:focus+label::before {
+//	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+//}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.form_input_checkbox:focus:not(:checked) + label::before {
+	border-color: #80bdff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.form_input_checkbox:checked + label::before {
+	border-color: #CC5599;
+	background-color: #ffffff;
+	background-image: url("../img/icons/circle-oval.svg");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.form_input_checkbox:disabled + label::before {
+	background-color: #e9ecef;
+}
+
+
+.btn-success.disabled:hover {
+	background-color: #ECC5DE;
+}
+
+.mt-70{
+	margin-top: 70px;
+}
+
+.ag__sform_get_home a {
+
+	display: flex;
+	align-items: center;
+
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.ag__sform_get_home a svg {
+	margin-right: 10px;
+}
+
+.form-checkbox.not-line {
+	border-top: none;
+	border-bottom: none;
+	height: auto;
+	margin-top: 31px;
+	margin-bottom: 21px;
+}
+
+.form-group {
+	position: relative;
+}
+.form-group.responsive-table-filter.ag-tab .form-text.text-muted {
+	position: absolute;
+	bottom: -20px;
+	font-family: 'Proxima Nova', sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 10px;
+	line-height: 16px;
+	color: #FFCE00;
+	opacity: 1;
+	left: 0;
 }
