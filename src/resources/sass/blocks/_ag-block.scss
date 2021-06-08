@@ -50,23 +50,32 @@
 }
 
 .ag__check {
-	padding: 20px;
 	background: #003E52;
-
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	height: auto;
+	min-height: 383px;
 }
 
 .ag__check_imag {
 	width: calc(50% - 20px);
 	margin-right: 20px;
+	display: flex;
+	flex-direction: column;
+	height: auto;
+	min-height: 383px;
+	padding: 20px;
 }
 
 .ag__check_form {
-	width: calc(50% - 20px);
-	margin-left: 20px;
+	width: 50%;
+	height: auto;
+	min-height: 383px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
 }
 
 .ag__check_imag-head h4 {
@@ -116,6 +125,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-grow: 1;
 }
 
 .not-valid {
@@ -192,6 +202,25 @@
 	.ag__check_form {
 		width: 100%;
 		margin-left: 0;
+	}
+
+	.ag__check {
+		min-height: auto;
+	}
+
+	.ag__check_imag {
+		min-height: auto;
+		padding: 10px;
+	}
+
+	.ag__check_form {
+		min-height: auto;
+		padding: 10px;
+	}
+
+	.ag__check_imag .ag__check_imag-text:nth-child(3){
+		font-size: 18px;
+		line-height: 22px;
 	}
 }
 
@@ -344,7 +373,7 @@ label.ag-label {
 	font-size: 14px;
 	line-height: 20px;
 	color: #FFCE00;
-	margin: 36px 0 23px;
+	margin: 30px 0 15px;
 	opacity: 0;
 }
 
@@ -403,7 +432,7 @@ label.ag-label {
 }
 
 .contain-form-checkbox{
-	margin-top: 30px;
+	margin-top: 25px;
 	margin-bottom: 30px;
 }
 
