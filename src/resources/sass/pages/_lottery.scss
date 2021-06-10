@@ -45,6 +45,14 @@
 			line-height: 40px;
 		}
 	}
+	@include max-screen($screen-xs-max) {
+		top: -20px;
+		right: -20px;
+		width: 40px;
+		height: 40px;
+		font-size: 12px;
+		line-height: 40px;
+	}
 }
 
 
@@ -142,7 +150,9 @@
 			margin: 0 10px 0 0;
 		}
 		img {
-			width: 100%;
+			width: 55px;
+			height: 55px;
+			border-radius: 55px;
 		}
 	}
 	&__text {
@@ -272,12 +282,14 @@
 			.block-subtitle {
 				@include max-screen($screen-sm-max) {
 					margin-bottom: 30px;
+					font-size: 18px;
 				}
 			}
 		}
 		&-marked {
 			@include max-screen($screen-xs-max) {
 				margin-bottom: 30px;
+				font-size: 18px;
 			}
 		}
 	}
@@ -690,7 +702,7 @@
 		width: 127px;
 		margin: 0 auto 40px;
 		@include min-screen($screen-sm-min) {
-			width: 170px;
+			width: 255px;
 		}
 	}
 	.lottery-bottom {

@@ -301,3 +301,17 @@
 		}
 	}
 }
+
+.row .online-lottery-slider {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0 10px;
+}
+
+@media (max-width: 1024px) {
+	.row .online-lottery-slider {
+		margin-left: -10px;
+		margin-right: -10px;
+		padding: 0;
+	}
+}
