@@ -21,3 +21,7 @@ dist/
 .map
 .js.map
 /temp.php
+
+package.json
+package-lock.json
+.gitignore
