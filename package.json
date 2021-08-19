@@ -3,13 +3,17 @@
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=development node_modules/gulp/bin/gulp.js",
-    "watch": "cross-env NODE_ENV=development node_modules/gulp/bin/gulp.js watch"
+    "watch": "cross-env NODE_ENV=development node_modules/gulp/bin/gulp.js watch",
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.4"
   },
   "devDependencies": {
     "bootstrap-sass": "^3.4.0",
     "buble-loader": "^0.4.0",
     "cross-env": "^5.2.1",
-    "gulp": "3.9.1",
+    "gulp": "^3.9.1",
     "gulp-cli": "^2.2.0",
     "gulp-file-include": "^1.0.0",
     "gulp-rename": "^1.4.0",
