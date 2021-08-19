@@ -1,0 +1,974 @@
+//Bingolobby page
+.bingolobby {
+    &-hero {
+        height: 380px;
+        background: #44385D;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        &__head {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffffed;
+            padding: 20px 0;
+            padding-top: 30px;
+
+            &_v1 {
+                .bingolobby-hero__head-title {
+                    order: 0;
+                    display: block;
+                }
+
+                .bingolobby-hero__head-host {
+                    order: 1;
+                }
+
+                .bingolobby-hero__head-game {
+                    order: 2;
+                }
+
+                .bingolobby-hero__head-time {
+                    order: 3;
+                }
+
+                .bingolobby-hero__head-btn {
+                    order: 4;
+                }
+            }
+
+            &_v2 {
+                .bingolobby-hero__head-title {
+                    order: 0;
+                    display: none;
+                }
+
+                .bingolobby-hero__head-host {
+                    order: 2;
+                }
+
+                .bingolobby-hero__head-game {
+                    order: 3;
+                    margin-right: 0;
+                }
+
+                .bingolobby-hero__head-time {
+                    order: 1;
+                    margin-left: 20px;
+                    margin-right: auto;
+                }
+
+                .bingolobby-hero__head-btn {
+                    order: 0;
+                }
+            }
+
+            &-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .bingolobby-hero__head-title {
+                max-width: 32%;
+                margin: 0;
+            }
+
+            &-host {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+            }   
+
+            &-host-av {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 13px;
+
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            &-host-box {
+                display: flex;
+                flex-direction: column;
+                color: $color-primary;
+            }
+
+            &-host-online {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            &-host-name {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            &-game {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0 auto;
+                margin-left: 45px;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            &-game__item {
+                font-size: 16px;
+                font-weight: bold;
+
+                &_fs20 {
+                    font-size: 20px;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+            }
+
+            &-game__line {
+                display: flex;
+
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+
+            &-game__label {
+                font-weight: 400;
+            }
+
+            &-btn {
+                align-self: center;
+                .btn {
+                    height: 58px;
+                    font-size: 20px;
+                    width: 194px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+
+            &-time {
+                font-size: 40px;
+                align-self: center;
+                line-height: 65%;
+                margin-right: 20px;
+                margin-left: auto;
+                margin-top: 15px;
+            }
+        }
+    }
+
+}
+
+.bingolobby__jackpots-stats {
+    background-color: $color-primary;
+    padding: 45px 25px 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__col {
+        width: 48%;
+
+        &_gold {
+            color: #FFDC92;
+
+            .bingolobby__jackpots-stats__title::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.56' height='10.854' viewBox='0 0 29.56 10.854'%3E%3Cg transform='translate(-0.147)'%3E%3Cpath d='M6,9,2.473,10.854l.674-3.927L.294,4.146l3.943-.573L6,0,7.763,3.573l3.943.573L8.853,6.927l.674,3.927Z' transform='translate(18)' fill='%23ffdc92'/%3E%3Cpath d='M4,6,1.649,7.236,2.1,4.618.2,2.764l2.629-.382L4,0,5.176,2.382,7.8,2.764,5.9,4.618l.449,2.618Z' transform='translate(8 2)' fill='%23ffdc92'/%3E%3Cpath d='M3,4.5l-1.763.927.337-1.964L.147,2.073l1.971-.286L3,0l.882,1.786,1.971.286L4.427,3.464l.337,1.964Z' transform='translate(0 3)' fill='%23ffdc92'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+
+            .bingolobby__jackpots-stats__title::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.56' height='10.854' viewBox='0 0 29.56 10.854'%3E%3Cg  transform='translate(29.706)'%3E%3Cpath id='Star' d='M-6,9l3.527,1.854-.674-3.927L-.294,4.146l-3.943-.573L-6,0-7.763,3.573l-3.943.573,2.853,2.781-.674,3.927Z' transform='translate(-18)' fill='%23ffdc92'/%3E%3Cpath d='M-4,6l2.351,1.236L-2.1,4.618-.2,2.764l-2.629-.382L-4,0-5.176,2.382-7.8,2.764l1.9,1.854-.449,2.618Z' transform='translate(-8 2)' fill='%23ffdc92'/%3E%3Cpath d='M-3,4.5l1.763.927-.337-1.964L-.147,2.073l-1.971-.286L-3,0l-.882,1.786-1.971.286,1.427,1.391-.337,1.964Z' transform='translate(0 3)' fill='%23ffdc92'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+        }
+
+        &_white {
+            color: #FFFFFF;
+
+            .bingolobby__jackpots-stats__title::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.56' height='10.854' viewBox='0 0 29.56 10.854'%3E%3Cg transform='translate(-0.147)'%3E%3Cpath d='M6,9,2.473,10.854l.674-3.927L.294,4.146l3.943-.573L6,0,7.763,3.573l3.943.573L8.853,6.927l.674,3.927Z' transform='translate(18)' fill='%23fff'/%3E%3Cpath d='M4,6,1.649,7.236,2.1,4.618.2,2.764l2.629-.382L4,0,5.176,2.382,7.8,2.764,5.9,4.618l.449,2.618Z' transform='translate(8 2)' fill='%23fff'/%3E%3Cpath d='M3,4.5l-1.763.927.337-1.964L.147,2.073l1.971-.286L3,0l.882,1.786,1.971.286L4.427,3.464l.337,1.964Z' transform='translate(0 3)' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+
+            .bingolobby__jackpots-stats__title::after {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.56' height='10.854' viewBox='0 0 29.56 10.854'%3E%3Cg  transform='translate(29.706)'%3E%3Cpath id='Star' d='M-6,9l3.527,1.854-.674-3.927L-.294,4.146l-3.943-.573L-6,0-7.763,3.573l-3.943.573,2.853,2.781-.674,3.927Z' transform='translate(-18)' fill='%23fff' /%3E%3Cpath d='M-4,6l2.351,1.236L-2.1,4.618-.2,2.764l-2.629-.382L-4,0-5.176,2.382-7.8,2.764l1.9,1.854-.449,2.618Z' transform='translate(-8 2)' fill='%23fff' /%3E%3Cpath d='M-3,4.5l1.763.927-.337-1.964L-.147,2.073l-1.971-.286L-3,0l-.882,1.786-1.971.286,1.427,1.391-.337,1.964Z' transform='translate(0 3)' fill='%23fff' /%3E%3C/g%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 16px;
+
+        &::before, &::after {
+            content: '';
+            display: block;
+            height: 11px;
+            width: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            margin: 7px 0;
+            margin-left: 0;
+            margin-right: 20px;
+        }
+
+        &::after {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+    }
+
+    &__list-container {
+        display: flex;
+    }
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        font-weight: bold;
+        font-size: 16px;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    &__list-item {
+        background-color: $color-primary-dark;
+        padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2px 10px;
+    }
+}
+
+.bingolobby__contests {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    &__col {
+        width: 49%;
+    }
+}
+
+.bingolobby__deposits {
+    background-color: #E5F6FE;
+    padding: 50px 0 90px;
+    display: flex;
+    justify-content: center;
+
+    &-wrapper {
+        max-width: 970px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        width: 30%;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__form {
+        &-radios {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        &-btns {
+            .btn:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .btn.disabled {
+                color: #FFFFFF;
+                background-color:#81B7C8;
+
+                &:hover {
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        &-radio {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked ~ label {
+                background-color: $color-primary;
+                color: white;
+            }
+
+            & + label {
+                width: 64px;
+                height: 64px;
+                background-color: $color-secondary;
+                color: $color-primary;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                margin: 0;
+                transition: background-color 0.3s ease;
+            }
+        }
+
+        .bingolobby__deposits__form-input-label {
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            color: $color-primary;
+            margin-bottom: 4px;
+            width: 100%;
+        }
+    }
+
+    .bingolobby__deposits__form-input input {
+        text-align: center;
+        font-size: 16px;
+        height: 38px;
+        border: 1px solid $color-primary;
+
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #7F9EA8;
+            opacity: 1; /* Firefox */
+        }
+        
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #7F9EA8;
+        }
+        
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: #7F9EA8;
+        }
+    }
+
+    .bingolobby__deposits__form-radio-wrapper {
+        position: relative;
+        margin: 0 4px;
+    }
+}
+
+.bingolobby-split-block {
+    background-color: $color-primary;
+    display: flex;
+    color: white;
+    height: 282px;
+    width: 100%;
+
+    &__content {
+        width: 50%;
+        padding: 40px 20px 20px 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .bingolobby-split-block__title {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            margin-top: auto;
+            height: 46px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .bingolobby-split-block__img {
+        width: 50%;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.bingolobby-img-block {
+    position: relative;
+    background: linear-gradient(180deg, #174F61 0%, rgba(23, 79, 97, 0) 98.44%);
+    color: white;
+    height: 282px;
+    width: 100%;
+    padding: 40px 20px 20px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .bingolobby-img-block__title {
+        margin: 0;
+    }
+
+    .bingolobby-img-block__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+}
+
+.ml-2017 {
+    .block-bingo-slider {
+        &.is-draggable .flickity-viewport {
+            cursor: pointer;
+        }
+
+        padding: 0 20px;
+        position: relative;
+        margin-bottom: 30px;
+    
+        .flickity-prev-next-button {
+            top: 34%;
+            left: 0;
+            position: absolute;
+            padding: 0;
+            width: 15px;
+            height: 25px;
+            font-size: 0;
+            margin: 0;
+            border-radius: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.414' height='22.828' viewBox='0 0 12.414 22.828'%3E%3Cpath d='M0,0,10,10,20,0' transform='translate(11 1.414) rotate(90)' fill='none' stroke='%23003e52' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2'/%3E%3C/svg%3E%0A") no-repeat;
+            background-position: center;
+            background-size: contain;
+    
+            svg {
+                display: none;
+            }
+    
+            &.next {
+                left: unset;
+                right: 0;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.414' height='22.828' viewBox='0 0 12.414 22.828'%3E%3Cpath d='M0,0,10,10,20,0' transform='translate(1.414 21.414) rotate(-90)' fill='none' stroke='%23003e52' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    .allbingos {
+        .h2 {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.block-bingo__slide {
+    width: 25%;
+    padding: 30px 10px;
+}
+
+.block-bingo-item {
+
+    .lottery-top {
+        position: relative;
+        margin: 0 auto 40px;
+
+        .img {
+            height: 188px;
+            border-radius: 3px;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .lottery-price {
+        background: #F8DF8D;
+        color: $color-primary;
+        right: 10px;
+    }
+
+    .title {
+        font-size: 1.25rem;
+        line-height: 1.2;
+        font-family: "apercu-bold-pro";
+        margin-bottom: 9px;
+    }
+    
+}
+
+.bingolobby-tabs {
+    margin-top: 20px;
+
+    &__head-container {
+        background-color: #C9E8F4;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__head-item {
+        font-size: 20px;
+        text-decoration: underline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &.active {
+            font-weight: bold;
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+
+    &-panel {
+        display: block;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity .3s;
+
+        &.active {
+            display: block;
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .bingolobby-hero__head_v1 {
+        .bingolobby-hero__head-game {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .bingolobby-hero__head-title {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1225px) {
+    .bingolobby-hero__head {
+        padding-top: 30px;
+    }
+
+    .bingolobby-hero__head-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .bingolobby-hero__head_v1 {
+        
+        .bingolobby-hero__head-game {
+            margin: 0;
+            width: 50%;
+        }
+
+        .bingolobby-hero__head-title {
+            width: 70%;
+            margin: 0;
+            max-width: 430px;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .bingolobby-hero__head-host {
+            width: 30%;
+            margin: 0;
+            margin-left: auto;
+            margin-bottom: 20px;
+            
+            justify-content: flex-end;
+        }
+
+    }
+
+    .bingolobby-hero__head_v2 {
+        .bingolobby-hero__head-btn {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+        }
+
+        .bingolobby-hero__head-time {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .bingolobby-hero__head-host {
+            margin: 0;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .bingolobby-hero__head-game {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 360px;
+            margin-left: 0;
+            align-items: flex-end;
+        }
+
+        .bingolobby-hero__head-game__line {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .bingolobby-hero__head-game__item_fs20 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    .bingolobby-hero__head-host-av {
+        width: 35px;
+        height: 35px;
+    }
+
+    .bingolobby-hero {
+        height: 474px;
+    } 
+
+    .bingolobby__jackpots-stats__col {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .bingolobby__jackpots-stats {
+        flex-direction: column;
+        align-items: center;
+
+        &__col {
+            width: 100%;
+            max-width: 760px;
+    
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    .bingolobby__contests {
+        flex-direction: column;
+        align-items: center;
+
+        &__col {
+            width: 100%;
+            max-width: 740px;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:992px) {
+    .block-bingo__slide {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 696px) {
+    .bingolobby-hero__head_v2 .bingolobby-hero__head-game {
+        max-width: 330px;
+    }
+}
+
+@media screen and (max-width: 632px) {
+    .bingolobby-hero {
+        height: 481px;
+    }
+
+    .bingolobby-hero__head_v1 {
+        .bingolobby-hero__head-wrapper {
+            flex-wrap: wrap;
+        }
+
+        .bingolobby-hero__head-game {
+            order: 1;
+            width: 60%;
+            justify-content: flex-start;
+            margin: 0;
+
+            p:not(:last-child) {
+                margin-bottom: 3px;
+            }
+        }
+
+        .bingolobby-hero__head-title {
+            width: 100%;
+            max-width: unset;
+            text-align: center;
+            font-size: 24px;
+            order: 0;
+            margin-bottom: 22px;
+        }
+
+        .bingolobby-hero__head-host {
+            order: 2;
+            width: auto;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+        }
+        
+        .bingolobby-hero__head-time {
+            order: 3;
+            width: 50%;
+            margin: 0;
+            align-self: flex-end;
+        }
+
+        .bingolobby-hero__head-btn {
+            order: 4;
+            width: 50%;
+            margin: 0;
+            justify-content: flex-end;
+            display: flex;
+        }
+
+        .bingolobby-hero__head-game__line {
+            flex-direction: column;
+            display: flex;
+        }
+
+        .bingolobby-hero__head-game__item_fs20 {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 5px;
+        }
+
+        .bingolobby-hero__head-host-av {
+            margin: 0;
+            order: 2;
+            margin-top: 5px;
+        }
+
+    }
+
+    .bingolobby-hero__head_v2 {
+        .bingolobby-hero__head-host {
+            width: 100%;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .bingolobby-hero__head-btn {
+            width: auto;
+            margin-right: auto;
+        }
+
+        .bingolobby-hero__head-game {
+            max-width: unset;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .bingolobby-hero__head-time {
+            width: auto;
+            align-self: flex-start;
+            padding-top: 8px;
+        }
+
+        .bingolobby-hero__head-game__item_fs20 {
+            flex-direction: column;
+        }
+
+        .bingolobby-hero__head-game__line {
+            width: 50%;
+            flex-direction: column;
+            align-items: flex-start;
+
+            &:last-child {
+                width: auto;
+                margin-left: auto;
+            }
+        }
+
+        .bingolobby-hero__head-game__item {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .bingolobby__jackpots-stats__col {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bingolobby__jackpots-stats__list-container {
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .bingolobby__jackpots-stats__list {
+        width: 100%;   
+
+        &:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+
+    .bingolobby__jackpots-stats__list-container_jackpots {
+        .bingolobby__jackpots-stats__list:last-child {
+            li:nth-child(4),
+            li:nth-child(5) {
+                display: none;
+            }
+        }
+    }
+
+    .bingolobby__jackpots-stats__list-container_winners {
+        .bingolobby__jackpots-stats__list:last-child {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 596px) {
+    .bingolobby-hero__head_v2 .bingolobby-hero__head-btn {
+        .btn {
+            width: 180px;
+        }
+    }
+
+    .ml-2017 .block-bingo-slider  {
+        margin: 0 -10px;
+        padding: 0;
+
+        .flickity-prev-next-button {
+            width: 40px;
+            height: 40px;
+            top: 37%;
+            left: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20,40A20,20,0,0,1,5.858,5.858,20,20,0,0,1,34.142,34.142,19.869,19.869,0,0,1,20,40ZM17.5,11.25a1.25,1.25,0,0,0-.9,2.116l6.633,6.907-6.6,6.324a1.25,1.25,0,0,0,1.731,1.8l7.5-7.189a1.253,1.253,0,0,0,.037-1.768l-7.5-7.81A1.239,1.239,0,0,0,17.5,11.25Z' transform='translate(40 40) rotate(180)' fill='%23fff'/%3E%3C/svg%3E%0A");
+            opacity: 0.5;
+            transition: 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &.next {
+                right: 10px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20,40A20,20,0,0,1,5.858,5.858,20,20,0,0,1,34.142,34.142,19.869,19.869,0,0,1,20,40ZM17.5,11.25a1.25,1.25,0,0,0-.9,2.116l6.633,6.907-6.6,6.324a1.25,1.25,0,0,0,1.731,1.8l7.5-7.189a1.253,1.253,0,0,0,.037-1.768l-7.5-7.81A1.239,1.239,0,0,0,17.5,11.25Z' fill='%23fff'/%3E%3C/svg%3E%0A");
+            }
+        }
+    }
+
+    .block-bingo__slide {
+        width: 70%;
+    }
+
+    .bingolobby__contests__col {
+        max-width: 350px;
+    }
+
+    .bingolobby-split-block {
+        flex-direction: column;
+        height: auto;
+
+        .bingolobby-split-block__img {
+            width: 100%;
+            height: 280px;
+        }
+
+        &__content {
+            width: 100%;
+            text-align: center;
+            align-items: center;
+            padding-bottom: 30px;
+            padding-left: 20px;
+
+            .bingolobby-split-block__title {
+                font-size: 28px;
+            }
+
+            .btn {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .bingolobby-img-block {
+        text-align: center;
+        align-items: center;
+        height: 190px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+
+        .bingolobby-img-block__title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .block-bingo-item .lottery-top .img {
+        height: 145px;
+    }
+
+    .ml-2017 .block-bingo-slider .flickity-prev-next-button {
+        top: 32%;
+    }
+
+    .bingolobby__jackpots-stats {
+        padding: 45px 0px 10px;
+    }
+
+    .bingolobby__jackpots-stats__title {
+        padding: 0 10px;
+        margin-bottom: 7px;
+    }
+
+    .bingolobby__jackpots-stats__title::before {
+        margin-right: 14px;
+    }
+
+    .bingolobby__jackpots-stats__title::after {
+        margin-left: 14px;
+    }
+}

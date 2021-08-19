@@ -1,0 +1,328 @@
+@@include('layout/_header.html', {
+    "class": "page-bingolobby logged-out",
+    "logged_in": false
+    })
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+<div class="content-wrapper ml-2017">
+    @@include('blocks/_bingolobby-header.html')
+
+	
+    <section class="bingolobby-tabs">
+        <div class="container">
+            <div class="bingolobby-tabs__head-container">
+				<a href="#bingolobby-tab1" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn active">Jackpottar & högsta vinster</a>
+				<a href="#bingolobby-tab2" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Tävlingar</a>
+				<a href="#bingolobby-tab3" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Sätt in pengar</a>
+				<a href="#bingolobby-tab4" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Chatschema</a>
+				<a href="#bingolobby-tab5" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Bingoschema</a>
+				<a href="#bingolobby-tab6" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Så funkar det</a>
+				<a href="#bingolobby-tab7" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Vanliga frågor & svar</a>
+			</div>
+
+			<div class="bingolobby-tabs__panels-container">
+				<div id="bingolobby-tab1" class="bingolobby-tabs-panel js-bingolobby-tabs-panel active">
+					<div class="bingolobby__jackpots-stats">
+						<div class="bingolobby__jackpots-stats__col bingolobby__jackpots-stats__col_gold">
+							<span class="bingolobby__jackpots-stats__title">
+								Aktuella jackpottar
+							</span>
+							<div class="bingolobby__jackpots-stats__list-container bingolobby__jackpots-stats__list-container_jackpots">
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Stjärnjacken</span> <span>80 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Tornadobingo</span> <span>6 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Zoobaloo</span> <span>6 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Himlaspelet</span> <span>3 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Femkronan</span> <span>1 764 kr</span>
+										</div>
+									</li>
+								</ul>
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Stjärnjacken</span> <span>80 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Tornadobingo</span> <span>6 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Zoobaloo</span> <span>6 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Himlaspelet</span> <span>3 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Femkronan</span> <span>1 764 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="bingolobby__jackpots-stats__col bingolobby__jackpots-stats__col_white">
+							<span class="bingolobby__jackpots-stats__title">
+								Månadens högsta vinster
+							</span>
+							<div class="bingolobby__jackpots-stats__list-container bingolobby__jackpots-stats__list-container_winners">
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 1</span> <span>19 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 2</span> <span>16 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 3</span> <span>12 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 4</span> <span>10 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 5</span> <span>8 764 kr</span>
+										</div>
+									</li>
+								</ul>
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 6</span> <span>19 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 7</span> <span>16 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 8</span> <span>12 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 9</span> <span>10 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 10</span> <span>8 764 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="bingolobby-tab2" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
+					<div class="bingolobby__contests">
+						<div class="bingolobby__contests__col">
+							<div class="bingolobby-split-block bingolobby__contest__split-block">
+								<img src="assets/img/mockup/split-img-bingo.png" alt="Aktuell tävling 1" class="bingolobby-split-block__img">
+								<div class="bingolobby-split-block__content">
+									<h3 class="bingolobby-split-block__title">Aktuell tävling 1</h3>
+									<p>
+										Infotext om tävling lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+									</p>
+									<a href="#" class="btn btn-success">Spela nu</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="bingolobby__contests__col">
+							<div class="bingolobby-img-block bingolobby__contest__img-block">
+								<img src="assets/img/mockup/Img-block-tavling2.png" alt="Aktuell tävling 2" class="bingolobby-img-block__img">
+								<h3 class="bingolobby-img-block__title">Aktuell tävling 2</h3>
+								<a href="#" class="btn btn-invert">Se mer</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="bingolobby-tab3" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
+					<div class="bingolobby__deposits">
+						<form>
+							<div class="bingolobby__deposits-wrapper">
+								<div class="bingolobby__deposits__item">
+									<h4>Sätt in pengar att spela för</h4>
+									<p>
+										För att kunna spela bingo behöver du ha pengar i spelplånboken. Välj det belopp och sätt du vill föra över med:
+									</p>
+								</div>
+								<div class="bingolobby__deposits__item">
+									<div class="bingolobby__deposits__form">
+										<div class="bingolobby__deposits__form-radios">
+											<fieldset class="bingolobby__deposits__form-radio-wrapper">
+												<input type="radio" class="bingolobby__deposits__form-radio" name="depositsRadio" id="depositsRadio1">
+												<label for="depositsRadio1">50 kr</label>
+											</fieldset>
+											<fieldset class="bingolobby__deposits__form-radio-wrapper">
+												<input type="radio" class="bingolobby__deposits__form-radio" name="depositsRadio" id="depositsRadio2">
+												<label for="depositsRadio2">100 kr</label>
+											</fieldset>
+											<fieldset class="bingolobby__deposits__form-radio-wrapper">
+												<input type="radio" class="bingolobby__deposits__form-radio" name="depositsRadio" id="depositsRadio3">
+												<label for="depositsRadio3">200 kr</label>
+											</fieldset>
+										</div>
+	
+										<div class="bingolobby__deposits__form-input">
+											<label for="depositsInput" class="bingolobby__deposits__form-input-label">Valfritt belopp</label>
+											<input type="number" id="depositsInput" class="form-control" required placeholder="(Minst 50 kr)">
+										</div>
+									</div>
+								</div>
+								<div class="bingolobby__deposits__item">
+									<div class="bingolobby__deposits__form-btns">
+										<button type="submit" class="btn btn-primary btn-block disabled">Betala med swish</button>
+										<button type="submit" class="btn btn-primary btn-block disabled">Betala med kort</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+
+    <section class="s-winners section">
+		<div class="container">
+			<div class="s-winners__inner">
+				<div class="winners-title">Senaste vinnarna:</div>
+				<div class="winners-slider"></div>
+			</div>
+		</div>
+	</section>
+
+    <section class="allbingos block-title-wrap">
+        <div class="container">
+            <h2 class="h2 block-title-marked block-title-marked--dark-blue block-title-marked--big">Alla bingospel</h2>
+
+            <div class="block-bingo block-bingo-slider">
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/Zoobaloobingo_bingologo.png" alt="Zoobaloo">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-login">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Zoobaloo</div>
+							<div class="text">Klassiskt bingo skapad tillsammans med kunder!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/MinaSenasteSpel_Himlaspelet.png" alt="Himlaspelet">
+							</div>
+							<div class="lottery-price">2 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-login">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Himlaspelet</div>
+							<div class="text">Klassiskt bingo för endast 2 kronor!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/tornadobingo.png" alt="Tornadobingo">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-login">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Tornadobingo</div>
+							<div class="text">Mönsterbingo där vinsten delas med alla!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/Stjrnskottet.png" alt="Stjärnskottet">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-login">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Stjärnskottet</div>
+							<div class="text">Variantbingo där spelets jackpott smäller riktigt ofta!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/Zoobaloobingo_bingologo.png" alt="Zoobaloo">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="lottery-info-btn" data-toggle="modal" data-target="#modal-login">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Zoobaloo</div>
+							<div class="text">Klassiskt bingo skapad tillsammans med kunder!</div>
+						</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

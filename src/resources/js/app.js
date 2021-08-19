@@ -49,6 +49,8 @@ import Odometer from './components/odometer';
 import Carousel from './components/carousel';
 import RegisterLottery from './components/register-lottery';
 import Confetti from './components/confetti';
+import tabs from './components/tabs';
+import radioToggle from './components/radio-toggle';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -121,6 +123,8 @@ $(function () {
 	grid();
 	Carousel();
 	RegisterLottery.init();
+	tabs();
+	radioToggle();
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();
