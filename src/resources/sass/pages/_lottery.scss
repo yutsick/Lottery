@@ -27,32 +27,32 @@
 	border-radius: 50%;
 	background: $color-orange;
 	text-align: center;
-	&.size-small {
-		top: -20px;
-		right: -20px;
-		width: 40px;
-		height: 40px;
-		font-size: 12px;
-		line-height: 40px;
-	}
-	&.size-small-sm {
-		@include max-screen($screen-xs-max) {
-			top: -20px;
-			right: -20px;
-			width: 40px;
-			height: 40px;
-			font-size: 12px;
-			line-height: 40px;
-		}
-	}
-	@include max-screen($screen-xs-max) {
-		top: -20px;
-		right: -20px;
-		width: 40px;
-		height: 40px;
-		font-size: 12px;
-		line-height: 40px;
-	}
+	// &.size-small {
+	// 	top: -20px;
+	// 	right: -20px;
+	// 	width: 40px;
+	// 	height: 40px;
+	// 	font-size: 12px;
+	// 	line-height: 40px;
+	// }
+	// &.size-small-sm {
+	// 	@include max-screen($screen-xs-max) {
+	// 		top: -20px;
+	// 		right: -20px;
+	// 		width: 40px;
+	// 		height: 40px;
+	// 		font-size: 12px;
+	// 		line-height: 40px;
+	// 	}
+	// }
+	// @include max-screen($screen-xs-max) {
+	// 	top: -20px;
+	// 	right: -20px;
+	// 	width: 40px;
+	// 	height: 40px;
+	// 	font-size: 12px;
+	// 	line-height: 40px;
+	// }
 }
 
 
@@ -457,6 +457,24 @@
 		@include min-screen($screen-md-min) {
 			width: 255px;
 		}
+
+		.img_lottery-size {
+			height: 342px;
+			width: 100%;
+			max-width: 255px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			.img_lottery-size {
+				height: 261px;
+			}
+		}
 	}
 	.lottery-bottom {
 		display: flex;
@@ -528,7 +546,7 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		align-items: center;
+		align-items: stretch;
 		margin: -20px 0;
 	}
 
@@ -545,6 +563,8 @@
 		}
 		img {
 			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 }
@@ -699,10 +719,19 @@
 	}
 	.lottery-top {
 		position: relative;
-		width: 127px;
+		width: 170px;
 		margin: 0 auto 40px;
-		@include min-screen($screen-sm-min) {
-			width: 255px;
+
+		.img_lottery-size {
+			height: 342px;
+			width: 100%;
+			max-width: 255px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 	.lottery-bottom {
@@ -723,6 +752,12 @@
 		font-family: $apercu-bold-font;
 		line-height: 24px;
 		margin-bottom: 10px;
+	}
+
+	@media screen and (max-width: 576px) {
+		.title {
+			font-size: 18px;
+		}
 	}
 	.text {
 		font-size: 16px;
