@@ -189,6 +189,7 @@ export default function () {
 		prevNextButtons: true,
 		autoPlay: 5000,
 	}
+
 	// @media for slider
 	if ( matchMedia('screen and (max-width: 596px)').matches ) {
 		bingoSliderOptions.cellAlign = 'center';

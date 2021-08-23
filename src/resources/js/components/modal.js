@@ -53,5 +53,93 @@ export default function () {
 	$('#modal-video').on('hidden.bs.modal', function (e) {
 		$(this).find('video')[0].pause();
 		$(this).find('video')[0].currentTime = 0;
-	})
+	});
+
+
+	//bingolobby modals
+	function modalOpen(btn) {
+		$(btn).on('click', (evt) => {
+			evt.preventDefault();
+			let button = evt.currentTarget;
+			let target = $(button.getAttribute('data-target'));
+
+			if($(target).length) {
+				$(button.getAttribute('data-target')).addClass('active');
+				$('body').addClass("modal-open");
+			};
+		});
+	};
+
+	function modalClose(btn) {
+		$(btn).on('click', (evt) => {
+			evt.preventDefault();
+			let button = evt.currentTarget;
+
+			$(button.getAttribute('data-target')).removeClass('active');
+			$('body').removeClass('modal-open');
+		});
+	};
+
+	function modalCloseVideo(btn) {
+		$(btn).on('click', (evt) => {
+			evt.preventDefault();
+			let button = evt.currentTarget;
+
+			$(button.getAttribute('data-target')).removeClass('active');
+			$('body').removeClass('modal-open');
+
+			$('.js-bingolobby__howitworks__video').find('video')[0].pause();
+			$('.js-bingolobby__howitworks__video').find('video')[0].currentTime = 0;
+		});
+	}
+
+	function modalSchemasOpen(btn, target) {
+		$(btn).on('click', (evt) => {
+			evt.preventDefault();
+			let button = evt.currentTarget;
+
+			$(button.getAttribute('data-target')).addClass('active');
+			$('body').addClass("modal-open");
+
+			$('.js-bingolobby-tabs-panel').removeClass('active');
+			$(target).addClass('active');
+			$('.bingolobby__schemas-tab[href="' + target + '"]').addClass('active');
+		});
+          
+	}
+
+	function modalSchemasClose(btn) {
+		$(btn).on('click', (evt) => {
+			evt.preventDefault();
+			let button = evt.currentTarget;
+
+			$(button.getAttribute('data-target')).removeClass('active');
+			$('body').removeClass('modal-open');
+			$('.js-bingolobby-tabs-panel').removeClass('active');
+			$('.bingolobby__schemas-tab').removeClass('active');
+		});
+		
+	}
+
+	//reset modals of M-T when resize (close panels of D when T-M resize)
+	$(window).resize(function() {
+		if($( window ).width() <= 992 && $( window ).width() > 742) {
+			
+			$('.js-bingolobby-tabs-panel').removeClass('active');
+			$('.bingolobby__schemas-modal').removeClass('active');
+			$('body').removeClass('modal-open');
+		}
+	});
+
+	modalSchemasOpen('.js-btn-toBingoschema', '#bingolobby-tab4');
+	modalSchemasClose('.bingolobby__schemas-modal .js-modal-btn-close');
+
+	modalSchemasOpen('.js-btn-toFaq', '#bingolobby-tab7');
+	modalSchemasClose('#bingolobby-tab7 .js-modal-btn-close');
+
+	modalOpen('.js-bingolobby__howitworks__video');
+	modalCloseVideo('.bingolobby__howitworks__video .js-modal-btn-close');
+		
+	modalClose('.bingoinfo-modals__close .js-modal-btn-close');
+	modalOpen('.allbingos .bingo-info-btn');
 }
