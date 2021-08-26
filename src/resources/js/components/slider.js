@@ -187,7 +187,6 @@ export default function () {
 		draggable: true,
 		pageDots: false,
 		prevNextButtons: true,
-		autoPlay: 5000,
 	}
 
 	// @media for slider

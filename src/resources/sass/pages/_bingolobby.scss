@@ -133,6 +133,10 @@
 
             &_fs20 {
                 font-size: 20px;
+
+                .bingolobby-hero__head-game__label {
+                    margin-right: 6px;
+                }
             }
 
             &:not(:last-child) {
@@ -696,6 +700,23 @@
             margin-bottom: 25px;
         }
     }
+
+    .bingolobby-tabs {
+
+        .btn-wide--blue {
+            background-color: $color-primary-dark;
+            transition: background-color 0.1s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            color: #ffffff;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background-color: $color-primary-light;
+                color: #ffffff;
+            }
+        }
+        
+    }
 }
 
 .bingoinfo-modals {
@@ -921,6 +942,13 @@
         justify-content: space-between;
     }
 
+    .bingolobby-tabs__head-item {
+        &:focus {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+
     &__head-item {
         font-size: 20px;
         text-decoration: underline;
@@ -1127,17 +1155,11 @@
         }
     }
 
-    .bingolobby__contests {
-        flex-direction: column;
-        align-items: center;
+    .bingolobby-split-block__content {
+        padding-left: 20px;
 
-        &__col {
-            width: 100%;
-            max-width: 740px;
-
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
+        .bingolobby-split-block__title {
+            font-size: 26px;
         }
     }
 
@@ -1280,18 +1302,27 @@
 
         &__content {
             width: 60%;
+            padding-left: 40px;
+            padding-bottom: 30px;
         }
     }
 
     .bingolobby__contests {
+        flex-direction: column;
+        align-items: center;
         margin-bottom: 20px;
 
         &__col {
+            width: 100%;
             max-width: unset;
 
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
+        }
+
+        .bingolobby-split-block__title {
+            font-size: 30px;
         }
     }
 
@@ -1809,7 +1840,7 @@
     }
 
     .bingolobby__contests__col {
-        max-width: 350px;
+        max-width: unset;
     }
 
     .bingolobby-split-block {
@@ -1818,7 +1849,7 @@
 
         .bingolobby-split-block__img {
             width: 100%;
-            height: 280px;
+            height: auto;
         }
 
         &__content {
@@ -1841,7 +1872,7 @@
     .bingolobby-img-block {
         text-align: center;
         align-items: center;
-        height: 190px;
+        height: 250px;
         padding-bottom: 30px;
         padding-left: 20px;
 
@@ -1922,5 +1953,9 @@
         &-item {
             margin-bottom: 20px;
         }
+    }
+
+    .bingolobby-img-block {
+        height: 192px;
     }
 }

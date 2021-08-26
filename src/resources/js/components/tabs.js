@@ -21,7 +21,14 @@ export default function() {
         $(panel).removeClass('active');
         $($(this).attr('href')).addClass('active');
       });
-    }
+    };
+
+    //on resize 993px > target panes is appear
+    $(window).resize(function() {
+      if($( window ).width() > 993) {
+          $($('.js-bingolobby-tabs__btn.active').attr('href')).addClass('active');
+      }
+    });
 
     //tabs on bingolobby page
     tabs('.js-bingolobby-tabs__btn', '.js-bingolobby-tabs-panel');
