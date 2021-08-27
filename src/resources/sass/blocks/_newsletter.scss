@@ -13,12 +13,14 @@
 	align-items: center;
 }
 
-.newsletter__sform form {
-	padding: 40px 20px 30px;
-	background: #CEDFD7;
-	width: 100%;
+.newsletter__sform {
 	max-width: 330px;
-	height: auto;
+	form {
+		padding: 40px 20px 30px;
+		background: #CEDFD7;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 .form_label {
@@ -38,7 +40,7 @@
 	background: #CEDFD7;
 	width: 100%;
 	max-width: 330px;
-	height: auto;
+	height: 100%;
 	min-height: 294px;
 	display: flex;
 	flex-direction: column;
