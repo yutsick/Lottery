@@ -79,3 +79,17 @@
 	color: #003E52;
 	min-height: 88px;
 }
+
+.wallets-group {
+	height: 100%;
+	
+	.wallet {
+		height:50%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.wallet__text {
+		height: 100%;
+	}
+}
