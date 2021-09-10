@@ -1,0 +1,583 @@
+@@include('layout/_header.html', {
+	"class": "page-front logged-out"
+	})
+
+	@@include('layout/_top-simple.html')
+
+<div class="content-wrapper ml-2017 content-wrapper_campaign">
+	
+    @@include('blocks/_campaign-header.html', {"page": "bingo", "header": "3-col"})
+
+    <section class="mt-60 campaign__howitworks">
+        <div class="container">
+            <div class="bingolobby__howitworks">
+                <div class="bingolobby__howitworks__content">
+                    <h4 class="bingolobby__howitworks__content-title">För att spela</h4>
+
+                    <ol class="bingolobby__howitworks__list">
+                        <li>Skapa konto eller logga in</li>
+                        <li>Sätt in pengar</li>
+                        <li>Börja spela!</li>
+                    </ol>
+                    
+                    <a href="#" class="btn btn-wide--blue">Kom igång här</a>
+                </div>
+                
+                <div class="bingolobby__howitworks__video" id="bingolobbyVideoModal">
+                    <a href="#" class="modal-btn-close js-modal-btn-close" data-target="#bingolobbyVideoModal">Close</a>
+                    <div class="s-video js-bingolobby__howitworks__video" data-target="#bingolobbyVideoModal" id="modal-video">
+                        <iframe
+                            loading="lazy"
+                            src="https://www.youtube.com/embed/EOQZ4VEi92M?rel=0"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%} a{display:block} a>img{position:absolute;width:100%;height:auto;top:50%;left:0;right:0;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);margin:auto} span{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:absolute;width:64px;height:64px;border-radius:50%;top:50%;left:50%;margin:-40px 0 0 -40px;-webkit-box-sizing:border-box;box-sizing:border-box} span>img{display:block;width:64;height:auto;}</style>
+                                    <a href='https://www.youtube.com/embed/EOQZ4VEi92M?autoplay=1&rel=0'>
+                                        <img style='height: 100%; object-fit: cover;' src='assets/img/mockup/video-block.png'>
+                                        <span>
+                                            <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+                                                <path id='play_btn' d='M-32,64a31.8,31.8,0,0,0,12.456-2.515A31.894,31.894,0,0,0-9.373,54.627,31.893,31.893,0,0,0-2.515,44.456,31.8,31.8,0,0,0,0,32,31.8,31.8,0,0,0-2.515,19.544,31.894,31.894,0,0,0-9.373,9.373,31.894,31.894,0,0,0-19.544,2.515,31.8,31.8,0,0,0-32,0,31.8,31.8,0,0,0-44.456,2.515,31.893,31.893,0,0,0-54.627,9.373a31.894,31.894,0,0,0-6.858,10.172A31.8,31.8,0,0,0-64,32a31.8,31.8,0,0,0,2.515,12.455,31.894,31.894,0,0,0,6.858,10.171,31.894,31.894,0,0,0,10.171,6.858A31.8,31.8,0,0,0-32,64Zm-5.674-45.585a1.984,1.984,0,0,1,1.119.35L-19.121,30.62a2,2,0,0,1,.876,1.673,2,2,0,0,1-.906,1.655l-17.434,11.39a1.988,1.988,0,0,1-1.089.329,2.04,2.04,0,0,1-1.393-.561,1.972,1.972,0,0,1-.612-1.442V20.418a1.972,1.972,0,0,1,.613-1.443A2.041,2.041,0,0,1-37.674,18.415Z' transform='translate(64)' fill='#fff' opacity='0.5'/>
+                                              </svg>									 
+                                        </span>
+                                    </a>"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <section class="s-winners section s-winners_campaign">
+		<div class="container">
+			<div class="s-winners__inner">
+				<div class="winners-title">Senaste vinnarna:</div>
+				<div class="winners-slider"></div>
+			</div>
+		</div>
+	</section>
+
+    <section class="campaign-tabs">
+        <div class="container">
+            <div class="bingolobby-tabs__head-container">
+				<a href="#campaign-tab1" class="bingolobby-tabs__head-item js-campaign-tabs__btn active">Jackpottar & högsta vinster</a>
+                <a href="#campaign-tab2" class="bingolobby-tabs__head-item js-campaign-tabs__btn">Vanliga frågor & svar</a>
+				<a href="#campaign-tab3" class="bingolobby-tabs__head-item js-campaign-tabs__btn">Bingoschema</a>
+			</div>
+
+			<div class="bingolobby-tabs__panels-container">
+				<div id="campaign-tab1" class="bingolobby-tabs-panel js-campaign-tabs-panel active">
+					<div class="bingolobby__jackpots-stats">
+						<div class="bingolobby__jackpots-stats__col bingolobby__jackpots-stats__col_gold">
+							<span class="bingolobby__jackpots-stats__title">
+								Aktuella jackpottar
+							</span>
+							<div class="bingolobby__jackpots-stats__list-container bingolobby__jackpots-stats__list-container_jackpots">
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Stjärnjacken</span> <span>80 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Tornadobingo</span> <span>6 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Zoobaloo</span> <span>6 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Himlaspelet</span> <span>3 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Femkronan</span> <span>1 764 kr</span>
+										</div>
+									</li>
+								</ul>
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Stjärnjacken</span> <span>80 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Tornadobingo</span> <span>6 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Zoobaloo</span> <span>6 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Himlaspelet</span> <span>3 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Femkronan</span> <span>1 764 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="bingolobby__jackpots-stats__col bingolobby__jackpots-stats__col_white">
+							<span class="bingolobby__jackpots-stats__title">
+								Månadens högsta vinster
+							</span>
+							<div class="bingolobby__jackpots-stats__list-container bingolobby__jackpots-stats__list-container_winners">
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 1</span> <span>19 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 2</span> <span>16 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 3</span> <span>12 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 4</span> <span>10 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 5</span> <span>8 764 kr</span>
+										</div>
+									</li>
+								</ul>
+								<ul class="bingolobby__jackpots-stats__list">
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 6</span> <span>19 675 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 7</span> <span>16 820 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 8</span> <span>12 139 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 9</span> <span>10 158 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__jackpots-stats__list-item">
+											<span>Namn 10</span> <span>8 764 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="campaign-tab3" class="bingolobby-tabs-panel js-campaign-tabs-panel">
+					<a href="#" class="modal-btn-close faq__modal-btn-close js-modal-btn-close" data-target="#campaign-tab3">Close</a>
+
+					<div class="bingolobby__bingoschema">
+						<h5 class="bingolobby__bingoschema__title">Bingoschema</h5>
+
+						<div class="bingolobby__bingoschema__container">
+							<div class="bingolobby__bingoschema__item">
+								<span class="bingolobby__bingoschema__item-title">
+									Spelas mellan kl 00-06
+								</span>
+
+								<ul class="bingolobby__bingoschema__item-list">
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Femkronan</span><span>5 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnskottet</span><span>9 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnjacken</span><span>15 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Zoobaloo</span><span>10 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Tornadobingo</span><span>3 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="bingolobby__bingoschema__item">
+								<span class="bingolobby__bingoschema__item-title">
+									Spelas mellan kl 06-12
+								</span>
+
+								<ul class="bingolobby__bingoschema__item-list">
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Femkronan</span><span>5 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnskottet</span><span>9 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnjacken</span><span>15 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="bingolobby__bingoschema__item">
+								<span class="bingolobby__bingoschema__item-title">
+									Spelas mellan kl 12-18
+								</span>
+
+								<ul class="bingolobby__bingoschema__item-list">
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Femkronan</span><span>5 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnskottet</span><span>9 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnjacken</span><span>15 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Zoobaloo</span><span>10 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Tornadobingo</span><span>3 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="bingolobby__bingoschema__item">
+								<span class="bingolobby__bingoschema__item-title">
+									Spelas mellan kl 18-00
+								</span>
+
+								<ul class="bingolobby__bingoschema__item-list">
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Femkronan</span><span>5 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnskottet</span><span>9 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Stjärnjacken</span><span>15 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Zoobaloo</span><span>10 kr</span>
+										</div>
+									</li>
+									<li>
+										<div class="bingolobby__bingoschema__item-line">
+											<span class="bingolobby__bingoschema__item-name">Tornadobingo</span><span>3 kr</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="campaign-tab2" class="bingolobby-tabs-panel js-campaign-tabs-panel">
+					<a href="#" class="modal-btn-close faq__modal-btn-close js-modal-btn-close" data-target="#campaign-tab2">Close</a>
+
+					<div class="bingolobby__faq">
+						<h5 class="bingolobby__faq__title">Vanliga frågor & svar</h5>
+
+						<div class="bingolobby__faq__container">
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 1
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</div>
+							</div>
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 2
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</div>
+							</div>
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 3
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</div>
+							</div>
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 4
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								</div>
+							</div>
+						</div>
+
+						<div class="bingolobby__faq__container">
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 5
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+								</div>
+							</div>
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 6
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+								</div>
+							</div>
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 7
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+								</div>
+							</div>
+							<div class="bingolobby__faq__item">
+								<span class="bingolobby__faq__item-title">
+									Fråga 8
+								</span>
+
+								<div class="bingolobby__faq__item-text">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="bingolobby-t-m__container">
+					<div class="bingolobby__schema-block">
+						<h5 class="bingolobby__schema-block__title">Vanliga frågor & svar</h5>
+						<div class="bingolobby__schema-block__line">
+							<p>
+								Något du undrar över? Se våra vanliga frågor och svar om vår bingo.
+							</p>
+							<a href="#" class="btn btn-wide--blue js-btn-toFaq" data-target="#campaign-tab2">Se här</a>
+						</div>
+					</div>
+					<div class="bingolobby__schema-block">
+						<h5 class="bingolobby__schema-block__title">Bingoskola</h5>
+						<div class="bingolobby__schema-block__line">
+							<p>
+								Se när du kan spela ditt favoritspel och när chatvärdarna är på plats i chatten.
+							</p>
+							<a href="#" class="btn btn-wide--blue js-btn-toBingoschema" data-target="#campaign-tab3">Se här</a>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </section>
+
+    <section class="allbingos block-title-wrap mt-70">
+        <div class="container">
+            <h2 class="h2 block-title-marked block-title-marked--dark-blue block-title-marked--big">Alla bingospel</h2>
+
+            <div class="block-bingo block-bingo-slider">
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/Zoobaloobingo_bingologo.png" alt="Zoobaloo">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="bingo-info-btn" data-target="#bingoinfo-variantbingo-1">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Zoobaloo</div>
+							<div class="text">Klassiskt bingo skapad tillsammans med kunder!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/MinaSenasteSpel_Himlaspelet.png" alt="Himlaspelet">
+							</div>
+							<div class="lottery-price">2 kr</div>
+							<button type="button" class="bingo-info-btn" data-target="#bingoinfo-variantbingo-2">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Himlaspelet</div>
+							<div class="text">Klassiskt bingo för endast 2 kronor!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/tornadobingo.png" alt="Tornadobingo">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="bingo-info-btn" data-target="#bingoinfo-variantbingo-3">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Tornadobingo</div>
+							<div class="text">Mönsterbingo där vinsten delas med alla!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/Stjrnskottet.png" alt="Stjärnskottet">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="bingo-info-btn" data-target="#bingoinfo-variantbingo-4">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Stjärnskottet</div>
+							<div class="text">Variantbingo där spelets jackpott smäller riktigt ofta!</div>
+						</div>
+                    </article>
+                </div>
+
+                <div class="block-bingo__slide">
+                    <article class="block-bingo-item">
+                        <div class="lottery-top">
+							<div class="img">
+								<img src="assets/img/mockup/Zoobaloobingo_bingologo.png" alt="Zoobaloo">
+							</div>
+							<div class="lottery-price">10 kr</div>
+							<button type="button" class="bingo-info-btn" data-target="#bingoinfo-variantbingo-5">i</button>
+						</div>
+
+                        <div class="lottery-bottom">
+							<div class="title">Zoobaloo</div>
+							<div class="text">Klassiskt bingo skapad tillsammans med kunder!</div>
+						</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="bingoinfo-modals" id="bingoinfo-variantbingo-1">
+		<div class="bingoinfo-modals__wrapper">
+			<div class="bingoinfo-modals__close">
+				<a href="#" class="modal-btn-close js-modal-btn-close" data-target="#bingoinfo-variantbingo-1">Close</a>
+			</div>
+
+			<div class="bingoinfo-modals__panel">
+				<div class="bingoinfo-modals__bg">
+					<img src="assets/img/mockup/bingoinfo-bg.png" alt="Background">
+				</div>
+
+				<div class="bingoinfo-modals__logo">
+					<img src="assets/img/mockup/bingoinfo-overlay-logo.png" alt="Logo">
+				</div>
+
+				<div class="bingoinfo-modals__title">
+					Att Stjärnjacken är en av våra populäraste bingospel är inte så konstigt, lorem ipsum lorem ipsum ipsum ipsum!
+				</div>
+
+				<div class="bingoinfo-modals__values">
+					<div class="bingoinfo-modals__values-item">
+						<span>Pris</span>
+						<span><b>9 kr</b></span>
+					</div>
+
+					<div class="bingoinfo-modals__values-item">
+						<span>Start-jackpott</span>
+						<span><b>10 000 kr</b></span>
+					</div>
+
+					<div class="bingoinfo-modals__values-item">
+						<span>Antal bollar</span>
+						<span><b>75 st</b></span>
+					</div>
+				</div>
+
+				<div class="bingoinfo-modals__image">
+					<img src="assets/img/mockup/bingoinfo-overlay-mönster-variantbingo.png" alt="Image">
+				</div>
+
+				<div class="bingoinfo-modals__rules">
+					<div class="bingoinfo-modals__rules-title">Spelregler</div>
+					<div class="bingoinfo-modals__rules-text">
+						Stjärnjacken är variantbingot med den snabbast växande jackpoten. Variantbingo består av fem deldragningar. I den första deldragningen får du bingo på vågrät rad, lodrät rad eller på diagonalen. I följande deldragningar gäller det att få vågräta rader. I den femte deldragningen ska du ha full bricka för att få bingo och lyckas du med det inom 52 bollar vinner du spelets <b>jackpot som startar på 10 000 kronor</b>. I Miljonlotteriets bingospel spelar du mot andra i en aldrig sinande ström. Lycka till!
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

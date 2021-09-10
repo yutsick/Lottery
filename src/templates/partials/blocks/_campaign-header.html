@@ -1,0 +1,149 @@
+<section class="campaign-hero">
+    @@if (context.page === "bingo") {<img src="/assets/img/background/images-bg-bingo.jpg" alt="Bingo!" class="campaign-hero__bg">}
+
+    @@if (context.page === "onlinelott") {<img src="/assets/img/background/images-bg-tjugan.jpg" alt="Bingo!" class="campaign-hero__bg">}
+
+    @@if (context.page === "skattjakten") {<img src="/assets/img/background/images-bg-skattjakten.jpg" alt="Bingo!" class="campaign-hero__bg">}
+
+    @@if (context.page === "stodhjulet") {<img src="/assets/img/background/images-bg-stödhjulet.jpg" alt="Bingo!" class="campaign-hero__bg">}
+
+    @@if (context.header === "2-col") {
+        @@if (context.page === "bingo") {
+            <div class="campaign__header campaign__header_2col">
+                <div class="campaign__header-col">
+                    <picture>
+                        <img src="/assets/img/background/images-2-col-bingo.png" alt="Bingo!">
+                    </picture>
+                </div>
+                <div class="campaign__header-col">
+                    <div class="campaign__header-content">
+                        <h2>Kom in i bingovärmen!</h2>
+                        <ul class="campaign__header-list">
+                            <li>Höga jackpottvinster</li>
+                            <li>Vinn tusentals kronor </li>
+                            <li>Flera vinstchanser</li>
+                        </ul>
+                        <a href="#" class="btn btn-success btn-arrow_right">Upptäck bingo</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @@if (context.page === "onlinelott") {
+            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M">
+                <div class="campaign__header-col">
+                    <picture>
+                        <source media="(max-width:1225px)" srcset="/assets/img/background/images-2-col-tjugan-T-M.png">
+                        <source media="(max-width:742px)" srcset="/assets/img/background/images-2-col-tjugan-M.png">
+                        <img src="/assets/img/background/images-2-col-tjugan.png" alt="Bingo!">
+                    </picture>
+                </div>
+                <div class="campaign__header-col">
+                    <div class="campaign__header-content">
+                        <h2>Vinn 2 miljoner och gör 
+                            andra glada!</h2>
+                        <div class="campaign__header-text">Hela överskottet går till IOGT-NTO-rörelsens livsviktiga arbete.</div>
+                        <a href="#" class="btn btn-success">Prova Tjugan nu</a>
+                        <a href="#" class="campaign__header-link mt-30">Regler & vinstplan</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @@if (context.page === "skattjakten") {
+            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M">
+                <div class="campaign__header-col">
+                    <picture>
+                        <source media="(max-width:1225px)" srcset="/assets/img/background/images-2-col-skattjakten-logo-T.png">
+                        <source media="(max-width:742px)" srcset="/assets/img/background/images-2-col-skattjakten-logo-M.png">
+                        <img src="/assets/img/background/images-2-col-skattjakten-logo.png" alt="Bingo!">
+                    </picture>
+                </div>
+                <div class="campaign__header-col">
+                    <div class="campaign__header-content">
+                        <h2>Hitta de gömda skatterna 
+                            och vinn!</h2>
+                        <div class="campaign__header-text">Ju ädlare skatter du hittar, desto högre blir vinsten.</div>
+                        <a href="#" class="btn btn-success">Prova Skattjakten</a>
+                        <a href="#" class="campaign__header-link mt-30">Regler & vinstplan</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @@if (context.page === "stodhjulet") {
+            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M">
+                <div class="campaign__header-col">
+                    <picture>
+                        <source media="(max-width:1225px)" srcset="/assets/img/background/images-2-col-stödhjulet-T.png">
+                        <source media="(max-width:742px)" srcset="/assets/img/background/images-2-col-stödhjulet-M.png">
+                        <img src="/assets/img/background/images-2-col-stödhjulet.png" alt="Bingo!">
+                    </picture>
+                </div>
+                <div class="campaign__header-col">
+                    <div class="campaign__header-content">
+                        <h2>Testa Stödhjulet – välj en premie värd 150 kr!</h2>
+                        <div class="campaign__header-text">Vinn upp till 10 miljoner! Pris 50 kr per lottrad. Dragning varje fredag.</div>
+                        <a href="#" class="btn btn-success">Prova Stödhjulet nu</a>
+                        <a href="#" class="campaign__header-link mt-30">Regler & vinstplan</a>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    }
+
+    @@if (context.header === "3-col") {
+        <div class="campaign__header campaign__header_3col">
+            <div class="campaign__header-col">
+                <picture>
+                    <source media="(max-width:992px)" srcset="/assets/img/background/images-3-col-M-T-bingo.png">
+                    <img src="/assets/img/background/images-3-col-bingo-1.png" alt="Bingo!">
+                </picture>
+            </div>
+            <div class="campaign__header-col">
+                <div class="campaign__header-content">
+                    <h2>Testa bingo – få 50 kr extra insatt i din spelplånbok!</h2>
+
+                    <a href="#" class="btn btn-success">Upptäck bingo</a>
+                </div>
+            </div>
+            <div class="campaign__header-col">
+                <picture>
+                    <img src="/assets/img/background/images-3-col-D-bingo-2.png" alt="Bingo!">
+                </picture>
+            </div>
+        </div>
+        <div class="campaign__header-checkpoints">
+            <div class="container">
+                <ul class="campaign__header-list">
+                    <li>Höga jackpottvinster</li>
+                    <li>Vinn tusentals kronor </li>
+                    <li>Flera vinstchanser</li>
+                </ul>
+            </div>
+        </div>
+    }
+    
+</section>
+
+@@if (context.page === "onlinelott") {
+    <div class="campaign__header-checkpoints-advanced">
+        <div class="container">
+            <ul class="campaign__header-list">
+                <li>Vinst på var fjärde lott</li>
+                <li>Vinn upp till 2 miljoner</li>
+                <li>Extrachans på 20 000 kr</li>
+            </ul>
+
+            <div class="campaign__header__line">
+                <p>Ord pris: 20 kr / lott</p> 
+                <a href="#" class="campaign__header-link">Regler & vinstplan</a>
+            </div>
+
+            <p>
+                Just nu får du 2 lotter till priset av en när du skrapar Tjugan (ord pris 20 kr / lott). Erbjudandet gäller vid ett tillfälle per person.
+            </p>
+        </div>
+    </div>
+}

@@ -937,9 +937,9 @@
 
     &__head-container {
         background-color: #C9E8F4;
-        padding: 20px 5em;
+        padding: 20px 1em;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .bingolobby-tabs__head-item {
@@ -956,6 +956,15 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        margin: 0 10px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
 
         &.active {
             font-weight: bold;
@@ -1037,7 +1046,7 @@
     }
 
     .bingolobby-tabs__head-container {
-        padding: 20px 3em;
+        padding: 20px 1em;
     }
 }
 
@@ -1169,6 +1178,7 @@
 
     .bingolobby-tabs__head-item {
         font-size: 17px;
+        margin: 0 7px;
     }
 }
 

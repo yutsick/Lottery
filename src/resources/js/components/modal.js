@@ -127,19 +127,28 @@ export default function () {
 			
 			$('.js-bingolobby-tabs-panel').removeClass('active');
 			$('.bingolobby__schemas-modal').removeClass('active');
+
+			$('.js-campaign-tabs-panel').removeClass('active');
+			$('.bingolobby__schemas-modal').removeClass('active');
+
 			$('body').removeClass('modal-open');
 		}
 	});
 
-	modalSchemasOpen('.js-btn-toBingoschema', '#bingolobby-tab4');
+	modalSchemasOpen('.bingolobby-tabs .js-btn-toBingoschema', '#bingolobby-tab4');
 	modalSchemasClose('.bingolobby__schemas-modal .js-modal-btn-close');
 
-	modalSchemasOpen('.js-btn-toFaq', '#bingolobby-tab7');
-	modalSchemasClose('#bingolobby-tab7 .js-modal-btn-close');
+	modalSchemasOpen('.bingolobby-tabs .js-btn-toFaq', '#bingolobby-tab7');
+	modalSchemasClose('.bingolobby-tabs #bingolobby-tab7 .js-modal-btn-close');
 
 	modalOpen('.js-bingolobby__howitworks__video');
 	modalCloseVideo('.bingolobby__howitworks__video .js-modal-btn-close');
 		
-	modalClose('.bingoinfo-modals__close .js-modal-btn-close');
+	modalClose('.bingolobby-tabs .bingoinfo-modals__close .js-modal-btn-close');
 	modalOpen('.allbingos .bingo-info-btn');
+
+	modalOpen('.campaign-tabs .js-btn-toBingoschema');
+	modalOpen('.campaign-tabs .js-btn-toFaq');
+	modalClose('#campaign-tab3 .js-modal-btn-close');
+	modalClose('#campaign-tab2 .js-modal-btn-close');
 }
