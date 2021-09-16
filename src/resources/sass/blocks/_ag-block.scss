@@ -78,6 +78,16 @@
 	align-items: center;
 }
 
+.ag__check_form_stretch {
+	align-items: stretch;
+
+	form {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
 .ag__check_imag-head h4 {
 	font-family: 'Apercu Pro', sans-serif;
 	font-style: normal;

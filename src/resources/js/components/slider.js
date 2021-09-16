@@ -178,6 +178,16 @@ export default function () {
 		autoPlay: 5000
 	});
 
+	$('.sbs-arrows').flickity({
+		cellSelector: '.sbs__item',
+		cellAlign: 'left',
+		wrapAround: true,
+		// draggable: false,
+		pageDots: false,
+		prevNextButtons: true,
+		autoPlay: 5000
+	});
+
 }
 
 
