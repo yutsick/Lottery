@@ -286,12 +286,12 @@
 				}
 			}
 		}
-		&-marked {
-			@include max-screen($screen-xs-max) {
-				margin-bottom: 30px;
-				font-size: 18px;
-			}
-		}
+		// &-marked {
+		// 	@include max-screen($screen-xs-max) {
+		// 		margin-bottom: 30px;
+		// 		font-size: 18px;
+		// 	}
+		// }
 	}
 }
 
@@ -719,7 +719,7 @@
 	}
 	.lottery-top {
 		position: relative;
-		width: 170px;
+		width: 192px;
 		margin: 0 auto 40px;
 
 		.img_lottery-size {
@@ -731,6 +731,12 @@
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			.img_lottery-size {
+				height: 261px;
 			}
 		}
 	}

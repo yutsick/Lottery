@@ -194,6 +194,15 @@ export default function () {
 		bingoSliderOptions.cellAlign = 'center';
 	}
 	$('.block-bingo-slider').flickity(bingoSliderOptions);
+	$('.sbs-arrows').flickity({
+		cellSelector: '.sbs__item',
+		cellAlign: 'left',
+		wrapAround: true,
+		// draggable: false,
+		pageDots: false,
+		prevNextButtons: true,
+		autoPlay: 5000
+	});
 
 }
 
