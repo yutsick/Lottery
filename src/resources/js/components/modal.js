@@ -144,7 +144,7 @@ export default function () {
 	modalOpen('.js-bingolobby__howitworks__video');
 	modalCloseVideo('.bingolobby__howitworks__video .js-modal-btn-close');
 		
-	modalClose('.bingolobby-tabs .bingoinfo-modals__close .js-modal-btn-close');
+	modalClose('.bingoinfo-modals__close .js-modal-btn-close');
 	modalOpen('.allbingos .bingo-info-btn');
 
 	modalOpen('.campaign-tabs .js-btn-toBingoschema');
