@@ -148,6 +148,11 @@
     .campaign__header-link {
         color: white;
         font-family: "apercu-bold-pro";
+
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
     }
 
     &-content {
