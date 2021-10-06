@@ -183,7 +183,9 @@ export default function () {
 	let bingoSliderOptions = {
 		cellSelector: '.block-bingo__slide',
 		cellAlign: 'left',
-		wrapAround: true,
+		wrapAround: false,
+		contain: true,
+		percentPosition: true,
 		draggable: true,
 		pageDots: false,
 		prevNextButtons: true,

@@ -1,5 +1,8 @@
 //Bingolobby page
 
+
+@import url(//fonts.googleapis.com/css2?family=Inter&display=swap);
+
 .bingolobby-hero {
     height: 380px;
     background: #44385D;
@@ -173,9 +176,17 @@
             font-size: 40px;
             align-self: center;
             line-height: 65%;
-            margin-right: 20px;
             margin-left: auto;
             margin-top: 15px;
+
+            min-width: 120px;
+            margin-right: 5px;
+
+            -moz-font-feature-settings:"tnum" 1; /* Firefox 31+ */
+            -moz-font-feature-settings:"tnum=1"; 
+            -webkit-font-feature-settings: 'tnum' 1; /* Chrome 31+, Android 4.4+, Opera 24+ */
+            font-feature-settings: 'tnum' 1; /* IE10+ */
+            font-family: 'Inter', sans-serif;
         }
     }
 }
@@ -400,7 +411,19 @@
 
     &__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        column-gap: 2%;
+
+        @supports not (column-gap: 2%) {
+            display: inline-flex; 
+            flex-wrap: wrap;
+            margin: 0 -1%;
+            width: calc(100% + 2%);
+
+            .bingolobby__chatschema__day {
+                margin: 0 calc(2% / 2);
+            }
+        }
 
         &:not(:last-child) {
             margin-bottom: 35px;
@@ -448,7 +471,19 @@
 
     &__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        column-gap: 2%;  
+
+        @supports not (column-gap: 2%) {
+            display: inline-flex; 
+            flex-wrap: wrap;
+            margin: 0 -1%;
+            width: calc(100% + 2%);
+
+            .bingolobby__bingoschema__item {
+                margin: 0 calc(2% / 2);
+            }
+        }
 
         &:not(:last-child) {
             margin-bottom: 35px;
@@ -575,7 +610,19 @@
 
     &__container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        column-gap: 2%;
+
+        @supports not (column-gap: 2%) {
+            display: inline-flex; 
+            flex-wrap: wrap;
+            margin: 0 -1%;
+            width: calc(100% + 2%);
+
+            .bingolobby__faq__item {
+                margin: 0 calc(2% / 2);
+            }
+        }
 
         &:not(:last-child) {
             margin-bottom: 25px;
@@ -1036,8 +1083,7 @@
 @media screen and (max-width: 1400px) {
     .bingolobby-hero__head_v1 {
         .bingolobby-hero__head-game {
-            margin-left: 25px;
-            margin-right: 25px;
+            margin: 0 auto;
         }
 
         .bingolobby-hero__head-title {
@@ -1063,7 +1109,7 @@
         
         .bingolobby-hero__head-game {
             margin: 0;
-            width: 50%;
+            width: calc(100% - 120px - 200px);
         }
 
         .bingolobby-hero__head-title {
