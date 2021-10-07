@@ -22,13 +22,13 @@
     line-height: 33px;
 }
 
-.campaign-tabs {
-    margin-top: 0;
+// .campaign-tabs {
+//     margin-top: 0;
 
-    .bingolobby-tabs-panel:nth-of-type(1) {
-        order: 1;
-    }
-}
+//     .bingolobby-tabs-panel:nth-of-type(1) {
+//         order: 1;
+//     }
+// }
 
 .ml-2017 .campaign__howitworks {
     margin-top: 40px;
@@ -38,9 +38,15 @@
     }
 }
 
+.ml-2017 .campaign-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .campaign-hero {
     position: relative;
-    height: 380px;
+    min-height: 380px;
 
     .campaign-hero__bg {
         background-color: #003E52;
@@ -58,6 +64,9 @@
     align-items: center;
     height: 100%;
     color: white;
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 40px;
 
     &-checkpoints-advanced {
         display: none;
@@ -279,37 +288,9 @@
     }
 
     .campaign-tabs {
-        .bingolobby-tabs-panel:nth-of-type(3),
-        .bingolobby-tabs-panel:nth-of-type(2) {
-            height: 0;
-            visibility: hidden;
-            overflow: hidden;
-            opacity: 0;
-    
-            &.active {
-                visibility: visible;
-                overflow: visible;
-                opacity: 1;
-                height: calc(100vh - 32px);
-                top: 32px;
-                position: fixed;
-                left: 0;
-                width: 100%;
-                z-index: 1004;
-                overflow-y: auto;
-                padding-bottom: 30px;
 
-                &::before {
-                    display: block;
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    position: fixed;
-                    left: 0;
-                    background-color: #E5F6FE;
-                    z-index: -1;
-                }
-            }
+        .bingolobby__bingoschema.active {
+            top: 0;
         }
 
         .faq__modal-btn-close {
@@ -320,18 +301,10 @@
             background-color: #fff;
         }
 
-        .bingolobby__bingoschema {
-            padding-top: 0;
-        }
-
         .bingolobby__bingoschema__title {
             display: block;
         }
 
-        .bingolobby-t-m__container {
-            order: 0;
-            margin-bottom: 20px;
-        }
     }
 
     .campaign__howitworks {
@@ -458,7 +431,7 @@
     }
 
     .campaign-hero {
-        height: 330px;
+        min-height: 330px;
     }
 
     .campaign__header_2col-revert {
@@ -503,10 +476,6 @@
         .btn {
             margin-left: 0;
         }
-    }
-
-    .campaign-tabs .bingolobby-t-m__container {
-        order: 1;
     }
 
     .ml-2017 .campaign__howitworks {
@@ -583,7 +552,7 @@
     }
 
     .campaign-hero {
-        height: auto;
+        min-height: auto;
     }
 
     .campaign__header-content {
