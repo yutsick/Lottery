@@ -1037,22 +1037,19 @@
     }
 }
 
-.bingolobby-t-m__container {
-    display:none;
-    flex-direction: column;
-    order: 3;
-    margin-top: 25px;
-    width: 100%;
-}
+// .bingolobby-t-m__container {
+//     display:none;
+//     flex-direction: column;
+//     order: 3;
+//     margin-top: 25px;
+//     width: 100%;
+// }
 
 .bingolobby__schema-block {
+    display:none;
     background-color: $color-secondary-light;
     padding: 40px 40px 30px 20px;
     width: 100%;
-
-    &:not(:last-child) {
-        margin-bottom: 20px;
-    }
 
     .bingolobby__schema-block__title {
         margin: 0;
@@ -1233,8 +1230,8 @@
         width: 50%;
     }
 
-    .bingolobby-t-m__container {
-        display: flex;
+    .bingolobby__schema-block {
+        display: block;
     }
 
     .bingolobby-tabs {
@@ -1249,35 +1246,36 @@
             height: auto;
             visibility: visible;
             opacity: 1;
+            margin: 10px 0;
     
-            &:nth-child(1) {
-                order: 5;
-                width: 100%;
-            }
+            // &:nth-child(1) {
+            //     order: 5;
+            //     width: 100%;
+            // }
     
-            &:nth-child(2) {
-                order: 4;
-                width: 100%;
-            }
+            // &:nth-child(2) {
+            //     order: 4;
+            //     width: 100%;
+            // }
     
-            &:nth-child(3) {
-                order: 2;
-                width: 49%;
-            }
+            // &:nth-child(3) {
+            //     order: 2;
+            //     width: 49%;
+            // }
     
-            &:nth-child(4),
-            &:nth-child(5),
-            &:nth-child(7) {
-                height: 0;
-                visibility: hidden;
-                overflow: hidden;
-                opacity: 0;
-            }
+            // &:nth-child(4),
+            // &:nth-child(5),
+            // &:nth-child(7) {
+            //     height: 0;
+            //     visibility: hidden;
+            //     overflow: hidden;
+            //     opacity: 0;
+            // }
     
-            &:nth-child(6) {
-                order: 1;
-                width: 49%;
-            }
+            // &:nth-child(6) {
+            //     order: 1;
+            //     width: 49%;
+            // }
         }
 
         &__panels-container {
@@ -1285,11 +1283,16 @@
             display: flex;
             justify-content: space-between;
             align-items: stretch;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            column-gap: 20px;
         }
     }
 
     .bingolobby__howitworks {
         padding-bottom: 0;
+        padding-top: 0;
 
         &__content {
             display: none;
@@ -1366,7 +1369,8 @@
     .bingolobby__contests {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
 
         &__col {
             width: 100%;
@@ -1383,8 +1387,9 @@
     }
 
     .bingolobby__deposits {
-        margin-top: 20px;
-        padding: 0;
+        margin-top: 0px;
+        margin-bottom: 0;
+        padding: 40px 0;
         height: 100%;
         align-items: center;
         justify-content: center;
@@ -1470,21 +1475,72 @@
         }
     }
 
-    .bingolobby-tabs-panel:nth-child(4),
-    .bingolobby-tabs-panel:nth-child(5),
-    .bingolobby-tabs-panel:nth-child(7) {
+    // .bingolobby-tabs-panel:nth-child(4),
+    // .bingolobby-tabs-panel:nth-child(5),
+    // .bingolobby-tabs-panel:nth-child(7) {
+    //     position: fixed;
+    //     left: 0;
+    //     width: 100%;
+    //     top: 167px;
+    //     z-index: 1004;
+    //     overflow-y: auto;
+    //     padding-bottom: 30px;
+
+    //     &.active {
+    //         visibility: visible;
+    //         opacity: 1;
+    //         height: calc(100vh - 32px);
+    //     }
+    // }
+
+    .bingolobby__chatschema,
+    .bingolobby__bingoschema,
+    .bingolobby__faq {
         position: fixed;
+        padding: 0;
+        margin: 0;
         left: 0;
-        width: 100%;
-        top: 167px;
-        z-index: 1004;
-        overflow-y: auto;
-        padding-bottom: 30px;
+        width: 0;
+        top: 0;
+        opacity: 0;
+        overflow: hidden;
+        visibility: hidden;
+        height: 0;
+        transition: opacity 0.3s ease;
 
         &.active {
+            background-color: #E5F6FE;
             visibility: visible;
             opacity: 1;
-            height: calc(100vh - 32px);
+            height: 100vh;
+            width: 100%;
+            overflow-y: auto;
+            padding-bottom: 30px;
+            z-index: 1004;
+            padding-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    #panel__bingoschema,
+    #panel__chatschema,
+    #panel__faq,
+    #panel__contests,
+    #panel__jackpots {
+        width: 100%;
+    }
+
+    #panel__chatschema {
+        margin: 0;
+    }
+
+    #panel__howitworks,
+    #panel__deposits {
+        width: calc(50% - 10px);
+
+        &.fullWidth {
+            width: 100%;
         }
     }
 
@@ -1515,21 +1571,21 @@
         }
     }
 
-    .bingolobby-tabs-panel:nth-child(7) {
-        top: 32px;
+    // .bingolobby-tabs-panel:nth-child(7) {
+    //     top: 32px;
 
-        &::before {
-            display: block;
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 32;
-            left: 0;
-            background-color: $color-secondary-lighter;
-            z-index: -1;
-        }
-    }
+    //     &::before {
+    //         display: block;
+    //         content: '';
+    //         width: 100%;
+    //         height: 100%;
+    //         position: fixed;
+    //         top: 32;
+    //         left: 0;
+    //         background-color: $color-secondary-lighter;
+    //         z-index: -1;
+    //     }
+    // }
 
     .bingolobby__bingoschema {
         height: auto;
@@ -1587,6 +1643,13 @@
         }
     }
 
+    .bingolobby__chatschema,
+    .bingolobby__bingoschema {
+        &.active {
+            top: 167px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 848px) {
@@ -1600,6 +1663,9 @@
 }
 
 @media screen and (max-width: 742px) {
+    .bingolobby-tabs-panel {
+        margin: 5px 0;
+    }
     //Video block on tablet => open modal when click START (reset modal styles)
     .bingolobby__howitworks {
         .s-video::after {
@@ -1629,31 +1695,17 @@
         width: 50%;
     }
 
-    .bingolobby-tabs-panel:nth-child(6),
-    .bingolobby-tabs-panel:nth-child(3) {
+    // .bingolobby-tabs-panel:nth-child(6),
+    // .bingolobby-tabs-panel:nth-child(3) {
+    //     width: 100%;
+    // }
+
+    #panel__howitworks, #panel__deposits {
         width: 100%;
     }
 
     .bingolobby__deposits {
         padding: 30px 0 50px;
-        margin-top: 10px;
-    }
-
-    .bingolobby__howitworks {
-        padding-top: 10px;
-    }
-
-    .bingolobby-t-m__container {
-        margin-top: 10px;
-    }
-
-    .bingolobby__schema-block:not(:last-child) {
-        margin-bottom: 10px;
-    }
-
-    .bingolobby__contests {
-        margin-bottom: 10px;
-        margin-top: 10px;
     }
 
     .bingolobby__contests__col:not(:last-child) {
@@ -1675,9 +1727,9 @@
         height: 115px;
     }
 
-    .bingolobby-tabs-panel:nth-child(4) {
-        top: 147px;
-    }
+    // .bingolobby-tabs-panel:nth-child(4) {
+    //     top: 147px;
+    // }
 
     .bingolobby__chatschema__day {
         width: 100%;

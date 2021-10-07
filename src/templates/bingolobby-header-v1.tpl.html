@@ -12,17 +12,17 @@
     <section class="bingolobby-tabs">
         <div class="container">
             <div class="bingolobby-tabs__head-container">
-				<a href="#bingolobby-tab1" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn active">Jackpottar & högsta vinster</a>
-				<a href="#bingolobby-tab2" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Tävlingar</a>
-				<a href="#bingolobby-tab3" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Sätt in pengar</a>
-				<a href="#bingolobby-tab4" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Chatschema</a>
-				<a href="#bingolobby-tab5" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Bingoschema</a>
-				<a href="#bingolobby-tab6" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Så funkar det</a>
-				<a href="#bingolobby-tab7" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn">Vanliga frågor & svar</a>
+				<a data-orderD="02" href="#panel__jackpots" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn js-tab-order active">Jackpottar & högsta vinster</a>
+				<a data-orderD="03" href="#panel__contests" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn js-tab-order">Tävlingar</a>
+				<a data-orderD="10" href="#panel__deposits" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn js-tab-order">Sätt in pengar</a>
+				<a data-orderD="04" href="#panel__chatschema" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn js-tab-order">Chatschema</a>
+				<a data-orderD="05" href="#panel__bingoschema" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn js-tab-order">Bingoschema</a>
+				<a data-orderD="01" href="#panel__howitworks" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn js-tab-order">Så funkar det</a>
+				<a data-orderD="06" href="#panel__faq" class="bingolobby-tabs__head-item js-bingolobby-tabs__btn js-tab-order">Vanliga frågor & svar</a>
 			</div>
 
 			<div class="bingolobby-tabs__panels-container">
-				<div id="bingolobby-tab1" class="bingolobby-tabs-panel js-bingolobby-tabs-panel active">
+				<div data-orderT="01" data-orderM="10" id="panel__jackpots" class="bingolobby-tabs-panel js-bingolobby-tabs-panel js-panel-order active">
 					<div class="bingolobby__jackpots-stats">
 						<div class="bingolobby__jackpots-stats__col bingolobby__jackpots-stats__col_gold">
 							<span class="bingolobby__jackpots-stats__title">
@@ -150,7 +150,7 @@
 					</div>
 				</div>
 
-				<div id="bingolobby-tab2" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
+				<div data-orderT="04" data-orderM="02" id="panel__contests" class="bingolobby-tabs-panel js-bingolobby-tabs-panel js-panel-order">
 					<div class="bingolobby__contests">
 						<div class="bingolobby__contests__col">
 							<div class="bingolobby-split-block bingolobby__contest__split-block">
@@ -175,7 +175,7 @@
 					</div>
 				</div>
 
-				<div id="bingolobby-tab3" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
+				<div data-orderT="03" data-orderM="01" id="panel__deposits" class="bingolobby-tabs-panel js-bingolobby-tabs-panel js-panel-order">
 					<div class="bingolobby__deposits">
 						<form>
 							<div class="bingolobby__deposits-wrapper">
@@ -219,7 +219,7 @@
 					</div>
 				</div>
 
-				<div id="bingolobby-tab4" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
+				<div data-orderT="05" data-orderM="03" id="panel__chatschema" class="bingolobby-tabs-panel js-bingolobby-tabs-panel js-panel-order">
 					<div class="bingolobby__chatschema">
 						<h5 class="bingolobby__chatschema__title">Chatschema</h5>
 
@@ -413,7 +413,7 @@
 					</div>
 				</div>
 
-				<div id="bingolobby-tab5" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
+				<div data-orderT="06" data-orderM="04" id="panel__bingoschema" class="bingolobby-tabs-panel js-bingolobby-tabs-panel js-panel-order">
 					<div class="bingolobby__bingoschema">
 						<h5 class="bingolobby__bingoschema__title">Bingoschema</h5>
 
@@ -542,9 +542,19 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="bingolobby__schema-block bingolobby__schema-block_T-M">
+						<h5 class="bingolobby__schema-block__title">Chat & bingochema</h5>
+						<div class="bingolobby__schema-block__line">
+							<p>
+								Se när du kan spela ditt favoritspel och när chatvärdarna är på plats i chatten.
+							</p>
+							<a href="#" class="btn btn-wide--blue js-btn-toBingoschema" data-target="#bingolobbySchemaModal">Se här</a>
+						</div>
+					</div>
 				</div>
 
-				<div id="bingolobby-tab6" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
+				<div data-orderT="02" data-orderM="06" id="panel__howitworks" class="bingolobby-tabs-panel js-bingolobby-tabs-panel js-panel-order" ><!-- add class "fullWidth" if no more 50% width panels -->
 					<div class="bingolobby__howitworks">
 						<div class="bingolobby__howitworks__content">
 							<h4 class="bingolobby__howitworks__content-title">För att spela</h4>
@@ -581,10 +591,11 @@
 					</div>
 				</div>
 
-				<div id="bingolobby-tab7" class="bingolobby-tabs-panel js-bingolobby-tabs-panel">
-					<a href="#" class="modal-btn-close faq__modal-btn-close js-modal-btn-close" data-target="#bingolobby-tab7">Close</a>
-
+				<div data-orderT="07" data-orderM="05" id="panel__faq" class="bingolobby-tabs-panel js-bingolobby-tabs-panel js-panel-order">
+					
 					<div class="bingolobby__faq">
+						<a href="#" class="modal-btn-close faq__modal-btn-close js-modal-btn-close" data-target=".bingolobby__faq">Close</a>
+
 						<h5 class="bingolobby__faq__title">Vanliga frågor & svar</h5>
 
 						<div class="bingolobby__faq__container">
@@ -665,25 +676,14 @@
 							</div> -->
 						</div>
 					</div>
-				</div>
 
-				<div class="bingolobby-t-m__container">
-					<div class="bingolobby__schema-block">
-						<h5 class="bingolobby__schema-block__title">Chat & bingochema</h5>
-						<div class="bingolobby__schema-block__line">
-							<p>
-								Se när du kan spela ditt favoritspel och när chatvärdarna är på plats i chatten.
-							</p>
-							<a href="#" class="btn btn-wide--blue js-btn-toBingoschema" data-target="#bingolobbySchemaModal">Se här</a>
-						</div>
-					</div>
-					<div class="bingolobby__schema-block">
+					<div class="bingolobby__schema-block bingolobby__schema-block_T-M">
 						<h5 class="bingolobby__schema-block__title">Vanliga frågor & svar</h5>
 						<div class="bingolobby__schema-block__line">
 							<p>
 								Något du undrar över? Se våra vanliga frågor och svar om vår bingo.
 							</p>
-							<a href="#" class="btn btn-wide--blue js-btn-toFaq" data-target="">Se här</a>
+							<a href="#" class="btn btn-wide--blue js-btn-toFaq" data-target=".bingolobby__faq">Se här</a>
 						</div>
 					</div>
 				</div>
@@ -694,10 +694,10 @@
 			<a href="#" class="modal-btn-close js-modal-btn-close" data-target="#bingolobbySchemaModal">Close</a>
 
 			<div class="bingolobby__schemas-tabs">
-				<a href="#bingolobby-tab4" class="bingolobby__schemas-tab active">
+				<a href=".bingolobby__chatschema" class="bingolobby__schemas-tab active">
 					Chatschema
 				</a>
-				<a href="#bingolobby-tab5" class="bingolobby__schemas-tab">
+				<a href=".bingolobby__bingoschema" class="bingolobby__schemas-tab">
 					Bingoschema
 				</a>
 			</div>

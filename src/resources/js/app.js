@@ -67,6 +67,7 @@ import registerInformation from './layout/register-information';
 import textToggle from './utilities/textToggle';
 import breakpointListener from './utilities/breakpoint-listener';
 import scroller from './utilities/scroller';
+import orderSwitcher from './utilities/order-switcher';
 
 $(function () {
 	window.ML = window.ML || {};
@@ -116,6 +117,7 @@ $(function () {
 	new cartQuantity();
 	bankIDForm();
 	scroller();
+	orderSwitcher();
 	slideOutNavigation();
 	slideOutAccountNavigation();
 	navigationControl();
