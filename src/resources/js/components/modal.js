@@ -64,7 +64,7 @@ export default function () {
 			let target = $(button.getAttribute('data-target'));
 
 			if($(target).length) {
-				$(button.getAttribute('data-target')).addClass('active');
+				$(target).addClass('active');
 				$('body').addClass("modal-open");
 			};
 		});
@@ -94,13 +94,14 @@ export default function () {
 	}
 
 	function modalSchemasOpen(btn, target) {
+		
 		$(btn).on('click', (evt) => {
 			evt.preventDefault();
 			let button = evt.currentTarget;
 
 			$(button.getAttribute('data-target')).addClass('active');
 			$('body').addClass("modal-open");
-
+			
 			$('.js-bingolobby-tabs-panel').removeClass('active');
 			$(target).addClass('active');
 			$('.bingolobby__schemas-tab[href="' + target + '"]').addClass('active');
@@ -115,7 +116,7 @@ export default function () {
 
 			$(button.getAttribute('data-target')).removeClass('active');
 			$('body').removeClass('modal-open');
-			$('.js-bingolobby-tabs-panel').removeClass('active');
+			$('.js-bingolobby-tabs-panel .active').removeClass('active');
 			$('.bingolobby__schemas-tab').removeClass('active');
 		});
 		
@@ -126,20 +127,23 @@ export default function () {
 		if($( window ).width() <= 992 && $( window ).width() > 742) {
 			
 			$('.js-bingolobby-tabs-panel').removeClass('active');
+			$('.js-bingolobby-tabs-panel .active').removeClass('active');
+			$('.js-campaign-tabs-panel .active').removeClass('active');
 			$('.bingolobby__schemas-modal').removeClass('active');
 
+			$('.bingolobby__faq').removeClass('active');
+
 			$('.js-campaign-tabs-panel').removeClass('active');
-			$('.bingolobby__schemas-modal').removeClass('active');
 
 			$('body').removeClass('modal-open');
 		}
 	});
 
-	modalSchemasOpen('.bingolobby-tabs .js-btn-toBingoschema', '#bingolobby-tab4');
+	modalSchemasOpen('.bingolobby-tabs .js-btn-toBingoschema', '.bingolobby__chatschema');
 	modalSchemasClose('.bingolobby__schemas-modal .js-modal-btn-close');
 
-	modalSchemasOpen('.bingolobby-tabs .js-btn-toFaq', '#bingolobby-tab7');
-	modalSchemasClose('.bingolobby-tabs #bingolobby-tab7 .js-modal-btn-close');
+	modalOpen('.bingolobby-tabs .js-btn-toFaq');
+	modalClose('.bingolobby__faq .js-modal-btn-close');
 
 	modalOpen('.js-bingolobby__howitworks__video');
 	modalCloseVideo('.bingolobby__howitworks__video .js-modal-btn-close');
@@ -149,6 +153,5 @@ export default function () {
 
 	modalOpen('.campaign-tabs .js-btn-toBingoschema');
 	modalOpen('.campaign-tabs .js-btn-toFaq');
-	modalClose('#campaign-tab3 .js-modal-btn-close');
-	modalClose('#campaign-tab2 .js-modal-btn-close');
+	modalClose('.js-campaign-tabs-panel .js-modal-btn-close');
 }
