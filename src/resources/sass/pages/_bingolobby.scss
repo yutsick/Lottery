@@ -22,7 +22,11 @@
         width: 100%;
         background-color: #ffffffed;
         padding: 20px 0;
-        padding-top: 30px;
+        padding-top: 26px;
+        min-height: 124px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         &_v1 {
             .bingolobby-hero__head-title {
@@ -291,7 +295,7 @@
 
 .bingolobby__deposits {
     background-color: $color-secondary-lighter;
-    padding: 50px 0 90px;
+    padding: 50px 20px 90px;
     display: flex;
     justify-content: center;
 
@@ -412,18 +416,6 @@
     &__container {
         display: flex;
         justify-content: flex-start;
-        column-gap: 2%;
-
-        @supports not (column-gap: 2%) {
-            display: inline-flex; 
-            flex-wrap: wrap;
-            margin: 0 -1%;
-            width: calc(100% + 2%);
-
-            .bingolobby__chatschema__day {
-                margin: 0 calc(2% / 2);
-            }
-        }
 
         &:not(:last-child) {
             margin-bottom: 35px;
@@ -432,6 +424,10 @@
 
     &__day {
         width: 23%;
+
+        &:not(:last-child) {
+            margin-right: 2.6%;
+        }
 
         &-item:not(:last-child) {
             margin-bottom: 30px;
@@ -472,18 +468,6 @@
     &__container {
         display: flex;
         justify-content: flex-start;
-        column-gap: 2%;  
-
-        @supports not (column-gap: 2%) {
-            display: inline-flex; 
-            flex-wrap: wrap;
-            margin: 0 -1%;
-            width: calc(100% + 2%);
-
-            .bingolobby__bingoschema__item {
-                margin: 0 calc(2% / 2);
-            }
-        }
 
         &:not(:last-child) {
             margin-bottom: 35px;
@@ -492,6 +476,10 @@
 
     &__item {
         width: 23%;
+
+        &:not(:last-child) {
+            margin-right: 2.6%;
+        }
     }
 
     &__item-name {
@@ -611,18 +599,6 @@
     &__container {
         display: flex;
         justify-content: flex-start;
-        column-gap: 2%;
-
-        @supports not (column-gap: 2%) {
-            display: inline-flex; 
-            flex-wrap: wrap;
-            margin: 0 -1%;
-            width: calc(100% + 2%);
-
-            .bingolobby__faq__item {
-                margin: 0 calc(2% / 2);
-            }
-        }
 
         &:not(:last-child) {
             margin-bottom: 25px;
@@ -631,6 +607,10 @@
 
     &__item {
         width: 23%;
+
+        &:not(:last-child) {
+            margin-right: 2.6%;
+        }
     }
 
     &__item-title {
@@ -861,6 +841,7 @@
 
     &__values {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         margin-top: 32px;
         margin-bottom: 33px;
@@ -1003,7 +984,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin: 0 10px;
+        margin: 0 18px;
 
         &:first-child {
             margin-left: 0;
@@ -1036,14 +1017,6 @@
         }
     }
 }
-
-// .bingolobby-t-m__container {
-//     display:none;
-//     flex-direction: column;
-//     order: 3;
-//     margin-top: 25px;
-//     width: 100%;
-// }
 
 .bingolobby__schema-block {
     display:none;
@@ -1090,6 +1063,12 @@
 
     .bingolobby-tabs__head-container {
         padding: 20px 1em;
+    }
+}
+
+@media screen and (max-width: 1287px) {
+    .bingolobby-tabs__head-item {
+        font-size: 18px;
     }
 }
 
@@ -1186,9 +1165,11 @@
     .bingolobby-tabs__head-container {
         padding: 20px;
     }
+}
 
+@media screen and (max-width:1200px) {
     .bingolobby-tabs__head-item {
-        font-size: 18px;
+        margin: 0 10px;
     }
 }
 
@@ -1247,35 +1228,6 @@
             visibility: visible;
             opacity: 1;
             margin: 10px 0;
-    
-            // &:nth-child(1) {
-            //     order: 5;
-            //     width: 100%;
-            // }
-    
-            // &:nth-child(2) {
-            //     order: 4;
-            //     width: 100%;
-            // }
-    
-            // &:nth-child(3) {
-            //     order: 2;
-            //     width: 49%;
-            // }
-    
-            // &:nth-child(4),
-            // &:nth-child(5),
-            // &:nth-child(7) {
-            //     height: 0;
-            //     visibility: hidden;
-            //     overflow: hidden;
-            //     opacity: 0;
-            // }
-    
-            // &:nth-child(6) {
-            //     order: 1;
-            //     width: 49%;
-            // }
         }
 
         &__panels-container {
@@ -1408,7 +1360,16 @@
             width: 100%;
     
             &:first-child {
-                display: none;
+                margin-bottom:20px;
+
+                p {
+                    display: none;
+                }
+
+                .bingolobby__deposits__item-title {
+                    text-align: center;
+                    margin: 0;
+                }
             }
         }
 
@@ -1474,24 +1435,6 @@
             }
         }
     }
-
-    // .bingolobby-tabs-panel:nth-child(4),
-    // .bingolobby-tabs-panel:nth-child(5),
-    // .bingolobby-tabs-panel:nth-child(7) {
-    //     position: fixed;
-    //     left: 0;
-    //     width: 100%;
-    //     top: 167px;
-    //     z-index: 1004;
-    //     overflow-y: auto;
-    //     padding-bottom: 30px;
-
-    //     &.active {
-    //         visibility: visible;
-    //         opacity: 1;
-    //         height: calc(100vh - 32px);
-    //     }
-    // }
 
     .bingolobby__chatschema,
     .bingolobby__bingoschema,
@@ -1568,24 +1511,16 @@
         &__item {
             width: 48%;
             margin-bottom: 30px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:nth-child(odd) {
+                margin-right: 4%;
+            }
         }
     }
-
-    // .bingolobby-tabs-panel:nth-child(7) {
-    //     top: 32px;
-
-    //     &::before {
-    //         display: block;
-    //         content: '';
-    //         width: 100%;
-    //         height: 100%;
-    //         position: fixed;
-    //         top: 32;
-    //         left: 0;
-    //         background-color: $color-secondary-lighter;
-    //         z-index: -1;
-    //     }
-    // }
 
     .bingolobby__bingoschema {
         height: auto;
@@ -1603,6 +1538,14 @@
         &__item {
             width: 48%;
             margin-bottom: 44px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:nth-child(odd) {
+                margin-right: 4%;
+            }
         }
     }
 
@@ -1640,6 +1583,14 @@
         &__day {
             width: 48%;
             margin-bottom: 30px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:nth-child(odd) {
+                margin-right: 4%;
+            }
         }
     }
 
@@ -1695,17 +1646,12 @@
         width: 50%;
     }
 
-    // .bingolobby-tabs-panel:nth-child(6),
-    // .bingolobby-tabs-panel:nth-child(3) {
-    //     width: 100%;
-    // }
-
     #panel__howitworks, #panel__deposits {
         width: 100%;
     }
 
     .bingolobby__deposits {
-        padding: 30px 0 50px;
+        padding: 34px 0 35px;
     }
 
     .bingolobby__contests__col:not(:last-child) {
@@ -1727,16 +1673,26 @@
         height: 115px;
     }
 
-    // .bingolobby-tabs-panel:nth-child(4) {
-    //     top: 147px;
-    // }
-
     .bingolobby__chatschema__day {
         width: 100%;
+
+        &:nth-child(odd) {
+            margin-right: 0;
+        }
     }
 
     .bingolobby__bingoschema {
         padding-top: 35px;
+
+        &__item {
+            &:nth-child(odd) {
+                margin-right: 0;
+            }
+        } 
+    }
+
+    .bingolobby__faq__item:nth-child(odd) {
+        margin-right: 0;
     }
 
 }
@@ -1746,7 +1702,7 @@
         height: 481px;
 
         &__head {
-            padding-top: 24px;
+            padding-top: 19px;
         }
     }
 
@@ -1819,7 +1775,7 @@
     }
 
     .bingolobby-hero__head_v2 {
-        padding-bottom: 28px;
+        padding-bottom: 16px;
         .bingolobby-hero__head-host {
             width: 100%;
             margin-top: 30px;
@@ -1852,6 +1808,7 @@
             width: 50%;
             flex-direction: column;
             align-items: flex-start;
+            margin-bottom: 0;
 
             &:last-child {
                 width: auto;
