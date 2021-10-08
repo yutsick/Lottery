@@ -178,6 +178,24 @@ export default function () {
 		autoPlay: 5000
 	});
 
+
+	//block-bingo-slider on bingolobby page
+	let bingoSliderOptions = {
+		cellSelector: '.block-bingo__slide',
+		cellAlign: 'left',
+		wrapAround: false,
+		contain: true,
+		percentPosition: true,
+		draggable: true,
+		pageDots: false,
+		prevNextButtons: true,
+	}
+
+	// @media for slider
+	if ( matchMedia('screen and (max-width: 596px)').matches ) {
+		bingoSliderOptions.cellAlign = 'center';
+	}
+	$('.block-bingo-slider').flickity(bingoSliderOptions);
 	$('.sbs-arrows').flickity({
 		cellSelector: '.sbs__item',
 		cellAlign: 'left',

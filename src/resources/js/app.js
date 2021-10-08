@@ -49,6 +49,8 @@ import Odometer from './components/odometer';
 import Carousel from './components/carousel';
 import RegisterLottery from './components/register-lottery';
 import Confetti from './components/confetti';
+import tabs from './components/tabs';
+import radioToggle from './components/radio-toggle';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -65,6 +67,7 @@ import registerInformation from './layout/register-information';
 import textToggle from './utilities/textToggle';
 import breakpointListener from './utilities/breakpoint-listener';
 import scroller from './utilities/scroller';
+import orderSwitcher from './utilities/order-switcher';
 
 $(function () {
 	window.ML = window.ML || {};
@@ -114,6 +117,7 @@ $(function () {
 	new cartQuantity();
 	bankIDForm();
 	scroller();
+	orderSwitcher();
 	slideOutNavigation();
 	slideOutAccountNavigation();
 	navigationControl();
@@ -121,6 +125,8 @@ $(function () {
 	grid();
 	Carousel();
 	RegisterLottery.init();
+	tabs();
+	radioToggle();
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();

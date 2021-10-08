@@ -1,0 +1,105 @@
+@@include('layout/_header.html', {
+	"class": "page-front logged-out"
+	})
+
+	@@include('layout/_top-simple.html')
+
+<div class="content-wrapper ml-2017 content-wrapper_campaign">
+	
+    @@include('blocks/_campaign-header.html', {"page": "stodhjulet", "header": "2-col"})
+
+	
+	<section class="text-align-center">
+		<div class="container">
+			<div class="space-60"></div>
+			<h2 class="">Så funkar det</h2>
+			<div class="space-30"></div>
+			<div class="row equal-height">
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
+						<h3 class="s-bullet-points__title">Jackpott- och nitlottschans</h3>
+						<p class="s-bullet-points__text">Utöver skrapet har du chans att vinna stort i våra spännande extradragningar tolv gånger om året, där alla dina lotter ingår. </p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/promotion--image.png);"></div>
+						<h3 class="s-bullet-points__title">Vinster för miljoner</h3>
+						<p class="s-bullet-points__text">Varje månad kan du skrapa fram upp till 2 miljoner. Hus, båtar, bilar eller resor – det är du som bestämmer vilka drömvinster som blir dina!</p>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4">
+					<div class="s-bullet-points__item">
+						<div class="s-bullet-points__img" style="background-image: url(assets/img/mockup/puff-3.jpeg);"></div>
+						<h3 class="s-bullet-points__title">Varje lott gör skillnad för utsatta</h3>
+						<p class="s-bullet-points__text">Förra året kunde 2892 barn åka på läger, tack vare våra lottköpare. Det är en av flera livsviktiga aktiviteter som du bidrar till. 
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="text-align-center bullet-points__after-btn">
+        <div class="container">
+            <a href="#" class="btn btn-success btn-48">Prova nu för 50 kr</a>
+        </div>
+    </section>
+
+
+	<section class="campaign__video m-5 campaign__video_stodhjulet">
+		<div class="container">
+			<div class="campaign__video-wrapper">
+				<h2 class="text-align-center">Det här är Skattjakten</h2>
+				<div class="s-video">
+					<iframe
+						loading="lazy"
+						src="https://www.youtube.com/embed/EOQZ4VEi92M?rel=0"
+						srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%} a{display:block} a>img{position:absolute;width:100%;height:auto;top:50%;left:0;right:0;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);margin:auto} span{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:absolute;width:64px;height:64px;border-radius:50%;top:50%;left:50%;margin:-40px 0 0 -40px;-webkit-box-sizing:border-box;box-sizing:border-box} span>img{display:block;width:64;height:auto;}</style>
+								<a href=https://www.youtube.com/embed/EOQZ4VEi92M?autoplay=1&rel=0>
+									<img src=assets/img/background/video-block-2.jpg>
+									<span>
+										<img src=assets/img/icons/play-btn2.svg>
+									</span>
+								</a>"
+						frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Promotion Slider -->
+	<section class="slider-promo">
+		<div class="container-fluid">
+			<div class="row equal-height">
+				<div class="col-xs-12 col-sm-12 col-lg-4">
+					<div class="slider-promo__content">
+						<div class="slider-promo__content-inner">
+							<h2 class="slider-promo__title">I Stödhjulet gör du skillnad på ditt sätt</h2>
+							<div class="slider-promo__text">
+								<p>Här är det du, och ingen annan, som bestämmer vart ditt bidrag ska gå. Välj den av IOGT-NTO-rörelsens livsviktiga verksamheter som ditt hjärta klappar mest för. Eller låt alla verksamheter dela lika!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-lg-8">
+					@@include('blocks/_slider-block.html')
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section class="text-align-center">
+        <div class="container">
+            <a href="" class="btn btn-success btn-48">Prova Stödhjulet nu</a>
+            <div class="space-80"></div>
+        </div>
+    </section>
+
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
