@@ -852,7 +852,10 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin: 0 17px;
+
+        &:not(:last-child) {
+            margin-right: 24px;
+        }
     }
 
     &__image {  
@@ -2012,12 +2015,7 @@
     }
 
     .bingoinfo-modals__values {
-        flex-direction: column;
         margin-bottom: 10px;
-
-        &-item {
-            margin-bottom: 20px;
-        }
     }
 
     .bingolobby-img-block {
