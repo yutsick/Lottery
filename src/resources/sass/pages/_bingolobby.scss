@@ -1243,6 +1243,16 @@
 
             column-gap: 20px;
         }
+
+        .faq__modal-btn-close,
+        .chatschema__modal-btn-close,
+        .bingoschema__modal-btn-close {
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
     }
 
     .bingolobby__howitworks {
@@ -1477,10 +1487,6 @@
         width: 100%;
     }
 
-    #panel__chatschema {
-        margin: 0;
-    }
-
     #panel__howitworks,
     #panel__deposits {
         width: calc(50% - 10px);
@@ -1488,14 +1494,6 @@
         &.fullWidth {
             width: 100%;
         }
-    }
-
-    .bingolobby-tabs .faq__modal-btn-close {
-        display: block;
-        margin: 0 auto;
-        margin-top: 30px;
-        margin-bottom: 15px;
-        background-color: #fff;
     }
 
     .bingolobby__faq {
@@ -1527,12 +1525,7 @@
 
     .bingolobby__bingoschema {
         height: auto;
-        padding-top: 65px;
-        margin-bottom: 60px;
-
-        &__title {
-            display: none;
-        }
+        padding-top: 0;
 
         &__container {
             flex-wrap: wrap;
@@ -1550,17 +1543,46 @@
                 margin-right: 4%;
             }
         }
+
+        &.panel-mobile-tab {
+            padding-top: 65px;
+            padding-bottom: 190px;
+
+            .bingolobby__bingoschema__title {
+                display: none;
+            }
+
+            &.active {
+                top: 167px;
+            }
+
+            .bingoschema__modal-btn-close {
+                display: none;
+            }
+        }
     }
 
     .bingolobby__chatschema {
-        padding-top: 34px;
+        padding-top: 0px;
         padding-left: 0;
         padding-right: 0;
         height: auto;
-        margin-bottom: 60px;
 
-        .bingolobby__chatschema__title {
-            display: none;
+        &.panel-mobile-tab {
+            padding-top: 65px;
+            padding-bottom: 190px;
+
+            .bingolobby__chatschema__title {
+                display: none;
+            }
+
+            &.active {
+                top: 167px;
+            }
+
+            .chatschema__modal-btn-close {
+                display: none;
+            }
         }
 
         &__container {
@@ -1594,13 +1616,6 @@
             &:nth-child(odd) {
                 margin-right: 4%;
             }
-        }
-    }
-
-    .bingolobby__chatschema,
-    .bingolobby__bingoschema {
-        &.active {
-            top: 167px;
         }
     }
 

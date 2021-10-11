@@ -139,11 +139,11 @@ export default function () {
 		}
 	});
 
-	modalSchemasOpen('.bingolobby-tabs .js-btn-toBingoschema', '.bingolobby__chatschema');
+	modalSchemasOpen('.bingolobby-tabs .js-btn-toSchemas', '.bingolobby__chatschema');
 	modalSchemasClose('.bingolobby__schemas-modal .js-modal-btn-close');
 
-	modalOpen('.bingolobby-tabs .js-btn-toFaq');
-	modalClose('.bingolobby__faq .js-modal-btn-close');
+	modalOpen('.js-btn-openModal');
+	modalClose('.js-modal-btn-close');
 
 	modalOpen('.js-bingolobby__howitworks__video');
 	modalCloseVideo('.bingolobby__howitworks__video .js-modal-btn-close');
