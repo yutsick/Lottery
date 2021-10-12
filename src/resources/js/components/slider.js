@@ -206,6 +206,9 @@ export default function () {
 		autoPlay: 5000
 	});
 
+
+	
+
 }
 
 
