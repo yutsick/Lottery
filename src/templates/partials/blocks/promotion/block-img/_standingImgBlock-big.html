@@ -1,0 +1,55 @@
+<!-- 
+
+    standingImgBlock_@@theme = light/dark
+
+    (title) - has_content_title = false/true
+    alignment-@@text_alignment = left/center
+    placement-@@text_placement = top/center/bottom
+
+    (link) - block_link = false/true - true if whole block is link
+
+    (shadow) - overlay = false/true
+    img-block__overlay_@@position = top/center/bottom
+
+    btn_@@link-style = underline/button 
+
+    @@btn_title = text of link
+
+    @@image = url of image
+    
+ -->
+
+<div class="col-xs-12 col-sm-12 col-md-6">
+    <div class="standingImgBlock standingImgBlock_big standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement">
+        @@if(context.block_link === false) {
+            <div class="img-block__content" style="background-image: url(@@image);">
+                @@if(context.overlay === true) {
+                    <div class="img-block__overlay img-block__overlay_@@position"></div>
+                }
+                @@if(context.has_content_title){
+                    <h4 class="img-block__title autoHyphens">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
+                }
+            </div>
+
+            <div class="img-block__cta">
+                @@if(context.theme === "light") {
+                  <a href="#" class="btn btn--sm btn-primary btn_@@link-style">@@btn_title</a>
+                }
+                @@if(context.theme === "dark") {
+                  <a href="#" class="btn btn--sm btn-invert btn_@@link-style">@@btn_title</a>
+                }
+            </div>
+        }
+    
+        @@if(context.block_link === true) {
+            <a class="img-block__content" style="background-image: url(@@image);" href="#">
+                @@if(context.overlay === true) {
+                    <div class="img-block__overlay img-block__overlay_@@position"></div>
+                }
+                @@if(context.has_content_title){
+                    <h4 class="img-block__title autoHyphens">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
+                }
+            </a>
+        }
+    </div>
+</div>
