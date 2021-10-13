@@ -24,4 +24,4 @@ dist/
 
 package.json
 package-lock.json
-.gitignore
+npm-shrinkwrap.json
