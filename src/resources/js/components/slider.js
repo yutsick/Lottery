@@ -207,7 +207,17 @@ export default function () {
 	});
 
 
+
+	$('#bingoheaderImageSlider').flickity({
+		cellSelector: '#bingoheaderImageSlider .bingolobby-slide__slide',
+		wrapAround: false,
+		// draggable: false,
+		pageDots: false,
+		prevNextButtons: false,
+		autoPlay: 5000
+	});
 	
+	  
 
 }
 

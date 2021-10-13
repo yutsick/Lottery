@@ -11,18 +11,22 @@
 		<section class="bingolobby-hero">
 			<h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
 			
-			<div id="bingoheaderImageSlider">
-				<picture>
-					<source media="(max-width:632px)" srcset="/assets/img/background/bingoheader-M.png">
-					<source media="(max-width:1225px)" srcset="/assets/img/background/bingoheader-T.png">
-					<img src="/assets/img/background/bingoheader-D.png" alt="Bingo!">
-				</picture>
+			<div class="bingolobby-header-slider" id="bingoheaderImageSlider">
+				<div class="bingolobby-slide__slide">
+					<picture>
+						<source media="(max-width:632px)" srcset="/assets/img/background/bingoheader-M.png">
+						<source media="(max-width:1225px)" srcset="/assets/img/background/bingoheader-T.png">
+						<img src="/assets/img/background/bingoheader-D.png" alt="Bingo!">
+					</picture>
+				</div>
 
-				<picture>
-					<source media="(max-width:632px)" srcset="/assets/img/background/bingoheaderM.png">
-					<source media="(max-width:1225px)" srcset="/assets/img/background/bingoheaderT.png">
-					<img src="/assets/img/background/bingoheaderD.png" alt="Bingo!">
-				</picture>
+				<div class="bingolobby-slide__slide">
+					<picture>
+						<source media="(max-width:632px)" srcset="/assets/img/background/bingoheaderM.png">
+						<source media="(max-width:1225px)" srcset="/assets/img/background/bingoheaderT.png">
+						<img src="/assets/img/background/bingoheaderD.png" alt="Bingo!">
+					</picture>
+				</div>
 			</div>
 		
 			<div class="bingolobby-hero__head bingolobby-hero__head_v1">
@@ -925,3 +929,5 @@
 </div>
 
 @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
+
+
