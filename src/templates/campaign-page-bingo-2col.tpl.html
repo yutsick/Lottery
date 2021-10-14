@@ -9,12 +9,14 @@
     @@include('blocks/_campaign-header.html', {"page": "bingo", "header": "2-col"})
 
 	<!-- 
-		class .campaign__howitworks_onlyVideo if no content ON MOBILE only works 
+		class .campaign__howitworks_onlyVideo-M if no content ON MOBILE only works 
+		class .campaign__howitworks_onlyVideo if no content ON ALL width works 
+		class .campaign__howitworks_videoBtn if no content but with button ON ALL width works
 
 		class .campaign__howitworks_revert-D if video-left and content-right ON DESKTOP only works
 		class .campaign__howitworks_revert-M if video-bottom and content-top ON MOBILE only works
 	-->
-    <section class="mt-60 campaign__howitworks campaign__howitworks_onlyVideo campaign__howitworks_revert-D campaign__howitworks_revert-M">
+    <section class="mt-60 campaign__howitworks campaign__howitworks_videoBtn">
         <div class="container">
             <div class="bingolobby__howitworks">
                 <div class="bingolobby__howitworks__content">
@@ -29,9 +31,8 @@
                     <a href="#" class="btn btn-wide--blue">Kom igång här</a>
                 </div>
                 
-                <div class="bingolobby__howitworks__video" id="bingolobbyVideoModal">
-                    <a href="#" class="modal-btn-close js-modal-btn-close" data-target="#bingolobbyVideoModal">Close</a>
-                    <div class="s-video js-bingolobby__howitworks__video" data-target="#bingolobbyVideoModal" id="modal-video">
+                <div class="bingolobby__howitworks__video">
+                    <div class="s-video">
                         <iframe
                             loading="lazy"
                             src="https://www.youtube.com/embed/EOQZ4VEi92M?rel=0"

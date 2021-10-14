@@ -1247,35 +1247,6 @@
             visibility: visible;
             opacity: 1;
             margin: 10px 0;
-    
-            // &:nth-child(1) {
-            //     order: 5;
-            //     width: 100%;
-            // }
-    
-            // &:nth-child(2) {
-            //     order: 4;
-            //     width: 100%;
-            // }
-    
-            // &:nth-child(3) {
-            //     order: 2;
-            //     width: 49%;
-            // }
-    
-            // &:nth-child(4),
-            // &:nth-child(5),
-            // &:nth-child(7) {
-            //     height: 0;
-            //     visibility: hidden;
-            //     overflow: hidden;
-            //     opacity: 0;
-            // }
-    
-            // &:nth-child(6) {
-            //     order: 1;
-            //     width: 49%;
-            // }
         }
 
         &__panels-container {
@@ -1336,7 +1307,7 @@
             }
         }
 
-        .s-video {
+        .js-bingolobby__howitworks__video {
             &::after {
                 content: '';
                 width: 100%;
@@ -1348,7 +1319,7 @@
             }
         }
 
-        &__video.active .s-video::after {
+        &__video.active .js-bingolobby__howitworks__video::after {
             display: none;
         }
     }

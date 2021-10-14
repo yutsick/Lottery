@@ -54,7 +54,7 @@
         }
 
         @@if (context.page === "skattjakten") {
-            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M">
+            <div class="campaign__header campaign__header_2col campaign__header_2col-revert">
                 <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
                 <div class="campaign__header-col">
                     <div class="campaign__header-image">
@@ -121,18 +121,20 @@
                 </picture>
             </div>
         </div>
-        <div class="campaign__header-checkpoints">
-            <div class="container">
-                <ul class="campaign__header-list">
-                    <li>Höga jackpottvinster</li>
-                    <li>Vinn tusentals kronor </li>
-                    <li>Flera vinstchanser</li>
-                </ul>
-            </div>
-        </div>
     }
-    
 </section>
+
+@@if (context.header === "3-col") {
+    <div class="campaign__header-checkpoints">
+        <div class="container">
+            <ul class="campaign__header-list">
+                <li>Höga jackpottvinster</li>
+                <li>Vinn tusentals kronor </li>
+                <li>Flera vinstchanser</li>
+            </ul>
+        </div>
+    </div>
+}
 
 @@if (context.page === "onlinelott") {
     <div class="campaign__header-checkpoints-advanced">
