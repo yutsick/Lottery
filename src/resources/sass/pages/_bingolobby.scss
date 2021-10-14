@@ -1323,7 +1323,7 @@
             }
         }
 
-        .s-video {
+        .js-bingolobby__howitworks__video {
             &::after {
                 content: '';
                 width: 100%;
@@ -1335,7 +1335,7 @@
             }
         }
 
-        &__video.active .s-video::after {
+        &__video.active .js-bingolobby__howitworks__video::after {
             display: none;
         }
     }
@@ -1518,6 +1518,14 @@
         }
     }
 
+    #panel__howitworks {
+        &.fullWidth {
+            .js-bingolobby__howitworks__video::after {
+                display: none;
+            }
+        }
+    }
+
     .bingolobby__faq {
         height: auto;
         padding-top: 0;
@@ -1659,7 +1667,7 @@
     }
     //Video block on tablet => open modal when click START (reset modal styles)
     .bingolobby__howitworks {
-        .s-video::after {
+        .js-bingolobby__howitworks__video::after {
             display: none;
         }
 
