@@ -1,4 +1,11 @@
-<section class="campaign-hero">
+<!-- 
+    class .campaign-hero_shadow added shadow overlay to all options for all width;
+    class .campaign-hero_shadow-D-non remove shadov overlay from desktop only;
+    class .campaign-hero_shadow-T-non remove shadov overlay from tablet only;
+    class .campaign-hero_shadow-M-non remove shadov overlay from mobile only;
+ -->
+
+<section class="campaign-hero campaign-hero_shadow">
     @@if (context.page === "bingo") {<img src="/assets/img/background/images-bg-bingo.jpg" alt="Bingo!" class="campaign-hero__bg">}
 
     @@if (context.page === "onlinelott") {<img src="/assets/img/background/images-bg-tjugan.jpg" alt="Bingo!" class="campaign-hero__bg">}
