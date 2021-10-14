@@ -64,6 +64,49 @@
 }
 
 
+
+.newsletter__sform,
+.newsletter__success,
+.newsletter__check,
+.wallets-group,
+.new-bingo,
+.play-bingo,
+.ag__check,
+.s-video {
+	margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.newsletter__sform,
+	.newsletter__success,
+	.newsletter__check,
+	.wallets-group,
+	.new-bingo,
+	.play-bingo,
+	.ag__check,
+	.s-video {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+    .newsletter__sform,
+	.newsletter__success,
+	.newsletter__check,
+	.wallets-group,
+	.new-bingo,
+	.play-bingo,
+	.ag__check,
+	.s-video {
+		margin-bottom: 60px;
+	}
+}
+
+
+
+
+
+
 @import "hero";
 @import "hero-reg";
 @import "article-list";
