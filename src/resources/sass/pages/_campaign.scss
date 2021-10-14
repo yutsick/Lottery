@@ -23,7 +23,6 @@
 }
 
 .ml-2017 .campaign__howitworks {
-    margin-top: 40px;
 
     .bingolobby__howitworks__content .btn {
         margin-left: 0;
@@ -358,10 +357,6 @@
         }
     }
 
-    .ml-2017 .campaign__howitworks {
-        margin-top: 20px;
-    }
-
     .content-wrapper_campaign {
         display: flex;
         flex-direction: column;
@@ -490,9 +485,6 @@
 }
 
 @media screen and (max-width: 742px) {
-    .ml-2017 .campaign__howitworks {
-        margin-top: 10px;
-    }
 
     .campaign__howitworks {
         &.campaign__howitworks_onlyVideo-M {
