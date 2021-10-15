@@ -750,7 +750,7 @@
         }
     }
 
-    .bingolobby-tabs {
+    .bingolobby__howitworks {
 
         .btn-wide--blue {
             background-color: $color-primary-dark;
@@ -969,112 +969,6 @@
     
 }
 
-.modal-btn-close {
-    display: none;
-    font-size: 0;
-    width: 38px;
-    height: 38px;
-    background-color: #fff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15.556' height='15.556' viewBox='0 0 15.556 15.556'%3E%3Cg transform='translate(1.378 1.778)'%3E%3Cpath d='M.4,0V16' transform='translate(11.774 0.06) rotate(45)' fill='none' stroke='%23053a53' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3'/%3E%3Cpath d='M.4,0V16' transform='translate(0.46 0.626) rotate(-45)' fill='none' stroke='%23053a53' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    cursor: pointer;
-    border: none;
-    padding: 0;
-}
-
-.bingolobby-tabs {
-    margin-top: 20px;
-
-    &__head-container {
-        background-color: #C9E8F4;
-        padding: 20px 1em;
-        display: flex;
-        justify-content: center;
-    }
-
-    .bingolobby-tabs__head-item {
-        &:focus {
-            color: $color-primary;
-            text-decoration: underline;
-        }
-    }
-
-    &__head-item {
-        font-size: 20px;
-        text-decoration: underline;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 18px;
-
-        &:first-child {
-            margin-left: 0;
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &.active {
-            font-weight: bold;
-            color: $color-primary;
-            text-decoration: underline;
-        }
-    }
-
-    &-panel {
-        display: block;
-        height: 0;
-        visibility: hidden;
-        overflow: hidden;
-        opacity: 0;
-        transition: opacity .3s;
-
-        &.active {
-            display: block;
-            height: auto;
-            visibility: visible;
-            opacity: 1;
-        }
-    }
-}
-
-.bingolobby__schema-block {
-    display:none;
-    background-color: $color-secondary-light;
-    padding: 40px 40px 30px 20px;
-    width: 100%;
-
-    .bingolobby__schema-block__title {
-        margin: 0;
-        margin-bottom: 12px;
-    }
-
-    &__line {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-
-        p {
-            margin: 0;
-            max-width: 420px;
-        }
-
-        .btn {
-            color: #fff;
-            height: 38px;
-        }
-    }
-}
-
-.bingolobby__schemas-modal {
-    display: none;
-}
-
 @media screen and (max-width: 1400px) {
     .bingolobby-hero__head_v1 {
         .bingolobby-hero__head-game {
@@ -1085,116 +979,97 @@
             margin-right: 20px;
         }
     }
-
-    .bingolobby-tabs__head-container {
-        padding: 20px 1em;
-    }
-}
-
-@media screen and (max-width: 1287px) {
-    .bingolobby-tabs__head-item {
-        font-size: 18px;
-    }
 }
 
 @media screen and (max-width: 1225px) {
-    .bingolobby-hero__head {
-        padding-top: 30px;
-    }
-
-    .bingolobby-hero__head-wrapper {
-        flex-wrap: wrap;
-    }
-
-    .bingolobby-hero__head_v1 {
-        
-        .bingolobby-hero__head-game {
-            margin: 0;
-            width: calc(100% - 120px - 200px);
-        }
-
-        .bingolobby-hero__head-title {
-            width: 70%;
-            margin: 0;
-            max-width: 430px;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .bingolobby-hero__head-host {
-            width: 30%;
-            margin: 0;
-            margin-left: auto;
-            margin-bottom: 20px;
-            
-            justify-content: flex-end;
-        }
-
-    }
-
-    .bingolobby-hero__head_v2 {
-        .bingolobby-hero__head-btn {
-            width: 50%;
-            display: flex;
-            justify-content: flex-start;
-            margin: 0;
-        }
-
-        .bingolobby-hero__head-time {
-            width: 50%;
-            display: flex;
-            justify-content: flex-end;
-            margin: 0;
-        }
-
-        .bingolobby-hero__head-host {
-            margin: 0;
-            display: flex;
-            align-items: center;
-            margin-top: auto;
-        }
-
-        .bingolobby-hero__head-game {
-            margin-top: 20px;
-            width: 100%;
-            max-width: 360px;
-            margin-left: 0;
-            align-items: flex-end;
-        }
-
-        .bingolobby-hero__head-game__line {
-            width: 100%;
-            justify-content: space-between;
-        }
-
-        .bingolobby-hero__head-game__item_fs20 {
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-    }
-
-    .bingolobby-hero__head-host-av {
-        width: 35px;
-        height: 35px;
-    }
-
     .bingolobby-hero {
         height: 474px;
-    } 
+
+        &__head {
+            padding-top: 30px;
+
+            &-wrapper {
+                flex-wrap: wrap;
+            }
+
+            &-host-av {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        &__head_v1 {
+        
+            .bingolobby-hero__head-game {
+                margin: 0;
+                width: calc(100% - 120px - 200px);
+            }
+    
+            .bingolobby-hero__head-title {
+                width: 70%;
+                margin: 0;
+                max-width: 430px;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+    
+            .bingolobby-hero__head-host {
+                width: 30%;
+                margin: 0;
+                margin-left: auto;
+                margin-bottom: 20px;
+                
+                justify-content: flex-end;
+            }
+    
+        }
+
+        &__head_v2 {
+            .bingolobby-hero__head-btn {
+                width: 50%;
+                display: flex;
+                justify-content: flex-start;
+                margin: 0;
+            }
+    
+            .bingolobby-hero__head-time {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+                margin: 0;
+            }
+    
+            .bingolobby-hero__head-host {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                margin-top: auto;
+            }
+    
+            .bingolobby-hero__head-game {
+                margin-top: 20px;
+                width: 100%;
+                max-width: 360px;
+                margin-left: 0;
+                align-items: flex-end;
+            }
+    
+            .bingolobby-hero__head-game__line {
+                width: 100%;
+                justify-content: space-between;
+            }
+    
+            .bingolobby-hero__head-game__item_fs20 {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+
+    }
 
     .bingolobby__jackpots-stats__col {
         width: 49%;
-    }
-
-    .bingolobby-tabs__head-container {
-        padding: 20px;
-    }
-}
-
-@media screen and (max-width:1200px) {
-    .bingolobby-tabs__head-item {
-        margin: 0 10px;
     }
 }
 
@@ -1220,61 +1095,11 @@
             font-size: 26px;
         }
     }
-
-    .bingolobby-tabs__head-container {
-        padding: 18px;
-    }
-
-    .bingolobby-tabs__head-item {
-        font-size: 17px;
-        margin: 0 7px;
-    }
 }
 
 @media screen and (max-width:992px) {
     .block-bingo__slide {
         width: 50%;
-    }
-
-    .bingolobby__schema-block {
-        display: block;
-    }
-
-    .bingolobby-tabs {
-        margin-top: 0;
-
-        &__head-container {
-            display: none;
-        }
-
-        &-panel {
-            display: block;
-            height: auto;
-            visibility: visible;
-            opacity: 1;
-            margin: 10px 0;
-        }
-
-        &__panels-container {
-            flex-wrap: wrap;
-            display: flex;
-            justify-content: space-between;
-            align-items: stretch;
-            padding-top: 10px;
-            padding-bottom: 10px;
-
-            column-gap: 20px;
-        }
-
-        .faq__modal-btn-close,
-        .chatschema__modal-btn-close,
-        .bingoschema__modal-btn-close {
-            display: block;
-            margin: 0 auto;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            background-color: #fff;
-        }
     }
 
     .bingolobby__howitworks {
@@ -1376,8 +1201,9 @@
     .bingolobby__deposits {
         margin-top: 0px;
         margin-bottom: 0;
-        padding: 40px 0;
-        height: 100%;
+        padding: 20px 0;
+        
+        height: calc(100% - 20px);
         align-items: center;
         justify-content: center;
 
@@ -1410,64 +1236,6 @@
 
         &__form-btns {
             margin-top: 20px;
-        }
-    }
-
-    .bingolobby__schemas-modal {
-        &::before {
-            display: block;
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            background-color: $color-secondary-lighter;
-            z-index: -1;
-        }
-
-        flex-direction: column;
-        align-items: center;
-        position: fixed;
-        top: 32px;
-        left: 0;
-        width: 100%;
-        height: 135px;
-        background-color: $color-secondary-lighter;
-        z-index: 1003;
-        justify-content: flex-end;
-
-        &.active {
-            display: flex;
-        }
-
-        .modal-btn-close {
-            display: block;
-            background-color: #fff;
-        }
-    }
-    
-    .bingolobby__schemas-tabs {
-        display: flex;
-        width: 100%;
-
-        .bingolobby__schemas-tab {
-            display: flex;
-            height: 49px;
-            width: 50%;
-            background-color: $color-secondary;
-            font-family: "apercu-bold-pro";
-            font-size: 20px;
-            justify-content: center;
-            align-items: center;
-            padding-top: 5px;
-            cursor: pointer;
-            text-decoration: none;
-    
-            &.active {
-                background-color: $color-secondary-dark;
-                color: #fff;
-            }
         }
     }
 
@@ -1520,7 +1288,7 @@
 
     #panel__howitworks {
         &.fullWidth {
-            .js-bingolobby__howitworks__video::after {
+            .js-mediaBlock__video::after {
                 display: none;
             }
         }
@@ -1662,9 +1430,7 @@
 }
 
 @media screen and (max-width: 742px) {
-    .bingolobby-tabs-panel {
-        margin: 5px 0;
-    }
+
     //Video block on tablet => open modal when click START (reset modal styles)
     .bingolobby__howitworks {
         .js-bingolobby__howitworks__video::after {
@@ -1699,7 +1465,12 @@
     }
 
     .bingolobby__deposits {
-        padding: 34px 0 35px;
+        padding: 34px 20px 35px;
+        height: calc(100% - 10px);
+
+        &__form {
+            width: 100%;
+        }
     }
 
     .bingolobby__contests__col:not(:last-child) {
@@ -1715,10 +1486,6 @@
 @media screen and (max-width: 696px) {
     .bingolobby-hero__head_v2 .bingolobby-hero__head-game {
         max-width: 330px;
-    }
-
-    .bingolobby__schemas-modal {
-        height: 115px;
     }
 
     .bingolobby__chatschema__day {
@@ -1871,48 +1638,40 @@
         }
     }
 
-    .bingolobby__jackpots-stats__col {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .bingolobby__jackpots-stats__list-container {
-        flex-direction: column;
-        width: 100%;
-        max-width: 400px;
-    }
-
-    .bingolobby__jackpots-stats__list {
-        width: 100%;   
-
-        &:not(:last-child) {
-            margin-bottom: 0;
+    .bingolobby__jackpots-stats {
+        &__col {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
         }
-    }
 
-    .bingolobby__jackpots-stats__list-container_jackpots {
-        .bingolobby__jackpots-stats__list:last-child {
-            li:nth-child(4),
-            li:nth-child(5) {
-                display: none;
+        &__list {
+            width: 100%;   
+    
+            &:not(:last-child) {
+                margin-bottom: 0;
             }
-        }
-    }
 
-    .bingolobby__jackpots-stats__list-container_winners {
-        .bingolobby__jackpots-stats__list:last-child {
-            display: none;
-        }
-    }
+            &-container {
+                flex-direction: column;
+                width: 100%;
+                max-width: 400px;
 
-    .bingolobby__schema-block__line {
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+                &_jackpots {
+                    .bingolobby__jackpots-stats__list:last-child {
+                        li:nth-child(4),
+                        li:nth-child(5) {
+                            display: none;
+                        }
+                    }
+                }
 
-        .btn {
-            margin-top: 20px;
+                &_winners {
+                    .bingolobby__jackpots-stats__list:last-child {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
@@ -2029,19 +1788,19 @@
 
     .bingolobby__jackpots-stats {
         padding: 45px 0px 10px;
-    }
+    
+        &__title {
+            padding: 0 10px;
+            margin-bottom: 7px;
 
-    .bingolobby__jackpots-stats__title {
-        padding: 0 10px;
-        margin-bottom: 7px;
-    }
+            &::before {
+                margin-right: 14px;
+            }
 
-    .bingolobby__jackpots-stats__title::before {
-        margin-right: 14px;
-    }
-
-    .bingolobby__jackpots-stats__title::after {
-        margin-left: 14px;
+            &::after {
+                margin-left: 14px;
+            }
+        }
     }
 
     .bingolobby__howitworks__video {

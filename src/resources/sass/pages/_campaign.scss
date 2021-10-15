@@ -23,45 +23,52 @@
 }
 
 .ml-2017 .campaign__howitworks {
-
-    .bingolobby__howitworks__content .btn {
-        margin-left: 0;
-    }
-
     .s-video {
         margin: 0;
     }
-}
 
-.campaign__howitworks {
-    &.campaign__howitworks_revert-D .bingolobby__howitworks {
-        flex-direction: row-reverse;
+    .mediaBlock {
+        align-items: center;
 
-        .bingolobby__howitworks__content {
-            margin-left: 5em;
+        &__content {
+            .btn {
+                margin-right: auto;
+                margin-left: 0;
+            }
         }
     }
 
-    &.campaign__howitworks_onlyVideo {
-        .bingolobby__howitworks__content {
+    &.campaign__howitworks_revert-D {
+        .mediaBlock {
+            flex-direction: row-reverse;
+    
+            &__content {
+                margin-left: 5em;
+            }
+        }
+    }
+
+    &.campaign__howitworks_onlyMedia {
+        .mediaBlock__content {
             display: none;
         }
     }
 
-    &.campaign__howitworks_videoBtn {
-        .bingolobby__howitworks {
+    &.campaign__howitworks_mediaBtn {
+        .mediaBlock {
             flex-direction: column-reverse;
             align-items: center;
-        }
 
-        .bingolobby__howitworks__content-title,
-        .bingolobby__howitworks__list {
-            display: none;
-        }
+            &__content-title,
+            &__list {
+                display: none;
+            }
 
-        .bingolobby__howitworks__content {
-            .btn {
-                margin: 10px auto;
+            &__content {
+                margin-left: 0;
+                .btn {
+                    margin: 10px auto;
+                }
             }
         }
     }
@@ -358,34 +365,24 @@
         margin-bottom: 30px;
     }
 
-    .campaign-tabs {
-
-        .bingolobby__bingoschema.active {
-            top: 0;
-        }
-
-        .faq__modal-btn-close {
-            display: block;
-            margin: 0 auto;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            background-color: #fff;
-        }
-
-        .bingolobby__bingoschema__title {
-            display: block;
-        }
-
-    }
-
-    .campaign__howitworks {
-        .bingolobby__howitworks__content {
+    .ml-2017 .campaign__howitworks {
+        .mediaBlock__content {
             display: flex;
         }
 
-        &.campaign__howitworks_revert-D .bingolobby__howitworks {
-            .bingolobby__howitworks__content {
-                margin-left: 2em;
+        &.campaign__howitworks_revert-D {
+            .mediaBlock {
+                &__content {
+                    margin-left: 2em;
+                }
+            }
+        }
+
+        &.campaign__howitworks_mediaBtn {
+            .mediaBlock {
+                &__content {
+                    margin-left: 0;
+                }
             }
         }
     }
@@ -548,50 +545,56 @@
 
 @media screen and (max-width: 742px) {
 
-    .campaign__howitworks {
-        &.campaign__howitworks_onlyVideo-M {
-            .bingolobby__howitworks__content {
+    .ml-2017 .campaign__howitworks {
+        &.campaign__howitworks_onlyMedia-M {
+            .mediaBlock__content {
                 display: none;
             }
         }
 
         &.campaign__howitworks_revert-D {
-            .bingolobby__howitworks {
+            .mediaBlock {
                 flex-direction: column-reverse;
 
-                .bingolobby__howitworks__content {
+                &__content {
                     margin-left: 0;
                 }
+            }
+        }
+
+        &.campaign__howitworks_noMedia-M {
+            .mediaBlock__media {
+                display: none;
             }
         }
 
         &.campaign__howitworks_revert-M {
-            .bingolobby__howitworks {
+            .mediaBlock {
                 flex-direction: column;
 
-                .bingolobby__howitworks__content {
+                &__content {
                     margin-left: 0;
                 }
             }
         }
 
-        &.campaign__howitworks_videoBtn {
-            .bingolobby__howitworks__content {
+        &.campaign__howitworks_mediaBtn {
+            .mediaBlock__content {
                 padding: 0;
             }
         }
 
-        .bingolobby__howitworks {
+        .mediaBlock {
             flex-direction: column-reverse;
-        }
 
-        .bingolobby__howitworks__content {
-            padding-top: 52px;
-            padding-bottom: 55px;
-            padding-left: 20px;
-            padding-right: 20px;
-            width: 100%;
-            max-width: unset;
+            &__content {
+                padding-top: 52px;
+                padding-bottom: 55px;
+                padding-left: 20px;
+                padding-right: 20px;
+                width: 100%;
+                max-width: unset;
+            }
         }
 
         .btn {
@@ -761,8 +764,4 @@
     .ml-2017 .campaign__video_stodhjulet {
         margin-bottom: 60px;
     }
-}
-
-@media screen and (max-width: 696px) {
-
 }
