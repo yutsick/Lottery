@@ -13,10 +13,10 @@
         }
         <div class="img-block__cta">
           @@if(context.theme === "light") {
-            <div class="btn btn--sm btn-primary">@@btn_title</div>
+            <div class="btn btn--sm btn-primary @@if(context.btn_style === 'underline'){btn-underline-light}">@@btn_title</div>
           }
           @@if(context.theme === "dark") {
-            <div class="btn btn--sm btn-invert">@@btn_title</div>
+            <div class="btn btn--sm btn-invert @@if(context.btn_style === 'underline'){btn-underline-dark}">@@btn_title</div>
           }
         </div>
       </a>

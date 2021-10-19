@@ -3,7 +3,7 @@
     @@if(context.has_link === true){
       <a href="#" class="img-block__content" style="background-image: url(@@image);">
         @@if(context.overlay === true) {
-          <div class="img-block__overlay"></div>
+          <div class="img-block__overlay img-block__overlay_@@position"></div>
         }
         @@if(context.has_content_title){
           <h4 class="img-block__title manualHyphens">Lorem ipsum do tempor</h4>
@@ -13,10 +13,10 @@
         }
         <div class="img-block__cta">
           @@if(context.theme === "light") {
-            <div class="btn btn--sm btn-primary">@@btn_title</div>
+            <div class="btn btn--sm btn-primary @@if(context.btn_style === 'underline'){btn-underline-light}">@@btn_title</div>
           }
           @@if(context.theme === "dark") {
-            <div class="btn btn--sm btn-invert">@@btn_title</div>
+            <div class="btn btn--sm btn-invert @@if(context.btn_style === 'underline'){btn-underline-dark}">@@btn_title</div>
           }
         </div>
       </a>

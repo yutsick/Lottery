@@ -211,17 +211,20 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12">
-                <div
-                    class="block-promotion block-promotion--text block block--background-pattern block--background-color background-color-turquoise flex-middle text-align-center">
-                    <a class="block-promotion__link" href="/" title="Link title">
-                        <div class="block-promotion__content">
-                            <p class="block-promotion__title h4">Lorem ipsum sed</p>
-                            <p class="block-promotion__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua ut labore et dolore magna aliqua ut labore et dolore magna aliqua..</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            @@include('blocks/promotion/block/_promotion-text.html', {
+                "size": "large",
+                "background": "color",
+                "background_color": "turquoise",
+                "background_color_pattern": "true",
+                "background_image": "",
+                "content_alignment": "middle",
+                "content_title": "Lorem ipsum sed",
+                "content_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua ut labore et dolore magna aliqua ut labore et dolore magna aliqua..",
+                "content_link": "true",
+                "text_protection": "",
+                "text_alignment": "center",
+                "has_btn": true
+            })
         </div>
     </div>
 </div>
