@@ -79,6 +79,10 @@
                     .btn {
                         color: #fff;
                         height: 38px;
+
+                        &:hover {
+                            color: #003E52;
+                        }
                     }
                 }
             }
