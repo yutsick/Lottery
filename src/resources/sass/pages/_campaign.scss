@@ -133,8 +133,13 @@
             }
         }
 
-        &.campaign-hero_shadow-D-non .campaign__header::after {
-            background: transparent;
+        &.campaign-hero_shadow-D-non .campaign__header {
+            &::after,
+            &.campaign__header_2col-revert::after,
+            &.campaign__header_3col::after,
+            &.campaign__header_2col::after {
+                background: transparent;
+            }
         }
     }
 
@@ -535,8 +540,15 @@
                 }
             }
 
-            &.campaign-hero_shadow-T-non .campaign__header::after {
-                background: transparent;
+            &.campaign-hero_shadow-T-non {
+                .campaign__header {
+                    &::after,
+                    &.campaign__header_2col-revert::after,
+                    &.campaign__header_3col::after,
+                    &.campaign__header_2col::after {
+                        background: transparent;
+                    }
+                }
             }
         }
     }
@@ -747,8 +759,15 @@
                 }
             }
 
-            &.campaign-hero_shadow-M-non .campaign__header::after {
-                background: transparent;
+            &.campaign-hero_shadow-M-non {
+                .campaign__header {
+                    &::after,
+                    &.campaign__header_2col-revert::after,
+                    &.campaign__header_3col::after,
+                    &.campaign__header_2col::after {
+                        background: transparent;
+                    }
+                }
             }
         }
     }
