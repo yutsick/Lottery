@@ -141,7 +141,8 @@
                         "text_alignment": "center", 
                         "text_placement": "center", 
                         "link-style": "underline", 
-                        "btn_title": "Hem & design" 
+                        "btn_title": "Hem & design",
+                        "layout": "2-in-row" 
                     })
         
                     @@include('blocks/promotion/block-img/_standingImgBlock-3-col.html', {
@@ -154,19 +155,19 @@
                         "text_alignment": "center", 
                         "text_placement": "top", 
                         "link-style": "underline", 
-                        "btn_title": "Se produkter" 
+                        "btn_title": "Se produkter",
+                        "layout": "2-in-row" 
                     })
                 </div>
             </div>
 
-            <div class="col-xs-6 col-md-3">
-                <div class="text-protection block-promotion block-promotion--color-blue block-promotion--text block block--background-pattern block--background-color background-color-turquoise flex-bottom">
-                    <div class="block-promotion__content">
-                        <p class="block-promotion__title h4">Block title</p>
-                        <p class="block-promotion__text">With background color and pattern. No link. Has text.</p>
-                    </div>
-                </div>
-            </div>
+            @@include('blocks/promotion/block-text/_text-block-small.html', {
+                "has_link": true,
+                "has_content_title": true,
+                "has_content_description": true,
+                "theme": "dark",
+                "background-color-class": "background-color-blue"
+            })
 
             @@include('blocks/promotion/block-img/_standingImgBlock-small.html', {
                 "theme": "light", 
@@ -190,7 +191,8 @@
                         "text_alignment": "center", 
                         "text_placement": "center", 
                         "link-style": "underline", 
-                        "btn_title": "Hem & design" 
+                        "btn_title": "Hem & design" ,
+                        "layout": "2-in-row"
                     })
         
                     @@include('blocks/promotion/block-img/_standingImgBlock-3-col.html', {
@@ -203,27 +205,51 @@
                         "text_alignment": "center", 
                         "text_placement": "top", 
                         "link-style": "underline", 
-                        "btn_title": "Se produkter" 
+                        "btn_title": "Se produkter",
+                        "layout": "2-in-row"
                     })
                 </div>
             </div>
 
         </div>
 
-        <div class="row">
-            @@include('blocks/promotion/block/_promotion-text.html', {
-                "size": "large",
-                "background": "color",
-                "background_color": "turquoise",
-                "background_color_pattern": "true",
-                "background_image": "",
-                "content_alignment": "middle",
-                "content_title": "Lorem ipsum sed",
-                "content_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore et dolore magna aliqua ut labore et dolore magna aliqua ut labore et dolore magna aliqua..",
-                "content_link": "true",
-                "text_protection": "",
-                "text_alignment": "center",
-                "has_btn": true
+        <div class="row equal-height">
+            @@include('blocks/promotion/block-img/_standingImgBlock-3-col.html', {
+                "theme": "light", 
+                "has_link": false, 
+                "overlay": false, 
+                "has_content_title": false, 
+                "image": "'assets/img/mockup/standingImgBlock-3-col2.jpg'", 
+                "text_alignment": "center", 
+                "text_placement": "center", 
+                "link-style": "underline", 
+                "btn_title": "Hem & design" 
+            })
+
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="img-block img-block--dark alignment-left img-block--small">
+            
+                        <a href="/sv-SE/Dromvinster" class="img-block__content js-ga-onsiteads-promotion" data-onsitead="ImageBlock_t1" style="background-image: url('assets/img/mockup/standingImgBlock-3-col2.jpg');">
+                                    <div class="img-block__overlay img-block__overlay_top"></div>
+                    <h4 class="img-block__title manualHyphens">Imageblock 1 col</h4>
+                    <p class="img-block__text">Se fina vinster i vinstshoppen! Se fina vinster i vinstshoppen! Se fina vinster i vinstshoppen! Se fina vinster i vinstshoppen!&nbsp;Se fina vinster i vinstshoppen!&nbsp;Se fina vinster i vinstshoppen!&nbsp;Se fina vinster i vinstshoppen!&nbsp;Se fina vinster i vinstshoppen!&nbsp;</p>
+                    <div class="img-block__cta">
+                        <div class="btn btn--sm btn-invert">Se vinster</div>
+                    </div>
+            
+                        </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row equal-height">
+            @@include('blocks/promotion/block-text/_text-block-large.html', {
+                "has_link": true,
+                "has_content_title": true,
+                "has_content_description": true,
+                "theme": "dark",
+                "background-color-class": "background-color-blue",
+                "text_alignment": "center"
             })
         </div>
     </div>

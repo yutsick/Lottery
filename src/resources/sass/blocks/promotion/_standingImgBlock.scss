@@ -7,7 +7,7 @@
     background-position: center;
     text-decoration: none;
     padding: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     width: 100%;
 
     &__overlay {
@@ -164,6 +164,10 @@
 }
 
 @media screen and (max-width: 1023px){
+    .standingImgBlock {
+        margin-bottom: 20px;
+    }
+
     .standingImgBlock_small {
         height: 68vw;
 

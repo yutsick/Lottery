@@ -14,9 +14,12 @@
     (shadow) - overlay = false/true
     standingImgBlock__overlay_@@position = top/center/bottom
 
+    layout = nothing/2-in-row when single in a row or 2-row in a row with 1-col thing
+
  -->
 
- <div class="col-xs-12 col-sm-12 col-md-12">
+@@if(context.layout === "2-in-row") {<div class="col-xs-12 col-sm-12 col-md-12">}
+@@if(!context.layout) {<div class="col-xs-12 col-sm-12 col-md-9">}
     <a href="#" class="standingImgBlock standingImgBlock-3-col standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement" style="background-image: url(@@image);">
         @@if(context.overlay === true) {
             <div class="standingImgBlock__overlay standingImgBlock__overlay_@@position"></div>
