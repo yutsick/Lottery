@@ -119,4 +119,13 @@
 			}
 		}
 	}
+
+	&--no-minHeight {
+		min-height: unset!important;
+		.text-block {
+			&__content {
+				min-height: unset!important;
+			}
+		}
+	}
 }
