@@ -1,7 +1,12 @@
-<div class="col-xs-12 col-sm-6 col-md-3">
+@@if(context.layout === "col-sm-12"){<div class="col-xs-12 col-sm-12 col-md-3">}
+@@if(!context.layout){<div class="col-xs-12 col-sm-6 col-md-3">}
   <div class="img-block img-block--small img-block--@@theme alignment-@@text_alignment">
+    <picture class="img-block__mediaBg">
+        <source media="(min-width: 1024px)" srcset="@@image">
+        <img src="@@tabletImage">
+    </picture>
     @@if(context.has_link === true){
-      <a href="#" class="img-block__content" style="background-image: url(@@image);">
+      <a href="#" class="img-block__content">
         @@if(context.overlay === true) {
           <div class="img-block__overlay img-block__overlay_@@position"></div>
         }

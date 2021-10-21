@@ -4,6 +4,16 @@
 	height: 100%;
 	margin-bottom: $margin-small;
 	min-height: 282px;
+	position: relative;
+
+	.img-block__mediaBg img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
 	
 	@media screen and (min-width: $screen-sm) {
 		margin-bottom: 20px;
