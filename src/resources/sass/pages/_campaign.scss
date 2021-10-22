@@ -224,10 +224,12 @@
         flex-shrink: 1;
         flex-basis: 200px;
         display: flex;
+        justify-content: center;
     }
 
     &_3col {
         margin: auto 0;
+        max-width: 1400px;
 
         .campaign__header-content {
             padding-left: 0;
@@ -428,17 +430,43 @@
         }
         
         .campaign__header-content {
-            text-align: center;
-            align-items: center;
+            text-align: left;
+            align-items: left;
             max-width: 335px;
             padding-right: 0;
 
-            h2 {
-                margin-bottom: 0;
+            .btn {
+                margin-top: 0;
+            }
+
+            .campaign__header-list {
+                margin-bottom: 30px;
             }
 
             .campaign__header-text {
                 display: none;
+            }
+        }
+
+        &-revert {
+            flex-direction: row-reverse;
+    
+            .campaign__header-content {
+                text-align: left;
+                align-items: left;
+                max-width: 335px;
+                padding: 0;
+    
+                .campaign__header-text {
+                    display: none;
+                }
+            }
+        }
+
+        &_center-T {
+            .campaign__header-content {
+                align-items: center;
+                text-align: center;
             }
         }
     }
@@ -555,25 +583,6 @@
         }
     }
 
-    .campaign__header_2col-revert {
-        flex-direction: row-reverse;
-
-        .campaign__header-content {
-            text-align: center;
-            align-items: center;
-            max-width: 335px;
-            padding: 0;
-
-            h2 {
-                margin-bottom: 0;
-            }
-
-            .campaign__header-text {
-                display: none;
-            }
-        }
-    }
-
     .ml-2017 .campaign__video_stodhjulet {
         margin-bottom: 80px;
     }
@@ -644,73 +653,104 @@
         }
     }
 
-    .campaign__header-content h2 {
-        font-size: 28px;
-    }
-
-    .campaign__header_2col {
-        .campaign__header-col {
-            width: 100%;
-        }
-    }
-
-    .campaign__header_3col {
+    .campaign__header {
         flex-direction: column;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
 
-        .campaign__header-col {
-            max-width: 430px;
-            flex-basis: auto;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
+        &-content {
+            padding-left: 0;
+            text-align: center;
             align-items: center;
 
-            &:nth-of-type(2),
-            &:nth-of-type(1) {
-                max-width: 430px;
-                flex-basis: auto;
+            h2 {
+                font-size: 28px;
+            }
+        }
+
+        &-col {
+            max-width: 430px;
+            flex-basis: auto;
+        }
+
+        &_2col {
+            .campaign__header-col {
                 width: 100%;
             }
         }
-    }
 
-    .campaign__header-checkpoints {
-        height: auto;
-        margin-top: 0;
-        padding: 30px 0 ;
-
-        .campaign__header-list {
+        &_3col {
             flex-direction: column;
-            align-items: flex-start;
-
-            li {
-                font-size: 18px;
-                &:not(:last-child) {
-                    margin-right: 0;
-                    margin-bottom: 10px;
+            padding-bottom: 20px;
+    
+            .campaign__header-col {
+                max-width: 430px;
+                flex-basis: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+    
+                &:nth-of-type(2),
+                &:nth-of-type(1) {
+                    max-width: 430px;
+                    flex-basis: auto;
+                    width: 100%;
                 }
             }
         }
-    }
 
-    .campaign__header-checkpoints-advanced {
-        padding: 20px 0px;
-        .campaign__header-list {
-            flex-direction: column;
-            align-items: flex-start; 
-            margin: 0 auto;
-            width: fit-content;
-            margin-bottom: 30px;
+        &-overlay-M {
+            position: relative;
     
-            li {
-                font-size: 18px;
+            &::before {
+                content: '';
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='375' height='416.996' viewBox='0 0 375 416.996' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' y1='0.472' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23003e52' stop-opacity='0'/%3E%3Cstop offset='0.28' stop-color='%23003e52' stop-opacity='0.502'/%3E%3Cstop offset='1' stop-color='%23003e52' stop-opacity='0.502'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect id='overlay' width='375' height='416.996' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");;
+                display: block;
+                position: absolute;
+                background-position: bottom;
+                background-size: 100% 550px;
+                background-repeat: no-repeat;
+                z-index: -1;
+                left: 0;
+                bottom: 0;
+                height: 417px;
+                width: 100%;
             }
         }
-    }
 
-    .campaign__header {
-        flex-direction: column;
+        &-checkpoints {
+            height: auto;
+            margin-top: 0;
+            padding: 30px 0 ;
+    
+            .campaign__header-list {
+                flex-direction: column;
+                align-items: flex-start;
+    
+                li {
+                    font-size: 18px;
+                    &:not(:last-child) {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        &-checkpoints-advanced {
+            padding: 20px 0px;
+            .campaign__header-list {
+                flex-direction: column;
+                align-items: flex-start; 
+                margin: 0 auto;
+                width: fit-content;
+                margin-bottom: 30px;
+        
+                li {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
     .campaign-hero {
@@ -774,42 +814,10 @@
         }
     }
 
-    .campaign__header-content {
-        padding-left: 0;
-        text-align: center;
-        align-items: center;
-        padding-bottom: 20px;
-    }
-
-    .campaign__header-col {
-        max-width: 430px;
-        flex-basis: auto;
-    }
-
-    .campaign__header-overlay-M {
-        position: relative;
-
-        &::before {
-            content: '';
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='375' height='416.996' viewBox='0 0 375 416.996' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='linear-gradient' x1='0.5' y1='0.472' x2='0.5' y2='1' gradientUnits='objectBoundingBox'%3E%3Cstop offset='0' stop-color='%23003e52' stop-opacity='0'/%3E%3Cstop offset='0.28' stop-color='%23003e52' stop-opacity='0.502'/%3E%3Cstop offset='1' stop-color='%23003e52' stop-opacity='0.502'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect id='overlay' width='375' height='416.996' fill='url(%23linear-gradient)'/%3E%3C/svg%3E%0A");;
-            display: block;
-            position: absolute;
-            background-position: bottom;
-            background-size: 100% 550px;
-            background-repeat: no-repeat;
-            z-index: -1;
-            left: 0;
-            bottom: 0;
-            height: 417px;
-            width: 100%;
-        }
-    }
-
     .campaign__video .s-video {
         margin-top: 10px;
     }
 
-    
     .ml-2017 .campaign__video_stodhjulet {
         margin-bottom: 60px;
     }
