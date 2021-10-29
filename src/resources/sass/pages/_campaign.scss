@@ -78,7 +78,7 @@
 .ml-2017 .campaign-hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -142,8 +142,11 @@
             }
         }
     }
+}
 
-
+.ml-2017 .campaign__header-list {
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .campaign__header {
@@ -154,7 +157,8 @@
     width: 100%;
     padding-bottom: 20px;
     padding-top: 30px;
-    margin: auto 0;
+    max-width: 1400px;
+    padding: 40px 20px 0;
 
     &-checkpoints-advanced {
         display: none;
@@ -228,18 +232,31 @@
     }
 
     &_3col {
-        margin: auto 0;
-        max-width: 1400px;
 
         .campaign__header-content {
             padding-left: 0;
             align-items: center;
             max-width: 554px;
             margin: 0 auto;
+            padding: 0 10px;
 
             h2 {
                 text-align: center;
-                margin-bottom: 0;
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+
+            .campaign__header-list {
+                margin-bottom: 30px;
+            }
+
+            .btn {
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            .campaign__header-text {
+                text-align: center;
             }
         }
 
@@ -251,37 +268,46 @@
         .campaign__header-col:nth-of-type(2) {
             width: 40%;
         }
+
+        .campaign__header-image {
+            padding: 0;
+        }
     }
 
     &_2col {
-        max-width: 1400px;
         
         .campaign__header-content {
-            padding-left: 0;
-            padding-right: 60px;
+            padding-left: 140px;
+            padding-right: 0;
+            margin-right: auto;
         }
         &-revert {
             flex-direction: row-reverse;
 
             .campaign__header-content {
-                padding-left: 60px;
+                padding-left: 0;
                 padding-right: 0;
+                margin-right: auto; 
             }
         }
     }
 
     &-image {
         margin: auto;
-        padding: 20px;
+        padding: 0 20px;
+        margin-bottom: 40px;
     }
 
     &-text {
         font-size: 20px;
+        margin-bottom: 30px;
     }
 
     .campaign__header-link {
         color: white;
         font-family: "apercu-bold-pro";
+        margin-bottom: 30px;
+        margin-top: 0;
 
         &:hover {
             color: white;
@@ -295,14 +321,15 @@
         align-items: flex-start;
 
         h2 {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             margin-top: 0;
         }
         padding-left: 9em;
     }
 
     .btn {
-        margin-top: 32px;
+        margin-top: 0;
+        margin-bottom: 30px;
         height: 58px;
         font-size: 20px;
         line-height: 42px;
@@ -339,25 +366,38 @@
         padding-left: 4em;
     }
 
-    .campaign__header_3col .campaign__header-content {
-        max-width: 470px;
-
-        h2 {
-            font-size: 34px;
+    .campaign__header {
+        &-col {
+            img {
+                margin: 0 auto;
+            }
         }
-    }
 
-    .campaign__header-col {
-        picture {
-            margin: 0 auto;
+        &_2col {
+            .campaign__header-content {
+                padding-left: 100px;
+            }
+
+            &-revert {
+                .campaign__header-content {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        &_3col {
+            .campaign__header-content {
+                max-width: 470px;
+        
+                h2 {
+                    font-size: 34px;
+                }
+            }
         }
     }
 }
 
 @media screen and (max-width:1100px) {
-    .campaign__header-content {
-        padding-left: 2em;
-    }
 
     .campaign__video .s-video {
         width: 100%;
@@ -375,9 +415,26 @@
     .ml-2017 .campaign__video_stodhjulet {
         margin-bottom: 110px;
     }
+
+    .campaign__header_2col {
+        .campaign__header-content {
+            padding-left: 80px;
+        }
+
+        &-revert {
+            .campaign__header-content {
+                padding-left: 0;
+            }
+        }
+    }
+    
 }
 
 @media screen and (max-width: 992px) {
+
+    .campaign__header-image {
+        padding: 0;
+    }
 
     .bullet-points__after-btn {
         margin-top: 30px;
@@ -431,9 +488,8 @@
         
         .campaign__header-content {
             text-align: left;
-            align-items: left;
-            max-width: 335px;
-            padding-right: 0;
+            align-items: flex-start;
+            padding-left: 30px;
 
             .btn {
                 margin-top: 0;
@@ -453,8 +509,8 @@
     
             .campaign__header-content {
                 text-align: left;
-                align-items: left;
-                max-width: 335px;
+                align-items: flex-start;
+                max-width: unset;
                 padding: 0;
     
                 .campaign__header-text {
@@ -467,6 +523,8 @@
             .campaign__header-content {
                 align-items: center;
                 text-align: center;
+                margin-right: 0;
+                max-width: 335px;
             }
         }
     }
@@ -537,7 +595,7 @@
     }
 
     .campaign-hero {
-        min-height: 330px;
+        min-height: 240px;
 
         &_shadow {
             position: relative;
@@ -585,11 +643,6 @@
 
     .ml-2017 .campaign__video_stodhjulet {
         margin-bottom: 80px;
-    }
-
-    .campaign__header {
-        padding-left: 20px;
-        padding-right: 20px;
     }
     
 }
@@ -655,7 +708,6 @@
 
     .campaign__header {
         flex-direction: column;
-        padding-bottom: 40px;
 
         &-content {
             padding-left: 0;
@@ -664,23 +716,33 @@
 
             h2 {
                 font-size: 28px;
+                text-align: center;
             }
         }
 
         &-col {
             max-width: 430px;
             flex-basis: auto;
+
+            img {
+                margin-bottom: 30px;
+            }
         }
 
         &_2col {
             .campaign__header-col {
                 width: 100%;
             }
+
+            .campaign__header-content {
+                align-items: center;
+                padding: 0;
+                margin: 0 auto;
+            }
         }
 
         &_3col {
             flex-direction: column;
-            padding-bottom: 20px;
     
             .campaign__header-col {
                 max-width: 430px;
@@ -738,7 +800,6 @@
         }
 
         &-checkpoints-advanced {
-            padding: 20px 0px;
             .campaign__header-list {
                 flex-direction: column;
                 align-items: flex-start; 
@@ -750,6 +811,11 @@
                     font-size: 18px;
                 }
             }
+        }
+
+        &-image {
+            padding: 0;
+            margin: 0;
         }
     }
 

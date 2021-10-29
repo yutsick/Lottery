@@ -19,9 +19,11 @@
             <div class="campaign__header campaign__header_2col">
                 <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
                 <div class="campaign__header-col">
-                    <picture>
-                        <img src="/assets/img/background/images-2-col-bingo.png" alt="Bingo!">
-                    </picture>
+                    <div class="campaign__header-image">
+                        <picture>
+                            <img src="/assets/img/background/images-2-col-bingo.png" alt="Bingo!">
+                        </picture>
+                    </div>
                 </div>
                 <div class="campaign__header-col">
                     <div class="campaign__header-content">
@@ -109,11 +111,13 @@
         <div class="campaign__header campaign__header_3col">
             <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
             <div class="campaign__header-col">
-                <picture>
-                    <source media="(min-width:992px)" srcset="/assets/img/background/images-3-col-bingo-1.png">
-                    <source media="(min-width:742px)" srcset="/assets/img/background/images-3-col-M-T-bingo.png">
-                    <img src="/assets/img/background/images-3-col-M-T-bingo.png" alt="Bingo!">
-                </picture>
+                <div class="campaign__header-image">
+                    <picture>
+                        <source media="(min-width:993px)" srcset="/assets/img/background/images-2-col-bingo.png">
+                        <source media="(min-width:742px)" srcset="/assets/img/background/images-3-col-M-T-bingo.png">
+                        <img src="/assets/img/background/images-3-col-M-T-bingo.png" alt="Bingo!">
+                    </picture>
+                </div>
             </div>
             <div class="campaign__header-col">
                 <div class="campaign__header-content">
@@ -123,9 +127,11 @@
                 </div>
             </div>
             <div class="campaign__header-col">
-                <picture>
-                    <img src="/assets/img/background/images-3-col-D-bingo-2.png" alt="Bingo!">
-                </picture>
+                <div class="campaign__header-image">
+                    <picture>
+                        <img src="/assets/img/background/images-3-col-D-bingo-2.png" alt="Bingo!">
+                    </picture>
+                </div>
             </div>
         </div>
     }
@@ -145,22 +151,19 @@
 
 @@if (context.page === "onlinelott") {
     <div class="campaign__header-checkpoints-advanced">
+        <ul class="campaign__header-list">
+            <li>Vinst på var fjärde lott</li>
+            <li>Vinn upp till 2 miljoner</li>
+            <li>Extrachans på 20 000 kr</li>
+        </ul>
 
-        <div class="container">
-            <ul class="campaign__header-list">
-                <li>Vinst på var fjärde lott</li>
-                <li>Vinn upp till 2 miljoner</li>
-                <li>Extrachans på 20 000 kr</li>
-            </ul>
-
-            <div class="campaign__header__line">
-                <p>Ord pris: 20 kr / lott</p> 
-                <a href="#" class="campaign__header-link">Regler & vinstplan</a>
-            </div>
-
-            <p>
-                Just nu får du 2 lotter till priset av en när du skrapar Tjugan (ord pris 20 kr / lott). Erbjudandet gäller vid ett tillfälle per person.
-            </p>
+        <div class="campaign__header__line">
+            <p>Ord pris: 20 kr / lott</p> 
+            <a href="#" class="campaign__header-link">Regler & vinstplan</a>
         </div>
+
+        <p>
+            Just nu får du 2 lotter till priset av en när du skrapar Tjugan (ord pris 20 kr / lott). Erbjudandet gäller vid ett tillfälle per person.
+        </p>
     </div>
 }
