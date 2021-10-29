@@ -220,3 +220,20 @@
         }
     }
 }
+
+@media screen and (max-width: 470px) {
+    .standingImgBlock_small .btn:not(.btn_underline), 
+    .standingImgBlock_small .btn-bankid:not(.btn_underline) {
+        padding: 8px 15px;    
+        width: 100%;
+    }
+
+    .standingImgBlock_small {
+        padding: 15px 10px;
+
+        .standingImgBlock__cta {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
