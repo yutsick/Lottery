@@ -16,12 +16,14 @@
 	z-index: -1;
 	width: 100%;
 	opacity: 0;
+	visibility: hidden;
 	transition: ease-in 300ms;
 }
 
 .information__list_menu.active{
 	z-index: 1;
 	opacity: 1;
+	visibility: visible;
 	transition: ease-in 300ms;
 }
 
