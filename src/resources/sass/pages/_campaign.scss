@@ -238,7 +238,7 @@
             align-items: center;
             max-width: 554px;
             margin: 0 auto;
-            padding: 0 10px;
+            padding: 0 20px;
 
             h2 {
                 text-align: center;
@@ -277,16 +277,16 @@
     &_2col {
         
         .campaign__header-content {
-            padding-left: 140px;
-            padding-right: 0;
+            padding-left: 20px;
+            padding-right: 20px;
             margin-right: auto;
         }
         &-revert {
             flex-direction: row-reverse;
 
             .campaign__header-content {
-                padding-left: 0;
-                padding-right: 0;
+                padding-left: 20px;
+                padding-right: 20px;
                 margin-right: auto; 
             }
         }
@@ -373,18 +373,6 @@
             }
         }
 
-        &_2col {
-            .campaign__header-content {
-                padding-left: 100px;
-            }
-
-            &-revert {
-                .campaign__header-content {
-                    padding-left: 0;
-                }
-            }
-        }
-
         &_3col {
             .campaign__header-content {
                 max-width: 470px;
@@ -414,18 +402,6 @@
 
     .ml-2017 .campaign__video_stodhjulet {
         margin-bottom: 110px;
-    }
-
-    .campaign__header_2col {
-        .campaign__header-content {
-            padding-left: 80px;
-        }
-
-        &-revert {
-            .campaign__header-content {
-                padding-left: 0;
-            }
-        }
     }
     
 }
@@ -489,7 +465,6 @@
         .campaign__header-content {
             text-align: left;
             align-items: flex-start;
-            padding-left: 30px;
 
             .btn {
                 margin-top: 0;
@@ -511,7 +486,6 @@
                 text-align: left;
                 align-items: flex-start;
                 max-width: unset;
-                padding: 0;
     
                 .campaign__header-text {
                     display: none;
@@ -524,7 +498,7 @@
                 align-items: center;
                 text-align: center;
                 margin-right: 0;
-                max-width: 335px;
+                max-width: 355px;
             }
         }
     }
