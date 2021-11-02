@@ -2,13 +2,17 @@
 	width: 100%;
 	height: auto;
 	min-height: 282px;
-	background-image: url('/assets/img/background/bg-bingo.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-
+    background-position: top center;
+    background-color: #003c51;
 	display: flex;
 	flex-direction: column;
 	padding: 132px 10px 10px;
+}
+
+.the-game {
+	margin-top: auto;
 }
 
 .the-game-name {
@@ -21,11 +25,15 @@
 	height: 38px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
-.the-game-name span {
+.the-game-name span:first-child {
+	margin-right: 5px;
+}
+
+.the-game-name span:last-child {
 	font-weight: bold;
-	margin-left: 5px;
 }
 
 .victory-money {
@@ -35,14 +43,19 @@
 	font-size: 16px;
 	line-height: 22px;
 	color: #FFFFFF;
-	height: 38px;
+	min-height: 38px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+	padding: 8px 0;
 }
 
-.victory-money span {
+.victory-money span:last-child {
 	font-weight: bold;
-	margin-left: 5px;
+}
+
+.victory-money span:first-child {
+	margin-right: 5px;
 }
 
 
@@ -53,15 +66,18 @@
 	font-size: 16px;
 	line-height: 22px;
 	color: #FFFFFF;
-	height: 38px;
+	min-height: 38px;
 	display: flex;
 	align-items: center;
 	float: right;
 }
 
-.victory-game span {
+.victory-game span:last-child {
 	font-weight: bold;
-	margin-left: 5px;
+}
+
+.victory-game span:first-child {
+	margin-right: 5px;
 }
 
 .the-game-money {
@@ -81,6 +97,14 @@
 
 .to-game {
 	display: flex;
+}
+
+.to-game-go {
+	a.btn {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
 }
 
 .to-game-time {
@@ -104,17 +128,21 @@
 	height: auto;
 	min-height: 282px;
 
-	background-image: url('/assets/img/background/bg-bingo-2.png');
+	background-size: contain;
+    background-position: bottom;
 	background-repeat: no-repeat;
-	background-size: cover;
-	margin-right: 20px;
+	// margin-right: 20px;
 }
 
 .play-bingo-two {
-	width: 100%;
-	max-width: 50%;
-	height: auto;
-	min-height: 282px;
+	width: 50%;
+    height: auto;
+    min-height: 282px;
+    flex-grow: 1;
+
+	.new-bingo {
+		margin-bottom: 0;
+	}
 }
 
 .play-bingo-head {

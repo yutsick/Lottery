@@ -1,0 +1,408 @@
+@@include('layout/_header.html', {
+    "class": "logged-in shop",
+    "logged_in": true
+    })
+    
+@@include('layout/_top-new2.html', { "logged_in": true, "show_cart": true })
+
+<div class="content-wrapper ml-2017">
+	<div class="container">
+        <div class="row equal-height m-5">
+            <div class="col-md-6 col-xs-12">
+                <div class="ag__check">
+                    <div class="ag__check_imag">
+                        <div class="ag__check_imag-head">
+                            <h4>Välj en premie</h4>
+                            <div class="ag__check_imag-head-subtitle">
+                                värde 500 kr
+                            </div>
+                        </div>
+                        <div class="ag__check_imag-text">
+                            när du ansluter autogiro
+                        </div>
+                        <div class="ag__check_imag-imag">
+                            <img src="assets/img/newsletter-form-02.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="ag__check_form">
+                        <div class="ag__check_form-form">
+                            <form>
+                                <div class="ag__sform_head">
+                                    <h5>Få mer av våra nyhetsbrev!</h5>
+                                </div>
+                                <div class="ag__sform_text">
+                                    <p>Du får därefter 500 kr laddat på ditt vinstkonto för att välja valfri premie ur <a href="#">vinstshopen.</a></p>
+                                </div>
+
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="tableSelect">Välj Bank</label>
+                                    <select id="tableSelect" class="table-select form-control" name="tableSelect">
+                                        <option value="b_0" id="b_0">Välj din bank</option>
+                                        <option value="b_1" id="b_1">Swedbank</option>
+                                        <option value="b_2" id="b_2">Handelsbanken</option>
+                                        <option value="b_3" id="b_3">Nordea</option>
+                                        <option value="b_4" id="b_4">SEB</option>
+                                    </select>
+                                </div>
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="tableSelect2">Välj BankID-enhet</label>
+                                    <select id="tableSelect2" class="table-select form-control" name="tableSelect">
+                                        <option value="o_0" id="o_0">BankID på annan enhet</option>
+                                        <option value="o_1" id="o_1">Option 1</option>
+                                        <option value="o_2" id="o_2">Option 2</option>
+                                        <option value="o_3" id="o_3">Option 3</option>
+                                        <option value="o_4" id="o_4">Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="ag-tab-btn-group">
+                                    <button type="submit" class="btn-ag">
+                                        Fortsätt med BankID
+                                        <img src="/assets/img/icons/bankid_v_high_rgb.svg" alt="img">
+                                    </button>
+
+                                    <div class="ag-tab-text ag-tab-text_mt">
+                                        Genom att klicka på ”Fortsätt” godkänner du att vi hämtar dina bankuppgifter. <a href="#">Läs mer om våra villkor</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="ag__check">
+                    <div class="ag__check_imag">
+                        <div class="ag__check_imag-head">
+                            <h4>Välj en premie</h4>
+                            <div class="ag__check_imag-head-subtitle">
+                                värde 500 kr
+                            </div>
+                        </div>
+                        <div class="ag__check_imag-text">
+                            när du ansluter autogiro
+                        </div>
+                        <div class="ag__check_imag-imag">
+                            <img src="assets/img/newsletter-form-02.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="ag__check_form">
+                        <div class="ag__check_form-form">
+                            <form>
+                                <div class="ag__sform_head">
+                                    <h5>Anslut Autogiro</h5>
+                                </div>
+                                <div class="ag__sform_text">
+                                    <p class="invalid-text">Du behöver välja din bank innan du går vidare.</p>
+                                </div>
+
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="2tableSelect">Välj Bank</label>
+                                    <select id="2tableSelect" class="table-select form-control invalid" name="2tableSelect">
+                                        <option value="b_0" id="b_0">Välj din bank</option>
+                                        <option value="b_1" id="b_1">Swedbank</option>
+                                        <option value="b_2" id="b_2">Handelsbanken</option>
+                                        <option value="b_3" id="b_3">Nordea</option>
+                                        <option value="b_4" id="b_4">SEB</option>
+                                    </select>
+                                    <small id="cvv_help2" class="form-text text-muted">Välj bank</small>
+                                </div>
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="2tableSelect2">Välj BankID-enhet</label>
+                                    <select id="2tableSelect2" class="table-select form-control" name="2tableSelect">
+                                        <option value="o_0" id="o_0">BankID på annan enhet</option>
+                                        <option value="o_1" id="o_1">Option 1</option>
+                                        <option value="o_2" id="o_2">Option 2</option>
+                                        <option value="o_3" id="o_3">Option 3</option>
+                                        <option value="o_4" id="o_4">Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="ag-tab-btn-group">
+                                    <button type="submit" class="btn-ag">
+                                        Fortsätt med BankID
+                                        <img src="/assets/img/icons/bankid_v_high_rgb.svg" alt="img">
+                                    </button>
+
+                                    <div class="ag-tab-text ag-tab-text_mt">
+                                        Genom att klicka på ”Fortsätt” godkänner du att vi hämtar dina bankuppgifter. <a href="#">Läs mer om våra villkor</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+                <div class="ag__check">
+                    <div class="ag__check_imag">
+                        <div class="ag__check_imag-head">
+                            <h4>Välj en premie</h4>
+                            <div class="ag__check_imag-head-subtitle">
+                                värde 500 kr
+                            </div>
+                        </div>
+                        <div class="ag__check_imag-text">
+                            när du ansluter autogiro
+                        </div>
+                        <div class="ag__check_imag-imag">
+                            <img src="assets/img/newsletter-form-02.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="ag__check_form">
+                        <div class="ag__check_form-form">
+                            <form>
+                                <div class="ag__sform_head">
+                                    <h5>Anslut Autogiro</h5>
+                                </div>
+                                <div class="ag__sform_text">
+                                    <p>Du får därefter 500 kr laddat på ditt vinstkonto för att välja valfri premie ur <a href="#">vinstshopen.</a></p>
+                                </div>
+
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="3tableSelect">Välj Bank</label>
+                                    <select id="3tableSelect" class="table-select form-control valid" name="3tableSelect">
+                                        <option value="b_0" id="b_0">Välj din bank</option>
+                                        <option value="b_1" id="b_1">Swedbank</option>
+                                        <option value="b_2" id="b_2">Handelsbanken</option>
+                                        <option value="b_3" id="b_3">Nordea</option>
+                                        <option value="b_4" id="b_4">SEB</option>
+                                    </select>
+                                </div>
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="3tableSelect2">Välj BankID-enhet</label>
+                                    <select id="3tableSelect2" class="table-select form-control" name="3tableSelect">
+                                        <option value="o_0" id="o_0">BankID på annan enhet</option>
+                                        <option value="o_1" id="o_1">Option 1</option>
+                                        <option value="o_2" id="o_2">Option 2</option>
+                                        <option value="o_3" id="o_3">Option 3</option>
+                                        <option value="o_4" id="o_4">Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="ag-tab-btn-group">
+                                    <button type="submit" class="btn-ag">
+                                        Fortsätt med BankID
+                                        <img src="/assets/img/icons/bankid_v_high_rgb.svg" alt="img">
+                                    </button>
+
+                                    <div class="ag-tab-text ag-tab-text_mt">
+                                        Genom att klicka på ”Fortsätt” godkänner du att vi hämtar dina bankuppgifter. <a href="#">Läs mer om våra villkor</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="ag__check">
+                    <div class="ag__check_imag">
+                        <div class="ag__check_imag-head">
+                            <h4>Välj en premie</h4>
+                            <div class="ag__check_imag-head-subtitle">
+                                värde 500 kr
+                            </div>
+                        </div>
+                        <div class="ag__check_imag-text">
+                            när du ansluter autogiro
+                        </div>
+                        <div class="ag__check_imag-imag">
+                            <img src="assets/img/newsletter-form-02.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="ag__check_form ag__check_form_pt-2 ag__check_form-cheking">
+                        <div class="ag__check_form-form">
+                            <form>
+                                <div class="ag__sform_get_home">
+                                    <a href="#">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12" cy="12" r="12" fill="#C9E8F4"></circle>
+                                            <path d="M13 7L8 12L13 17" stroke="#053A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        Tillbaka
+                                    </a>
+                                </div>
+
+                                <div class="ag__sform_text">
+                                    <p>Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet. 
+                                    </p>
+                                    <a href="#">Läs mer om BankID</a>
+                                </div>
+
+                                <div class="loading">
+                                    <div class="ag__sform_head">
+                                        <h5>Starta din BankID-app</h5>
+                                    </div>
+    
+                                    <div class="spinner">
+                                        <img src="assets/img/icons/spinner-white.svg" alt="Spinner">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+                <div class="ag__check">
+                    <div class="ag__check_imag">
+                        <div class="ag__check_imag-head">
+                            <h4>Välj en premie</h4>
+                            <div class="ag__check_imag-head-subtitle">
+                                värde 500 kr
+                            </div>
+                        </div>
+                        <div class="ag__check_imag-text">
+                            när du ansluter autogiro
+                        </div>
+                        <div class="ag__check_imag-imag">
+                            <img src="assets/img/newsletter-form-02.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="ag__check_form ag__check_form ag__check_form_pt-2">
+                        <div class="ag__check_form-form">
+                            <form>
+                                <div class="ag__sform_get_home">
+                                    <a href="#">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12" cy="12" r="12" fill="#C9E8F4"></circle>
+                                            <path d="M13 7L8 12L13 17" stroke="#053A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        Tillbaka
+                                    </a>
+                                </div>
+                                <div class="ag__sform_data">
+                                    <div class="ag__sform_data-box ag__sform_data-title">
+                                        <div>Namn:</div>
+                                        <div>Personnummer:</div>
+                                        <div>Bank:</div> 
+                                    </div>
+                                    <div class="ag__sform_data-box"> 
+                                        <span>Anna Andersson</span>
+                                        <span>19800101-0101</span>
+                                        <span>Swedbank</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="4tableSelect">Välj Bank</label>
+                                    <select id="4tableSelect" class="table-select form-control" name="4tableSelect">
+                                        <option value="b_0" id="b_0">Välj din bank</option>
+                                        <option value="b_1" id="b_1">Swedbank</option>
+                                        <option value="b_2" id="b_2">Handelsbanken</option>
+                                        <option value="b_3" id="b_3">Nordea</option>
+                                        <option value="b_4" id="b_4">SEB</option>
+                                    </select>
+                                </div>
+                                <div class="form-group responsive-table-filter ag-tab">
+                                    <label class="form_label" for="4tableSelect2">Välj BankID-enhet</label>
+                                    <select id="4tableSelect2" class="table-select form-control" name="4tableSelect">
+                                        <option value="o_0" id="o_0">BankID på annan enhet</option>
+                                        <option value="o_1" id="o_1">Option 1</option>
+                                        <option value="o_2" id="o_2">Option 2</option>
+                                        <option value="o_3" id="o_3">Option 3</option>
+                                        <option value="o_4" id="o_4">Option 4</option>
+                                    </select>
+                                </div>
+                                <div class="ag-tab-btn-group">
+                                    <button type="submit" class="btn-ag">
+                                        Fortsätt med BankID
+                                        <img src="/assets/img/icons/bankid_v_high_rgb.svg" alt="img">
+                                    </button>
+
+                                    <div class="ag-tab-text ag-tab-text_mt">
+                                        Genom att klicka på ”Fortsätt” godkänner du att vi hämtar dina bankuppgifter. <a href="#">Läs mer om våra villkor</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+                <div class="ag__check">
+                    <div class="ag__check_imag">
+                        <div class="ag__check_imag-head">
+                            <h4>Välj en premie</h4>
+                            <div class="ag__check_imag-head-subtitle">
+                                värde 500 kr
+                            </div>
+                        </div>
+                        <div class="ag__check_imag-text">
+                            när du ansluter autogiro
+                        </div>
+                        <div class="ag__check_imag-imag">
+                            <img src="assets/img/newsletter-form-02.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="ag__check_form ag__check_form_pt-2 ag__check_form-cheking">
+                        <div class="ag__check_form-form">
+                            <form>
+                                <div class="ag__sform_get_home">
+                                    <a href="#">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="12" cy="12" r="12" fill="#C9E8F4"></circle>
+                                            <path d="M13 7L8 12L13 17" stroke="#053A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        Tillbaka
+                                    </a>
+                                </div>
+
+                                <div class="loading">
+                                    <div class="ag__sform_head">
+                                        <h5>Starta din BankID-app igen</h5>
+                                    </div>
+    
+                                    <div class="spinner">
+                                        <img src="assets/img/icons/spinner-white.svg" alt="Spinner">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-xs-12">
+                <div class="ag__check">
+                    <div class="ag__check_imag">
+                        <div class="ag__check_imag-head">
+                            <h4>Välj en premie</h4>
+                            <div class="ag__check_imag-head-subtitle">
+                                värde 500 kr
+                            </div>
+                        </div>
+                        <div class="ag__check_imag-text">
+                            när du ansluter autogiro
+                        </div>
+                        <div class="ag__check_imag-imag">
+                            <img src="assets/img/newsletter-form-02.png" alt="img">
+                        </div>
+                    </div>
+                    <div class="ag__check_form ag__check_form_pt-2">
+                        <div class="ag__check_form-form ag__check_form-form_middle">
+                            <form>
+
+                                <div class="ag-multi-head2">
+                                    Du är nu ansluten till autogiro!
+                                </div>
+                                <div class="ag-multi-textag-multi-text2">
+                                    Du har nu 500 kr laddat på ditt vinstkonto. Från och med nästkommande månad kommer din månadsavgift betalas automatiskt.
+                                </div>
+
+                                <div class="justify-content-center">
+                                    <button class="btn-invert">Gå till vinstshoppen</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

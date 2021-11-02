@@ -6,13 +6,13 @@ export default function () {
 		dropdownParent: $('.responsive-table-filter')
 	});
 
-	function format(o) {
-		if (!o.id) {
-			return o.text;
-		} else {
-			return o.text;
-		}
-	}
+	// function format(o) {
+	// 	if (!o.id) {
+	// 		return o.text;
+	// 	} else {
+	// 		return o.text;
+	// 	}
+	// }
 
 	// Show selected table
 	$('.table-select') .on('select2:select', function (evt) {
