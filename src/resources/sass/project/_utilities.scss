@@ -298,6 +298,16 @@ img.align-center {
 	margin-top: 70px;
 }
 
+.mt-block-20 {
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 575px) {
+	.mt-block-20 {
+		margin-top: 10px;
+	}
+}
+
 .space-30 {
     height: 30px;
 }

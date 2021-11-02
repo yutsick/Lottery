@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     text-decoration: none;
-    padding: 32px;
+    padding: 40px 20px 32px;
     margin-bottom: 60px;
     width: 100%;
 
@@ -32,6 +32,15 @@
         }
     }
 
+    &__paragraph {
+        p:last-child {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+        margin-bottom: 10px;
+        max-width: 640px;
+    }
+
     &.placement-bottom {
         .standingImgBlock__title {
             margin: 0;
@@ -42,36 +51,58 @@
 
     &.placement-center {
         .standingImgBlock__title {
-            margin: auto;
+            margin: 0;
+            margin-top: auto;
         }
 
         .standingImgBlock__cta {
-            margin-top: -38px;
+            margin-top: auto;
+        }
+
+        .standingImgBlock__content {
+            justify-content: center;
         }
     }
 
     &.placement-top {
+        .standingImgBlock__content {
+            justify-content: flex-start;
+        }
+
         .standingImgBlock__title {
             margin: 0;
-            margin-bottom: auto;
             justify-self: flex-start;
+        }
+
+        .standingImgBlock__cta {
+            margin-top: auto;
         }
     }
 
     &.alignment-center {
-        .standingImgBlock__title {
+        .standingImgBlock__title,
+        .standingImgBlock__paragraph {
             text-align: center;
+        }
+
+        .standingImgBlock__content {
+            align-items: center;
         }
     }
 
     &.alignment-left {
-        .standingImgBlock__title {
+        .standingImgBlock__title,
+        .standingImgBlock__paragraph {
             text-align: left;
+        }
+
+        .standingImgBlock__content {
+            align-items: flex-start;
         }
     }
 
     &_big {
-        height: 90vh;
+        height: calc(90vh - 160px);
 
         .standingImgBlock__title {
             font-size: 40px;
@@ -105,17 +136,30 @@
         justify-content: flex-end;
     }
 
+    .btn {
+        transition: background-color 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955), color 0.1s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+
     &_light {
         color: $color-snow;
 
         .btn {
-            background: $color-snow;
             color: $color-primary;
+            background-color: $color-grey-bg;
+
+            &:hover {
+                background-color: $color-snow;
+                color: $color-primary;
+            }
         }
 
         .btn.btn_underline {
             color: $color-snow;
             background: transparent;
+
+            &:hover {
+                color: $color-grey-bg;
+            }
         }
 
         &:hover {
@@ -129,11 +173,20 @@
         .btn {
             background: $color-primary;
             color: $color-snow;
+
+            &:hover {
+                background-color: $color-primary-light;
+                color: $color-snow;
+            }
         }
 
         .btn.btn_underline {
             color: $color-primary;
             background: transparent;
+
+            &:hover {
+                color: $color-primary-light;
+            }
         }
 
         &:hover {
@@ -147,6 +200,7 @@
         letter-spacing: -0.02em;
         word-spacing: -0.03em;
         margin: auto;
+        max-width: 640px;
     }
 
     &__cta {
@@ -221,15 +275,26 @@
     }
 }
 
+@media screen and (max-width: 576px) {
+    .standingImgBlock {
+
+        &-3-col {
+            padding: 20px;
+        }
+
+        &_small {
+            padding: 20px 10px;
+        }
+    }
+}
+
 @media screen and (max-width: 470px) {
     .standingImgBlock_small .btn:not(.btn_underline), 
     .standingImgBlock_small .btn-bankid:not(.btn_underline) {
-        padding: 8px 15px;    
-        width: 100%;
+        padding: 8px 20px;    
     }
 
     .standingImgBlock_small {
-        padding: 15px 10px;
 
         .standingImgBlock__cta {
             width: 100%;

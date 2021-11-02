@@ -4,12 +4,16 @@
     standingImgBlock_@@theme = light/dark
 
     (title) - has_content_title = false/true
-    alignment-@@text_alignment = left/center
-    placement-@@text_placement = top/center/bottom
 
-    (link) - has_link = false/true - if has link
+    (text paragraphs) - has_content_paragraph = false/true
+
+    (link/btn) - has_link = false/true - if has link
     @@btn_title = text of link
     btn_@@link-style = underline/button
+
+    (position for all text content):
+    alignment-@@text_alignment = left/center
+    placement-@@text_placement = top/center/bottom
 
     (shadow) - overlay = false/true
     standingImgBlock__overlay_@@position = top/center/bottom
@@ -29,6 +33,14 @@
                 
                 @@if(context.has_content_title){
                     <h4 class="standingImgBlock__title autoHyphens">Lorem ip&shy;sum do tem&shy;por</h4>
+                }
+
+                @@if(context.has_content_paragraph){
+                    <div class="standingImgBlock__paragraph">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut labore et dolore magna aliqua ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
                 }
 
                 <div class="standingImgBlock__cta">
