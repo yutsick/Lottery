@@ -28,7 +28,7 @@
         }
 
         &_center {
-            background: radial-gradient(24.43% 24.43% at 50% 50%, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.04) 58.85%, rgba(0, 0, 0, 0) 100%);
+            background: radial-gradient(58.48% 23.89% at 50% 50%, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%);
         }
     }
 
@@ -103,9 +103,12 @@
 
     &_big {
         height: calc(90vh - 160px);
+        max-width: calc(45vh);
+        margin-left: 10px;
+        margin-right: 10px;
 
         .standingImgBlock__title {
-            font-size: 40px;
+            font-size: calc(14px + 2.8vh);
         }
     }
 
@@ -162,7 +165,8 @@
             }
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $color-snow;
         }
     }
@@ -189,7 +193,8 @@
             }
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $color-primary;
         }
     }
@@ -230,12 +235,6 @@
         }
     } 
 
-    .standingImgBlock_big {
-        .standingImgBlock__title {
-            font-size: 32px;
-        }
-    }
-
     .standingImgBlock-3-col {
         min-height: 233px;
 
@@ -250,7 +249,8 @@
         margin-bottom: 10px;
 
         &_big {
-            max-width: 584px;
+            margin-left: 5px;
+            margin-right: 5px;
 
             .standingImgBlock__title {
                 font-size: 28px;
@@ -288,10 +288,20 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .standingImgBlock_small .btn:not(.btn_underline), 
+    .standingImgBlock_small .btn-bankid:not(.btn_underline) {
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        max-width: 200px;
+    }
+}
+
 @media screen and (max-width: 470px) {
     .standingImgBlock_small .btn:not(.btn_underline), 
     .standingImgBlock_small .btn-bankid:not(.btn_underline) {
-        padding: 8px 20px;    
+        padding: 8px 20px;   
+        max-width: 170px;
     }
 
     .standingImgBlock_small {
@@ -300,5 +310,12 @@
             width: 100%;
             text-align: center;
         }
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .standingImgBlock_small .btn:not(.btn_underline), 
+    .standingImgBlock_small .btn-bankid:not(.btn_underline) {
+        max-width: 150px;
     }
 }

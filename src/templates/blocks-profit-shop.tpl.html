@@ -10,9 +10,10 @@
         <div class="row equal-height justify-content-center mt-20">
             <div class="col-xs-12"><h2 class="section__heading h3">Image Block (big) single</h2></div>
             @@include('blocks/promotion/block-img/_standingImgBlock-big.html', {
-                "theme": "dark", 
+                "theme": "light", 
                 "has_link": true, 
-                "overlay": false, 
+                "overlay": true, 
+                "position": "center",
                 "has_content_title": true, 
                 "image": "'assets/img/mockup/StandingImgBlock-big.jpg'", 
                 "text_alignment": "left", 
@@ -47,7 +48,9 @@
                 "link-style": "button", 
                 "btn_title": "Se produkter" 
             })
+        </div>
 
+        <div class="row equal-height justify-content-center">
             @@include('blocks/promotion/block-img/_standingImgBlock-big.html', {
                 "theme": "light", 
                 "has_link": true, 
@@ -73,6 +76,7 @@
                 "btn_title": "Se produkter" 
             })
         </div>
+
         <div class="row equal-height">
             <div class="col-xs-12"><h2 class="section__heading h3">Image Block (small)</h2></div>
 
