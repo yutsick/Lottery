@@ -1,3 +1,19 @@
+<!-- 
+    The content piece in tabs on T-M usually is hidden
+
+    class .mediaBlock_onlyMedia-M if no content ON MOBILE only works (only when out of tabs)
+
+    class .mediaBlock_onlyMedia if no content ON ALL width works 
+    (!!!When use this class when block .mediaBlock placed in tabs - add .fullWidth class to #panel__howitworks and #panel__deposits cause this blocks have 50% width default)
+
+    class .mediaBlock_mediaBtn if no content but with button ON ALL width works (but only on D when in tabs)
+
+    class .mediaBlock_revert-D if media-left and content-right ON DESKTOP only works
+    class .mediaBlock_revert-M if media-bottom and content-top ON MOBILE only works (only when out of tabs)
+
+    class .mediaBlock_noMedia-M if no media content ON MOBILE only works (only when out of tabs)
+-->
+
 @@if (context.in_tabs === false) {
     <div class="mediaBlock">
         <div class="mediaBlock__content">

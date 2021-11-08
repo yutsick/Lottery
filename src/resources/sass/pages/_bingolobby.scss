@@ -987,6 +987,7 @@
 
         &__head {
             padding-top: 30px;
+            min-height: 210px;
 
             &-wrapper {
                 flex-wrap: wrap;
@@ -1517,6 +1518,7 @@
         height: 481px;
 
         &__head {
+            min-height: 282px;
             padding-top: 19px;
         }
     }

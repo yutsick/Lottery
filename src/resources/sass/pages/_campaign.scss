@@ -37,42 +37,6 @@
             }
         }
     }
-
-    &.campaign__howitworks_revert-D {
-        .mediaBlock {
-            flex-direction: row-reverse;
-    
-            &__content {
-                margin-left: 5em;
-            }
-        }
-    }
-
-    &.campaign__howitworks_onlyMedia {
-        .mediaBlock__content {
-            display: none;
-        }
-    }
-
-    &.campaign__howitworks_mediaBtn {
-        .mediaBlock {
-            flex-direction: column-reverse;
-            align-items: center;
-
-            &__content-title,
-            &__list {
-                display: none;
-            }
-
-            &__content {
-                margin-left: 0;
-                .btn {
-                    margin: 10px auto;
-                    margin-top: 40px;
-                }
-            }
-        }
-    }
 }
 
 .ml-2017 .campaign-hero {
@@ -421,22 +385,6 @@
         .mediaBlock__content {
             display: flex;
         }
-
-        &.campaign__howitworks_revert-D {
-            .mediaBlock {
-                &__content {
-                    margin-left: 2em;
-                }
-            }
-        }
-
-        &.campaign__howitworks_mediaBtn {
-            .mediaBlock {
-                &__content {
-                    margin-left: 0;
-                }
-            }
-        }
     }
 
     .content-wrapper_campaign {
@@ -624,43 +572,6 @@
 @media screen and (max-width: 742px) {
 
     .ml-2017 .campaign__howitworks {
-        &.campaign__howitworks_onlyMedia-M {
-            .mediaBlock__content {
-                display: none;
-            }
-        }
-
-        &.campaign__howitworks_revert-D {
-            .mediaBlock {
-                flex-direction: column-reverse;
-
-                &__content {
-                    margin-left: 0;
-                }
-            }
-        }
-
-        &.campaign__howitworks_noMedia-M {
-            .mediaBlock__media {
-                display: none;
-            }
-        }
-
-        &.campaign__howitworks_revert-M {
-            .mediaBlock {
-                flex-direction: column;
-
-                &__content {
-                    margin-left: 0;
-                }
-            }
-        }
-
-        &.campaign__howitworks_mediaBtn {
-            .mediaBlock__content {
-                padding: 0;
-            }
-        }
 
         .mediaBlock {
             flex-direction: column-reverse;

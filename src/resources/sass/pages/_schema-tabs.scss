@@ -235,6 +235,38 @@
                 margin-top: -8px;
             }
         }
+
+        &_revert-D {
+            flex-direction: row-reverse;
+        
+            .mediaBlock__content {
+                margin-left: 5em;
+            }
+        }
+    
+        &_onlyMedia {
+            .mediaBlock__content {
+                display: none;
+            }
+        }
+    
+        &_mediaBtn {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .mediaBlock__content-title,
+            .mediaBlock__list {
+                display: none;
+            }
+
+            .mediaBlock__content {
+                margin-left: 0;
+                .btn {
+                    margin: 10px auto;
+                    margin-top: 40px;
+                }
+            }
+        }
     }
 }
 
@@ -306,6 +338,18 @@
                 max-width: 680px;
                 width: 100%;
             }
+
+            &.mediaBlock_revert-D {
+                .mediaBlock__content {
+                    margin-left: 2em;
+                }
+            }
+    
+            &.mediaBlock_mediaBtn {
+                .mediaBlock__content {
+                    margin-left: 0;
+                }
+            } 
         }
     
         //Video block on tablet => open modal when click START (modal styles)
@@ -439,8 +483,8 @@
             }
         }
 
-         //Video block on tablet => open modal when click START (reset modal styles)
         .mediaBlock {
+            //Video block on tablet => open modal when click START (reset modal styles)
             .js-mediaBlock__video::after {
                 display: none;
             }
@@ -456,8 +500,43 @@
                     }
                 }
             }
+            //Video block on tablet => open modal when click END
+
+            &.mediaBlock_onlyMedia-M {
+                .mediaBlock__content {
+                    display: none;
+                }
+            }
+    
+            &.mediaBlock_revert-D {
+                flex-direction: column-reverse;
+    
+                .mediaBlock__content {
+                    margin-left: 0;
+                }
+            }
+    
+            &.mediaBlock_noMedia-M {
+                .mediaBlock__media {
+                    display: none;
+                }
+            }
+    
+            &.mediaBlock_revert-M {
+                flex-direction: column;
+    
+                .mediaBlock__content {
+                    margin-left: 0;
+                }
+            }
+    
+            &.mediaBlock_mediaBtn {
+                .mediaBlock__content {
+                    padding: 0;
+                }
+            }
+
         }
-        //Video block on tablet => open modal when click END
     }
 }
 

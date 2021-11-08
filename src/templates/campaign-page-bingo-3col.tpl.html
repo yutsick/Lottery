@@ -8,16 +8,6 @@
 	
     @@include('blocks/_campaign-header.html', {"page": "bingo", "header": "3-col"})
 
-    <!-- 
-		class .campaign__howitworks_onlyMedia-M if no content ON MOBILE only works 
-		class .campaign__howitworks_onlyMedia if no content ON ALL width works 
-		class .campaign__howitworks_mediaBtn if no content but with button ON ALL width works
-
-		class .campaign__howitworks_revert-D if media-left and content-right ON DESKTOP only works
-		class .campaign__howitworks_revert-M if media-bottom and content-top ON MOBILE only works
-
-		class .campaign__howitworks_noMedia-M if no media content ON MOBILE only works
-	-->
     <section class="campaign__howitworks m-3">
         <div class="container">
             @@include('blocks/schema-tabs/_media-block.html', {"in_tabs": false, "media": "video"})
