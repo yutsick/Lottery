@@ -1,10 +1,10 @@
 export default function () {
-	$('.table-select').select2({
-		minimumResultsForSearch: Infinity,
-		templateSelection: format,
-		templateResult: format,
-		dropdownParent: $('.responsive-table-filter')
-	});
+	// $('.table-select').select2({
+	// 	minimumResultsForSearch: Infinity,
+	// 	templateSelection: format,
+	// 	templateResult: format,
+	// 	dropdownParent: $('.responsive-table-filter')
+	// });
 
 	// function format(o) {
 	// 	if (!o.id) {
