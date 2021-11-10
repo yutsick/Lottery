@@ -1,6 +1,7 @@
 <div
-	class="@@if(context.size !== 'medium'){col-xs-6 col-sm-6 col-lg-3}@@if(context.size === 'medium'){col-xs-12 col-md-12 col-lg-6}">
+	class="@@if(context.size == 'small'){col-xs-6 col-sm-6 col-lg-3}@@if(context.size === 'medium'){col-xs-12 col-md-12 col-lg-6}@@if(context.size == 'large'){col-xs-12}">
 	<div class="block-promotion block-promotion--text block
+		@@if(context.size == 'large'){block-promotion--text-large}
 		@@if(context.color === 'blue'){ block-promotion--color-blue}
 		@@if(context.background === 'color'){ block--background-color background-color-@@background_color}
 		@@if(context.background === 'color' && context.background_color_pattern === 'true'){ block--background-pattern}
@@ -10,8 +11,8 @@
 		@@if(context.content_alignment === 'bottom'){ flex-bottom}
 		@@if(context.text_alignment === 'center'){ text-align-center}
 		@@if(context.text_alignment === 'right'){ text-align-right}
-		@@if(context.text_protection === 'true'){ text-protection}
-		 style="@@if(context.background === 'image'){background-image: url('@@background_image')}">
+		@@if(context.text_protection === 'true'){ text-protection}"
+		@@if(context.background === 'image'){style="background-image: url('@@background_image');"}>
 		@@if(context.content_link){
 		<a class="block-promotion__link" href="/" title="Link title">
 			}
@@ -21,6 +22,10 @@
 				}
 				@@if(context.content_text){
 				<p>@@content_text</p>
+				}
+
+				@@if(context.has_btn === true) {
+					<div class="btn btn--sm btn-primary btn_button">Välj lotter som gör gott</div>
 				}
 			</div>
 			@@if(context.content_link){
