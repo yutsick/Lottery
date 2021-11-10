@@ -9,6 +9,64 @@
 
 <div class="content-wrapper ml-2017">
 	@@include('blocks/_promotion.html', {"blocks": "example-image"})
+	
+	<section>
+		<div class="container">
+			<div class="row equal-height">
+				@@include('blocks/promotion/block-img/_img-block-large.html', {
+					"has_link": true,
+					"overlay": true,
+					"position": "center",
+					"has_content_title": true,
+					"has_content_description": true,
+					"theme": "dark",
+					"text_alignment":"left",
+					"image":"'assets/img/mockup/standingImgBlock-3-col.jpg'",
+					"btn_style": "underline",
+					"btn_title": "Se produkter"
+				}) 
+
+				@@include('blocks/promotion/block-img/_img-block-medium-tall.html', {
+					"has_link": true,
+					"overlay": true,
+					"position": "center",
+					"has_content_title": true,
+					"has_content_description": true,
+					"theme": "dark",
+					"text_alignment":"left",
+					"image":"'assets/img/mockup/standingImgBlock-3-col.jpg'",
+					"btn_style": "underline",
+					"btn_title": "Se produkter"
+				})
+
+				@@include('blocks/promotion/block-img/_img-block-medium.html', {
+					"has_link": true,
+					"overlay": true,
+					"position": "center",
+					"has_content_title": true,
+					"has_content_description": true,
+					"theme": "dark",
+					"text_alignment":"left",
+					"image":"'assets/img/mockup/standingImgBlock-3-col.jpg'",
+					"btn_style": "underline",
+					"btn_title": "Se produkter"
+				})
+
+				@@include('blocks/promotion/block-img/_img-block-small.html', {
+					"has_link": true,
+					"overlay": true,
+					"position": "center",
+					"has_content_title": true,
+					"has_content_description": true,
+					"theme": "dark",
+					"text_alignment":"left",
+					"image":"'assets/img/mockup/standingImgBlock-3-col.jpg'",
+					"btn_style": "underline",
+					"btn_title": "Se produkter"
+				})
+			</div>
+		</div>
+	</section>
 </div>
 
 @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

@@ -57,6 +57,10 @@
 		>*:last-child {
 			margin-bottom: 0;
 		}
+
+		.text-block__content {
+			padding: 0;
+		}
 	}
 	
 	&__text {
@@ -97,6 +101,12 @@
 				-webkit-background-size: cover;
 				background-size: cover;
 			}
+
+			&__content {
+				.text-block__content {
+					padding: 0;
+				}
+			}
 			
 			&__image {
 				width: 100%;
@@ -116,6 +126,15 @@
 				max-width: 680px;
 				margin-left: auto;
 				margin-right: auto;
+			}
+		}
+	}
+
+	&--no-minHeight {
+		min-height: unset!important;
+		.text-block {
+			&__content {
+				min-height: unset!important;
 			}
 		}
 	}

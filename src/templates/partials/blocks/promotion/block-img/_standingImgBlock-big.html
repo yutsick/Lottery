@@ -1,0 +1,50 @@
+<!-- 
+
+    @@image = url of image
+    standingImgBlock_@@theme = light/dark
+
+    (title) - has_content_title = false/true
+
+    (link) - has_link = false/true - if has link
+    @@btn_title = text of link
+    btn_@@link-style = underline/button
+
+    (position for all text content):
+    alignment-@@text_alignment = left/center
+    placement-@@text_placement = top/center/bottom
+
+    (shadow) - overlay = false/true
+    standingImgBlock__overlay_@@position = top/center/bottom
+
+ -->
+
+ <a href="#" class="standingImgBlock standingImgBlock_big standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement" style="background-image: url(@@image);">
+    @@if(context.overlay === true) {
+        <div class="standingImgBlock__overlay standingImgBlock__overlay_@@position"></div>
+    }
+    @@if(context.has_link === true) {
+        <div class="standingImgBlock__content">
+            
+            @@if(context.has_content_title){
+                <h4 class="standingImgBlock__title autoHyphens">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
+            }
+
+            <div class="standingImgBlock__cta">
+                @@if(context.theme === "light") {
+                  <div class="btn btn--sm btn-primary btn_@@link-style">@@btn_title</div>
+                }
+                @@if(context.theme === "dark") {
+                  <div class="btn btn--sm btn-invert btn_@@link-style">@@btn_title</div>
+                }
+            </div>
+        </div>  
+    }
+
+    @@if(context.has_link === false) {
+        <div class="standingImgBlock__content">
+            @@if(context.has_content_title){
+                <h4 class="standingImgBlock__title autoHyphens">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
+            }
+        </div>
+    }
+</a>
