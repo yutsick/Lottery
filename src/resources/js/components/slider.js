@@ -206,6 +206,19 @@ export default function () {
 		autoPlay: 5000
 	});
 
+
+
+	$('#bingoheaderImageSlider').flickity({
+		cellSelector: '#bingoheaderImageSlider .bingolobby-slide__slide',
+		wrapAround: false,
+		// draggable: false,
+		pageDots: false,
+		prevNextButtons: false,
+		autoPlay: 5000
+	});
+	
+	  
+
 }
 
 

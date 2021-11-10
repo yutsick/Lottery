@@ -1,0 +1,99 @@
+<!-- 
+    The content piece in tabs on T-M usually is hidden
+
+    class .mediaBlock_onlyMedia-M if no content ON MOBILE only works (only when out of tabs)
+
+    class .mediaBlock_onlyMedia if no content ON ALL width works 
+    (!!!When use this class when block .mediaBlock placed in tabs - add .fullWidth class to #panel__howitworks and #panel__deposits cause this blocks have 50% width default)
+
+    class .mediaBlock_mediaBtn if no content but with button ON ALL width works 
+    (!!!When use this class when block .mediaBlock placed in tabs - add .fullWidth class to #panel__howitworks and #panel__deposits cause this blocks have 50% width default)
+
+    class .mediaBlock_revert-D if media-left and content-right ON DESKTOP only works
+    class .mediaBlock_revert-M if media-bottom and content-top ON MOBILE only works (only when out of tabs)
+
+    class .mediaBlock_noMedia-M if no media content ON MOBILE only works (only when out of tabs)
+-->
+
+@@if (context.in_tabs === false) {
+    <div class="mediaBlock">
+        <div class="mediaBlock__content">
+            <h4 class="mediaBlock__content-title">För att spela</h4>
+    
+            <ol class="mediaBlock__list">
+                <li>Skapa konto eller logga in</li>
+                <li>Sätt in pengar</li>
+                <li>Börja spela!</li>
+            </ol>
+            
+            <a href="#" class="btn btn-wide--blue">Kom igång här</a>
+        </div>
+        
+        <div class="mediaBlock__media">
+            @@if (context.media === "video") {
+                <div class="mediaBlock__video">
+                    <div class="s-video">
+                        <iframe
+                            loading="lazy"
+                            src="https://www.youtube.com/embed/EOQZ4VEi92M?rel=0"
+                            srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%} a{display:block} a>img{position:absolute;width:100%;height:auto;top:50%;left:0;right:0;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);margin:auto} span{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:absolute;width:64px;height:64px;border-radius:50%;top:50%;    left: calc(50% + 7px);margin:-40px 0 0 -40px;-webkit-box-sizing:border-box;box-sizing:border-box} span>img{display:block;width:64;height:auto;}</style>
+                                    <a href='https://www.youtube.com/embed/EOQZ4VEi92M?autoplay=1&rel=0'>
+                                        <img style='height: 100%; object-fit: cover;' src='assets/img/mockup/video-block.png'>
+                                        <span>
+                                            <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+                                                <path id='play_btn' d='M-32,64a31.8,31.8,0,0,0,12.456-2.515A31.894,31.894,0,0,0-9.373,54.627,31.893,31.893,0,0,0-2.515,44.456,31.8,31.8,0,0,0,0,32,31.8,31.8,0,0,0-2.515,19.544,31.894,31.894,0,0,0-9.373,9.373,31.894,31.894,0,0,0-19.544,2.515,31.8,31.8,0,0,0-32,0,31.8,31.8,0,0,0-44.456,2.515,31.893,31.893,0,0,0-54.627,9.373a31.894,31.894,0,0,0-6.858,10.172A31.8,31.8,0,0,0-64,32a31.8,31.8,0,0,0,2.515,12.455,31.894,31.894,0,0,0,6.858,10.171,31.894,31.894,0,0,0,10.171,6.858A31.8,31.8,0,0,0-32,64Zm-5.674-45.585a1.984,1.984,0,0,1,1.119.35L-19.121,30.62a2,2,0,0,1,.876,1.673,2,2,0,0,1-.906,1.655l-17.434,11.39a1.988,1.988,0,0,1-1.089.329,2.04,2.04,0,0,1-1.393-.561,1.972,1.972,0,0,1-.612-1.442V20.418a1.972,1.972,0,0,1,.613-1.443A2.041,2.041,0,0,1-37.674,18.415Z' transform='translate(64)' fill='#fff' opacity='0.5'/>
+                                              </svg>									 
+                                        </span>
+                                    </a>"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            }
+
+            @@if (context.media === "image") {
+                <img style='height: 100%; object-fit: cover;' src='assets/img/mockup/video-block.png'>
+            }
+        </div>
+    </div>
+}
+
+@@if (context.in_tabs === true) {
+    <div class="mediaBlock">
+        <div class="mediaBlock__content">
+            <h4 class="mediaBlock__content-title">För att spela</h4>
+    
+            <ol class="mediaBlock__list">
+                <li>Skapa konto eller logga in</li>
+                <li>Sätt in pengar</li>
+                <li>Börja spela!</li>
+            </ol>
+            
+            <a href="#" class="btn btn-wide--blue">Kom igång här</a>
+        </div>
+        
+        <div class="mediaBlock__media">
+            <div class="mediaBlock__video" id="mediaBlockVideo">
+                <a href="#" class="btn-close_circular js-modal-close" data-target="#mediaBlockVideo">Close</a>
+                <div class="s-video js-mediaBlock__video" data-target="#mediaBlockVideo">
+                    <iframe
+                        loading="lazy"
+                        src="https://www.youtube.com/embed/EOQZ4VEi92M?rel=0"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%} a{display:block} a>img{position:absolute;width:100%;height:auto;top:50%;left:0;right:0;-webkit-transform:translate(0,-50%);-ms-transform:translate(0,-50%);transform:translate(0,-50%);margin:auto} span{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;position:absolute;width:64px;height:64px;border-radius:50%;top:50%;    left: calc(50% + 7px);margin:-40px 0 0 -40px;-webkit-box-sizing:border-box;box-sizing:border-box} span>img{display:block;width:64;height:auto;}</style>
+                                <a href='https://www.youtube.com/embed/EOQZ4VEi92M?autoplay=1&rel=0'>
+                                    <img style='height: 100%; object-fit: cover;' src='assets/img/mockup/video-block.png'>
+                                    <span>
+                                        <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'>
+                                            <path id='play_btn' d='M-32,64a31.8,31.8,0,0,0,12.456-2.515A31.894,31.894,0,0,0-9.373,54.627,31.893,31.893,0,0,0-2.515,44.456,31.8,31.8,0,0,0,0,32,31.8,31.8,0,0,0-2.515,19.544,31.894,31.894,0,0,0-9.373,9.373,31.894,31.894,0,0,0-19.544,2.515,31.8,31.8,0,0,0-32,0,31.8,31.8,0,0,0-44.456,2.515,31.893,31.893,0,0,0-54.627,9.373a31.894,31.894,0,0,0-6.858,10.172A31.8,31.8,0,0,0-64,32a31.8,31.8,0,0,0,2.515,12.455,31.894,31.894,0,0,0,6.858,10.171,31.894,31.894,0,0,0,10.171,6.858A31.8,31.8,0,0,0-32,64Zm-5.674-45.585a1.984,1.984,0,0,1,1.119.35L-19.121,30.62a2,2,0,0,1,.876,1.673,2,2,0,0,1-.906,1.655l-17.434,11.39a1.988,1.988,0,0,1-1.089.329,2.04,2.04,0,0,1-1.393-.561,1.972,1.972,0,0,1-.612-1.442V20.418a1.972,1.972,0,0,1,.613-1.443A2.041,2.041,0,0,1-37.674,18.415Z' transform='translate(64)' fill='#fff' opacity='0.5'/>
+                                          </svg>									 
+                                    </span>
+                                </a>"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+}

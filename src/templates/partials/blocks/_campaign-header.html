@@ -1,4 +1,11 @@
-<section class="campaign-hero">
+<!-- 
+    class .campaign-hero_shadow added shadow overlay to all options for all width;
+    class .campaign-hero_shadow-D-non remove shadow overlay from desktop only;
+    class .campaign-hero_shadow-T-non remove shadow overlay from tablet only;
+    class .campaign-hero_shadow-M-non remove shadow overlay from mobile only;
+ -->
+
+<section class="campaign-hero campaign-hero_shadow">
     @@if (context.page === "bingo") {<img src="/assets/img/background/images-bg-bingo.jpg" alt="Bingo!" class="campaign-hero__bg">}
 
     @@if (context.page === "onlinelott") {<img src="/assets/img/background/images-bg-tjugan.jpg" alt="Bingo!" class="campaign-hero__bg">}
@@ -12,9 +19,11 @@
             <div class="campaign__header campaign__header_2col">
                 <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
                 <div class="campaign__header-col">
-                    <picture>
-                        <img src="/assets/img/background/images-2-col-bingo.png" alt="Bingo!">
-                    </picture>
+                    <div class="campaign__header-image">
+                        <picture>
+                            <img src="/assets/img/background/images-2-col-bingo.png" alt="Bingo!">
+                        </picture>
+                    </div>
                 </div>
                 <div class="campaign__header-col">
                     <div class="campaign__header-content">
@@ -31,14 +40,14 @@
         }
 
         @@if (context.page === "onlinelott") {
-            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M">
+            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M campaign__header_2col_center-T">
                 <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
                 <div class="campaign__header-col">
-                    <picture>
-                        <source media="(min-width:1225px)" srcset="/assets/img/background/images-2-col-tjugan.png">
-                        <source media="(min-width:742px)" srcset="/assets/img/background/images-2-col-tjugan-T-M.png">
-                        <img src="/assets/img/background/images-2-col-tjugan-M.png" alt="Bingo!">
-                    </picture>
+                    <div class="campaign__header-image">
+                        <picture>
+                            <img src="/assets/img/background/images-2-col-tjugan.png" alt="Bingo!">
+                        </picture>
+                    </div>
                 </div>
                 <div class="campaign__header-col">
                     <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
@@ -54,14 +63,14 @@
         }
 
         @@if (context.page === "skattjakten") {
-            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M">
+            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header_2col_center-T">
                 <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
                 <div class="campaign__header-col">
-                    <picture>
-                        <source media="(min-width:1225px)" srcset="/assets/img/background/images-2-col-skattjakten-logo.png">
-                        <source media="(min-width:742px)" srcset="/assets/img/background/images-2-col-skattjakten-logo-T.png">
-                        <img src="/assets/img/background/images-2-col-skattjakten-logo-M.png" alt="Bingo!">
-                    </picture>
+                    <div class="campaign__header-image">
+                        <picture>
+                            <img src="/assets/img/background/images-2-col-skattjakten-logo.png" alt="Bingo!">
+                        </picture>
+                    </div>
                 </div>
                 <div class="campaign__header-col">
                     <div class="campaign__header-content">
@@ -76,14 +85,14 @@
         }
 
         @@if (context.page === "stodhjulet") {
-            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M">
+            <div class="campaign__header campaign__header_2col campaign__header_2col-revert campaign__header-overlay-M campaign__header_2col_center-T">
                 <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
                 <div class="campaign__header-col">
-                    <picture>
-                        <source media="(min-width:1225px)" srcset="/assets/img/background/images-2-col-stödhjulet.png">
-                        <source media="(min-width:742px)" srcset="/assets/img/background/images-2-col-stödhjulet-T.png">
-                        <img src="/assets/img/background/images-2-col-stödhjulet-M.png" alt="Bingo!">
-                    </picture>
+                    <div class="campaign__header-image">
+                        <picture>
+                            <img src="/assets/img/background/images-2-col-stödhjulet.png" alt="Bingo!">
+                        </picture>
+                    </div>
                 </div>
                 <div class="campaign__header-col">
                     <div class="campaign__header-content">
@@ -102,11 +111,13 @@
         <div class="campaign__header campaign__header_3col">
             <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
             <div class="campaign__header-col">
-                <picture>
-                    <source media="(min-width:992px)" srcset="/assets/img/background/images-3-col-bingo-1.png">
-                    <source media="(min-width:742px)" srcset="/assets/img/background/images-3-col-M-T-bingo.png">
-                    <img src="/assets/img/background/images-3-col-M-T-bingo.png" alt="Bingo!">
-                </picture>
+                <div class="campaign__header-image">
+                    <picture>
+                        <source media="(min-width:993px)" srcset="/assets/img/background/images-2-col-bingo.png">
+                        <source media="(min-width:742px)" srcset="/assets/img/background/images-3-col-M-T-bingo.png">
+                        <img src="/assets/img/background/images-3-col-M-T-bingo.png" alt="Bingo!">
+                    </picture>
+                </div>
             </div>
             <div class="campaign__header-col">
                 <div class="campaign__header-content">
@@ -116,42 +127,43 @@
                 </div>
             </div>
             <div class="campaign__header-col">
-                <picture>
-                    <img src="/assets/img/background/images-3-col-D-bingo-2.png" alt="Bingo!">
-                </picture>
-            </div>
-        </div>
-        <div class="campaign__header-checkpoints">
-            <div class="container">
-                <ul class="campaign__header-list">
-                    <li>Höga jackpottvinster</li>
-                    <li>Vinn tusentals kronor </li>
-                    <li>Flera vinstchanser</li>
-                </ul>
+                <div class="campaign__header-image">
+                    <picture>
+                        <img src="/assets/img/background/images-3-col-D-bingo-2.png" alt="Bingo!">
+                    </picture>
+                </div>
             </div>
         </div>
     }
-    
 </section>
+
+@@if (context.header === "3-col") {
+    <div class="campaign__header-checkpoints">
+        <div class="container">
+            <ul class="campaign__header-list">
+                <li>Höga jackpottvinster</li>
+                <li>Vinn tusentals kronor </li>
+                <li>Flera vinstchanser</li>
+            </ul>
+        </div>
+    </div>
+}
 
 @@if (context.page === "onlinelott") {
     <div class="campaign__header-checkpoints-advanced">
+        <ul class="campaign__header-list">
+            <li>Vinst på var fjärde lott</li>
+            <li>Vinn upp till 2 miljoner</li>
+            <li>Extrachans på 20 000 kr</li>
+        </ul>
 
-        <div class="container">
-            <ul class="campaign__header-list">
-                <li>Vinst på var fjärde lott</li>
-                <li>Vinn upp till 2 miljoner</li>
-                <li>Extrachans på 20 000 kr</li>
-            </ul>
-
-            <div class="campaign__header__line">
-                <p>Ord pris: 20 kr / lott</p> 
-                <a href="#" class="campaign__header-link">Regler & vinstplan</a>
-            </div>
-
-            <p>
-                Just nu får du 2 lotter till priset av en när du skrapar Tjugan (ord pris 20 kr / lott). Erbjudandet gäller vid ett tillfälle per person.
-            </p>
+        <div class="campaign__header__line">
+            <p>Ord pris: 20 kr / lott</p> 
+            <a href="#" class="campaign__header-link">Regler & vinstplan</a>
         </div>
+
+        <p>
+            Just nu får du 2 lotter till priset av en när du skrapar Tjugan (ord pris 20 kr / lott). Erbjudandet gäller vid ett tillfälle per person.
+        </p>
     </div>
 }

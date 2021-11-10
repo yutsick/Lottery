@@ -24,25 +24,28 @@ export default function () {
 
     };
 
-    orderSwitch('.js-tab-order', 'desktop');
+
+
+    //Reorder for schema-tabs section module
+    orderSwitch('.js-schema-tabs-reorder', 'desktop');
 
     if($(window).width() <= 992 && $(window).width() >= 742) {
-        orderSwitch('.js-panel-order', 'tablet');
+        orderSwitch('.js-schema-panels-reorder', 'tablet');
     }
     
 
     if($(window).width() <= 742) {
-        orderSwitch('.js-panel-order', 'mobile');
+        orderSwitch('.js-schema-panels-reorder', 'mobile');
     }
 
 
     $(window).on('resize', function() {
         if ($(window).width() <= 992 && $(window).width() >= 742) {
-            orderSwitch('.js-panel-order', 'tablet');
+            orderSwitch('.js-schema-panels-reorder', 'tablet');
         };
 
         if($(window).width() <= 742) {
-            orderSwitch('.js-panel-order', 'mobile');
+            orderSwitch('.js-schema-panels-reorder', 'mobile');
         }
     });
 
