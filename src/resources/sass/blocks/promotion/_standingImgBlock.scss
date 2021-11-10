@@ -103,7 +103,7 @@
 
     &_big {
         height: calc(90vh - 160px);
-        max-width: calc(45vh);
+        max-width: calc(50vh);
         margin-left: 10px;
         margin-right: 10px;
 
@@ -125,6 +125,10 @@
         
         .standingImgBlock__title {
             font-size: 30px;
+        }
+        
+        .standingImgBlock__overlay_center {
+            background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.31) 0%, rgba(0, 0, 0, 0) 98.96%);
         }
     }
 
@@ -275,6 +279,25 @@
     }
 }
 
+@media screen and (max-height: 805px) {
+    .standingImgBlock_big {
+        max-width: calc(46vh);
+    }
+}
+
+@media screen and (max-height: 730px) {
+    .standingImgBlock_big {
+        max-width: calc(44vh);
+    }
+}
+
+
+@media screen and (max-height: 600px) {
+    .standingImgBlock_big {
+        max-width: calc(42vh);
+    }
+}
+
 @media screen and (max-width: 576px) {
     .standingImgBlock {
 
@@ -302,14 +325,6 @@
     .standingImgBlock_small .btn-bankid:not(.btn_underline) {
         padding: 8px 20px;   
         max-width: 170px;
-    }
-
-    .standingImgBlock_small {
-
-        .standingImgBlock__cta {
-            width: 100%;
-            text-align: center;
-        }
     }
 }
 
