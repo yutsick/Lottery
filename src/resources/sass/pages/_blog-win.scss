@@ -149,6 +149,12 @@
 }
 
 .blog-win {
+  position: relative;
+
+  .hero-full__page-title {
+    z-index: 2;
+  }
+
   @media screen and (max-width: 680px) {
     .container-fluid {
       padding: 0;
