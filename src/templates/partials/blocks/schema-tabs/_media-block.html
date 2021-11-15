@@ -16,7 +16,14 @@
 -->
 
 @@if (context.in_tabs === false) {
-    <div class="mediaBlock">
+    <div class="mediaBlock
+        @@if(context.onlyMedia === true){ mediaBlock_onlyMedia}
+        @@if(context.onlyMedia === 'mobile'){ mediaBlock_onlyMedia-M}
+        @@if(context.noMediaOnMobile === true){ mediaBlock_noMedia-M}
+        @@if(context.mediaBtn === true){ mediaBlock_mediaBtn}
+        @@if(context.revert === 'revert-D'){ mediaBlock_revert-D}
+        @@if(context.revert === 'revert-M'){ mediaBlock_revert-M}
+        @@if(context.revert === 'revert-D-M'){ mediaBlock_revert-D mediaBlock_revert-M}">
         <div class="mediaBlock__content">
             <h4 class="mediaBlock__content-title">För att spela</h4>
     
@@ -60,7 +67,10 @@
 }
 
 @@if (context.in_tabs === true) {
-    <div class="mediaBlock">
+    <div class="mediaBlock
+        @@if(context.onlyMedia === true){ mediaBlock_onlyMedia}
+        @@if(context.mediaBtn === true){ mediaBlock_mediaBtn}
+        @@if(context.revert === 'revert-D'){ mediaBlock_revert-D}">
         <div class="mediaBlock__content">
             <h4 class="mediaBlock__content-title">För att spela</h4>
     
