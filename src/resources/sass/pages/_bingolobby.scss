@@ -77,6 +77,29 @@
             }
         }
 
+        &_v3 {
+            .bingolobby-hero__head-title {
+                order: 0;
+                display: block;
+            }
+
+            .bingolobby-hero__head-host {
+                order: 1;
+            }
+
+            .bingolobby-hero__head-game {
+                order: 2;
+            }
+
+            .bingolobby-hero__head-time {
+                order: 3;
+            }
+
+            .bingolobby-hero__head-btn {
+                order: 4;
+            }
+        }
+
         &-wrapper {
             display: flex;
             align-items: center;
@@ -970,13 +993,25 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .bingolobby-hero__head_v1 {
-        .bingolobby-hero__head-game {
-            margin: 0 auto;
+    .bingolobby-hero__head {
+        &_v1 {
+            .bingolobby-hero__head-game {
+                margin: 0 auto;
+            }
+    
+            .bingolobby-hero__head-title {
+                margin-right: 20px;
+            }
         }
 
-        .bingolobby-hero__head-title {
-            margin-right: 20px;
+        &_v3 {
+            .bingolobby-hero__head-game {
+                margin: 0 auto;
+            }
+    
+            .bingolobby-hero__head-title {
+                margin-right: 20px;
+            }
         }
     }
 }
@@ -1065,6 +1100,32 @@
                 justify-content: space-between;
                 width: 100%;
             }
+        }
+
+        &__head_v3 {
+
+            .bingolobby-hero__head-game {
+                margin: 0;
+                width: calc(100% - 120px - 200px);
+            }
+    
+            .bingolobby-hero__head-title {
+                width: 70%;
+                margin: 0;
+                max-width: 430px;
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+    
+            .bingolobby-hero__head-host {
+                width: 30%;
+                margin: 0;
+                margin-left: auto;
+                margin-bottom: 20px;
+                
+                justify-content: flex-end;
+            }
+    
         }
 
     }
@@ -1418,6 +1479,119 @@
         }
     }
 
+    .bingolobby-hero__head_v3 {
+        .bingolobby-hero__head-title {
+            order: 0;
+            display: none;
+        }
+
+        .bingolobby-hero__head-host {
+            order: 2;
+        }
+
+        .bingolobby-hero__head-game {
+            order: 3;
+            margin-right: 0;
+        }
+
+        .bingolobby-hero__head-time {
+            order: 1;
+            margin-left: 20px;
+            margin-right: auto;
+        }
+
+        .bingolobby-hero__head-btn {
+            order: 0;
+        }
+
+        .bingolobby-hero__head-btn {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+        }
+
+        .bingolobby-hero__head-time {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .bingolobby-hero__head-host {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .bingolobby-hero__head-game {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 360px;
+            margin-left: 0;
+            align-items: flex-end;
+        }
+
+        .bingolobby-hero__head-game__line {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .bingolobby-hero__head-game__item_fs20 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+
+
+        .bingolobby-hero__head-btn {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            margin: 0;
+        }
+
+        .bingolobby-hero__head-time {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            margin: 0;
+        }
+
+        .bingolobby-hero__head-host {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            justify-content: flex-start;
+        }
+
+        .bingolobby-hero__head-game {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 360px;
+            margin-left: 0;
+            align-items: flex-end;
+        }
+
+        .bingolobby-hero__head-game {
+            max-width: 330px;
+        }
+
+        .bingolobby-hero__head-game__line {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .bingolobby-hero__head-game__item_fs20 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
 }
 
 @media screen and (max-width: 848px) {
@@ -1640,6 +1814,55 @@
         }
     }
 
+    .bingolobby-hero__head_v3 {
+        padding-bottom: 16px;
+        .bingolobby-hero__head-host {
+            width: 100%;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        .bingolobby-hero__head-btn {
+            width: auto;
+            margin-right: auto;
+        }
+
+        .bingolobby-hero__head-game {
+            max-width: unset;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .bingolobby-hero__head-time {
+            width: auto;
+            align-self: center;
+            padding-top: 8px;
+        }
+
+        .bingolobby-hero__head-game__item_fs20 {
+            flex-direction: column;
+        }
+
+        .bingolobby-hero__head-game__line {
+            width: 50%;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 0;
+
+            &:last-child {
+                width: auto;
+                margin-left: auto;
+            }
+        }
+
+        .bingolobby-hero__head-game__item {
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+
     .bingolobby__jackpots-stats {
         &__col {
             align-items: center;
@@ -1680,6 +1903,12 @@
 
 @media screen and (max-width: 596px) {
     .bingolobby-hero__head_v2 .bingolobby-hero__head-btn {
+        .btn {
+            width: 180px;
+        }
+    }
+
+    .bingolobby-hero__head_v3 .bingolobby-hero__head-btn {
         .btn {
             width: 180px;
         }
