@@ -7,6 +7,12 @@
 		</button>
 		}
 
+		@@if(context.dreamButton === "loggetOut"){
+			<button class="block-product__dream-button btn-link" href="#modal-login" data-toggle="modal">
+				<i class="icon icon-dream-star dreamlist-icon"></i>
+			</button>
+			}
+
 		<div class="block-product__image-wrapper">
 			<a class="block-product__link" href="@@if (context.href) {@@href}@@if (!context.href) {/}" title="">
 				<div class="block-product__image">

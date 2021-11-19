@@ -216,9 +216,35 @@ export default function () {
 		prevNextButtons: false,
 		autoPlay: 5000
 	});
-	
-	  
+
+
+	$('.product-slider__big-box').flickity({
+		pageDots: false,
+		cellSelector: '.product-slider__big-box .product-slider__item',
+		adaptiveHeight: true,
+		draggable: false,
+		prevNextButtons: true,
+		on: {
+			change: function( index ) {
+				$('.product-slider__big-box').find('.product-slider__current').text(index + 1)
+			},
+
+			ready: function() {
+				let count = $('.product-slider__big-box').find('.product-slider__count');
+				count.text($('.product-slider__big-box').find('.product-slider__item--large').length);
+			}
+		}
+	});
+
+	let $productThumbSlider = $('.product-slider__small-box').flickity({
+		asNavFor: '.product-slider__big-box',
+		cellSelector: '.product-slider__small-box .product-slider__item',
+		wrapAround: false,
+		// draggable: false,
+		pageDots: false,
+		prevNextButtons: true,
+		contain: true,
+	}); 
 
 }
-
 
