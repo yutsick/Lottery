@@ -15,6 +15,7 @@ import storeConfiguration from './store';
 
 /* Components */
 import addToDreamlist from './components/add-to-dreamlist';
+import imageZoom from './components/image-zoom';
 import accordion from './components/accordion';
 import alert from './components/alert';
 import bonusCode from './components/bonus-code';
@@ -84,6 +85,7 @@ $(function () {
 	new objectFitImages();
 	new accordion();
 	addToDreamlist();
+	imageZoom();
 	alert();
 	bonusCode();
 	checkboxTrigger();

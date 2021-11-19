@@ -226,7 +226,7 @@ export default function () {
 		prevNextButtons: true,
 		on: {
 			change: function( index ) {
-				$('.product-slider__big-box').find('.product-slider__current').text(index + 1)
+				$('.product-slider__big-box').find('.product-slider__current').text(index + 1);
 			},
 
 			ready: function() {
