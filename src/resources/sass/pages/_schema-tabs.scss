@@ -43,6 +43,14 @@
             overflow: hidden;
             opacity: 0;
             transition: opacity .3s;
+
+            &-content_pt {
+                padding-top: 20px;
+
+                .bingolobby__contests {
+                    margin-top: 0;
+                }
+            }
     
             &.active {
                 display: block;
@@ -337,6 +345,18 @@
                 height: 383px;
                 max-width: 680px;
                 width: 100%;
+
+                max-width: unset;
+                height: 53vw;
+            }
+
+            .s-video {
+                height: 100%;
+                margin-bottom: 0;
+            }
+
+            &__video {
+                height: 100%;
             }
 
             &.mediaBlock_revert-D {
@@ -425,6 +445,10 @@
             &-content {
                 margin: 10px 0;
 
+                &_pt {
+                    padding-top: 0;
+                }
+
                 &.active {
                     margin: 0;
 
@@ -490,6 +514,19 @@
         }
 
         .mediaBlock {
+
+            &__media {
+                height: 55vw;
+            }
+
+            .s-video {
+                min-height: unset;
+
+                iframe {
+                    min-height: unset;
+                }
+            }
+
             //Video block on tablet => open modal when click START (reset modal styles)
             .js-mediaBlock__video::after {
                 display: none;

@@ -22,7 +22,6 @@
         width: 100%;
         background-color: #ffffffed;
         padding: 20px 0;
-        padding-top: 26px;
         min-height: 124px;
         display: flex;
         flex-direction: column;
@@ -852,6 +851,7 @@
         width: 100%;
         max-width: 392px;
         height: auto;
+        min-height: 698px;
         max-height: 85vh;
         z-index: 1006;
         background-color: $color-primary;
@@ -927,6 +927,12 @@
         width: 100%;
         max-width: 392px;
         height: auto;
+    }
+}
+
+@media screen and (max-height:797px) {
+    .bingoinfo-modals__panel {
+        min-height: 85vh;
     }
 }
 
@@ -1263,7 +1269,9 @@
     .bingolobby__deposits {
         margin-top: 0px;
         margin-bottom: 0;
-        padding: 20px 0;
+        padding: 0;
+        padding-top: 40px;
+        padding-bottom: 36px;
         
         height: calc(100% - 20px);
         align-items: center;
@@ -1692,8 +1700,11 @@
         height: 481px;
 
         &__head {
-            min-height: 282px;
+            // min-height: 282px;
             padding-top: 19px;
+            min-height: unset;
+            bottom:unset;
+            top: 200px;
         }
     }
 
