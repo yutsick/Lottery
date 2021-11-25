@@ -508,6 +508,51 @@
 	}
 }
 
+.ag-info-box {
+	flex-shrink: 0;
+	position: relative;
+	cursor: pointer;
+
+	.ag-info-text {
+		position: absolute;
+		background-color: cornsilk;
+		width: 180px;
+		font-size: 12px;
+		z-index: 1;
+		bottom: 27px;
+    	left: -80px;
+		border-radius: 2px;
+		color: #003E52;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 16px;
+			height: 7px;
+			background-color: cornsilk;
+
+			position: absolute;
+			left: 77px;
+			bottom: -7px;
+			clip-path: polygon(100% 0%, 0% 0%, 50% 100%);
+		}
+
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+
+		transition: opacity 0.3s ease;
+	}
+
+	&:hover .ag-info-text  {
+		height: auto;
+		visibility: visible;
+		opacity: 1;
+
+		padding: 10px;
+	}
+}
+
 button.ag-reset {
 	padding: 0;
 	margin-right: 9px;
