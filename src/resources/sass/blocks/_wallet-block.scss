@@ -20,7 +20,7 @@
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 26px;
-	width: 50%;
+	width: auto;
 }
 
 .wallet__pink_numb {
@@ -31,8 +31,10 @@
 	line-height: 26px;
 	text-align: right;
 	color: #003E52;
-	width: calc(50% - 62px);
+	width: auto;
 	padding-right: 16px;
+	margin-left: auto;
+	padding-left: 7px;
 }
 
 .wallet__yellow {
@@ -53,7 +55,7 @@
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 26px;
-	width: 50%;
+	width: auto;
 }
 
 .wallet__yellow_numb {
@@ -64,8 +66,10 @@
 	line-height: 26px;
 	text-align: right;
 	color: #003E52;
-	width: calc(50% - 62px);
+	width: auto;
+	margin-left: auto;
 	padding-right: 16px;
+	padding-left: 7px;
 }
 
 .wallet__text {
