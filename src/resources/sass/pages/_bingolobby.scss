@@ -850,27 +850,16 @@
     &__panel {
         width: 100%;
         max-width: 392px;
-        height: auto;
-        min-height: 698px;
-        max-height: 85vh;
+        height: 85vh;
+        max-height: 698px;
         z-index: 1006;
         background-color: $color-primary;
         padding: 40px 20px 25px;
         position: relative;
         color: #fff;
         overflow-y: auto;
-    }
-
-    &__bg {
-
-        img {
-            width: 100%;
-            height: auto;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
+        background-repeat: no-repeat;
+        background-size: 100% auto;
     }
 
     &__logo {
@@ -927,12 +916,6 @@
         width: 100%;
         max-width: 392px;
         height: auto;
-    }
-}
-
-@media screen and (max-height:797px) {
-    .bingoinfo-modals__panel {
-        min-height: 85vh;
     }
 }
 
@@ -1665,7 +1648,6 @@
     }
 }
 
-
 @media screen and (max-width: 696px) {
     .bingolobby-hero__head_v2 .bingolobby-hero__head-game {
         max-width: 330px;
@@ -2066,5 +2048,11 @@
 
     .bingolobby-img-block {
         height: 192px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bingoinfo-modals__panel {
+        max-height: 570px;
     }
 }

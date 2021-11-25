@@ -500,7 +500,12 @@
 .col-ag-reset {
 	display: flex;
 	align-items: center;
-	margin-bottom: 8px;
+	margin-bottom: 6px;
+	padding-left: 5px;
+
+	svg {
+		flex-shrink: 0;
+	}
 }
 
 button.ag-reset {
@@ -558,6 +563,11 @@ label.ag-label {
 
 .ag-col.col-num {
 	width: 100%;
+
+	label.ag-label {
+		margin-bottom: 6px;
+		padding-left: 5px;
+	}
 }
 
 .ag__check .invalid-text {

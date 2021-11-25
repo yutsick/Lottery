@@ -24,6 +24,39 @@
 		justify-content: center;
 		flex-direction: column;
 	}
+
+	.checkbox {
+		margin: 0;
+		margin-top: -3px;
+
+		label {
+			font-size: 12px;
+			color: #003E52;
+			line-height: 150%;
+			font-weight: 400;
+			padding-left: 26px;
+		}
+
+		a {
+			text-decoration: underline;
+			font-weight: 700;
+		}
+
+		.custom-checkbox {
+			margin-top: 2px;
+			border: 1px solid #003E52;
+			border-radius: 1px;
+			width: 17px;
+    		height: 17px;
+			margin-left: -26px;
+
+			&:checked:after {
+				top: 2px;
+				left: 2px;
+				font-size: 13px;
+			}
+		}
+	}
 }
 
 .form_label {
@@ -69,6 +102,39 @@
 .newsletter__check_form {
 	width: calc(50% - 20px);
 	margin-left: 20px;
+
+	.checkbox {
+		margin: 0;
+		margin-top: -3px;
+
+		label {
+			font-size: 12px;
+			color: #003E52;
+			line-height: 150%;
+			font-weight: 400;
+			padding-left: 26px;
+		}
+
+		a {
+			text-decoration: underline;
+			font-weight: 700;
+		}
+
+		.custom-checkbox {
+			margin-top: 2px;
+			border: 1px solid #003E52;
+			border-radius: 1px;
+			width: 17px;
+    		height: 17px;
+			margin-left: -26px;
+
+			&:checked:after {
+				top: 2px;
+				left: 2px;
+				font-size: 13px;
+			}
+		}
+	}
 }
 
 .newsletter__check_imag-head h4 {
