@@ -85,20 +85,21 @@
 	min-height: 88px;
 }
 
-.wallets-group {
+.wallet__wrapper {
 	height: 100%;
 	display: flex;
     flex-direction: column;
 	
 	.wallet {
 		height:50%;
-		display: flex;
-		flex-direction: column;
 		flex-grow: 1;
+
+		display: flex;
+    	flex-direction: column;
 	}
 
 	.wallet__text {
-		height: 100%;
+		flex-grow: 1;
 	}
 }
 
@@ -109,5 +110,61 @@
 
 	.wallet__wrapper {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 1240px) {
+	.wallet__pink_numb,
+	.wallet__yellow_numb,
+	.wallet__pink_name,
+	.wallet__yellow_name
+	 {
+		font-size: 17px;
+		line-height: 90%;
+	}
+
+	.wallet__pink_numb,
+	.wallet__yellow_numb {
+		padding-right: 6px;
+	}
+
+	.wallet__pink_icon,
+	.wallet__yellow_icon {
+		margin-right: 5px;
+		width: 40px;
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	.wallet__pink_numb,
+	.wallet__yellow_numb,
+	.wallet__pink_name,
+	.wallet__yellow_name
+	 {
+		font-size: 20px;
+		line-height: 26px;
+	}
+
+	.wallet__pink_numb,
+	.wallet__yellow_numb {
+		padding-right: 16px;
+	}
+
+	.wallet__pink_icon,
+	.wallet__yellow_icon {
+		margin-right: 10px;
+		width: 52px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.wallet__wrapper {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.wallet__wrapper {
+		margin-bottom: 60px;
 	}
 }

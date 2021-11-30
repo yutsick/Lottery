@@ -825,3 +825,14 @@ label.form_label_checkbox {
 	opacity: 1;
 	left: 0;
 }
+
+.ag-single-step-efakt,
+.ag-single-step-ag,
+.ag-multi-step {
+	display: flex;
+	flex-direction: column;
+}
+
+.ag__check {
+	flex-grow: 1;
+}
