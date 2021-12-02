@@ -1682,11 +1682,11 @@
         height: 481px;
 
         &__head {
-            // min-height: 282px;
-            padding-top: 19px;
+            min-height: 282px;
+            padding-top: 24px;
+            padding-bottom: 20px;
             min-height: unset;
-            bottom:unset;
-            top: 200px;
+            bottom:0;
         }
     }
 
@@ -1759,7 +1759,8 @@
     }
 
     .bingolobby-hero__head_v2 {
-        padding-bottom: 16px;
+        padding-bottom: 30px;
+        padding-top: 24px;
         .bingolobby-hero__head-host {
             width: 100%;
             margin-top: 30px;
@@ -1808,7 +1809,8 @@
     }
 
     .bingolobby-hero__head_v3 {
-        padding-bottom: 16px;
+        padding-bottom: 30px;
+        padding-top: 24px;
         .bingolobby-hero__head-host {
             width: 100%;
             margin-top: 30px;
