@@ -95,31 +95,31 @@
 		margin-bottom: 20px;
 	}
 
-	a:not(.btn) {
-		position: relative;
-		overflow: visible;
-		font-weight: bold;
+	// a:not(.btn) {
+	// 	position: relative;
+	// 	overflow: visible;
+	// 	font-weight: bold;
 
-		&:before {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 1px;
-			bottom: -1px;
-			left: 0;
-			background-color: #D4E9FE;
-			transition: all $duration-medium ease-in-out $delay-none;
-			visibility: visible;
-			transform: scaleX(1);
-		}
+	// 	&:before {
+	// 		content: "";
+	// 		position: absolute;
+	// 		width: 100%;
+	// 		height: 1px;
+	// 		bottom: -1px;
+	// 		left: 0;
+	// 		background-color: #D4E9FE;
+	// 		transition: all $duration-medium ease-in-out $delay-none;
+	// 		visibility: visible;
+	// 		transform: scaleX(1);
+	// 	}
 
-		&:hover {
-			&:before {
-				visibility: hidden;
-				transform: scaleX(0);
-			}
-		}
-	}
+	// 	&:hover {
+	// 		&:before {
+	// 			visibility: hidden;
+	// 			transform: scaleX(0);
+	// 		}
+	// 	}
+	// }
 
 	blockquote {
 		font-style: italic;
