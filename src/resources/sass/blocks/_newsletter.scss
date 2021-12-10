@@ -25,6 +25,23 @@
 		flex-direction: column;
 	}
 
+	&_text {
+		margin-bottom: 15px;
+
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&_head {
+		h4 {
+			margin: 0;
+		}
+		margin-bottom: 5px;
+	}
+
 	.checkbox {
 		margin: 0;
 		margin-top: -3px;
@@ -40,6 +57,7 @@
 		a {
 			text-decoration: underline;
 			font-weight: 700;
+			margin-left: 3px;
 		}
 
 		.custom-checkbox {
@@ -82,11 +100,17 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	&_head h4 {
+		margin: 0;
+		margin-bottom: 5px;
+	}
 }
 
 .newsletter__check {
-	padding: 20px 20px 10px;
+	padding: 40px 20px 0px;
 	background: #CEDFD7;
+	min-height: 282px;
 
 	display: flex;
 	flex-wrap: wrap;
@@ -97,11 +121,20 @@
 .newsletter__check_imag {
 	width: calc(50% - 20px);
 	margin-right: 20px;
+	padding-bottom: 30px;
+
+	display: flex;
+	flex-direction: column;
 }
 
 .newsletter__check_form {
 	width: calc(50% - 20px);
 	margin-left: 20px;
+	padding-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
 
 	.checkbox {
 		margin: 0;
@@ -118,6 +151,7 @@
 		a {
 			text-decoration: underline;
 			font-weight: 700;
+			margin-left: 3px;
 		}
 
 		.custom-checkbox {
@@ -135,6 +169,19 @@
 			}
 		}
 	}
+
+	&.align-middle {
+		justify-content: center;
+
+		.newsletter__sform_text {
+			margin-bottom: 0px;
+		}
+
+		.btn {
+			margin-top: 30px;
+		}
+	}
+
 }
 
 .newsletter__check_imag-head h4 {
@@ -145,6 +192,8 @@
 	line-height: 34px;
 	text-align: center;
 	color: #003E52;
+	margin: 0;
+	margin-bottom: 5px;
 }
 
 .newsletter__check_imag-text {
@@ -155,13 +204,28 @@
 	line-height: 28px;
 	text-align: center;
 	color: #003E52;
+
+	
+	
+	&:nth-of-type(3) {
+		font-size: 20px;
+		line-height: 120%;
+		margin-top: 5px;
+	}
 }
 
 .newsletter__check_imag-imag {
 	margin-top: 20px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	height: 100%;
+	align-items: flex-start;
+
+	img {
+		object-fit: contain;
+		height: 100%;
+		max-height: 195px;
+	}
 }
 
 .not-valid {
@@ -187,17 +251,21 @@
 	}
 	.newsletter__success {
 		max-width: 100%;
-		margin: 0 auto;
+		padding-top: 30px;
+		// margin: 0 auto;
 	}
 	.newsletter__check {
 		flex-direction: column;
+		padding-top: 30px;
 	}
 	.newsletter__check_imag {
+		padding-bottom: 40px;
 		width: 100%;
 		margin-right: 0;
 	}
 	.newsletter__check_form {
 		width: 100%;
 		margin-left: 0;
+		height: auto;
 	}
 }

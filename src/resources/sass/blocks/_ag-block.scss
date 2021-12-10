@@ -45,6 +45,7 @@
 	line-height: 16px;
 	text-align: center;
 	color: #FFFFFF;
+	margin-bottom: 5px;
 }
 
 .ag__sform form {
@@ -137,31 +138,56 @@
 	}
 
 	h4 {
-		font-size: 28px;
+		font-size: 30px;
 		line-height: 32px;
 		margin-top: 0;
 		margin-bottom: 6px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	& + .ag__check_imag-text {
+		font-size: 20px;
+		line-height: 24px;
 	}
 }
 
-.ag__sform_head h5 {
-	font-family: 'Apercu Pro', sans-serif;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 16px;
-	line-height: 20px;
-	margin-top: 0;
-	color: #FFFFFF;
+.ag__sform_head {
+	h5 {
+		font-family: 'Apercu Pro', sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 20px;
+		margin-top: 0;
+		color: #FFFFFF;
+	}
 }
 
 .ag__check_imag-text {
 	font-family: 'Apercu Pro', sans-serif;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 20px;
-	line-height: 24px;
+	// font-size: 20px;
+	// line-height: 24px;
 	text-align: center;
 	color: #fff;
+
+	font-size: 24px;
+	line-height: 28px;
+	margin-bottom: 5px;
+
+	&:nth-last-child(2) {
+		font-size: 20px;
+		line-height: 24px;
+	}
+
+	&:nth-last-child(3) {
+		font-size: 24px;
+		line-height: 28px;
+	}
 }
 
 .ag__sform_text p {
@@ -260,43 +286,50 @@
 	.ag__sform {
 		display: flex;
 		justify-content: center;
+
+		form {
+			max-width: 100%;
+		}
 	}
-	.ag__sform form {
-		max-width: 100%;
-	}
+
 	.ag__success {
 		max-width: 100%;
 		margin: 0 auto;
 	}
 	.ag__check {
 		flex-direction: column;
+		min-height: auto;
 	}
 	.ag__check_imag {
 		width: 100%;
 		margin-right: 0;
+		min-height: auto;
+		padding: 30px 20px 0px;
+
+		.ag__check_imag-text:nth-child(3){
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 	.ag__check_form {
 		width: 100%;
 		margin-left: 0;
-	}
-
-	.ag__check {
-		min-height: auto;
-	}
-
-	.ag__check_imag {
-		min-height: auto;
-		padding: 30px 20px 0px;
-	}
-
-	.ag__check_form {
 		min-height: auto;
 		padding: 40px 10px 50px;
 	}
 
-	.ag__check_imag .ag__check_imag-text:nth-child(3){
-		font-size: 18px;
-		line-height: 22px;
+	.ag__check_imag-head {
+		h4 {
+			font-size: 28px;
+			line-height: 32px;
+		}
+	}
+
+	.ag__check_imag-text {
+		&:nth-last-child(2) {
+			font-size: 18px;
+			line-height: 22px;
+		}
 	}
 }
 
@@ -495,6 +528,9 @@
 .ag-form-row {
 	display: flex;
 	align-items: flex-end;
+	margin-bottom: 15px;
+
+
 }
 
 .col-ag-reset {
@@ -512,6 +548,7 @@
 	flex-shrink: 0;
 	position: relative;
 	cursor: pointer;
+	line-height: 100%;
 
 	.ag-info-text {
 		position: absolute;
@@ -600,10 +637,14 @@ label.ag-label {
 	line-height: 16px;
 	color: #FFCE00;
 	opacity: 0;
+	height: 0;
+	visibility: hidden;
 }
 
 .form-control.invalid + .form-text.text-muted {
 	opacity: 1;
+	height: auto;
+	visibility: visible;
 }
 
 .ag-col.col-num {
@@ -619,6 +660,16 @@ label.ag-label {
 	font-size: 14px;
 	line-height: 20px;
 	color: #FFCE00;
+	opacity: 0;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+
+	&.visible {
+		opacity: 1;
+		height: auto;
+		visibility: visible;
+	}
 }
 
 .ag-col.invalid-text {
@@ -628,12 +679,18 @@ label.ag-label {
 	font-size: 14px;
 	line-height: 20px;
 	color: #FFCE00;
-	margin: 30px 0 15px;
 	opacity: 0;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
 }
 
 .ag-col.invalid-text.visible {
 	opacity: 1;
+	height: auto;
+	visibility: visible;
+
+	padding: 15px 0 15px;
 }
 
 .ag-form-submit-text {
@@ -679,11 +736,37 @@ label.ag-label {
 	margin-bottom: 30px;
 }
 
-.ag-form-submit-btn .btn-wide.disabled {
-	background-color: #ECC5DE;
-	border: 2px solid #ECC5DE;
-	color: #ffffff;
-	opacity: 1;
+.ag-form-submit-btn {
+	.btn-wide {
+		border-radius: 2em;
+		border: none;
+		padding: 0px 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: "Proxima Nova";
+		font-size: 16px;
+		font-weight: 700;
+		min-height: 38px;
+
+		&:hover {
+			background-color: #ED8DC4;
+			color: #ffffff;
+			border: none;
+		}
+
+		&.disabled {
+			background-color: #ECC5DE;
+			border: 2px solid #ECC5DE;
+			color: #ffffff;
+			opacity: 1;
+
+			&:hover {
+				background-color: #ECC5DE;
+				border: none;
+			}
+		}
+	}
 }
 
 .contain-form-checkbox{
@@ -823,6 +906,8 @@ label.form_label_checkbox {
 	line-height: 16px;
 	color: #FFCE00;
 	opacity: 1;
+	height: auto;
+	visibility: visible;
 	left: 0;
 }
 
