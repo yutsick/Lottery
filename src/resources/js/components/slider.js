@@ -196,15 +196,22 @@ export default function () {
 		bingoSliderOptions.cellAlign = 'center';
 	}
 	$('.block-bingo-slider').flickity(bingoSliderOptions);
-	$('.sbs-arrows').flickity({
+
+	//Shop-block-slider module
+	let sbsArrowsOption = {
 		cellSelector: '.sbs__item',
 		cellAlign: 'left',
 		wrapAround: true,
-		// draggable: false,
 		pageDots: false,
+		contain: true,
 		prevNextButtons: true,
-		autoPlay: 5000
-	});
+		autoPlay: 5000,
+		adaptiveHeight: true
+	}
+	if ( matchMedia('screen and (max-width: 1024px)').matches ) {
+		sbsArrowsOption.cellAlign = 'center';
+	}
+	$('.sbs-arrows').flickity(sbsArrowsOption);
 
 
 
