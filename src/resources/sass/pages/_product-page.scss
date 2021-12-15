@@ -10,6 +10,12 @@
         font-size: 12px;
     }
 
+    .product-info__winning-nr {
+        padding-top: 20px;
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
     .product-info__winning-nr_ttnormal {
         text-transform: none;
     }
@@ -21,11 +27,17 @@
 
     .product-info__details-wrapper {
         display: flex;
-        align-items: flex-end;
+        align-items: stretch;
         justify-content: space-between;
 
         .product-order {
             text-align: left;
+            margin-bottom: 0;
+            margin-top: 0;
+
+            li:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -39,6 +51,10 @@
     }
 
     .product-info__details-right-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
         .product-order__btn {
             width: 236px;
             height: 58px;
@@ -52,6 +68,9 @@
 
     .product-info__details-left-col {
         padding-right: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .product-dreamlist_fav-text {
@@ -337,6 +356,10 @@
                     }
                 }
             }
+        }
+
+        .product-info__details-right-col {
+            margin-top: 25px;
         }
 
         .product-info__winning-nr {
