@@ -538,10 +538,11 @@
 		display: none;
 	}
 
-	&.lottery-slider-nav_xs-none {
-		@include max-screen($screen-xs-max) {
+	@media screen and (max-width: 767px) {
+		&.lottery-slider-nav_xs-none {
 			display: none;
 		}
+		
 	}
 
 	.block-title {
@@ -598,6 +599,24 @@
 				position: absolute;
 				content: '';
 				bottom: 0;
+				right: 10px;
+				left: 10px;
+				height: 1px;
+				background-color: $color-secondary-dark;
+
+			}
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+		}
+
+		@include max-screen($screen-xs-max) {
+			&:after {
+				position: absolute;
+				content: '';
+				bottom: 0;
 				right: 5px;
 				left: 5px;
 				height: 1px;
@@ -610,6 +629,7 @@
 				}
 			}
 		}
+
 		@include min-screen($screen-md-min) {
 			margin-bottom: 60px;
 			padding-bottom: 0;
@@ -676,11 +696,18 @@
 		}
 	}
 	.title {
-		font-size: 24px;
+		font-size: 20px;
 		font-family: $apercu-bold-font;
-		line-height: 28px;
+		line-height: 24px;
 		margin-bottom: 10px;
 	}
+
+	@media screen and (max-width: 576px) {
+		.title {
+			font-size: 18px;
+		}
+	}
+
 	.text {
 		font-size: 16px;
 		font-weight: 400;
@@ -783,5 +810,21 @@
 		line-height: 22px;
 		max-height: 66px;
 		overflow: hidden;
+	}
+}
+
+#shopsection {
+
+	@media screen and (max-width: 767px) {
+		.added-lottery-item .lottery-top {
+			width: auto;
+			justify-content: center;
+			display: flex;
+
+			.img_lottery-size {
+				height: 261px;
+				max-width: 140px;
+			}
+		}
 	}
 }
