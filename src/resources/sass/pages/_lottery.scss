@@ -537,6 +537,13 @@
 	@include min-screen($screen-md-min) {
 		display: none;
 	}
+
+	&.lottery-slider-nav_xs-none {
+		@include max-screen($screen-xs-max) {
+			display: none;
+		}
+	}
+
 	.block-title {
 		max-width: 325px;
 		font-family: $apercu-bold-font;
