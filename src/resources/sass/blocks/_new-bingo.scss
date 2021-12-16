@@ -3,16 +3,22 @@
 	height: auto;
 	min-height: 282px;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
     background-position: top center;
     background-color: #003c51;
 	display: flex;
 	flex-direction: column;
-	padding: 132px 10px 10px;
+	padding: 132px 20px 20px;
 }
 
 .the-game {
-	margin-top: auto;
+	margin-top: auto;		
+	display: flex;
+	align-items: center;
+
+	& > div {
+		padding: 0;
+	}
 }
 
 .the-game-name {
@@ -22,10 +28,11 @@
 	font-size: 16px;
 	line-height: 22px;
 	color: #FFFFFF;
-	height: 38px;
+	min-height: 38px;
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	padding-right: 5px;
 }
 
 .the-game-name span:first-child {
@@ -48,6 +55,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	padding: 8px 0;
+	padding-right: 5px;
 }
 
 .victory-money span:last-child {
@@ -58,6 +66,13 @@
 	margin-right: 5px;
 }
 
+.victory {
+	& > div {
+		padding: 0;
+	}
+	margin-bottom: 4px;
+	margin-top: 4px;
+}
 
 .victory-game {
 	font-family: 'Proxima Nova', sans-serif;
@@ -97,6 +112,11 @@
 
 .to-game {
 	display: flex;
+	align-items: flex-end;
+
+	& > div {
+		padding: 0;
+	}
 }
 
 .to-game-go {
@@ -104,6 +124,13 @@
 		padding-left: 0;
 		padding-right: 0;
 		width: 100%;
+		max-width: 140px;
+	}
+
+	.block-promotion__bingo-column {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row;
 	}
 }
 
