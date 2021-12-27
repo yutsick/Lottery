@@ -242,14 +242,25 @@
         
         .campaign__header-content {
             padding-left: 20px;
-            padding-right: 20px;
+            padding-right: 0;
             margin-right: auto;
         }
+
+        .campaign__header-image {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
         &-revert {
             flex-direction: row-reverse;
 
-            .campaign__header-content {
+            .campaign__header-image {
+                padding-right: 0;
                 padding-left: 20px;
+            }
+
+            .campaign__header-content {
+                padding-left: 0px;
                 padding-right: 20px;
                 margin-right: auto; 
             }
@@ -462,6 +473,7 @@
         .campaign__header-content  {
             max-width: 330px;
             margin: 0 auto;
+            padding-right: 0;
 
             h2 {
                 font-size: 24px;
@@ -624,6 +636,10 @@
                 padding: 0;
                 margin: 0 auto;
             }
+
+            .campaign__header-image {
+                padding: 0;
+            }
         }
 
         &_3col {
@@ -643,6 +659,16 @@
                     flex-basis: auto;
                     width: 100%;
                 }
+            }
+
+            .campaign__header-image {
+                padding: 0;
+            }
+
+            .campaign__header-content {
+                align-items: center;
+                padding: 0;
+                margin: 0 auto;
             }
         }
 
