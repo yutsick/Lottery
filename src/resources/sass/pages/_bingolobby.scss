@@ -1326,26 +1326,27 @@
     #panel__chatschema,
     #panel__faq,
     #panel__contests,
-    #panel__jackpots {
+    #panel__jackpots,
+    #panel__howitworks,
+    #panel__deposits {
         width: 100%;
     }
 
-    #panel__howitworks,
-    #panel__deposits {
-        width: calc(50% - 10px);
+    // #panel__deposits {
+    //     width: calc(50% - 10px);
 
-        &.fullWidth {
-            width: 100%;
-        }
-    }
+    //     &.fullWidth {
+    //         width: 100%;
+    //     }
+    // }
 
-    #panel__howitworks {
-        &.fullWidth {
-            .js-mediaBlock__video::after {
-                display: none;
-            }
-        }
-    }
+    // #panel__howitworks {
+    //     &.fullWidth {
+    //         .js-mediaBlock__video::after {
+    //             display: none;
+    //         }
+    //     }
+    // }
 
     .bingolobby__faq {
         height: auto;

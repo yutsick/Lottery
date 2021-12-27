@@ -7,43 +7,162 @@
 
 <div class="content-wrapper ml-2017">
 
-    <div class="container">
-        <div class="row mt-30">
-            <h3>MediaBlock in tabs options with fullWidth panel for media</h3>
-        </div>
-    </div>
-
-    <section class="schema-tabs m-3">
+    <section class="schema-tabs m-3 mt-30">
         <div class="container">
+            <h3>Usual without options (Media video)</h3>
             <div class="schema-tabs__head-container">
-                <a data-orderD="01" href="#panel__howitworks" class="schema-tabs__head-item js-schema-tabs__btn js-schema-tabs-reorder active">Så funkar det</a>
+                <a class="schema-tabs__head-item active">Så funkar det</a>
             </div>
     
             <div class="schema-tabs__panels-container">
-                <!-- add class "fullWidth" to #panel__howitworks if no more 50% width panels -->
-                <div data-orderT="02" data-orderM="06" id="panel__howitworks" class="schema-tabs__panel js-schema-tabs__panel js-schema-panels-reorder fullWidth active" >
+                <div class="schema-tabs__panel active" id="panel__howitworks">
                     <div class="schema-tabs__panel-content">
-                        <h3>Usual without options</h3>
                         @@include('blocks/schema-tabs/_media-block.html', { 
-                            "in_tabs": true
+                            "media": "video"
                         })
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <h3 class="mt-60">Only Media</h3>
+        <div class="container mt-60">
+            <h3 class="mt-60">Usual Media image (works with all other options)</h3>
+            <div class="schema-tabs__head-container">
+                <a class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
                         @@include('blocks/schema-tabs/_media-block.html', { 
-                            "in_tabs": true,
-                            "onlyMedia": true
+                            "media": "image"
                         })
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <h3 class="mt-60">Media btn true</h3>
+        <div class="container mt-60">
+            <h3 class="mt-60">Only Media</h3>
+
+            <div class="schema-tabs__head-container">
+                <a class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
                         @@include('blocks/schema-tabs/_media-block.html', { 
-                            "in_tabs": true,
-                            "mediaBtn": true
+                            "onlyMedia": true,
+                            "media": "video"
                         })
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                        <h3 class="mt-60">Revert content on desktop</h3>
+        <div class="container mt-60">
+            <h3 class="mt-60">Media btn true</h3>
+            <div class="schema-tabs__head-container">
+                <a href="#panel__howitworks" class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
                         @@include('blocks/schema-tabs/_media-block.html', { 
-                            "in_tabs": true,
-                            "revert": "revert-D"
+                            "mediaBtn": true,
+                            "media": "video"
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-60">
+            <h3 class="mt-60">Revert content on desktop</h3>
+            <div class="schema-tabs__head-container">
+                <a class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
+                        @@include('blocks/schema-tabs/_media-block.html', { 
+                            "revert": "revert-D",
+                            "media": "video"
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-60">
+            <h3 class="mt-60">Media video only media block on mobile width</h3>
+            <div class="schema-tabs__head-container">
+                <a class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
+                        @@include('blocks/schema-tabs/_media-block.html', { 
+                            "media": "video",
+                            "onlyMedia": "mobile"
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-60">
+            <h3 class="mt-60">No media block on mobile</h3>
+            <div class="schema-tabs__head-container">
+                <a class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
+                        @@include('blocks/schema-tabs/_media-block.html', { 
+                            "media": "video",
+                            "noMediaOnMobile": true
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-60">
+            <h3 class="mt-60">Media Revert on mobile</h3>
+            <div class="schema-tabs__head-container">
+                <a class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
+                        @@include('blocks/schema-tabs/_media-block.html', { 
+                            "media": "video",
+                            "revert": "revert-M"
+                        })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-60">
+            <h3 class="mt-60">Media Revert on desktop and mobile</h3>
+            <div class="schema-tabs__head-container">
+                <a class="schema-tabs__head-item active">Så funkar det</a>
+            </div>
+    
+            <div class="schema-tabs__panels-container">
+                <div class="schema-tabs__panel active" id="panel__howitworks">
+                    <div class="schema-tabs__panel-content">
+                        @@include('blocks/schema-tabs/_media-block.html', { 
+                            "media": "video",
+                            "revert": "revert-D-M"
                         })
                     </div>
                 </div>
@@ -51,76 +170,7 @@
         </div>
     </section>
 
-    <div class="container">
-        <div class="row mt-60">
-            <h3>MediaBlock out of tabs options</h3>
-        </div>
-    </div>
-    <section class="campaign__howitworks m-3">
-        <div class="container">
-            <h3>Usual Media video</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video"
-            })
-
-            <h3 class="mt-60">Usual Media image (works with all other options)</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "image"
-            })
-
-            <h3 class="mt-60">Media video only media block</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video",
-                "onlyMedia": true
-            })
-
-            <h3 class="mt-60">Media video only media block with btn</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video",
-                "mediaBtn": true
-            })
-
-            <h3 class="mt-60">Media video only media block on mobile width</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video",
-                "onlyMedia": "mobile"
-            })
-
-            <h3 class="mt-60">No media block on mobile</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video",
-                "noMediaOnMobile": true
-            })
-
-            <h3 class="mt-60">Usual Media Revert on desktop</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video",
-                "revert": "revert-D"
-            })
-
-            <h3 class="mt-60">Usual Media Revert on mobile</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video",
-                "revert": "revert-M"
-            })
-
-            <h3 class="mt-60">Usual Media Revert on desktop and mobile</h3>
-            @@include('blocks/schema-tabs/_media-block.html', {
-                "in_tabs": false, 
-                "media": "video",
-                "revert": "revert-D-M"
-            })
-            
-        </div>
-    </section>
+    
 
 </div>
 
