@@ -467,6 +467,8 @@
 			height: 342px;
 			width: 100%;
 			max-width: 255px;
+			margin-right: auto;
+			margin-left: auto;
 
 			img {
 				width: 100%;
@@ -728,9 +730,12 @@
 
 /*lottery in store*/
 .s-added-lottery {
-	padding: 60px 0;
-	@include min-screen($screen-md-min) {
-		margin-bottom: 60px;
+	padding-top: 60px;
+
+	.add-lottery-margin {
+		@include min-screen($screen-md-min) {
+			margin-bottom: 60px;
+		}
 	}
 	.block-title-wrap {
 		margin-bottom: -20px;
@@ -743,6 +748,7 @@
 	justify-content: center;
 	width: calc(100% + 40px);
 	margin: -20px;
+	margin-bottom: 40px;
 }
 
 .added-lottery-item {
@@ -758,7 +764,7 @@
 	}
 	.lottery-top {
 		position: relative;
-		width: 192px;
+		width: 170px;
 		margin: 0 auto 40px;
 
 		.img_lottery-size {
@@ -811,21 +817,61 @@
 		max-height: 66px;
 		overflow: hidden;
 	}
+
+	.text-sub {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 22px;
+		max-height: 66px;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
 }
 
-#shopsection {
+@media screen and (max-width: 767px) {
+	.added-lottery-item .lottery-top {
+		width: auto;
+		justify-content: center;
+		display: flex;
+		max-height: 261px;
 
-	@media screen and (max-width: 767px) {
-		.added-lottery-item .lottery-top {
+		.img_lottery-size {
+			max-height: 261px;
+			height: 261px;
 			width: auto;
-			justify-content: center;
-			display: flex;
+			max-width: 140px;
 
-			.img_lottery-size {
-				height: 261px;
-				max-width: 140px;
+			img {
+				object-fit: cover;
+				height: 100%;
+				width: auto;
+				max-height: 261px;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 569px) {
+	.added-lottery-item .lottery-top {
+
+		.img_lottery-size {
+			height: 100%;
+
+			img {
+				object-fit: contain;
+
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.lottery-slider-nav__list .lottery-price {
+		width: 40px;
+		height: 40px;
+		font-size: 12px;
+		line-height: 42px;
+		right: -10px;
 	}
 }
 
