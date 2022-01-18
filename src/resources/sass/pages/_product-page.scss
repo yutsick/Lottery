@@ -2,12 +2,16 @@
     .product-info__meta-item_bold {
         font-weight: 700;
         font-size: 16px;
-        margin-left: 17px;
     }
     
     .product-info__label_bold {
         font-weight: 600;
         font-size: 12px;
+        margin-right: 17px;
+
+        & + .product-info__meta-item {
+            margin-left: 0;
+        }
     }
 
     .product-info__winning-nr {
