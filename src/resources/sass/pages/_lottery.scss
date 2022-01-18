@@ -89,6 +89,8 @@
 
 .page-lottery {
 	overflow-x: hidden;
+	position: relative;
+	
 	.b-line {
 		position: relative;
 		width: 100%;
@@ -282,6 +284,7 @@
 /*online lottery*/
 .s-online-lottery {
 	padding: 60px 0 0;
+
 	.block-title {
 		&-wrap {
 			.block-subtitle {
