@@ -6,7 +6,7 @@ export default function () {
                 let container = document.querySelector(galleryId);
     
                 if(! container){
-                    console.error('please add the correct element')
+                    // console.error('please add the correct element')
                     return;
                 }
                 //select class small image and zoom image  

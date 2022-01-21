@@ -85,7 +85,6 @@ $(function () {
 	new objectFitImages();
 	new accordion();
 	addToDreamlist();
-	imageZoom();
 	alert();
 	bonusCode();
 	checkboxTrigger();
@@ -129,6 +128,7 @@ $(function () {
 	RegisterLottery.init();
 	tabs();
 	radioToggle();
+	imageZoom();
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();
