@@ -833,15 +833,57 @@
 	}
 }
 
-.page-lottery .lottery-top,
-.added-lottery-item .lottery-top {
-	width: auto;
-	max-width: 285px;
+.added-lottery-list.added-lottery-list {
+	&_340x684 {
+		.lottery-top {
+			width: 170px;
+			max-width: 170px;
+		
+			.img_lottery-size {
+				height: 342px;
+				width: 170px;
+				max-width: 170px;
+			}
+		}
+	}
 
-	.img_lottery-size {
-		height: 342px;
-		width: auto;
-		max-width: 285px;
+	&_510x684 {
+		.lottery-top {
+			width: 255px;
+			max-width: 255px;
+		
+			.img_lottery-size {
+				height: 342px;
+				width: 255px;
+				max-width: 255px;
+			}
+		}
+	}
+
+	&_570x684 {
+		.lottery-top {
+			width: 285px;
+			max-width: 285px;
+		
+			.img_lottery-size {
+				height: 342px;
+				width: 285px;
+				max-width: 285px;
+			}
+		}
+	}
+
+	&_447x684 {
+		.lottery-top {
+			width: 224px;
+			max-width: 224px;
+		
+			.img_lottery-size {
+				height: 342px;
+				width: 224px;
+				max-width: 224px;
+			}
+		}
 	}
 }
 
@@ -861,30 +903,72 @@
 		.img_lottery-size {
 			max-height: 261px;
 			height: 261px;
-			width: auto;
-			max-width: 140px;
+			width: 100%;
+			max-width: 204px;
 
 			img {
 				object-fit: cover;
 				height: 100%;
-				width: auto;
+				width: 100%;
 				max-height: 261px;
 			}
 		}
 	}
 
-	.page-lottery .lottery-top,
-	.added-lottery-item .lottery-top {
-
-		.img_lottery-size {
-			height: 261px;
-			max-width: 204px;
+	.added-lottery-list.added-lottery-list {
+		&_340x684 {
+			.lottery-top {
+				width: 130px;
+				max-width: 130px;
+			
+				.img_lottery-size {
+					height: 261px;
+					width: 130px;
+					max-width: 130px;
+				}
+			}
+		}
+	
+		&_510x684 {
+			.lottery-top {
+				width: 195px;
+				max-width: 195px;
+			
+				.img_lottery-size {
+					height: 261px;
+					width: 195px;
+					max-width: 195px;
+				}
+			}
+		}
+	
+		&_570x684 {
+			.lottery-top {
+				width: 218px;
+				max-width: 218px;
+			
+				.img_lottery-size {
+					height: 261px;
+					width: 218px;
+					max-width: 218px;
+				}
+			}
+		}
+	
+		&_447x684 {
+			.lottery-top {
+				width: 171px;
+				max-width: 171px;
+			
+				.img_lottery-size {
+					height: 261px;
+					width: 171px;
+					max-width: 171px;
+				}
+			}
 		}
 	}
 
-	.added-lottery-item {
-		max-width: 204px;
-	}
 }
 
 @media screen and (max-width: 569px) {
