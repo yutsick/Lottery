@@ -834,6 +834,19 @@
 }
 
 .added-lottery-list.added-lottery-list {
+	&_variable {
+		.lottery-top {
+			width: auto;
+			max-width: 285px;
+		
+			.img_lottery-size {
+				height: 342px;
+				width: auto;
+				max-width: 285px;
+			}
+		}
+	}
+
 	&_340x684 {
 		.lottery-top {
 			width: 170px;
@@ -916,6 +929,16 @@
 	}
 
 	.added-lottery-list.added-lottery-list {
+		&_variable {
+			.lottery-top {
+				max-width: 218px;
+			
+				.img_lottery-size {
+					max-width: 218px;
+				}
+			}
+		}
+
 		&_340x684 {
 			.lottery-top {
 				width: 130px;
