@@ -92,7 +92,7 @@
 .page-lottery {
 	overflow-x: hidden;
 	position: relative;
-	
+
 	.b-line {
 		position: relative;
 		width: 100%;
@@ -459,13 +459,13 @@
 	}
 	.lottery-top {
 		position: relative;
-		width: 195px;
+		// width: 195px;
 		margin: 0 auto 40px;
 		@include min-screen($screen-sm-min) {
-			width: 270px;
+			// width: 270px;
 		}
 		@include min-screen($screen-md-min) {
-			width: 255px;
+			// width: 255px;
 		}
 
 		.img_lottery-size {
@@ -549,7 +549,7 @@
 		&.lottery-slider-nav_xs-none {
 			display: none;
 		}
-		
+
 	}
 
 	.block-title {
@@ -769,7 +769,7 @@
 	}
 	.lottery-top {
 		position: relative;
-		width: 170px;
+		// width: 170px;
 		margin: 0 auto 40px;
 
 		.img_lottery-size {
@@ -833,77 +833,118 @@
 	}
 }
 
-.added-lottery-list.added-lottery-list {
-	&_variable {
-		.lottery-top {
-			width: auto;
-			max-width: 285px;
-		
-			.img_lottery-size {
-				height: 342px;
-				width: auto;
-				max-width: 285px;
-			}
-		}
-	}
+// .added-lottery-list.added-lottery-list {
+// 	&_variable {
+// 		.lottery-top {
+// 			width: auto;
+// 			max-width: 285px;
 
-	&_340x684 {
-		.lottery-top {
-			width: 170px;
-			max-width: 170px;
-		
-			.img_lottery-size {
-				height: 342px;
-				width: 170px;
-				max-width: 170px;
-			}
-		}
-	}
+// 			.img_lottery-size {
+// 				height: 342px;
+// 				width: auto;
+// 				max-width: 285px;
+// 			}
+// 		}
+// 	}
 
-	&_510x684 {
-		.lottery-top {
-			width: 255px;
-			max-width: 255px;
-		
-			.img_lottery-size {
-				height: 342px;
-				width: 255px;
-				max-width: 255px;
-			}
-		}
-	}
+// 	&_340x684 {
+// 		.lottery-top {
+// 			width: 170px;
+// 			max-width: 170px;
 
-	&_570x684 {
-		.lottery-top {
-			width: 285px;
-			max-width: 285px;
-		
-			.img_lottery-size {
-				height: 342px;
-				width: 285px;
-				max-width: 285px;
-			}
-		}
-	}
+// 			.img_lottery-size {
+// 				height: 342px;
+// 				width: 170px;
+// 				max-width: 170px;
+// 			}
+// 		}
+// 	}
 
-	&_447x684 {
-		.lottery-top {
-			width: 224px;
-			max-width: 224px;
-		
-			.img_lottery-size {
-				height: 342px;
-				width: 224px;
-				max-width: 224px;
-			}
-		}
-	}
-}
+// 	&_510x684 {
+// 		.lottery-top {
+// 			width: 255px;
+// 			max-width: 255px;
 
-.added-lottery-item {
+// 			.img_lottery-size {
+// 				height: 342px;
+// 				width: 255px;
+// 				max-width: 255px;
+// 			}
+// 		}
+// 	}
+
+// 	&_570x684 {
+// 		.lottery-top {
+// 			width: 285px;
+// 			max-width: 285px;
+
+// 			.img_lottery-size {
+// 				height: 342px;
+// 				width: 285px;
+// 				max-width: 285px;
+// 			}
+// 		}
+// 	}
+
+// 	&_447x684 {
+// 		.lottery-top {
+// 			width: 224px;
+// 			max-width: 224px;
+
+// 			.img_lottery-size {
+// 				height: 342px;
+// 				width: 224px;
+// 				max-width: 224px;
+// 			}
+// 		}
+// 	}
+// }
+
+.added-lottery-item,
+.online-lottery-item {
 	width: auto;
 	max-width: 285px;
 	flex-basis: 100%;
+}
+
+.lottery-top {
+	width: auto;
+	max-width: 285px;
+
+	.img_lottery-size {
+		height: 342px;
+		width: auto;
+		max-width: 285px;
+	}
+}
+
+.lottery-slider-nav__item {
+	max-height: 342px;
+	display: flex;
+	justify-content: center;
+	box-shadow: none;
+
+	img {
+		width: auto;
+		box-shadow: 0px 6px 6px #88b4c5;
+	}
+}
+
+.online-game-item {
+	width: auto;
+	max-width: 565px;
+	flex-basis: 100%;
+}
+.game-top {
+	width: auto;
+	max-width: 565px;
+
+	.img {
+		max-height: 355px;
+		height: auto;
+		width: auto;
+		max-width: 565px;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -928,69 +969,105 @@
 		}
 	}
 
-	.added-lottery-list.added-lottery-list {
-		&_variable {
-			.lottery-top {
-				max-width: 218px;
-			
-				.img_lottery-size {
-					max-width: 218px;
-				}
-			}
-		}
+	.added-lottery-item,
+	.online-lottery-item {
+		width: auto;
+		max-width: 285px;
+		flex-basis: 100%;
+	}
 
-		&_340x684 {
-			.lottery-top {
-				width: 130px;
-				max-width: 130px;
-			
-				.img_lottery-size {
-					height: 261px;
-					width: 130px;
-					max-width: 130px;
-				}
-			}
-		}
-	
-		&_510x684 {
-			.lottery-top {
-				width: 195px;
-				max-width: 195px;
-			
-				.img_lottery-size {
-					height: 261px;
-					width: 195px;
-					max-width: 195px;
-				}
-			}
-		}
-	
-		&_570x684 {
-			.lottery-top {
-				width: 218px;
-				max-width: 218px;
-			
-				.img_lottery-size {
-					height: 261px;
-					width: 218px;
-					max-width: 218px;
-				}
-			}
-		}
-	
-		&_447x684 {
-			.lottery-top {
-				width: 171px;
-				max-width: 171px;
-			
-				.img_lottery-size {
-					height: 261px;
-					width: 171px;
-					max-width: 171px;
-				}
-			}
+	.online-game-item {
+		width: auto;
+		max-width: 565px;
+		flex-basis: 100%;
+	}
+
+	.lottery-top {
+		width: auto;
+		max-width: 204px;
+
+		.img_lottery-size {
+			height: 261px;
+			width: auto;
+			max-width: 204px;
 		}
 	}
+
+	.game-top {
+		width: auto;
+		max-width: 565px;
+
+		.img {
+			height:auto;
+			max-height: 355px;
+			width: auto;
+			max-width: 565px;
+		}
+	}
+
+	// .added-lottery-list.added-lottery-list {
+	// 	&_variable {
+	// 		.lottery-top {
+	// 			max-width: 218px;
+
+	// 			.img_lottery-size {
+	// 				max-width: 218px;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	&_340x684 {
+	// 		.lottery-top {
+	// 			width: 130px;
+	// 			max-width: 130px;
+
+	// 			.img_lottery-size {
+	// 				height: 261px;
+	// 				width: 130px;
+	// 				max-width: 130px;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	&_510x684 {
+	// 		.lottery-top {
+	// 			width: 195px;
+	// 			max-width: 195px;
+
+	// 			.img_lottery-size {
+	// 				height: 261px;
+	// 				width: 195px;
+	// 				max-width: 195px;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	&_570x684 {
+	// 		.lottery-top {
+	// 			width: 218px;
+	// 			max-width: 218px;
+
+	// 			.img_lottery-size {
+	// 				height: 261px;
+	// 				width: 218px;
+	// 				max-width: 218px;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	&_447x684 {
+	// 		.lottery-top {
+	// 			width: 171px;
+	// 			max-width: 171px;
+
+	// 			.img_lottery-size {
+	// 				height: 261px;
+	// 				width: 171px;
+	// 				max-width: 171px;
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 }
 
