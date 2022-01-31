@@ -3,14 +3,14 @@
 .ml-2017 {
     .schema-tabs {
         margin-top: 20px;
-    
+
         &__head-container {
             background-color: #C9E8F4;
             padding: 20px 1em;
             display: flex;
             justify-content: center;
         }
-    
+
         &__head-item {
             font-size: 20px;
             text-decoration: underline;
@@ -19,15 +19,15 @@
             align-items: center;
             text-align: center;
             margin: 0 18px;
-    
+
             &:first-child {
                 margin-left: 0;
             }
-    
+
             &:last-child {
                 margin-right: 0;
             }
-    
+
             &.active,
             &:focus {
                 font-weight: bold;
@@ -35,7 +35,7 @@
                 text-decoration: underline;
             }
         }
-    
+
         &__panel {
             display: block;
             height: 0;
@@ -51,7 +51,7 @@
                     margin-top: 0;
                 }
             }
-    
+
             &.active {
                 display: block;
                 height: auto;
@@ -68,22 +68,22 @@
                 background-color: $color-secondary-light;
                 padding: 40px 40px 30px 20px;
                 width: 100%;
-            
+
                 &__title {
                     margin: 0;
                     margin-bottom: 12px;
                 }
-            
+
                 &__line {
                     display: flex;
                     align-items: flex-end;
                     justify-content: space-between;
-            
+
                     p {
                         margin: 0;
                         max-width: 420px;
                     }
-            
+
                     .btn {
                         color: #fff;
                         height: 38px;
@@ -140,7 +140,7 @@
             padding-top: 5px;
             cursor: pointer;
             text-decoration: none;
-    
+
             &.active {
                 background-color: $color-secondary-dark;
                 color: #fff;
@@ -170,7 +170,7 @@
         justify-content: center;
         padding-top: 20px;
         padding-bottom: 20px;
-    
+
         &__content {
             max-width: 330px;
             width: 100%;
@@ -178,13 +178,13 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-    
+
             .btn {
                 height: 46px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 0 auto;
+                // margin: 0 auto;
                 background: $color-primary-dark;
                 color: #fff;
                 transition: background-color 0.1s 0s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -202,13 +202,13 @@
             width: 680px;
             height: 383px;
         }
-    
+
         &__content-title {
             font-family: 'apercu-bold-pro';
             margin-bottom: 30px;
             margin-top: 0;
         }
-    
+
         &__list {
             font-family: 'apercu-bold-pro';
             font-size: 20px;
@@ -218,15 +218,15 @@
             margin: 0;
             margin-bottom: 30px;
             padding-top: 8px;
-    
+
             li {
                 display: flex;
-    
+
                 &:not(:last-child) {
                     margin-bottom: 23px;
                 }
             }
-    
+
             li::before {
                 counter-increment: li;
                 content: counter(li) ".";
@@ -246,18 +246,18 @@
 
         &_revert-D {
             flex-direction: row-reverse;
-        
+
             .mediaBlock__content {
                 margin-left: 5em;
             }
         }
-    
+
         &_onlyMedia {
             .mediaBlock__content {
                 display: none;
             }
         }
-    
+
         &_mediaBtn {
             flex-direction: column-reverse;
             align-items: center;
@@ -336,13 +336,13 @@
         .mediaBlock {
             padding-bottom: 0;
             padding-top: 0;
-    
+
             &__content {
                 .btn {
                     margin-left: 0;
                 }
             }
-    
+
             &__media {
                 height: 383px;
                 max-width: 680px;
@@ -366,20 +366,20 @@
                     margin-left: 2em;
                 }
             }
-    
+
             &.mediaBlock_mediaBtn {
                 .mediaBlock__content {
                     display: flex;
                     margin-left: 0;
                 }
 
-                .btn, 
+                .btn,
                 .btn-bankid {
                     margin-bottom: 60px;
                 }
-            } 
+            }
         }
-    
+
         //Video block on tablet => open modal when click START (modal styles)
         .mediaBlock {
 
@@ -394,10 +394,10 @@
                    display: none;
                 }
             }
-    
+
             &__video {
                 position: relative;
-    
+
                 &.active {
                     position: fixed;
                     width: 100%;
@@ -407,11 +407,11 @@
                     left: 0;
                     background-color: #b8d8ebd9;
                     z-index: 1003;
-    
+
                     display: flex;
                     justify-content: center;
                     align-items: center;
-    
+
                     .s-video {
                         max-width: 726px;
                         max-height: 411px;
@@ -420,14 +420,14 @@
                             height: 100%;
                         }
                     }
-    
+
                     .btn-close_circular {
                         display: block;
                         background-color: #fff;
                     }
                 }
             }
-    
+
             .js-mediaBlock__video {
                 &::after {
                     content: '';
@@ -439,7 +439,7 @@
                     top: 0;
                 }
             }
-    
+
             &__video.active .js-mediaBlock__video::after {
                 display: none;
             }
@@ -520,11 +520,11 @@
     .ml-2017 {
         .schema-tabs {
             &__panel {
-    
+
                 &-content {
                     margin: 5px 0;
                 }
-    
+
                 &-schema-block {
                     margin: 5px 0;
                 }
@@ -567,10 +567,10 @@
 
             &__video {
                 position: static;
-        
+
                 &.active {
                     position: static;
-        
+
                     .btn-close_circular {
                         display: none;
                     }
@@ -583,29 +583,29 @@
                     display: none;
                 }
             }
-    
+
             &.mediaBlock_revert-D {
                 flex-direction: column-reverse;
-    
+
                 .mediaBlock__content {
                     margin-left: 0;
                 }
             }
-    
+
             &.mediaBlock_noMedia-M {
                 .mediaBlock__media {
                     display: none;
                 }
             }
-    
+
             &.mediaBlock_revert-M {
                 flex-direction: column;
-    
+
                 .mediaBlock__content {
                     margin-left: 0;
                 }
             }
-    
+
             &.mediaBlock_mediaBtn {
                 .mediaBlock__content {
                     padding: 0;
