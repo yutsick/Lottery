@@ -169,3 +169,13 @@ $('.information__list_link a ').click(function () {
 	$('.information__list_menu').toggleClass('active');
 });
 
+
+//fix 100vh problem with iOS Safari
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight();
+
+
