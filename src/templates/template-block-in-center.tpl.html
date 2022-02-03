@@ -1,0 +1,32 @@
+@@include('layout/_header.html', {
+	"class": "page-front logged-out",
+	"logged_in": false
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})-->
+
+<div class="content-wrapper ml-2017 content-wrapper_middle">
+	<!-- OPTION .content-wrapper_middle if no other blocks (it also remove m-top and m-bottom from center-block) -->
+
+	<!-- OPTION Add .center-block_mt if blocks above and .center-block_mb if blocks under (it adds margings) or remove if .content-wrapper_middle is present (block will be in the middle on height with no margings) -->
+	<section class="center-block center-block_mb">
+		<div class="center-block__succes" id="center-block__succes">
+			<div class="container">
+				<div class="center-block__wrapper">
+					<div class="center-block__header">
+						<h4>Dolores vel ea mollitia</h4>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, veniam eum alias autem magni, dolores vel ea mollitia dolore nostrum eos architecto enim, tenetur laudantium nemo est harum quod unde?
+						</p>
+					</div>
+
+					<a href="#" class="btn btn-primary"><span aria-hidden="true">Eum alias</span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
