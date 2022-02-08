@@ -471,7 +471,7 @@
 		.img_lottery-size {
 			height: 342px;
 			width: 100%;
-			max-width: 255px;
+			max-width: 285px;
 			margin-right: auto;
 			margin-left: auto;
 
@@ -498,7 +498,7 @@
 		margin: 0 auto;
 	}
 	.img {
-		box-shadow: 0 9px 9px #88b4c5;
+		box-shadow: none;
 		@include min-screen($screen-md-min) {
 			transition: all .4s ease;
 			&:hover {
@@ -507,6 +507,7 @@
 		}
 		img {
 			width: 100%;
+			filter: drop-shadow(0px 6px 6px #88b4c5);
 		}
 	}
 	.title {
@@ -573,7 +574,7 @@
 	&__item {
 		position: relative;
 		width: calc(50% - 40px);
-		box-shadow: 0px 6px 6px #88b4c5;
+		box-shadow: none;
 		margin: 20px;
 		@include min-screen($screen-xs-min) {
 			width: calc(33.333% - 40px);
@@ -582,6 +583,7 @@
 			width: calc(25% - 40px);
 		}
 		img {
+			filter: drop-shadow(0px 6px 6px #88b4c5);
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
@@ -683,11 +685,16 @@
 	}
 	.img {
 		border: solid 4px $color-white;
-		box-shadow: 0 9px 9px #88b4c5;
+		box-shadow: none;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
 		padding-bottom: 61.5%;
+
+		img {
+			filter: drop-shadow(0px 6px 6px #88b4c5);
+		}
+
 		@include min-screen($screen-md-min) {
 			transition: all .4s ease;
 			&:hover {
@@ -759,7 +766,7 @@
 .added-lottery-item {
 	display: flex;
 	flex-direction: column;
-	max-width: 255px;
+	max-width: 285px;
 	width: 100%;
 	height: 100%;
 	padding-top: 20px;
@@ -775,7 +782,7 @@
 		.img_lottery-size {
 			height: 342px;
 			width: 100%;
-			max-width: 255px;
+			max-width: 285px;
 		}
 
 		@media screen and (max-width: 767px) {
@@ -792,9 +799,11 @@
 		text-align: center;
 	}
 	.img {
-		box-shadow: 0 9px 9px #88b4c5;
+		box-shadow: none;
+
 		img {
 			width: 100%;
+			filter: drop-shadow(0px 6px 6px #88b4c5);
 		}
 	}
 	.title {
@@ -915,7 +924,7 @@
 			width: auto;
 			height: 100%;
 			object-fit: contain;
-			box-shadow: 0px 6px 6px #88b4c5;
+			filter: drop-shadow(0px 6px 6px #88b4c5);
 		}
 	}
 }
@@ -932,7 +941,7 @@
 		width: auto;
 		object-fit: cover;
 		height: auto;
-		box-shadow: 0px 6px 6px #88b4c5;
+		filter: drop-shadow(0px 6px 6px #88b4c5);
 	}
 }
 
@@ -964,14 +973,14 @@
 			max-height: 261px;
 			height: 261px;
 			width: 100%;
-			max-width: 204px;
+			max-width: 264px;
 			box-shadow: none;
 
 			img {
 				object-fit: contain;
 				height: 100%;
 				width: auto;
-				max-width: 204px;
+				max-width: 264px;
 				max-height: 261px;
 			}
 		}
@@ -992,12 +1001,12 @@
 
 	.lottery-top {
 		width: auto;
-		max-width: 204px;
+		max-width: 264px;
 
 		.img_lottery-size {
 			height: 261px;
 			width: auto;
-			max-width: 204px;
+			max-width: 264px;
 		}
 	}
 
