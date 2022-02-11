@@ -99,7 +99,7 @@ body {
 		}
 
 		.product-cart + .block {
-			@media screen and (min-width: $screen-sm + 1) and (max-width: $screen-md-max){
+			@media screen and (min-width: calc($screen-sm + 1)) and (max-width: $screen-md-max){
 				margin-top: 42px;
 			}
 		}
@@ -113,3 +113,4 @@ body {
 @import "bingolobby";
 @import "campaign";
 @import "schema-tabs";
+@import "sub-page-newsletter";

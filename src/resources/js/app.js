@@ -51,6 +51,7 @@ import RegisterLottery from './components/register-lottery';
 import Confetti from './components/confetti';
 import tabs from './components/tabs';
 import radioToggle from './components/radio-toggle';
+import checkMaxLength from './utilities/checkMaxLength';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -127,6 +128,8 @@ $(function () {
 	RegisterLottery.init();
 	tabs();
 	radioToggle();
+	checkMaxLength();
+
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();
