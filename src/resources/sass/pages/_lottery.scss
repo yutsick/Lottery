@@ -986,6 +986,20 @@
 		}
 	}
 
+	.online-lottery-slider {
+		.online-lottery-item {
+			.lottery-top {
+				.img_lottery-size {
+					img {
+						height: 261px;
+						max-width: 285px;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+
 	.added-lottery-item,
 	.online-lottery-item {
 		width: auto;
