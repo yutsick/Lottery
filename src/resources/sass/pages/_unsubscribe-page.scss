@@ -49,7 +49,7 @@
 			}
 		}
 
-		&__radio {
+		&__checkbox {
 			&-list {
 				max-width: 336px;
 				font-size: 14px;
@@ -63,8 +63,18 @@
 					margin-bottom: 0;
 				}
 
-				.custom-radio [type="radio"] {
+				.custom-checkbox [type="checkbox"] {
+					position: absolute;
+					left: -999em;
+					margin: 4px 0 0;
+   					line-height: normal;
+					box-sizing: border-box;
+					padding: 0;
+
 					& + label {
+						position: relative;
+						cursor: pointer;
+
 						padding-left: 0;
 						margin-bottom: 0;
 						margin-left: 0;
@@ -74,6 +84,12 @@
 
 
 						&::before {
+							content: '';
+							position: absolute;
+							top: -2px;
+							width: 20px;
+    						height: 20px;
+							background-color: #ffffff;
 							border: 1px solid $color-primary;
 							border-radius: 1px;
 							left: unset;
@@ -94,6 +110,9 @@
 						&:after {
 							background: $color-primary;
 							display: block;
+							content: '';
+    						position: absolute;
+							border-radius: 50%;
 						}
 					}
 				}
