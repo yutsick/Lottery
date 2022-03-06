@@ -95,7 +95,7 @@ export default function () {
 			}
 			return false;
 		});
-		
+
 
 		$('#login-bankid-modal').validator().on('submit', function (e) {
 
@@ -240,13 +240,13 @@ export default function () {
 		let $termsFrom = $termsOfServiceModal.find('form');
 		if($termsFrom.length > 0) {
 			$termsFrom.on('submit', function (e) {
-				e.preventDefault();	
+				e.preventDefault();
 				let $this = $(this);
 				let formData = $this.serialize();
 				let url = $this.attr('action');
 				let $submitButton = $this.find('[type="submit"]');
 				$submitButton.prop('disabled', true);
-	
+
 				$.ajax({
 					type: "POST",
 					url: url,
@@ -258,7 +258,7 @@ export default function () {
 				return false;
 			});
 		}
-		
+
 	}
 
 	function validate_my_profile() {
@@ -322,4 +322,27 @@ export default function () {
 			return false;
 		});
 	}
+
+	function is_all_checkbox_and_input_filled(form) {
+		$(form).find('button[type="submit"]').addClass('disabled');
+
+		$(form).find('.custom-checkbox').on('click', function() {
+			$(this).toggleClass('checked');
+
+			if($(this).closest('.sub-page__right-form').find('.form-control').val() && !$(this).closest('.sub-page__right-form').find('.custom-checkbox').not('.checked').length) {
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeClass('disabled');
+			} else {
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').addClass('disabled');
+			}
+		});
+
+		$(form).find('.form-control').on('input', function() {
+			if($(this).val() && !$(this).closest('.sub-page__right-form').find('.custom-checkbox').not('.checked').length) {
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeClass('disabled');
+			} else {
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').addClass('disabled');
+			}
+		});
+	}
+	is_all_checkbox_and_input_filled('.sub-page__right-form');
 }
