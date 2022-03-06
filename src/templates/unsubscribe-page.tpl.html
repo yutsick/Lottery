@@ -12,7 +12,7 @@
 
 	<!-- OPTION Add .unsbc-block_mt if blocks above and .unsbc-block_mb if blocks under (it adds margings) or remove if .content-wrapper_middle is present (block will be in the middle on height with no margings) -->
 	<section class="unsbc-block unsbc-block_mb">
-		<div class="unsbc-block__form" id="unsbc-block__form" style="display: block;">
+		<form class="unsbc-block__form" id="unsbc-block__form" style="display: block;">
 			<div class="container">
 				<div class="unsbc-block__wrapper">
 					<div class="unsbc-block__header">
@@ -25,7 +25,7 @@
 					<div class="unsbc-block__checkbox-list">
 						<div class="unsbc-block__checkbox-item">
 							<div class="custom-checkbox">
-								<input type="checkbox" name="notification" id="option-1" value="option-1" class="custom-checkbox__input" checked="">
+								<input type="checkbox" name="notification" id="option-1" value="option-1" class="custom-checkbox__input">
 								<label for="option-1" class="custom-checkbox__label">
 									<div class="unsbc-block__checkbox-content">
 										<div class="unsbc-block__checkbox-title">
@@ -41,7 +41,7 @@
 
 						<div class="unsbc-block__checkbox-item">
 							<div class="custom-checkbox">
-								<input type="checkbox" name="notification" id="option-2" value="option-2" class="custom-checkbox__input" checked="">
+								<input type="checkbox" name="notification" id="option-2" value="option-2" class="custom-checkbox__input">
 								<label for="option-2" class="custom-checkbox__label">
 									<div class="unsbc-block__checkbox-content">
 										<div class="unsbc-block__checkbox-title">
@@ -57,7 +57,7 @@
 
 						<div class="unsbc-block__checkbox-item">
 							<div class="custom-checkbox">
-								<input type="checkbox" name="notification" id="option-3" value="option-3" class="custom-checkbox__input" checked="">
+								<input type="checkbox" name="notification" id="option-3" value="option-3" class="custom-checkbox__input">
 								<label for="option-3" class="custom-checkbox__label">
 									<div class="unsbc-block__checkbox-content">
 										<div class="unsbc-block__checkbox-title">
@@ -72,7 +72,7 @@
 						</div>
 					</div>
 
-					<button type="button" class="btn btn-primary" onclick="
+					<button type="submit" class="btn btn-primary" onclick="
 					$('#unsbc-block__form').css('display', 'none');
 					$('#unsbc-block__succes').css('display', 'block');
 					"><span aria-hidden="true">Avregistrera</span></button>
@@ -80,7 +80,7 @@
 					<a href="#"><b>Avregistrera alla Miljonlotteriets utskick</b></a>
 				</div>
 			</div>
-		</div>
+		</form>
 
 		<div class="unsbc-block__succes" id="unsbc-block__succes" style="display:none;">
 			<div class="container">
