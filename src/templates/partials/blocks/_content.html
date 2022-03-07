@@ -63,8 +63,15 @@
 							accumsan sapien velit ac libero. Etiam maximus ipsum neque, non ultrices tortor scelerisque sit<span class="block-content__link"><a href="#">pellentesque magna fringilla</a></span> <a href="#">pellentesque magna fringilla</a> amet. Proin blandit nunc elit, et pellentesque magna fringilla id.
 						</p>
 
-						<div class="block-content__btns">
-							<a href="" class="btn btn-wide">Börja prenumerera</a>
+						<!-- Use text-start, text-center or text-end classes for align -->
+						<div class="block-content__btns text-center">
+							<!-- Use
+								.btn-wide - default pink
+								.btn-wide--white - lightblue
+								.btn-wide--blue - darkblue
+								.btn-wide--orange - orange
+							-->
+							<a href="" class="btn btn-wide btn-wide--white">Börja prenumerera</a>
 						</div>
 					}
 					@@if (context.text_only === true) {
