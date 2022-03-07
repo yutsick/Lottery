@@ -106,7 +106,8 @@ export default function () {
 	let $flickityProductSlider = $('.products-slider').flickity({
 		cellSelector: '.product-slide',
 		cellAlign: 'center',
-		wrapAround: true,
+		wrapAround: false,
+		groupCells: true,
 		contain: false,
 		draggable: false,
 		pageDots: false,
@@ -223,8 +224,8 @@ export default function () {
 		prevNextButtons: false,
 		autoPlay: 5000
 	});
-	
-	  
+
+
 
 }
 
