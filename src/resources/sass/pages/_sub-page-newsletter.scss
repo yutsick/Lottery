@@ -597,6 +597,13 @@
 				text-align: center;
 			}
 
+			&__right-form {
+				input.form-control,
+				.btn[type="submit"] {
+					height: 46px;
+				}
+			}
+
 		}
 	}
 }
