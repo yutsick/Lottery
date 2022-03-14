@@ -580,6 +580,10 @@
 				}
 			}
 
+			&__reg_another {
+				text-align: center;
+			}
+
 		}
 	}
 }
@@ -652,6 +656,10 @@
 				& > * {
 					font-size: 18px;
 				}
+			}
+
+			&__reg_another {
+				text-align: left;
 			}
 		}
 	}
