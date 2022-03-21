@@ -10,9 +10,13 @@
 	bg_shadow: true, false.
 	@sub_text: "text".
 	has_error: true, false.
+
+
+	FOR POPUP
+	no_img: true, false.
 -->
 
-<section class="sub-page @@if(context.background){sub-page_@@background}">
+<section class="sub-page @@if(context.background){sub-page_@@background} @@if(context.no_img){sub-page_no-img}">
 	<div class="container">
 		<div class="row equal-height">
 			<div class="col-xs-12 col-lg-6">
@@ -111,6 +115,45 @@
 						<h4>Du är redan registrerad</h4>
 						<p>Håll utkik i din inkorg! Vill du justera din e-postadress kan du göra det under Mina sidor.</p>
 						<a href="#" class="btn btn-primary">Till Mina sidor</a>
+					</div>
+
+					<div class="sub-page__right-content sub-page__reg_text" id="reg_terms" style="display: none;">
+						<div class="get_home">
+							<a href="#">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle class="get_home__circle" cx="12" cy="12" r="12" fill="#C9E8F4"></circle>
+									<path class="get_home__arrow" d="M13 7L8 12L13 17" stroke="#053A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+								Tillbaka
+							</a>
+						</div>
+
+						<h5>Villkor nyhetsbrev</h5>
+						<p>När du är spelare hos oss behandlar vi dina personuppgifter för att marknadsföra oss mot dig som är spelare hos oss. Det innebär att vi skickar direktmarknadsföring, nyhetsbrev, SMS och annan information som är relevant för dig, t.ex. information om vår verksamhet inom nykterhetsrörelsen (IOGT-NTO) dit vårt överskott går och skickar personligt anpassad marknadsföring till dig med erbjudanden och information som vi tror att du är intresserad av, baserat på t.ex. hur mycket du använder våra tjänster. Vi delar också information om dig som spelare med nykterhetsrörelsen (IOGT-NTO) för att kunna göra utskick om nykterhetsrörelsen och medlemskap i denna.</p>
+
+						<b>För det här ändamålet behandlar vi:</b>
+
+						<ul>
+							<li>Namn</li>
+							<li>Kundnummer</li>
+							<li>Kontaktuppgifter (postadress, e-postadress och telefonnummer)
+							</li>
+						</ul>
+
+						<p>
+							<b>Då behandlar vi även:</b>
+							<ul>
+								<li>Information från ditt vinstsaldo, för att kunna visa ett urval av vinster som är relevanta för dig</li>
+								<li>Information om hur mycket du använder våra tjänster, för att kunna anpassa hur mycket marknadsföring du får från oss</li>
+							</ul>
+						</p>
+
+						<p>Laglig grund: Behandlingen är motiverad av vårt berättigade intresse att skicka relevant marknadsföring till dig som är spelare hos oss. Du har rätt att invända mot marknadsföringen när personuppgifterna samlas in samt vid varje utskick.
+						</p>
+
+						<p>Vi skickar nyhetsbrev till dig baserat på ditt samtycke som du lämnar när du har registrerat dig för våra nyhetsbrev. Du kan när som helst återkalla ditt samtycke.
+						Lagringstid: Under tiden du har ett aktivt spelkonto. Du får dock inte marknadsföring från oss längre om du inte har gjort en beställning, insättning eller uttag under det senaste året. Om du har angett att du inte vill få marknadsföring från oss eller om du har begärt spelstopp får du inte längre vår kommunikation (för mer information, se beskrivningen av vår behandling för att följa rättsliga skyldigheter).<br>
+						Om du inte längre vill få marknadsföring från oss lagras dina personuppgifter i vårt ”avregistreringsregister” tills vidare.</p>
 					</div>
 				</div>
 			</div>
