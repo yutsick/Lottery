@@ -25,3 +25,4 @@ dist/
 package.json
 package-lock.json
 npm-shrinkwrap.json
+BrowserStackLocal.exe
