@@ -792,8 +792,6 @@
 		width: auto;
 		z-index: 1;
 	}
-
-
 }
 
 @media screen and (max-width: 1419px) {
@@ -875,6 +873,10 @@
 				.btn[type="submit"] {
 					height: 46px;
 				}
+			}
+
+			.only-desk {
+				display: none!important;
 			}
 
 		}
