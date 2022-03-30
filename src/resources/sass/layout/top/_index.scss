@@ -1214,4 +1214,205 @@
 
         }
     }
+
+
+    //New shanges from 18.11.21
+    .top__account-info-wallet a,
+    .top__account-info-winnings a {
+        text-decoration: none;
+    }
+
+    .top__account-info-wallet span:first-child, 
+    .top__account-info-winnings span:first-child {
+        text-decoration: underline;
+        font-weight: 400;
+        font-size: 16px;
+        color: #003E52;
+
+        &::after {
+            content: ':';
+        }
+    }
+
+    .top__account-info-wallet span:last-child, 
+    .top__account-info-winnings span:last-child {
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        color: #003E52;
+    }
+
+    .top__account-info {
+        border: 2px solid #B8D8EB;
+        border-top: none;
+        padding: 0 15px;
+    }
+
+    .top__actions {
+        
+        .product-cart__item {
+            text-decoration: none;
+            padding-right: 10px;
+            padding-left: 10px;
+
+            .product-cart__title {
+                text-decoration: underline;
+                margin-right: 10px;
+            }
+
+            .product-cart__notification {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                padding-top: 2px;
+            }
+
+            &.product-cart__item--theme-green {
+                background-color: #CEDFD7;
+                border: none;
+                padding-top: 4px;
+
+                .product-cart__icon {
+                    margin-right: 6px;
+                    margin-left: 0px;
+                    
+                    &:before {
+                        content: '';
+                        display: inline-block;
+                        width: 22px;
+                        height: 22px;
+                        flex-shrink: 0;
+                        background-repeat: no-repeat;
+                        background-image: url('../img/icons/star-dark.svg');
+                        background-size: contain;
+                        background-position: center;
+                    }
+                }
+
+                .product-cart__notification {
+                    background-color: #06566F;
+                }
+            }
+
+            &.product-cart__item--theme-blue {
+                padding-top: 4px;
+                padding-bottom: 4px;
+
+                .product-cart__title {
+                    color: #fff;
+                }
+
+                .product-cart__content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-right: 30px;
+                }
+
+                .product-cart__meta {
+                    min-width: unset;
+                    margin-top: 2px;
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        &-account .dropdown.open .dropdown__button .top__actions-account-notification {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 942px) {
+    #top {
+        .top__account-info {
+            padding: 0;
+        }
+
+        .top__account-info-winnings {
+            order: -1;
+            background-color:#F5DFED;
+        }
+
+        .top__account-info-wallet {
+            background-color: #FFF4D1;
+        }
+
+        .top__account-info {
+            border: none;
+        }
+
+        .top__account-info-wallet a span:first-child, 
+        .top__account-info-winnings a span:first-child, 
+        .top__account-info-cart a span:first-child {
+            font-size: 12px;
+            color: #003E52;
+            text-transform: none;
+            margin-bottom: 2px;
+        }
+
+        .top__account-info-wallet a span:last-child, 
+        .top__account-info-winnings a span:last-child, 
+        .top__account-info-cart a span:last-child {
+            font-size: 16px;
+            color: #003E52;
+            font-weight: 700;
+        }
+
+        .top__actions-cart {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #top {
+        .product-cart__item {
+            border: none;
+            background-color: #F5DFED;
+            display: flex!important;
+            padding: 6px 10px
+        }
+
+        .product-cart__title {
+            color: #003E52;
+            font-size: 12px;
+            margin-bottom: 2px;
+            text-transform: none;
+        }
+
+        .product-cart__meta {
+            font-size: 16px;
+            font-weight: bold;
+            color: #003E52;
+        }
+
+        .top__actions .product-cart__item.product-cart__item--theme-green {
+            padding: 4px 10px;
+
+            .product-cart__icon {
+                &:before {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .product-cart__notification {
+                color: #fff;
+            }
+        }
+
+        .top__actions .product-cart__item.product-cart__item--theme-blue {
+            background-color: #003E52;
+
+            .product-cart__meta {
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+    }
 }

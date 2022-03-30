@@ -227,6 +227,34 @@ export default function () {
 
 
 
-}
 
+	// $('.product-slider__big-box').flickity({
+	// 	pageDots: false,
+	// 	cellSelector: '.product-slider__big-box .product-slider__item',
+	// 	adaptiveHeight: true,
+	// 	draggable: false,
+	// 	prevNextButtons: true,
+	// });
+
+	let $productThumbSlider = $('.product-slider__small-box').flickity({
+		// asNavFor: '.product-slider__big-box',
+		cellSelector: '.product-slider__small-box .product-slider__item',
+		wrapAround: false,
+		pageDots: false,
+		prevNextButtons: true,
+		contain: true,
+
+		on: {
+			staticClick: function( event, pointer, cellElement, cellIndex ) {
+				$('.product-slider__big-box').find('.product-slider__current').text(cellIndex + 1);
+			},
+
+			ready: function() {
+				let count = $('.product-slider__big-box').find('.product-slider__count');
+				count.text($('.product-slider__small-box').find('.product-slider__item--small').length);
+			}
+		}
+	});
+
+}
 
