@@ -1,0 +1,92 @@
+.range-slider {
+    position: relative;
+    width: 315px;
+	height: auto;
+	padding-bottom: 30px;
+
+	&::before {
+		content: '';
+		display: block;
+		height: 8px;
+		width: 100%;
+		background-color: #C9E8F4;
+		border-radius: 40px;
+		bottom: 9px;
+		left: 0;
+		position: absolute;
+	}
+
+	.rangeTrack-value {
+		height: 8px;
+		width: 20%;
+		background-color: #003E52;
+		border-radius: 40px;
+		bottom: 9px;
+		left: 0;
+		position: absolute;
+	}
+
+	.rangeValues {
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+		color: #003e52;
+	}
+
+	input {
+		pointer-events: none;
+		position: absolute;
+		overflow: hidden;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		outline: none;
+		height: 24px;
+		margin: 0;
+		background: transparent;
+		padding: 0;
+		-webkit-appearance: none;
+		appearance: none;
+
+		&::-webkit-slider-thumb {
+			pointer-events: all;
+			-webkit-appearance: none;
+  			appearance: none;
+			background: #003E52;
+			position: relative;
+			z-index: 1;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			outline: 0;
+		}
+
+		&::-moz-range-thumb {
+			pointer-events: all;
+			position: relative;
+			z-index: 10;
+			-moz-appearance: none;
+			width: 24px;
+			height: 24px;
+			border-radius: 50%;
+			background: #003E52;
+		}
+
+		&::-moz-range-track {
+			position: relative;
+			z-index: -1;
+			background-color: #C9E8F4;
+			border: 0;
+		}
+
+		&:last-of-type::-moz-range-track {
+			-moz-appearance: none;
+			background: none transparent;
+			border: 0;
+		}
+
+		&[type=range]::-moz-focus-outer {
+			border: 0;
+		}
+	}
+}

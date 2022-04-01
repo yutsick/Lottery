@@ -1,0 +1,594 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop",
+	"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
+
+<div class="content-wrapper ml-2017">
+	<header class="
+	block
+	block-hero
+	block-hero--medium
+	block--background-image
+	flex-middle
+	justify-middle
+	shadow_center
+	block-hero--taller
+	" style="background-image: url('assets/img/mockup/hero-bg.jpg')">
+
+		<div class="container">
+			<h1 class="block-hero__page-title">Spela bingo och skrapa lotter</h1>
+		</div>
+		<div class="block-hero__content text-center">
+			<div class="container">
+				<h2 class="block-hero__title h1">Vinster som passar dig och din vardag</h2>
+
+				<a href="/" class="btn btn-success" title="">Se alla produkter</a>
+			</div>
+		</div>
+
+	</header>
+
+	<section class="product-list-blocks">
+		<div class="container">
+			<h2 class="product-list-blocks__title h3">Vinstshop</h2>
+
+			<div class="product-category-slider" id="productCategorySlider">
+				<button class="product-category__btn product-category__btn--all checked" data-name="category" type="button" value="Alla produkter">Alla produkter</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Gåvor">Gåvor</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Hem & design">Hem & design</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Hemelektroni">Hemelektronik</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Hållbart val">Hållbart val</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Hälsa & skönhet">Hälsa & skönhet</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Kök & hushåll">Kök & hushåll</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Ljud & bild">Ljud & bild</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Lotter">Lotter</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Resor & tillbehör">Resor & tillbehör</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Sport & fritid">Sport & fritid</button>
+				<button class="product-category__btn" data-name="category" type="button" value="Verktyg, bil & trädgård">Verktyg, bil & trädgård</button>
+			</div>
+
+			<div class="filter-line">
+				<div class="filters">
+					<div class="filters__item">
+						<div class="dropdown">
+							<button class="filter-dropdown__button js-filter-dropdown" type="button" data-target="#pris">
+								Pris
+							</button>
+						</div>
+					</div>
+					<div class="filters__item">
+						<div class="dropdown">
+							<button class="filter-dropdown__button js-filter-dropdown" type="button" data-target="#varumärken">
+								Varumärken
+							</button>
+						</div>
+					</div>
+					<div class="filters__item">
+						<div class="dropdown">
+							<button class="filter-dropdown__button js-filter-dropdown" type="button" data-target="#kampanjer">
+								Kampanjer
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<a href="#" class="filters__mobile-btn js-filters__mobile-btn">
+					<svg id="icons_list" data-name="icons/list" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<g id="filter-icons_copy" data-name="filter-icons copy" transform="translate(1 4)">
+						  <circle id="Oval" cx="2" cy="2" r="2" transform="translate(2)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <path id="Path" d="M2,.05H0" transform="translate(0 2)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <path id="Path-2" data-name="Path" d="M0,.05H16" transform="translate(6 2)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <circle id="Oval-2" data-name="Oval" cx="2" cy="2" r="2" transform="translate(7 12)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <path id="Path-3" data-name="Path" d="M7,.05H0" transform="translate(0 14)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <path id="Path-4" data-name="Path" d="M0,.05H11" transform="translate(11 14)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <circle id="Oval-3" data-name="Oval" cx="2" cy="2" r="2" transform="translate(16 6)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <path id="Path-5" data-name="Path" d="M0,.05H2" transform="translate(20 8)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						  <path id="Path-6" data-name="Path" d="M16,.05H0" transform="translate(0 8)" fill="none" stroke="#3b3c3c" stroke-linecap="square" stroke-miterlimit="10" stroke-width="1.5"/>
+						</g>
+					</svg>
+					Filter
+
+					<div class="filters__mobile-btn--checked js-filters__mobile-btn--checked" style="display: block;"><span>2</span></div>
+				</a>
+
+				<div class="filter-search">
+					<input type="text" name="produkt" id="produkt" placeholder="Sök produkt, namn, märke, m.m.">
+				</div>
+
+				<div class="sort">
+					<p class="sort__label">Sorterat på:</p>
+					<div class="dropdown filter-dropdown js-show-dropdown">
+						<button class="sort__checked filter-dropdown__button js-add-value" type="button" data-toggle="dropdown" data-checked="Rekommenderat">
+							Rekommenderat
+						</button>
+						<div class="dropdown-menu sort__item">
+							<div class="filter-dropdown__header">Sorterat på:</div>
+							<form method="post" data-filter-type="sort">
+								<div class="form-group">
+									<div class="custom-radio sort__choice">
+										<input class="custom-radio__input js-get-value" id="recommended" name="sort" value="Rekommenderat" type="radio" checked>
+										<label class="custom-radio__label" for="recommended">Rekommenderat</label>
+									</div>
+									<div class="custom-radio sort__choice">
+										<input class="custom-radio__input js-get-value" id="highest" name="sort" value="Högst pris" type="radio">
+										<label class="custom-radio__label" for="highest">Högst pris</label>
+									</div>
+									<div class="custom-radio sort__choice">
+										<input class="custom-radio__input js-get-value" id="lowest" name="sort" value="Lägst pris" type="radio">
+										<label class="custom-radio__label" for="lowest">Lägst pris</label>
+									</div>
+									<div class="custom-radio sort__choice">
+										<input class="custom-radio__input js-get-value" id="newest" name="sort" value="Nyast" type="radio">
+										<label class="custom-radio__label" for="newest">Nyast</label>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="active-filters-line">
+				<div class="products-value">122 st</div>
+				<div class="filter-line__dropdowns-content">
+					<div class="dropdowns-content" id="pris">
+						<div class="dropdowns-content__wrapper">
+							<section class="range-slider">
+								<div class="rangeValues">
+									<span class="rangeValues_left">0</span>
+									<span class="rangeValues_right">500</span>
+								</div>
+
+								<div class="rangeTrack-value"></div>
+								<input value="49" min="49" max="2500" step="1" type="range">
+								<input value="500" min="49" max="2500" step="1" type="range">
+							</section>
+
+							<div class="checkbox checkbox_round">
+								<input type="checkbox" name="Visa" id="ckbox_visa2">
+								<label for="ckbox_visa2">Visa endast vinster jag har råd med</label>
+							</div>
+						</div>
+					</div>
+					<div class="dropdowns-content" id="varumärken">
+						<div class="dropdowns-content__wrapper">
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru1" value="Bodum">
+								<label for="ckboxVaru1">Bodum</label>
+							</div>
+
+							<div class="checkbox checkbox_round  js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru2" value="Bosch">
+								<label for="ckboxVaru2">Bosch</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru3" value="Electrolux">
+								<label for="ckboxVaru3">Electrolux</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru4" value="Ernst">
+								<label for="ckboxVaru4">Ernst</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru5" value="Bodum">
+								<label for="ckboxVaru5">Bodum</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru6" value="Bosch">
+								<label for="ckboxVaru6">Bosch</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru7" value="Electrolux">
+								<label for="ckboxVaru7">Electrolux</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru8" value="Ernst">
+								<label for="ckboxVaru8">Ernst</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru9" value="Bodum">
+								<label for="ckboxVaru9">Bodum</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru10" value="Bosch">
+								<label for="ckboxVaru10">Bosch</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru11" value="Electrolux">
+								<label for="ckboxVaru11">Electrolux</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru12" value="Ernst">
+								<label for="ckboxVaru12">Ernst</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru13" value="Bodum">
+								<label for="ckboxVaru13">Bodum</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru14" value="Bosch">
+								<label for="ckboxVaru14">Bosch</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru15" value="Electrolux">
+								<label for="ckboxVaru15">Electrolux</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru16" value="Bosch">
+								<label for="ckboxVaru16">Bosch</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru17" value="Electrolux">
+								<label for="ckboxVaru17">Electrolux</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru18" value="Ernst">
+								<label for="ckboxVaru18">Ernst</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru19" value="Bodum">
+								<label for="ckboxVaru19">Bodum</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru20" value="Bosch">
+								<label for="ckboxVaru20">Bosch</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="Varumärke" id="ckboxVaru21" value="Electrolux">
+								<label for="ckboxVaru21">Electrolux</label>
+							</div>
+						</div>
+					</div>
+					<div class="dropdowns-content" id="kampanjer">
+						<div class="dropdowns-content__wrapper">
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="kampanjer" id="ckboxKamp1" value="de Buyer-knivar">
+								<label for="ckboxKamp1">de Buyer-knivar</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="kampanjer" id="ckboxKamp2" value="Skidsemester">
+								<label for="ckboxKamp2">Skidsemester</label>
+							</div>
+
+							<div class="checkbox checkbox_round js-product-filter__btn">
+								<input type="checkbox" name="kampanjer" id="ckboxKamp3" value="Matlagningsspecial">
+								<label for="ckboxKamp3">Matlagningsspecial</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="active-filters js-filtersPlace"></div>
+			</div>
+
+			<section class="product-list-section">
+				<div class="row equal-height" id="product-list" data-total-items="11">
+					@@include('blocks/product-list/_product-item.html', {
+					"href": "/vinstshop-page.html",
+					"image": "assets/img/mockup/shop_item_1.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"label": "Nyhet",
+					"color": "pink",
+					"title": "En rad",
+					"subtitle": "Fusce Nibh",
+					"price": "450 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"href": "/vinstshop-page-full.html",
+					"image": "assets/img/mockup/shop_item_2.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "200 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+						"href": "/vinstshop-page.html",
+						"image": "assets/img/mockup/car.jpg",
+						"hoverImage": "assets/img/mockup/car.jpg",
+						"label": "Nyhet",
+						"color": "pink",
+						"title": "En rad",
+						"subtitle": "Fusce Nibh",
+						"price": "450 kr",
+						"dreamButton": true,
+						"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"href": "/vinstshop-page-full.html",
+					"image": "assets/img/mockup/Img-block-villa.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "200 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"image": "assets/img/mockup/shop_item_3.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"subtitle": "Fusce Nibh",
+					"price": "10.000 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"image": "assets/img/mockup/StandingImgBlock-small4.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "30 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"image": "assets/img/mockup/StandingImgBlock-small2.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "10.000 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"image": "assets/img/mockup/paslakan-4.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "30 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+						"image": "assets/img/mockup/lottery-04.jpeg",
+						"hoverImage": "assets/img/mockup/car.jpg",
+						"title": "Flera rader skulle kunna fungera såhär.",
+						"price": "10.000 kr",
+						"dreamButton": true,
+						"extended" : true
+						})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"image": "assets/img/mockup/man.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "30 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"image": "assets/img/mockup/nature.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "10.000 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item.html', {
+					"image": "assets/img/mockup/standingImgBlock-placeholder.jpg",
+					"hoverImage": "assets/img/mockup/car.jpg",
+					"title": "Flera rader skulle kunna fungera såhär.",
+					"price": "30 kr",
+					"dreamButton": true,
+					"extended" : true
+					})
+				</div>
+			</section>
+
+			<div class="block-product__more-progress-bar">
+				<a class="more-progress-bar" data-target="#product-list" href="/ajax/all-products.html">du har tittat på 12 av 630 produkter</a>
+				<div class="more-progress-bar__indicator">
+					<span class="more-progress-bar__filled" style="width: calc(12% * 100 / 630);"></span>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="modal fade in product-filters-modal" id="productFiltersModal" style="display: none;">
+		<div class="product-filters-modal__body">
+			<div class="container">
+				<div class="product-filters-modal__page expanded" id="productFiltersModal__home">
+					<div class="product-filters-modal__line">
+						<button type="button" aria-label="Back" class="product-filters-modal__to-back js-toBack-filter-modal" data-target="close">
+							To back
+							<svg xmlns="http://www.w3.org/2000/svg" width="6.75" height="11.5" viewBox="0 0 6.75 11.5">
+								<path id="Path_2" data-name="Path 2" d="M4.75,5.75a1,1,0,0,1-.707-.293L-.707.707a1,1,0,0,1,0-1.414,1,1,0,0,1,1.414,0L4.75,3.336,8.793-.707a1,1,0,0,1,1.414,0,1,1,0,0,1,0,1.414l-4.75,4.75A1,1,0,0,1,4.75,5.75Z" transform="translate(5.75 1) rotate(90)" fill="#003e52"/>
+							</svg>
+						  </button>
+						<span class="product-filters-modal__title js-product-filters-modal__title">Filtrera</span>
+						<a href="#" class="product-filters-modal__rensa">RENSA </a>
+					</div>
+
+					<button type="button" class="product-filters-modal__filter-category js-product-filters-modal__filter-category" data-name="#productFiltersModal__kategori">
+						<span class="product-filters-modal__filter-category__title">Kategori</span>
+						<small>Alla artiklar</small>
+					</button>
+
+					<div class="product-filters-modal__filter-range">
+						<span class="product-filters-modal__filter-category__title">Pris</span>
+
+						<section class="range-slider">
+							<div class="rangeValues">
+								<span class="rangeValues_left">0</span>
+								<span class="rangeValues_right">500</span>
+							</div>
+
+							<div class="rangeTrack-value"></div>
+							<input value="49" min="49" max="2500" step="1" type="range">
+							<input value="500" min="49" max="2500" step="1" type="range">
+						</section>
+
+						<div class="checkbox checkbox_round">
+							<input type="checkbox" name="Visa" id="ckbox_visa">
+							<label for="ckbox_visa">Visa endast vinster jag har råd med</label>
+						</div>
+					</div>
+
+					<button type="button" class="product-filters-modal__filter-category js-product-filters-modal__filter-category" data-name="#productFiltersModal__varumarken">
+						<span class="product-filters-modal__filter-category__title">Varumärken</span>
+					</button>
+
+					<button type="button" class="product-filters-modal__filter-category js-product-filters-modal__filter-category" data-name="#productFiltersModal__kampanjer">
+						<span class="product-filters-modal__filter-category__title">Kampanjer</span>
+					</button>
+
+					<div class="product-filters-modal__active-filters">
+						<span class="product-filters-modal__active-filters__title">2 valda filter:</span>
+
+						<div class="active-filters js-filtersPlace"></div>
+					</div>
+				</div>
+
+				<div class="product-filters-modal__page" id="productFiltersModal__kategori">
+					<div class="product-filters-modal__line">
+						<button type="button" aria-label="Back" class="product-filters-modal__to-back js-toBack-filter-modal" data-target="#productFiltersModal__home">
+							To back
+							<svg xmlns="http://www.w3.org/2000/svg" width="6.75" height="11.5" viewBox="0 0 6.75 11.5">
+								<path id="Path_2" data-name="Path 2" d="M4.75,5.75a1,1,0,0,1-.707-.293L-.707.707a1,1,0,0,1,0-1.414,1,1,0,0,1,1.414,0L4.75,3.336,8.793-.707a1,1,0,0,1,1.414,0,1,1,0,0,1,0,1.414l-4.75,4.75A1,1,0,0,1,4.75,5.75Z" transform="translate(5.75 1) rotate(90)" fill="#003e52"/>
+							</svg>
+						  </button>
+						<span class="product-filters-modal__title js-product-filters-modal__title">Filtrera kategori</span>
+						<a href="#" class="product-filters-modal__rensa">RENSA </a>
+					</div>
+
+					<div class="product-filters-modal__inputs-wrapper">
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat1" value="Alla artiklar">
+							<label for="ckboxCat1">Alla artiklar</label>
+						</div>
+
+						<div class="checkbox checkbox_round  js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat2" value="Gåvor">
+							<label for="ckboxCat2">Gåvor</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat3" value="Hem & design">
+							<label for="ckboxCat3">Hem & design</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat4" value="Hemelektronik">
+							<label for="ckboxCat4">Hemelektronik</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat5" value="Hållbart val">
+							<label for="ckboxCat5">Hållbart val</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat6" value="Hälsa & skönhet">
+							<label for="ckboxCat6">Hälsa & skönhet</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat7" value="Electrolux">
+							<label for="ckboxCat7">Electrolux</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat8" value="Kök & hushåll">
+							<label for="ckboxCat8">Kök & hushåll</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat9" value="Ljud & bild">
+							<label for="ckboxCat9">Ljud & bild</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat10" value="Lotter">
+							<label for="ckboxCat10">Lotter</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat11" value="Resor & tillbehör">
+							<label for="ckboxCat11">Resor & tillbehör</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat12" value="Sport & fritid">
+							<label for="ckboxCat12">Sport & fritid</label>
+						</div>
+
+						<div class="checkbox checkbox_round js-product-filter__btn">
+							<input type="checkbox" name="category" id="ckboxCat13" value="Verktyg, bil & trädgård">
+							<label for="ckboxCat13">Verktyg, bil & trädgård</label>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="product-filters-modal__page" id="productFiltersModal__kampanjer">
+					<div class="product-filters-modal__line">
+						<button type="button" aria-label="Back" class="product-filters-modal__to-back js-toBack-filter-modal" data-target="#productFiltersModal__home">
+							To back
+							<svg xmlns="http://www.w3.org/2000/svg" width="6.75" height="11.5" viewBox="0 0 6.75 11.5">
+								<path id="Path_2" data-name="Path 2" d="M4.75,5.75a1,1,0,0,1-.707-.293L-.707.707a1,1,0,0,1,0-1.414,1,1,0,0,1,1.414,0L4.75,3.336,8.793-.707a1,1,0,0,1,1.414,0,1,1,0,0,1,0,1.414l-4.75,4.75A1,1,0,0,1,4.75,5.75Z" transform="translate(5.75 1) rotate(90)" fill="#003e52"/>
+							</svg>
+						  </button>
+						<span class="product-filters-modal__title js-product-filters-modal__title">Filtrera kampanjer</span>
+						<a href="#" class="product-filters-modal__rensa">RENSA </a>
+					</div>
+				</div>
+
+				<div class="product-filters-modal__page" id="productFiltersModal__varumarken">
+					<div class="product-filters-modal__line">
+						<button type="button" aria-label="Back" class="product-filters-modal__to-back js-toBack-filter-modal" data-target="#productFiltersModal__home">
+							To back
+							<svg xmlns="http://www.w3.org/2000/svg" width="6.75" height="11.5" viewBox="0 0 6.75 11.5">
+								<path id="Path_2" data-name="Path 2" d="M4.75,5.75a1,1,0,0,1-.707-.293L-.707.707a1,1,0,0,1,0-1.414,1,1,0,0,1,1.414,0L4.75,3.336,8.793-.707a1,1,0,0,1,1.414,0,1,1,0,0,1,0,1.414l-4.75,4.75A1,1,0,0,1,4.75,5.75Z" transform="translate(5.75 1) rotate(90)" fill="#003e52"/>
+							</svg>
+						  </button>
+						<span class="product-filters-modal__title js-product-filters-modal__title">Filtrera varumärken</span>
+						<a href="#" class="product-filters-modal__rensa">RENSA </a>
+					</div>
+				</div>
+
+				<div class="product-filters-modal__btn">
+					<a href="#" class="btn btn-primary">Visa produkter (122 st)</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

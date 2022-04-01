@@ -1,0 +1,31 @@
+.block-product__more-progress-bar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 75px;
+	padding-top: 40px;
+
+	.more-progress-bar {
+		margin-bottom: 10px;
+		text-decoration: none;
+		font-size: 12px;
+	}
+
+	.more-progress-bar__indicator {
+		height: 4px;
+		width: 300px;
+		background-color: #EEEDEB;
+		border-radius: 10px;
+		position: relative;
+	}
+
+	.more-progress-bar__filled {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 4px;
+		border-radius: 10px;
+		background-color: #003E52;
+		width: 1px;
+	}
+}

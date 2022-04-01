@@ -95,7 +95,7 @@ export default class ProductList {
 
 	removeFilter() {
 		let _this = this;
-		$('.active-filters').on('click', $('.active-filters__label'), function(e) {
+		$('.js-active-filters').on('click', $('.js-remove-label'), function(e) {
 			let change = false;
 			let $value = $(e.target).val();
 			if ($(e.target).hasClass('js-remove-all-labels')) {
@@ -111,7 +111,7 @@ export default class ProductList {
 						change = true;
 					});
 				})
-			} else {
+			} else if ($(e.target).hasClass('js-remove-label')) {
 				//Remove specific filter
 				let filterType = $(e.target).data("filtertype");
 
@@ -178,11 +178,11 @@ export default class ProductList {
 		}
 
 		if(exitingFilter > 1) {
-            removeBtn += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Ta bort alla filter</button>`;
+            removeBtn += `<button class="active-filters__label active-filters__label--primary js-remove-all-labels">Återställ filter</button>`;
             html = removeBtn + html;
         }
 
-        $('.active-filters').html(html);
+        $('.js-active-filters').html(html);
 	}
 
 	createFilterUrl() {

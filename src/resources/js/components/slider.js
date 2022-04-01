@@ -225,7 +225,14 @@ export default function () {
 		autoPlay: 5000
 	});
 
-
+	//vinstshop-page-v2 slider for categories filter
+	$('#productCategorySlider').flickity({
+		cellSelector: '#productCategorySlider .product-category__btn',
+		contain: true,
+		pageDots: false,
+		prevNextButtons: true,
+		cellAlign: 'left'
+	});
 
 
 	// $('.product-slider__big-box').flickity({

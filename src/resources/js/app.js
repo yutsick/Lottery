@@ -52,6 +52,8 @@ import RegisterLottery from './components/register-lottery';
 import Confetti from './components/confetti';
 import tabs from './components/tabs';
 import radioToggle from './components/radio-toggle';
+import range from './components/range';
+import productsListFilters from './components/products-list_filters';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -129,6 +131,8 @@ $(function () {
 	tabs();
 	radioToggle();
 	imageZoom();
+	range();
+	productsListFilters();
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();
