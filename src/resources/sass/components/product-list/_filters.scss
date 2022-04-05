@@ -522,10 +522,54 @@
 	.active-filters {
 		gap: 6px;
 		padding-right: 0;
+
+		.active-filters__label--primary {
+			display: none;
+		}
 	}
 
 	.active-filters__label {
 		display: inline-block;
+	}
+
+	.product-category__btn {
+		background: transparent;
+		width: auto;
+		display: inline-block;
+		padding: 0;
+		border: none;
+
+		font-size: 18px;
+		position: relative;
+		cursor: pointer;
+		padding-left: 36px;
+
+		&::before {
+			content: '';
+			display: block;
+			border-radius: 2px;
+			background: transparent;
+			border: 1px solid #003e52;
+			left: 0;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: -1px;
+		}
+
+		&.checked {
+			&::after {
+				content: '';
+				display: block;
+				border-radius: 50%;
+				position: absolute;
+				left: 4px;
+				background: #003e52;
+				width: 16px;
+				height: 16px;
+				top: 3px;
+			}
+		}
 	}
 
 	&__active-filters__title {
@@ -658,7 +702,7 @@
 		flex-direction: column;
 		row-gap: 22px;
 
-		.checkbox_round label {
+		.checkbox.checkbox_round label {
 			font-size: 18px;
 			padding-left: 36px;
 

@@ -1,36 +1,46 @@
 export default function() {
 
-	function openDropdown(btn) {
+	function openDropdownBtnListener(btn) {
 		$(btn).on('click', function(evt) {
 			evt.preventDefault();
 
 			if($(this).hasClass('open')) {
-				$(this).removeClass('open');
-				$('.filter-line__dropdowns-content .dropdowns-content').removeClass('show');
-				$('.filter-line__dropdowns-content').removeClass('active');
+				closeAllDropdowns();
 			} else {
 				$(btn).removeClass('open');
 				$(this).addClass('open');
 				$('.filter-line__dropdowns-content').addClass('active');
 				$('.filter-line__dropdowns-content .dropdowns-content').removeClass('show');
 				$($(this).attr('data-target')).addClass('show');
+				openDropdownsListener();
 			}
 		});
 
 		checkActiveDropdown();
 	};
-	openDropdown('.js-filter-dropdown');
+	openDropdownBtnListener('.js-filter-dropdown');
 
-	function checkActiveDropdown() {
-		jQuery(document).on('click', function(evt) {
-			if(!$(evt.target).closest('.dropdowns-content__wrapper').length
-			&& !$(evt.target).closest('.filters__item').length
-			&& !$(evt.target).hasClass('dropdown-backdrop')) {
-				$('.filter-line__dropdowns-content .dropdowns-content').removeClass('show');
-				$('.js-filter-dropdown').removeClass('open');
-				$('.filter-line__dropdowns-content').removeClass('active');
-			}
+	function openDropdownsListener() {
+		jQuery(document).on('click.checking', function(evt) {
+			let target = evt.target;
+			checkActiveDropdown(target);
 		});
+	}
+
+	function checkActiveDropdown(target) {
+		if(!$(target).closest('.dropdowns-content__wrapper').length
+		&& !$(target).closest('.filters__item').length
+		&& !$(target).hasClass('dropdown-backdrop')) {
+			closeAllDropdowns();
+		};
+	};
+
+	function closeAllDropdowns() {
+		$('.filter-line__dropdowns-content .dropdowns-content').removeClass('show');
+		$('.js-filter-dropdown').removeClass('open');
+		$('.filter-line__dropdowns-content').removeClass('active');
+
+		jQuery(document).off('.checking');
 	};
 
 	function createChosenFiltres(btn) {
@@ -46,7 +56,7 @@ export default function() {
 				let category = 'checkbox';
 
 				if(!$(this).closest('.js-product-filter__btn').hasClass('checked')) {
-					$(this).closest('.js-product-filter__btn').addClass('checked');
+					$(`.js-product-filter__btn input[value="${val}"]`).closest('.js-product-filter__btn').addClass('checked');
 
 					let btn = `
 					<button type="button" data-name="${
@@ -59,10 +69,10 @@ export default function() {
 
 					target.append(btn);
 				} else {
-					$(this).closest('.js-product-filter__btn').removeClass('checked');
+					$(`.js-product-filter__btn.checked input[value="${val}"]`).closest('.js-product-filter__btn').removeClass('checked');
 					$('.js-filtersPlace').find(`.active-filters__label[value="${val}"]`).remove();
-					checkActiveFiltersLength();
 				}
+				checkActiveFiltersLength();
 			}
 
 			//If value exists and there is no such active element
@@ -71,14 +81,14 @@ export default function() {
 				//If this is category filter (slider with blue btns)
 				if($(this).attr("data-name") === 'category') {
 					if(!$(this).hasClass('product-category__btn--all')) {
+						let value = this.value;
 
-						let btn = `<button type="button" data-name="${$(this).attr("data-name")}" class="active-filters__label js-remove-filter" value="${this.value}">${this.value}</button>`;
+						let btn = `<button type="button" data-name="${$(this).attr("data-name")}" class="active-filters__label js-remove-filter" value="${value}">${value}</button>`;
 
 						target.append(btn);
 
-						$(this).addClass('checked');
+						$(`.product-category__btn[value="${value}"]`).addClass('checked');
 						$('.product-category__btn--all').removeClass('checked');
-
 					} else if ($(this).hasClass('product-category__btn--all')) {
 
 						//Delete only category filters and set the "all products" btn active
@@ -89,6 +99,10 @@ export default function() {
 					}
 				}
 
+			} else if($(this).attr("data-name") === 'category' && $(this).hasClass('checked')) {
+				let value = this.value;
+				$(`.product-category__btn[value="${value}"]`).removeClass('checked');
+				$('.js-filtersPlace').find(`.js-remove-filter[value="${value}"]`).remove();
 			}
 
 			//Adding classes for filters area for rigth margings
@@ -119,23 +133,20 @@ export default function() {
 
 			//CLick on checkbox filter
 			if(btnCategory === 'checkbox') {
-				console.log($(`input[value="${btnValue}"]`));
 
 				$(`input[value="${btnValue}"]`).closest('.js-product-filter__btn').removeClass('checked');
 				$(`.js-remove-filter[value="${btnValue}"]`).remove();
 			}
 
+			if(btnCategory === 'rangePrice') {
+				$('.active-filters__label[data-name="rangePrice"]').remove();
+				$('.range-slider').parent().find('.checkbox_round.checked').removeClass('checked');
+				activeFiltersCounter();
+			}
+
 			//Click on "remove all" btn
-			if($(evt.target).hasClass('active-filters__label--primary')) {
-				//remove classes for category filters
-				$('.product-category__btn').removeClass('checked');
-				$('.product-category__btn--all').addClass('checked');
-
-				//remove classes for checkbox filters
-				$(`.js-product-filter__btn`).removeClass('checked');
-
-				//delete active label
-				$('.js-filtersPlace').find('.active-filters__label').remove();
+			if($(evt.target).hasClass('js-remove-all-filters')) {
+				deleteAllFilters();
 			}
 
 			checkActiveFiltersLength();
@@ -143,15 +154,34 @@ export default function() {
 	}
 	deleteChosenFilter('.js-filtersPlace');
 
+	function deleteAllFilters() {
+		//remove classes for category filters
+		$('.product-category__btn').removeClass('checked');
+		$('.product-category__btn--all').addClass('checked');
+
+		//remove classes for checkbox filters
+		$(`.js-product-filter__btn`).removeClass('checked');
+
+		//delete active label
+		$('.js-filtersPlace').find('.active-filters__label').remove();
+
+		//uncheck range visa checkbox
+		$('.range-slider').parent().find('.checkbox_round.checked').removeClass('checked');
+
+		checkActiveFiltersLength();
+	};
+
 	function checkActiveFiltersLength() {
+		let counter = $('.js-filtersPlace .active-filters__label:not(.active-filters__label--primary)').length;
+
 			//Adding "remove all" btn if filters are 1>
-			if($('.js-filtersPlace .active-filters__label').length > 1 && !$('.js-filtersPlace').has(`.active-filters__label--primary`).length) {
-				$('.js-filtersPlace').append(`<button class="active-filters__label active-filters__label--primary js-remove-filter">Återställ filter</button>`);
+			if(counter / 2 > 1 && !$('.js-filtersPlace').has(`.js-remove-all-filters`).length) {
+				$('.js-filtersPlace').append(`<button class="active-filters__label active-filters__label--primary js-remove-filter js-remove-all-filters">Återställ filter</button>`);
 			}
 
 			//Removing "remove all" btn if less 2
-			if($('.js-filtersPlace .active-filters__label').length <= 2) {
-				$('.active-filters__label--primary').remove();
+			if(counter / 2 <= 1) {
+				$('.js-remove-filter.js-remove-all-filters').remove();
 
 				if (!$('.js-filtersPlace .active-filters__label').length) {
 					$('.product-category__btn--all').addClass('checked');
@@ -166,9 +196,15 @@ export default function() {
 			evt.preventDefault();
 
 			$('#productFiltersModal').fadeIn();
+
+			modalOpenedListener();
 		})
 	};
 	modalOpenFiltres('.js-filters__mobile-btn');
+
+	function modalOpenedListener() {
+		jQuery(window).on('resize', modalFiltersClose);
+	}
 
 	function modalToPage(btn) {
 		$(btn).on('click', function(evt) {
@@ -179,22 +215,28 @@ export default function() {
 	};
 	modalToPage('.js-product-filters-modal__filter-category');
 
-	function modalToBack(btn) {
+	function modalToBackListener(btn) {
 		$(btn).on('click', function(evt) {
 			evt.preventDefault();
 
 			if($(this).attr('data-target') === 'close') {
-				$('.product-filters-modal__page').removeClass('expanded');
-				$('#productFiltersModal__home').addClass('expanded');
-
-				$('#productFiltersModal').fadeOut();
+				modalFiltersClose();
 			} else {
 				$('.product-filters-modal__page').removeClass('expanded');
 				$($(this).attr('data-target')).addClass('expanded');
 			}
 		})
 	};
-	modalToBack('.js-toBack-filter-modal');
+	modalToBackListener('.js-toBack-filter-modal');
+
+	function modalFiltersClose() {
+		$('.product-filters-modal__page').removeClass('expanded');
+		$('#productFiltersModal__home').addClass('expanded');
+
+		$('#productFiltersModal').fadeOut();
+
+		jQuery(window).off('resize', modalFiltersClose);
+	}
 
 	function activeFiltersCounter() {
 		let counter = $('.js-filters__mobile-btn--checked');
@@ -210,4 +252,314 @@ export default function() {
 		$('.product-filters-modal__active-filters__title').text(`${counter.text()} valda filter:`);
 	}
 	activeFiltersCounter();
+
+	function linkSameCheckboxes(link1, link2) {
+		$(link1).closest('.checkbox_round').find('label').on('click', function(evt) {
+			evt.preventDefault();
+			link(link2, evt.target);
+		});
+		$(link2).closest('.checkbox_round').find('label').on('click', function(evt) {
+			evt.preventDefault();
+			link(link1, evt.target);
+		});
+
+		function link(linkWith, target) {
+			if(!$(target).closest('.checkbox_round').hasClass('checked')) {
+				$(target).closest('.checkbox_round').addClass('checked');
+				$(linkWith).closest('.checkbox_round').addClass('checked');
+			} else {
+				$(target).closest('.checkbox_round').removeClass('checked');
+				$(linkWith).closest('.checkbox_round').removeClass('checked');
+			}
+		}
+	}
+	linkSameCheckboxes('#ckbox_visa', '#ckbox_visa2');
+
+
+	//create and listener for range price slider
+	function rangeSliderLabel(rangeFilterAccept) {
+		let slider = $(rangeFilterAccept).closest('.checkbox').parent().find('.range-slider');
+
+		$(rangeFilterAccept).closest('.checkbox').find('label').on('click', function(evt) {
+			let minPrice = getPriceRange(slider)[0];
+			let maxPrice = getPriceRange(slider)[1];
+			let label = `<button type="button" data-name="rangePrice" class="active-filters__label js-remove-filter" value="${minPrice}–${maxPrice} SEK">${minPrice}–${maxPrice} SEK</button>`;
+
+			if(!$('.js-filtersPlace .active-filters__label[data-name="rangePrice"]').length
+			&& $(evt.target).closest('.checkbox').hasClass('checked')) {
+
+				$('.js-filtersPlace').append(label);
+				$('.js-filtersPlace').addClass('active');
+				activeFiltersCounter();
+
+			} else if ($('.js-filtersPlace .active-filters__label[data-name="rangePrice"]').length
+			&& !$(evt.target).closest('.checkbox').hasClass('checked')) {
+				$('.active-filters__label[data-name="rangePrice"]').remove();
+				activeFiltersCounter();
+			}
+		})
+
+		$(rangeFilterAccept).closest('.checkbox').parent().find('.range-slider').find('input').on('input', function(evt) {
+			let minPrice = getPriceRange(slider)[0];
+			let maxPrice = getPriceRange(slider)[1];
+			$('.active-filters__label[data-name="rangePrice"]').text(`${minPrice}–${maxPrice} SEK`);
+			$('.active-filters__label[data-name="rangePrice"]').attr('value', `${minPrice}–${maxPrice} SEK`)
+		})
+	};
+	rangeSliderLabel('#ckbox_visa');
+	rangeSliderLabel('#ckbox_visa2');
+
+	function getPriceRange(slider) {
+		let minPrice = parseFloat(slider.find('.rangeValues_left').text());
+		let maxPrice = parseFloat(slider.find('.rangeValues_right').text());
+
+		return [minPrice, maxPrice];
+	}
+
+	$(window).on('scroll', function() {
+		let block = document.querySelector('.js-infinite-scroll');
+		let counter = 1;
+
+		let contentHeight = block.offsetHeight;
+		let yOffset = window.pageYOffset;
+		let window_height = window.innerHeight - 800;
+		let y = yOffset + window_height;
+
+
+		if(y >= contentHeight) {
+			let container = $('#product-list');
+			let current = container.children().length;
+			let total = 20;
+
+			if(current <= total) {
+				container.append(`
+				<div class="col-xs-6 col-md-3">
+				<article class="block-product block-product_extended">
+
+					<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lägg till i min drömlista">
+						<i class="icon icon-dream-star dreamlist-icon"></i>
+					</button>
+
+
+
+
+					<div class="block-product__image-wrapper">
+						<a class="block-product__link" href="/" title="">
+							<div class="block-product__image">
+								<img src="assets/img/mockup/StandingImgBlock-small2.jpg" data-src="assets/img/mockup/StandingImgBlock-small2.jpg" alt="" data-ll-status="loading" class="entered loading">
+
+
+								<img src="assets/img/mockup/car.jpg" class="block-product__hover-image entered loading" data-src="assets/img/mockup/car.jpg" alt="" data-ll-status="loading">
+
+
+							</div>
+						</a>
+					</div>
+					<div class="block-product__content flex-middle">
+						<a class="block-product__link" href="/" title="">
+
+							<h3 class="block-product__title block-product__item">Flera rader skulle kunna fungera såhär.</h3>
+
+
+
+							<p class="block-product__price block-product__item">10.000 kr</p>
+
+						</a>
+
+
+							<div class="block-product__specs">
+								<div class="product-controls__colors">
+									<div class="product-controls__radio">
+										<input type="radio" name="color" id="color-1" value="color-1" checked="">
+										<label for="color-1">
+											<img src="/assets/img/mockup/color1@2x.jpg" alt="color-1">
+										</label>
+									</div>
+									<div class="product-controls__radio">
+										<input type="radio" name="color" id="color-2" value="color-2">
+										<label for="color-2">
+											<img src="/assets/img/mockup/color2@2x.jpg" alt="color-2">
+										</label>
+									</div>
+									<div class="product-controls__radio">
+										<input type="radio" name="color" id="color-3" value="color-3">
+										<label for="color-3">
+											<img src="/assets/img/mockup/color1@2x.jpg" alt="color-3">
+										</label>
+									</div>
+									<div class="product-controls__radio">
+										<input type="radio" name="color" id="color-4" value="color-4">
+										<label for="color-4">
+											<img src="/assets/img/mockup/color2@2x.jpg" alt="color-4">
+										</label>
+									</div>
+									<div class="product-controls__radio">
+										<input type="radio" name="color" id="color-5" value="color-5">
+										<label for="color-5">
+											<img src="/assets/img/mockup/color1@2x.jpg" alt="color-5">
+										</label>
+									</div>
+								</div>
+
+								<div class="product-controls__line">
+									<div class="product-controls__color-circles" aria-label="Possible colors">
+										<ul>
+											<li style="background: #D6D1CD;">
+												<a href="#">Gray</a>
+											</li>
+											<li style="background: #444F7C;">
+												Blue
+											</li>
+											<li style="background: #F1F1F1;">
+												<a href="#">White</a>
+											</li>
+											<li style="background: #816050;">
+												Brown
+											</li>
+											<li style="background: #333333;">
+												Black
+											</li>
+										</ul>
+									</div>
+									<div class="product-controls__sizes" aria-label="Possible sizes">
+										<ul>
+											<li>XXS</li>
+											<li>XS</li>
+											<li>S</li>
+											<li>M</li>
+											<li>L</li>
+											<li>XL</li>
+											<li>XXL</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+					</div>
+
+				</article>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+		<article class="block-product block-product_extended">
+
+			<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lägg till i min drömlista">
+				<i class="icon icon-dream-star dreamlist-icon"></i>
+			</button>
+
+
+
+
+			<div class="block-product__image-wrapper">
+				<a class="block-product__link" href="/" title="">
+					<div class="block-product__image">
+						<img src="assets/img/mockup/StandingImgBlock-small2.jpg" data-src="assets/img/mockup/StandingImgBlock-small2.jpg" alt="" data-ll-status="loading" class="entered loading">
+
+
+						<img src="assets/img/mockup/car.jpg" class="block-product__hover-image entered loading" data-src="assets/img/mockup/car.jpg" alt="" data-ll-status="loading">
+
+
+					</div>
+				</a>
+			</div>
+			<div class="block-product__content flex-middle">
+				<a class="block-product__link" href="/" title="">
+
+					<h3 class="block-product__title block-product__item">Flera rader skulle kunna fungera såhär.</h3>
+
+
+
+					<p class="block-product__price block-product__item">10.000 kr</p>
+
+				</a>
+
+
+					<div class="block-product__specs">
+						<div class="product-controls__colors">
+							<div class="product-controls__radio">
+								<input type="radio" name="color" id="color-1" value="color-1" checked="">
+								<label for="color-1">
+									<img src="/assets/img/mockup/color1@2x.jpg" alt="color-1">
+								</label>
+							</div>
+							<div class="product-controls__radio">
+								<input type="radio" name="color" id="color-2" value="color-2">
+								<label for="color-2">
+									<img src="/assets/img/mockup/color2@2x.jpg" alt="color-2">
+								</label>
+							</div>
+							<div class="product-controls__radio">
+								<input type="radio" name="color" id="color-3" value="color-3">
+								<label for="color-3">
+									<img src="/assets/img/mockup/color1@2x.jpg" alt="color-3">
+								</label>
+							</div>
+							<div class="product-controls__radio">
+								<input type="radio" name="color" id="color-4" value="color-4">
+								<label for="color-4">
+									<img src="/assets/img/mockup/color2@2x.jpg" alt="color-4">
+								</label>
+							</div>
+							<div class="product-controls__radio">
+								<input type="radio" name="color" id="color-5" value="color-5">
+								<label for="color-5">
+									<img src="/assets/img/mockup/color1@2x.jpg" alt="color-5">
+								</label>
+							</div>
+						</div>
+
+						<div class="product-controls__line">
+							<div class="product-controls__color-circles" aria-label="Possible colors">
+								<ul>
+									<li style="background: #D6D1CD;">
+										<a href="#">Gray</a>
+									</li>
+									<li style="background: #444F7C;">
+										Blue
+									</li>
+									<li style="background: #F1F1F1;">
+										<a href="#">White</a>
+									</li>
+									<li style="background: #816050;">
+										Brown
+									</li>
+									<li style="background: #333333;">
+										Black
+									</li>
+								</ul>
+							</div>
+							<div class="product-controls__sizes" aria-label="Possible sizes">
+								<ul>
+									<li>XXS</li>
+									<li>XS</li>
+									<li>S</li>
+									<li>M</li>
+									<li>L</li>
+									<li>XL</li>
+									<li>XXL</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+			</div>
+
+		</article>
+	</div>
+
+				`);
+				renderProgressBar(current, total);
+			}
+		}
+	});
+
+	function renderProgressBar(current, total) {
+		let progressText = `du har tittat på ${current} av ${total} produkter`;
+
+		$('.more-progress-bar').text(progressText);
+		$('.more-progress-bar__indicator .more-progress-bar__filled').css('width', `calc(${current}% * 100 / ${total})`);
+	}
+
+	$('.js-remove-all-filters').on('click', deleteAllFilters);
+	$('.js-product-filters-modal__btn').on('click', modalFiltersClose);
 }

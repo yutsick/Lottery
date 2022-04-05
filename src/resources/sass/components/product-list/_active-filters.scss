@@ -6,6 +6,10 @@
 	&.active {
 		& ~ .active {
 			margin-top: 18px;
+
+			@media screen and (max-width: 1225px) {
+				margin-top: 0;
+			}
 		}
 	}
 }
