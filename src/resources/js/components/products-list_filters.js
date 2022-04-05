@@ -316,242 +316,248 @@ export default function() {
 		return [minPrice, maxPrice];
 	}
 
-	$(window).on('scroll', function() {
-		let block = document.querySelector('.js-infinite-scroll');
-		let counter = 1;
+	function infinityScroll(target) {
+		$(window).on('scroll', function() {
+			let block = document.querySelector(target);
+			let counter = 1;
 
-		let contentHeight = block.offsetHeight;
-		let yOffset = window.pageYOffset;
-		let window_height = window.innerHeight - 800;
-		let y = yOffset + window_height;
+			let contentHeight = block.offsetHeight;
+			let yOffset = window.pageYOffset;
+			let window_height = window.innerHeight - 800;
+			let y = yOffset + window_height;
 
 
-		if(y >= contentHeight) {
-			let container = $('#product-list');
-			let current = container.children().length;
-			let total = 20;
+			if(y >= contentHeight) {
+				let container = $('#product-list');
+				let current = container.children().length;
+				let total = 20;
 
-			if(current <= total) {
-				container.append(`
+				if(current <= total) {
+					container.append(`
+					<div class="col-xs-6 col-md-3">
+					<article class="block-product block-product_extended">
+
+						<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lägg till i min drömlista">
+							<i class="icon icon-dream-star dreamlist-icon"></i>
+						</button>
+
+
+
+
+						<div class="block-product__image-wrapper">
+							<a class="block-product__link" href="/" title="">
+								<div class="block-product__image">
+									<img src="assets/img/mockup/StandingImgBlock-small2.jpg" data-src="assets/img/mockup/StandingImgBlock-small2.jpg" alt="" data-ll-status="loading" class="entered loading">
+
+
+									<img src="assets/img/mockup/car.jpg" class="block-product__hover-image entered loading" data-src="assets/img/mockup/car.jpg" alt="" data-ll-status="loading">
+
+
+								</div>
+							</a>
+						</div>
+						<div class="block-product__content flex-middle">
+							<a class="block-product__link" href="/" title="">
+
+								<h3 class="block-product__title block-product__item">Flera rader skulle kunna fungera såhär.</h3>
+
+
+
+								<p class="block-product__price block-product__item">10.000 kr</p>
+
+							</a>
+
+
+								<div class="block-product__specs">
+									<div class="product-controls__colors">
+										<div class="product-controls__radio">
+											<input type="radio" name="color" id="color-1" value="color-1" checked="">
+											<label for="color-1">
+												<img src="/assets/img/mockup/color1@2x.jpg" alt="color-1">
+											</label>
+										</div>
+										<div class="product-controls__radio">
+											<input type="radio" name="color" id="color-2" value="color-2">
+											<label for="color-2">
+												<img src="/assets/img/mockup/color2@2x.jpg" alt="color-2">
+											</label>
+										</div>
+										<div class="product-controls__radio">
+											<input type="radio" name="color" id="color-3" value="color-3">
+											<label for="color-3">
+												<img src="/assets/img/mockup/color1@2x.jpg" alt="color-3">
+											</label>
+										</div>
+										<div class="product-controls__radio">
+											<input type="radio" name="color" id="color-4" value="color-4">
+											<label for="color-4">
+												<img src="/assets/img/mockup/color2@2x.jpg" alt="color-4">
+											</label>
+										</div>
+										<div class="product-controls__radio">
+											<input type="radio" name="color" id="color-5" value="color-5">
+											<label for="color-5">
+												<img src="/assets/img/mockup/color1@2x.jpg" alt="color-5">
+											</label>
+										</div>
+									</div>
+
+									<div class="product-controls__line">
+										<div class="product-controls__color-circles" aria-label="Possible colors">
+											<ul>
+												<li style="background: #D6D1CD;">
+													<a href="#">Gray</a>
+												</li>
+												<li style="background: #444F7C;">
+													Blue
+												</li>
+												<li style="background: #F1F1F1;">
+													<a href="#">White</a>
+												</li>
+												<li style="background: #816050;">
+													Brown
+												</li>
+												<li style="background: #333333;">
+													Black
+												</li>
+											</ul>
+										</div>
+										<div class="product-controls__sizes" aria-label="Possible sizes">
+											<ul>
+												<li>XXS</li>
+												<li>XS</li>
+												<li>S</li>
+												<li>M</li>
+												<li>L</li>
+												<li>XL</li>
+												<li>XXL</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+
+						</div>
+
+					</article>
+				</div>
+
 				<div class="col-xs-6 col-md-3">
-				<article class="block-product block-product_extended">
+			<article class="block-product block-product_extended">
 
-					<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lägg till i min drömlista">
-						<i class="icon icon-dream-star dreamlist-icon"></i>
-					</button>
-
-
-
-
-					<div class="block-product__image-wrapper">
-						<a class="block-product__link" href="/" title="">
-							<div class="block-product__image">
-								<img src="assets/img/mockup/StandingImgBlock-small2.jpg" data-src="assets/img/mockup/StandingImgBlock-small2.jpg" alt="" data-ll-status="loading" class="entered loading">
-
-
-								<img src="assets/img/mockup/car.jpg" class="block-product__hover-image entered loading" data-src="assets/img/mockup/car.jpg" alt="" data-ll-status="loading">
-
-
-							</div>
-						</a>
-					</div>
-					<div class="block-product__content flex-middle">
-						<a class="block-product__link" href="/" title="">
-
-							<h3 class="block-product__title block-product__item">Flera rader skulle kunna fungera såhär.</h3>
+				<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lägg till i min drömlista">
+					<i class="icon icon-dream-star dreamlist-icon"></i>
+				</button>
 
 
 
-							<p class="block-product__price block-product__item">10.000 kr</p>
 
-						</a>
+				<div class="block-product__image-wrapper">
+					<a class="block-product__link" href="/" title="">
+						<div class="block-product__image">
+							<img src="assets/img/mockup/StandingImgBlock-small2.jpg" data-src="assets/img/mockup/StandingImgBlock-small2.jpg" alt="" data-ll-status="loading" class="entered loading">
 
 
-							<div class="block-product__specs">
-								<div class="product-controls__colors">
-									<div class="product-controls__radio">
-										<input type="radio" name="color" id="color-1" value="color-1" checked="">
-										<label for="color-1">
-											<img src="/assets/img/mockup/color1@2x.jpg" alt="color-1">
-										</label>
-									</div>
-									<div class="product-controls__radio">
-										<input type="radio" name="color" id="color-2" value="color-2">
-										<label for="color-2">
-											<img src="/assets/img/mockup/color2@2x.jpg" alt="color-2">
-										</label>
-									</div>
-									<div class="product-controls__radio">
-										<input type="radio" name="color" id="color-3" value="color-3">
-										<label for="color-3">
-											<img src="/assets/img/mockup/color1@2x.jpg" alt="color-3">
-										</label>
-									</div>
-									<div class="product-controls__radio">
-										<input type="radio" name="color" id="color-4" value="color-4">
-										<label for="color-4">
-											<img src="/assets/img/mockup/color2@2x.jpg" alt="color-4">
-										</label>
-									</div>
-									<div class="product-controls__radio">
-										<input type="radio" name="color" id="color-5" value="color-5">
-										<label for="color-5">
-											<img src="/assets/img/mockup/color1@2x.jpg" alt="color-5">
-										</label>
-									</div>
+							<img src="assets/img/mockup/car.jpg" class="block-product__hover-image entered loading" data-src="assets/img/mockup/car.jpg" alt="" data-ll-status="loading">
+
+
+						</div>
+					</a>
+				</div>
+				<div class="block-product__content flex-middle">
+					<a class="block-product__link" href="/" title="">
+
+						<h3 class="block-product__title block-product__item">Flera rader skulle kunna fungera såhär.</h3>
+
+
+
+						<p class="block-product__price block-product__item">10.000 kr</p>
+
+					</a>
+
+
+						<div class="block-product__specs">
+							<div class="product-controls__colors">
+								<div class="product-controls__radio">
+									<input type="radio" name="color" id="color-1" value="color-1" checked="">
+									<label for="color-1">
+										<img src="/assets/img/mockup/color1@2x.jpg" alt="color-1">
+									</label>
 								</div>
-
-								<div class="product-controls__line">
-									<div class="product-controls__color-circles" aria-label="Possible colors">
-										<ul>
-											<li style="background: #D6D1CD;">
-												<a href="#">Gray</a>
-											</li>
-											<li style="background: #444F7C;">
-												Blue
-											</li>
-											<li style="background: #F1F1F1;">
-												<a href="#">White</a>
-											</li>
-											<li style="background: #816050;">
-												Brown
-											</li>
-											<li style="background: #333333;">
-												Black
-											</li>
-										</ul>
-									</div>
-									<div class="product-controls__sizes" aria-label="Possible sizes">
-										<ul>
-											<li>XXS</li>
-											<li>XS</li>
-											<li>S</li>
-											<li>M</li>
-											<li>L</li>
-											<li>XL</li>
-											<li>XXL</li>
-										</ul>
-									</div>
+								<div class="product-controls__radio">
+									<input type="radio" name="color" id="color-2" value="color-2">
+									<label for="color-2">
+										<img src="/assets/img/mockup/color2@2x.jpg" alt="color-2">
+									</label>
+								</div>
+								<div class="product-controls__radio">
+									<input type="radio" name="color" id="color-3" value="color-3">
+									<label for="color-3">
+										<img src="/assets/img/mockup/color1@2x.jpg" alt="color-3">
+									</label>
+								</div>
+								<div class="product-controls__radio">
+									<input type="radio" name="color" id="color-4" value="color-4">
+									<label for="color-4">
+										<img src="/assets/img/mockup/color2@2x.jpg" alt="color-4">
+									</label>
+								</div>
+								<div class="product-controls__radio">
+									<input type="radio" name="color" id="color-5" value="color-5">
+									<label for="color-5">
+										<img src="/assets/img/mockup/color1@2x.jpg" alt="color-5">
+									</label>
 								</div>
 							</div>
 
-					</div>
-
-				</article>
-			</div>
-
-			<div class="col-xs-6 col-md-3">
-		<article class="block-product block-product_extended">
-
-			<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lägg till i min drömlista">
-				<i class="icon icon-dream-star dreamlist-icon"></i>
-			</button>
-
-
-
-
-			<div class="block-product__image-wrapper">
-				<a class="block-product__link" href="/" title="">
-					<div class="block-product__image">
-						<img src="assets/img/mockup/StandingImgBlock-small2.jpg" data-src="assets/img/mockup/StandingImgBlock-small2.jpg" alt="" data-ll-status="loading" class="entered loading">
-
-
-						<img src="assets/img/mockup/car.jpg" class="block-product__hover-image entered loading" data-src="assets/img/mockup/car.jpg" alt="" data-ll-status="loading">
-
-
-					</div>
-				</a>
-			</div>
-			<div class="block-product__content flex-middle">
-				<a class="block-product__link" href="/" title="">
-
-					<h3 class="block-product__title block-product__item">Flera rader skulle kunna fungera såhär.</h3>
-
-
-
-					<p class="block-product__price block-product__item">10.000 kr</p>
-
-				</a>
-
-
-					<div class="block-product__specs">
-						<div class="product-controls__colors">
-							<div class="product-controls__radio">
-								<input type="radio" name="color" id="color-1" value="color-1" checked="">
-								<label for="color-1">
-									<img src="/assets/img/mockup/color1@2x.jpg" alt="color-1">
-								</label>
-							</div>
-							<div class="product-controls__radio">
-								<input type="radio" name="color" id="color-2" value="color-2">
-								<label for="color-2">
-									<img src="/assets/img/mockup/color2@2x.jpg" alt="color-2">
-								</label>
-							</div>
-							<div class="product-controls__radio">
-								<input type="radio" name="color" id="color-3" value="color-3">
-								<label for="color-3">
-									<img src="/assets/img/mockup/color1@2x.jpg" alt="color-3">
-								</label>
-							</div>
-							<div class="product-controls__radio">
-								<input type="radio" name="color" id="color-4" value="color-4">
-								<label for="color-4">
-									<img src="/assets/img/mockup/color2@2x.jpg" alt="color-4">
-								</label>
-							</div>
-							<div class="product-controls__radio">
-								<input type="radio" name="color" id="color-5" value="color-5">
-								<label for="color-5">
-									<img src="/assets/img/mockup/color1@2x.jpg" alt="color-5">
-								</label>
+							<div class="product-controls__line">
+								<div class="product-controls__color-circles" aria-label="Possible colors">
+									<ul>
+										<li style="background: #D6D1CD;">
+											<a href="#">Gray</a>
+										</li>
+										<li style="background: #444F7C;">
+											Blue
+										</li>
+										<li style="background: #F1F1F1;">
+											<a href="#">White</a>
+										</li>
+										<li style="background: #816050;">
+											Brown
+										</li>
+										<li style="background: #333333;">
+											Black
+										</li>
+									</ul>
+								</div>
+								<div class="product-controls__sizes" aria-label="Possible sizes">
+									<ul>
+										<li>XXS</li>
+										<li>XS</li>
+										<li>S</li>
+										<li>M</li>
+										<li>L</li>
+										<li>XL</li>
+										<li>XXL</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 
-						<div class="product-controls__line">
-							<div class="product-controls__color-circles" aria-label="Possible colors">
-								<ul>
-									<li style="background: #D6D1CD;">
-										<a href="#">Gray</a>
-									</li>
-									<li style="background: #444F7C;">
-										Blue
-									</li>
-									<li style="background: #F1F1F1;">
-										<a href="#">White</a>
-									</li>
-									<li style="background: #816050;">
-										Brown
-									</li>
-									<li style="background: #333333;">
-										Black
-									</li>
-								</ul>
-							</div>
-							<div class="product-controls__sizes" aria-label="Possible sizes">
-								<ul>
-									<li>XXS</li>
-									<li>XS</li>
-									<li>S</li>
-									<li>M</li>
-									<li>L</li>
-									<li>XL</li>
-									<li>XXL</li>
-								</ul>
-							</div>
-						</div>
-					</div>
+				</div>
 
-			</div>
+			</article>
+		</div>
 
-		</article>
-	</div>
-
-				`);
-				renderProgressBar(current, total);
+					`);
+					renderProgressBar(current, total);
+				}
 			}
-		}
-	});
+		});
+	}
+
+	if($('.js-infinite-scroll').length) {
+		infinityScroll('.js-infinite-scroll');
+	}
 
 	function renderProgressBar(current, total) {
 		let progressText = `du har tittat på ${current} av ${total} produkter`;
