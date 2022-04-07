@@ -323,24 +323,47 @@ export default function () {
 		});
 	}
 
+
+	function checkForm(form) {
+		form.each(function() {
+			if($(this).find('.form-control').val() && $(this).find('.custom-checkbox:checked').length) {
+				$(this).find('button[type="submit"]').removeClass('disabled');
+				$(this).find('button[type="submit"]').removeAttr("disabled");
+			} else {
+				$(this).find('button[type="submit"]').addClass('disabled');
+				$(this).find('button[type="submit"]').attr('disabled', 'disabled');
+			}
+		});
+	}
+	checkForm($('.sub-page__right-form'));
+
 	function is_all_checkbox_and_input_filled(form) {
-		$(form).find('button[type="submit"]').addClass('disabled');
 
-		$(form).find('.custom-checkbox').on('click', function() {
-			$(this).toggleClass('checked');
+		$(form).find('.custom-checkbox').parent().on('click', function() {
 
-			if($(this).closest('.sub-page__right-form').find('.form-control').val() && !$(this).closest('.sub-page__right-form').find('.custom-checkbox').not('.checked').length) {
+			if(!$(this).find('input').prop('checked')) {
+				$(this).find('input').prop('checked', true);
+			} else {
+				$(this).find('input').prop('checked', false);
+			}
+			console.log($(this).closest('.sub-page__right-form').find('.custom-checkbox:checked').length);
+
+			if($(this).closest('.sub-page__right-form').find('.form-control').val() && $(this).closest('.sub-page__right-form').find('.custom-checkbox:checked').length) {
 				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeClass('disabled');
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeAttr("disabled");
 			} else {
 				$(this).closest('.sub-page__right-form').find('button[type="submit"]').addClass('disabled');
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').attr('disabled', 'disabled');
 			}
 		});
 
 		$(form).find('.form-control').on('input', function() {
-			if($(this).val() && !$(this).closest('.sub-page__right-form').find('.custom-checkbox').not('.checked').length) {
+			if($(this).val() && $(this).closest('.sub-page__right-form').find('.custom-checkbox:checked').length) {
 				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeClass('disabled');
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeAttr("disabled");
 			} else {
 				$(this).closest('.sub-page__right-form').find('button[type="submit"]').addClass('disabled');
+				$(this).closest('.sub-page__right-form').find('button[type="submit"]').attr('disabled', 'disabled');
 			}
 		});
 	}
