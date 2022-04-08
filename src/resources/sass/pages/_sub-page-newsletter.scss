@@ -525,6 +525,7 @@
 						height: 16px;
 						margin-left: -26px;
 						margin-top: 2px;
+						z-index: -1;
 
 						&:hover {
 							cursor: pointer;
@@ -535,6 +536,11 @@
     						left: 1px;
 							font-size: 13px;
 							color: #003E52;
+						}
+
+						a {
+							position: relative;
+							z-index: 1;
 						}
 					}
 

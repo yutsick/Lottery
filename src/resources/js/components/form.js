@@ -338,32 +338,17 @@ export default function () {
 	checkForm($('.sub-page__right-form'));
 
 	function is_all_checkbox_and_input_filled(form) {
-
-		$(form).find('.custom-checkbox').parent().on('click', function() {
-
+		$(form).find('.checkbox').on('click', function() {
 			if(!$(this).find('input').prop('checked')) {
 				$(this).find('input').prop('checked', true);
 			} else {
 				$(this).find('input').prop('checked', false);
 			}
-
-			if($(this).closest('.sub-page__right-form').find('.form-control').val() && $(this).closest('.sub-page__right-form').find('.custom-checkbox:checked').length) {
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeClass('disabled');
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeAttr("disabled");
-			} else {
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').addClass('disabled');
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').attr('disabled', 'disabled');
-			}
+			checkForm($(this).closest('.sub-page__right-form'));
 		});
 
 		$(form).find('.form-control').on('input', function() {
-			if($(this).val() && $(this).closest('.sub-page__right-form').find('.custom-checkbox:checked').length) {
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeClass('disabled');
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeAttr("disabled");
-			} else {
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').addClass('disabled');
-				$(this).closest('.sub-page__right-form').find('button[type="submit"]').attr('disabled', 'disabled');
-			}
+			checkForm($(this).closest('.sub-page__right-form'));
 		});
 	}
 	is_all_checkbox_and_input_filled('.sub-page__right-form');
