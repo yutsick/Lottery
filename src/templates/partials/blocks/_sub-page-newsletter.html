@@ -81,12 +81,16 @@
 								<div class="form-group form-group_checks @@if(context.has_error){ has-error}"> <!-- .has-error -->
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" class="custom-checkbox" id="subPage_check1">Jag godkänner att ta emot nyhetsbrev från Miljonlotteriet.<a href="#">Läs om villkor</a>
+											<input type="checkbox" class="custom-checkbox" id="subPage_check1">Jag godkänner att ta emot nyhetsbrev från Miljonlotteriet.<a href="#" onclick="
+											$(this).closest( '.sub-page__right-wrapper #reg_form' ).css('display', 'none').closest('.sub-page__right-wrapper').find(' #reg_terms').fadeIn();
+											">Läs om villkor</a>
 										</label>
 									</div>
 									<div class="checkbox">
 										<label>
-											<input type="checkbox" class="custom-checkbox" id="subPage_check2">Jag godkänner att Miljonlotteriet använder min data till analys…<a href="#">Läs om villkor</a>
+											<input type="checkbox" class="custom-checkbox" id="subPage_check2">Jag godkänner att Miljonlotteriet använder min data till analys…<a href="#" onclick="
+											$(this).closest( '.sub-page__right-wrapper #reg_form' ).css('display', 'none').closest('.sub-page__right-wrapper').find(' #reg_terms').fadeIn();
+											">Läs om villkor</a>
 										</label>
 									</div>
 
@@ -95,7 +99,7 @@
 
 								<div class="sub-page__right-btn">
 									<button type="submit" class="btn btn-primary disabled" onclick="
-										$(this).closest( '.sub-page__right-wrapper #reg_form' ).css('display', 'none').closest('.sub-page__right-wrapper').find(' #reg_succes').css('display', 'block');
+										$(this).closest( '.sub-page__right-wrapper #reg_form' ).css('display', 'none').closest('.sub-page__right-wrapper').find(' #reg_succes').fadeIn();
 										">
 											Registrera
 									</button>
@@ -120,7 +124,9 @@
 
 					<div class="sub-page__right-content sub-page__reg_text" id="reg_terms" style="display: none;">
 						<div class="get_home">
-							<a href="#">
+							<a href="#" onclick="
+							$(this).closest( '.sub-page__right-wrapper #reg_terms' ).css('display', 'none').closest('.sub-page__right-wrapper').find(' #reg_form').fadeIn();
+							">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle class="get_home__circle" cx="12" cy="12" r="12" fill="#C9E8F4"></circle>
 									<path class="get_home__arrow" d="M13 7L8 12L13 17" stroke="#053A53" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

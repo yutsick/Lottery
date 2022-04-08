@@ -346,7 +346,6 @@ export default function () {
 			} else {
 				$(this).find('input').prop('checked', false);
 			}
-			console.log($(this).closest('.sub-page__right-form').find('.custom-checkbox:checked').length);
 
 			if($(this).closest('.sub-page__right-form').find('.form-control').val() && $(this).closest('.sub-page__right-form').find('.custom-checkbox:checked').length) {
 				$(this).closest('.sub-page__right-form').find('button[type="submit"]').removeClass('disabled');
