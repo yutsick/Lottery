@@ -1,0 +1,116 @@
+div.select-hover-images{
+    
+    .block-product__image{
+//        display: none;
+        
+        .images__contein {
+            opacity: 0;
+           transform: all .0s ease !important;
+            &.active{
+                display: block;
+                opacity: 1;
+              transform: all .0s ease !important;
+            }
+        }
+
+    }
+    
+    .block-product__content{
+        position: relative;   
+        
+        .block-product__link{
+            height: 70px;  
+            margin-bottom: -70px;
+            pointer-events: none;
+        }
+    }
+    
+
+
+    
+    div.block-product__specs{
+        margin-top: 0px !important;
+        padding-top: 0px !important;
+        transform: all .0s ease !important;
+        
+//        margin-top: -70px !important;
+        
+        .select-hover{
+//            height: 0;    
+            
+            padding-top: 20px;
+            background: #fff;
+        }
+        
+        &:hover{
+        
+            .select-hover{
+                opacity: 1;
+                pointer-events: inherit;
+               transform: all .0s ease !important;
+                height: auto;
+                background: #fff;
+            }
+            
+            @media screen and (min-width: 600px){
+                .product-controls__color-circles{
+                    display: none !important;
+                    transform: all .0s ease !important;
+                }
+
+            }
+            
+
+            
+            
+
+            
+        }
+        
+        .select-hover{
+            opacity: 0;
+            pointer-events: none;
+            transform: all .0s ease !important;
+         
+        }
+
+    }
+    
+    .product-controls__sizes{
+        ul{
+            display: none !important;
+            opacity: 0;
+                  transition: all .3s ease;
+            &.active{
+                display: flex !important;
+                opacity: 1;
+                     transition: all .3s ease;
+            }
+        }
+    }
+    .product-controls__radio{
+        border: 1px solid transparent ;  
+    }
+    .product-controls__radio.active{
+        border: 1px solid #003E52;
+//        box-shadow: inset 0 0 0 1px  #003E52;
+        border-radius: 4px;
+    }
+    
+    .product-controls__radio label{
+        border-color: transparent !important
+    }
+    @media screen and (max-width: 1240px) and (min-width: 1024px) {
+        .product-controls__color-circles ul li{
+            width: 10px !important;
+            height: 10px !important;
+        }
+        .product-controls__sizes ul li{
+            font-size: 10px !important;
+        }
+    }
+    
+}
+
+
+

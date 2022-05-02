@@ -13,6 +13,49 @@ export default class ProductList {
 		let _this = this;
 		$(".filters :checkbox").attr("autocomplete", "off");
 
+        $( ".product-controls__line" ).hover(
+             function() {
+        //      $(this).parent().find('.product-controls__colors').removeClass('select-hover');
+             }, function() {
+        //       $(this).parent().find('.product-controls__colors').addClass('select-hover');   
+           }
+
+        );
+
+        $( ".product-controls__radio" ).hover(
+          function() {
+            var numberHover =  $(this).data( "num");
+            // console.log(numberHover);
+
+              $(this).addClass('active');
+
+              $(this).parent().parent().parent().parent().find('.block-product__image-wrapper .block-product__image>.images__contein:nth-child(' + numberHover + ')').addClass('active');
+              
+              if ($(this).width() > 600) {
+                $(this).parent().parent().find('.product-controls__line .product-controls__color-circles').css("display", "none");
+              }
+ 
+              $(this).parent().parent().find('.product-controls__sizes>ul').removeClass('active');  
+              $(this).parent().parent().find('.product-controls__sizes>ul:nth-child(' + numberHover + ')').addClass('active');
+
+          }, function() {
+              
+             if ($(this).width() > 600) {
+                $(this).parent().parent().find('.product-controls__line .product-controls__color-circles').css("display", "block");
+             }
+              
+             $(this).parent().parent().parent().parent().find('.block-product__image-wrapper .block-product__image .images__contein').removeClass('active');
+             $(this).parent().parent().parent().parent().find('.block-product__image-wrapper .block-product__image>div:nth-child(1)').addClass('active'); 
+            
+             $(this).parent().parent().find('.product-controls__sizes>ul').removeClass('active');  
+             $(this).parent().parent().find('.product-controls__sizes>ul:nth-child(1)').addClass('active');  
+
+             $('.product-controls__colors>div').removeClass('active'); 
+
+          }
+        );
+
+
 		$('.filter-dropdown').on('hide.bs.dropdown', function(e) {
 			let $form = $(e.currentTarget).find('form');
 			let filterType = $form.data('filter-type');
@@ -72,6 +115,7 @@ export default class ProductList {
 
 			$('.filters .filter-dropdown').removeClass('open');
 		});
+
 	}
 
 	//this is only re-reading Ajax request
