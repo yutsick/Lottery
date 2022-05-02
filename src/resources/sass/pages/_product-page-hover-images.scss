@@ -1,8 +1,7 @@
 div.select-hover-images{
     
     .block-product__image{
-//        display: none;
-        
+
         .images__contein {
             opacity: 0;
            transform: all .0s ease !important;
@@ -33,23 +32,20 @@ div.select-hover-images{
         padding-top: 0px !important;
         transform: all .0s ease !important;
         
-//        margin-top: -70px !important;
-        
         .select-hover{
-//            height: 0;    
-            
             padding-top: 20px;
             background: #fff;
         }
         
         &:hover{
-        
-            .select-hover{
-                opacity: 1;
-                pointer-events: inherit;
-               transform: all .0s ease !important;
-                height: auto;
-                background: #fff;
+            @media screen and (min-width: 600px){
+                .select-hover{
+                    opacity: 1;
+                    pointer-events: inherit;
+                    transform: all .0s ease !important;
+                    height: auto;
+                    background: #fff;
+                }
             }
             
             @media screen and (min-width: 600px){
@@ -59,19 +55,13 @@ div.select-hover-images{
                 }
 
             }
-            
-
-            
-            
-
-            
+ 
         }
         
         .select-hover{
             opacity: 0;
             pointer-events: none;
             transform: all .0s ease !important;
-         
         }
 
     }
@@ -93,7 +83,6 @@ div.select-hover-images{
     }
     .product-controls__radio.active{
         border: 1px solid #003E52;
-//        box-shadow: inset 0 0 0 1px  #003E52;
         border-radius: 4px;
     }
     
