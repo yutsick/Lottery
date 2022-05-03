@@ -54,6 +54,7 @@ import tabs from './components/tabs';
 import radioToggle from './components/radio-toggle';
 import range from './components/range';
 import productsListFilters from './components/products-list_filters';
+import radioButtonProduct from './components/radio-button-product';
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -133,6 +134,7 @@ $(function () {
 	imageZoom();
 	range();
 	productsListFilters();
+	radioButtonProduct();
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();

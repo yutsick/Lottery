@@ -13,7 +13,7 @@ export default class ProductList {
 		let _this = this;
 		$(".filters :checkbox").attr("autocomplete", "off");
 
-        $( ".product-controls__line" ).hover(
+        $( ".select-hover-images .product-controls__line" ).hover(
              function() {
         //      $(this).parent().find('.product-controls__colors').removeClass('select-hover');
              }, function() {
@@ -22,7 +22,7 @@ export default class ProductList {
 
         );
 
-        $( ".product-controls__radio" ).hover(
+        $( ".select-hover-images .product-controls__radio" ).hover(
           function() {
             var numberHover =  $(this).data( "num");
             // console.log(numberHover);
