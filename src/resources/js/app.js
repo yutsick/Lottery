@@ -52,9 +52,13 @@ import RegisterLottery from './components/register-lottery';
 import Confetti from './components/confetti';
 import tabs from './components/tabs';
 import radioToggle from './components/radio-toggle';
+
 import range from './components/range';
 import productsListFilters from './components/products-list_filters';
 import radioButtonProduct from './components/radio-button-product';
+
+import checkMaxLength from './utilities/checkMaxLength';
+
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -131,10 +135,14 @@ $(function () {
 	RegisterLottery.init();
 	tabs();
 	radioToggle();
+
 	imageZoom();
 	range();
 	productsListFilters();
 	radioButtonProduct();
+
+	checkMaxLength();
+
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();
