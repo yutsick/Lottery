@@ -1,6 +1,13 @@
 Miljonlotteriet - Frontend 2017
 =================
 
+here is a merger of branches vinstshop-page, usubscribe-page and sub-page-newsletter
+
+1. http://localhost:3000/sub-page-popup-newsletter-v3.html
+2. http://localhost:3000/vinstshop-page-v3.html
+3. http://localhost:3000/product-page-v3.html
+
+
 ## Install
 1. `npm install` to install dev dependencies
 2. `npm run watch` to compile and watch for changes
