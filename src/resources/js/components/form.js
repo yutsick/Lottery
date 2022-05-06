@@ -217,6 +217,22 @@ export default function () {
 		});
 	}
 
+	function is_form_checkbox_check(form) {
+		$(form).find('button[type="submit"]').prop('disabled', true);
+
+		$(form).find('.custom-checkbox__label').on('click', function() {
+			let input = $(this).closest('.custom-checkbox').find('.custom-checkbox__input');
+			input.toggleClass('checked');
+
+			if($(form).find('.custom-checkbox__input').hasClass('checked')) {
+				$(form).find('button[type="submit"]').prop('disabled', false);
+			} else {
+				$(form).find('button[type="submit"]').prop('disabled', true);
+			}
+		});
+	}
+	is_form_checkbox_check('#unsbc-block__form');
+
 	function toggle_profile_inputs() {
 		$('.js-update-profile-row').on('click', function () {
 			let $currentRow = $(this).parents('.profile__row');

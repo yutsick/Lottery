@@ -1,0 +1,106 @@
+@@include('layout/_header.html', {
+	"class": "page-front logged-out",
+	"logged_in": false
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+<!--@@include('layout/_top.html', {"logged_in": false})
+@@include('layout/_sidebar.html', {"logged_in": false})-->
+
+<div class="content-wrapper ml-2017 content-wrapper_middle">
+	<!-- OPTION .content-wrapper_middle if no other blocks (it also remove m-top and m-bottom from unsbc-block) -->
+
+	<!-- OPTION Add .unsbc-block_mt if blocks above and .unsbc-block_mb if blocks under (it adds margings) or remove if .content-wrapper_middle is present (block will be in the middle on height with no margings) -->
+	<section class="unsbc-block unsbc-block_mb">
+		<form class="unsbc-block__form" id="unsbc-block__form" style="display: block;">
+			<div class="container">
+				<div class="unsbc-block__wrapper">
+					<div class="unsbc-block__header">
+						<h4>Tråkigt att du ska lämna…</h4>
+						<p>
+							Men vi respekterar såklart ditt beslut. Kanske vill du behålla något utskick?<br>Kryssa i de utskick du vill avregistrera.
+						</p>
+					</div>
+
+					<div class="unsbc-block__checkbox-list">
+						<div class="unsbc-block__checkbox-item">
+							<div class="custom-checkbox">
+								<input type="checkbox" name="notification" id="option-1" value="option-1" class="custom-checkbox__input">
+								<label for="option-1" class="custom-checkbox__label">
+									<div class="unsbc-block__checkbox-content">
+										<div class="unsbc-block__checkbox-title">
+											<strong>Avregistrera nyhetsbrev</strong>
+										</div>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="unsbc-block__checkbox-item">
+							<div class="custom-checkbox">
+								<input type="checkbox" name="notification" id="option-2" value="option-2" class="custom-checkbox__input">
+								<label for="option-2" class="custom-checkbox__label">
+									<div class="unsbc-block__checkbox-content">
+										<div class="unsbc-block__checkbox-title">
+											<strong>Avregistrera Miljonmorgon</strong>
+										</div>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+								</label>
+							</div>
+						</div>
+
+						<div class="unsbc-block__checkbox-item">
+							<div class="custom-checkbox">
+								<input type="checkbox" name="notification" id="option-3" value="option-3" class="custom-checkbox__input">
+								<label for="option-3" class="custom-checkbox__label">
+									<div class="unsbc-block__checkbox-content">
+										<div class="unsbc-block__checkbox-title">
+											<strong>Avregistrera SMS</strong>
+										</div>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+										</p>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-primary" onclick="
+					$('#unsbc-block__form').css('display', 'none');
+					$('#unsbc-block__succes').css('display', 'block');
+					"><span aria-hidden="true">Avregistrera</span></button>
+
+					<a href="#"><b>Avregistrera alla Miljonlotteriets utskick</b></a>
+				</div>
+			</div>
+		</form>
+
+		<div class="unsbc-block__succes" id="unsbc-block__succes" style="display:none;">
+			<div class="container">
+				<div class="unsbc-block__wrapper">
+					<div class="unsbc-block__header">
+						<svg id="success-symbol" xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51">
+							<path id="success-symbol-2" data-name="success-symbol" d="M25.5,51A25.507,25.507,0,0,1,15.574,2,25.507,25.507,0,0,1,35.426,49,25.332,25.332,0,0,1,25.5,51Zm0-48A22.5,22.5,0,1,0,48,25.5,22.525,22.525,0,0,0,25.5,3ZM22.106,36a1.488,1.488,0,0,1-.85-.265l-.118-.089L13.732,29.39A1.5,1.5,0,0,1,15.546,27l.122.093,6.221,5.256L35.123,15.571A1.5,1.5,0,0,1,37.567,17.3l-.089.125-14.194,18A1.491,1.491,0,0,1,22.106,36Z" fill="#003e52"/>
+						</svg>
+
+						<h4>Du har nu avregistrerat dig</h4>
+						<p>
+							Du kan alltid se dina inställningar – och registrera dig igen om du ångrar dig på Mina sidor.
+						</p>
+					</div>
+
+					<a href="#" class="btn btn-primary"><span aria-hidden="true">Gå till startsidan</span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
