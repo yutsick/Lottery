@@ -476,6 +476,9 @@
         &-item:not(:last-child) {
             margin-bottom: 30px;
         }
+        &-half:not(:last-child) {
+            margin-bottom: 30px;
+        }
 
         &-title {
             font-family: 'apercu-bold-pro';
@@ -520,6 +523,14 @@
 
     &__item {
         width: 23%;
+
+        &:not(:last-child) {
+            margin-right: 2.6%;
+        }
+    }
+
+    &__half {
+        width: 50%;
 
         &:not(:last-child) {
             margin-right: 2.6%;
@@ -656,12 +667,24 @@
             margin-right: 2.6%;
         }
     }
+    &__half {
+        width: 50%;
+
+        &:not(:last-child) {
+            margin-right: 2.6%;
+        }
+    }
 
     &__item-title {
         font-family: 'apercu-bold-pro';
         margin-bottom: 5px;
         display: block;
     }
+  
+  hr{
+  border-top: 1px solid #003E52;
+    
+  }
 }
 
 .bingolobby-split-block {
@@ -1325,6 +1348,7 @@
     #panel__bingoschema,
     #panel__chatschema,
     #panel__faq,
+    #chattspel,
     #panel__contests,
     #panel__jackpots,
     #panel__howitworks,
@@ -1362,6 +1386,18 @@
         }
 
         &__item {
+            width: 48%;
+            margin-bottom: 30px;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            &:nth-child(odd) {
+                margin-right: 4%;
+            }
+        }
+        &__half {
             width: 48%;
             margin-bottom: 30px;
 
@@ -1998,6 +2034,10 @@
 
         &__item {
             width: 100%;
+        }
+
+        &__half {
+              width: 100%;
         }
     }
     

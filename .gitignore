@@ -22,7 +22,7 @@ dist/
 .js.map
 /temp.php
 
-package.json
-package-lock.json
+# package.json
+# package-lock.json
 npm-shrinkwrap.json
 BrowserStackLocal.exe
