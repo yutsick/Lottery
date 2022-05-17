@@ -6,6 +6,7 @@ here is a merger of branches vinstshop-page, usubscribe-page and sub-page-newsle
 1. http://localhost:3000/sub-page-popup-newsletter-v3.html
 2. http://localhost:3000/vinstshop-page-v3.html
 3. http://localhost:3000/product-page-v3.html
+4. http://localhost:3000/vinstshop-page-v4.html
 
 
 ## Install

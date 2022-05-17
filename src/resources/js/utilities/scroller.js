@@ -11,7 +11,7 @@ export default function() {
     let $contentWrapper = $('.content-wrapper');
     let contentTop = $contentWrapper.position().top;
 
-    console.log(topBarHeight);
+//    console.log(topBarHeight);
     const isMobile = () => {
         return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
     }
@@ -77,7 +77,7 @@ export default function() {
         $('.post-slider__item').height(pageWinContentBoxHeight - balanceBarHeight + 2);
         $('.blog-win-posts').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 2 ) - balanceBarHeight);
         $('.win-single').height(pageWinContentBoxHeight - ( pageWinFilterHeight + 18 ) - balanceBarHeight);
-        console.log(pageWinContentBoxHeight);
+//        console.log(pageWinContentBoxHeight);
 
     };
 

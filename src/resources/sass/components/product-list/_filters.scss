@@ -756,3 +756,58 @@
 		}
 	}
 }
+
+.search-enter{
+  padding-top: 6px;
+  text-align: center;
+  
+  opacity: 0;
+  transition: opacity .7s ease;
+  display: none;
+  font-weight: 900;
+  font-style: italic;
+  
+  &>span{
+    padding: 0 3px;
+    font: 600 16px/1.2em apercu-bold-pro;
+  }
+  
+  &.search{
+    opacity: 1;
+    transition: opacity .7s ease;
+    display: inherit;
+  }
+  
+}
+
+.box_none_search{
+  width: 100%;
+  padding-top: 20px;
+
+  .title{
+  
+    color: #003E52;
+    text-align: center;
+    
+    @media screen and (max-width: 600px){
+       font: 700 16px/1.2em apercu-bold-pro;
+       letter-spacing: .015em;
+    }
+  }
+  
+  p{
+    color: #003E52;
+    text-align: center;
+    font: 400 16px/1.2em Proxima Nova;
+    
+    @media screen and (max-width: 600px){
+          letter-spacing: -.03em;
+    }
+  }
+  
+}
+
+.active-filters-line .products-value{
+  text-align: right;
+  width: 100%;
+}

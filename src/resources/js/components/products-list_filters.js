@@ -150,6 +150,13 @@ export default function() {
 			}
 
 			checkActiveFiltersLength();
+          
+           $('.product-list-blocks .search-enter>span').html('');
+           $('.search-enter').removeClass('search');
+           $('.clearn').removeClass('active');
+           $('.icon-search-new').removeClass('active');
+           $('#produkt').val('');
+          
 		})
 	}
 	deleteChosenFilter('.js-filtersPlace');
@@ -308,13 +315,69 @@ export default function() {
 	};
 	rangeSliderLabel('#ckbox_visa');
 	rangeSliderLabel('#ckbox_visa2');
+  
+  
+	//tclick on price range
+	function clickOpenPrise(rangeClick) { 
+      
+      	let slider = $(rangeClick).closest('.click');
 
-	function getPriceRange(slider) {
-		let minPrice = parseFloat(slider.find('.rangeValues_left').text());
-		let maxPrice = parseFloat(slider.find('.rangeValues_right').text());
+		$('.range-slider').find('input').on('click', function(evt) {
+
+			let label = `<button type="button" data-name="rangePrice" class="active-filters__label js-remove-filter" value="49–500 SEK">49–500 SEK</button>`;
+
+			if(!$('.js-filtersPlace .active-filters__label[data-name="rangePrice"]').length
+			&& $(evt.target)) {
+
+				$('.js-filtersPlace').append(label);
+				$('.js-filtersPlace').addClass('active');
+				activeFiltersCounter();
+
+			} else if ($('.js-filtersPlace .active-filters__label[data-name="rangePrice"]').length
+			&& !$(evt.target)) {
+				$('.active-filters__label[data-name="rangePrice"]').remove();
+				activeFiltersCounter();
+			}
+
+		})
+      
+      }
+  
+  	clickOpenPrise('#ckbox_visa');
+	clickOpenPrise('#ckbox_visa2');
+
+  
+  	function getPriceRange(slider) {
+		var minPrice = parseFloat(slider.find('.rangeValues_left').text());
+		var maxPrice = parseFloat(slider.find('.rangeValues_right').text());
 
 		return [minPrice, maxPrice];
 	}
+  
+	//text entry search check
+    $('#produkt').on('keyup', function(e) {
+      var btnVal =  $(this).val();
+      
+      if(btnVal){
+          $('.filter-search>.clearn').addClass('active'); 
+          $('.filter-search>.icon-search-new').addClass('active'); 
+        
+          $('.search-enter>span').html(btnVal);
+          $('.search-enter').addClass('search');
+      }else{
+          $('.filter-search>.clearn').removeClass('active'); 
+          $('.filter-search>.icon-search-new').removeClass('active'); 
+
+      }
+    }); 
+//   $('.product-list-blocks .search-enter').remove();
+	//clear search field
+    $('.clearn').on('click', function(e) {
+       $('.filter-search>.clearn').removeClass('active'); 
+       $('.filter-search>.icon-search-new').removeClass('active'); 
+       $('.product-list-blocks .search-enter>span').html('');
+       $('.search-enter').removeClass('search');
+    });
 
 	function infinityScroll(target) {
 		$(window).on('scroll', function() {
