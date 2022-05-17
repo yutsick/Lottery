@@ -96,8 +96,35 @@
 				</a>
 
 				<div class="filter-search">
-					<input type="text" name="produkt" id="produkt" placeholder="Sök produkt, namn, märke, m.m.">
-				</div>
+				    <input type="text" name="produkt" id="produkt" placeholder="Sök produkt, namn, märke, m.m.">
+
+                    <span class="clearn" onclick="var input = this.previousElementSibling; input.value = ''; input.focus();">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <g id="Symbols-/-images" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+                              <g id="icons/close-simple-small" stroke="#003E52" stroke-width="2">
+                                  <g id="Group" transform="translate(9.000000, 9.000000)">
+                                      <line x1="0" y1="6" x2="6" y2="0" id="Path"></line>
+                                      <line x1="0" y1="0" x2="6" y2="6" id="Path"></line>
+                                  </g>
+                              </g>
+                          </g>
+                        </svg>
+                    </span>
+                    <span class="icon-search-new">
+                        <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>icons/search</title>
+                            <g id="Symbols-/-images" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="icons/search" stroke="#003E52" stroke-width="2">
+                                    <g id="search-copy-2" transform="translate(2.000000, 2.000000)">
+                                        <circle id="Oval" stroke-linecap="square" cx="11" cy="9" r="9"></circle>
+                                        <line x1="0.5" y1="19.5" x2="4.64" y2="15.36" id="Path" stroke-linecap="round" stroke-linejoin="round"></line>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                  </span>
+ 
+                </div>
 
 				<div class="sort">
 					<p class="sort__label">Sorterat på:</p>
