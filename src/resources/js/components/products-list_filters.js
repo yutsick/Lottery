@@ -72,7 +72,7 @@ export default function() {
 					$(`.js-product-filter__btn.checked input[value="${val}"]`).closest('.js-product-filter__btn').removeClass('checked');
 					$('.js-filtersPlace').find(`.active-filters__label[value="${val}"]`).remove();
 				}
-//				checkActiveFiltersLength();
+				checkActiveFiltersLength();
 			}
 
 			//If value exists and there is no such active element
@@ -112,7 +112,7 @@ export default function() {
 				$('.js-filtersPlace').removeClass('active');
 			}
 
-//			checkActiveFiltersLength();
+			checkActiveFiltersLength();
 		})
 	};
 	createChosenFiltres('.product-category__btn');
@@ -149,7 +149,7 @@ export default function() {
 				deleteAllFilters();
 			}
 
-//			checkActiveFiltersLength();
+			checkActiveFiltersLength();
           
            $('.product-list-blocks .search-enter>span').html('');
            $('.search-enter').removeClass('search');
@@ -175,28 +175,28 @@ export default function() {
 		//uncheck range visa checkbox
 		$('.range-slider').parent().find('.checkbox_round.checked').removeClass('checked');
 
-//		checkActiveFiltersLength();
+		checkActiveFiltersLength();
 	};
 
-//	function checkActiveFiltersLength() {
-//		let counter = $('.js-filtersPlace .active-filters__label:not(.active-filters__label--primary)').length;
-//
-//			//Adding "remove all" btn if filters are 1>
-//			if(counter / 2 > 1 && !$('.js-filtersPlace').has(`.js-remove-all-filters`).length) {
-//				$('.js-filtersPlace').append(`<button class="active-filters__label active-filters__label--primary js-remove-filter js-remove-all-filters">Återställ filter</button>`);
-//			}
-//
-//			//Removing "remove all" btn if less 2
-//			if(counter / 2 <= 1) {
-//				$('.js-remove-filter.js-remove-all-filters').remove();
-//
-//				if (!$('.js-filtersPlace .active-filters__label').length) {
-//					$('.product-category__btn--all').addClass('checked');
-//				}
-//			}
-//
-//			activeFiltersCounter();
-//	};
+	function checkActiveFiltersLength() {
+		let counter = $('.js-filtersPlace .active-filters__label:not(.active-filters__label--primary)').length;
+
+			//Adding "remove all" btn if filters are 1>
+			if(counter / 2 > 1 && !$('.js-filtersPlace').has(`.js-remove-all-filters`).length) {
+				$('.js-filtersPlace').append(`<button class="active-filters__label active-filters__label--primary js-remove-filter js-remove-all-filters">Återställ filter</button>`);
+			}
+
+			//Removing "remove all" btn if less 2
+			if(counter / 2 <= 1) {
+				$('.js-remove-filter.js-remove-all-filters').remove();
+
+				if (!$('.js-filtersPlace .active-filters__label').length) {
+					$('.product-category__btn--all').addClass('checked');
+				}
+			}
+
+			activeFiltersCounter();
+	};
 
 	function modalOpenFiltres(btn) {
 		$(btn).on('click', function(evt) {
