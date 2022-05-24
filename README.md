@@ -8,6 +8,17 @@ here is a merger of branches vinstshop-page, usubscribe-page and sub-page-newsle
 3. http://localhost:3000/product-page-v3.html
 4. http://localhost:3000/vinstshop-page-v4.html
 
+-----
+bingolobby-bingoroom
+
+5. http://localhost:3000/bingolobby-bingoroom-headers-v1.html
+6. http://localhost:3000/bingolobby-bingoroom-headers-v1-page-1.html
+5. http://localhost:3000/bingolobby-bingoroom-headers-v2.html
+6. http://localhost:3000/bingolobby-bingoroom-headers-v2-page-2.html
+5. http://localhost:3000/bingolobby-bingoroom-headers-v3.html
+6. http://localhost:3000/bingolobby-bingoroom-headers-v3-page-3.html
+
+
 
 ## Install
 1. `npm install` to install dev dependencies
