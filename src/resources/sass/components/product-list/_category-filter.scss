@@ -1,10 +1,26 @@
 .product-category-slider {
 	margin-bottom: 20px;
 	padding-right: 40px;
+    margin-top: 20px;
+    position: relative;
 
 	@media screen and (max-width: 1225px) {
 		display: none;
 	}
+  
+    &:after{
+      content: '';
+      display: block;
+      
+      background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,255,255,1));
+      width: 130px;
+      height: 39px;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top:0;
+
+    }
 
 	.product-category__btn {
 		border-radius: 2px;
@@ -19,15 +35,19 @@
 		}
 	}
 
+
 	.flickity-prev-next-button {
+        z-index: 4;
 		width: 32px;
 		height: 32px;
 		background-color: #003e52;
-		opacity: 0.5;
+		opacity: .5;
 		transition: opacity 0.3s ease;
 		background-repeat: no-repeat;
 		background-position: center;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='14' viewBox='0 0 8 14'%3E%3Cpath id='Path' d='M.308,12.278a1,1,0,1,0,1.384,1.444l6-5.752a1,1,0,0,0,.029-1.415l-6-6.248A1,1,0,1,0,.279,1.693L5.585,7.219Z' transform='translate(0 0)' fill='%23fff'/%3E%3C/svg%3E%0A");
+      
+        transition: all 1.3s ease;
 
 		&.previous {
 			left: 0;
@@ -43,7 +63,7 @@
 		}
 
 		&:hover {
-			opacity: 1;
+			opacity: .7;
 		}
 
 		svg {

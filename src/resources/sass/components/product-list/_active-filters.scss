@@ -5,7 +5,7 @@
 .filter-line__dropdowns-content {
 	&.active {
 		& ~ .active {
-			margin-top: 18px;
+//			margin-top: 18px;
 
 			@media screen and (max-width: 1225px) {
 				margin-top: 0;
@@ -46,10 +46,10 @@
 }
 
 .products-value {
-	text-align: right;
+	text-align: center;
 	padding-top: 6px;
-	float: right;
-	font-size: 14px;
+	font-size: 12px;
+  
 
 	& + .active-filters {
 		float: left;
@@ -98,6 +98,7 @@
 	padding-top: 4px;
 	padding-bottom: 4px;
 	margin-bottom: 0;
+    border-radius: 3px;
 
 	@media screen and (max-width: 1225px) {
 		display: none;

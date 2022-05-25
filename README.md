@@ -1,23 +1,28 @@
 Miljonlotteriet - Frontend 2017
 =================
 
+http://localhost:3000/
+
 here is a merger of branches vinstshop-page, usubscribe-page and sub-page-newsletter
 
-1. http://localhost:3000/sub-page-popup-newsletter-v3.html
-2. http://localhost:3000/vinstshop-page-v3.html
-3. http://localhost:3000/product-page-v3.html
-4. http://localhost:3000/vinstshop-page-v4.html
+1. http://sc-frontend.iogt-nto.se/sub-page-popup-newsletter-v3.html
+2. http://sc-frontend.iogt-nto.se/vinstshop-page-v3.html
+3. http://sc-frontend.iogt-nto.se/product-page-v3.html
+4. http://sc-frontend.iogt-nto.se/vinstshop-page-v4.html
 
 -----
-bingolobby-bingoroom
+bingolobby-bingoroom 
 
-5. http://localhost:3000/bingolobby-bingoroom-headers-v1.html
-6. http://localhost:3000/bingolobby-bingoroom-headers-v1-page-1.html
-5. http://localhost:3000/bingolobby-bingoroom-headers-v2.html
-6. http://localhost:3000/bingolobby-bingoroom-headers-v2-page-2.html
-5. http://localhost:3000/bingolobby-bingoroom-headers-v3.html
-6. http://localhost:3000/bingolobby-bingoroom-headers-v3-page-3.html
+5. http://sc-frontend.iogt-nto.se/bingolobby-bingoroom-headers-v1.html
+6. http://sc-frontend.iogt-nto.se/bingolobby-bingoroom-headers-v1-page-1.html
+5. http://sc-frontend.iogt-nto.se/bingolobby-bingoroom-headers-v2.html
+6. http://sc-frontend.iogt-nto.se/bingolobby-bingoroom-headers-v2-page-2.html
+5. http://sc-frontend.iogt-nto.se/bingolobby-bingoroom-headers-v3.html
+6. http://sc-frontend.iogt-nto.se/bingolobby-bingoroom-headers-v3-page-3.html
 
+-----
+Vinstshop overview - corrections v1
+http://sc-frontend.iogt-nto.se/vinstshop-page-v4.html
 
 
 ## Install

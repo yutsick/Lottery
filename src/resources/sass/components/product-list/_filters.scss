@@ -142,7 +142,8 @@
 .filter-dropdown__header {
 	margin-bottom: $margin-small;
 	background: none;
-	font-weight: $bold;
+	font-weight: 700;
+    margin-bottom: 20px;
 
 	@include min-screen($screen-sm-min) {
 		display: none;
@@ -154,7 +155,9 @@
 		font-family: $base-icon-family;
 		color: $color-blue;
 		transform: rotate(180deg);
+        display: none;
 	}
+  
 }
 
 .filter-dropdown__button {
@@ -162,7 +165,7 @@
 	width: 100%;
 	padding: 10px 40px 10px 15px;
 	border-radius: $border-radius-forms;
-	border: $form-border-width solid $color-input-border;
+	border: $form-border-width solid #68A1B9;
 	background-color: white;
 	font-weight: $bold;
 	text-align: left;
@@ -185,8 +188,37 @@
 	}
 }
 
+.sort [type="radio"] + label{
+  height: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #003E52;
+  font-size: 18px;
+  padding-left: 36px;
+}
+.sort [type="radio"] + label:before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 1px solid #003E52;
+      background-color: #FCFCFC;
+  }
 
-
+.sort .custom-radio [type="radio"]:checked + label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #003E52;
+}
 /* Sort */
 .sort {
 	float: right;
@@ -233,6 +265,8 @@
 
 		.filter-dropdown__header {
 			display: block;
+            text-align: center;
+            font-size: 16px;
 		}
 	}
 
@@ -361,6 +395,7 @@
 
 	.filter-dropdown__button {
 		font-weight: 700;
+        font-size: 12px;
 	}
 
 	.sort {
@@ -371,7 +406,7 @@
 		.dropdown-menu {
 			left: unset;
 			right: 0;
-			min-width: 170px;
+			min-width: 210px;
 
 			@media only screen and (max-width: 767px) {
 				top: 50%;
@@ -433,6 +468,7 @@
 			border-radius: 19px;
 			padding: 11px 16px;
 			width: 355px;
+            outline: none;
 
 			&::-webkit-input-placeholder { /* Edge */
 				color: #7F9EA8;
@@ -448,6 +484,18 @@
 				color: #7F9EA8;
 				font-size: 12px;
 			}
+          
+          
+            &::placeholder {
+              border: 1px 003E52 #68A1B9;
+            }
+
+            &:focus::placeholder {
+              border: 1px 003E52 #68A1B9;
+            }
+
+          
+          
 
 			@media screen and (max-width: 767px) {
 				width: 100%;
@@ -491,6 +539,7 @@
 			justify-content: center;
 			order: -1;
 			margin-bottom: 20px;
+            margin-top: 20px;
 		}
 	}
 
@@ -525,7 +574,7 @@
 		align-items: flex-end;
 		flex-wrap: wrap;
 		row-gap: 12px;
-
+        margin-bottom: 10px;
 
 		& > *:not(:last-child) {
 			margin-right: 30px;

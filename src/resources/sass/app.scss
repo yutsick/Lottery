@@ -51,6 +51,10 @@
 	font-family: 'object-fit: cover;';
 }
 
+body.none_scroll__{
+  overflow: hidden;
+}
+
 .ml-2017 {
 	/* Flickity */
 	@import "vendor/flickity";
