@@ -22,4 +22,26 @@ export default function () {
 			$('#' + choice).addClass('table-pane--active').siblings('.table-pane').removeClass('table-pane--active');
 		}
 	});
+    $('.menu_bingoguide-tabs>li>a').click( function(){
+        var activeAdd = $(this).data('tabs') ; 
+       $('.menu_bingoguide-tabs>li>a').removeClass('active');                                   
+       $('content_bingoguide-tabs>div').removeClass('active');                                   
+       $(this).addClass('active');
+      
+       $('.content_bingoguide-tabs>div').removeClass('active');
+       $('.content_bingoguide-tabs>div:nth-child(' + activeAdd + ')').addClass('active');              
+	});
+  
+    $('.tabs__button').click( function(){
+//        var activeAdd = $(this).data('tabs') ; 
+      
+//       $(this).parent().removeClass('active');                                   
+                             
+       $(this).parent().toggleClass('active');
+      
+//       $('.content_bingoguide-tabs>div').removeClass('active');
+//       $('.content_bingoguide-tabs>div:nth-child(' + activeAdd + ')').addClass('active');              
+	});
+  
+  
 }

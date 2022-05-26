@@ -841,8 +841,8 @@
 }
 
 .bingolobby__faq {
-    background-color: $color-secondary-lighter;
-    padding: 45px 40px 50px;
+//    background-color: $color-secondary-lighter;
+    padding: 0px 40px 50px;
 
     .bingolobby__faq__title {
         margin: 0;
@@ -948,6 +948,153 @@
         top: 0;
         z-index: -1;
     }
+}
+
+.adjusted-tabs{
+  .schema-tabs__panel-content{
+    margin-top: 0;
+  }
+}
+
+.adjusted-bingoguide-tabs{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 1275px;
+  margin: 0 auto;
+  
+  .menu_bingoguide-tabs{
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    list-style-type: none;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    
+      li{
+        list-style-type: none;
+
+        a{
+
+          display: flex;
+          align-content: center;
+          align-items: center;
+
+          padding: 0 15px;
+          color: #003E52;
+          background: #B8D8EB;
+
+          width: clamp(100%, 100vw, 100%);
+          height: 48px;
+          min-height: 48px;
+
+          
+          font: 700 16px/1.2em 'Proxima Nova';
+
+          text-decoration: none;
+          white-space: nowrap;
+          transition: all .5s ease;
+
+          &.active{
+            background: #7CB7D0;
+            color: #fff;
+
+          }
+          
+          &:hover{
+            background: #7CB7D0;
+            color: #fff;
+
+          }
+
+        }
+
+      }
+
+    
+
+    }
+
+
+    
+    .content_bingoguide-tabs{
+      .item_bingoguide-tabs{
+        
+        .tabs__button{
+          width: 100%;
+          margin-bottom: 10px;
+          background: #B8D8EB;
+          height: 40px;
+          
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-decoration: none;
+          
+          padding: 0 15px;
+          
+          color: #003E52;
+          
+          font: 700 16px/1.2em "apercu-bold-pro";
+          
+            &:after{
+              content: '';
+              display: block;
+              background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAMAAAAC2hU0AAAALVBMVEUAAAAAQFAFNVUEOFQFOFIFOlIFOVIFOlMFOVEFOVMFOlMFOlIFOlMFOlMFOlMXKCqLAAAADnRSTlMAEDBAYGBwkKC/z9/f7wf3oVEAAAAtSURBVAjXBcGHAYAwAMAgWvfK/+cKGBOM+5tw1TdZq27OqtirXsZTbRjrsfADKsIBesAc1F8AAAAASUVORK5CYII=);
+              width: 7px;
+              height: 8px;
+
+            }
+          
+          
+        }
+        
+        .tab__content_all{
+          display: none;
+        }
+
+
+          &.active{
+            
+            .tabs__button{
+              color: #FFFFFF;
+              
+              background: #7CB7D0;
+              
+          
+                &:after{
+                  content: '';
+                  display: block;
+                  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAMAAAD3JJ6EAAAAJ1BMVEUAAAD///////////////////////////////////////////////+uPUo5AAAADHRSTlMAECAwUGBwf4+g3+/EbAenAAAAMklEQVR42jXIhQ0AQQzEwD0M9t/uQ8CikfE1iDeiqe5+g+eTW1B+enD/UvS2ibItdPFeQdsBVcqezMsAAAAASUVORK5CYII=);
+                  width: 10px;
+                  height: 8px;
+
+                }
+              
+            }
+
+            .tab__content_all{
+              display: block;
+            }
+          }
+        
+        .text_content_{
+          max-width: 700px;
+          margin: 0 auto;
+          
+
+        }
+      }
+
+    }
+
+  
+  
 }
 
 .ml-2017 {
@@ -1493,6 +1640,41 @@
 }
 
 @media screen and (min-width:993px) {
+  
+  .adjusted-bingoguide-tabs{
+    .content_bingoguide-tabs{
+
+      .item_bingoguide-tabs{
+        
+        
+        .tabs__button{
+          display: none;
+        }
+        
+            .text_content_{
+          .title{
+            color: #003E52;
+            font: 700 40px/1.2em 'apercu-bold-pro';
+            margin-bottom: 15px;
+          }
+          .sub{
+            color: #003E52;
+            font: 700 18px/1.2em 'apercu-bold-pro';
+            margin-bottom: 15px;
+          }
+          p{
+            color: #003E52;
+            font: 100 18px/1.2em 'Proxima Nova';
+            margin-bottom: 15px;
+          }
+          
+        }
+      }
+      
+    }
+    
+  }
+  
  .ml-2017 {
     .block__bingoroom-v1{
 
@@ -1721,6 +1903,67 @@
 }
 
 @media screen and (max-width:992px) {
+  
+  
+  .adjusted-bingoguide-tabs{
+
+    
+    nav{
+      display: none;
+    }
+    
+    .content_bingoguide-tabs{
+      .item_bingoguide-tabs{ 
+    
+        .tab__content_all{
+            margin-bottom: 55px;
+
+            div.text_content_{
+              max-width: 100%;
+            }
+
+            .mediaBlock__video{
+              margin: 0 -20px;
+            }
+
+            .mediaBlock{
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+
+              .mediaBlock__media{
+                order: 2;
+              }
+              .mediaBlock__content{
+                order: 1;
+              }
+
+
+            }
+
+                .title{
+                  margin-top: 40px;
+                  color: #003E52;
+                  font: 700 28px/1.2em 'apercu-bold-pro';
+                  margin-bottom: 15px;
+                }
+                .sub{
+                  color: #003E52;
+                  font: 700 18px/1.2em 'apercu-bold-pro';
+                  margin-bottom: 15px;
+                }
+                p{
+                  color: #003E52;
+                  font: 100 16px/1.2em 'Proxima Nova';
+                  margin-bottom: 15px;
+                }
+            }
+        
+       }
+    }
+  }
+ 
+  
     .block-bingo__slide {
         width: 50%;
     }
@@ -2776,7 +3019,20 @@
 }
 
 @media screen and (max-width: 742px) {
+  
+  .adjusted-bingoguide-tabs{
+    
+    .tab__content_all{
+      margin-bottom: 55px;
 
+      .mediaBlock__content .btn{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+    }
+      
+  }
     //Video block on tablet => open modal when click START (reset modal styles)
     .bingolobby__howitworks {
         .js-bingolobby__howitworks__video::after {
@@ -3512,6 +3768,20 @@
 }
 
 @media screen and (max-width: 426px) {
+  
+  .adjusted-bingoguide-tabs{
+    
+    .tab__content_all{
+      margin-bottom: 32px;
+
+      .mediaBlock__content .btn{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+    }
+      
+  }
 
     .block-bingo-item .lottery-top .img {
         height: 145px;

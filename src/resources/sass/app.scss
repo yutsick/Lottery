@@ -55,6 +55,10 @@ body.none_scroll__{
   overflow: hidden;
 }
 
+#alert-cookie,.message-container,#top{
+  display: none !important
+}
+
 .ml-2017 {
 	/* Flickity */
 	@import "vendor/flickity";
