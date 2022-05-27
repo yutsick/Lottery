@@ -22,26 +22,38 @@ export default function () {
 			$('#' + choice).addClass('table-pane--active').siblings('.table-pane').removeClass('table-pane--active');
 		}
 	});
+  
     $('.menu_bingoguide-tabs>li>a').click( function(){
-        var activeAdd = $(this).data('tabs') ; 
-       $('.menu_bingoguide-tabs>li>a').removeClass('active');                                   
-       $('content_bingoguide-tabs>div').removeClass('active');                                   
+       var activeAdd = $(this).data('tabs') ; 
+       $('.menu_bingoguide-tabs>li>a').removeClass('active');                                                              
        $(this).addClass('active');
       
-       $('.content_bingoguide-tabs>div').removeClass('active');
-       $('.content_bingoguide-tabs>div:nth-child(' + activeAdd + ')').addClass('active');              
+       $(this).parent().parent().parent().parent().find('.content_bingoguide-tabs>div').removeClass('active');
+//       $(this).parent().parent().removeClass('active');
+       $(this).parent().parent().parent().parent().find('.content_bingoguide-tabs>div:nth-child(' + activeAdd + ')').addClass('active');              
 	});
   
-    $('.tabs__button').click( function(){
-//        var activeAdd = $(this).data('tabs') ; 
-      
-//       $(this).parent().removeClass('active');                                   
-                             
-       $(this).parent().toggleClass('active');
-      
-//       $('.content_bingoguide-tabs>div').removeClass('active');
-//       $('.content_bingoguide-tabs>div:nth-child(' + activeAdd + ')').addClass('active');              
+    $('.tabs__button').click( function(){                              
+       $(this).parent().toggleClass('active');       
 	});
+  
+    var isMobile = false;
+
+    $(document).ready( function() {
+        if ($('body').width() <= 992) {
+//            isMobile = true;
+          $('.content_bingoguide-tabs>.item_bingoguide-tabs').removeClass('active');
+
+        }
+
+        if (isMobile) {
+
+        }
+
+        if (!isMobile) {
+
+        }
+    } );
   
   
 }
