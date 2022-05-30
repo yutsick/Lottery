@@ -1,0 +1,48 @@
+.bingoroom-tabs{
+  display: flex;
+  justify-content: space-between;
+  gap: 0 20px;
+  background: #E5F6FE;
+  
+  .tab{
+
+      background: #B8D8EB;
+      font: 700 20px/1.2em 'apercu-bold-pro';
+      color: #003E52;
+
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      text-decoration: none;
+      transition: all .7s ease;
+
+      height: 74px;
+      padding-bottom: 10px;
+    
+      &.active,&:hover{
+        background: #7CB7D0;
+        color: #fff;
+      }
+
+    
+  }
+  
+}
+
+.bingoroom-tabs__{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+
+
+
+@media screen and (max-width:992px){
+  .schema-tabs__panel .bingoroom-tabs{
+    display: none;
+  }
+}

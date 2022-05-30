@@ -513,7 +513,16 @@
             background-color: #fff;
         }
     }
-
+  
+    .ml-2017 .schemas-modal-tabs__container>a{
+       font-size: 18px !important;
+      border-right: 1px solid #003E52;
+      
+    }
+  .ml-2017 .schemas-modal-tabs__container>a:last-child{
+      border-right: 0px solid #003E52;
+  }
+  
 }
 
 @media screen and (max-width: 742px) {
@@ -625,6 +634,9 @@
         .btn {
             margin-top: 20px;
         }
+    }
+      .ml-2017 .schemas-modal-tabs__tab{
+       font-size: 18px !important;
     }
 }
 
