@@ -25,6 +25,14 @@ Vinstshop overview - corrections v1
 http://sc-frontend.iogt-nto.se/vinstshop-page-v4.html
 
 
+-----
+
+http://localhost:3000/bingolobby-header-v1.html
+http://localhost:3000/bingolobby-header-v2.html
+http://localhost:3000/bingolobby-header-v3.html
+
+
+
 ## Install
 1. `npm install` to install dev dependencies
 2. `npm run watch` to compile and watch for changes

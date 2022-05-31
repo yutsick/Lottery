@@ -1,6 +1,14 @@
-<section class="bingolobby-hero new-bingolobby-2">
-   
-    <div class="bingolobby-hero__head-host bingolobby-2-host">
+<section class="bingolobby-hero">
+    <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
+    
+    <picture>
+        <source media="(max-width:632px)" srcset="/assets/img/background/bingoblock-2-3rooms-m.png">
+        <source media="(max-width:1225px)" srcset="/assets/img/background/bingoblock-2rooms-d.png">
+        <img src="/assets/img/background/bingoblock-2rooms-d.png" alt="Bingo!">
+    </picture>
+     
+     
+    <div class="bingolobby-hero__head-host">
         <div class="bingolobby-hero__head-host-av">
             <img src="/assets/img/mockup/users-chatvard-2.png" alt="Avatar">
         </div>
@@ -9,21 +17,16 @@
             <span class="bingolobby-hero__head-host-name">Maya</span>
         </div>
     </div>
-    
-    <picture>
-        <source media="(max-width:632px)" srcset="/assets/img/background/bingoheader-v2-M_2_1.png">
-        <source media="(max-width:1225px)" srcset="/assets/img/background/bingoheader-v2-T_2_1.png">
-        <img src="/assets/img/background/bingoheader-v2-D_1.png" alt="Bingo!">
-    </picture>
 
-    @@if (context.header === "v1") {<div class="bingolobby-hero__head bingolobby-hero__head__new_1_v2">}
-    @@if (context.header === "v2") {<div class="bingolobby-hero__head bingolobby-hero__head__new_1_v2">}
-    @@if (context.header === "v3") {<div class="bingolobby-hero__head bingolobby-hero__head__new_1_v2">}
+     
+    @@if (context.header === "v1") {<div class="bingolobby-hero__head">}
+    @@if (context.header === "v2") {<div class="bingolobby-hero__head">}
+    @@if (context.header === "v3") {<div class="bingolobby-hero__head">}
         <div class="container">
             <div class="bingolobby-hero__head-wrapper">
-                <div class="line-box">
-                  <div class="bingolobby-hero__head-name">bingorum 1</div>
-                  <div class="bingolobby-hero__head-game">
+                <div class="name__title">bingorum 1</div>
+
+                <div class="bingolobby-hero__head-game">
                     <div class="bingolobby-hero__head-game__line">
                         <p class="bingolobby-hero__head-game__item bingolobby-hero__head-game__item_fs20">
                             <span class="bingolobby-hero__head-game__label">Nästa spel:&nbsp;</span><span>Zoobaloo 10 kr</span>
@@ -32,14 +35,14 @@
                     <div class="bingolobby-hero__head-game__line">
                         <p class="bingolobby-hero__head-game__item">
                             <span class="bingolobby-hero__head-game__label">
-                              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <svg class="star" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.7875 14.8218C10.2846 14.6063 9.7154 14.6063 9.21249 14.8218L5.26968 16.5107L5.65757 12.239C5.70705 11.6941 5.53116 11.1528 5.17086 10.741L2.34618 7.51313L6.52872 6.56199C7.06221 6.44067 7.52271 6.1061 7.80294 5.63621L10 1.9523L12.1971 5.63621C12.4773 6.1061 12.9378 6.44067 13.4713 6.56199L17.6538 7.51312L14.8291 10.741C14.4688 11.1528 14.293 11.6941 14.3424 12.239L14.7303 16.5107L10.7875 14.8218Z" stroke="#003E52" stroke-width="2"/>
                               </svg>Jackpot:&nbsp;</span>
                             <span>5 515 kr</span>
                         </p> 
                         <p class="bingolobby-hero__head-game__item">
                             <span class="bingolobby-hero__head-game__label">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <svg  class="user" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8.00001" cy="4.81818" r="3.81818" stroke="#003E52" stroke-width="2" stroke-linecap="square"/>
                               <path d="M1 14.9999C1 11.482 2.85818 8.63623 6.72727 8.63623H9.27273C13.1418 8.63623 15 11.482 15 14.9999" stroke="#003E52" stroke-width="2" stroke-linecap="square"/>
                               </svg>
@@ -48,12 +51,13 @@
                         </p>
                     </div>
                 </div>
+
+                <div class="bingolobby-hero__head-time">
+                    01:17 
                 </div>
-                <div class="line-box">
-                  <div class="bingolobby-hero__head-time"> 01:17 </div>
-                  <div class="bingolobby-hero__head-btn">
+
+                <div class="bingolobby-hero__head-btn">
                     <a href="#" class="btn btn-success">Gå till spelet</a>
-                </div>
                 </div>
             </div>
         </div>
