@@ -44,21 +44,12 @@ export default function () {
 //            isMobile = true;
           $('.content_bingoguide-tabs>.item_bingoguide-tabs').removeClass('active');
 //          $('.bingoroom-tabs__').removeClass('active');
-
         }
       
        if ($('body').width() >= 993) {
            $('.tab_1.bingoroom-tabs__').addClass('active');
-         
        }
 
-        if (isMobile) {
-
-        }
-
-        if (!isMobile) {
-
-        }
     } );
   
      $('.bingoroom-tabs>a.tab').click( function(e){
@@ -69,28 +60,11 @@ export default function () {
        $(this).addClass('active');
        
        $(this).parent().parent().find("[class*='tab_']").removeClass('active');
-       
-       
   
        var href = $(this).attr('href');
        
        $(href).addClass('active');
-       
-//       href.addClass('fffeefefe');
       
      }); 
-  
-//     $('a.schemas-modal-tabs__tab').click( function(e){
-//        e.preventDefault();
-//  
-//        var href = $(this).attr('href');
-//
-//        $(href).addClass('active');
-//       
-////       href.addClass('fffeefefe');
-//      
-//     }); 
-
-  
   
 }
