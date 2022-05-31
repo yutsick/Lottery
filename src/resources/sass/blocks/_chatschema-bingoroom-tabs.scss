@@ -39,6 +39,12 @@
   }
 }
 
+@media screen and (max-width: 992px){
+   #panel__chatschema .bingolobby__chatschema.panel-mobile-tab.active{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 
 @media screen and (max-width:992px){
