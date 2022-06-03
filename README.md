@@ -31,6 +31,37 @@ http://localhost:3000/bingolobby-header-v1.html
 http://localhost:3000/bingolobby-header-v2.html
 http://localhost:3000/bingolobby-header-v3.html
 
+-----  
+
+
+class - display variation
+
+bin-bingoroom
+bin-bingoroom__not-title all     -  display: none;
+bin-bingoroom__not-title desctop -  display: none;
+bin-bingoroom__not-title tablet  -  display: none;
+bin-bingoroom__not-title mobile  -  display: none;
+
+bin-bingoroom-2
+bin-bingoroom-2__not-title all     -  display: none;
+bin-bingoroom-2__not-title desctop -  display: none;
+bin-bingoroom-2__not-title tablet  -  display: none;
+bin-bingoroom-2__not-title mobile  -  display: none;
+
+bin-bingoroom-3
+bin-bingoroom-3__not-title all     -  display: none;
+bin-bingoroom-3__not-title desctop -  display: none;
+bin-bingoroom-3__not-title tablet  -  display: none;
+bin-bingoroom-3__not-title mobile  -  display: none;
+
+class - display variation User
+
+bingolobby-hero__head-host
+
+bingolobby-hero__head-host all     -  display: none;
+bingolobby-hero__head-host desctop -  display: none;
+bingolobby-hero__head-host tablet  -  display: none;
+bingolobby-hero__head-host mobile  -  display: none;
 
 
 ## Install
