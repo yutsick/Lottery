@@ -24,7 +24,6 @@ bingolobby-bingoroom
 Vinstshop overview - corrections v1
 http://sc-frontend.iogt-nto.se/vinstshop-page-v4.html
 
-
 -----
 
 http://localhost:3000/bingolobby-header-v1.html
@@ -62,6 +61,15 @@ bingolobby-hero__head-host all     -  display: none;
 bingolobby-hero__head-host desctop -  display: none;
 bingolobby-hero__head-host tablet  -  display: none;
 bingolobby-hero__head-host mobile  -  display: none;
+
+----- 
+
+
+http://sc-frontend.iogt-nto.se/chatschema-bingoroom-tabs-2.html
+http://sc-frontend.iogt-nto.se/chatschema-bingoroom-tabs-3.html
+
+http://sc-frontend.iogt-nto.se/bingoschema-bingoroom-tabs-2.html
+http://sc-frontend.iogt-nto.se/bingoschema-bingoroom-tabs-3.html
 
 
 ## Install
