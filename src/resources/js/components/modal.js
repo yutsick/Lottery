@@ -105,11 +105,13 @@ export default function () {
 			$(button.getAttribute('data-target')).addClass('active');
 			$('body').addClass("modal-open");
 
-			let tab1 = $('.js-schemas-modal-tabs__tab:first-child').attr('href');
-			let tab2 = $('.js-schemas-modal-tabs__tab:last-child').attr('href');
+			let tab1 = $('.js-schemas-modal-tabs__tab:nth-child(1)').attr('href');
+			let tab2 = $('.js-schemas-modal-tabs__tab:nth-child(2)').attr('href');
+			let tab3 = $('.js-schemas-modal-tabs__tab:nth-child(3)').attr('href');
 			
 			$(tab1).addClass('active panel-mobile-tab');
 			$(tab2).addClass('panel-mobile-tab');
+			$(tab3).addClass('panel-mobile-tab');
 
 			$('.js-schemas-modal-tabs__tab:first-child').addClass('active');
 		});
