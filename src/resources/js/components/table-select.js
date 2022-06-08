@@ -37,21 +37,7 @@ export default function () {
        $(this).parent().toggleClass('active');       
 	});
   
-    var isMobile = false;
 
-    $(document).ready( function() {
-        if ($('body').width() <= 992) {
-//            isMobile = true;
-          $('.content_bingoguide-tabs>.item_bingoguide-tabs').removeClass('active');
-//          $('.bingoroom-tabs__').removeClass('active');
-        }
-      
-       if ($('body').width() >= 993) {
-           $('.tab_1.bingoroom-tabs__').addClass('active');
-       }
-
-    } );
-  
      $('.bingoroom-tabs>a.tab').click( function(e){
        
        e.preventDefault();
@@ -59,11 +45,11 @@ export default function () {
        $(this).parent().find('a').removeClass('active');
        $(this).addClass('active');
        
-       $(this).parent().parent().find("[class*='tab_']").removeClass('active');
+       $(this).parent().parent().find("[class*='tab_']").removeClass('desctop__active');
   
        var href = $(this).attr('href');
        
-       $(href).addClass('active');
+       $(href).addClass('desctop__active');
       
      }); 
   
