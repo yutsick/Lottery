@@ -135,8 +135,6 @@
   .conteiner_bin-bingoroom-2{
       max-width: 1400px;
       width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
       margin: 0 auto;
     
       display: flex;
@@ -318,8 +316,6 @@
   .conteiner_bin-bingoroom-2{
       max-width: 1400px;
       width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
       margin: 0 auto;
     
       display: flex;
@@ -480,8 +476,6 @@
   .conteiner_bin-bingoroom-3{
       max-width: 1400px;
       width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
       margin: 0 auto;
     
       display: flex;
@@ -661,8 +655,6 @@
   .conteiner_bin-bingoroom-3{
       max-width: 1400px;
       width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
       margin: 0 auto;
     
       display: flex;
@@ -972,8 +964,6 @@
      }
   }
   
- 
-  
 }
 
 @media screen and (max-width: 1060px) and (min-width: 650px){
@@ -1011,13 +1001,12 @@
       .conteiner_bin-bingoroom-2{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
+
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap:  10px;
         
         .bingolobby-hero{
           
@@ -1161,13 +1150,12 @@
       .conteiner_bin-bingoroom-2{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
+
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap: 10px;
         
         .bingolobby-hero{
           
@@ -1278,7 +1266,6 @@
 
 
   }
-  
 
 }
 
@@ -1565,13 +1552,13 @@
       .conteiner_bin-bingoroom-3{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
+          padding-left: 0px;
+          padding-right: 0px;
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap: 10px 20px;
         
         .bingolobby-hero{
           
@@ -1715,13 +1702,13 @@
       .conteiner_bin-bingoroom-3{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
+          padding-left: 0px;
+          padding-right: 0px;
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap: 10px 20px;
         
         .bingolobby-hero{
           
@@ -2192,7 +2179,7 @@
 @media screen and (max-width: 649px)  and (min-width: 480px){
 
 
-  
+   
   .bin-bingoroom-2{
 
       .block-hero__page-title.hero-full__page-title{
@@ -2229,13 +2216,12 @@
       .conteiner_bin-bingoroom-2{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
+
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap: 10px;
         
         .bingolobby-hero{
           
@@ -2385,13 +2371,11 @@
       .conteiner_bin-bingoroom-2{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap: 10px;
         
         .bingolobby-hero{
           
@@ -2545,13 +2529,11 @@
       .conteiner_bin-bingoroom-3{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap: 10px;
         
         .bingolobby-hero{
           
@@ -2701,13 +2683,11 @@
       .conteiner_bin-bingoroom-3{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
           margin: 0 auto;
 
           display: flex;
         flex-direction: column;
-          gap: 20px;
+          gap: 10px;
         
         .bingolobby-hero{
           
@@ -2867,13 +2847,11 @@
       .conteiner_bin-bingoroom-2{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
           margin: 0 auto;
 
           display: flex;
-        flex-direction: column;
-          gap: 20px;
+          flex-direction: column;
+          gap: 10px 20px;
         
         .bingolobby-hero{
           
@@ -2928,6 +2906,12 @@
                   justify-content: flex-start;
                   align-items: flex-start;
                   flex-direction: column;
+                  
+                  &>.bingolobby-hero__head-game__item:nth-child(1){
+                    margin-bottom: 3px;
+                  }
+                  
+                  
                 }
 
 
@@ -2945,7 +2929,7 @@
                     margin-right: 15px;
                     
                     span{
-                      font-size: 16px;
+                      font-size: 14px;
                     }
                   }
 
@@ -3041,13 +3025,11 @@
       .conteiner_bin-bingoroom-2{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
           margin: 0 auto;
 
           display: flex;
-        flex-direction: column;
-          gap: 20px;
+          flex-direction: column;
+          gap: 10px 20px;
         
         .bingolobby-hero{
           
@@ -3102,6 +3084,10 @@
                   justify-content: flex-start;
                   align-items: flex-start;
                   flex-direction: column;
+                  
+                  &>.bingolobby-hero__head-game__item:nth-child(1){
+                    margin-bottom: 3px;
+                  }
                 }
 
 
@@ -3119,7 +3105,7 @@
                     margin-right: 15px;
                     
                     span{
-                      font-size: 16px;
+                      font-size: 14px;
                     }
                   }
 
@@ -3215,13 +3201,11 @@
       .conteiner_bin-bingoroom-3{
           max-width: 1400px;
           width: 100%;
-          padding-left: 20px;
-          padding-right: 20px;
           margin: 0 auto;
 
           display: flex;
-        flex-direction: column;
-          gap: 20px;
+          flex-direction: column;
+          gap: 10px;
         
         .bingolobby-hero{
           
@@ -3293,7 +3277,7 @@
                     margin-right: 15px;
                     
                     span{
-                      font-size: 16px;
+                      font-size: 14px;
                     }
                   }
 
@@ -3383,13 +3367,11 @@
     .conteiner_bin-bingoroom-3{
         max-width: 1400px;
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
         margin: 0 auto;
 
         display: flex;
-      flex-direction: column;
-        gap: 20px;
+        flex-direction: column;
+        gap: 10px 20px;
 
       .bingolobby-hero{
 
@@ -3461,7 +3443,7 @@
                   margin-right: 15px;
 
                   span{
-                    font-size: 16px;
+                    font-size: 14px;
                   }
                 }
 
@@ -3523,3 +3505,19 @@
   
   
 }
+
+@media only screen and (min-width: 1061px){
+  .bin-bingoroom-2 .conteiner_bin-bingoroom-2,
+  .bin-bingoroom-2__not-title .conteiner_bin-bingoroom-2,
+  .bin-bingoroom-3 .conteiner_bin-bingoroom-3,
+  .bin-bingoroom-3__not-title .conteiner_bin-bingoroom-3{
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+  
+  
+  
+}
+  
+  
+  

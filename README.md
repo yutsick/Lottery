@@ -31,6 +31,10 @@ http://localhost:3000/bingolobby-header-v1.html
 http://localhost:3000/bingolobby-header-v2.html
 http://localhost:3000/bingolobby-header-v3.html
 
+http://sc-frontend.iogt-nto.se/bingolobby-header-v1.html
+http://sc-frontend.iogt-nto.se/bingolobby-header-v2.html
+http://sc-frontend.iogt-nto.se/bingolobby-header-v3.html
+
 -----  
 
 
