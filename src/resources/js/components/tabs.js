@@ -5,11 +5,11 @@ export default function() {
         $(btn).on('click', function (event) {
           event.preventDefault();
           
-            $(btn).removeClass('active');
-            $(this).addClass('active');
+          $(btn).removeClass('desctop__active active');
+          $(this).addClass('desctop__active active');
           $(panel).removeClass('desctop__active active');
 //          $('.bingoroom-tabs>.tab').removeClass('active');
-          $('.bingoroom-tabs__').removeClass('desctop__active active');
+//          $('.bingoroom-tabs__').removeClass('desctop__active active');
           $($(this).attr('href')).addClass('desctop__active active');
         });
     };
