@@ -22,7 +22,7 @@
                        <a class="tab"  href='#panel__chatschema .tab_2'>Chatschema 2</a>
                     </div>
 
-                    <div class="schema-tabs__panel-content bingolobby__chatschema bingolobby__djusted-bingoguide-ta bingolobby__djusted-bingoguide-tab tab_1 bingoroom-tabs__ ">
+                    <div class="schema-tabs__panel-content bingolobby__chatschema bingolobby__djusted-bingoguide-ta bingolobby__djusted-bingoguide-tab tab_1 bingoroom-tabs__ desctop__active">
                         <!-- panel-mobile-tab class only for tabs -->
                         <a href="#" class="btn-close_circular chatschema__btn-close_circular js-modal-close" data-target=".bingolobby__chatschema">Close</a>
     
@@ -393,7 +393,7 @@
                             
     
                             @@if (context.modal_schemas === "tabs") {
-                                <a href="#" class="btn btn-wide--blue js-schemas-modal-tabs" data-target="#schemasModalTabs">Se här</a>
+                                <a href="#panel__bingoschema .tab_1" class="btn btn-wide--blue js-schemas-modal-tabs" data-target="#schemasModalTabs">Se här</a>
                             }
                             @@if (context.modal_schemas === "simple") {
                                <a href="#" class="btn btn-wide--blue js-btn-openModal" data-target="#panel__chatschema .tab_1.bingoroom-tabs__">Se här</a>
