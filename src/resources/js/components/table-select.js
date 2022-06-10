@@ -51,6 +51,22 @@ export default function () {
        
        $(href).addClass('desctop__active');
       
-     }); 
+   }); 
+  
+       $('.schemas-modal-tabs__new').click( function(e){
+         e.preventDefault();
+         
+//         var activeAdd = $(this).data('tab') ;
+         
+//          $(this).parent().find('.schemas-modal-tabs__new').removeClass('desctop__active active');
+          $('.schemas-modal-tabs__new').removeClass('desctop__active active');         
+          $(this).addClass('desctop__active active');         
+//         
+          $('.bingoroom-tabs__').removeClass('desctop__active active');
+//          $('#panel__bingoschema .tab_1').addClass('desctop__active active');
+         
+          $($(this).attr('href')).addClass('desctop__active active');
+
+        }); 
   
 }
