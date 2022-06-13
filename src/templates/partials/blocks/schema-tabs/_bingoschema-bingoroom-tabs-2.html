@@ -15,7 +15,8 @@
     
             <div class="schema-tabs__panels-container">
 
-                <div data-orderT="08" data-orderM="08" id="panel__bingoschema" class="schema-tabs__panel js-schema-tabs__panel js-schema-panels-reorder active">
+                <div data-orderT="08" data-orderM="08" id="panel__bingoschema" class="schema-tabs__panel js-schema-tabs__panel js-schema-panels-reorder desctop__active active">
+                   
                     <div class="bingoroom-tabs">
                        <a class="tab active"  href='#panel__bingoschema .tab_1'>Bingoschema  1</a>
                        <a class="tab"  href='#panel__bingoschema .tab_2'>Bingoschema  2</a>
@@ -25,6 +26,15 @@
                         <!-- panel-mobile-tab class only for tabs -->
                         <a href="#" class="btn-close_circular bingoschema__btn-close_circular js-modal-close" data-target=".bingolobby__bingoschema">Close</a>
     
+        <div class="schemas-modal-tabs__container">
+            <a href="#" data-tab="#panel__bingoschema .tab_1" class="tab_1 schemas-modal-tabs__new active">
+                Bingoschema 1
+            </a>
+            <a href="#" data-tab="#panel__bingoschema .tab_2" class="tab_2 schemas-modal-tabs__new">
+                Bingoschema 2
+            </a>
+        </div>
+                       
                         <h5 class="bingolobby__bingoschema__title">Bingoschema 1</h5>
     
                         <div class="bingolobby__bingoschema__container">
@@ -268,6 +278,15 @@
                         <!-- panel-mobile-tab class only for tabs -->
                         <a href="#" class="btn-close_circular bingoschema__btn-close_circular js-modal-close" data-target=".bingolobby__bingoschema">Close</a>
     
+        <div class="schemas-modal-tabs__container">
+            <a href="#" data-tab="#panel__bingoschema .tab_1" class="tab_1 schemas-modal-tabs__new active">
+                Bingoschema 1
+            </a>
+            <a href="#" data-tab="#panel__bingoschema .tab_2" class="tab_2 schemas-modal-tabs__new">
+                Bingoschema 2
+            </a>
+        </div>
+                       
                         <h5 class="bingolobby__bingoschema__title">Bingoschema 2</h5>
     
                         <div class="bingolobby__bingoschema__container">
@@ -476,14 +495,8 @@
                             <p>
                                 Något du undrar över? Se våra vanliga frågor och svar om vår bingo.
                             </p>
- 
-                            
-                            @@if (context.modal_schemas === "tabs") {
-                                <a href="#panel__bingoschema .tab_1" class="btn btn-wide--blue js-schemas-modal-tabs" data-target="#bingorumModalTabs">Se här</a>
-                            }
-                            @@if (context.modal_schemas === "simple") {
-                               <a href="#" class="btn btn-wide--blue js-btn-openModal" data-target="#bingorumModalTabs .tab_1.bingoroom-tabs__">Se här</a>
-                            }
+       
+                            <a href="#" class="btn btn-wide--blue" data-target="#panel__bingoschema .tab_1">Se här</a>
                             
                             
                         </div>
@@ -491,28 +504,11 @@
                     
                 </div>
                
+              
+               
             </div>
         </div>
     </section>
 }
-
-
-@@if (context.modal_schemas === "tabs")  {
-    
-    <div class="schemas-modal-tabs" id="bingorumModalTabs">
-        <a href="#" class="btn-close_circular js-modal-close" data-target="#bingorumModalTabs">Close</a>
-    
-        <div class="schemas-modal-tabs__container">
-            <a href="#panel__bingoschema .tab_1" class="schemas-modal-tabs__tab js-schemas-modal-tabs__tab active">
-                Bingorum 1
-            </a>
-            <a href="#panel__bingoschema .tab_2" class="schemas-modal-tabs__tab js-schemas-modal-tabs__tab">
-                Bingorum 2
-            </a>
-        </div>
-        
-    </div>
-}
-
 
 

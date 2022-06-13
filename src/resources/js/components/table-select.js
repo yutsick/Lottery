@@ -52,21 +52,49 @@ export default function () {
        $(href).addClass('desctop__active');
       
    }); 
-  
-       $('.schemas-modal-tabs__new').click( function(e){
+         
+       $('a.schemas-modal-tabs__new').click( function(e){
          e.preventDefault();
+//            var activeAdd = $(this).data('tab');
+//           console.log(activeAdd);
          
-//         var activeAdd = $(this).data('tab') ;
+          $('#panel__bingoschema .schemas-modal-tabs__container .schemas-modal-tabs__new').removeClass('desctop__active active');
+          $('#panel__chatschema .schemas-modal-tabs__container .schemas-modal-tabs__new').removeClass('desctop__active active');
+//         $().data('tab');
          
-//          $(this).parent().find('.schemas-modal-tabs__new').removeClass('desctop__active active');
-          $('.schemas-modal-tabs__new').removeClass('desctop__active active');         
-          $(this).addClass('desctop__active active');         
-//         
-          $('.bingoroom-tabs__').removeClass('desctop__active active');
-//          $('#panel__bingoschema .tab_1').addClass('desctop__active active');
+         $(this).addClass('desctop__active active');
          
-          $($(this).attr('href')).addClass('desctop__active active');
+         
+    $('#panel__bingoschema .bingoroom-tabs__ ').removeClass('desctop__active active');
+    $('#panel__chatschema .bingoroom-tabs__ ').removeClass('desctop__active active');
+         
+         $($(this).data('tab')).addClass('desctop__active active');
+         
+         
+      }); 
+  
+  
+  
+       $('.btn.btn-wide--blue').click( function(e){
+         e.preventDefault();
+//            var activeAdd = $(this).data('target');
+//           console.log(activeAdd);
+         
+         $('body').addClass('modal-open');
+         
+         
+         
 
-        }); 
+    $('#panel__bingoschema [class*=tab_]').removeClass('desctop__active active');
+    $('#panel__chatschema [class*=tab_]').removeClass('desctop__active active');
+//         
+//         
+         $($(this).data('target')).addClass('desctop__active active');
+      }); 
+  
+  
+  
+  
+
   
 }
