@@ -76,6 +76,9 @@ http://sc-frontend.iogt-nto.se/bingoschema-bingoroom-tabs-2.html
 http://sc-frontend.iogt-nto.se/bingoschema-bingoroom-tabs-3.html
 
 
+----- 
+http://sc-frontend.iogt-nto.se/bingoroom-tabs_all.html
+
 ## Install
 1. `npm install` to install dev dependencies
 2. `npm run watch` to compile and watch for changes
