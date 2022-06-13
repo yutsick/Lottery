@@ -16,17 +16,28 @@
             <div class="schema-tabs__panels-container">
 
 
-                <div data-orderT="05" data-orderM="03" id="panel__chatschema" class="schema-tabs__panel js-schema-tabs__panel js-schema-panels-reorder active">
+                <div data-orderT="05" data-orderM="03" id="panel__chatschema" class="schema-tabs__panel js-schema-tabs__panel js-schema-panels-reorder  active">
                     <div class="bingoroom-tabs">
                        <a class="tab active"  href='#panel__chatschema .tab_1'>Chatschema 1</a>
                        <a class="tab"  href='#panel__chatschema .tab_2'>Chatschema 2</a>
                     </div>
 
-                    <div class="schema-tabs__panel-content bingolobby__chatschema bingolobby__djusted-bingoguide-ta bingolobby__djusted-bingoguide-tab tab_1 bingoroom-tabs__ desctop__active">
+                    <div class="schema-tabs__panel-content bingolobby__chatschema bingolobby__djusted-bingoguide-ta bingolobby__djusted-bingoguide-tab bingoroom-tabs__ tab_1  desctop__active">
                         <!-- panel-mobile-tab class only for tabs -->
                         <a href="#" class="btn-close_circular chatschema__btn-close_circular js-modal-close" data-target=".bingolobby__chatschema">Close</a>
     
+        <div class="schemas-modal-tabs__container">
+            <a href="#" data-tab="#panel__chatschema .tab_1" class="tab_1 schemas-modal-tabs__new active">
+                Chatschema 1
+            </a>
+            <a href="#" data-tab="#panel__chatschema .tab_2" class="tab_2 schemas-modal-tabs__new">
+                Chatschema 2
+            </a>
+        </div>
+                       
                         <h5 class="bingolobby__chatschema__title">Chatschema 1</h5>
+                        
+
     
                         <div class="bingolobby__chatschema__container">
                             <div class="bingolobby__chatschema__day">
@@ -206,6 +217,15 @@
                     <div class="schema-tabs__panel-content bingolobby__chatschema bingolobby__djusted-bingoguide-ta bingolobby__djusted-bingoguide-tab tab_2 bingoroom-tabs__">
                         <!-- panel-mobile-tab class only for tabs -->
                         <a href="#" class="btn-close_circular chatschema__btn-close_circular js-modal-close" data-target=".bingolobby__chatschema">Close</a>
+                        
+        <div class="schemas-modal-tabs__container">
+            <a href="#" data-tab="#panel__chatschema .tab_1" class="tab_1 schemas-modal-tabs__new active">
+                Chatschema 1
+            </a>
+            <a href="#" data-tab="#panel__chatschema .tab_2" class="tab_2 schemas-modal-tabs__new">
+                Chatschema 2
+            </a>
+        </div>
     
                         <h5 class="bingolobby__chatschema__title">Chatschema 2</h5>
     
@@ -389,14 +409,8 @@
                             <p>
                                 Något du undrar över? Se våra vanliga frågor och svar om vår bingo.
                             </p>
-                            
-                            
-    
-                            @@if (context.modal_schemas === "tabs") {
-                                <a href="#panel__bingoschema .tab_1" class="btn btn-wide--blue js-schemas-modal-tabs" data-target="#schemasModalTabs">Se här</a>
-                            }
-                            @@if (context.modal_schemas === "simple") {
-                               <a href="#" class="btn btn-wide--blue js-btn-openModal" data-target="#panel__chatschema .tab_1.bingoroom-tabs__">Se här</a>
+  
+                               <a href="#" class="btn btn-wide--blue" data-target="#panel__chatschema .tab_1">Se här</a>
                             }
                             
                         </div>
@@ -404,27 +418,13 @@
 
                 </div>
                
+               
             </div>
         </div>
     </section>
 }
 
 
-@@if (context.modal_schemas === "tabs")  {
-    <div class="schemas-modal-tabs" id="schemasModalTabs">
-        <a href="#" class="btn-close_circular js-modal-close" data-target="#schemasModalTabs">Close</a>
-
-       
-        <div class="schemas-modal-tabs__container">
-            <a href="#panel__chatschema .tab_1" class="schemas-modal-tabs__tab js-schemas-modal-tabs__tab active">
-                Chatschema 1
-            </a>
-            <a href="#panel__chatschema .tab_2" class="schemas-modal-tabs__tab js-schemas-modal-tabs__tab">
-                Chatschema 2
-            </a>
-        </div>
-    </div>
-}
 
 
 
