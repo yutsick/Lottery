@@ -59,7 +59,7 @@
           
           &>.bingolobby-hero__head-game__item:nth-child(2){
             span{
-              font-weight: 100;
+//              font-weight: 100;
             }
           }
           
@@ -149,7 +149,7 @@
           
           &>.bingolobby-hero__head-game__item:nth-child(2){
             span{
-              font-weight: 100;
+//              font-weight: 100;
             }
           }
           
@@ -600,14 +600,14 @@
       flex-wrap: wrap;
       
       .name__title{
-        color: #003E52;
-        font: 600 12px/1.3em "Proxima Nova";
-        text-transform: uppercase;
-        
-        order: 1;
-        max-width: 50%;
-        width: 100%;
-                margin-bottom: 6px;
+          color: #003E52;
+          font: 600 12px/1.3em "Proxima Nova";
+          text-transform: uppercase;
+
+          order: 1;
+          max-width: 50%;
+          width: 100%;
+          margin-bottom: 6px;
        }
       
       .bingolobby-hero__head-time{
@@ -616,7 +616,7 @@
         width: 100%;
         
         
-        font-size: 16px;
+        font-size: 18px;
         margin: 0;
         text-align: right;
         margin-bottom: auto;
@@ -809,7 +809,7 @@
         width: 100%;
         
         
-        font-size: 16px;
+        font-size: 18px;
         margin: 0;
         text-align: right;
         margin-bottom: auto;
@@ -1146,9 +1146,10 @@
             }
 
             .bingolobby-hero__head-wrapper{
-                  display: flex;
-              flex-wrap: wrap;
-
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0 20px;
+              
               .name__title{
 
 
@@ -1175,7 +1176,7 @@
               }
               .bingolobby-hero__head-game{
                 order: 2;
-                max-width: calc(100% - 337px);
+                max-width: calc(100% - 295px);
                 width: 100%;
 
                 margin: 0;
@@ -1298,15 +1299,16 @@
             }
 
             .bingolobby-hero__head-wrapper{
-                  display: flex;
-              flex-wrap: wrap;
-
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0 20px;
+              
               .name__title{
 
-                order: 1;
-                max-width: 100%;
-                width: 100%;
-                        margin-bottom: 6px;
+                  order: 1;
+                  max-width: 100%;
+                  width: 100%;
+                  margin-bottom: 6px;
                }
 
               .bingolobby-hero__head-time{
@@ -1326,16 +1328,15 @@
               }
               .bingolobby-hero__head-game{
                 order: 2;
-                max-width: calc(100% - 337px);
+                max-width: calc(100% - 295px);
                 width: 100%;
 
                 margin: 0;
 
-
-
                 .bingolobby-hero__head-game__line{
 
                       display: flex;
+                  
                       .bingolobby-hero__head-game__item{
                         display: flex;
                         justify-content: center;
@@ -1728,7 +1729,7 @@
               }
               .bingolobby-hero__head-game{
                 order: 2;
-                max-width: calc(100% - 337px);
+                max-width: calc(100% - 295px);
                 width: 100%;
 
                 margin: 0;
@@ -1880,7 +1881,7 @@
               }
               .bingolobby-hero__head-game{
                 order: 2;
-                max-width: calc(100% - 337px);
+                max-width: calc(100% - 295px);
                 width: 100%;
 
                 margin: 0;
@@ -2383,12 +2384,12 @@
                 max-width: 50%;
                 width: 100%;
                 
-                height: 46px;
+//                height: 46px;
 
                 font-size: 24px;
   
                 margin: 0;
-           
+                margin-bottom: 20px;
               }
               .bingolobby-hero__head-game{
                 order: 3;
@@ -2702,11 +2703,12 @@
                 max-width: 50%;
                 width: 100%;
                 
-                height: 46px;
+//                height: 46px;
 
                 font-size: 32px;
   
                 margin: 0;
+                margin-bottom: 17px;
            
               }
               .bingolobby-hero__head-game{
@@ -2767,6 +2769,7 @@
                 order: 4;
                 max-width: 134px;
                 width: 100%;
+                margin-top: auto;
 
                 a{
                   font-size: 16px;
@@ -2820,7 +2823,6 @@
       }
 
 
-
       .conteiner_bin-bingoroom-3{
           max-width: 1400px;
           width: 100%;
@@ -2835,7 +2837,7 @@
           max-height: 217px;
 
             .bingolobby-hero__head{
-                  max-height: 120px;
+              max-height: 120px;
             }
 
             .bingolobby-hero__head-wrapper{
@@ -2848,7 +2850,7 @@
                 order: 1;
                 max-width: 50%;
                 width: 100%;
-                        margin-bottom: 6px;
+                margin-bottom: 6px;
                 
                 font-size: 12px;
                }
@@ -2858,11 +2860,12 @@
                 max-width: 50%;
                 width: 100%;
                 
-                height: 46px;
+//                height: 46px;
 
                 font-size: 32px;
   
                 margin: 0;
+                margin-bottom: 17px;
            
               }
               .bingolobby-hero__head-game{
@@ -2921,11 +2924,14 @@
 
               .bingolobby-hero__head-btn{
                 order: 4;
-                max-width: 194px;
+                max-width: 134px;
                 width: 100%;
+                margin-top: auto;
 
                 a{
-                  margin: 0 0 0 auto;
+                    font-size: 16px;
+                    max-width: 134px;
+                    margin: 0 0 0 auto;
                 }
 
 
@@ -3736,5 +3742,9 @@
   }
 }
   
-  
+.bingolobby-hero__head-game__item>span:nth-child(2){
+    line-height: 1.5em;
+    display: block;
+    margin-bottom: 0px;
+}
   
