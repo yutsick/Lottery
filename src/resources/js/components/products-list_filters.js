@@ -399,7 +399,7 @@ export default function() {
 //                console.log('13');
 				let container = $('#product-list');
 				let current = container.children().length;
-				let total = 22;
+				let total = 1000;
 
 				if(current <= total) {
 					container.append(`
