@@ -163,7 +163,7 @@
 .filter-dropdown__button {
 	position: relative;
 	width: 100%;
-	padding: 10px 40px 10px 15px;
+	padding: 10px 40px 10px 10px;
 	border-radius: $border-radius-forms;
 	border: $form-border-width solid #68A1B9;
 	background-color: white;
@@ -178,7 +178,7 @@
 		content: "\e906";
 		position:absolute;
 		top: 10px;
-		right: 15px;
+		right: 10px;
 		font-family: $base-icon-family;
 		color: $color-blue;
 	}
@@ -254,7 +254,7 @@
 
 	&__label {
 		display: inline-block;
-		margin-top: $margin-small;
+		margin-top: 9px;
 		margin-bottom: 0;
 		font-size: $size-smallest;
 		color: $color-gray;
@@ -335,6 +335,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+  
+  margin-top: 20px;
 
 	@media screen and (max-width: 767px) {
 		flex-wrap: wrap;
@@ -475,7 +477,7 @@
 				font-size: 12px;
 			}
 
-			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			&::-ms-input-placeholder { /* Internet Explorer 10-11 */
 				color: #7F9EA8;
 				font-size: 12px;
 			}
@@ -487,14 +489,13 @@
           
           
             &::placeholder {
-              border: 1px 003E52 #68A1B9;
+
             }
 
-            &:focus::placeholder {
-              border: 1px 003E52 #68A1B9;
+            &:focus{
+              border: 1px solid #003E52 !important;
             }
 
-          
           
 
 			@media screen and (max-width: 767px) {
@@ -539,7 +540,6 @@
 			justify-content: center;
 			order: -1;
 			margin-bottom: 20px;
-            margin-top: 20px;
 		}
 	}
 

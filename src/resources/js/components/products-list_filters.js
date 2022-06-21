@@ -715,12 +715,12 @@ export default function() {
 	}
 
 	function renderProgressBar(current, total) {
-		let progressText = `du har tittat på ${current} av ${total} produkter`;
+		let progressText = `du har tittat på ${current} av ${total} produkter `;
       
         
 
 		$('.more-progress-bar').text(progressText);
-		$('.products-value').text(`${total} produkter`);
+		$('.products-value').text(`${total} produkter `);
 		$('.more-progress-bar__indicator .more-progress-bar__filled').css('width', `calc(${current}% * 100 / ${total})`);
 	}
 
