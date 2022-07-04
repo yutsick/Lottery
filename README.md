@@ -5,6 +5,18 @@ http://localhost:3000/
 
 here is a merger of branches vinstshop-page, usubscribe-page and sub-page-newsletter
 
+
+-----
+Popup General
+
+1. http://sc-frontend.iogt-nto.se/sub-page-popup-general-back.html
+2. http://sc-frontend.iogt-nto.se/sub-page-popup-general-image.html
+3. http://sc-frontend.iogt-nto.se/sub-page-popup-general-no-image.html
+
+-----
+
+
+
 1. http://sc-frontend.iogt-nto.se/sub-page-popup-newsletter-v3.html
 2. http://sc-frontend.iogt-nto.se/vinstshop-page-v3.html
 3. http://sc-frontend.iogt-nto.se/product-page-v3.html
