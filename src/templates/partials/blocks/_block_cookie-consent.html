@@ -1,0 +1,68 @@
+<!--
+	@background: green, blue, white.
+	@sub_bg - must be 100% of block height, cause if text - it will be on front the image.
+		- assets/img/mockup/sub-page-img1.jpg
+		- assets/img/mockup/sub-page-img2.jpg
+		- assets/img/mockup/sub-page-img3.jpg
+		- assets/img/mockup/sub-page-img4.jpg
+		- assets/img/mockup/sub-page-img5.png
+	@left_text_color: green, white, false.
+	bg_shadow: true, false.
+	@sub_text: "text".
+	has_error: true, false.
+	CLASS .only-desk to show content only on descktop
+
+
+	FOR POPUP
+	no_img: true, false.
+-->
+
+<section class="pad  @@if(context.background){@@background} @@if(context.no_img){sub-page_no-img}">
+       @@if(context.icon){
+         <div class="icon__">
+           <img src="@@icon" alt="icon">
+         </div>
+        }
+     
+         @@if(context.title){
+          <h2 class="title">@@title</h2>
+        }
+         @@if(context.sub_text){
+          <p class="sub">@@sub_text</p>
+        }
+        
+        <ul class="list">
+
+          @@loop('blocks/block-cookie/_links-list.html', [
+            { "title": "Nödvändiga Cookies",
+              "input": "Nödvändiga Cookies",
+              "text": "<p>Nödvändiga cookies som behövs för att sajten ska fungera korrekt. Går ej att stänga av.</p>" },
+            
+            { "title": "Förbättrad upplevelse",
+              "input": "Förbättrad upplevelse",
+               "text": "<h5>Som kund</h5><p>Som kund, få mer relevant kommunikation för dig i Miljonlotteriets kanaler såsom i nyhetsbrev eller på miljonlotteriet.se.</p>" },
+              
+            { "title": "Analys & statistik", 
+              "text": "<p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p><p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p><p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p><p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p><p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p><p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p><p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p><p>Analys och statistik för att säkerställa att webbplatsens tjänster fungerar och som hjälper oss att utföra förbättringar. Vi använder analystjänster från tredje part inklusive Google. Se Googles information om behandling av personuppgifter här: https://policies.google.com/privacy?hl=sv</p>" },
+              
+            { "title": "Marknadsföring",
+              "input": "Marknadsföring",
+              "text": "<p>Som besökare, anpassa budskap till dig när du besöker andra webbplatser och sociala medier (så kallad retargeting).</p>" }
+          ])
+
+        </ul>
+                 
+
+ 
+
+        <div class="block__">
+
+          <a href="javascript:;" class="border_bt">Spara gjorda val</a>
+
+          <a href="javascript:;" class="green_bt">Acceptera alla </a>
+      </div>
+        
+
+
+    
+</section>

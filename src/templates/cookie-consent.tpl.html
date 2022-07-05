@@ -1,0 +1,86 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop",
+	"logged_in": true
+	})
+
+@@include('layout/_top-new2.html', { "logged_in": true, "show_cart": true })
+
+
+<section class="content-wrapper ml-2017">
+	@@include('blocks/_sub-page-newsletter.html', {
+		"background": "green",
+		"sub_bg": "assets/img/mockup/sub-page-img3.jpg",
+		"left_text_color": "white",
+		"bg_shadow": true,
+		"sub_text": "Ta del av våra nyhetsbrev fyllda med inspiraion och erbjudanden!",
+		"has_error": true
+	})
+
+	<div class="space-80"></div>
+
+	@@include('blocks/_sub-page-newsletter.html', {
+		"background": "white",
+		"sub_bg": "assets/img/mockup/sub-page-img2.jpg",
+		"left_text_color": false,
+		"bg_shadow": false,
+		"sub_text": "Ta del av våra nyhetsbrev fyllda med inspiraion och erbjudanden! Registrerar du dig nu får du dessutom 100 kr laddat på ditt vinstkonto för att välja valfri premie ur vinstshoppen.",
+		"has_error": false
+	})
+
+	<div class="space-80"></div>
+
+	@@include('blocks/_sub-page-newsletter.html', {
+		"background": "green",
+		"sub_bg": "assets/img/mockup/sub-page-img5.png",
+		"left_text_color": "green",
+		"bg_shadow": false,
+		"sub_text": "Ta del av våra nyhetsbrev fyllda med inspiraion och erbjudanden!",
+		"has_error": false
+	})
+
+	<div class="space-80"></div>
+
+	@@include('blocks/_sub-page-newsletter.html', {
+		"background": "blue",
+		"sub_bg": "assets/img/mockup/sub-page-img1.jpg",
+		"left_text_color": "white",
+		"bg_shadow": true,
+		"sub_text": "Ta del av våra nyhetsbrev fyllda med inspiraion och erbjudanden! Registrerar du dig nu får du dessutom 100 kr laddat på ditt vinstkonto för att välja valfri premie ur vinstshoppen.",
+		"has_error": true
+	})
+
+	<div class="space-80"></div>
+
+	@@include('blocks/_sub-page-newsletter.html', {
+		"background": "white",
+		"sub_bg": "assets/img/mockup/sub-page-img4.jpg",
+		"left_text_color": "white",
+		"bg_shadow": true,
+		"sub_text": "Ta del av våra nyhetsbrev fyllda med inspiraion och erbjudanden!",
+		"has_error": true
+	})
+</section>
+
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
+
+
+<div id="modals">
+  <div class="modal bg_cookie"  id="cookie-consent" style="display: block;"> 
+  <!--	<div class="modal modal-2022 modal-sub-newsletter fade in" id="newsletter_sub_popup2" style="display: block;">-->
+      <div class="modal__conteiner">
+
+              <div class="modal-cookie-consent">
+
+                      @@include('blocks/_block_cookie-consent.html', {
+
+                          "icon": "assets/img/icons/cookies.svg",
+                          "title": "Anpassa cookies",
+                          "sub_text": "Gör dina val nedan när det kommer till cookies och hur de får användas:"
+                      })
+
+              </div>
+
+      </div>
+  </div>
+</div>
