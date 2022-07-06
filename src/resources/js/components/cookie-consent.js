@@ -1,22 +1,25 @@
 export default function () {
 
 	$('.modal-cookie-consent a.arrow').click( function() {
-      $('.modal-cookie-consent .list li').removeClass('open');
-
       
-      if($(this).hasClass( "see" )){
-       $(this).parents('li').removeClass('open');
-        
-         $(this).removeClass('see');
-          $('.modal-cookie-consent .list li').removeClass('no-see');
-      }else{
-        $(this).parents('li').addClass('open');
-        
-         $(this).addClass('see');
-        $('.modal-cookie-consent .list li').addClass('no-see');
-        
-          $(this).parents('li').removeClass('no-see');
-      }
+      
+     $(this).parents('li').toggleClass('open');
+      
+//      $('.modal-cookie-consent .list li').removeClass('open');
+
+//      if($(this).hasClass( "see" )){
+//       $(this).parents('li').removeClass('open');
+//        
+//         $(this).removeClass('see');
+//          $('.modal-cookie-consent .list li').removeClass('no-see');
+//      }else{
+//        $(this).parents('li').addClass('open');
+//        
+//         $(this).addClass('see');
+//        $('.modal-cookie-consent .list li').addClass('no-see');
+//        
+//          $(this).parents('li').removeClass('no-see');
+//      }
       
 	});
   

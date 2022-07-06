@@ -97,7 +97,14 @@
     
     .list{
           list-style-type: none;
-      padding: 0 17px 0 14px;
+      
+
+      padding: 0 22px 0 26px;
+      
+      @media screen and (max-width: 600px){
+        padding: 0 17px 0 14px;
+      }
+      
       margin: 0;
       
       max-height: 418px;
@@ -137,7 +144,7 @@
           
               .content{
                 height: inherit;
-               min-height: 75px;
+//               min-height: 75px;
           overflow-y: inherit;  
                 
           }
@@ -186,6 +193,10 @@
           width: 57px;
           min-width: 57px;
           
+      @media screen and (max-width: 600px){
+        padding-left: 15px;
+      }
+          
           
           input[type='checkbox'],label{
   
@@ -200,6 +211,12 @@
              background: #D9D9D9;
               border-radius: 50px;
             width: 36px;
+        
+        @media screen and (max-width: 600px){
+        width: 30px;
+      }
+      
+        
             max-height: 20px;
             
             display: flex;
@@ -224,6 +241,10 @@
 
 
       input[type='checkbox']:checked  + label {
+               @media screen and (max-width: 600px){
+        width: 30px;
+      }
+        
              background: #50B78D;
               border-radius: 50px;
             width: 36px;
@@ -295,7 +316,10 @@
       display: flex;
       gap: 0 32px;
       
-  
+      @media screen and (max-width: 600px){
+          gap: 0 16px;
+      }
+      
 
       
       a{
