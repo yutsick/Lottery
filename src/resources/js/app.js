@@ -59,6 +59,9 @@ import radioButtonProduct from './components/radio-button-product';
 
 import checkMaxLength from './utilities/checkMaxLength';
 
+import cookieList from './components/cookie-consent';
+
+
 
 /* Layout */
 import navigation from './layout/navigation';
@@ -142,6 +145,7 @@ $(function () {
 	radioButtonProduct();
 
 	checkMaxLength();
+	cookieList();
 
 
 	timeSpent.init('.js-timespent').start();
