@@ -60,6 +60,7 @@ import radioButtonProduct from './components/radio-button-product';
 import checkMaxLength from './utilities/checkMaxLength';
 
 import cookieList from './components/cookie-consent';
+import checkOutIn from './components/checkout-module';
 
 
 
@@ -91,6 +92,9 @@ $(function () {
 		return 0;
 	};
 	window.ML.confetti = Confetti;
+  
+	checkOutIn();
+  
 	modernizr();
 	new objectFitImages();
 	new accordion();
