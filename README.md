@@ -1,15 +1,22 @@
 Miljonlotteriet - Frontend 2017
-=================
+
 
 http://localhost:3000/
+
+
+-----
+checkout-module
+
+1. http://sc-frontend.iogt-nto.se/checkout-module.html
+2. http://sc-frontend.iogt-nto.se/checkout-module_v2.html
+
 
 -----
 cookie-consent
 
 1. http://sc-frontend.iogt-nto.se/cookie-consent.html
 
------
-here is a merger of branches vinstshop-page, usubscribe-page and sub-page-newsletter
+
 
 1. http://sc-frontend.iogt-nto.se/sub-page-popup-newsletter-v3.html
 2. http://sc-frontend.iogt-nto.se/vinstshop-page-v3.html
