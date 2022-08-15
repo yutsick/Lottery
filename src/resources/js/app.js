@@ -59,6 +59,7 @@ import radioButtonProduct from './components/radio-button-product';
 
 import checkMaxLength from './utilities/checkMaxLength';
 
+
 import cookieList from './components/cookie-consent';
 
 
@@ -99,6 +100,8 @@ $(function () {
 	bonusCode();
 	checkboxTrigger();
 	dataList();
+  
+
 	dreamlistTooltip();
 	new entityCollectionActions();
 	form();
@@ -148,11 +151,13 @@ $(function () {
 	cookieList();
 
 
+
 	timeSpent.init('.js-timespent').start();
 	Odometer();
 
 	/* call breakpointListener last */
 	breakpointListener();
+    cookiList();
 });
 
 /**
