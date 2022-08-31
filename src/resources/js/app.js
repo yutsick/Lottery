@@ -32,6 +32,8 @@ import message from './components/message';
 import modal from './components/modal';
 import paymentMethod from './components/payment-method';
 import ProductList from './components/product-list';
+import ProductVideo from './components/product-video-page';
+
 import removeFromDreamlist from './components/remove-from-dreamlist';
 import scrollToElement from './components/scrollToElement';
 import search from './components/search';
@@ -117,6 +119,8 @@ $(function () {
 	modal();
 	paymentMethod();
 	new ProductList();
+	new ProductVideo();
+  
 	removeFromDreamlist();
 	scrollToElement();
 	search();
