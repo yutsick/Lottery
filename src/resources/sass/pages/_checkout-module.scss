@@ -1506,17 +1506,26 @@
 
               }
               
-              
-              
+              &.select__{
+
+                .new__box{
+                  display: flex !important;
+                }
+
+              }
               .new__box{
                  border-radius: 10px;
                 border: 1px solid rgba(0, 62, 82, 1);
                 
                 width: 100%;
                 
+                
+                display: none;
+
+                
         
 
-                display: flex;
+
                 
                 @media screen and (max-width: 600px){
                   margin-top: 19px;
@@ -1928,6 +1937,8 @@
               }
 
             }
+            
+
 
             
             

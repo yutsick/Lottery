@@ -96,4 +96,15 @@ export default function () {
       
     });
   
+    $('.checkout-module__ .bat_2 .box__>.list.mod>li>.input>input').click(function(){
+//      e.preventDefault();
+      $('.checkout-module__ .bat_2 .box__>.list.mod>li').removeClass('select__');
+      $('.checkout-module__ .bat_2 .box__>.list.mod>li>.input>input').removeAttr('checked');
+      $(this).attr('checked', 'checked');
+      $(this).parent().parent().addClass('select__');
+
+
+
+    });
+  
 }
