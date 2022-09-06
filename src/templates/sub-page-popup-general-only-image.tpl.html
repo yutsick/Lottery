@@ -18,13 +18,14 @@
 			<div class="modal-content popup-general">
 				<div class="sub-page-popup ml-2017">
 
-					@@include('blocks/_sub-page-popup-general-back.html', {
-						"modal": "modal_background",
-						"background": "primary-blue",
-						"bg_shadow": true,
-						"sub_bg": "assets/img/background/popup-general-back.png",
-						"on_title": "Spela bingo!",
-						"sub_text": "Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+					@@include('blocks/_sub-page-popup-general-only-img.html', {
+                        "modal": "modal_image",
+                        "background": "white",
+                        "images_url": "assets/img/mockup/popup-general-img.png",
+                        "bg_shadow": true,
+                        "sub_bg": false,
+                        "on_title": false,
+                        "sub_text": false
 
 					})
 

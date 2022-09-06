@@ -1038,7 +1038,14 @@
     .sub-page-popup-general{
       width: 100%;
           
-  padding: 40px 0;
+        padding: 40px 0;
+      
+      &.only{
+           padding: 0px 0;
+          .images__{
+        margin-bottom: 0px;
+        }
+      }
       
       .images__{
         text-align: center;
@@ -1106,16 +1113,14 @@
       }
             
       &.modal_image{
-    
 
-        
       }
             
       &.no-image{
         
      
         .title,p{
-          color: #fff;
+//          color: #fff;
         }
         .btn-color{
           font: 400 16px/1.2em 'Proxima Nova';
@@ -1126,23 +1131,51 @@
       
       &.white{
         background: #FFFFFF;
+        
+        .title,p{
+          color: #003E52;
+        }
 
       }
 
       &.green{
         background: #CEDFD7;
+        .title,p{
+          color: #003E52;
+        }
+        
+        
       }
 
       &.primary-blue{
         background: #003E52;
+        
+        .title,p{
+          color: #fff;
+        }
+        
+        a.primary-blue{
+          
+          background: #fff;
+          color: #003E52;
+          
+        }
       }
 
       &.pink-bg{
         background: #E3BAC5;
+        .title,p{
+          color: #003E52;
+        }
+        
       }
 
       &.light-blue{
         background: #B8D8EB;
+        
+        .title,p{
+          color: #003E52;
+        }
       } 
 
 
@@ -1207,18 +1240,22 @@
         &.cta-pink{
           background: #CC5599;
           color: #fff;
+          font-weight: 600;
         }
         &.primary-blue{
           background: #003E52;
           color: #fff;
+          font-weight: 600;
         }
         &.sec-light-blue{
           background: #B8D8EB;
           color: #003E52;
+          font-weight: 600;
         }       
         &.sec-white{
           background: #FFFFFF;
           color: #003E52;
+          font-weight: 600;
         }
 
       }
