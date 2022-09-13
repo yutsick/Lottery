@@ -1092,25 +1092,84 @@
         .title,p{
           color: #fff;
         }
+        
         .btn-color{
           font: 400 16px/1.2em 'Proxima Nova';
-          
         }
         
-      }      
-      
-      &.modal_background{
-            
+        
+      &.white{
+        background: #FFFFFF;
+        
+        .title,p{
+          color: #003E52;
+        }
 
+      }
+
+      &.green{
+        background: #CEDFD7;
+        .title,p{
+          color: #003E52;
+        }
+        
+        
+      }
+
+      &.primary-blue{
+        background: #003E52;
+        
         .title,p{
           color: #fff;
         }
-        .btn-color{
-          font: 400 16px/1.2em 'Proxima Nova';
+        
+        a.primary-blue{
           
+          background: #fff;
+          color: #003E52;
+          
+        }
+      }
+
+      &.pink-bg{
+        background: #E3BAC5;
+        .title,p{
+          color: #003E52;
         }
         
       }
+
+      &.light-blue{
+        background: #B8D8EB;
+        
+        .title,p{
+          color: #003E52;
+        }
+      }
+        
+      &.grey-bg{
+        background: #EEEDEB;
+
+        .title,p{
+          color: #003E52;
+        }
+      }
+        
+        
+      }      
+      
+//      &.modal_background{
+//            
+//
+//        .title,p{
+//          color: #fff;
+//        }
+//        .btn-color{
+//          font: 400 16px/1.2em 'Proxima Nova';
+//          
+//        }
+//        
+//      }
             
       &.modal_image{
 
@@ -1176,8 +1235,17 @@
         .title,p{
           color: #003E52;
         }
-      } 
+      }
+      
+      &.grey-bg{
+        background: #EEEDEB;
 
+        .title,p{
+          color: #003E52;
+        }
+      }
+      
+      
 
       &.shadow__{
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -1195,6 +1263,7 @@
         
         &>a{
           margin-bottom: 15px;
+          font-weight: 700; 
           &:last-child{
             margin-bottom: 0;
           }
@@ -1240,22 +1309,22 @@
         &.cta-pink{
           background: #CC5599;
           color: #fff;
-          font-weight: 600;
+          font-weight: 700;
         }
         &.primary-blue{
           background: #003E52;
           color: #fff;
-          font-weight: 600;
+          font-weight: 700;
         }
         &.sec-light-blue{
           background: #B8D8EB;
           color: #003E52;
-          font-weight: 600;
+          font-weight: 700;
         }       
         &.sec-white{
           background: #FFFFFF;
           color: #003E52;
-          font-weight: 600;
+          font-weight: 700;
         }
 
       }
