@@ -13,14 +13,20 @@ div.select-hover-images{
         }
 
     }
+  
+    .block-product_extended{
     
-    .block-product__content{
-        position: relative;   
-        
-        .block-product__link{
-            height: 70px;  
-            margin-bottom: -70px;
-            pointer-events: none;
+        .block-product__content{
+            position: relative;   
+
+
+
+              .block-product__link {
+                  height: 70px;  
+                  margin-bottom: -70px; 
+                  pointer-events: none;
+              }
+
         }
     }
     
