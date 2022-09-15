@@ -13,14 +13,20 @@ div.select-hover-images{
         }
 
     }
+  
+    .block-product_extended{
     
-    .block-product__content{
-        position: relative;   
-        
-        .block-product__link{
-            height: 70px;  
-            margin-bottom: -70px;
-            pointer-events: none;
+        .block-product__content{
+            position: relative;   
+
+
+
+              .block-product__link {
+                  height: 70px;  
+                  margin-bottom: -70px; 
+                  pointer-events: none;
+              }
+
         }
     }
     
@@ -102,39 +108,4 @@ div.select-hover-images{
 }
 
 
-
-.block-product__content{
-  .product-controls__sizes__list{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 15px;
-
-    span{
-      display: flex;
-      margin-left: 15px;
-      font: 100 16px/1.2em 'Proxima Nova';
-    }
-  }
-  
-  
-}
-
-.block-product__content.flex-middle.two{
-  .block-product__link{
-    .block-product__title{
-      margin-bottom: 18px;
-    }
-    
-    .product-controls__sizes__list{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      padding-top: 15px;
-    }
-    
-  }
-  
-}
 
