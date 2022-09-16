@@ -1,0 +1,58 @@
+<div class="col-xs-6 col-md-3">
+	<article class="block-product@@if(context.extended){ block-product_extended}">
+		@@if(context.dreamButton){
+		<button class="block-product__dream-button btn-link js-add-to-dreamlist" data-toggle="tooltip"
+				data-placement="top" title="Lägg till i min drömlista">
+			<i class="icon icon-dream-star dreamlist-icon"></i>
+		</button>
+		}
+
+		@@if(context.dreamButton === "loggetOut"){
+			<button class="block-product__dream-button btn-link" href="#modal-login" data-toggle="modal">
+				<i class="icon icon-dream-star dreamlist-icon"></i>
+			</button>
+			}
+
+		<div class="block-product__image-wrapper">
+			<a class="block-product__link" href="@@if (context.href) {@@href}@@if (!context.href) {/}" title="">
+				<div class="block-product__image">
+				    <div class="images__contein active">
+				       <img src="" data-src="@@image" alt="">
+				    </div>
+				    <div class="images__contein">
+				       <img src="" data-src="@@hoverImage" alt="">
+				    </div>
+				    <div class="images__contein">
+				       <img src="" data-src="@@image" alt="">
+				    </div>
+				    <div class="images__contein">
+				       <img src="" data-src="@@hoverImage" alt="">
+				    </div>
+				    <div class="images__contein">
+				       <img src="" data-src="@@image" alt="">
+				    </div>
+				</div>
+			</a>
+		</div>
+		<div class="block-product__content flex-middle two">
+			<a class="block-product__link" href="@@if (context.href) {@@href}@@if (!context.href) {/}" title="">
+	
+				@@if(context.title){
+				<h3 class="block-product__title block-product__item">@@title</h3>
+				}
+				@@if(context.subtitle){
+				<p class="block-product__subtitle block-product__item">@@subtitle</p>
+				}
+				@@if(context.price){
+				<p class="block-product__price block-product__item">@@price</p>
+				}
+				
+                <div class="product-controls__sizes__list">
+                   <span>ONESIZE</span>
+                </div>
+			</a>
+
+		</div>
+
+	</article>
+</div>
