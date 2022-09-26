@@ -18,6 +18,9 @@
 				<div class="block-product__image">
 				    <div class="images__contein active">
 				       <img src="" data-src="@@image" alt="">
+                      @@if(context.hoverImage){
+                        <img src="" class="block-product__hover-image" data-src="@@hoverImage" alt="">
+                      }
 				    </div>
 				    <div class="images__contein">
 				       <img src="" data-src="@@hoverImage" alt="">

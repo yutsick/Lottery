@@ -113,6 +113,12 @@
 	&.block-product_extended {
 		.block-product__content {
 			justify-content: start;
+          
+          min-height: 90px;
+          
+          @media screen and (max-width: 600px){
+            min-height: 70px;
+          }
 
 			.block-product__link {
 				text-align: left;
