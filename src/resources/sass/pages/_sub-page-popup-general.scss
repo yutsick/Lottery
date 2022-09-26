@@ -1038,7 +1038,8 @@
     .sub-page-popup-general{
       width: 100%;
           
-        padding: 40px 0;
+//        padding: 40px 0;
+//        padding: 0 0 40px;
       
       &.only{
            padding: 0px 0;
@@ -1050,7 +1051,13 @@
       .images__{
         text-align: center;
         width: 100%;
-        margin-bottom: 20px;
+        height: 265px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+//        margin-bottom: 20px;
+        
+//        margin-top: 40px;
         
         img{
           display: block;
@@ -1059,7 +1066,7 @@
       }
       
       .title{
-        margin-top: 0;
+        margin-top: 40px;
           padding: 0;
         
         color: #003E52;
@@ -1085,7 +1092,7 @@
       
         
         .title{
-          margin-top: 0;
+//          margin-top: 0;
           padding: 0;
         }
         
@@ -1248,7 +1255,8 @@
       
 
       &.shadow__{
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
       }
       
       .block_btn{
@@ -1259,6 +1267,7 @@
         
         
         margin-top: 20px;
+        margin-bottom: 40px;
         text-align: center;
         
         &>a{
