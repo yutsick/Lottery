@@ -106,6 +106,10 @@ body {
 	}
 }
 
+.block-product.block-product_extended .block-product__label{
+  max-width: 92px;
+}
+
 @import "register";
 @import "register-new";
 @import "blog-win";
