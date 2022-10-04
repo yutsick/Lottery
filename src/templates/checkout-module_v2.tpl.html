@@ -1,42 +1,12 @@
-<!DOCTYPE html>
-<!--[if lt IE 8]>
-<html class="lt-ie8 has-cookie-bar" lang="en"> <![endif]-->
-<!--[if IE 8]>
-<html class="ie8 has-cookie-bar" lang="en"> <![endif]-->
-<!--[if IE 9]>
-<html class="ie9 has-cookie-bar" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="has-cookie-bar" lang="en"><!--<![endif]-->
-<head>
-	<title>Miljonlotteriet - Frontend 2017</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-	<meta name="description" content="Description"/>
-	<meta name="format-detection" content="telephone=no">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="/assets/css/app.css?v=0.33">
+@@include('layout/_header.html', {
+	"class": "logged-in shop",
+	"logged_in": true
+})
 
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!--@@include('layout/_top.html', {"logged_in": true})
+@@include('layout/_sidebar.html', {"logged_in": true})-->
 
-
-
-
-
-
-	<!--[if IE]>
-	<link rel="stylesheet" type="text/css" href="/assets/css/ie-all.css" />
-	<![endif]-->
-
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-</head>
-
-<body>
   <div class="content-wrapper ml-2017">
     <div class="@@if(context.class){@@class}" id="page-wrapper">
     <div class="checkout-module__">
@@ -428,7 +398,4 @@
 </div><!-- /#page-wrapper -->
   </div>
 
-</body>
-<script src="/assets/js/app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
-</html>
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
