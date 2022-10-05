@@ -43,12 +43,14 @@
 				@@if(context.title){
 				<h3 class="block-product__title block-product__item">@@title</h3>
 				}
+				<div class="info">
 				@@if(context.subtitle){
 				<p class="block-product__subtitle block-product__item">@@subtitle</p>
 				}
 				@@if(context.price){
 				<p class="block-product__price block-product__item"> @@if(context.variablesprice){ Fr. } @@price</p>
 				}
+                </div>
 				
                 <div class="product-controls__sizes__list">
                    <span>ONESIZE</span>

@@ -20,7 +20,7 @@ div.select-hover-images{
             position: relative;  
           padding: 20px;
           
-          @media screen and (max-width: 600px){ padding: 10px; }
+          @media screen and (max-width: 600px){ padding: 10px;  height:  100%; }
           
           
           .block-product__title{
@@ -36,7 +36,7 @@ div.select-hover-images{
             padding: 0;
             margin: 0;
     margin-bottom: 25px;
-            @media screen and (max-width: 600px){     margin-bottom: 30px; }
+            @media screen and (max-width: 600px){     margin-bottom: 5px; }
           }
           .block-product__price{
             height: 20px;
@@ -44,24 +44,30 @@ div.select-hover-images{
             margin: 0;
     margin-bottom: 25px;
             margin-left: auto;
-             @media screen and (max-width: 600px){     margin-bottom: 30px; } 
+             @media screen and (max-width: 600px){     margin-bottom: 5px; } 
           }
           
           .product-controls__sizes__list{
             width: 100%;
             text-align: right;
-            @media screen and (max-width: 600px){ text-align: left; }
+            @media screen and (max-width: 600px){ text-align: left; margin-top: auto; }
             span{
               font-weight: 200;
               @media screen and (max-width: 600px){ font-size: 12px; }
             }
           }
 
-
-
-              .block-product__link {
+          .block-product__link {
                   height: 70px;  
-//                          @media screen and (max-width: 600px){   height: 55px;  }
+            
+               
+            .info{
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+            }
+            
+           @media screen and (max-width: 600px){  height:inherit; margin-bottom: 0px; flex-direction: column;  align-content: flex-start; }
                 
                 display: flex;
                 justify-content: flex-start;
@@ -85,6 +91,8 @@ div.select-hover-images{
         .select-hover{
             padding-top: 20px;
             background: #fff;
+          
+          @media screen and (max-width: 600px){  display:  none }
         }
         
         &:hover{
