@@ -106,6 +106,33 @@ body {
 	}
 }
 
+.block-product.block-product_extended .block-product__label{
+  max-width: 92px;
+}
+
+.flickity-viewport{
+    &:before{
+      pointer-events: none;
+      content: '';
+      display: block;
+      width: 100px;
+      height: 100%;
+
+      position: absolute;
+      z-index: 2;
+
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 69%);
+    }
+
+}
+
+.ml-2017 .block-hero--taller + .product-list-blocks .product-list-blocks__title{
+  display: inherit !important;
+}
+
+
+
+
 @import "register";
 @import "register-new";
 @import "blog-win";
@@ -113,11 +140,17 @@ body {
 @import "bingolobby";
 @import "campaign";
 @import "schema-tabs";
-
 @import "product-page";
 @import "product-page-hover-images";
 @import "sub-page-newsletter"; 
-
 @import "unsubscribe-page";
 @import "bin-bingolobby";
+
+
+//@import "block-cookie-consent";
+//@import "sub-page-popup-general";
+
+//@import "checkout-module";
+
+//@import "product-video-page";
 

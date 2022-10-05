@@ -130,13 +130,13 @@
                 </div>
 
 				<div class="sort">
-					<p class="sort__label">Sorterat på:</p>
+					<p class="sort__label">Sortera efter:</p>
 					<div class="dropdown filter-dropdown js-show-dropdown">
 						<button class="sort__checked filter-dropdown__button js-add-value" type="button" data-toggle="dropdown" data-checked="Rekommenderat">
 							Rekommenderat
 						</button>
 						<div class="dropdown-menu sort__item">
-							<div class="filter-dropdown__header">Sorterat på:</div>
+							<div class="filter-dropdown__header">Sortera efter:</div>
 							<form method="post" data-filter-type="sort">
 								<div class="form-group">
 									<div class="custom-radio sort__choice">
@@ -348,7 +348,7 @@
 					@@include('blocks/product-list/_product-item-tree.html', {
                       "href": "/vinstshop-page.html",
                       "image": "assets/img/mockup/car.jpg",
-                      "hoverImage": "assets/img/mockup/car.jpg",
+                      "hoverImage": "assets/img/mockup/Img-block-villa.jpg",
                       "label": "Nyhet",
                       "color": "pink",
                       "title": "Laddare och batteri",
@@ -359,21 +359,82 @@
 					})
 
 					@@include('blocks/product-list/_product-item-hover.html', {
-					"href": "/vinstshop-page-full.html",
-					"image": "assets/img/mockup/Img-block-villa.jpg",
-					"hoverImage": "assets/img/mockup/car.jpg",
-					"title": "Flera rader skulle kunna fungera såhär.",
-					"price": "200 kr",
-					"dreamButton": true,
-					"extended" : true
+                      "href": "/vinstshop-page-full.html",
+                      "image": "assets/img/mockup/Img-block-villa.jpg",
+                      "hoverImage": "assets/img/mockup/car.jpg",
+                      "title": "Flera rader skulle kunna fungera såhär.",
+                      "price": "200 kr",
+                      "dreamButton": true,
+                      "extended" : true
 					})
+
+					
+					
+					
+					
+
+					@@include('blocks/product-list/_product-item-hover.html', {
+                      "image": "assets/img/mockup/shop_item_3.jpg",
+                      "hoverImage": "assets/img/mockup/car.jpg",
+                      "title": "Flera rader skulle kunna fungera såhär.",
+                      "subtitle": "Fusce Nibh",
+                      "price": "100 kr",
+                      
+                      "variablesprice":  true,
+                      "dreamButton": true,
+                      "extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item-two.html', {
+                      "href": "/vinstshop-page-full.html",
+                      "image": "assets/img/mockup/shop_item_2.jpg",
+                      "hoverImage": "assets/img/mockup/car.jpg",
+                      "title": "Balanskudde med luft 149-190 kr",
+                      "subtitle": "Sagaform",
+                      "price": "149 kr",
+					  "variablesprice":  true,
+                      "dreamButton": true,
+                      "extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item-tree.html', {
+                      "href": "/vinstshop-page.html",
+                      "image": "assets/img/mockup/car.jpg",
+                      "hoverImage": "assets/img/mockup/Img-block-villa.jpg",
+                      "label": "Nyhet",
+                      "color": "pink",
+                      "title": "Laddare och batteri 1499-1700 kr",
+                      "subtitle": "Ryobi",
+                      "price": "1 499 kr",
+                      
+					  "variablesprice":  true,
+                      "dreamButton": true,
+                      "extended" : true
+					})
+
+					@@include('blocks/product-list/_product-item-hover.html', {
+                      "image": "assets/img/mockup/paslakan-4.jpg",
+                      "hoverImage": "assets/img/mockup/car.jpg",
+                      "title": "Flera rader skulle 30-100 kr",
+                      "price": "30 kr",
+                      
+                      "variablesprice":  false,
+                      "dreamButton": true,
+                      "extended" : true
+					})
+
+					
+					
+
 
 					@@include('blocks/product-list/_product-item-hover.html', {
 					"image": "assets/img/mockup/shop_item_3.jpg",
 					"hoverImage": "assets/img/mockup/car.jpg",
 					"title": "Flera rader skulle kunna fungera såhär.",
 					"subtitle": "Fusce Nibh",
-					"price": "10.000 kr",
+                      "price": "100 kr",
+					
+                    "variablesprice":  false,
 					"dreamButton": true,
 					"extended" : true
 					})
@@ -383,6 +444,8 @@
 					"hoverImage": "assets/img/mockup/car.jpg",
 					"title": "Flera rader skulle kunna fungera såhär.",
 					"price": "30 kr",
+					
+                    "variablesprice":  false,
 					"dreamButton": true,
 					"extended" : true
 					})
@@ -391,7 +454,9 @@
 					"image": "assets/img/mockup/StandingImgBlock-small2.jpg",
 					"hoverImage": "assets/img/mockup/car.jpg",
 					"title": "Flera rader skulle kunna fungera såhär.",
-					"price": "10.000 kr",
+                      "price": "100 kr",
+					
+                    "variablesprice":  false,
 					"dreamButton": true,
 					"extended" : true
 					})
@@ -401,6 +466,8 @@
 					"hoverImage": "assets/img/mockup/car.jpg",
 					"title": "Flera rader skulle kunna fungera såhär.",
 					"price": "30 kr",
+					
+                    "variablesprice":  false,
 					"dreamButton": true,
 					"extended" : true
 					})
@@ -409,7 +476,9 @@
 						"image": "assets/img/mockup/lottery-04.jpeg",
 						"hoverImage": "assets/img/mockup/car.jpg",
 						"title": "Flera rader skulle kunna fungera såhär.",
-						"price": "10.000 kr",
+                      "price": "100 kr",
+						
+                        "variablesprice":  false,
 						"dreamButton": true,
 						"extended" : true
 						})
@@ -419,6 +488,8 @@
 					"hoverImage": "assets/img/mockup/car.jpg",
 					"title": "Flera rader skulle kunna fungera såhär.",
 					"price": "30 kr",
+					
+                    "variablesprice":  false,
 					"dreamButton": true,
 					"extended" : true
 					})
@@ -427,7 +498,9 @@
 					"image": "assets/img/mockup/nature.jpg",
 					"hoverImage": "assets/img/mockup/car.jpg",
 					"title": "Flera rader skulle kunna fungera såhär.",
-					"price": "10.000 kr",
+                      "price": "100 kr",
+					
+                    "variablesprice":  false,
 					"dreamButton": true,
 					"extended" : true
 					})
@@ -437,6 +510,8 @@
 					"hoverImage": "assets/img/mockup/car.jpg",
 					"title": "Flera rader skulle kunna fungera såhär.",
 					"price": "30 kr",
+					
+                    "variablesprice":  false,
 					"dreamButton": true,
 					"extended" : true
 					})

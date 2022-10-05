@@ -442,7 +442,7 @@ export default function() {
 				
 				
 				
-				<p class="block-product__price block-product__item">10.000 kr</p>
+				<p class="block-product__price block-product__item">157 kr</p>
 				
 			</a>
 
@@ -593,7 +593,7 @@ export default function() {
 				
 				
 				
-				<p class="block-product__price block-product__item">10.000 kr</p>
+				<p class="block-product__price block-product__item">157 kr</p>
 				
 			</a>
 

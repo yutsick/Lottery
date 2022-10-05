@@ -10,6 +10,8 @@ require('lg-thumbnail.js/dist/lg-thumbnail.js');
 /* Vendor */
 import modernizr from './vendor/modernizr-custom.js';
 
+import slick from './vendor/slick.min.js';
+
 /* Store */
 import storeConfiguration from './store';
 
@@ -32,6 +34,8 @@ import message from './components/message';
 import modal from './components/modal';
 import paymentMethod from './components/payment-method';
 import ProductList from './components/product-list';
+//import ProductVideo from './components/product-video-page';
+
 import removeFromDreamlist from './components/remove-from-dreamlist';
 import scrollToElement from './components/scrollToElement';
 import search from './components/search';
@@ -58,6 +62,12 @@ import productsListFilters from './components/products-list_filters';
 import radioButtonProduct from './components/radio-button-product';
 
 import checkMaxLength from './utilities/checkMaxLength';
+
+
+//import cookieList from './components/cookie-consent';
+//import checkOutIn from './components/checkout-module';
+import functionSlick from './components/function-slick';
+
 
 
 /* Layout */
@@ -88,7 +98,12 @@ $(function () {
 		return 0;
 	};
 	window.ML.confetti = Confetti;
+
+//	checkOutIn();
+
+  
 	modernizr();
+
 	new objectFitImages();
 	new accordion();
 	addToDreamlist();
@@ -96,6 +111,8 @@ $(function () {
 	bonusCode();
 	checkboxTrigger();
 	dataList();
+  
+
 	dreamlistTooltip();
 	new entityCollectionActions();
 	form();
@@ -107,6 +124,8 @@ $(function () {
 	modal();
 	paymentMethod();
 	new ProductList();
+//	new ProductVideo();
+  
 	removeFromDreamlist();
 	scrollToElement();
 	search();
@@ -142,13 +161,17 @@ $(function () {
 	radioButtonProduct();
 
 	checkMaxLength();
-
+//	cookieList();
+  
+	functionSlick();
+  	slick();
 
 	timeSpent.init('.js-timespent').start();
 	Odometer();
 
 	/* call breakpointListener last */
 	breakpointListener();
+    cookiList();
 });
 
 /**

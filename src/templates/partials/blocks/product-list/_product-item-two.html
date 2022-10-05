@@ -18,6 +18,9 @@
 				<div class="block-product__image">
 				    <div class="images__contein active">
 				       <img src="" data-src="@@image" alt="">
+                      @@if(context.hoverImage){
+                        <img src="" class="block-product__hover-image" data-src="@@hoverImage" alt="">
+                      }
 				    </div>
 				    <div class="images__contein">
 				       <img src="" data-src="@@hoverImage" alt="">
@@ -40,12 +43,14 @@
 				@@if(context.title){
 				<h3 class="block-product__title block-product__item">@@title</h3>
 				}
+				<div class="info">
 				@@if(context.subtitle){
 				<p class="block-product__subtitle block-product__item">@@subtitle</p>
 				}
 				@@if(context.price){
-				<p class="block-product__price block-product__item">@@price</p>
+				<p class="block-product__price block-product__item"> @@if(context.variablesprice){ Fr. } @@price</p>
 				}
+                </div>
 				
                 <div class="product-controls__sizes__list">
                    <span>ONESIZE</span>
