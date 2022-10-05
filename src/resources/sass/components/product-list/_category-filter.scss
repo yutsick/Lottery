@@ -1,8 +1,11 @@
 .product-category-slider {
 	margin-bottom: 20px;
-	padding-right: 35px;
+padding-right: 35px;
+	padding-left: 35px;
     margin-top: 20px;
     position: relative;
+  
+  transition: all .05s ease !important; 
   
   	@media screen and (max-width: 1224px) and  (min-width: 768px)  {
       
@@ -12,10 +15,26 @@
 		display: none;
 	}
   
-    &:after{
+  &.left{
+    padding-left: 0;	
+    
+     &:before{
+       display: none;
+    }
+  }
+  
+  &.righet{
+	padding-right: 0;
+        &:after{
+       display: none;
+    } 
+  }
+  
+    .ion-chevron-left:after{
       content: '';
       display: block;
       
+background: rgb(255,255,255);
       background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.0001) 2.61%);
       width: 100%;
       height: 39px;
@@ -23,6 +42,22 @@
       position: absolute;
       right: 35px;
       top:0;
+      z-index: 5;
+    }  
+  
+    .ion-chevron-right:before{
+      content: '';
+      display: block;
+      
+background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255, 0.0001) 2.61%);
+      width: 100%;
+      height: 39px;
+      pointer-events: none;
+      position: absolute;
+      left: 35px;
+      top:0;
+      z-index: 5;
 
     }
 
@@ -33,6 +68,8 @@
 		border: none;
 		margin-right: 10px;
 		white-space: nowrap;
+      
+      width: 180px;
 
 		&.checked {
 			background: #81b7c8;
