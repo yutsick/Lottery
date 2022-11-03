@@ -1,9 +1,11 @@
-<!-- 
+<!--
 
     @@image = url of image
     standingImgBlock_@@theme = light/dark
 
     (title) - has_content_title = false/true
+
+	(video) = false/true
 
     (link) - has_link = false/true - if has link
     @@btn_title = text of link
@@ -20,12 +22,18 @@
 
  <div class="col-xs-6 col-sm-6 col-md-3">
     <a href="#" class="standingImgBlock standingImgBlock_small standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement" style="background-image: url(@@image);">
-        @@if(context.overlay === true) {
+		@@if(context.video === true) {
+			<video class="standingImgBlock__video" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="assets/video/hemsidebanner_hi3.mp4" type="video/mp4">
+			</video>
+		}
+
+		@@if(context.overlay === true) {
             <div class="standingImgBlock__overlay standingImgBlock__overlay_@@position"></div>
         }
         @@if(context.has_link === true) {
             <div class="standingImgBlock__content">
-                
+
                 @@if(context.has_content_title){
                     <h4 class="standingImgBlock__title autoHyphens">Lorem ip&shy;sum do tem&shy;por</h4>
                 }
@@ -38,7 +46,7 @@
                       <div class="btn btn--sm btn-invert btn_@@link-style">@@btn_title</div>
                     }
                 </div>
-            </div>  
+            </div>
         }
 
         @@if(context.has_link === false) {
