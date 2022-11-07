@@ -1,9 +1,11 @@
-<!-- 
+<!--
 
     @@image = url of image
     standingImgBlock_@@theme = light/dark
 
     (title) - has_content_title = false/true
+
+	(video) = false/true
 
     (text paragraphs) - has_content_paragraph = false/true
 
@@ -25,14 +27,20 @@
 @@if(context.layout === "2-in-row") {<div class="col-xs-12 col-sm-12 col-md-12">}
 @@if(!context.layout) {<div class="col-xs-12 col-sm-12 col-md-9">}
     <a href="#" class="standingImgBlock standingImgBlock-3-col standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement" style="background-image: url(@@image);">
-        @@if(context.overlay === true) {
+		@@if(context.video === true) {
+			<video class="standingImgBlock__video" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="assets/video/hemsidebanner_hi3.mp4" type="video/mp4">
+			</video>
+		}
+
+		@@if(context.overlay === true) {
             <div class="standingImgBlock__overlay standingImgBlock__overlay_@@position"></div>
         }
         @@if(context.has_link === true) {
             <div class="standingImgBlock__content">
-                
+
                 @@if(context.has_content_title){
-                    <h4 class="standingImgBlock__title autoHyphens">Lorem ip&shy;sum do tem&shy;por</h4>
+                    <h4 class="standingImgBlock__title">Lorem ip&shy;sum do tem&shy;por</h4>
                 }
 
                 @@if(context.has_content_paragraph){
@@ -51,13 +59,13 @@
                       <div class="btn btn--sm btn-invert btn_@@link-style">@@btn_title</div>
                     }
                 </div>
-            </div>  
+            </div>
         }
 
         @@if(context.has_link === false) {
             <div class="standingImgBlock__content">
                 @@if(context.has_content_title){
-                    <h4 class="standingImgBlock__title autoHyphens">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
+                    <h4 class="standingImgBlock__title">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
                 }
             </div>
         }
