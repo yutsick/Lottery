@@ -67,6 +67,7 @@ import cookieList from "./components/cookie-consent";
 import checkOutIn from "./components/checkout-module";
 import functionSlick from "./components/function-slick";
 import mediaDataSwitcher from "./components/media-data-switcher.js";
+import gameLimitModal from "./components/gameLimitModal.js";
 
 /* Layout */
 import navigation from "./layout/navigation";
@@ -168,6 +169,8 @@ $(function () {
 
 	/* call breakpointListener last */
 	breakpointListener();
+
+	gameLimitModal();
 });
 
 /**

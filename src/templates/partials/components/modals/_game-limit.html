@@ -1,0 +1,164 @@
+<div class="modal modal-gameLimit center fade @@if(show){in}" id="gameLimit" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true"
+	data-opened-by-default="false" @@if(show){style="display:block;padding-left:0px;"} >
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+
+			<div class="modal-content">
+
+				<div class="modal-gameLimit__settings" style="display: block;">
+					<div class="modal-header">
+						<a class="btn btn-line-close js-action-close" data-dismiss="modal">
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.0506 7.97047L18.0022 5.92211L12.9561 10.9682L7.93343 5.94547L5.87554 8.00336L10.8982 13.0261L5.88036 18.0439L7.92873 20.0923L12.9466 15.0744L17.9974 20.1252L20.0553 18.0673L15.0045 13.0165L20.0506 7.97047Z" fill="#D96195"/>
+							</svg>
+						</a>
+						<h2 class="modal-title">Spelgräns</h2>
+					</div>
+					<div class="modal-body">
+						<div class="modal-intro text-align-center">
+							@@if(first) {
+								<p>
+									Ange vad du max kan tänka dig att sätta in per dag, vecka och månad. Minst 100 kr/dag & vecka och 500 kr/månad.
+									<br>
+									Gränsen du sätter innebär inget krav på insättning utan är bara ett maxbelopp. Du väljer själv hur mycket du sätter in och spelar för.
+									<br>
+									Tänk på att detta innefattar både insättning för när du vill spela bingo och köpa skraplotter, samt om du tecknar en digital lottprenumeration. Gränsen kan du alltid justera senare.
+								</p>
+							}
+							@@if(!first) {
+								<p>
+									Ange din insättningsgräns per dag, vecka och månad.
+									En sänkning träder i kraft direkt, medan en höjning börjar gälla först från nästa period och tidigast efter 72 timmar.
+								</p>
+							}
+						</div>
+
+						<div class="modal-gameLimit__item">
+							<div class="modal-gameLimit__item-title">
+								Dag:
+							</div>
+							<div class="modal-gameLimit__item-content">
+								@@if(first) {
+									<input class="form-control modal-gameLimit__item-input" type="number" name="Dag" id="" value="3000">
+								}
+								@@if(!first) {
+									<div class="modal-gameLimit__item-text" style="display: block;">
+										<p class="change">Nuvarande gräns: <b>500 kr</b> </p>
+										<p>Kvar: <b>500 kr</b> </p>
+									</div>
+									<input class="form-control modal-gameLimit__item-input" type="number" name="Dag" data-text="dag" data-name="dag" id="" value="1000" style="display: none;">
+								}
+
+							</div>
+							@@if(!first) {
+								<div class="modal-gameLimit__item-action">
+									<button type="button" class="btn btn-success-line js-gameLimit-change"  style="display: block;">Ändra</button>
+									<button type="button" class="btn btn-success js-gameLimit-change js-gameLimit-save"  style="display: none;">Spara</button>
+								</div>
+							}
+						</div>
+
+						<div class="modal-gameLimit__item">
+							<div class="modal-gameLimit__item-title">
+								Vecka:
+							</div>
+							<div class="modal-gameLimit__item-content">
+								@@if(first) {
+									<input class="form-control modal-gameLimit__item-input" type="number" name="Vecka" id="" value="2100">
+								}
+								@@if(!first) {
+									<div class="modal-gameLimit__item-text" style="display: block;">
+										<p class="change">Nuvarande gräns: <b>1000 kr</b> </p>
+										<p>Kvar: <b>1000 kr</b> </p>
+									</div>
+									<input class="form-control modal-gameLimit__item-input" type="number" name="Vecka" data-text="vecka" data-name="vecka" id="" value="2000" style="display: none;">
+								}
+							</div>
+
+							@@if(!first) {
+								<div class="modal-gameLimit__item-action">
+									<button type="button" class="btn btn-success-line js-gameLimit-change"  style="display: block;">Ändra</button>
+									<button type="button" class="btn btn-success js-gameLimit-change js-gameLimit-save"  style="display: none;">Spara</button>
+								</div>
+							}
+						</div>
+
+						<div class="modal-gameLimit__item">
+							<div class="modal-gameLimit__item-title">
+								Månad:
+							</div>
+							<div class="modal-gameLimit__item-content">
+								@@if(first) {
+									<input class="form-control modal-gameLimit__item-input" type="number" name="Manad" id="" value="8400">
+								}
+								@@if(!first) {
+									<div class="modal-gameLimit__item-text" style="display: block;">
+										<p class="change">Nuvarande gräns: <b>5000 kr</b> </p>
+										<p>Kvar: <b>5000 kr</b> </p>
+									</div>
+									<input class="form-control modal-gameLimit__item-input" type="number" name="Månad" data-text="månad" data-name="manad" id="" value="6000" style="display: none;">
+								}
+							</div>
+							@@if(!first) {
+								<div class="modal-gameLimit__item-action">
+									<button type="button" class="btn btn-success-line js-gameLimit-change"  style="display: block;">Ändra</button>
+									<button type="button" class="btn btn-success js-gameLimit-change js-gameLimit-save"  style="display: none;">Spara</button>
+								</div>
+							}
+						</div>
+
+						<div class="modal-gameLimit__newLimits" style="display: none;">
+							<div class="modal-gameLimit__newLimits-title">Dina nya gränser:</div>
+							<p class="modal-gameLimit__newLimits-dag">
+								<!-- <b>*1000 kr</b> per dag gäller från <b>10/11</b>  -->
+							</p>
+							<p class="modal-gameLimit__newLimits-vecka">
+								<!-- <b>*2000 kr</b> per vecka gäller från <b>10/11</b>  -->
+							</p>
+							<p class="modal-gameLimit__newLimits-manad">
+								<!-- <b>*6000 kr</b> per månad gäller från <b>10/11</b>  -->
+							</p>
+						</div>
+
+					</div>
+					<div class="modal-footer text-align-center">
+						@@if(first) {<button type="button" class="btn btn-success js-gameLimitToSuccess" data-dismiss="modal">Spara</button>}
+						@@if(!first) {<button type="button" class="btn btn-line" data-dismiss="modal">Stäng</button>}
+
+						<button type="button" class="btn btn-success" style="display:none;" data-dismiss="modal">Stäng</button>
+					</div>
+				</div>
+
+				<div class="modal-gameLimit__success" style="display: none;">
+					<div class="modal-header">
+						<a class="btn btn-line-close js-action-close" data-dismiss="modal">
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.0506 7.97047L18.0022 5.92211L12.9561 10.9682L7.93343 5.94547L5.87554 8.00336L10.8982 13.0261L5.88036 18.0439L7.92873 20.0923L12.9466 15.0744L17.9974 20.1252L20.0553 18.0673L15.0045 13.0165L20.0506 7.97047Z" fill="#D96195"/>
+							</svg>
+						</a>
+
+						<svg class="modal-gameLimit__success-icon" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="1" y="1" width="68" height="68" rx="34" stroke="#50B78D" stroke-width="2"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M50.8711 23.3022C51.6071 24.0382 51.6071 25.2315 50.8711 25.9675L30.1403 46.6983C29.4043 47.4342 28.2111 47.4342 27.4751 46.6983L18.052 37.2752C17.316 36.5392 17.316 35.3459 18.052 34.6099C18.788 33.8739 19.9813 33.8739 20.7172 34.6099L28.8077 42.7004L48.2058 23.3022C48.9418 22.5662 50.1351 22.5662 50.8711 23.3022Z" fill="#50B78D"/>
+						</svg>
+
+						<h2 class="modal-title">Klart</h2>
+
+						<div class="modal-intro text-align-center">
+							<p>
+								Du har nu sparat dina spelgränser.
+							</p>
+							<p>
+								Du kan när som helst ändra dina gränser.
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer text-align-center">
+						<button type="button" class="btn btn-success" data-dismiss="modal">Stäng</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
