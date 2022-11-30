@@ -11,7 +11,7 @@
 
     (link/btn) - has_link = false/true - if has link
     @@btn_title = text of link
-    btn_@@link-style = underline/button
+    btn_@@link_style = underline/button
 
     (position for all text content):
     alignment-@@text_alignment = left/center
@@ -53,10 +53,10 @@
 
                 <div class="standingImgBlock__cta">
                     @@if(context.theme === "light") {
-                      <div class="btn btn--sm btn-primary btn_@@link-style">@@btn_title</div>
+                      <div class="btn btn--sm btn-primary btn_@@link_style">@@btn_title</div>
                     }
                     @@if(context.theme === "dark") {
-                      <div class="btn btn--sm btn-invert btn_@@link-style">@@btn_title</div>
+                      <div class="btn btn--sm btn-invert btn_@@link_style">@@btn_title</div>
                     }
                 </div>
             </div>
