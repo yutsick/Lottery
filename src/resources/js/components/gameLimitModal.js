@@ -29,8 +29,14 @@ export default function() {
 			let text = $(this).closest('.modal-gameLimit__item').find('.modal-gameLimit__item-input').attr('data-text');
 
 			let date = new Date();
+			let time = `${date.getHours()}.${(date.getMinutes()<10?'0':'') + date.getMinutes()}`;
 
-			$(this).closest('.modal-body').find(`.modal-gameLimit__newLimits-${input}`).html(`<p><b>${value}</b> per ${text} gäller&nbsp;från&nbsp;<b>${date.getDate()}/${date.getMonth() + 1}</b><p>`);
+			if(input === 'dag') {
+				$(this).closest('.modal-body').find(`.modal-gameLimit__newLimits-dag`).html(`<p><b>${value}</b> per ${text} gäller&nbsp;från&nbsp;<b>${date.getDate()}/${date.getMonth() + 1}</b> kl <b>${time}</b><p>`);
+			} else {
+				$(this).closest('.modal-body').find(`.modal-gameLimit__newLimits-${input}`).html(`<p><b>${value}</b> per ${text} gäller&nbsp;från&nbsp;<b>${date.getDate()}/${date.getMonth() + 1}</b><p>`);
+			}
+
 			$(this).closest('.modal-body').find(`.modal-gameLimit__newLimits-${input}`).addClass('visible');
 			$(this).closest('.modal-body').find('.modal-gameLimit__newLimits').slideDown();
 		});

@@ -1668,7 +1668,6 @@
 		padding: 22px;
 		background: rgba(71, 161, 182, 0.5);
 		border-radius: 16px;
-		color: #367080;
 		font-family: $apercu;
 
 		&-title {
@@ -1679,7 +1678,6 @@
 		}
 
 		div {
-			color: #367080;
 			margin-bottom: 5px;
 			font-family: $apercu;
 
@@ -1698,6 +1696,10 @@
 
 		&-dag, &-vecka, &-manad {
 			display: none;
+
+			p {
+				color: #074658b3;
+			}
 
 			&.visible {
 				display: block;
