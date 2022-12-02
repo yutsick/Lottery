@@ -164,46 +164,46 @@
 				 }
 				>Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
             }
+		</div>
+		<div class="standingImgBlock__cta">
+			<div class="btn btn--sm btn_@@link_style
+			@@if(context.theme === 'light'){btn-primary}
+			@@if(context.theme === 'dark'){btn-invert}
+			@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background || context.desk_font || context.tab_font || context.mob_font){js-custom-device-props}"
+			@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
+				@@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color"}
+				@@if(!context.desk_btn_color) {data-desk-color="null"}
+				@@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color"}
+				@@if(!context.tab_btn_color) {data-tab-color="null"}
+				@@if(context.mob_btn_color) {data-mob-color="@@mob_btn_color"}
+				@@if(!context.mob_btn_color) {data-mob-color="null"}
+			}
 
-            <div class="standingImgBlock__cta">
-				<div class="btn btn--sm btn_@@link_style
-				@@if(context.theme === 'light'){btn-primary}
-				@@if(context.theme === 'dark'){btn-invert}
-				@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background || context.desk_font || context.tab_font || context.mob_font){js-custom-device-props}"
-			   @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
-				 @@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color"}
-				 @@if(!context.desk_btn_color) {data-desk-color="null"}
-				 @@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color"}
-				 @@if(!context.tab_btn_color) {data-tab-color="null"}
-				 @@if(context.mob_btn_color) {data-mob-color="@@mob_btn_color"}
-				 @@if(!context.mob_btn_color) {data-mob-color="null"}
-			  }
-
-			  @@if(context.link_style === 'button') {
-				@@if(context.desk_btn_background || context.tab_btn_background || context.mob_btn_background) {
-					@@if(context.desk_btn_background) {data-desk-background="@@desk_btn_background"}
-					@@if(!context.desk_btn_background) {data-desk-background="null"}
-					@@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background"}
-					@@if(!context.tab_btn_background) {data-tab-background="null"}
-					@@if(context.mob_btn_background) {data-mob-background="@@mob_btn_background"}
-					@@if(!context.mob_btn_background) {data-mob-background="null"}
-				 }
-			  }
+			@@if(context.link_style === 'button') {
+			@@if(context.desk_btn_background || context.tab_btn_background || context.mob_btn_background) {
+				@@if(context.desk_btn_background) {data-desk-background="@@desk_btn_background"}
+				@@if(!context.desk_btn_background) {data-desk-background="null"}
+				@@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background"}
+				@@if(!context.tab_btn_background) {data-tab-background="null"}
+				@@if(context.mob_btn_background) {data-mob-background="@@mob_btn_background"}
+				@@if(!context.mob_btn_background) {data-mob-background="null"}
+				}
+			}
 
 
-			  @@if(context.desk_font || context.tab_font || context.mob_font) {
-				@@if(context.desk_font) {data-desk-font="@@desk_font"}
-				@@if(!context.desk_font) {data-desk-font="null"}
-				@@if(context.tab_font) {data-tab-font="@@tab_font"}
-				@@if(!context.tab_font) {data-tab-font="null"}
-				@@if(context.mob_font) {data-mob-font="@@mob_font"}
-				@@if(!context.mob_font) {data-mob-font="null"}
-			 }
-			   >
-				   @@btn_title
-			 </div>
-            </div>
-        </div>
+			@@if(context.desk_font || context.tab_font || context.mob_font) {
+			@@if(context.desk_font) {data-desk-font="@@desk_font"}
+			@@if(!context.desk_font) {data-desk-font="null"}
+			@@if(context.tab_font) {data-tab-font="@@tab_font"}
+			@@if(!context.tab_font) {data-tab-font="null"}
+			@@if(context.mob_font) {data-mob-font="@@mob_font"}
+			@@if(!context.mob_font) {data-mob-font="null"}
+			}
+			>
+				@@btn_title
+			</div>
+		</div>
+
     }
 
     @@if(context.has_link === false) {

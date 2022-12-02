@@ -37,16 +37,17 @@
                 @@if(context.has_content_title){
                     <h4 class="standingImgBlock__title">Lorem ip&shy;sum do tem&shy;por</h4>
                 }
+			</div>
 
-                <div class="standingImgBlock__cta">
-                    @@if(context.theme === "light") {
-                      <div class="btn btn--sm btn-primary btn_@@link_style">@@btn_title</div>
-                    }
-                    @@if(context.theme === "dark") {
-                      <div class="btn btn--sm btn-invert btn_@@link_style">@@btn_title</div>
-                    }
-                </div>
-            </div>
+			<div class="standingImgBlock__cta">
+				@@if(context.theme === "light") {
+					<div class="btn btn--sm btn-primary btn_@@link_style">@@btn_title</div>
+				}
+				@@if(context.theme === "dark") {
+					<div class="btn btn--sm btn-invert btn_@@link_style">@@btn_title</div>
+				}
+			</div>
+
         }
 
         @@if(context.has_link === false) {

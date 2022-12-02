@@ -50,16 +50,16 @@
                         </p>
                     </div>
                 }
+			</div>
+			<div class="standingImgBlock__cta">
+				@@if(context.theme === "light") {
+					<div class="btn btn--sm btn-primary btn_@@link_style">@@btn_title</div>
+				}
+				@@if(context.theme === "dark") {
+					<div class="btn btn--sm btn-invert btn_@@link_style">@@btn_title</div>
+				}
+			</div>
 
-                <div class="standingImgBlock__cta">
-                    @@if(context.theme === "light") {
-                      <div class="btn btn--sm btn-primary btn_@@link_style">@@btn_title</div>
-                    }
-                    @@if(context.theme === "dark") {
-                      <div class="btn btn--sm btn-invert btn_@@link_style">@@btn_title</div>
-                    }
-                </div>
-            </div>
         }
 
         @@if(context.has_link === false) {
