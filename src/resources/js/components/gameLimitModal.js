@@ -138,7 +138,7 @@ export default function() {
 		$(input).on('input', function() {
 			let value = parseInt($(this).val());
 			console.log(value);
-			if(value < 300) {
+			if(value < 300 || !value) {
 				$(this).addClass('modal-gameLimit__item-input_error');
 				$(this).closest('.modal-body').find('.modal-gameLimit__error').slideDown();
 
