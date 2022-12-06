@@ -134,4 +134,24 @@ export default function() {
 	}
 	currencyInputInit(".modal-gameLimit input[data-type='currency']");
 
+	function checkInput(input) {
+		$(input).on('input', function() {
+			let value = parseInt($(this).val());
+			console.log(value);
+			if(value < 300) {
+				$(this).addClass('modal-gameLimit__item-input_error');
+				$(this).closest('.modal-body').find('.modal-gameLimit__error').slideDown();
+
+				$(this).closest('.modal-gameLimit__settings').find('.js-gameLimitToSuccess').prop('disabled', true);
+				$(this).closest('.modal-gameLimit__item').find('.js-gameLimit-save').prop('disabled', true);
+			} else {
+				$(this).removeClass('modal-gameLimit__item-input_error');
+				$(this).closest('.modal-body').find('.modal-gameLimit__error').slideUp();
+
+				$(this).closest('.modal-gameLimit__settings').find('.js-gameLimitToSuccess').prop('disabled', false);
+				$(this).closest('.modal-gameLimit__item').find('.js-gameLimit-save').prop('disabled', false);
+			}
+		})
+	}
+	checkInput('.modal-gameLimit__item-input');
 }
