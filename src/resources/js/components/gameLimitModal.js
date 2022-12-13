@@ -1,7 +1,7 @@
 export default function() {
 	function switchTo(btn, target) {
 		$(btn).on('click', function() {
-			$(this).closest('.modal-content').children().fadeOut();
+			$(this).closest('.modal-content').children().hide();
 			$(this).closest('.modal-content').find(target).fadeIn();
 		});
 	};
@@ -127,17 +127,17 @@ export default function() {
 		input.val(input_val);
 
 		// put caret back in the right position
-		var updated_len = input_val.length;
-		caret_pos = updated_len - original_len + caret_pos;
-		input[0].setSelectionRange(caret_pos, updated_len - 3);
+			var updated_len = input_val.length;
+			caret_pos = updated_len - original_len + caret_pos;
+			input[0].setSelectionRange(caret_pos, updated_len - 3);
 		}
 	}
 	currencyInputInit(".modal-gameLimit input[data-type='currency']");
 
 	function checkInput(input) {
 		$(input).on('input', function() {
-			let value = parseInt($(this).val());
-			console.log(value);
+			let value = parseInt($(this).val().replaceAll(' ', ''));
+
 			if(value < 300 || !value) {
 				$(this).addClass('modal-gameLimit__item-input_error');
 				$(this).closest('.modal-body').find('.modal-gameLimit__error').slideDown();
