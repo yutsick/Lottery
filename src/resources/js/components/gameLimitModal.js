@@ -53,7 +53,7 @@ export default function() {
 			formatCurrency($(this));
 			},
 			focus: function() {
-			formatCurrency($(this));
+			formatCurrency($(this), 'blur');
 			}
 		});
 
@@ -64,32 +64,36 @@ export default function() {
 		}
 
 
-		function formatCurrency(input) {
-		// appends $ to value, validates decimal side
-		// and puts cursor back in right position.
+		function formatCurrency(input, blur) {
+			// appends $ to value, validates decimal side
+			// and puts cursor back in right position.
 
-		// get input value
-		var input_val = input.val();
+			// get input value
+			var input_val = input.val();
 
-		// don't validate empty input
-		if (input_val === "") { return; }
+			// don't validate empty input
+			if (input_val === "") { return; }
 
-		// original length
-		var original_len = input_val.length;
+			// original length
+			var original_len = input_val.length;
 
-		// initial caret position
-		var caret_pos = input.prop("selectionStart");
+			// initial caret position
+			var caret_pos = input.prop("selectionStart");
 
-		input_val = formatNumber(input_val);
-		// input_val = input_val + " kr";
+			input_val = formatNumber(input_val);
+			// input_val = input_val + " kr";
 
-		// send updated string to input
-		input.val(input_val);
+			// send updated string to input
+			input.val(input_val);
 
-		// put caret back in the right position
-			// var updated_len = input_val.length;
-			// caret_pos = updated_len - original_len + caret_pos;
-			// input[0].setSelectionRange(caret_pos, updated_len - 3);
+			// put caret back in the right position
+				// var updated_len = input_val.length;
+				// caret_pos = updated_len - original_len + caret_pos;
+				// input[0].setSelectionRange(caret_pos, updated_len - 3);
+
+			if(blur) {
+				input.select();
+			}
 		}
 	}
 	currencyInputInit(".modal-gameLimit input[data-type='currency']");
