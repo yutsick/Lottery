@@ -147,11 +147,11 @@ export default function () {
 		if (winners[i]) {
 			let j = i % 2;
 			if (j == 0) {
-				$('.winners-slider').append('<div class="winner-item style01">' +
+				$('.s-winners .winners-slider').append('<div class="winner-item style01">' +
 					'<div class="icon"><img src="assets/img/icons/star-01.svg" alt=""></div><div class="text"><p>' + winners[i].NickName + '</p><p>' + winners[i].GameName + '</p></div></div>'
 				);
 			} else {
-				$('.winners-slider').append('<div class="winner-item style02">' +
+				$('.s-winners .winners-slider').append('<div class="winner-item style02">' +
 					'<div class="icon"><img src="assets/img/icons/star-02.svg" alt=""></div><div class="text"><p>' + winners[i].NickName + '</p><p>' + winners[i].GameName + '</p></div></div>'
 				);
 			}
