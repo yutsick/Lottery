@@ -1,30 +1,34 @@
+<!-- erewetwr -->
+ @@if(false) {
 <!--
 
-    @@image = url of image
-    standingImgBlock_@@theme = light/dark
+	@@image = url of image
+	standingImgBlock_@@theme = light/dark
 
-    (title) - has_content_title = false/true
+	(title) - has_content_title = false/true
 
 	(video) = false/true
 
-    (link) - has_link = false/true - if has link
-    @@btn_title = text of link
-    btn_@@link_style = underline/button
+	(link) - has_link = false/true - if has link
+	@@btn_title = text of link
+	btn_@@link_style = underline/button
 
-    (position for all text content):
-    alignment-@@text_alignment = left/center
-    placement-@@text_placement = top/center/bottom
+	(position for all text content):
+	alignment-@@text_alignment = left/center
+	placement-@@text_placement = top/center/bottom
 
-    (shadow) - overlay = false/true
-    standingImgBlock__overlay_@@position = top/center/bottom
+	(shadow) - overlay = false/true
+	standingImgBlock__overlay_@@position = top/center/bottom
 
-	@@desk_img - url for image on desktop = url
-	@@tab_img - url for image on tablets = url
-	@@mob_img - url for image on mobile = url
+	--media-data-switcher.js
 
-	@@desk_shadow - on/off shadow = null/none
-	@@tab_shadow - on/off shadow = null/none
-	@@mob_shadow - on/off shadow = null/none
+	@@desk_img - url for image on desktop = 'assets/img/mockup/standingImgBlock-placeholder.jpg'
+	@@tab_img - url for image on tablets = 'assets/img/mockup/standingImgBlock-placeholder.jpg'
+	@@mob_img - url for image on mobile = 'assets/img/mockup/standingImgBlock-placeholder.jpg'
+
+	@@desk_shadow - off shadow only on this width = "none"
+	@@tab_shadow - off shadow only on this width = "none"
+	@@mob_shadow - off shadow only on this width = "none"
 
 	Available key colors for using:
 	@@desk_background - key of color = 'Miljonbla' or ect.
@@ -39,57 +43,57 @@
 	@@tab_btn_color - key of color for BUTTON or LINK BUTTON = 'Turkos75' or ect.
 	@@mob_btn_color - key of color for BUTTON or LINK BUTTON = 'null' for default.
 
-	@@desk_btn_background - key of color for BUTTON or LINK BUTTON = 'Miljonbla' or ect.
-	@@tab_btn_background - key of color for BUTTON or LINK BUTTON = 'Turkos75' or ect.
-	@@mob_btn_background - key of color for BUTTON or LINK BUTTON = 'null' for default.
+	@@desk_btn_background - key of color for LINK BUTTON only = 'Miljonbla' or ect.
+	@@tab_btn_background - key of color for LINK BUTTON only = 'Turkos75' or ect.
+	@@mob_btn_background - key of color for LINK BUTTON only = 'null' for default.
 
-		Miljonbla: "#003E52",
-		Nord: "#1377B0",
-		Himmel: "#C7E7F8",
-		Moln: "#F5F5F5",
+	--Posible colors for using:
+			Miljonbla: "#003E52",
+			Nord: "#1377B0",
+			Himmel: "#C7E7F8",
+			Moln: "#F5F5F5",
 
-		Turkos: "#00A4B9",
-		Turkos75: "#70B9CB",
-		Turkos50: "#A8D1DC",
-		Turkos20: "#DEEDF2",
+			Turkos: "#00A4B9",
+			Turkos75: "#70B9CB",
+			Turkos50: "#A8D1DC",
+			Turkos20: "#DEEDF2",
 
-		Rosa: "#D96195",
-		Rosa75: "#E18DB1",
-		Rosa50: "#EBB6CE",
-		Rosa20: "#F7E3EC",
+			Rosa: "#D96195",
+			Rosa75: "#E18DB1",
+			Rosa50: "#EBB6CE",
+			Rosa20: "#F7E3EC",
 
-		Gron: "#50B78D",
-		Gron75: "#8BC9A9",
-		Gron50: "#B7DBC7",
-		Gron20: "#E4F0EA",
+			Gron: "#50B78D",
+			Gron75: "#8BC9A9",
+			Gron50: "#B7DBC7",
+			Gron20: "#E4F0EA",
 
-		Orange: "#F98F00",
-		Orange75: "#F7AA56",
-		Orange50: "#FBC890",
-		Orange20: "#FDE9D4",
+			Orange: "#F98F00",
+			Orange75: "#F7AA56",
+			Orange50: "#FBC890",
+			Orange20: "#FDE9D4",
 
-		Gul: "#FFD944",
-		Gul75: "#FFE27D",
-		Gul50: "#FFEBAD",
-		Gul20: "#FFF7E0",
+			Gul: "#FFD944",
+			Gul75: "#FFE27D",
+			Gul50: "#FFEBAD",
+			Gul20: "#FFF7E0",
 
-		null: "default for theme"
+			null: "default for theme"
 
 
-	Posible fonts for using:
-	@@desk_font - key of font = 'Apercu' or ect.
-	@@tab_font - key of font = 'ZingRust' or ect.
-	@@mob_font - key of font = 'null' for default.
+	@@font - key of font = 'apercu'.
+	context: title_font, btn_font
 
-		Apercu: "Apercu Pro",
-		ZingRust: "Zing Rust Demo Base",
-		ZingRustScript: "Zing Rust Demo SB Base Script",
-		null: "default font"
+	--Posible font keys for using:
+			apercu: "Apercu Pro",
+			zingRust: "Zing Rust Demo Base",
+			zingRustScript: "Zing Rust Demo SB Base Script",
  -->
+ }
 
  <a
  href="#"
- class="standingImgBlock standingImgBlock_big standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement @@if(context.desk_img || context.tab_img || context.mob_img || context.desk_background || context.tab_background || context.mob_background || context.desk_color || context.tab_color || context.mob_color || context.desk_font || context.tab_font || context.mob_font){js-custom-device-props}"
+ class="standingImgBlock standingImgBlock_big standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement @@if(context.desk_img || context.tab_img || context.mob_img || context.desk_background || context.tab_background || context.mob_background || context.desk_color || context.tab_color || context.mob_color){js-custom-device-props}"
  style="background-image: url(@@image);"
 
  @@if(context.desk_img || context.tab_img || context.mob_img) {
@@ -119,15 +123,6 @@
 	@@if(!context.mob_color) {data-mob-color="null"}
  }
 
- @@if(context.desk_font || context.tab_font || context.mob_font) {
-	@@if(context.desk_font) {data-desk-font="@@desk_font"}
-	@@if(!context.desk_font) {data-desk-font="null"}
-	@@if(context.tab_font) {data-tab-font="@@tab_font"}
-	@@if(!context.tab_font) {data-tab-font="null"}
-	@@if(context.mob_font) {data-mob-font="@@mob_font"}
-	@@if(!context.mob_font) {data-mob-font="null"}
- }
-
  >
 
 	@@if(context.video === true) {
@@ -153,23 +148,15 @@
         <div class="standingImgBlock__content">
 
             @@if(context.has_content_title){
-                <h4 class="standingImgBlock__title @@if(context.desk_font || context.tab_font || context.mob_font){js-custom-device-props}"
-				@@if(context.desk_font || context.tab_font || context.mob_font) {
-					@@if(context.desk_font) {data-desk-font="@@desk_font"}
-					@@if(!context.desk_font) {data-desk-font="null"}
-					@@if(context.tab_font) {data-tab-font="@@tab_font"}
-					@@if(!context.tab_font) {data-tab-font="null"}
-					@@if(context.mob_font) {data-mob-font="@@mob_font"}
-					@@if(!context.mob_font) {data-mob-font="null"}
-				 }
+                <h4 class="standingImgBlock__title @@if(context.title_font){family-@@title_font}"
 				>Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
             }
 		</div>
 		<div class="standingImgBlock__cta">
-			<div class="btn btn--sm btn_@@link_style
+			<button type="button" class="btn btn--sm btn_@@link_style
 			@@if(context.theme === 'light'){btn-primary}
 			@@if(context.theme === 'dark'){btn-invert}
-			@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background || context.desk_font || context.tab_font || context.mob_font){js-custom-device-props}"
+			@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
 			@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
 				@@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color"}
 				@@if(!context.desk_btn_color) {data-desk-color="null"}
@@ -180,28 +167,19 @@
 			}
 
 			@@if(context.link_style === 'button') {
-			@@if(context.desk_btn_background || context.tab_btn_background || context.mob_btn_background) {
-				@@if(context.desk_btn_background) {data-desk-background="@@desk_btn_background"}
-				@@if(!context.desk_btn_background) {data-desk-background="null"}
-				@@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background"}
-				@@if(!context.tab_btn_background) {data-tab-background="null"}
-				@@if(context.mob_btn_background) {data-mob-background="@@mob_btn_background"}
-				@@if(!context.mob_btn_background) {data-mob-background="null"}
+				@@if(context.desk_btn_background || context.tab_btn_background || context.mob_btn_background) {
+					@@if(context.desk_btn_background) {data-desk-background="@@desk_btn_background"}
+					@@if(!context.desk_btn_background) {data-desk-background="null"}
+					@@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background"}
+					@@if(!context.tab_btn_background) {data-tab-background="null"}
+					@@if(context.mob_btn_background) {data-mob-background="@@mob_btn_background"}
+					@@if(!context.mob_btn_background) {data-mob-background="null"}
 				}
 			}
 
-
-			@@if(context.desk_font || context.tab_font || context.mob_font) {
-			@@if(context.desk_font) {data-desk-font="@@desk_font"}
-			@@if(!context.desk_font) {data-desk-font="null"}
-			@@if(context.tab_font) {data-tab-font="@@tab_font"}
-			@@if(!context.tab_font) {data-tab-font="null"}
-			@@if(context.mob_font) {data-mob-font="@@mob_font"}
-			@@if(!context.mob_font) {data-mob-font="null"}
-			}
 			>
 				@@btn_title
-			</div>
+		</button>
 		</div>
 
     }
@@ -209,7 +187,7 @@
     @@if(context.has_link === false) {
         <div class="standingImgBlock__content">
             @@if(context.has_content_title){
-                <h4 class="standingImgBlock__title">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
+                <h4 class="standingImgBlock__title @@if(context.title_font){family-@@title_fontfont}">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
             }
         </div>
     }

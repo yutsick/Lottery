@@ -22,6 +22,18 @@
         word-spacing: -0.03em;
         max-width: 640px;
 		hyphens: none;
+
+		&.family-apercu {
+			font-family: $apercu;
+		}
+
+		&.family-zingRust {
+			font-family: $zingRust;
+		}
+
+		&.family-zingRustScript {
+			font-family: $zingRustScript;
+		}
     }
 
     &__cta {
@@ -37,6 +49,20 @@
             font-weight: bold;
             padding: 0;
         }
+
+		.btn {
+			&.family-apercu {
+				font-family: $apercu;
+			}
+
+			&.family-zingRust {
+				font-family: $zingRust;
+			}
+
+			&.family-zingRustScript {
+				font-family: $zingRustScript;
+			}
+		}
     }
 
 	&__content {

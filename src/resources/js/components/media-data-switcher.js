@@ -42,13 +42,6 @@ export default function () {
 					$(this)
 				);
 			}
-			if ($(this).attr(`data-${device}-font`)) {
-				changeProp(
-					"font",
-					$(this).attr(`data-${device}-font`),
-					$(this)
-				);
-			}
 			if ($(this).attr(`data-${device}-shadow`)) {
 				changeProp(
 					"shadow",
@@ -63,7 +56,6 @@ export default function () {
 				img: "background-image",
 				color: "color",
 				background: "background-color",
-				font: "font-family",
 				shadow: "background",
 			};
 
@@ -98,11 +90,6 @@ export default function () {
 				Gul50: "#FFEBAD",
 				Gul20: "#FFF7E0",
 			};
-			const fonts = {
-				Apercu: "Apercu Pro",
-				ZingRust: "Zing Rust Demo Base",
-				ZingRustScript: "Zing Rust Demo SB Base Script",
-			};
 
 			if (prop === "img") {
 				data = `url(${data})`;
@@ -117,14 +104,6 @@ export default function () {
 					data = "";
 				} else {
 					data = colors[data];
-				}
-			}
-
-			if (prop === "font") {
-				if (!data) {
-					data = "";
-				} else {
-					data = fonts[data];
 				}
 			}
 
