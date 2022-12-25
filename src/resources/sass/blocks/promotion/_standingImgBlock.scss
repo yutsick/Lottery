@@ -3,9 +3,9 @@
 	flex-direction: column;
     margin: 0;
     position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center!important;
     text-decoration: none;
     padding: 40px 20px 32px;
     margin-bottom: 60px;
@@ -22,18 +22,6 @@
         word-spacing: -0.03em;
         max-width: 640px;
 		hyphens: none;
-
-		&.family-apercu {
-			font-family: $apercu;
-		}
-
-		&.family-zingRust {
-			font-family: $zingRust;
-		}
-
-		&.family-zingRustScript {
-			font-family: $zingRustScript;
-		}
     }
 
     &__cta {
@@ -49,20 +37,6 @@
             font-weight: bold;
             padding: 0;
         }
-
-		.btn {
-			&.family-apercu {
-				font-family: $apercu;
-			}
-
-			&.family-zingRust {
-				font-family: $zingRust;
-			}
-
-			&.family-zingRustScript {
-				font-family: $zingRustScript;
-			}
-		}
     }
 
 	&__content {
@@ -280,6 +254,18 @@
             color: $color-primary;
         }
     }
+
+	*.family-apercu {
+		font-family: $apercu;
+	}
+
+	*.family-zingRust {
+		font-family: $zingRust;
+	}
+
+	*.family-zingRustScript {
+		font-family: $zingRustScript;
+	}
 }
 
 @media screen and (max-width: 1400px) {
@@ -301,7 +287,7 @@
     }
 
     .standingImgBlock_small {
-        height: 73vw;
+        height: 62vw;
 
         .standingImgBlock__title {
             font-size: 28px;

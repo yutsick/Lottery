@@ -25,9 +25,7 @@ export default function () {
 
 	function checkDataProp(device) {
 		$(triggerClass).each(function () {
-			if ($(this).attr(`data-${device}-img`)) {
-				changeProp("img", $(this).attr(`data-${device}-img`), $(this));
-			}
+
 			if ($(this).attr(`data-${device}-color`)) {
 				changeProp(
 					"color",
@@ -53,9 +51,8 @@ export default function () {
 
 		function changeProp(prop, data, target) {
 			const props = {
-				img: "background-image",
 				color: "color",
-				background: "background-color",
+				background: "background",
 				shadow: "background",
 			};
 
@@ -91,19 +88,25 @@ export default function () {
 				Gul20: "#FFF7E0",
 			};
 
-			if (prop === "img") {
-				data = `url(${data})`;
-			}
-
-			if (data === "null") {
+			if (data === "null" || !data) {
 				data = "";
 			}
 
-			if (prop === "color" || prop === "background") {
-				if (!data) {
+			if (prop === "color") {
+				if (data === "null" || !data) {
 					data = "";
 				} else {
 					data = colors[data];
+				}
+			}
+
+			if(prop === "background") {
+				if (data === "null" || !data) {
+					data = "";
+				} else if (colors[data]) {
+					data = colors[data];
+				} else {
+					data = `url(${data})`;
 				}
 			}
 
