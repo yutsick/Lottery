@@ -917,3 +917,50 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+.register-bonusar {
+	font-size: 20px;
+
+	@media screen and (max-width:768px) {
+		font-size: 18px;
+	}
+
+	form {
+		@media screen and (max-width:768px) {
+			margin-top: 20px;
+		}
+	}
+
+	form > input {
+		font-family: $apercu;
+		font-weight: 600;
+		font-size: 30px;
+
+		@media screen and (max-width:992px) {
+			font-size: 30px;
+			height: 62px;
+		}
+
+		@media screen and (max-width:768px) {
+			font-size: 18px;
+			height: 48px;
+			padding-left: 20px;
+		}
+	}
+
+	form > .btn-success {
+		height: 46px;
+		margin-top: -23px;
+		font-weight: 500;
+		right: 7px;
+
+		@media screen and (max-width:768px) {
+			height: 38px;
+			margin-top: -19px;
+			right: 5px;
+		}
+	}
+}

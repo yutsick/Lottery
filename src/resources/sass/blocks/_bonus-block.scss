@@ -1,0 +1,129 @@
+.bonus-block {
+    position: relative;
+    margin: 20px 0;
+    padding: 40px 20px 30px;
+    width: 100%;
+    // height: 100%;
+    max-width: 100%;
+	min-height: 280px;
+    overflow: hidden;
+	z-index: 0;
+	display: flex;
+
+	.image {
+		background-color: #003E52;
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+
+		img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&_shadow {
+		.image {
+			&::after {
+				content: '';
+				left: 0;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				display: block;
+				background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+			}
+		}
+	}
+
+	.content {
+		flex-grow: 1;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+
+		p, h4 {
+			color: #fff;
+		}
+
+		button {
+			margin-top: auto;
+			max-width: 215px;
+			width: 100%;
+			height: 38px;
+			padding: 5px 20px;
+		}
+
+	}
+
+	&.text_dark {
+		.content {
+			p, h4 {
+				color: #003e52;
+			}
+		}
+	}
+
+	&__activated {
+		background-color: rgba($color: #fff, $alpha: 0.75);
+		border: 1px solid #003e52;
+		height: 52px;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: auto;
+		text-align: center;
+		color: #003e52;
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding: 5px 20px;
+		margin-bottom: -10px;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 20px;
+			height: 19px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='18.579' viewBox='0 0 20 18.579'%3E%3Cpath id='Path_2_Copy' data-name='Path 2 Copy' d='M5.505,16.078l-7.119-6.014a2.5,2.5,0,0,1-.3-3.523,2.5,2.5,0,0,1,3.523-.3L4.781,8.922l8.256-10.47a2.5,2.5,0,0,1,3.511-.415,2.5,2.5,0,0,1,.415,3.511Z' transform='translate(2.5 2.5)' fill='%23003e52'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			margin-right: 9px;
+		}
+	}
+
+	&__form {
+		margin-top: 10px;
+
+		&-input {
+			width: 100%;
+			margin-bottom: 10px;
+			height: 48px;
+			color: #003e52;
+			font-size: 18px;
+			font-family: $apercu;
+			font-weight: 600;
+			border-radius: 24px;
+			background: rgba(255, 255, 255, 0.85);
+			border: 2px solid #003e52;
+			padding:  5px 20px;
+		}
+
+		button.btn-success {
+			font-weight: 600;
+			max-width: 140px;
+		}
+	}
+}
