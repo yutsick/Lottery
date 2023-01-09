@@ -68,6 +68,7 @@ import checkOutIn from "./components/checkout-module";
 import functionSlick from "./components/function-slick";
 import mediaDataSwitcher from "./components/media-data-switcher.js";
 import gameLimitModal from "./components/gameLimitModal.js";
+import bonuskodsFunctionen from "./components/bonuskods-functionen";
 
 /* Layout */
 import navigation from "./layout/navigation";
@@ -171,6 +172,8 @@ $(function () {
 	breakpointListener();
 
 	gameLimitModal();
+
+	bonuskodsFunctionen();
 });
 
 /**
