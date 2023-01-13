@@ -27,7 +27,8 @@
 
 	&__form {
 		margin-top: 32px;
-
+		margin-left: 4px;
+		
 		@media screen and (max-width:500px) {
 			margin-top: 16px;
 		}
@@ -160,6 +161,10 @@
 
 		@media screen and (max-width:500px) {
 			padding: 22px;
+		}
+
+		p{
+			margin-left: 4px;
 		}
 	}
 
