@@ -19,15 +19,19 @@
 
 @font-face {
 	font-family: 'apercu-light-pro';
+	src: url('../fonts/ApercuPro-Light.eot');
 	src: url('../fonts/apercu-light-pro.woff2') format('woff2'),
-	url('../fonts/apercu-light-pro.woff') format('woff');
+	url('../fonts/apercu-light-pro.woff') format('woff'),
+	url('../fonts/ApercuPro-Light.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'apercu-regular-pro';
+	src: url('../fonts/ApercuPro-Regular.eot');
 	src: url('../fonts/apercu-regular-pro.woff2') format('woff2'),
-	url('../fonts/apercu-regular-pro.woff') format('woff');
+	url('../fonts/apercu-regular-pro.woff') format('woff'),
+	url('../fonts/ApercuPro-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
