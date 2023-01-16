@@ -1,6 +1,6 @@
-export default function() {
+export default function () {
 	function switchTo(btn, target) {
-		$(btn).on('click', function() {
+		$(btn).on('click', function () {
 			$(this).closest('.modal-content').children().hide();
 			$(this).closest('.modal-content').find(target).fadeIn();
 		});
@@ -12,7 +12,7 @@ export default function() {
 
 
 	function changeContent(btn) {
-		$(btn).on('click', function() {
+		$(btn).on('click', function () {
 			$(this).closest('.modal-gameLimit__item').find('.modal-gameLimit__item-text').toggle();
 			$(this).closest('.modal-gameLimit__item').find('.modal-gameLimit__item-input').toggle();
 
@@ -23,7 +23,7 @@ export default function() {
 	changeContent('.js-gameLimit-change');
 
 	function saveInput(btn) {
-		$(btn).on('click', function() {
+		$(btn).on('click', function () {
 
 			let value = $(this).closest('.modal-gameLimit__item').find('.modal-gameLimit__item-input').val().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' kr';
 			$(this).closest('.modal-gameLimit__item').find('.modal-gameLimit__item-input').val(value);
@@ -31,9 +31,9 @@ export default function() {
 			let text = $(this).closest('.modal-gameLimit__item').find('.modal-gameLimit__item-input').attr('data-text');
 
 			let date = new Date();
-			let time = `${date.getHours()}.${(date.getMinutes()<10?'0':'') + date.getMinutes()}`;
+			let time = `${date.getHours()}.${(date.getMinutes() < 10 ? '0' : '') + date.getMinutes()}`;
 
-			if(input === 'dag') {
+			if (input === 'dag') {
 				$(this).closest('.modal-body').find(`.modal-gameLimit__newLimits-dag`).html(`<p><b>${value}</b> per ${text} gäller&nbsp;från&nbsp;<b>${date.getDate()}/${date.getMonth() + 1}</b> kl <b>${time}</b><p>`);
 			} else {
 				$(this).closest('.modal-body').find(`.modal-gameLimit__newLimits-${input}`).html(`<p><b>${value}</b> per ${text} gäller&nbsp;från&nbsp;<b>${date.getDate()}/${date.getMonth() + 1}</b><p>`);
@@ -49,19 +49,24 @@ export default function() {
 	function currencyInputInit(input) {
 		// Jquery Dependency
 		$(input).on({
-			keyup: function() {
-			formatCurrency($(this));
+			keyup: function () {
+				formatCurrency($(this));
 			},
-			focus: function() {
-			formatCurrency($(this), 'blur');
+			focus: function () {
+				formatCurrency($(this), 'blur');
 			}
 		});
 
 
 		function formatNumber(n) {
-		// format number 1000000 to 1 234 567
-		return n.replace(/\D/g, "");
-		}
+
+			if(n.length>4){
+				n= n.replace(/\s/g, '');
+			}
+			
+			return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		};
+
 
 
 		function formatCurrency(input, blur) {
@@ -87,11 +92,11 @@ export default function() {
 			input.val(input_val);
 
 			// put caret back in the right position
-				// var updated_len = input_val.length;
-				// caret_pos = updated_len - original_len + caret_pos;
-				// input[0].setSelectionRange(caret_pos, updated_len - 3);
+			// var updated_len = input_val.length;
+			// caret_pos = updated_len - original_len + caret_pos;
+			// input[0].setSelectionRange(caret_pos, updated_len - 3);
 
-			if(blur) {
+			if (blur) {
 				input.select();
 			}
 		}
@@ -99,10 +104,10 @@ export default function() {
 	currencyInputInit(".modal-gameLimit input[data-type='currency']");
 
 	function checkInput(input) {
-		$(input).on('input', function() {
+		$(input).on('input', function () {
 			let value = parseInt($(this).val().replaceAll(' ', ''));
 
-			if(value < 300 || !value) {
+			if (value < 300 || !value) {
 				$(this).addClass('modal-gameLimit__item-input_error');
 				$(this).closest('.modal-body').find('.modal-gameLimit__error').slideDown();
 
