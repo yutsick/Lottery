@@ -1,0 +1,76 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-out",
+"logged_in": false
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+<div class="content-wrapper ml-2017">
+  <div class="container">
+    <div class="col-12">
+      <h3 class="section__heading h3">Dual bg + image, media video, media on top, font Zing</h3>
+    </div>
+  </div>
+  
+  @@include('blocks/_dual-video.html', {
+    "theme_top": "dark",
+    "theme_bottom": "light",
+    "image_top": "https://img.youtube.com/vi/EOQZ4VEi92M/maxresdefault.jpg",
+    "image_bottom": false,
+    "font": "Zing",
+    "cta_position_top": "left",
+    "cta_position_bottom": "right",
+    "media_position": "right",
+    "media": "video", 
+    "media_image": "https://img.youtube.com/vi/EOQZ4VEi92M/maxresdefault.jpg",
+    "media_theme": "light",
+    "media_on_top": true
+    
+  })
+
+  <div class="container">
+    <div class="col-12">
+      <h3 class="section__heading h3">Dual bg + bg, media img, media left, media light, font Apercu</h3>
+    </div>
+  </div>
+  
+  @@include('blocks/_dual-video.html', {
+  "theme_top": "light",
+  "theme_bottom": "dark",
+  "image_top": false,
+  "image_bottom": false,
+  "font": "Apercu",
+  "cta_position_top": "right",
+  "cta_position_bottom": "left",
+  "media_position": "left",
+  "media": "image",
+  "media_image": "https://img.youtube.com/vi/EOQZ4VEi92M/maxresdefault.jpg",
+  "media_theme": "light",
+  "media_on_top": false
+  
+  })
+  <div class="container">
+    <div class="col-12">
+      <h3 class="section__heading h3">Dual bg image, media img, media theme dark, media on top false, font Proxima</h3>
+    </div>
+  </div>
+  
+  @@include('blocks/_dual-video.html', {
+  "theme_top": "dark",
+  "theme_bottom": "light",
+  "image_top": false,
+  "image_bottom": false,
+  "font": "Proxima",
+  "cta_position_top": "left",
+  "cta_position_bottom": "right",
+  "media_position": "right",
+  "media": "image",
+  "media_image": "https://img.youtube.com/vi/EOQZ4VEi92M/maxresdefault.jpg",
+  "media_theme": "dark",
+  "media_on_top":  false
+  
+  })
+
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
