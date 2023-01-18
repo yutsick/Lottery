@@ -32,6 +32,10 @@
       font: 600 20px/36px $base-font-family;
       color: #fff;
 
+      @media (max-width:1216px) {
+        font: 700 20px/26px $base-font-family;
+      }
+
       @media(max-width: 769px) {
         font: 700 24px/36px $base-font-family;
       }
@@ -147,6 +151,11 @@
     line-height: 65px;
     font-weight: 400;
 
+    @media (max-width:1216px) {
+      font-size: 3rem;
+      line-height: 3.2rem;
+    }
+
     @media (max-width: 769px) {
       font-size: 64px;
       line-height: 64px;
@@ -183,7 +192,6 @@
   .block-hero__title,
   .btn-cta {
     font-family: $apercu-bold-font;
-    font-style: italic;
   }
 }
 
@@ -192,6 +200,5 @@
   .block-hero__title,
   .btn-cta {
     font-family: $base-font-family;
-    font-style: italic;
   }
 }

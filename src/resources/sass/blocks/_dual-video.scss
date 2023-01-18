@@ -22,7 +22,7 @@ section.dual-video {
 
   .dual-grid {
     display: grid;
-    grid-template-columns: 670px 670px;
+    grid-template-columns: auto auto;
     grid-template-rows: 383px;
     column-gap: 20px;
     margin-bottom: 60px;
