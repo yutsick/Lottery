@@ -1,0 +1,47 @@
+@@include('layout/_header.html', {
+"class": "page-front logged-out",
+"logged_in": false
+})
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+
+<div class="content-wrapper ml-2017">
+  Content top, en_miljon white, list yellow, hero w=40%, font Zing
+  @@include('blocks/_hero-v2.html', {
+  "hero_align": "top",
+  "hero_width": "40%",
+  "list_color":"yellow",
+  "en_miljon": "white",
+  "font_family": "Zing",
+  "desktop_image": "assets/img/mockup/hero-v2-image.png",
+  "tablet_image": "assets/img/mockup/hero-v2-tablet-image.png",
+  "mobile_image": "assets/img/mockup/hero-v2-mobile-image.png"
+  })
+ 
+  Content bottom, en_miljon yellow, list green, hero w=60%, font Apercu
+  @@include('blocks/_hero-v2.html', {
+  "hero_align": "bottom",
+  "hero_width": "60%",
+  "list_color":"green",
+  "en_miljon": "yellow",
+  "font_family": "Apercu", 
+  "desktop_image": "assets/img/mockup/hero-v2-image.png",
+  "tablet_image": "assets/img/mockup/hero-v2-tablet-image.png",
+  "mobile_image": "assets/img/mockup/hero-v2-mobile-image.png"
+  })
+
+  Content bottom, en_miljon yellow, list yellow, hero w=50%, font Proxima
+  @@include('blocks/_hero-v2.html', {
+  "hero_align": "bottom",
+  "hero_width": "50%",
+  "list_color":"yellow",
+  "en_miljon": "yellow",
+  "font_family": "Proxima", 
+  "desktop_image": "assets/img/mockup/hero-v2-image.png",
+  "tablet_image": "assets/img/mockup/hero-v2-tablet-image.png",
+  "mobile_image": "assets/img/mockup/hero-v2-mobile-image.png"
+  })
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
