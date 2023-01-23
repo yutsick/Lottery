@@ -1,0 +1,65 @@
+<div class="col-xs-12">
+  <div
+    class="text-block text-block--large text-block--@@theme alignment-@@text_alignment @@background-color-class @@if(context.desk_text_color || context.tab_text_color || context.mob_text_color){js-custom-device-props}"
+    @@if(context.desk_text_color || context.tab_text_color || context.mob_text_color) { @@if(context.desk_text_color)
+    {data-desk-color="@@desk_text_color" } @@if(!context.desk_text_color) {data-desk-color="null" }
+    @@if(context.tab_text_color) {data-tab-color="@@tab_text_color" } @@if(!context.tab_text_color)
+    {data-tab-color="null" } @@if(context.mob_text_color) {data-mob-color="@@mob_text_color" }
+    @@if(!context.mob_text_color) {data-mob-color="null" } }>
+    @@if(context.has_link === true){
+    <a href="#" class="text-block__content">
+      @@if(context.has_content_title){
+      <h4 class="text-block__title @@if(context.text_font){family-@@text_font}">Varje lott gör skillnad</h4>
+      }
+      @@if(context.has_content_description){
+      <p class="text-block__text">Det här är lotteriet för dig som känner att andras välmående är högsta vinsten. Hos
+        Miljonlotteriet ger varje lott du köper fler människor stöd att komma till en trygg och drogfri miljö. </p>
+      }
+      <div class="text-block__cta ">
+        @@if(context.theme === "light") {
+        <div
+          class="btn btn--sm btn-primary @if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
+          @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) { @@if(context.desk_btn_color)
+          {data-desk-color="@@desk_btn_color" } @@if(!context.desk_btn_color) {data-desk-color="null" }
+          @@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color" } @@if(!context.tab_btn_color)
+          {data-tab-color="null" } @@if(context.mob_btn_color) {data-mob-color="@@mob_btn_color" }
+          @@if(!context.mob_btn_color) {data-mob-color="null" } } @@if(context.desk_btn_background ||
+          context.tab_btn_background || context.mob_btn_background) { @@if(context.desk_btn_background)
+          {data-desk-background="@@desk_btn_background" } @@if(!context.desk_btn_background)
+          {data-desk-background="null" } @@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background" }
+          @@if(!context.tab_btn_background) {data-tab-background="null" } @@if(context.mob_btn_background)
+          {data-mob-background="@@mob_btn_background" } @@if(!context.mob_btn_background) {data-mob-background="null" }
+          }>@@btn_title</div>
+        }
+        @@if(context.theme === "dark") {
+        <div
+          class="btn btn--sm btn-invert @if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
+          @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) { @@if(context.desk_btn_color)
+          {data-desk-color="@@desk_btn_color" } @@if(!context.desk_btn_color) {data-desk-color="null" }
+          @@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color" } @@if(!context.tab_btn_color)
+          {data-tab-color="null" } @@if(context.mob_btn_color) {data-mob-color="@@mob_btn_color" }
+          @@if(!context.mob_btn_color) {data-mob-color="null" } } @@if(context.desk_btn_background ||
+          context.tab_btn_background || context.mob_btn_background) { @@if(context.desk_btn_background)
+          {data-desk-background="@@desk_btn_background" } @@if(!context.desk_btn_background)
+          {data-desk-background="null" } @@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background" }
+          @@if(!context.tab_btn_background) {data-tab-background="null" } @@if(context.mob_btn_background)
+          {data-mob-background="@@mob_btn_background" } @@if(!context.mob_btn_background) {data-mob-background="null" }
+          }>@@btn_title</div>
+        }
+      </div>
+    </a>
+    }
+
+    @@if(context.has_link === false){
+    <div class="text-block__content">
+      @@if(context.has_content_title){
+      <h4 class="text-block__title @@if(context.text_font){family-@@text_font}">Varje lott gör skillnad</h4>
+      }
+      @@if(context.has_content_description){
+      <p class="text-block__text">Det här är lotteriet för dig som känner att andras välmående är högsta vinsten. Hos
+        Miljonlotteriet ger varje lott du köper fler människor stöd att komma till en trygg och drogfri miljö. </p>
+      }
+    </div>
+    }
+  </div>
+</div>

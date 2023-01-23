@@ -96,6 +96,8 @@
 
 	@@if(context.desk_background || context.tab_background || context.mob_background) {
 		@@if(context.desk_background) {data-desk-background="@@desk_background"}
+		@@if(context.tab_background) {data-tab-background="@@tab_background"}
+		@@if(context.mob_background) {data-mob-background="@@mob_background"}
 
 		@@if(!context.desk_background && !context.image) {data-desk-background="null"}
 		@@if(!context.desk_background && context.image) {data-desk-background="@@image"}

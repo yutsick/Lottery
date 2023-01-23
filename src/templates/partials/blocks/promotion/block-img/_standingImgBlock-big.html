@@ -74,7 +74,7 @@
 		Gul50: "#FFEBAD",
 		Gul20: "#FFF7E0",
 
-
+ 
 	@@font - key of font = 'apercu' or ect..
 	context keys: text_font, btn_font - for all devices width;
 	Like "text_font": "apercu";
@@ -93,6 +93,8 @@
 
  @@if(context.desk_background || context.tab_background || context.mob_background) {
 	@@if(context.desk_background) {data-desk-background="@@desk_background"}
+	@@if(context.tab_background) {data-tab-background="@@tab_background"}
+	@@if(context.mob_background) {data-mob-background="@@mob_background"}
 
 	@@if(!context.desk_background && !context.image) {data-desk-background="null"}
 	@@if(!context.desk_background && context.image) {data-desk-background="@@image"}
