@@ -42,6 +42,7 @@ section.dual-video {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 
     .cta {
       justify-content: flex-end;
@@ -54,6 +55,19 @@ section.dual-video {
 
       @media (max-width: 426px) {
         height: 55vw;
+      }
+    }
+
+    .s-video {
+      max-height: 383px;
+
+
+      @media (max-width: 768px) {
+        height: 51vw;
+      }
+
+      @media (max-width: 425px) {
+        height: 49vw;
       }
     }
   }
