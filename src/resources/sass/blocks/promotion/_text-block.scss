@@ -24,6 +24,11 @@
 		}
 	}
 	
+	&.text-block-extended{
+		.text-block__content {
+				color: inherit;
+			}
+	}
 	&.alignment {
 		&-center {
 			text-align: center;

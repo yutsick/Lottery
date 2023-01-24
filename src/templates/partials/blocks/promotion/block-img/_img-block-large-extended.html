@@ -25,10 +25,13 @@
       @@if(context.overlay === true) {
       <div
         class="img-block__overlay img-block__overlay_@@position @@if(context.desk_shadow || context.tab_shadow || context.mob_shadow){js-custom-device-props}"
-        @@if(context.desk_shadow || context.tab_shadow || context.mob_shadow) { @@if(context.desk_shadow)
-        {data-desk-shadow="@@desk_shadow" } @@if(!context.desk_shadow) {data-desk-shadow="null" }
-        @@if(context.tab_shadow) {data-tab-shadow="@@tab_shadow" } @@if(!context.tab_shadow) {data-tab-shadow="null" }
-        @@if(context.mob_shadow) {data-mob-shadow="@@mob_shadow" } @@if(!context.mob_shadow) {data-mob-shadow="null" }
+        @@if(context.desk_shadow || context.tab_shadow || context.mob_shadow) { 
+          @@if(context.desk_shadow){data-desk-shadow="@@desk_shadow" } 
+          @@if(!context.desk_shadow) {data-desk-shadow="null" }
+          @@if(context.tab_shadow) {data-tab-shadow="@@tab_shadow" } 
+          @@if(!context.tab_shadow) {data-tab-shadow="null" }
+          @@if(context.mob_shadow) {data-mob-shadow="@@mob_shadow" } 
+          @@if(!context.mob_shadow) {data-mob-shadow="null" }
         }></div>
       }
       @@if(context.has_content_title){

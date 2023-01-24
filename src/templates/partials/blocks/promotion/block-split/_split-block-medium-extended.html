@@ -20,7 +20,7 @@
         <div class="split-block__cta">
           @@if(context.theme === "light") {
           <div
-            class="btn btn--sm btn-primary @if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
+            class="btn btn--sm btn-primary @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
             @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
             @@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color" } @@if(!context.desk_btn_color)
             {data-desk-color="null" } @@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color" }
@@ -35,7 +35,7 @@
           }
           @@if(context.theme === "dark") {
           <div
-            class="btn btn--sm btn-invert @if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
+            class="btn btn--sm btn-invert @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
             @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
             @@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color" } @@if(!context.desk_btn_color)
             {data-desk-color="null" } @@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color" }

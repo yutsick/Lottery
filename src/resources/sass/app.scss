@@ -82,18 +82,29 @@ body.none_scroll__ {
 	}
 }
 
-.family-Zing {
+.family-Zing, .family-zingRust {
 	font-family: $zingRust !important;
 }
 
-.family-Zing {
+.family-Zing,
+.family-zingRust {
 
 	h2,
 	ul li {
 		font-family: $zingRust !important;
 	}
 }
+.family-ZingRustScript {
+	font-family: $zingRustScript !important;
+}
 
+.family-ZingRustScript {
+
+	h2,
+	ul li {
+		font-family: $zingRustScript !important;
+	}
+}
 #alert-cookie,
 .message-container,
 #top {
