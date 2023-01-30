@@ -114,13 +114,14 @@
     @media (max-width:769px) {
       width: 100% !important;
       padding: 50px 0 40px 44px;
+       height: auto;
     }
 
     @media (max-width:426px) {
       padding: 0;
       align-items: center;
       justify-content: flex-start;
-      height: auto;
+     
     }
 
     .text-white {
@@ -176,6 +177,13 @@
   .block-hero-image-wrapper {
     flex: 1 1;
     justify-content: flex-end;
+    .block-hero-img{
+      img{
+        height: 100%;
+        object-fit: cover;
+        object-position: top left;
+      }
+    }
   }
 }
 
