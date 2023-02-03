@@ -242,7 +242,8 @@
 .winner-item {
 	display: flex;
 	align-items: center;
-	width: 235px;
+	min-width: 235px;
+	width: auto;
 	height: 44px;
 	border-radius: 15px;
 	font-size: $size-smallest;
@@ -293,7 +294,8 @@
 		padding-bottom: 6px;
 		padding-right: 25px;
 		font-size: 14px;
-		width: 254px;
+		min-width: 254px;
+		width: auto;
 		line-height: 130%;
 		height: 48px;
 
