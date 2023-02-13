@@ -215,7 +215,7 @@
 	}
 }
 
-.winners-slider {
+.winners-slider, .winners-slider-slick{
 	width: 100%;
 	@include min-screen($screen-md-min) {
 		width: calc(100% - 145px);
@@ -310,6 +310,7 @@
 			display: block;
 			background: #153B4E;
 			border-radius: 12px;
+			top:4px;
 		}
 
 		&::after {
@@ -319,7 +320,7 @@
 			height: 25px;
 			position: absolute;
 			left: 15px;
-
+			top:12px;
 			background-position: center;
 			background-size: contain;
 			background-repeat: no-repeat;
