@@ -121,8 +121,8 @@ const ExportLottery = () => {
         
         $form.submit((e) => {
             e.preventDefault();
-            let value = parseInt($input.val());
-            if (!isNaN(value) && value.toString().length == 12) {
+            let value = $input.val();
+            if (value.length != 0) {
                 $input.popover('hide');
                 hideKeyboard();
                 loading(true);
@@ -199,7 +199,7 @@ const ExportLottery = () => {
         $input = $('#lotterynumberinput');
         $loader = $('.loader');
         $button = $('.js-btn-success');
-        maskInput();
+       // maskInput();
         popover();
         form();
         initItems();
