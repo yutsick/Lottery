@@ -6,7 +6,9 @@
 //  width: 100%;
   margin: 0 auto;
   padding: 0 16px;
-  
+  .mb-5{
+    margin-bottom: 48px;
+  }
   .number__top{
 
     margin-top: 16px;
@@ -862,7 +864,7 @@
         
         .miljonlotten{
           
-//          background: #FFFFFF;
+
           
           display: flex;
           justify-content: flex-start;
@@ -871,7 +873,7 @@
           height: 108px;
    
           background: #FFFFFF;
-//          background: #FFFFFF url(../../assets/img/checkout-module/lotter-d.png) no-repeat left top;
+
           border: 1px solid #D9D9D9;
           border-radius: 10px;
           margin-bottom: 52px;
@@ -947,8 +949,9 @@
             max-width: 305px;
             
             height: 100%;
-//            width: 100%;
-//            margin-right: 15px;
+               
+              
+
             
             .comment{
               position: relative;
@@ -963,13 +966,13 @@
               
               @media screen and (max-width: 840px){
                   height: 106px;    
-//                width: 173px !important;
+
                     margin-top: -20px;
               }
               
               @media screen and (max-width: 600px){
                   background:  url(../../assets/img/checkout-module/checkout-comment-m.svg) no-repeat left top;
-//                  width: 155px;
+
                   padding: 15px 10px 0;
                 background-size: contain;
                 
@@ -988,13 +991,14 @@
 
                 transform: rotate(-3deg);
                 
-//                max-width: 200px;
+
                 
                 firstname,span{
                    font: 700 14px/1.2em 'Apercu Pro';
                 }
                 
               }
+             
             }
 
             .sale{
@@ -1018,7 +1022,68 @@
             }
             
           }
-          
+          &.additional-sales{
+            height: auto;
+            position: relative; 
+            border-radius: 10px;
+            @media screen and (max-width:840px){
+              width: 320px;
+            }
+            .block{
+              height: auto;
+              .image-wrapper{
+                background: #C9E7F3;
+                width: 320px;
+                height: 130px;
+              }
+              img{
+                border-radius: 10px 0 0 10px;
+                width: 320px;
+                height: 130px;
+                object-fit: cover;
+                @media screen and (max-width:840px){
+                  border-radius: 10px 10px 0 0;
+                }
+              }
+              @media screen and (max-width:840px){
+                height: auto !important;
+                margin: 0 auto;
+              }
+            }
+            .comment{
+              position: absolute;
+              margin: 0;
+              left: 20px;
+              top:-23px
+            }
+            .info{
+              flex: 1 1;
+              @media screen and (max-width:840px) {
+               
+                width: 100%;
+                flex:auto
+              }
+            }
+            .bot{
+              @media screen and (max-width:840px) {
+                position: relative;
+                width: auto;
+                top: auto;
+                width: 100%;
+                padding: 0 13px 13px;
+                
+                display: flex;
+                justify-content: flex-end;
+              }
+              .pink{
+                @media screen and (max-width:840px) {
+                 margin-left: 0;
+                  top: auto;
+                  margin-top: 0;
+                }
+              }
+            }
+          } 
           .info{
 
             @media screen and (max-width: 840px) {
@@ -3068,6 +3133,7 @@
     
     
   }
+
+    
+  }
   
-  
-}
