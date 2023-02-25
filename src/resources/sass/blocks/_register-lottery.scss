@@ -32,23 +32,23 @@
 
     }
 
-    & > .popover {
-      background-color: $color-blue;
-      border: none;
+    // & > .popover {
+    //   background-color: $color-blue;
+    //   border: none;
 
-      & > .popover-content {
-        background-color: $color-blue;
-        color: $color-snow;
-      }
+    //   & > .popover-content {
+    //     background-color: $color-blue;
+    //     color: $color-snow;
+    //   }
 
-      & > .arrow {
-        border: none;
+    //   & > .arrow {
+    //     border: none;
 
-        &:after {
-          border-top-color: $color-blue;
-        }
-      }
-    }
+    //     &:after {
+    //       border-top-color: $color-blue;
+    //     }
+    //   }
+    // }
 
     & > input {
       display: block;

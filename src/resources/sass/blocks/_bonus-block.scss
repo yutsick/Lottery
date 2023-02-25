@@ -1,12 +1,15 @@
+#bonusBlockTwoColumns{
+	min-height: 395px;
+}
 .bonus-block {
-    position: relative;
-    margin: 20px 0;
-    padding: 40px 20px 30px;
-    width: 100%;
-    // height: 100%;
-    max-width: 100%;
+	position: relative;
+	margin: 20px 0;
+	padding: 40px 20px 30px;
+	width: 100%;
+	// height: 100%;
+	max-width: 100%;
 	min-height: 280px;
-    overflow: hidden;
+	overflow: hidden;
 	z-index: 0;
 	display: flex;
 
@@ -51,11 +54,13 @@
 		margin-left: auto;
 		margin-right: auto;
 
-		p, h4 {
+		p,
+		h4 {
 			color: #fff;
 		}
 
-		button {
+		button,
+		input[type="submit"] {
 			margin-top: auto;
 			max-width: 215px;
 			width: 100%;
@@ -67,7 +72,9 @@
 
 	&.text_dark {
 		.content {
-			p, h4 {
+
+			p,
+			h4 {
 				color: #003e52;
 			}
 		}
@@ -118,12 +125,49 @@
 			border-radius: 24px;
 			background: rgba(255, 255, 255, 0.85);
 			border: 2px solid #003e52;
-			padding:  5px 20px;
+			padding: 5px 20px;
 		}
 
 		button.btn-success {
 			font-weight: 600;
 			max-width: 140px;
 		}
+
+		.loader {
+			width: 42px;
+			height: 42px;
+			border-radius: 42px;
+			background-color: $color-primary-lighter;
+			position: absolute;
+			top: 50%;
+			margin-top: -21px;
+			right: 6px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: none;
+
+			@media screen and (min-width: 992px) {
+				width: 40px;
+				height: 40px;
+				border-radius: 40px;
+				margin-top: 4px;
+				right: 6px;
+				top: 0;
+			}
+
+			&.loader--spin {
+				display: flex;
+			}
+
+			&.block-col-loader {
+				right: inherit;
+				top: 50%;
+			}
+		}
 	}
+}
+
+#bonusBlockOneColumnsSuccess {
+	display: none;
 }

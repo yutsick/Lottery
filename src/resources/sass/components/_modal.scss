@@ -2199,6 +2199,25 @@
 				margin-top: 12px;
 			}
 		}
+
+		.loader {
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			margin-top: -25px;
+			right: 6px;
+			background-color: #81B7C8;
+			position: absolute;
+			top: 50%;
+			display: none;
+			justify-content: center;
+			align-items: center;
+
+			&.loader--spin {
+				display: flex;
+			}
+		}
+
 	}
 }
 

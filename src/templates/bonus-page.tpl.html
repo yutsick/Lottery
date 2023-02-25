@@ -1,273 +1,86 @@
+<!-- 
+	!!! Use "block_type": block for display 1- or 2-cluns block. This parameter is requered for blocks
+
+	Use "columns" = 1 or 2 for block width
+	Use "blockHasInput" = true or false for display input and button or button only
+	Use "modal" for display modal window. modal parameter hasInput shows input in modal
+	Parameters "title" and "subTitle" are using for texts on the blocks. "successTitle" and "successSubTitle" are using for success blocks
+ -->
+
 @@include('layout/_header.html', {
-    "class": "page-front logged-in",
-    "logged_in": true
-    })
+"class": "page-front logged-in",
+"logged_in": true
+})
 
-    @@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": false })
 
 
-    <div class="content-wrapper register-lottery-wrap ml-2017">
-        <div class="container">
-            <div class="row register-lottery-wrap equal-height">
-                <div class="col-md-6">
-					<!-- register-bonusar styles in the register-lottery.scss -->
-                    <div class="register-lottery register-bonusar">
-                        <h1>Aktivera bonus</h1>
-                        <p>Fyll i din bonuskod i fälten nedan och klicka på ”Aktivera”. Dina aktiverade bonusar hamnar i din lista under ”Mina bonusar”.</p>
+<div class="content-wrapper register-lottery-wrap ml-2017">
+	<div class="container">
+		<div class="row register-lottery-wrap equal-height">
+			<div class="col-md-6">
+				<!-- register-bonusar styles in the register-lottery.scss -->
+				<div class="register-lottery register-bonusar">
+					<h1>Aktivera bonus</h1>
+					<p>Fyll i din bonuskod i fälten nedan och klicka på ”Aktivera”. Dina aktiverade bonusar hamnar i din lista
+						under ”Mina bonusar”.</p>
 
-						<!-- Current js script is register-lottery.js but it specific only for #lotterynumberinput id (mask and popover) -->
-                        <form method="post" action="/" class="js-register-lottery-form">
-                            <input id="lotterynumberinput" name="lotterynumber">
-                            <span class="loader">
-                                <span class="spinner"></span>
-                            </span>
-                            <button class="btn-success js-btn-success">Aktivera</button>
-                        </form>
+					<!-- Current js script is register-lottery.js but it specific only for #lotterynumberinput id (mask and popover) -->
+					<form method="post" action="/" class="js-register-lottery-form">
+						<input id="lotterynumberinput" name="lotterynumber">
+						<span class="loader">
+							<span class="dots-circle-spinner loading text-color-white"></span>
+						</span>
+						<button class="btn btn-success js-btn-success">Aktivera</button>
+					</form>
 
-                        <div class="result js-register-lottery-result">
+					<div class="result js-register-lottery-result">
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="bonus-block bonus-block_shadow">
-						<div class="image">
-                            <img src="assets/img/mockup/bingobonus-1.jpg">
-                        </div>
-						<div class="content">
-                            <h4>
-								Bingobonus!<br>
-								Spela Stjärnjacken – få 100 kr i din spelplånbok
-							</h4>
-                            <p>Gäller t o m: 2023-01-31</p>
-
-							<button class="btn" data-toggle="modal" data-target="#bonusModal">Läs mer och aktivera</button>
-                        </div>
 					</div>
-                </div>
-
-				<div class="col-xs-12 col-sm-6 col-md-3 d-none d-md-flex">
-                    <div class="bonus-block text_dark">
-						<div class="image">
-                            <img src="assets/img/mockup/bingobonus-2.jpg">
-                        </div>
-						<div class="content">
-                            <h4>
-								Nyårsbonus!<br>
-								Spela Zoobaloo för 100 kr – få 50 kr tillbaka
-							</h4>
-                            <p>Gäller t o m: 2023-01-31</p>
-
-							<div class="bonus-block__activated">Bonus aktiverad</div>
-                        </div>
-					</div>
-                </div>
-            </div>
-
-			<!-- START another options of bonus-block -->
-			<div class="row register-lottery-wrap equal-height">
-
-                <div class="col-xs-12 col-md-6">
-                    <div class="bonus-block bonus-block_shadow">
-						<div class="image">
-                            <img src="assets/img/mockup/bingobonus-3.jpg">
-                        </div>
-						<div class="content">
-                            <h4>
-								Bingobonus!<br>
-								Spela Stjärnjacken – få 100 kr i din spelplånbok
-							</h4>
-                            <p>Gäller t o m: 2023-01-31</p>
-
-							<button class="btn" data-toggle="modal" data-target="#bonusModal">Läs mer och aktivera</button>
-                        </div>
-					</div>
-                </div>
-
-				<div class="col-xs-12 col-md-6">
-                    <div class="bonus-block bonus-block_shadow">
-						<div class="image">
-                            <img src="assets/img/mockup/bingobonus-3.jpg">
-                        </div>
-						<div class="content">
-                            <h4>
-								Bingobonus!<br>
-								Spela Stjärnjacken – få 100 kr i din spelplånbok
-							</h4>
-                            <p>Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set. Giltig t o m: 2023-01-31.</p>
-
-							<form method="post" action="/" class="bonus-block__form">
-								<input placeholder="0000" id="bonusnumberinput" name="bonusnumber" class="bonus-block__form-input">
-								<span class="loader">
-									<span class="spinner"></span>
-								</span>
-								<button class="btn-success js-btn-success">Aktivera</button>
-							</form>
-                        </div>
-					</div>
-                </div>
-
-
-                <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="bonus-block bonus-block_shadow">
-						<div class="image">
-                            <img src="assets/img/mockup/bingobonus-1.jpg">
-                        </div>
-						<div class="content">
-                            <h4>
-								Bingobonus!<br>
-								Spela Stjärnjacken – få 100 kr i din spelplånbok
-							</h4>
-                            <p>Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set. Giltig t o m: 2023-01-31.</p>
-
-							<form method="post" action="/" class="bonus-block__form">
-								<input placeholder="0000" id="bonusnumberinput2" name="bonusnumber2" class="bonus-block__form-input">
-								<span class="loader">
-									<span class="spinner"></span>
-								</span>
-								<button class="btn-success js-btn-success">Aktivera</button>
-							</form>
-                        </div>
-					</div>
-                </div>
-
-				<div class="col-xs-12 col-sm-6 col-md-3 d-none d-md-flex">
-                    <div class="bonus-block text_dark">
-						<div class="image">
-                            <img src="assets/img/mockup/bingobonus-2.jpg">
-                        </div>
-						<div class="content">
-                            <h4>
-								Nyårsbonus!<br>
-								Spela Zoobaloo för 100 kr – få 50 kr tillbaka
-							</h4>
-                            <p>Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set. Giltig t o m: 2023-01-31.</p>
-
-							<div class="bonus-block__activated">Bonus aktiverad</div>
-                        </div>
-					</div>
-                </div>
-            </div>
-			<!-- END another options of bonus-block -->
-
-			<div class="row">
-				<div class="col-12">
-					<section class="table-section section block block-content">
-						<h4 class="table__title bonusar-table__title h4">Mina bonusar</h4>
-
-						<div class="row">
-							<div class="col-xs-12">
-								<div class="table-wrapper">
-									<div class="form-group responsive-table-filter bonusar-table-filter">
-										<label class="table__label" for="tableSelect">Visa:</label>
-										<select id="tableSelect" class="table-select form-control" name="tableSelect">
-
-											<option value="history-current" id="historyCurrent">Aktiva bonusar</option>
-											<option value="history-settled" id="historySettled">Tidigare bonusar</option>
-
-										</select>
-									</div>
-									<div id="history-current" class="table-pane table-pane--active" role="tabpanel">
-										<p class="bonusar-table__title-block">Bonusar</p>
-
-										<!-- bonusar-table styles in the responsive-table.scss -->
-										<table class="responsive-table bonusar-table">
-											<thead>
-													<tr>
-														<th>Bonusnamn</th>
-														<th>Villkor</th>
-														<th>Värde</th>
-														<th>Utgår</th>
-														<th>Status</th>
-													</tr>
-												</thead>
-												<tbody id="history-current-table-data">
-												<tr>
-													<td class="bonusar-table__mob-12" data-header="Bonusnamn: ">Nyårsbonus</td>
-													<td class="bonusar-table__mob-12" data-header="Villkor: ">Spela bingo 10 gånger</td>
-													<td class="bonusar-table__mob-6" data-header="Värde: ">50 kr</td>
-													<td class="bonusar-table__mob-6 bonusar-table__mob-end" data-header="Utgår: ">2023-01-31</td>
-													<td class="bonusar-table__mob-12 bonusar-table__mob-between" data-header="Status: ">
-														<div class="bonusar-table__tillbonus">
-															<span class="bonusar-table__tillbonus-title">10 kr kvar till bonus!</span>
-															<div class="bonusar-table__tillbonus-scorebar">
-																<span class="bonusar-table__tillbonus-scorebar-filled" style="width: 80%;"></span>
-															</div>
-														</div>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-
-									<div id="history-settled" class="table-pane" role="tabpanel">
-										<p class="bonusar-table__title-block">Bonusar</p>
-										<table class="responsive-table bonusar-table">
-											<thead>
-												<tr>
-													<th>Bonusnamn</th>
-													<th>Villkor</th>
-													<th>Värde</th>
-													<th>Utgår</th>
-													<th>Status</th>
-												</tr>
-											</thead>
-											<tbody id="history-settled-table-data">
-												<tr>
-													<td class="bonusar-table__mob-12" data-header="Bonusnamn: ">Adventsbonus</td>
-													<td class="bonusar-table__mob-12" data-header="Villkor: ">Spela bingo</td>
-													<td class="bonusar-table__mob-6" data-header="Värde: ">10 kr</td>
-													<td class="bonusar-table__mob-6 bonusar-table__mob-end" data-header="Utgår: ">2023-01-31</td>
-													<td class="bonusar-table__mob-12 bonusar-table__mob-between" data-header="Status: "><b>Utbetald</b></td>
-												</tr>
-												<tr>
-													<td class="bonusar-table__mob-12" data-header="Bonusnamn: ">Höstbonus</td>
-													<td class="bonusar-table__mob-12" data-header="Villkor: ">Köp 5 bingobrickor</td>
-													<td class="bonusar-table__mob-6" data-header="Värde: ">25 kr</td>
-													<td class="bonusar-table__mob-6 bonusar-table__mob-end" data-header="Utgår: ">2023-01-31</td>
-													<td class="bonusar-table__mob-12 bonusar-table__mob-between" data-header="Status: ">Förfallen</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</section>
 				</div>
 			</div>
-        </div>
-    </div>
 
-    @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
-
-	<div class="ml-2017" id="modals">
-		<div class="modal fade modal-2022" id="bonusModal" style="display: none;" tabindex="-1" aria-labelledby="bonusModal" aria-hidden="true">
-			<div class="modal-dialog modal-xl modal-dialog-centered padding__0" role="document">
-				<a href="#" class="close btn-close_circular" data-dismiss="modal" aria-label="Close">Close</a>
-
-				<div class="modal-content popup-general">
-
-					<!-- bonus-popup in the modal.scss -->
-					<section class="sub-page-popup-general primary-blue  modal_background  bonus-popup" style=" background:  url(assets/img/mockup/bingobonus-4.jpg) no-repeat center/cover;">
-
-						<h2 class="title">Spela Stjärnjacken för 50 kr</h2>
-
-						<p>Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set.<br><br>Giltig t o m: 2023-01-31</p>
+			
+			@@include('blocks/_bonus-page.html', {
+				"block_type": "block",
+				"columns": 1,
+				"blockHasInput":true,
+				"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
+				"subTitle":"Gäller t o m: 2023-01-31",
+				"successTitle": "Nyårsbonus! Spela Zoobaloo för 100 kr – få 50 kr tillbaka",
+				"successSubTitle": "Gäller t o m: 2023-01-31",
+				//"modal":{
+				//	"hasInput":false
+				//}
+				})
 
 
-						<form method="post" action="/" class="bonus-popup__form">
-							<input placeholder="0000" class="bonus-popup__form-input" id="bonusnumberinput2" name="bonusnumber2">
-							<span class="loader">
-								<span class="spinner"></span>
-							</span>
-							<button class="btn-success js-btn-success">Aktivera</button>
-						</form>
 
-					</section>
-				</div>
-			</div>
+		
 		</div>
+
+		<!-- START another options of bonus-block -->
+		<div class="row register-lottery-wrap equal-height">
+
+			@@include('blocks/_bonus-page.html',{
+				"block_type": "block",
+				"columns": 2,
+				"blockHasInput": false,
+				"title": "Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
+				"subtitle":"Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set. Giltig t o m: 2023-01-31.",
+				"modal":{
+					"hasInput":false
+				}
+			})
+			
+		
+
+
+
+		</div>
+		<!-- END another options of bonus-block -->
+
 	</div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

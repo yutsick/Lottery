@@ -1,0 +1,140 @@
+
+@@if(context.block_type==="block"){
+  @@if (context.columns===1){
+  <div class="col-xs-12 col-sm-6 col-md-3" id="bonusBlockOneColumns">
+    <div class="bonus-block bonus-block_shadow">
+      <div class="image">
+        <img src="assets/img/mockup/bingobonus-1.jpg">
+      </div>
+      <div class="content">
+        <h4>
+          @@title
+        </h4>
+        <p>@@subTitle</p>
+        @@if(context.blockHasInput){
+          <form method="post" action="/" class="bonus-block__form block-one-col js-register-lottery-form position-relative" data-columns="1">
+            <input placeholder="0000" id="block-1col-input" name="bonusnumber2" class="bonus-block__form-input position-relative" data-button="true">
+            <span class="loader">
+              <span class="dots-circle-spinner loading text-color-white"></span>
+            </span>
+            <button class="btn btn-success js-btn-success" data-columns="1">Aktivera</button>
+          </form>
+        }
+        @@if(!context.blockHasInput){
+
+          @@if(context.modal){
+            <button class="btn" data-toggle="modal" data-target="#bonusModal" data-columns="1">Läs mer och aktivera</button>
+          }
+          @@if(!context.modal){
+          <form action="" method="post" class="js-register-lottery-form h-100 d-flex bonus-block__form position-relative justify-content-center">
+
+            <input class="btn" data-toggle="modal" data-target="#bonusModal" data-columns="1"  type="submit" value="Läs mer och aktivera" id="popover1">
+
+            
+            <span class="loader block-col-loader">
+              <span class="dots-circle-spinner loading text-color-white"></span>
+            </span>
+          </form>
+          }
+        }
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-3" id="bonusBlockOneColumnsSuccess">
+    <div class="bonus-block text_dark">
+      <div class="image">
+        <img src="assets/img/mockup/bingobonus-2.jpg">
+      </div>
+      <div class="content">
+        <h4>
+          @@successTitle
+        </h4>
+        <p>@@successSubTitle</p>
+
+        <div class="bonus-block__activated">Bonus aktiverad</div>
+      </div>
+    </div>
+  </div>
+  }
+  @@if (context.columns===2){
+    <div class="col-xs-12 col-md-6" id="bonusBlockTwoColumns">
+      <div class="bonus-block bonus-block_shadow">
+        <div class="image">
+          <img src="assets/img/mockup/bingobonus-3.jpg">
+        </div>
+        <div class="content">
+          <h4>
+            @@title
+          </h4>
+          <p>@@subtitle</p>
+          
+          @@if(context.blockHasInput){
+            <form method="post" action="/" class="bonus-block__form js-register-lottery-form position-relative">
+							<input placeholder="0000" id="block-2col-input" name="bonusnumber" class="bonus-block__form-input" data-button="true">
+							<span class="loader">
+								<span class="dots-circle-spinner loading text-color-white"></span>
+							</span>
+							<button class="btn btn-success js-btn-success" data-columns="2" data-button="true">Aktivera</button>
+						</form>
+          }
+          @@if(!context.blockHasInput){
+            @@if(context.modal){
+              <button class="btn" data-toggle="modal" data-target="#bonusModal" data-columns="2">Läs mer och aktivera</button>
+            }
+
+            @@if(!context.modal){
+            <form action="" method="post" class="js-register-lottery-form h-100 d-flex position-relative bonus-block__form ">
+              <input class="btn" data-toggle="modal" data-target="#bonusModal" data-columns="2"  type="submit" value="Läs mer och aktivera" id="popover2">
+              <span class="loader block-col-loader">
+                <span class="dots-circle-spinner loading text-color-white"></span>
+              </span>
+            </form>
+            }
+          }
+        </div>
+      </div>
+    </div>
+  }
+  @@if(context.modal){
+    
+    <div class="ml-2017" id="modals">
+      <div class="modal fade modal-2022" id="bonusModal" style="display: none;" tabindex="-1" aria-labelledby="bonusModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered padding__0" role="document">
+          <a href="#" class="close btn-close_circular" data-dismiss="modal" aria-label="Close">Close</a>
+    
+          <div class="modal-content popup-general">
+    
+            <!-- bonus-popup in the modal.scss -->
+            <section class="sub-page-popup-general primary-blue  modal_background  bonus-popup" style=" background:  url(assets/img/mockup/bingobonus-4.jpg) no-repeat center/cover;">
+    
+              <h2 class="title">Spela Stjärnjacken för 50 kr</h2>
+    
+              <p>Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set.<br><br>Giltig t o m: 2023-01-31</p>
+  
+    
+              <form method="post" action="/" class="h-40 bonus-popup__form d-flex  js-register-lottery-form w-100 justify-content-center">
+                @@if(context.modal.hasInput){
+                <input placeholder="0000" class="bonus-popup__form-input position-relative" id="bonusnumberinput2" name="bonusnumber2">
+                <span class="loader">
+                  <span class="dots-circle-spinner loading text-color-white"></span>
+                </span>
+             
+                <button class="btn btn-success js-btn-success">Aktivera</button> 
+              }
+              @@if(!context.modal.hasInput){
+
+                <input class="btn btn-relative"  type="submit" value="Läs mer och aktivera" id="bonusnumberinput2" >
+                <span class="loader block-col-loader right-inherit">
+                  <span class="dots-circle-spinner loading text-color-white"></span>
+                </span>
+              }
+              </form>
+    
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+
+}

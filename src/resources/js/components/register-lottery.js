@@ -5,8 +5,13 @@ const ExportLottery = () => {
     let im = null;
     let isValid = false;
     let $input = null;
+    let $blockOneColInput = null;
+    let $blockTwoColInput = null;
+    let $modalInput = null;
     let $button = null;
     let $loader = null;
+    let $modalButton1 = null;
+    let $modalButton2 = null;
 
     const maskInput = () => {
         
@@ -37,13 +42,15 @@ const ExportLottery = () => {
         }
     }
 
-    const loading = (load) => {
+    const loading = (load,button=false) => {
         if ($loader && $loader.length > 0) {
             const loadingClassName = 'loader--spin';
-            if (load) {
+            if (load && !button) {
                 $button.hide();
                 $loader.addClass(loadingClassName);
-            } else {
+            } else if(load && button){
+                $loader.addClass(loadingClassName);
+            }else {
                 $button.show();
                 $loader.removeClass(loadingClassName);
             }
@@ -88,8 +95,9 @@ const ExportLottery = () => {
             'http://www.mocky.io/v2/5da4635835000054004a7683',
             'http://www.mocky.io/v2/5da06f2e3000006e00f89e99'
         ];
-
-        return endpoints[Math.floor(Math.random()*endpoints.length)];
+        //return 'http://www.mocky.io/v2/5da06f2e3000006e00f89e99';  //returns false
+        return 'http://www.mocky.io/v2/5da06db63000000f00f89e80'; //returns true
+        //return endpoints[Math.floor(Math.random()*endpoints.length)]; //for production only
     }
 
     const updateBlankLottery = (quantity) => {
@@ -114,18 +122,31 @@ const ExportLottery = () => {
             $el.text(`${currentQuantity} st`);
         }
     }
+    
+    const setStorage = () => {
+        $('.btn').on('click', function(e){
+            if($(e.target).data('columns')){
+                sessionStorage.setItem('showModalColumns', $(e.target).data('columns'));
+            }
+            
+        })
+    }
 
     const form = () => {
         const $form = $('.js-register-lottery-form');
-        const isTest = $form.data('env');
-        
+        //const isTest = $form.data('env');
+  
+        const isTest = true;
         $form.submit((e) => {
             e.preventDefault();
+
+            $input = $(e.target).find('input');
             let value = $input.val();
             if (value.length != 0) {
                 $input.popover('hide');
                 hideKeyboard();
-                loading(true);
+                ($input.data('button')) ? loading(true,true) : loading(true,false);
+
                 hideResultItems();
                 $.ajax({
                     url: isTest ? getMockUpUrl() : e.currentTarget.action,
@@ -134,7 +155,22 @@ const ExportLottery = () => {
                     success: function(data){
                         setTimeout(() => {
                             loading(false);
-                            $form[0].reset();
+                            if($('.modal.in')){
+                                $('.modal').removeClass('in');
+                                $('body').removeClass('modal-open');
+                                $('.modal-backdrop.fade.in').remove();
+                                $('.modal').hide();
+                            }
+                            if (sessionStorage.getItem('showModalColumns')){
+                                console.log('dd');
+                                switch (sessionStorage.getItem('showModalColumns')){
+                                    case '1':
+                                        $('#bonusBlockOneColumns').hide();
+                                        $('#bonusBlockOneColumnsSuccess').show();
+                                        sessionStorage.removeItem('showModalColumns')
+                                }
+                            }
+                            e.target.reset();
                             isValid = false;
                             switch(data.type) {
                                 case 'blank':
@@ -146,8 +182,8 @@ const ExportLottery = () => {
                                     window.ML.confetti.execute();
                                     break;
                             }
-                            updateJackpotLottery(data.jackpot);
-                            addContent(data);
+                            //updateJackpotLottery(data.jackpot);
+                            //addContent(data);
                         }, 2000);
                     },
                     error: function(){
@@ -166,6 +202,47 @@ const ExportLottery = () => {
     const popover = () => {
         if ($input && $input.length > 0) {
             $input.popover({
+                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
+                placement: 'top',
+                trigger: 'manual',
+            });
+        }
+
+        if ($blockOneColInput && $blockOneColInput.length > 0) {
+            $blockOneColInput.popover({
+                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
+                placement: 'top',
+                trigger: 'manual',
+            });
+        }       
+        
+        if ($blockTwoColInput && $blockTwoColInput.length > 0) {
+            $blockTwoColInput.popover({
+                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
+                placement: 'top',
+                trigger: 'manual',
+            });
+        }
+        
+        if ($modalInput && $modalInput.length > 0) {
+            $modalInput.popover({
+                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
+                placement: 'top',
+                trigger: 'manual',
+            });
+        }
+
+        if ($modalButton1 && $modalButton1.length > 0) {
+            console.log($modalButton1)
+            $modalButton1.popover({
+                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
+                placement: 'top',
+                trigger: 'manual',
+            });
+        }
+
+        if ($modalButton2 && $modalButton2.length > 0) {
+            $modalButton2.popover({
                 content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
                 placement: 'top',
                 trigger: 'manual',
@@ -197,12 +274,19 @@ const ExportLottery = () => {
     
     this.init = () => {
         $input = $('#lotterynumberinput');
+        $blockOneColInput = $('#block-1col-input');
+        $blockTwoColInput = $('#block-2col-input');
+        $modalInput = $('#bonusnumberinput2');
         $loader = $('.loader');
-        $button = $('.js-btn-success');
+        $button = $('.btn');
+        $modalButton1 = $('#popover1');
+        $modalButton2 = $('#popover2');
+        
        // maskInput();
         popover();
         form();
         initItems();
+        setStorage();
     }
 
     return this;
