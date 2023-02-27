@@ -7,12 +7,15 @@
         <img src="assets/img/mockup/bingobonus-1.jpg">
       </div>
       <div class="content">
-        <h4>
+        <div class="">
+          <h4>
           @@title
-        </h4>
-        <p>@@subTitle</p>
+          </h4>
+          <p>@@subTitle</p>
+        </div>
+        
         @@if(context.blockHasInput){
-          <form method="post" action="/" class="bonus-block__form block-one-col js-register-lottery-form position-relative" data-columns="1">
+          <form method="post" action="/" class="bonus-block__form block-one-col js-bonus-block position-relative" data-columns="1">
             <input placeholder="0000" id="block-1col-input" name="bonusnumber2" class="bonus-block__form-input position-relative" data-button="true">
             <span class="loader">
               <span class="dots-circle-spinner loading text-color-white"></span>
@@ -26,7 +29,7 @@
             <button class="btn" data-toggle="modal" data-target="#bonusModal" data-columns="1">Läs mer och aktivera</button>
           }
           @@if(!context.modal){
-          <form action="" method="post" class="js-register-lottery-form h-100 d-flex bonus-block__form position-relative justify-content-center">
+          <form action="" method="post" class="js-bonus-block h-100 d-flex bonus-block__form position-relative justify-content-center">
 
             <input class="btn" data-toggle="modal" data-target="#bonusModal" data-columns="1"  type="submit" value="Läs mer och aktivera" id="popover1">
 
@@ -69,7 +72,7 @@
           <p>@@subtitle</p>
           
           @@if(context.blockHasInput){
-            <form method="post" action="/" class="bonus-block__form js-register-lottery-form position-relative">
+            <form method="post" action="/" class="bonus-block__form js-bonus-block position-relative">
 							<input placeholder="0000" id="block-2col-input" name="bonusnumber" class="bonus-block__form-input" data-button="true">
 							<span class="loader">
 								<span class="dots-circle-spinner loading text-color-white"></span>
@@ -83,7 +86,7 @@
             }
 
             @@if(!context.modal){
-            <form action="" method="post" class="js-register-lottery-form h-100 d-flex position-relative bonus-block__form ">
+            <form action="" method="post" class="js-bonus-block h-100 d-flex position-relative bonus-block__form ">
               <input class="btn" data-toggle="modal" data-target="#bonusModal" data-columns="2"  type="submit" value="Läs mer och aktivera" id="popover2">
               <span class="loader block-col-loader">
                 <span class="dots-circle-spinner loading text-color-white"></span>
@@ -112,7 +115,7 @@
               <p>Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set.<br><br>Giltig t o m: 2023-01-31</p>
   
     
-              <form method="post" action="/" class="h-40 bonus-popup__form d-flex  js-register-lottery-form w-100 justify-content-center">
+              <form method="post" action="/" class="h-40 bonus-popup__form d-flex  js-bonus-block w-100 justify-content-center">
                 @@if(context.modal.hasInput){
                 <input placeholder="0000" class="bonus-popup__form-input position-relative" id="bonusnumberinput2" name="bonusnumber2">
                 <span class="loader">

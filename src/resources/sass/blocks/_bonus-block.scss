@@ -53,7 +53,7 @@
 		max-width: 300px;
 		margin-left: auto;
 		margin-right: auto;
-
+		justify-content: space-between;
 		p,
 		h4 {
 			color: #fff;
@@ -170,4 +170,16 @@
 
 #bonusBlockOneColumnsSuccess {
 	display: none;
+}
+.btn-success-green {
+	background-color: $color-green !important;
+
+	&::before {
+		content: url(../img/icons/icon-check-white.svg);
+		width: 12px;
+		height: 16px;
+		display: inline-block;
+		margin-left: -5px;
+		margin-right: 10px;
+	}
 }
