@@ -53,7 +53,7 @@ const BonusBlocks = () => {
         })
     }
 
-    const addContent = (data) => {
+    const addContent = (data) => { 
         let $result = $('.js-register-lottery-result');
         $result.prepend($.parseHTML(data.content));
         initItems();

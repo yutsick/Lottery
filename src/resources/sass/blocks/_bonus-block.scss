@@ -1,6 +1,26 @@
 #bonusBlockTwoColumns{
 	min-height: 395px;
 }
+form.js-bonus-block{
+	
+	& > .popover {
+		background-color: $color-popover-error;
+		border: none;
+
+		& > .popover-content {
+			background-color: $color-popover-error;
+			color: $color-snow;
+		}
+
+		& > .arrow {
+			border: none;
+
+			&:after {
+				border-top-color: $color-popover-error;
+			}
+		}
+	}
+}
 .bonus-block {
 	position: relative;
 	margin: 20px 0;
