@@ -5,7 +5,7 @@ form.js-bonus-block{
 	
 	& > .popover {
 		background-color: $color-popover-error;
-		border: none;
+		border-color: $color-popover-error;
 
 		& > .popover-content {
 			background-color: $color-popover-error;
@@ -13,10 +13,11 @@ form.js-bonus-block{
 		}
 
 		& > .arrow {
-			border: none;
+			
 
 			&:after {
 				border-top-color: $color-popover-error;
+				margin-left:0;
 			}
 		}
 	}

@@ -27,11 +27,11 @@
 
 					<!-- Current js script is register-lottery.js but it specific only for #lotterynumberinput id (mask and popover) -->
 					<form method="post" action="/" class="js-bonus-block" data-form-type="register">
-						<input id="bonusactivationinput" name="lotterynumber" >
+						<input id="bonusactivationinput" name="lotterynumber" class="btn-bonus">
 						<span class="loader">
 							<span class="dots-circle-spinner loading text-color-white"></span>
 						</span>
-						<button class="btn btn-success js-btn-success" data-text-success="Aktiverad"
+						<button class="btn btn-success js-btn-success btn-bonus" data-text-success="Aktiverad"
 						id="bonus_activation">Aktivera</button>
 					</form>
 
@@ -59,7 +59,7 @@
 				"title": "Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
 				"subtitle":"Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set. Giltig t o m: 2023-01-31.",
 				//"modal":{
-				//	"hasInput":true
+				//	"hasInput":false
 				//}
 			})
 			
@@ -72,13 +72,25 @@
 				"subTitle":"Gäller t o m: 2023-01-31",
 				"successTitle": "Nyårsbonus! Spela Zoobaloo för 100 kr – få 50 kr tillbaka",
 				"successSubTitle": "Gäller t o m: 2023-01-31",
-				//"modal":{
-				//	"hasInput":false
-				//}
+				"modal":{
+					"hasInput":true
+				}
 				})
 
-
+				@@include('blocks/_bonus-page.html', {
+								"block_type": "block",
+								"columns": 1,
+								"blockHasInput":true,
+								"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
+								"subTitle":"Gäller t o m: 2023-01-31",
+								"successTitle": "Nyårsbonus! Spela Zoobaloo för 100 kr – få 50 kr tillbaka",
+								"successSubTitle": "Gäller t o m: 2023-01-31",
+								//"modal":{
+								//	"hasInput":true
+								//}
+								})
 		</div>
+		
 		<!-- END another options of bonus-block -->
 
 	</div>

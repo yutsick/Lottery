@@ -1,16 +1,10 @@
 
 const BonusBlocks = () => {
     
-    let im = null;
-    let isValid = false;
     let $input = null;
-    let $blockOneColInput = null;
-    let $blockTwoColInput = null;
-    let $modalInput = null;
     let $button = null;
     let $loader = null;
-    let $modalButton1 = null;
-    let $modalButton2 = null;
+
 
     
 
@@ -118,7 +112,8 @@ const BonusBlocks = () => {
     const setStorage = () => {
         $('.btn').on('click', function(e){
             if($(e.target).data('columns')){
-                sessionStorage.setItem('showModalColumns', $(e.target).data('columns'));
+                sessionStorage.setItem('blockColumns', $(e.target).data('columns'));
+                sessionStorage.setItem('blockTarget', $(e.target).parents('.bonusBlockColumns').data('block'));
             }
             
         })
@@ -126,8 +121,6 @@ const BonusBlocks = () => {
 
     const form = () => {
         const $form = $('.js-bonus-block');
-        //const isTest = $form.data('env');
-        console.log($form);
         const isTest = true;
         $form.submit((e) => {
             e.preventDefault();
@@ -135,7 +128,10 @@ const BonusBlocks = () => {
             $input = $(e.target).find('input');
             let button = $(e.target).find('button');
             let formType = $(e.target).data('form-type');
+            $loader = $(e.target).find('.loader');
+            $button = $(e.target).find('.btn');
             let value = $input.val();
+
             if (value.length != 0) {
                 $input.popover('hide');
                 hideKeyboard();
@@ -155,16 +151,20 @@ const BonusBlocks = () => {
                                 $('.modal-backdrop.fade.in').remove();
                                 $('.modal').hide();
                             }
-                            if (sessionStorage.getItem('showModalColumns')){
-                                switch (sessionStorage.getItem('showModalColumns')){
+                            if (sessionStorage.getItem('blockColumns')){
+                                switch (sessionStorage.getItem('blockColumns')){
                                     case '1':
-                                        $('#bonusBlockOneColumns').hide();
-                                        $('#bonusBlockOneColumnsSuccess').css('display', 'flex');
-                                        sessionStorage.removeItem('showModalColumns')
+                                        let blockTarget = sessionStorage.getItem('blockTarget');
+                                        let blockSuccess = $(`[data-block = "${blockTarget}"]`).siblings('.bonusBlockColumnsSuccess');
+                                        console.log(blockSuccess);
+                                        $(`[data-block = "${blockTarget}"]`).hide();
+                                        $(blockSuccess).css('display', 'flex');
+                                        sessionStorage.removeItem('blockColumns');
+                                        sessionStorage.removeItem('blockTarget');
                                 }
                             }
                             e.target.reset();
-                            isValid = false;
+
                             switch(data.type) {
                                 case 'blank':
                                 case 'blankwithbonus':
@@ -203,47 +203,6 @@ const BonusBlocks = () => {
                 trigger: 'manual',
             });
         }
-
-        if ($blockOneColInput && $blockOneColInput.length > 0) {
-            $blockOneColInput.popover({
-                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
-                placement: 'top',
-                trigger: 'manual',
-            });
-        }       
-        
-        if ($blockTwoColInput && $blockTwoColInput.length > 0) {
-            $blockTwoColInput.popover({
-                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
-                placement: 'top',
-                trigger: 'manual',
-            });
-        }
-        
-        if ($modalInput && $modalInput.length > 0) {
-            $modalInput.popover({
-                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
-                placement: 'top',
-                trigger: 'manual',
-            });
-        }
-
-        if ($modalButton1 && $modalButton1.length > 0) {
-            console.log($modalButton1)
-            $modalButton1.popover({
-                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
-                placement: 'top',
-                trigger: 'manual',
-            });
-        }
-
-        if ($modalButton2 && $modalButton2.length > 0) {
-            $modalButton2.popover({
-                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
-                placement: 'top',
-                trigger: 'manual',
-            });
-        }
     }
 
     const initItems = () => {
@@ -269,15 +228,12 @@ const BonusBlocks = () => {
     }
     
     this.init = () => {
-        $input = $('#bonusactivationinput');
-        $blockOneColInput = $('#block-1col-input');
-        $blockTwoColInput = $('#block-2col-input');
-        $modalInput = $('#bonusnumberinput2');
-        $loader = $('.loader');
-        $button = $('.btn');
-        $modalButton1 = $('#popover1');
-        $modalButton2 = $('#popover2');
-        
+        const arr = $('.bonusBlockColumns');
+        for (let i=0; i < arr.length; i++){
+           $(arr[i]).attr('data-block',i+1) ;
+
+        }
+        $input = $('.btn-bonus');
         popover();
         form();
         initItems();
