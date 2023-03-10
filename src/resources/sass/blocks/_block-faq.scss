@@ -60,6 +60,8 @@
 		}
 
 		&+.block-faq__btn.active {
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
 			@media screen and (max-width: 820px) {
 				border-top: 1px solid #7EBDCC;
 			}
@@ -81,9 +83,11 @@
 		padding: 14px 37px 14px 17px;
 		position: relative;
 		line-height: 120%;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
 
 		&:first-of-type {
-			border-radius: 8px 8px 8px 0;
+			border-radius: 8px 0px 0px 8px;
 
 			@media screen and (max-width: 820px) {
 				border-radius: 8px 8px 0 0;
@@ -92,7 +96,7 @@
 
 		&:last-of-type {
 			border-width: 0px 2px 0px 0px;
-			border-radius: 0 8px 8px 8px;
+			border-radius:  8px 0 0 8px;
 
 			@media screen and (max-width: 820px) {
 				border-width: 2px 0px 0px 0px;
@@ -116,6 +120,10 @@
 			border-color: #7EBDCC;
 			border-right: none;
 			cursor: default;
+			border-top-right-radius: 0px;
+			border-bottom-right-radius: 0px;
+			border-top-left-radius: 8px;
+			border-bottom-left-radius: 8px;
 
 			@media screen and (max-width: 820px) {
 				border: none;
@@ -133,6 +141,8 @@
 
 			&+.block-faq__btn {
 				border-width: 1px 0px 1px 0px;
+				border-top-left-radius: 8px;
+				border-bottom-left-radius: 8px; 
 			}
 		}
 
