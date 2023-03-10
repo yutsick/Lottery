@@ -64,6 +64,7 @@
 			border-bottom-right-radius: 0px;
 			@media screen and (max-width: 820px) {
 				border-top: 1px solid #7EBDCC;
+				border-bottom-right-radius: 8px;
 			}
 		}
 	}
@@ -87,7 +88,7 @@
 		border-bottom-left-radius: 8px;
 
 		&:first-of-type {
-			border-radius: 8px 0px 0px 8px;
+			border-radius: 8px 8px 0px 8px;
 
 			@media screen and (max-width: 820px) {
 				border-radius: 8px 8px 0 0;
@@ -96,7 +97,7 @@
 
 		&:last-of-type {
 			border-width: 0px 2px 0px 0px;
-			border-radius:  8px 0 0 8px;
+			border-radius:  8px 0 8px 8px;
 
 			@media screen and (max-width: 820px) {
 				border-width: 2px 0px 0px 0px;
