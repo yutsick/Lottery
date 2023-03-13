@@ -31,11 +31,27 @@ export default function() {
 			$(this).next(panel).addClass('active');
 			$(this).next(panel).slideDown();
 			$(this).closest(accordion).find(box).html($(this).next(panel).html());
+
+			panelBorderRadiusActivate();
 		})
 	}
 	tabAccInit('.js-tabAcc', '.js-tabAcc__btn', '.js-tabAcc__panel', '.js-tabAcc__box-panel');
 
+	function panelBorderRadiusActivate(){
+		if($('.js-tabAcc__btn').first().hasClass('active')){
+			$('.js-tabAcc__box-panel').css('border-top-left-radius','0')
+		} else {
+			$('.js-tabAcc__box-panel').css('border-top-left-radius','8px')
+		}
 
+		if($('.js-tabAcc__btn').last().hasClass('active')){
+			$('.js-tabAcc__box-panel').css('border-bottom-left-radius','0')
+		} else {
+			$('.js-tabAcc__box-panel').css('border-bottom-left-radius','8px')
+		}
+	}
+
+	panelBorderRadiusActivate(); 
 
 
 }
