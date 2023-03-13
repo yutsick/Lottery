@@ -22,6 +22,14 @@ export default function() {
 		$(btn).on('click', function(e) {
 			e.preventDefault();
 
+			if(this == e.target && $(this).hasClass('active')){
+
+				$(this).removeClass('active');
+				$(this).next(panel).removeClass('active');
+				$(this).next(panel).slideUp();
+
+			} else {
+
 			$(this).closest(accordion).find(btn).removeClass('active');
 
 			$(this).closest(accordion).find(panel).removeClass('active');
@@ -31,6 +39,7 @@ export default function() {
 			$(this).next(panel).addClass('active');
 			$(this).next(panel).slideDown();
 			$(this).closest(accordion).find(box).html($(this).next(panel).html());
+			}
 
 			panelBorderRadiusActivate();
 		})
