@@ -2144,6 +2144,7 @@
 		p,
 		span {
 			font-size: 20px;
+			word-break: break-all;
 		}
 	}
 
@@ -2168,12 +2169,18 @@
 			border-radius: 31px;
 			background: rgba(255, 255, 255, 0.85);
 			width: 100%;
-			font-size: 30px;
+			font-size: 16px;
 			color: #003e52;
 			font-family: $apercu;
-			font-weight: 600;
 			padding: 5px 20px;
 			padding-right: 140px;
+			outline: none;
+			border: none;
+
+			&:focus{
+				outline: 2px solid #003e52;
+
+			}
 
 			@media screen and (max-width:576px) {
 				height: 48px;
@@ -2188,7 +2195,7 @@
 			right: 8px;
 			top: 8px;
 			height: 46px;
-			width: 126px;
+			// width: 126px;
 			font-weight: 600;
 			z-index: 1;
 

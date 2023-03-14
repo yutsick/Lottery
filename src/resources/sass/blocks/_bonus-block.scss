@@ -6,6 +6,7 @@ form.js-bonus-block{
 	& > .popover {
 		background-color: $color-popover-error;
 		border-color: $color-popover-error;
+		word-break: break-all;
 
 		& > .popover-content {
 			background-color: $color-popover-error;
@@ -24,7 +25,7 @@ form.js-bonus-block{
 }
 .bonus-block {
 	position: relative;
-	margin: 20px 0;
+	margin-bottom: 20px;
 	padding: 40px 20px 30px;
 	width: 100%;
 	// height: 100%;
@@ -83,10 +84,11 @@ form.js-bonus-block{
 		button,
 		input[type="submit"] {
 			margin-top: auto;
-			max-width: 215px;
-			width: 100%;
+			// max-width: 215px;
+			// width: 100%;
 			height: 38px;
 			padding: 5px 20px;
+			width: auto;
 		}
 
 	}
@@ -140,18 +142,22 @@ form.js-bonus-block{
 			margin-bottom: 10px;
 			height: 48px;
 			color: #003e52;
-			font-size: 18px;
+			font-size: 16px;
 			font-family: $apercu;
-			font-weight: 600;
 			border-radius: 24px;
 			background: rgba(255, 255, 255, 0.85);
-			border: 2px solid #003e52;
+			border: none;
 			padding: 5px 20px;
+			outline: none;
+			&:focus{
+				outline: 2px solid #003e52;
+			}
 		}
+
 
 		button.btn-success {
 			font-weight: 600;
-			max-width: 140px;
+			//max-width: 140px;
 		}
 
 		.loader {
@@ -187,6 +193,58 @@ form.js-bonus-block{
 			}
 		}
 	}
+	
+  .bg-primary-blue {
+    background-color: $color-primary-dark;
+  }
+
+  .bg-light-blue {
+    background-color: $color-secondary;
+  }
+
+  .bg-green {
+    background-color: $color-green-lighter;
+  }
+
+  .bg-white {
+    background-color: $color-snow;
+  }
+
+  .bg-grey-bg {
+    background-color: $color-grey-bg;
+  }
+
+  .bg-pink-bg {
+    background-color: $color-cta-lighter;
+  }
+
+  .button-cta-pink {
+    background-color: $color-cta;
+    color: $color-snow;
+  }
+
+  .button-primary-blue {
+    background-color: $color-primary-dark;
+    color: $color-snow;
+  }
+
+  .button-sec-light-blue {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+
+  .button-sec-white {
+    background-color: $color-snow;
+    color: $color-primary;
+  }
+
+  .text-light {
+    color: $color-snow
+  }
+
+  .text-dark {
+    color: $color-primary
+  }
 }
 
 #bonusBlockOneColumnsSuccess {

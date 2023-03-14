@@ -1,10 +1,12 @@
 <!-- 
-	!!! Use "block_type": block for display 1- or 2-cluns block. This parameter is requered for blocks
+	!!! Use "block_type": block for display 1- or 2-columns block. This parameter is requered for blocks
 
 	Use "columns" = 1 or 2 for block width
 	Use "blockHasInput" = true or false for display input and button or button only
 	Use "modal" for display modal window. modal parameter hasInput shows input in modal
 	Parameters "title" and "subTitle" are using for texts on the blocks. "successTitle" and "successSubTitle" are using for success blocks
+
+	Use "bg_image" = false/true for set or hide background shadow
  -->
 
 @@include('layout/_header.html', {
@@ -16,9 +18,9 @@
 
 
 <div class="content-wrapper register-lottery-wrap ml-2017">
-	<div class="container">
+	<div class="container ">
 		<div class="row register-lottery-wrap equal-height">
-			<div class="col-md-6">
+			<div class="col-md-6 bonus-blocks">
 				<!-- register-bonusar styles in the register-lottery.scss -->
 				<div class="register-lottery register-bonusar">
 					<h1>Aktivera bonus</h1>
@@ -26,7 +28,7 @@
 						under ”Mina bonusar”.</p>
 
 					<!-- Current js script is register-lottery.js but it specific only for #lotterynumberinput id (mask and popover) -->
-					<form method="post" action="/" class="js-bonus-block" data-form-type="register">
+					<form method="post" action="/" class="js-bonus-block bonus-block__form" data-form-type="register">
 						<input id="bonusactivationinput" name="lotterynumber" class="btn-bonus">
 						<span class="loader">
 							<span class="dots-circle-spinner loading text-color-white"></span>
@@ -49,14 +51,16 @@
 		
 		</div>
 
+		
 		<!-- START another options of bonus-block -->
 		<div class="row register-lottery-wrap equal-height">
 
 			@@include('blocks/_bonus-page.html',{
 				"block_type": "block",
+				"bg_image": false,
 				"columns": 2,
-				"blockHasInput": false,
-				"title": "Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
+				"blockHasInput": true,
+				"title": "Bingobonus22! ",
 				"subtitle":"Lorem ipsum dolor set orem ipsum dolor set orem ipsum dolor setorem ipsum dolor set. Giltig t o m: 2023-01-31.",
 				//"modal":{
 				//	"hasInput":false
@@ -66,6 +70,7 @@
 		
 			@@include('blocks/_bonus-page.html', {
 				"block_type": "block",
+				"bg_image": false,
 				"columns": 1,
 				"blockHasInput":false,
 				"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
@@ -77,18 +82,19 @@
 				}
 				})
 
-				@@include('blocks/_bonus-page.html', {
-								"block_type": "block",
-								"columns": 1,
-								"blockHasInput":true,
-								"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
-								"subTitle":"Gäller t o m: 2023-01-31",
-								"successTitle": "Nyårsbonus! Spela Zoobaloo för 100 kr – få 50 kr tillbaka",
-								"successSubTitle": "Gäller t o m: 2023-01-31",
-								//"modal":{
-								//	"hasInput":true
-								//}
-								})
+		@@include('blocks/_bonus-page.html', {
+			"block_type": "block",
+			"bg_image": true,
+			"columns": 1,
+			"blockHasInput":true,
+			"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
+			"subTitle":"Gäller t o m: 2023-01-31",
+			"successTitle": "Nyårsbonus! Spela Zoobaloo för 100 kr – få 50 kr tillbaka",
+			"successSubTitle": "Gäller t o m: 2023-01-31",
+			//"modal":{
+			//	"hasInput":true
+			//}
+		})		
 		</div>
 		
 		<!-- END another options of bonus-block -->
