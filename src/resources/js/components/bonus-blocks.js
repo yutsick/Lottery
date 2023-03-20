@@ -4,6 +4,7 @@ const BonusBlocks = () => {
     let $input = null;
     let $button = null;
     let $loader = null;
+    let $modalButton = null
 
 
     
@@ -120,6 +121,10 @@ const BonusBlocks = () => {
     }
 
     const form = () => {
+
+        if(window.innerWidth <= 576){
+            $modalButton.attr('data-button','true');
+        }
         const $form = $('.js-bonus-block');
         const isTest = true;
         $form.submit((e) => {
@@ -233,6 +238,7 @@ const BonusBlocks = () => {
            $(arr[i]).attr('data-block',i+1) ;
 
         }
+        $modalButton = $('.modal-input');
         $input = $('.btn-bonus');
         popover();
         form();

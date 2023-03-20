@@ -123,12 +123,14 @@
     
               <form method="post" action="/" class="h-40 bonus-popup__form d-flex  js-bonus-block w-100 justify-content-center">
                 @@if(context.modal.hasInput){
-                <input placeholder="0000" class="bonus-popup__form-input position-relative btn-bonus" id="bonusnumberinput2" name="bonusnumber2">
+                <input placeholder="0000" class="bonus-popup__form-input position-relative btn-bonus modal-input" name="bonusnumber2">
+                
+
                 <span class="loader">
                   <span class="dots-circle-spinner loading text-color-white"></span>
                 </span>
-             
-                <button class="btn btn-success js-btn-success">Aktivera</button> 
+                
+                <button class="btn btn-success js-btn-success ">Aktivera</button> 
               }
               @@if(!context.modal.hasInput){
 
