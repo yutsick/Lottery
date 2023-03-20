@@ -10,13 +10,21 @@ export default function() {
           $(panel).removeClass('desctop__active active');
 //          $('.bingoroom-tabs>.tab').removeClass('active');
 //          $('.bingoroom-tabs__').removeClass('desctop__active active');
-          $($(this).attr('href')).addClass('desctop__active active');
+
+          if($(this).prop("tagName") != 'A'){
+            $($(this).find('a').attr('href')).addClass('desctop__active active');
+          } else {
+            $($(this).attr('href')).addClass('desctop__active active');
+          }
         });
     };
 
   
     //tabs in schema-tabs module
     tabs('.js-schema-tabs__btn', '.js-schema-tabs__panel');
+    tabs('.js-bingoschema-tabs__btn', '.js-bingoschema-tabs__panel');
+    tabs('.js-bingoschema-chattspel-tabs__btn', '.js-bingoschema-chattspel-tabs__panel');
+    tabs('.js-bingoschema-tabs-slots__btn', '.js-bingoschema-tabs-slots__panel');
     tabs('.js-schemas-modal-tabs__tab', '.schema-tabs__panel-content');
 
 }

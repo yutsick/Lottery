@@ -1,0 +1,673 @@
+// Bingo page
+//$color-primary 003E52
+//
+// $apercu: 'Apercu Pro'; /* Bold + italic, Regular + italic, Light + italic weights*/
+// $zingRust: 'Zing Rust Demo Base'; /* Only normal weight */
+// $zingRustScript: 'Zing Rust Demo SB Base Script';
+
+//$base-font-family: 'Proxima Nova';
+
+
+/* Main styles */
+.position-absolute{
+  position: absolute;
+}
+.top-0{
+  top:0;
+}
+.position-relative{
+  position: relative;
+}
+.py-40{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.brd-rad-16{
+  border-radius: 16px;
+}
+.bg-shadow{
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2)
+}
+.bg-white{
+  background-color: #fff;;
+}
+
+.justify-end{
+  justify-content: end;
+}
+.direction-row{
+  flex-direction: row !important;
+}
+.direction-column{
+  flex-direction: column;
+}
+.page-bingo{
+  
+  section.top-section{
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    backdrop-filter: blur(34px);
+    .two-col{
+      padding: 25px 30px;
+
+      h3{
+        font: 700 30px/38px $apercu;
+        color:$color-primary;
+      }
+      p{
+        font: 400 16px/24px $apercu;
+        color: #366474;
+        margin-top: 22px;
+      }
+    }
+
+
+    .list{
+      padding: 18px 12px 15px;
+      h4{
+        line-height: 20px;
+      }
+      &-wrapper{
+        margin-top: 18px;
+      }
+      &-title{
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+      
+        span{
+          font: 700 10px/12px $base-font-family;
+          color: #6B8B96;
+          text-transform: uppercase;
+        }
+      }
+      ul{
+        list-style-type: none;
+      }
+      &-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 6px 10px;
+        background-color: #E2EFF7;
+        border-radius: 4px;
+        font:700 14px/20px $apercu;
+        margin-bottom: 4px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  section.bingo-room{
+    .bingo-room{
+      &__item{
+        background-repeat: no-repeat;
+        background-size: cover;
+      
+        .host{
+          display: flex;
+          border-radius: 28px 0px 0px 28px;
+          right:0;
+          top: 24px;
+          padding: 9px 0 9px 10px;
+          &-av{
+            height: 38px;
+            width: 38px;
+          }
+          &-text{
+            margin-left: 11px;
+            min-width: 109px;
+          }
+          &-title{
+            font: 700 14px/16px $apercu;
+            color: $color-primary;
+            opacity: 0.5;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+          }
+          &-name{
+            font: 700 16px/16px $apercu;
+            color: $color-primary;
+            margin-top: 4px;
+          }
+        } 
+      }
+
+      &__detailes{
+        margin: 25px 16px 15px;
+
+        position: relative;
+
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+        padding: 16px;
+        ;
+        &:before{
+          content:url('../img/tooltip-arrow.png');
+          position: absolute;
+          top:-15px;
+          left:calc(50% - 32px);
+        }
+        .__title{
+          font: 700 16px/16px $base-font-family;
+          color: #6B8B96;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+        }
+        .__name{
+          font: 400 32px/32px $zingRust;
+          color:$color-primary;
+          margin-top: 10px;
+          margin-bottom: 25px;
+        }
+        .__total, .__price{
+          font: 700 24px/24px $apercu;
+          color: #47A1B6;
+          margin-top: 7px;
+        }
+        .__price{
+          color: #6CB490;
+        }
+        .cta{
+          display: flex;
+          flex-direction: column;
+          width: fit-content;
+          .btn{
+            padding-top: 19px;
+            padding-bottom: 19px;
+            font: 700 20px/20px $apercu;
+          }
+          .__users, .__time{
+            border: 2px solid #ABBABE;
+            border-radius: 33px;
+            padding: 16px 20px;
+            margin-bottom: 16px;
+            p{
+              font: 700 20px/20px $apercu;
+              color: $color-primary;
+              display: flex;
+              margin-bottom: 0;
+              align-items: center;
+              justify-content: space-between;
+            }
+          }
+          .__users{
+            min-width: 100px;
+            p:before {
+              content: "";
+              background-image:url('../img/icons/icon-players.png');
+              //margin-right: 15px;
+              width: 20px;
+              height: 24px;
+              background-size: 20px 24px;
+            }
+          }
+          .__time{
+            margin-left: 16px;
+            min-width: 122px;
+            p:before {
+              content:"";
+              background-image: url('../img/icons/icon-clock.png');
+              //margin-right: 15px;
+              width: 24px;
+              height: 24px;
+              background-size: 24px 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+section.expanded-menu{
+  background-color: #366474;
+  padding-top: 16px;
+  padding-bottom: 33px;
+  ul.tabs{
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 0 16px;
+    text-decoration: none;
+    margin-bottom: 16px;
+    li{
+      background-color: #fff;
+      font: 700 20px/38px $base-font-family;
+      color: $color-primary;
+      
+      text-transform: uppercase;
+      padding: 18px 31px;
+      flex:1 1;
+      border-radius: 16px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+      a{
+        opacity: 0.75;
+        text-decoration: none;
+        span{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          &:after{
+            content: url('../img/icons/chevron-tab-down.png');
+          }
+        }
+      }
+      &.active{
+        span{
+          &::after{
+            content: url('../img/icons/chevron-tab-up.png');
+          }
+        }
+        border-radius:16px 16px 0 0;
+        box-shadow: unset;
+        a{
+          opacity: 1;
+        }
+
+        &::after{
+          content:'';
+          width: calc(100% + 32px);
+          height: 32px;
+          left:-16px;
+          position: absolute;
+          z-index: 1;
+          bottom:-32px;
+          background-color: #fff;;
+        }
+        &:first-child{
+          &:before{
+            content:none;
+          }
+          &:after{
+            left:0;
+            width: calc(100% + 8px);
+          }
+          a:before{
+            content:none;
+          }
+          
+        }
+        &:last-child{
+          &::after{
+            width: calc(100% + 8px);
+            left: -8px;
+          }
+          a:after{
+            content:none;
+          }
+        }
+        a{
+          &:after{
+            content: '';
+            width: 32px;
+            height: 32px;
+            background-color: #366474;
+            position: absolute;
+            right: -32px;
+            bottom: -16px;
+            z-index: 2;
+            border-radius: 8px;
+          }
+          &::before{
+            content:"";
+            width: 32px;
+            height: 32px;
+            background-color: #366474;
+            position: absolute;
+            left: -32px;
+            bottom: -16px;
+            z-index: 2;
+            border-radius: 8px;
+            -webkit-clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 0%);
+          }
+        }
+      }
+
+    }
+  }
+  .schema-tabs__panels-container{
+    background-color: #fff;
+    padding: 35px 33px 0 31px;
+    border-radius: 16px;
+
+    #panel__bingoschema{
+      &.active{
+        margin-bottom: 47px;
+      }
+      
+    }
+
+    .rooms{
+      margin-bottom: 28px;
+
+      .js-bingoschema-tabs__btn{
+        display: inline-block;
+        font: 400 24px/32px $apercu;
+        letter-spacing: 0.02em;
+        color: #366474;
+        min-width: 212px;
+        text-align: center;
+        &.active{
+          font-weight: 900;
+          text-decoration: none;
+        }
+      }
+    }
+    .room__item{
+      .bingoroom-tabs {
+        background-color: #fff;
+        ul{
+          margin-bottom: 0;
+          gap:0 20px;
+          padding: 0;
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          text-decoration: none;
+
+        }
+       
+        
+        li.tab{
+
+          padding: 0;
+          box-shadow: unset;
+          background-color: #fff;
+          font: 400 20px/20px $apercu;
+          color: #163D50;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          span{
+            font-weight: 700;
+          }
+          a{
+            display: flex;
+            text-decoration: none;
+            align-items: center;
+              &:before{
+              content: url('../img/icons/icon-clock-solid.png');
+              margin-right: 15px;
+              width: 20px;
+              height: 20px;
+            }
+          }
+          
+          &.active{
+            border: 2px solid #8a9ea7;
+            border-bottom: none;
+            border-radius: 16px 16px 0 0;
+            position: relative;
+            z-index: 2;
+            span{
+
+            
+              &:before, &:after{
+                position: absolute;
+                bottom: -1.5px;
+                width: 16px;
+                height: 16px;
+                content: " ";
+                border: 2px solid #8a9ea7;
+              }
+              &:before{
+                border-bottom-right-radius: 16px;
+                border-width: 0 2px 2px 0;
+                box-shadow: 8px 2px 0 #fff, 0px 2px 0 #fff;
+                left: -16px;
+              }
+              &:after{
+                border-bottom-left-radius: 16px;
+                border-width: 0 0 2px 2px;
+                box-shadow: -4px 5px 0 #FFF, 0px 2px 0 #FFF;
+                right: -16px;
+              }
+            }
+            &:after{
+              z-index: 2;
+              content:"";
+              width: 100%;
+              height: 24px;
+              bottom:-13px;
+              position: absolute;
+              background-color: #fff;
+            }
+            &:last-child:after{
+              border-right: solid 2px #8a9ea7;
+              left: 1px;
+            }
+            &:first-child:after{
+              border-left:solid 2px #8a9ea7;
+              left: -2px;
+            }
+          }
+        }
+      }
+    }
+ 
+    .bingoroom-tabs__{
+      border: 2px solid #8a9ea7;
+      border-radius: 16px;
+      padding: 34px 32px;
+
+      &t-head{
+        font: 700 16px/38px $base-font-family;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #163D50;
+        margin-bottom: 8px;
+        padding: 0 26px;
+        opacity: 0.75;
+      }
+      &t-data{
+        font: 400 20px/20px $apercu;
+        padding: 22px 26px;
+        background-color: #E2EFF7;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        .font-bold{
+          font-weight: 700;
+        }
+      }
+    }
+
+    .chattschema{
+
+      &__header{
+        text-align: center;
+        font: 700 24px/20px $apercu;
+        margin-bottom: 31px;
+
+      }
+      &__items{
+        display: flex;
+        justify-content: space-between;
+        gap: 16px 32px;
+        margin-bottom:82px;
+      }
+      &__items-col{
+        display: flex;
+        justify-content: space-between;
+        gap: 16px 32px;
+        padding: 0;       
+        flex-direction: column;
+
+      }
+     
+      &__item{
+        height: 235px; 
+        border: 1px solid rgba(22, 61, 80, 0.5);
+        border-radius: 16px;
+        padding: 0;
+
+        &-header{
+        border-radius: 16px 16px 0 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: #E2EFF7;
+        font: 700 20px/20px $apercu;
+        color: #163D50;
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 20px; 
+        }
+        &-text{
+          font: 400 16px/24px $apercu;
+          padding: 20px;
+        }
+      }
+    }
+
+    .chattspel{
+      hr.hr-light{
+        height: 1px;
+        background-color: #D6DDE0;
+        margin-top: 16px;
+        margin-bottom: 0;
+      }
+      .allachattspel{
+        &.active{
+          margin-top: 24px;
+        }
+        
+      }
+      .rooms{
+        margin-bottom: 0;
+      }
+
+      &-title{
+        font: 700 32px/20px $apercu;
+        color: #163D50;
+        text-align: center;
+        margin-top: 25px;
+      }
+      &-text{
+        text-align: center;
+        max-width: 484px;
+        margin: 20px auto 40px;
+        font: 400 16px/24px $apercu;
+        color: #163D50;
+        
+      }
+      
+      .rooms .js-bingoschema-chattspel-tabs__btn{
+        display: inline-block;
+        font: 400 24px/32px $apercu;
+        letter-spacing: 0.02em;
+        color: #366474;
+        margin-right: 48px;
+        text-align: left;
+        &.active{
+          font-weight: 900;
+          text-decoration: none;
+        }
+
+        
+      }
+      .room__items{
+        &.active{
+          margin-bottom: 30px;
+        }
+        
+        &-row{
+          display: flex;
+          justify-content: space-between;
+          gap: 16px 16px;
+          margin-bottom: 16px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        } 
+        &-item{
+          padding: 22px 16px;
+          border: 1px solid rgba(22, 61, 80, 0.2);
+          border-radius: 16px;
+          height: 272px;
+          color: #163D50;
+
+          &-header{
+            font: 700 20px/20px $apercu;
+            margin-bottom: 21px;
+          }
+          
+          &-text{
+            font: 400 16px/24px $apercu;
+          }
+        }
+      }
+
+      .chattspelsregler{
+        &-wrapper{
+          padding: 65px 104px 40px 22px;
+        }
+        &__item{
+          margin-bottom: 40px;
+
+
+          &-header{
+            font: 700 32px/20px $apercu;
+            margin-bottom: 20px;
+          }
+          &-text{
+            font: 400 20px/28px $apercu;
+          }
+        }
+      }
+    }
+
+    .jackpottar{
+      &.active{
+        padding-bottom: 130px;
+      }
+
+      &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 0 24px;
+      }
+
+      &__item{
+
+        &-wrapper{
+          border: 2px solid rgba(22, 61, 80, 0.2);
+          border-radius: 16px;
+          padding: 22px 13px 15px;
+        }
+        &-table{
+          display: flex;
+          justify-content: space-between;
+          gap: 0 16px;
+        }
+        &-title{
+          font: 700  24px/20px $apercu;
+          margin-bottom: 30px;
+          margin-top: 0;
+        }
+
+      
+        .bingoroom-tabs__t-head{
+          opacity: 0.5;
+          font: 700 10px/12px $apercu;
+          padding: 0 10px;
+        }
+        .bingoroom-tabs__t-data{
+          font: 400 14px/20px $apercu;
+          padding: 10px;
+          border-radius: 4px;
+          background: #E2EFF7;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+}
