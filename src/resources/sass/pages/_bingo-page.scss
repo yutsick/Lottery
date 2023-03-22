@@ -41,6 +41,19 @@
 .direction-column{
   flex-direction: column;
 }
+
+.no-wrap{
+  flex-wrap: nowrap !important;
+}
+
+.gap-20{
+  gap: 0 20px;
+}
+
+.m-equal{
+  margin: 0 -20px !important;
+}
+
 .page-bingo{
   
   section.top-section{
@@ -48,16 +61,94 @@
     background-size: cover;
     padding: 40px 0;
     backdrop-filter: blur(34px);
+
+    &.color{
+      &-white{
+        h3,p{
+          color: #ffffff;
+        }
+      }
+      &-primary-blue{
+        h3,p{
+          color: #003E52;
+        }
+        &-75{
+          h3,p{
+            color: #366474;
+          }
+        }
+        &-50{
+          h3,p{
+            color: #6B8B96;
+          }
+        }
+        &-20{
+          h3,p{
+            color: #ABBABE;
+          }
+        }
+      }
+    }
+     
+    &.section-bg{
+      &-none{
+        background-color: transparent;
+      }
+      &-white{
+        background-color: #FFFFFF;
+      }
+
+      &-primary-blue{
+        background-color: #003E52;
+        &-75{
+          background-color: #366474;
+        }
+        &-50{
+          background-color: #6B8B96;
+        }
+        &-20{
+          background-color: #ABBABE;
+        }
+      }
+
+    }
+
+    .bg{
+      &-none{
+        background-color: transparent;
+      }
+      &-white{
+        background-color: #FFFFFF;
+      }
+
+      &-primary-blue{
+        background-color: #003E52;
+        &-75{
+          background-color: #366474;
+        }
+        &-50{
+          background-color: #6B8B96;
+        }
+        &-20{
+          background-color: #ABBABE;
+        }
+      }
+
+    }
+    
     .two-col{
       padding: 25px 30px;
 
       h3{
-        font: 700 30px/38px $apercu;
-        color:$color-primary;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 38px;
+        
       }
       p{
-        font: 400 16px/24px $apercu;
-        color: #366474;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
         margin-top: 22px;
       }
     }
@@ -102,6 +193,29 @@
   }
 
   section.bingo-room{
+    &.section-bg{
+      &-none{
+        background-color: transparent;
+      }
+      &-white{
+        background-color: #FFFFFF;
+      }
+
+      &-primary-blue{
+        background-color: #003E52;
+        &-75{
+          background-color: #366474;
+        }
+        &-50{
+          background-color: #6B8B96;
+        }
+        &-20{
+          background-color: #ABBABE;
+        }
+      }
+
+    }
+
     .bingo-room{
       &__item{
         background-repeat: no-repeat;
@@ -221,10 +335,86 @@
     }
   }
 
+
 section.expanded-menu{
-  background-color: #366474;
+  @mixin tabs($bg-color,$tab-round,$li-after){
+    background-color: $bg-color;
+    ul.tabs{
+      li{
+        &.active{
+          a{
+            &:after{
+              background-color: $tab-round;
+            }
+            &:before{
+              background-color: $tab-round;
+            }
+          }
+          &::after{
+            background-color: $li-after
+          }
+        }
+      }
+    }
+  }
+  @mixin tabs-font($font-color){
+    
+      li{
+        a{
+          span{
+            color: $font-color;
+          }
+        }  
+      }
+    
+  }
+
+  &.section-bg{
+    &-white{
+      @include tabs( #FFFFFF,transparent, transparent);
+    }
+
+    &-primary-blue{
+      @include tabs( #003E52,#003E52,#FFFFFF);
+      &-75{
+        @include tabs( #366474,#366474,#FFFFFF);
+      }
+      &-50{
+        @include tabs( #6B8B96,#6B8B96,#FFFFFF);
+      }
+      &-20{
+        @include tabs( #ABBABE,#6B8B96,#FFFFFF);
+      }
+    }
+
+  }
+  .font-color{
+    &-white{
+      @include tabs-font(#FFFFFF);
+    }
+
+    &-primary-blue{
+      @include tabs-font(#003E52);
+      &-75{
+        @include tabs-font(#366474);
+      }
+      &-50{
+        @include tabs-font(#6B8B96);
+      }
+      &-20{
+        @include tabs-font(#ABBABE);
+      }
+    }
+  }
+
   padding-top: 16px;
   padding-bottom: 33px;
+  &.closed{
+    padding-bottom: 0;
+    .schema-tabs__panels-container{
+      display: none;
+    }
+  }
   ul.tabs{
     padding: 0;
     list-style-type: none;
@@ -233,16 +423,20 @@ section.expanded-menu{
     gap: 0 16px;
     text-decoration: none;
     margin-bottom: 16px;
+    padding: 0 16px;
+    
     li{
       background-color: #fff;
-      font: 700 20px/38px $base-font-family;
-      color: $color-primary;
-      
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 38px;
       text-transform: uppercase;
-      padding: 18px 31px;
+      padding: 0 24px;
+      height: 56px;
+      align-items: center;
+
       flex:1 1;
       border-radius: 16px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
       cursor: pointer;
       position: relative;
       z-index: 3;
@@ -252,16 +446,25 @@ section.expanded-menu{
         span{
           display: flex;
           justify-content: space-between;
+          height: 100%;
           align-items: center;
           &:after{
-            content: url('../img/icons/chevron-tab-down.png');
+            content: "";
+            background: url('../img/icons/chevron-tab-down.png');
+            width: 16px;
+            height: 8px;
+            background-size: 16px 8px;
           }
         }
       }
       &.active{
         span{
           &::after{
-            content: url('../img/icons/chevron-tab-up.png');
+            content: "";
+            background: url('../img/icons/chevron-tab-up.png');
+            width: 16px;
+            height: 8px;
+            background-size: 16px 8px;
           }
         }
         border-radius:16px 16px 0 0;
@@ -274,7 +477,7 @@ section.expanded-menu{
           content:'';
           width: calc(100% + 32px);
           height: 32px;
-          left:-16px;
+          left:-5px;
           position: absolute;
           z-index: 1;
           bottom:-32px;
@@ -295,8 +498,8 @@ section.expanded-menu{
         }
         &:last-child{
           &::after{
-            width: calc(100% + 8px);
-            left: -8px;
+            width: calc(100% + 5px);
+            
           }
           a:after{
             content:none;
@@ -307,7 +510,7 @@ section.expanded-menu{
             content: '';
             width: 32px;
             height: 32px;
-            background-color: #366474;
+
             position: absolute;
             right: -32px;
             bottom: -16px;
@@ -318,14 +521,14 @@ section.expanded-menu{
             content:"";
             width: 32px;
             height: 32px;
-            background-color: #366474;
+
             position: absolute;
             left: -32px;
             bottom: -16px;
             z-index: 2;
             border-radius: 8px;
-            -webkit-clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 0%);
-            clip-path: polygon(50% 0%, 50% 50%, 0% 50%, 0% 100%, 100% 100%, 100% 0%);
+            -webkit-clip-path: polygon(80% 0%, 80% 80%, 0% 90%, 0% 100%, 100% 100%, 100% 0%);
+            clip-path: polygon(80% 0%, 80% 80%, 0% 90%, 0% 100%, 100% 100%, 100% 0%);
           }
         }
       }
@@ -336,6 +539,7 @@ section.expanded-menu{
     background-color: #fff;
     padding: 35px 33px 0 31px;
     border-radius: 16px;
+    margin: 0 16px;
 
     #panel__bingoschema{
       &.active{
@@ -385,6 +589,7 @@ section.expanded-menu{
           display: flex;
           align-items: center;
           cursor: pointer;
+          transition: all .1s ease;
           span{
             font-weight: 700;
           }
@@ -441,7 +646,7 @@ section.expanded-menu{
             }
             &:last-child:after{
               border-right: solid 2px #8a9ea7;
-              left: 1px;
+              left: 1.5px;
             }
             &:first-child:after{
               border-left:solid 2px #8a9ea7;
@@ -532,7 +737,7 @@ section.expanded-menu{
         margin-top: 16px;
         margin-bottom: 0;
       }
-      .allachattspel{
+      .card-layout{
         &.active{
           margin-top: 24px;
         }
@@ -603,7 +808,7 @@ section.expanded-menu{
         }
       }
 
-      .chattspelsregler{
+      .text-layout{
         &-wrapper{
           padding: 65px 104px 40px 22px;
         }

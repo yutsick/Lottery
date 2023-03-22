@@ -4,17 +4,33 @@ export default function() {
     function tabs (btn, panel) {
         $(btn).on('click', function (event) {
           event.preventDefault();
+          if($(this).hasClass('desctop__active active')){
+            $(this).removeClass('desctop__active active');
+
+            if($(this).prop("tagName") != 'A'){
+              $($(this).find('a').attr('href')).parent().find(panel).removeClass('desctop__active active');
+    
+            } else {
+              $($(this).attr('href')).parent().find(panel).removeClass('desctop__active active');
+      
+            }
+
+          } else {
+             $(this).parent().find(btn).removeClass('desctop__active active');
+            $(this).addClass('desctop__active active');
           
-          $(btn).removeClass('desctop__active active');
-          $(this).addClass('desctop__active active');
-          $(panel).removeClass('desctop__active active');
+         
+         // $(panel).removeClass('desctop__active active');
 //          $('.bingoroom-tabs>.tab').removeClass('active');
 //          $('.bingoroom-tabs__').removeClass('desctop__active active');
 
-          if($(this).prop("tagName") != 'A'){
-            $($(this).find('a').attr('href')).addClass('desctop__active active');
-          } else {
-            $($(this).attr('href')).addClass('desctop__active active');
+            if($(this).prop("tagName") != 'A'){
+              $($(this).find('a').attr('href')).parent().find(panel).removeClass('desctop__active active');
+              $($(this).find('a').attr('href')).addClass('desctop__active active');
+            } else {
+              $($(this).attr('href')).parent().find(panel).removeClass('desctop__active active');
+              $($(this).attr('href')).addClass('desctop__active active');
+            }
           }
         });
     };
