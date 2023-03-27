@@ -17,7 +17,7 @@
 <!--@@include('layout/_top.html', {"logged_in": true})
 @@include('layout/_sidebar.html', {"logged_in": true})-->
 
-  <div class="content-wrapper ml-2017">
+<div class="content-wrapper ml-2017">
    <div class="@@if(context.class){@@class}" id="page-wrapper">
       <div class="checkout-module__">
          <div class="number__top">
@@ -152,6 +152,7 @@
                </div>
                <div class="content__">
                   <div class="row__content">
+                     
                      <div class="box__">
                         <div class="box__top">
                            <h3 class="title">Fraktsätt</h3>
@@ -166,52 +167,87 @@
                                  <p>0 kr</p>
                               </div>
                            </li>
-                           <li class="column__">
-                              <div class="input">
-                                 <input type="radio" id="Expressfrakt" name="shipping" value="Expressfrakt">
-                                 <label for="Expressfrakt"> <img class="icon" src="/assets/img/checkout-module/icon-leveransuppgifter-green.svg" alt=""><span>Expressfrakt</span> (1-3 arbetsdagar)</label>
+                           <li class="d-block">
+                              <div class="d-flex align-center">
+                                 <div class="input">
+                                    <input type="radio" id="Expressfrakt" name="shipping" value="Expressfrakt">
+                                    <label for="Expressfrakt"> <img class="icon" src="/assets/img/checkout-module/icon-leveransuppgifter-green.svg" alt=""><span>Expressfrakt</span> (1-3 arbetsdagar)</label>
+                                 </div>
+                                 <div class="prise">
+                                    <p><span class="font-regular">49 kr</span></p>
+                                 </div>
                               </div>
-                              <div class="prise">
-                                 <p><span>49 kr</span></p>
+                              <div class="payment row mb-20">
+                              <div class="col-md-6 py-0 px-19">
+                                 <h3 class="title small full-color">Tilläggsbetalning för expressleverans</h3>
+                                 <p class="font-small">Du saknar pengar på ditt vinstkonto för att beställa dina varor med expressleverans. Välj betalningsmetod och du får genomföra en tilläggsbetalning i samband med att du slutför din beställning.</p>
+                                 <p class="full-color text-bold d-flex justify-between">
+                                    <span class="full-color">Att tilläggsbetala:</span>
+                                    <span class="full-color">25 kr</span>
+                                 </p>
+                              </div>
+                              <div class="col-md-6 border-left p-0">
+                                 <ul class="list shipping">
+                                 <li>
+                                    <div class="input">
+                                       <input type="radio" id="swish" name="payment" value="swish" checked="checked">
+                                       <label for="swish"> 
+                                          Betala med Swish
+                                       </label>
+                                    </div>
+                                    <div class="logo-wrapper">
+                                       <img src="assets/img/logos/swish-logo.png" alt="">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="input">
+                                       <input type="radio" id="cort" name="payment" value="cort">
+                                       <label for="cort"> Betala med kort</label>
+                                    </div>
+                                    <div class="logo-wrapper">
+                                       <img src="assets/img/logos/payment-logo.png" alt="">
+                                    </div>
+                                 </li>
+                              </ul></div>
                               </div>
                            </li>
                         </ul>
-                     </div>
-                     <div class="box__column">
-                        <div class="box__ address">
-                           <div class="box__top">
-                              <h3 class="title">Leveransadress</h3>
+                        <div class="box__column">
+                           <div class="box__ address">
+                              <div class="box__top">
+                                 <h3 class="title">Leveransadress</h3>
+                              </div>
+                              <ul class="list shipping">
+                                 <li class="">
+                                    <p>Förnamn Efternamn
+                                       <br>Stadsgatan 12
+                                       <br>413 00 Göteborg
+                                    </p>
+                                 </li>
+                              </ul>
                            </div>
-                           <ul class="list shipping">
-                              <li class="">
-                                 <p>Förnamn Efternamn
-                                    <br>Stadsgatan 12
-                                    <br>413 00 Göteborg
-                                 </p>
-                              </li>
-                           </ul>
-                        </div>
-                        <div class="box__">
-                           <div class="box__top">
-                              <h3 class="title">Avisering</h3>
+                           <div class="box__">
+                              <div class="box__top">
+                                 <h3 class="title">Avisering</h3>
+                              </div>
+                              <ul class="list shipping">
+                                 <li>
+                                    <div class="input">
+                                       <input type="radio" id="SMS" name="notice" value="SMS" checked="checked">
+                                       <label for="SMS"> <span>SMS</span> </label>
+                                    </div>
+                                    <div class="input">
+                                       <input type="namber" id="phone" name="phone" pattern="[0-9]*" placeholder="0701-23 45 67">
+                                    </div>
+                                 </li>
+                                 <li>
+                                    <div class="input">
+                                       <input type="radio" id="Brev" name="notice" value="Brev">
+                                       <label for="Brev"> Brev</label>
+                                    </div>
+                                 </li>
+                              </ul>
                            </div>
-                           <ul class="list shipping">
-                              <li>
-                                 <div class="input">
-                                    <input type="radio" id="SMS" name="notice" value="SMS" checked="checked">
-                                    <label for="SMS"> <span>SMS</span> </label>
-                                 </div>
-                                 <div class="input">
-                                    <input type="namber" id="phone" name="phone" pattern="[0-9]*" placeholder="0701-23 45 67">
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="input">
-                                    <input type="radio" id="Brev" name="notice" value="Brev">
-                                    <label for="Brev"> Brev</label>
-                                 </div>
-                              </li>
-                           </ul>
                         </div>
                      </div>
                      <div class="box__">
@@ -227,6 +263,21 @@
                            </li>
                         </ul>
                      </div>
+                     <!-- Email block -->
+                     <div class="box__">
+                        <div class="box__top">
+                           <h3 class="title">Mailadress för leverans</h3>
+                        </div>
+                        <ul class="list shipping">
+                           <li>
+                           <div class="input w-100 mr-0">
+                           <input type="email" id="mailaddress" name="mailaddress" placeholder="namn.efternamn@mail.com">
+                        </div>
+                           </li>
+                        </ul>
+                        
+                     </div>
+                     <!-- End email block -->
                   </div>
                   <div class="black_blue_cont">
                      <a href="javascript:;" class="black_blue" data-num="3">Beställningsbekräftelse</a>
@@ -348,12 +399,55 @@
                               </li>
                            </ul>
                         </div>
+                        <!-- Email block -->
+                        <div class="box__">
+                           <div class="box__top">
+                              <h3 class="title">Mailadress för leverans</h3>
+                           </div>
+                           <ul class="list">
+                              <li>
+                                 <p>namn.efternamn@mail.com</p>
+                              </li>
+                           </ul>
+                        </div>
+                        
+                        <!-- End Email block -->
+                     </div>
+                     <!-- Totals block -->
+                     <div class="box__ w-100 totals__">
+                        <div class="box__top">
+                           <h3 class="title">Tilläggsbetalning för expressleverans</h3>
+                        </div>
+                        <ul class="list">
+                           <li class="p-0">
+                              <div class="row m-0 w-100">
+                                 <div class="col-md-6 one">
+                                    <span>När du skickar din beställning kommer du få genomföra din betalning för expressleverans.</span> 
+                                 </div>
+                                 <div class="col-md-6 two">
+                                    <div>
+                                       <div class="d-flex justify-between">
+                                          <span>Betalsätt</span>
+                                          <span>Swish</span>
+                                       </div>
+                                       <div class="d-flex justify-between text-bold mt-2">
+                                          <span class="text-bold">Att betala</span>
+                                          <span class="text-bold">49 kr</span>
+                                       </div>
+                                    </div>
+
+                                 </div>
+                              </div>
+                              
+                           </li>
+                        </ul>
+                     </div>
+                        <!-- End Totals block -->
+                     <div class="black_blue_cont">
+                        <a href="javascript:;" class="black_blue" data-num="4">Skicka beställning</a>
                      </div>
                   </div>
-                  <div class="black_blue_cont">
-                     <a href="javascript:;" class="black_blue" data-num="4">Skicka beställning</a>
-                  </div>
-               </div>
+               </div>           
             </div>
             <div class="bat_4 successpage">
                <div class="top__">
@@ -369,7 +463,7 @@
                         <p>Dina vinster packas och skickas inom kort. <br>När dina paket har skickats kan du spåra dem direkt under <a href="#">Mitt Konto</a> på Mina sidor.</p>
 
                   </div>
-                  <div class="succes__miljonlotten">
+                  <!-- <div class="succes__miljonlotten">
                      <div class="block">
                         <div class="comment">
                            <span class="cont_com">
@@ -382,12 +476,11 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, recusandae. Dolor laudantium id necessitatibus, fugit molestiae perferendis sapiente quisquam ullam.</p>
                         <a href="#" class="black_blue">Ta mig till bingot</a>
                      </div>
-                  </div>
+                  </div> -->
                </div>
             </div>
          </div>
       </div>
    </div>
-  </div>
 	<!-- /#page-wrapper -->
 @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

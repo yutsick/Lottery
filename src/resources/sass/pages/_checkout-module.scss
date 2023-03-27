@@ -1,5 +1,5 @@
 .checkout-module__{
-  
+
 //  background: #ff0000;
 
   max-width: 868px;
@@ -284,7 +284,7 @@
               list-style-type: none;
               
               li{
-                  color: #003E52;
+                  color: rgba(0, 62, 82, 0.75);
               font: 400 12px/1.2em 'Apercu Pro';
               margin: 0;
                 
@@ -293,7 +293,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 12px/1.2em 'Apercu Pro';
               margin-bottom: 10px;
               margin-top: 0;
@@ -372,14 +372,14 @@
             }
             
             .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 700 24px/1.2em 'Apercu Pro';
               text-align: center;
               margin-bottom: 32px;
               margin-top: 0;
             }            
             .id_order{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 700 16px/1.2em 'Apercu Pro';
               text-align: center;
               margin-bottom: 16px;
@@ -390,7 +390,7 @@
               max-width: 630px;
               width: 100%;
 
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 16px/1.2em 'Apercu Pro';
               text-align: center;
               margin-left: auto;
@@ -399,7 +399,7 @@
               
               span{
                 
-                color: #003E52;
+                color: rgba(0, 62, 82, 0.75);
                 font: 600 16px/1.2em 'Apercu Pro';
                 text-align: center;
                 margin-left: auto;
@@ -409,7 +409,7 @@
               
               a{
                 
-                color: #003E52;
+                color: rgba(0, 62, 82, 0.75);
                 font: 400 16px/1.2em 'Apercu Pro';
                 text-align: center;
                 margin-left: auto;
@@ -455,7 +455,7 @@
           
           span{
             display: flex;
-            color: #003E52;
+            color: rgba(0, 62, 82, 0.75);
             font: 700 14px/1.2em 'Apercu Pro';
             padding: 0;
             margin: 0;
@@ -554,7 +554,7 @@
             }
 
             .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               margin: 0;
               margin-top: 0px;
               margin-bottom: 3px;
@@ -562,7 +562,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 16px/1.2em 'Apercu Pro';
               margin: 0;
             }
@@ -578,7 +578,7 @@
               
               
               .dots{
-                color: #003E52;
+                color: rgba(0, 62, 82, 0.75);
                 font: 400 14px/1.2em 'Apercu Pro';
                 margin: 0;
                 margin-bottom: 14px;
@@ -602,7 +602,7 @@
                             
               
               .posht_car{
-                color: #003E52;
+                color: rgba(0, 62, 82, 0.75);
                 font: 400 14px/1.2em 'Apercu Pro';
                 margin: 0;
                 
@@ -806,7 +806,7 @@
             }
             
              .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               margin: 0;
               margin-top: 0;
               margin-bottom: 7px;
@@ -814,7 +814,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 16px/1.2em 'Apercu Pro';
               margin: 0;
             }
@@ -841,7 +841,7 @@
             width: 110px;
 
              .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               margin: 0;
               margin-top: 0;
               margin-bottom: 7px;
@@ -849,7 +849,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 16px/1.2em 'Apercu Pro';
               margin: 0;
             }
@@ -1037,6 +1037,7 @@
             @media screen and (max-width:840px){
               width: 320px;
             }
+          
             .block{
               height: auto;
               .image-wrapper{
@@ -1067,6 +1068,9 @@
             }
             .info{
               flex: 1 1;
+              h3,p{
+                color: #003E52;
+              }
               @media screen and (max-width:840px) {
                
                 width: 100%;
@@ -1103,7 +1107,7 @@
             }
 
             .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               margin: 0;
               margin-top: 0;
               margin-bottom: 7px;
@@ -1143,7 +1147,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 12px/1.2em 'Apercu Pro';
               margin: 0;
             }
@@ -1245,7 +1249,7 @@
             
             border-bottom: 1px solid #D9D9D9;
             .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 700 14px/1em 'Apercu Pro';
 
               margin: 0;
@@ -1355,8 +1359,9 @@
                       margin-left: 33px;
                       margin-top: 3px;
                       p{
-                           margin: 0;
+                        margin: 0; 
                       }
+                     
                     }
                   }
                   
@@ -1597,15 +1602,70 @@
         ul.list{
 
           &.shipping{
-            
+
             li{
-//              min-height: 80px;
-              
-//              flex-wrap: wrap;
+              justify-content: space-between;
+              span.font-regular{
+                font-weight: 400;
+              }
+              .payment{
+                p{
+                  color: rgba(0, 62, 82, 0.75); 
+                }
+                margin: 0;
+                display: none;
+                border: solid 1px rgba(0, 62, 82, 0.75);
+                border-radius: 10px;
+                &.open{
+                  display: block;
+                }
+                input[type = 'radio'] ~label{
+                  font: 400 16px/18px $apercu;
+                  color: rgba(0, 62, 82, 0.75);
+                }
+                input[type = 'radio']:checked ~label{
+                  color: #003E52
+                }
+                
+                .border-left{
+                  border-left: solid 1px #D9D9D9;
+                  @media (max-width:600px){
+                    border-left: none;
+                  }
+                }
+                &.mb-20{
+                  margin-bottom: 20px;
+                }
+                .small{
+                  font: 700 14px/1em $apercu;
+                }
+                .font-small{
+                  font-size: 14px;
+                }
+                .full-color{
+                  color: #003E52;
+                }
+                .px-19{
+                  padding-left:19px;
+                  padding-right: 19px;
+                }
+                .justify-between{
+                  justify-content: space-between;
+                }
+                .shipping{
+                  span{
+                    font-weight: 400;
+                  }
+                }
+              }
               
               &>.input:nth-child(1){
                 margin-right: 20px;
+                &.mr-0{
+                  margin-right: 0;
+                }
               }
+
                &>.input:nth-child(1) ~ &>.input:nth-child(2){
                margin-left: 20px;   
               }
@@ -1619,14 +1679,19 @@
                   
                 }
               
-              
+              &.d-block{
+                display: block;
+                .d-flex{
+                  display: flex;
+                  &.align-center{
+                    align-items: center;
+                  }
+                }
+              }
+
               &.column__{
                 display: flex;
                 flex-wrap: wrap;
-                
-                
-                
-
               }
               
               &.select__{
@@ -1699,7 +1764,7 @@
                   align-items: flex-start; 
                   
                   .title__{
-                        color: #003E52;
+                        color: rgba(0, 62, 82, 0.75);
                     font: 700 14px/1.2em 'Apercu Pro';
                     margin-top: 0; 
                     margin-bottom: 8px;
@@ -1737,7 +1802,7 @@
                      width: 100%;
                     
                     span{
-                        color: #003E52;
+                        color: rgba(0, 62, 82, 0.75);
                     font: 700 14px/1.2em 'Apercu Pro';
                       
                       
@@ -1851,13 +1916,16 @@
             .input{
                 position: relative;
                 display: flex;
-
+                &.w-100{
+                  width: 100%;
+                }  
+                
                 input[type='checkbox'],label,
                 input[type='radio']{
 
                       transition: all .1s ease;
                       cursor: pointer;
-                      color: #003E52;
+                      color: rgba(0, 62, 82, 0.75);
 
                       font: 400 16px/1.2em  'Apercu Pro';
                       span{
@@ -1875,7 +1943,7 @@
                   input[type='radio']:not(:checked) + label {
 
 
-
+                        
                         max-height: 20px;
                         margin: 0;
 
@@ -1980,7 +2048,8 @@
                 
                 
                 
-                input[type="namber"]{
+                input[type="namber"],
+                input[type="email"]{
                   opacity: 1;
                   position: relative;
                   
@@ -1996,12 +2065,15 @@
                   border-radius: 5px;
                   
                   outline: none;
-                  
+
                   @media screen and (max-width: 600px){
                      max-width: 100%;
                   }
 
-                  
+                }
+
+                input[type="email"]{
+                  max-width: 100%;
                 }
 
                 .icon{
@@ -2064,7 +2136,9 @@
             }
             
             &.padt{
-              
+              p{
+                color: rgba(0, 62, 82, 0.75);
+              }
               @media screen and (max-width: 600px){
                 padding-top: 14px !important;
                 padding-bottom: 0 !important;
@@ -2107,6 +2181,8 @@
               li{
                 p{
                   margin: 10px 0;
+                  color: rgba(0, 62, 82, 0.75);
+
                 }
               }
             }
@@ -2457,7 +2533,7 @@
             
 
             .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               margin: 0;
               margin-top: 0;
               margin-bottom: 7px;
@@ -2470,7 +2546,7 @@
               list-style-type: none;
               
               li{
-                  color: #003E52;
+                  color: rgba(0, 62, 82, 0.75);
               font: 400 12px/1.2em 'Apercu Pro';
               margin: 0;
                 
@@ -2479,7 +2555,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 12px/1.2em 'Apercu Pro';
               margin-bottom: 10px;
               margin-top: 0;
@@ -2574,6 +2650,13 @@
 
     .bat_2{
       
+      h3, p, span{
+        color: rgba(0, 62, 82, 0.75);
+      }
+      input[type='radio']:checked ~label,
+      input[type='radio']:checked ~label span{
+        color: #003E52 !important;
+      }
       .top__{
         .title{
 
@@ -2786,7 +2869,9 @@
     }
 
     .bat_3{
-      
+      span,p{
+        color: rgba(0, 62, 82, 0.75);
+      }
       &.open{
           
           .content__{
@@ -2796,7 +2881,9 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: inherit;
-            
+            .box__{
+              max-height: unset;
+            }
             @media screen and (min-width: 601px){
 //              gap: 16px;
             }
@@ -2966,7 +3053,7 @@
            
             
              .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               margin: 0;
               margin-top: 0;
               margin-bottom: 7px;
@@ -2974,7 +3061,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 16px/1.2em 'Apercu Pro';
               margin: 0;
             }
@@ -2984,7 +3071,7 @@
              padding-right: 19px;
             
              .title{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               margin: 0;
               margin-top: 0;
               margin-bottom: 7px;
@@ -2992,7 +3079,7 @@
             }
 
             p{
-              color: #003E52;
+              color: rgba(0, 62, 82, 0.75);
               font: 400 16px/1.2em 'Apercu Pro';
               margin: 0;
             }
@@ -3124,6 +3211,31 @@
 
           
 
+      }
+      .totals__{
+        li.p-0{
+          margin-right: 0;
+          padding: 0 !important;
+        }
+        font-size: 14px;
+        line-height: 18px;
+        .one{
+          padding: 16px 25px 13px 19px;
+        }
+        .two{
+          padding: 16px 37px 16px 27px;
+          border-left: solid 1px #D9D9D9;
+        }
+        .justify-between{
+          justify-content: space-between;
+        }
+        .text-bold{
+          font-weight: 700;
+
+        }
+        .mt-2{
+          margin-top: 8px;
+        }
       }
     }
     
