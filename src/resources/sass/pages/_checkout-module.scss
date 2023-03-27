@@ -899,7 +899,7 @@
             gap: 0 5px; 
           }
           
-          @media screen and (max-width: 840px)  {
+          @media screen and (max-width: 576px)  {
             position: relative;
             
             height: auto;
@@ -947,8 +947,7 @@
           }
           
           .block{
-            
-            background: #fff url(../../assets/img/checkout-module/lotter-d.png) no-repeat left top;
+          
             
             display: flex;
             align-items: center;
@@ -957,7 +956,9 @@
             max-width: 305px;
             
             height: 100%;
-               
+               @media screen and(max-width:840px) {
+                max-width: 270px;
+               }
               
 
             
@@ -1001,7 +1002,7 @@
                 
 
                 
-                firstname,span{
+                .firstname,span{
                    font: 700 14px/1.2em 'Apercu Pro';
                 }
                 
@@ -1034,30 +1035,52 @@
             height: auto;
             position: relative; 
             border-radius: 10px;
-            @media screen and (max-width:840px){
-              width: 320px;
+            align-items:stretch;
+
+            @media screen and (max-width:576px){
+              width: 100%;;
             }
           
             .block{
               height: auto;
+              max-width: 270px;
               .image-wrapper{
                 background: #C9E7F3;
-                width: 320px;
-                height: 130px;
+                width: 270px;
+                height: 100%;
                 border-radius: 10px 0 0 10px;
+                &.no-image{
+                  min-height: 130px;
+                }
+                @media screen and (max-width:576px){
+                  width: 100%;
+                }
               }
               img{
                 border-radius: 10px 0 0 10px;
-                width: 320px;
-                height: 130px;
+                width: 100%;
+                min-height: 130px;
                 object-fit: cover;
-                @media screen and (max-width:840px){
-                  border-radius: 10px 10px 0 0;
+                 @media screen and (max-width:768px){
+                  height: 100%;
                 }
+                @media screen and (max-width:576px){
+                  border-radius: 10px 10px 0 0;
+                  height: 130px;
+                }
+               
               }
-              @media screen and (max-width:840px){
+              @media screen and (max-width:640px){
                 height: auto !important;
                 margin: 0 auto;
+                max-width: 220px;
+              }
+              @media screen and (max-width:600px){
+                max-width: 150px;
+              }
+              @media screen and (max-width:576px){
+                max-width: unset;
+                width: 100%;
               }
             }
             .comment{
@@ -1078,15 +1101,17 @@
               }
             }
             .bot{
-              @media screen and (max-width:840px) {
+              align-items:center;
+              display: flex;
+              justify-content: flex-end;
+              @media screen and (max-width:576px) {
                 position: relative;
                 width: auto;
                 top: auto;
                 width: 100%;
                 padding: 0 13px 13px;
                 
-                display: flex;
-                justify-content: flex-end;
+               
               }
               .pink{
                 @media screen and (max-width:840px) {
@@ -1098,9 +1123,9 @@
             }
           } 
           .info{
-
+            padding: 12px;
             @media screen and (max-width: 840px) {
-              padding: 12px;
+              
               
               max-width: inherit !important;
               width: 100% !important;
@@ -1148,7 +1173,7 @@
 
             p{
               color: rgba(0, 62, 82, 0.75);
-              font: 400 12px/1.2em 'Apercu Pro';
+              font: 400 12px/1.5em 'Apercu Pro';
               margin: 0;
             }
           }
@@ -1156,7 +1181,7 @@
           .bot{
             
             margin-left: auto;
-            padding-right: 24px;
+            padding-right: 16px;
             
               @media screen and (max-width: 991px) {
              
@@ -1174,8 +1199,8 @@
               justify-content: center;
               align-items: center;
 
-              Width: 162px;
-              Height: 46px;
+              width: 162px;
+              height: 46px;
               
               background: #CC5599;
               border-radius: 89px;
