@@ -25,7 +25,6 @@ form.js-bonus-block{
 }
 .bonus-block {
 	position: relative;
-	margin-bottom: 20px;
 	padding: 40px 20px 30px;
 	width: 100%;
 	// height: 100%;
@@ -34,6 +33,14 @@ form.js-bonus-block{
 	overflow: hidden;
 	z-index: 0;
 	display: flex;
+
+	@media screen and (min-width: $screen-sm) {
+		margin-bottom: 20px;
+	}
+
+	@media screen and (min-width: $screen-md) {
+		margin-bottom: 60px;
+	}
 
 	.image {
 		background-color: #003E52;
@@ -72,7 +79,7 @@ form.js-bonus-block{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		max-width: 300px;
+		// max-width: 300px;
 		margin-left: auto;
 		margin-right: auto;
 		justify-content: space-between;
@@ -87,7 +94,7 @@ form.js-bonus-block{
 			// max-width: 215px;
 			// width: 100%;
 			height: 38px;
-			padding: 5px 20px;
+			padding: 8px 30px;
 			width: auto;
 		}
 
@@ -145,12 +152,15 @@ form.js-bonus-block{
 			font-size: 16px;
 			font-family: $apercu;
 			border-radius: 24px;
+			-webkit-border-radius:24px;
 			background: rgba(255, 255, 255, 0.85);
-			border: none;
+			border: 2px solid transparent;
 			padding: 5px 20px;
 			outline: none;
+			display: inline-block;
 			&:focus{
-				outline: 2px solid #003e52;
+				border: 2px solid #003e52;
+
 			}
 		}
 

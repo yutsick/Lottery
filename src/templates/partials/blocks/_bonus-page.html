@@ -2,7 +2,7 @@
 @@if(context.block_type==="block"){
   @@if (context.columns===1){
   <div class="col-xs-12 col-sm-6 col-md-3 bonusBlockColumns">
-    <div class="bonus-block @@if(context.bg_image){bonus-block_shadow}">
+    <div class="bonus-block @@if(context.bg_image && context.bg_shadow){bonus-block_shadow}">
       <div class="image">
         <img src="assets/img/mockup/bingobonus-1.jpg">
       </div>
@@ -64,7 +64,7 @@
   }
   @@if (context.columns===2){
     <div class="col-xs-12 col-md-6 bonusBlockColumns">
-      <div class="bonus-block @@if(context.bg_image){bonus-block_shadow}">
+      <div class="bonus-block @@if(context.bg_image && context.bg_shadow){bonus-block_shadow}">
         <div class="image">
           <img src="assets/img/mockup/bingobonus-3.jpg">
         </div>

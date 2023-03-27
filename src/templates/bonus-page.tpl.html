@@ -23,7 +23,7 @@
 			<div class="col-md-6 bonus-blocks">
 				<!-- register-bonusar styles in the register-lottery.scss -->
 				<div class="register-lottery register-bonusar">
-					<h1>Aktivera bonus</h1>
+					<h1 class="family-Apercu">Aktivera bonus</h1>
 					<p>Fyll i din bonuskod i fälten nedan och klicka på ”Aktivera”. Dina aktiverade bonusar hamnar i din lista
 						under ”Mina bonusar”.</p>
 
@@ -58,6 +58,7 @@
 			@@include('blocks/_bonus-page.html',{
 				"block_type": "block",
 				"bg_image": false,
+				"bg_shadow":false,
 				"columns": 2,
 				"blockHasInput": true,
 				"title": "Bingobonus22! ",
@@ -71,6 +72,7 @@
 			@@include('blocks/_bonus-page.html', {
 				"block_type": "block",
 				"bg_image": false,
+				"bg_shadow":false,
 				"columns": 1,
 				"blockHasInput":false,
 				"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
@@ -85,6 +87,7 @@
 		@@include('blocks/_bonus-page.html', {
 			"block_type": "block",
 			"bg_image": true,
+			"bg_shadow":true,
 			"columns": 1,
 			"blockHasInput":true,
 			"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
@@ -95,6 +98,36 @@
 			//	"hasInput":true
 			//}
 		})		
+
+		@@include('blocks/promotion/block-img/_img-block-small.html', {
+			"has_link": true,
+			"has_content_title": true,
+			"has_content_description": true,
+			"theme": "light",
+			"background-color-class": "background-color-blue",
+			"layout": "col-sm-12",
+			"image": "assets/img/mockup/standingImgBlock-3-col.jpg",
+			"tabletImage": "assets/img/background/bg-modal-lottery-order.jpeg",
+			"overlay": true,
+			"position": "bottom",
+			"btn_title": "Hem & design"
+	})
+
+	@@include('blocks/_bonus-page.html', {
+		"block_type": "block",
+		"bg_image": true,
+		"bg_shadow":true,
+		"columns": 1,
+		"blockHasInput":true,
+		"title":"Bingobonus! Spela Stjärnjacken – få 100 kr i din spelplånbok",
+		"subTitle":"Gäller t o m: 2023-01-31",
+		"successTitle": "Nyårsbonus! Spela Zoobaloo för 100 kr – få 50 kr tillbaka",
+		"successSubTitle": "Gäller t o m: 2023-01-31",
+		//"modal":{
+		//	"hasInput":true
+		//}
+	})
+	
 		</div>
 		
 		<!-- END another options of bonus-block -->
