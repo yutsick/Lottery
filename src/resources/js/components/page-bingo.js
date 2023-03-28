@@ -1,12 +1,12 @@
 export default function(){
-  function pageBingo(){
-    $('.page-bingo .top-section .spelnamn').each(function(){
-      if ($(this).text().length > 10){
-        $(this).text($(this).text().substring(0,10) + '...');
-      }
-    })
+  // function pageBingo(){
+  //   $('.page-bingo .top-section .spelnamn').each(function(){
+  //     if ($(this).text().length > 10){
+  //       $(this).text($(this).text().substring(0,10) + '...');
+  //     }
+  //   })
   
-  }
+  // }
 
   function hidePanel(){
     if($('.tabs .desctop__active.active').length != 0){
@@ -20,7 +20,7 @@ export default function(){
 
   $('.expanded-menu').on('click', hidePanel);
     
-  pageBingo();
+  //pageBingo();
 
   }
   

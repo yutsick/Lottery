@@ -172,6 +172,13 @@
           font: 700 10px/12px $base-font-family;
           color: #6B8B96;
           text-transform: uppercase;
+          &:first-child{
+            width: 108px;
+          }
+          &:nth-child(2){
+            flex:1 1;
+            margin-left: 10px;
+          }
         }
       }
       ul{
@@ -187,6 +194,19 @@
         margin-bottom: 4px;
         &:last-child{
           margin-bottom: 0;
+        }
+        .spelare,
+        .spelnamn{
+          display:inline-block;
+          width:108px;
+          white-space: nowrap;
+          overflow:hidden !important;
+          text-overflow: ellipsis;
+        }
+        .text-regular{
+          font-weight: 400;
+          flex: 1 1;
+          margin-left: 10px;
         }
       }
     }
@@ -357,12 +377,19 @@ section.expanded-menu{
       }
     }
   }
-  @mixin tabs-font($font-color){
+  @mixin tabs-font($font-color, $active-font-color){
     
       li{
         a{
           span{
             color: $font-color;
+          }
+        }  
+      }
+      li.active{
+        a{
+          span{
+            color: $active-font-color;
           }
         }  
       }
@@ -390,19 +417,19 @@ section.expanded-menu{
   }
   .font-color{
     &-white{
-      @include tabs-font(#FFFFFF);
+      @include tabs-font(#FFFFFF,#ABBABE);
     }
 
     &-primary-blue{
-      @include tabs-font(#003E52);
+      @include tabs-font(#003E52,#366474);
       &-75{
-        @include tabs-font(#366474);
+        @include tabs-font(#366474,#003E52);
       }
       &-50{
-        @include tabs-font(#6B8B96);
+        @include tabs-font(#6B8B96,#366474);
       }
       &-20{
-        @include tabs-font(#ABBABE);
+        @include tabs-font(#ABBABE,#6B8B96);
       }
     }
   }
@@ -441,7 +468,7 @@ section.expanded-menu{
       position: relative;
       z-index: 3;
       a{
-        opacity: 0.75;
+        
         text-decoration: none;
         span{
           display: flex;
@@ -459,6 +486,7 @@ section.expanded-menu{
       }
       &.active{
         span{
+          opacity: 0.75;
           &::after{
             content: "";
             background: url('../img/icons/chevron-tab-up.png');
@@ -679,6 +707,13 @@ section.expanded-menu{
         margin-bottom: 8px;
         .font-bold{
           font-weight: 700;
+        }
+        .text-dotted{
+          display:inline-block;
+          width:108px;
+          white-space: nowrap;
+          overflow:hidden !important;
+          text-overflow: ellipsis;
         }
       }
     }
