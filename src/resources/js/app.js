@@ -21,6 +21,7 @@ import imageZoom from "./components/image-zoom";
 import accordion from "./components/accordion";
 import alert from "./components/alert";
 import bonusCode from "./components/bonus-code";
+import BonusBlocks from "./components/bonus-blocks";
 import checkboxTrigger from "./components/checkbox-trigger";
 import dataList from "./components/data-list";
 import dreamlistTooltip from "./components/dreamlist-tooltip";
@@ -109,6 +110,7 @@ $(function () {
 	addToDreamlist();
 	alert();
 	bonusCode();
+	BonusBlocks.init();
 	checkboxTrigger();
 	dataList();
 
