@@ -1,0 +1,42 @@
+<!-- 
+  text-color,col_bg(columns background),section_bg(section background): white, primary-blue, primary-blue-75, primary-blue-50, primary-blue-20
+  font: Apercu, Proxima, Zing
+ -->
+@@include('layout/_header.html', {
+  "class": "page-bingo logged-out",
+  "logged_in": false
+  })
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+
+<div class="content-wrapper ml-2017">
+  @@include('blocks/page-bingo/_top-section.html',{
+   "image": "assets/img/background/bg-bingo-page-top.jpg",
+   //"section_bg": "primary-blue-20",
+   "col_shadow": false,
+   "font": "Apercu",
+   "text_color": "primary-blue",
+   "col_bg":"white"
+  }
+  )
+  
+  
+  @@include('blocks/page-bingo/_rooms-section.html',{
+    "section_bg": "white",
+    "col_shadow":true,
+    "blixt_img": "assets/img/background/blixtbingo-bg.png",
+    "miljon_img": "assets/img/background/miljonbingo-bg.png"
+  }
+  )
+  
+  @@include('blocks/page-bingo/_menu-section.html',{
+   "menu_shadow": true,
+   "section_bg": "primary-blue-50",
+   "font_color": "primary-blue-50",
+   "font": "Proxima"
+  }
+  )
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
