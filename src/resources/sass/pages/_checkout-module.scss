@@ -1109,7 +1109,8 @@
                 width: auto;
                 top: auto;
                 width: 100%;
-                padding: 0 13px 13px;
+                padding: 0 13px;
+                margin: 24px 0 16px;
                 
                
               }
@@ -1130,6 +1131,10 @@
               max-width: inherit !important;
               width: 100% !important;
             }
+            @media screen and (max-width: 576px) {
+              padding: 12px 12px 0;
+            }
+
 
             .title{
               color: rgba(0, 62, 82, 0.75);
