@@ -1,0 +1,88 @@
+<!-- 
+Use classes 
+  .bg-primary-blue 
+  .bg-light-blue
+  .bg-green
+  .bg-white
+  .bg-grey-bg
+  .bg-pink-bg
+for block blackground
+Use classes 
+  .button-cta-pink
+  .button-primary-blue
+  .button-sec-light-blue
+  .button-sec-white
+for buttons background
+
+Use .text-dark or .text-light for text-color
+ -->
+
+@@include('layout/_header.html', {
+"class": "logged-in",
+"logged_in": true
+})
+
+@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+
+<div class="content-wrapper ml-2017">
+  <div class="container container--center">
+    <section class="section bonus-blocks" style="padding: 60px 0;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class=" bg-primary-blue text-center bonus-block-item">
+              <h3 class="text-light">Text color</h3>
+              <button class="btn button-cta-pink text-light">Btn 1</button>
+              <button class="btn button-sec-light-blue text-dark">Btn 2</button>
+              <button class="btn button-sec-white text-dark">Btn 3</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class=" bg-green text-center bonus-block-item">
+              <h3 class="text-dark">Text color</h3>
+              <button class="btn button-cta-pink text-light">Btn 1</button>
+              <button class="btn button-primary-blue text-light">Btn 2</button>
+              <button class="btn button-sec-white text-dark">Btn 3</button>
+            </div>
+          </div>
+          <div class="col-md-4 bg-white">
+            <div class=" text-center bonus-block-item">
+              <h3 class="text-dark">Text color</h3>
+              <button class="btn button-cta-pink text-light">Btn 1</button>
+              <button class="btn button-primary-blue text-light">Btn 2</button>
+              <button class="btn button-sec-light-blue text-dark">Btn 3</button>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-10">
+          <div class="col-md-4">
+            <div class=" bg-light-blue text-center bonus-block-item">
+              <h3 class="text-dark">Text color</h3>
+              <button class="btn button-cta-pink text-light">Btn 1</button>
+              <button class="btn button-primary-blue text-dark">Btn 2</button>
+              <button class="btn button-sec-white text-dark">Btn 3</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class=" bg-grey-bg text-center bonus-block-item">
+              <h3 class="text-dark">Text color</h3>
+              <button class="btn button-cta-pink text-light">Btn 1</button>
+              <button class="btn button-primary-blue text-light">Btn 2</button>
+              <button class="btn button-sec-white text-dark">Btn 3</button>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="bg-pink-bg text-center bonus-block-item">
+              <h3 class="text-dark">Text color</h3>
+              <button class="btn button-cta-pink text-light">Btn 1</button>
+              <button class="btn button-primary-blue text-light">Btn 2</button>
+              <button class="btn button-sec-white text-dark">Btn 3</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

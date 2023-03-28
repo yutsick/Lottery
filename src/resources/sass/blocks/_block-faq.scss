@@ -62,11 +62,8 @@
 		}
 
 		&+.block-faq__btn.active {
-			border-top-right-radius: 0px;
-			border-bottom-right-radius: 0px;
 			@media screen and (max-width: 820px) {
 				border-top: 1px solid #7EBDCC;
-				//border-bottom-right-radius: 8px;
 			}
 		}
 	}
@@ -102,9 +99,13 @@
 			}
 		}
 
+		&:first-of-type {
+			border-top-right-radius: 8px;
+		}
+
 		&:last-of-type {
 			border-width: 0px 2px 0px 0px;
-			border-radius:  8px 0 8px 8px;
+			border-bottom-right-radius: 8px;
 
 			@media screen and (max-width: 820px) {
 				border-width: 2px 0px 0px 0px;
@@ -150,9 +151,6 @@
 
 			&+.block-faq__btn {
 				border-width: 1px 0px 1px 0px;
-				border-top-left-radius: 8px;
-				border-bottom-left-radius: 8px; 
-	
 			}
 		}
 
@@ -187,7 +185,6 @@
 			font-size: 16px;
 			color: rgba(7, 70, 88, 0.7);
 			background-color: #fff;
-			border-radius: 8px;
 
 			@media screen and (max-width: 820px) {
 				display: none;

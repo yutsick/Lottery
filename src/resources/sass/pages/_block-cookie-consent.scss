@@ -1,119 +1,118 @@
-
-.bg_cookie{
+.bg_cookie {
 
   background: rgba(0, 62, 82, 0.25);
   backdrop-filter: blur(6px);
 
-  
-  
-      /* width */
-    ::-webkit-scrollbar {
-      width: 6px;
-      position: absolute;
-    }
 
-    /* Track */
-    ::-webkit-scrollbar-track {
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+    position: absolute;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
     //  box-shadow: inset 0 0 5px grey; 
-      border-radius: 10px;
-           position: absolute;
-    }
+    border-radius: 10px;
+    position: absolute;
+  }
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background:  rgba(0, 62, 82, 0.5);
-      border-radius: 4px;
-           position: absolute;
-    }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 62, 82, 0.5);
+    border-radius: 4px;
+    position: absolute;
+  }
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-       background:  rgba(0, 62, 82, 0.7);
-           position: absolute;
-    }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 62, 82, 0.7);
+    position: absolute;
+  }
 
-  
 
-  .modal__conteiner{
-    
-    @media screen and (max-height: 660px ){
-      
+
+  .modal__conteiner {
+
+    @media screen and (max-height: 660px) {
+
       padding-top: 25px;
-      
+
       padding-bottom: 20px;
-          align-items: flex-start;
-      
+      align-items: flex-start;
+
       overflow-y: auto;
-      
+
       height: calc(100% - 45px);
-  
+
     }
-    
+
 
     width: calc(100vw - 40px);
     height: 100vh;
 
     padding: 0 20px;
 
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
-      .modal-cookie-consent{
-        
-//        .pad{
-//             padding: 0 20px;
-//        }
-            gap: 0;
-        
-        &:before{
-          content: '';
-          display: block;
-          
-          margin-top: -20px;
 
-          width: 100%;
-          height: 20px;
-          background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAAAUCAMAAAA6JNosAAAAOVBMVEUAAAD///////////////////////////////////////////////////////////////////////8KOjVvAAAAEnRSTlMAECAwQFBgb3B/gI+fr7/P3+/5cSOcAAAAk0lEQVR42sXU1REFIQwFUHwFu6T/Xp+7BpnZ849ExcaknUMC6KDkFFYjB13rQW8QbO/1Jhb6JtiODy+FfoJT4y++wiLqORALnKijErHFqqxMhSoU/selp0qem4xM1bJi3QxqAMbdGtQEml3AejO7gPW8FF8ZUBco9pfrBcVdGfWwvF5ufKFBEPTtu9p50FAIVkuxBwttQw92Js3kAAAAAElFTkSuQmCC) no-repeat center;
+    .modal-cookie-consent {
 
-        }
-        
-//        padding: 0 24px 22px;
-        background: #FFFFFF;
-        box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
-        max-width: 420px;
+      //        .pad{
+      //             padding: 0 20px;
+      //        }
+      gap: 0;
+
+      &:before {
+        content: '';
+        display: block;
+
+        margin-top: -18.5px;
+
         width: 100%;
-        
-        height: auto; 
-        
-        .title{
-          color: #003E52;
-          text-align: center;
-          font: 700 18px/1.2em 'Apercu Pro';
-          margin-bottom: 8px;
-          opacity: 1;
-          
-        }
-        
-        .sub{
-          color: #003E52;
-          text-align: center;
-          font: 400 12px/1.2em 'Apercu Pro';
-          margin-bottom: 12px;
-          
-          max-width: 243px;
-          width: 100%;
-          margin-left: auto;
-          margin-right: auto;
-        }
+        height: 20px;
+
+        background: url('../img/background/cookie-top-circle.svg') no-repeat center;
       }
-    
-    .icon__{
+
+      //        padding: 0 24px 22px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      max-width: 420px;
+      width: 100%;
+
+      height: auto;
+
+      .title {
+        color: #003E52;
+        text-align: center;
+        font: 700 18px/1.2em 'Apercu Pro';
+        margin-bottom: 8px;
+        opacity: 1;
+
+      }
+
+      .sub {
+        color: #003E52;
+        text-align: center;
+        font: 400 12px/1.2em 'Apercu Pro';
+        margin-bottom: 12px;
+
+        max-width: 243px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .icon__ {
       width: 80px;
       height: 80px;
-      
+
       background: #fff;
       border-radius: 50%;
       display: flex;
@@ -121,289 +120,305 @@
       align-items: center;
       margin: - 19px auto;
     }
-    
-    .list{
+
+    .list {
       list-style-type: none;
-      
+
       position: relative;
       padding: 0 22px 0 26px;
-      
+
       height: 367px;
-      
-        overflow-y: scroll;
-      
-      @media screen and (max-width: 600px){
+
+      overflow-y: scroll;
+
+
+      @media screen and (max-width: 600px) {
         padding: 0 17px 0 14px;
       }
-      
+
+
+
       margin: 0;
-      
-//      max-height: 400px;
-//      height: auto;
-//      overflow-y: auto;
-      
-      li{
-          list-style-type: none;
-        
+
+      //      max-height: 400px;
+      //      height: auto;
+      //      overflow-y: auto;
+      p, h4 {
+        max-width: 290px;
+
+        @media screen and (max-width: 426px) {
+          max-width: 220px;
+        }
+      }
+
+      li {
+        list-style-type: none;
+
         padding: 12px 0 16px 0;
-        
+
         display: flex;
-        
-        max-height: 100px;
-//        overflow: hidden;
-        
-        &.no-see{
+
+        // max-height: 100px;
+        //        overflow: hidden;
+
+        &.no-see {
           display: none;
         }
-        
-        &.open{
-         
-            max-height:  100%;
-//            height:  100%;
+
+        &.open {
+
+          // max-height: 100%;
+          //            height:  100%;
+
+          .arrow {
           
-          .arrow{
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAMAAAALbFwWAAAAD1BMVEUAAAAAOFAAQFAAPlIAPlLVTgqtAAAABHRSTlMAICDfCDbLnQAAAChJREFUeNpVSgMBAEAQm/pXfvM4wSZGyYZjDtwANNj39AY2HmzgzSauGsYAjGtq4zIAAAAASUVORK5CYII=) no-repeat center;
+            background: url('../img/icons/check-icon-dark.svg') no-repeat center;
             width: 12px;
             height: 7px;
-            
+
             position: absolute;
             top: 10px;
             right: 0;
-            
-             transform: rotate(-180deg);
+
+            transform: rotate(-180deg);
           }
-          
-          .content{
-                height: inherit;
-                //               min-height: 75px;
-                overflow-y: inherit;  
+
+          .content {
+            height: inherit;
+            //               min-height: 75px;
+            overflow-y: inherit;
 
 
-              &>p:nth-child(3){
+            &>p:nth-child(3) {
 
-              -webkit-line-clamp:default !important;
-//              overflow:auto !important;
-//                margin-bottom: 0;
+              -webkit-line-clamp: default !important;
+              //              overflow:auto !important;
+              //                margin-bottom: 0;
 
-              }
+            }
 
-              &>p{
-                  margin-bottom: 1em;
-              }
-
-            
-            
-              &>*{
-//                display: inline-flex !important;
-                    display: inline-block !important;
-              }
-            
-     
+            &>p {
+              margin-bottom: 1em;
+            }
 
 
 
-                
+            &>* {
+              //                display: inline-flex !important;
+              display: inline-block !important;
+            }
+
+
+
+
+
+
           }
-          
-           
+
+
         }
-          
-        
-        h4,.title{
+
+
+        h4,
+        .title {
           color: #003E52;
           font: 700 12px/1.2em 'Apercu Pro';
           opacity: 1;
           text-align: left;
-          
+
           padding: 0;
           margin: 0;
           margin-top: 2px;
           margin-bottom: 12px;
 
 
-          
-          
+
+
         }
-        
-        h5{
+
+        h5 {
           color: rgba(0, 62, 82, 0.75);
           font: 700 12px/1.2em 'Apercu Pro';
-                    margin: 0;
+          margin: 0;
           margin-bottom: 3px;
         }
-        
-        p{
+
+        p {
           color: rgba(0, 62, 82, 0.75);
-          font: 400 10px/1.5em  'Apercu Pro';
+          font: 400 10px/1.5em 'Apercu Pro';
           margin-top: 0;
-          
-          span,strong{
-          color: rgba(0, 62, 82, 0.75);
-          font: 400 12px/1.2em 'Apercu Pro';
+
+          span,
+          strong {
+            color: rgba(0, 62, 82, 0.75);
+            font: 400 12px/1.2em 'Apercu Pro';
           }
         }
-        
-          a{
-            cursor: pointer;
-             color: rgba(0, 62, 82, 0.75);
-            text-decoration: underline;
-            
-            transition: all 1s ease; 
-            
-            &:hover{
-              color: #003E52;
-            }
+
+        a {
+          cursor: pointer;
+          color: rgba(0, 62, 82, 0.75);
+          text-decoration: underline;
+
+          transition: all 1s ease;
+
+          &:hover {
+            color: #003E52;
           }
-        
-          border-top: 1px solid #D9D9D9;
-        
-        .input{
+        }
+
+        border-top: 1px solid #D9D9D9;
+
+        .input {
           position: relative;
           display: flex;
           width: 57px;
           min-width: 57px;
-          
-      @media screen and (max-width: 600px){
-        padding-left: 15px;
-      }
-          
-          
-          input[type='checkbox'],label{
-  
-                 transition: all .7s ease;
+
+          @media screen and (max-width: 600px) {
+            padding-left: 15px;
+          }
+
+
+          input[type='checkbox'],
+          label {
+
+            transition: all .7s ease;
             cursor: pointer;
-          }   
-          
-      input[type='checkbox']:checked + label,
-      input[type='checkbox']:not(:checked) + label {
-//      input[type='radio']:checked + label::before,
-//      input[type='radio']:not(:checked) + label::before {
-             background: #D9D9D9;
-              border-radius: 50px;
+          }
+
+          input[type='checkbox']:checked+label,
+          input[type='checkbox']:not(:checked)+label {
+            //      input[type='radio']:checked + label::before,
+            //      input[type='radio']:not(:checked) + label::before {
+            background: #D9D9D9;
+            border-radius: 50px;
             width: 36px;
-        
-        @media screen and (max-width: 600px){
-        width: 30px;
-      }
-      
-        
+
+            @media screen and (max-width: 600px) {
+              width: 30px;
+            }
+
+
             max-height: 20px;
-            
+
             display: flex;
             align-items: center;
-            
+
             padding:0 2px;
-        
-            &:before{
+
+            &:before {
               content: '';
               display: block;
-              
+
               width: 16px;
               height: 16px;
               border-radius: 50%;
-            transition: all 3s ease;
-   
+              transition: all 3s ease;
+
               margin: 0 auto 0 0;
-              background: #fff  no-repeat center;
-              
+              background: #fff no-repeat center;
+
             }
-      }
+          }
 
 
-      input[type='checkbox']:checked  + label {
-               @media screen and (max-width: 600px){
-        width: 30px;
-      }
-        
-             background: #50B78D;
-              border-radius: 50px;
+          input[type='checkbox']:checked+label {
+            @media screen and (max-width: 600px) {
+              width: 30px;
+            }
+
+            background: #50B78D;
+            border-radius: 50px;
             width: 36px;
             max-height: 20px;
-            
+
             display: flex;
             align-items: center;
-            
+
             padding:0 2px;
-        
-            &:before{
+
+            &:before {
               content: '';
               display: block;
-              
+
               width: 16px;
               height: 16px;
               border-radius: 50%;
               background: #fff;
-         
-               margin: 0 0 0 auto;
-                    transition: all 3s ease;
-              background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAMAAADJ2y/JAAAAKlBMVEUAAABQr4BQt4dQuopQuo9QtY1Qt4pQt41QtotQt4tQtoxQt41Qt45QuI2EZkUlAAAADnRSTlMAECAwMGBgYHCAz9/f72VToJwAAAAqSURBVHjaJUqDAQAxDIyd/cd9tOEJbqHeT5VA9P1OAG+ijl/2HbsBlv++DYkAjIDnTZkAAAAASUVORK5CYII=) ;
-              
-               background-repeat:no-repeat;
+
+              margin: 0 0 0 auto;
+              transition: all 3s ease;
+              // background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAMAAADJ2y/JAAAAKlBMVEUAAABQr4BQt4dQuopQuo9QtY1Qt4pQt41QtotQt4tQtoxQt41Qt45QuI2EZkUlAAAADnRSTlMAECAwMGBgYHCAz9/f72VToJwAAAAqSURBVHjaJUqDAQAxDIyd/cd9tOEJbqHeT5VA9P1OAG+ijl/2HbsBlv++DYkAjIDnTZkAAAAASUVORK5CYII=);
+              background-image: url('../img/icons/check-green.svg');
+              background-repeat: no-repeat;
               background-position: center;
             }
-      }
+          }
 
-          input{
+          input {
             position: absolute;
             opacity: 0;
           }
-          
+
         }
-        
-        .content{
+
+        .content {
           position: relative;
-           width: 100%;
-//          width: calc(100% - 57px);
+          width: 100%;
+          //          width: calc(100% - 57px);
           display: flex;
           flex-direction: column;
-          
-//          height: 71px; 
+
+          //          height: 71px; 
           overflow: hidden;
-          
+
           margin: 0;
           padding: 0;
-          
 
-          
-          
-          &>p:last-child{
+
+
+
+          &>p:last-child {
             margin-bottom: 0;
           }
-          
-          p{
+
+          p {
             margin-bottom: 0;
           }
-          
-          
-          &>a:nth-child(1){   
-                      display: block;
-          }
-          &>h4:nth-child(2){   
-                        display: block;
-          }
-          &>p:nth-child(3){
 
-          //   position: relative;
+
+          &>a:nth-child(1) {
+            display: block;
+          }
+
+          &>h4:nth-child(2) {
+            display: block;
+          }
+
+          &>p:nth-child(3) {
+
+            //   position: relative;
 
             width: 100%;
-            display:-webkit-box;
+            display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
             overflow: hidden;
-            
+
 
           }
-          
-          &>*{
+
+          &>* {
             display: none;
           }
 
-          
-          .arrow{
-            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAHCAMAAAALbFwWAAAAD1BMVEUAAAAAOFAAQFAAPlIAPlLVTgqtAAAABHRSTlMAICDfCDbLnQAAAChJREFUeNpVSgMBAEAQm/pXfvM4wSZGyYZjDtwANNj39AY2HmzgzSauGsYAjGtq4zIAAAAASUVORK5CYII=) no-repeat center;
+
+          .arrow {
+         
+            background: url('../img/icons/check-icon-dark.svg') no-repeat center;
             width: 12px;
             height: 7px;
-            
+
             position: absolute;
             top: 7px;
             right: 0;
@@ -411,60 +426,60 @@
         }
       }
     }
-    
-    .block__{
-      
+
+    .block__ {
+
       border-top: 1px solid #D9D9D9;
-      
+
       padding: 18px 24px 22px;
-      
+
       display: flex;
       gap: 0 32px;
-      
-      @media screen and (max-width: 600px){
-          gap: 0 16px;
+
+      @media screen and (max-width: 600px) {
+        gap: 0 16px;
       }
-      
 
-      
-      a{
-        
-    border: 1.5px solid rgba(0, 62, 82, 0.25);
-        
-border-radius: 40px;
-  
 
-    font:  700 14px/1.2em 'Apercu Pro';
 
-    width: clamp(100%, 100vw, 100%);
+      a {
+
+        border: 1.5px solid rgba(0, 62, 82, 0.25);
+
+        border-radius: 40px;
+
+
+        font: 700 14px/1.2em 'Apercu Pro';
+
+        width: clamp(100%, 100vw, 100%);
 
         height: 40px;
-        
-      display: flex;
-      justify-content: center;
-      align-items: center;
-        
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         text-decoration: none;
       }
-      
-      .border_bt{
+
+      .border_bt {
         border: 2px solid rgba(0, 62, 82, 0.25);
         color: rgba(0, 62, 82, 0.5);
       }
-      
-      .green_bt{
-            border: 2px solid #50B78D;
+
+      .green_bt {
+        border: 2px solid #50B78D;
         background: #50B78D;
         color: #fff;
-        
+
       }
-      
-      
+
+
     }
-    
+
   }
 
 
 
-  
+
 }
