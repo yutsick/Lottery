@@ -42,6 +42,7 @@
 
 			@@if(context.extended) {
 				<div class="block-product__specs">
+					@@if(context.colors){
 					<div class="product-controls__colors">
 						<div class="product-controls__radio">
 							<input type="radio" name="color" id="color-1" value="color-1" checked>
@@ -74,8 +75,9 @@
 							</label>
 						</div>
 					</div>
-
-					<div class="product-controls__line">
+				}
+					<div class="product-controls__line @@if(!context.colors){mt-73}">
+						@@if(context.colors){
 						<div class="product-controls__color-circles" aria-label="Possible colors">
 							<ul>
 								<li style="background: #D6D1CD;">
@@ -95,6 +97,8 @@
 								</li>
 							</ul>
 						</div>
+					}
+					@@if(context.sizes){
 						<div class="product-controls__sizes" aria-label="Possible sizes">
 							<ul>
 								<li>XXS</li>
@@ -106,6 +110,7 @@
 								<li>XXL</li>
 							</ul>
 						</div>
+					}
 					</div>
 				</div>
 			}
