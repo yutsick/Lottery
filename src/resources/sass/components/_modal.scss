@@ -499,8 +499,10 @@
 				width: 100%;
 				text-align: center;
 				margin: 0 auto;
+	
+				}
 			}
-		}
+		
 
 		.modal-main-center {
 			margin: 0 0 60px;
@@ -2144,6 +2146,7 @@
 		p,
 		span {
 			font-size: 20px;
+			word-break: break-all;
 		}
 	}
 
@@ -2168,12 +2171,18 @@
 			border-radius: 31px;
 			background: rgba(255, 255, 255, 0.85);
 			width: 100%;
-			font-size: 30px;
+			font-size: 16px;
 			color: #003e52;
 			font-family: $apercu;
-			font-weight: 600;
 			padding: 5px 20px;
 			padding-right: 140px;
+			outline: none;
+			border: none;
+
+			&:focus{
+				outline: 2px solid #003e52;
+
+			}
 
 			@media screen and (max-width:576px) {
 				height: 48px;
@@ -2188,7 +2197,7 @@
 			right: 8px;
 			top: 8px;
 			height: 46px;
-			width: 126px;
+			// width: 126px;
 			font-weight: 600;
 			z-index: 1;
 
@@ -2196,83 +2205,36 @@
 			@media screen and (max-width:576px) {
 				height: 38px;
 				position: static;
-				width: 139px;
+				// width: 139px;
 				margin-top: 12px;
 			}
 		}
 
-		.btn-success-green {
-			background-color: $color-green;
-			width: auto;
-			&::before {
-					content: url(../img/icons/icon-check-white.svg);
-					width: 12px;
-					height: 16px;
-					display: inline-block;
-					margin-left: -5px;
-					margin-right: 10px;
-				}
-		}
-
-		.popover {
-			border: none;
-			background-color: #06566F;
-
-			.arrow {
-					border: none;
-			
-					&:after {
-						border-top-color: #06566F;
-					}
-				}
-
-			.popover-content {
-				background-color: #06566F;
-				color: #ffffff;
-			}
-		}
-
-		&>.loader {
-			width: 42px;
-			height: 42px;
-			border-radius: 42px;
-			background-color: $color-primary-lighter;
-			position: absolute;
-			top: 50%;
-			margin-top: -21px;
+		.loader {
+			width: 50px;
+			height: 50px;
+			border-radius: 50px;
+			margin-top: 6px;
 			right: 6px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			background-color: #81B7C8;
+			position: absolute;
+			top: 0;
 			display: none;
-
-			@media screen and (min-width: 992px) {
-				width: 50px;
-				height: 50px;
-				border-radius: 50px;
-				margin-top: -25px;
-				right: 6px;
+			justify-content: center;
+			align-items: center;
+			@media screen and (max-width:576px) {
+				width: 40px;
+				height: 40px;
+				border-radius: 40px;
+				right: 4px;
+				top:-2px;
 			}
 
-			&>.spinner {
-				padding: 10px;
-				border: 4px solid $color-primary-lighter;
-				border-top: 4px solid $color-snow;
-				border-radius: 50%;
-				width: 30px;
-				height: 30px;
-				display: none;
-			}
-
-			&--spin {
+			&.loader--spin {
 				display: flex;
-
-				&>.spinner {
-					animation: spin .8s linear infinite;
-					display: flex;
-				}
 			}
 		}
+
 	}
 }
 
