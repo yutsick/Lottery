@@ -2,6 +2,12 @@
   <div class="img-block img-block--large img-block--@@theme alignment-@@text_alignment">
     @@if(context.has_link === true){
       <a href="#" class="img-block__content"  style="background-image: url(@@image);">
+		@@if(context.video === true) {
+			<video class="img-block__video" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="assets/video/hemsidebanner_hi3.mp4" type="video/mp4">
+			</video>
+		}
+
         @@if(context.overlay === true) {
           <div class="img-block__overlay img-block__overlay_@@position"></div>
         }
@@ -24,6 +30,13 @@
 
     @@if(context.has_link === false){
       <div class="img-block__content"  style="background-image: url(@@image);">
+
+		@@if(context.video === true) {
+			<video class="img-block__video" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="assets/video/hemsidebanner_hi3.mp4" type="video/mp4">
+			</video>
+		}
+
         @@if(context.overlay === true) {
           <div class="img-block__overlay"></div>
         }

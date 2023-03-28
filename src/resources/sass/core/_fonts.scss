@@ -19,15 +19,19 @@
 
 @font-face {
 	font-family: 'apercu-light-pro';
+	src: url('../fonts/ApercuPro-Light.eot');
 	src: url('../fonts/apercu-light-pro.woff2') format('woff2'),
-	url('../fonts/apercu-light-pro.woff') format('woff');
+	url('../fonts/apercu-light-pro.woff') format('woff'),
+	url('../fonts/ApercuPro-Light.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'apercu-regular-pro';
+	src: url('../fonts/ApercuPro-Regular.eot');
 	src: url('../fonts/apercu-regular-pro.woff2') format('woff2'),
-	url('../fonts/apercu-regular-pro.woff') format('woff');
+	url('../fonts/apercu-regular-pro.woff') format('woff'),
+	url('../fonts/ApercuPro-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -150,3 +154,138 @@
 	font-family: "Arsilon";
 	src: url("../fonts/Arsilon.otf");
 }
+
+
+
+
+// 2022 font-face formats START
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-Bold.eot');
+    src: url('../fonts/ApercuPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-Bold.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Bold.woff') format('woff'),
+        url('../fonts/ApercuPro-Bold.ttf') format('truetype'),
+        url('../fonts/ApercuPro-Bold.svg#ApercuPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-BoldItalic.eot');
+    src: url('../fonts/ApercuPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-BoldItalic.woff2') format('woff2'),
+        url('../fonts/ApercuPro-BoldItalic.woff') format('woff'),
+        url('../fonts/ApercuPro-BoldItalic.ttf') format('truetype'),
+        url('../fonts/ApercuPro-BoldItalic.svg#ApercuPro-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-Italic.eot');
+    src: url('../fonts/ApercuPro-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-Italic.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Italic.woff') format('woff'),
+        url('../fonts/ApercuPro-Italic.ttf') format('truetype'),
+        url('../fonts/ApercuPro-Italic.svg#ApercuPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-Light.eot');
+    src: url('../fonts/ApercuPro-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-Light.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Light.woff') format('woff'),
+        url('../fonts/ApercuPro-Light.ttf') format('truetype'),
+        url('../fonts/ApercuPro-Light.svg#ApercuPro-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-LightItalic.eot');
+    src: url('../fonts/ApercuPro-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-LightItalic.woff2') format('woff2'),
+        url('../fonts/ApercuPro-LightItalic.woff') format('woff'),
+        url('../fonts/ApercuPro-LightItalic.ttf') format('truetype'),
+        url('../fonts/ApercuPro-LightItalic.svg#ApercuPro-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-MediumItalic.eot');
+    src: url('../fonts/ApercuPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-MediumItalic.woff2') format('woff2'),
+        url('../fonts/ApercuPro-MediumItalic.woff') format('woff'),
+        url('../fonts/ApercuPro-MediumItalic.ttf') format('truetype'),
+        url('../fonts/ApercuPro-MediumItalic.svg#ApercuPro-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-Regular.eot');
+    src: url('../fonts/ApercuPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-Regular.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Regular.woff') format('woff'),
+        url('../fonts/ApercuPro-Regular.ttf') format('truetype'),
+        url('../fonts/ApercuPro-Regular.svg#ApercuPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Apercu Pro';
+    src: url('../fonts/ApercuPro-Medium.eot');
+    src: url('../fonts/ApercuPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ApercuPro-Medium.woff2') format('woff2'),
+        url('../fonts/ApercuPro-Medium.woff') format('woff'),
+        url('../fonts/ApercuPro-Medium.ttf') format('truetype'),
+        url('../fonts/ApercuPro-Medium.svg#ApercuPro-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zing Rust Demo Base';
+    src: url('../fonts/ZingRustDemo-Base.eot');
+    src: url('../fonts/ZingRustDemo-Base.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ZingRustDemo-Base.woff2') format('woff2'),
+        url('../fonts/ZingRustDemo-Base.woff') format('woff'),
+        url('../fonts/ZingRustDemo-Base.ttf') format('truetype'),
+        url('../fonts/ZingRustDemo-Base.svg#ZingRustDemo-Base') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Zing Rust Demo SB Base Script';
+    src: url('../fonts/ZingScriptRustSBDemo-Base.eot');
+    src: url('../fonts/ZingScriptRustSBDemo-Base.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ZingScriptRustSBDemo-Base.woff2') format('woff2'),
+        url('../fonts/ZingScriptRustSBDemo-Base.woff') format('woff'),
+        url('../fonts/ZingScriptRustSBDemo-Base.ttf') format('truetype'),
+        url('../fonts/ZingScriptRustSBDemo-Base.svg#ZingScriptRustSBDemo-Base') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+// 2022 font-face formats END

@@ -1,13 +1,16 @@
-<!-- 
+@@if(false) {
+<!--
 
     @@image = url of image
     standingImgBlock_@@theme = light/dark
 
     (title) - has_content_title = false/true
 
+	(video) = false/true
+
     (link) - has_link = false/true - if has link
     @@btn_title = text of link
-    btn_@@link-style = underline/button
+    btn_@@link_style = underline/button
 
     (position for all text content):
     alignment-@@text_alignment = left/center
@@ -16,37 +19,160 @@
     (shadow) - overlay = false/true
     standingImgBlock__overlay_@@position = top/center/bottom
 
- -->
+
+	--media-data-switcher.js
+
+	@@desk_shadow - off shadow only on this width = use "none" value;
+	@@tab_shadow
+	@@mob_shadow
+
+	Available key BG-COLORS and BG-IMAGES for using:
+	@@desk_background, @@tab_background, @@mob_background - 'key' of color or 'url' of image values. If it is exist any of keys but not all 3 provided - in missing device width will uses default @image value or nothing;
+
+	FONT-COLORS using:
+
+	@@desk_text_color - key of color - 'Miljonbla' or ect.
+	@@tab_text_color
+	@@mob_text_color
+
+	@@desk_btn_color - key of color for BUTTON or LINK BUTTON - 'Miljonbla' or ect.
+	@@tab_btn_color
+	@@mob_btn_color
+
+	@@desk_btn_background - key of color for LINK BUTTON only - 'Miljonbla' or ect.
+	@@tab_btn_background
+	@@mob_btn_background
+
+	--Posible color keys for using:
+		Miljonbla: "#003E52",
+		Nord: "#1377B0",
+		Himmel: "#C7E7F8",
+		Moln: "#F5F5F5",
+
+		Turkos: "#00A4B9",
+		Turkos75: "#70B9CB",
+		Turkos50: "#A8D1DC",
+		Turkos20: "#DEEDF2",
+
+		Rosa: "#D96195",
+		Rosa75: "#E18DB1",
+		Rosa50: "#EBB6CE",
+		Rosa20: "#F7E3EC",
+
+		Gron: "#50B78D",
+		Gron75: "#8BC9A9",
+		Gron50: "#B7DBC7",
+		Gron20: "#E4F0EA",
+
+		Orange: "#F98F00",
+		Orange75: "#F7AA56",
+		Orange50: "#FBC890",
+		Orange20: "#FDE9D4",
+
+		Gul: "#FFD944",
+		Gul75: "#FFE27D",
+		Gul50: "#FFEBAD",
+		Gul20: "#FFF7E0",
+
+
+	@@font - key of font = 'apercu' or ect..
+	context keys: text_font, btn_font - for all devices width;
+	Like "text_font": "apercu";
+
+	--Posible font keys for using:
+		'apercu' - will be "Apercu Pro",
+		'zingRust' - will be "Zing Rust Demo Base",
+		'zingRustScript' - will be "Zing Rust Demo SB Base Script"
+
+-->
+
+}
+
 
  <div class="col-xs-6 col-sm-6 col-md-3">
-    <a href="#" class="standingImgBlock standingImgBlock_small standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement" style="background-image: url(@@image);">
-        @@if(context.overlay === true) {
-            <div class="standingImgBlock__overlay standingImgBlock__overlay_@@position"></div>
+    <a href="#" class="standingImgBlock standingImgBlock_small standingImgBlock_@@theme alignment-@@text_alignment placement-@@text_placement @@if(context.desk_background || context.tab_background || context.mob_background){js-custom-device-props}" style="background: url(@@image);"
+
+	 @@if(context.desk_background || context.tab_background || context.mob_background) {
+		@@if(context.desk_background) {data-desk-background="@@desk_background"}
+		@@if(context.tab_background) {data-tab-background="@@tab_background"}
+		@@if(context.mob_background) {data-mob-background="@@mob_background"}
+
+		@@if(!context.desk_background && !context.image) {data-desk-background="null"}
+		@@if(!context.desk_background && context.image) {data-desk-background="@@image"}
+
+		@@if(!context.tab_background && !context.image) {data-tab-background="null"}
+		@@if(!context.tab_background && context.image) {data-tab-background="@@image"}
+
+		@@if(!context.mob_background && !context.image) {data-mob-background="null"}
+		@@if(!context.mob_background && context.image) {data-mob-background="@@image"}
+	 }
+	>
+		@@if(context.video === true) {
+			<video class="standingImgBlock__video" autoplay="autoplay" muted="muted" loop="loop">
+				<source src="assets/video/hemsidebanner_hi3.mp4" type="video/mp4">
+			</video>
+		}
+
+		@@if(context.overlay === true) {
+            <div class="standingImgBlock__overlay standingImgBlock__overlay_@@position @@if(context.desk_shadow || context.tab_shadow || context.mob_shadow){js-custom-device-props}"
+
+			@@if(context.desk_shadow || context.tab_shadow || context.mob_shadow) {
+				@@if(context.desk_shadow) {data-desk-shadow="@@desk_shadow"}
+				@@if(!context.desk_shadow) {data-desk-shadow="null"}
+				@@if(context.tab_shadow) {data-tab-shadow="@@tab_shadow"}
+				@@if(!context.tab_shadow) {data-tab-shadow="null"}
+				@@if(context.mob_shadow) {data-mob-shadow="@@mob_shadow"}
+				@@if(!context.mob_shadow) {data-mob-shadow="null"}
+			}
+			></div>
         }
+
+		<div class="standingImgBlock__content @@if(context.desk_text_color || context.tab_text_color || context.mob_text_color){js-custom-device-props}"
+		@@if(context.desk_text_color || context.tab_text_color || context.mob_text_color) {
+			@@if(context.desk_text_color) {data-desk-color="@@desk_text_color"}
+			@@if(!context.desk_text_color) {data-desk-color="null"}
+			@@if(context.tab_text_color) {data-tab-color="@@tab_text_color"}
+			@@if(!context.tab_text_color) {data-tab-color="null"}
+			@@if(context.mob_text_color) {data-mob-color="@@mob_text_color"}
+			@@if(!context.mob_text_color) {data-mob-color="null"}
+		}>
+		@@if(context.has_content_title){
+
+				<h4 class="standingImgBlock__title @@if(context.text_font){family-@@text_font}"
+				>Lorem ip&shy;sum do tem&shy;por</h4>
+		}
+		</div>
+
         @@if(context.has_link === true) {
-            <div class="standingImgBlock__content">
-                
-                @@if(context.has_content_title){
-                    <h4 class="standingImgBlock__title autoHyphens">Lorem ip&shy;sum do tem&shy;por</h4>
-                }
+			<div class="standingImgBlock__cta">
+				<button type="button" class="btn btn--sm btn_@@link_style
+				@@if(context.theme === 'light'){btn-primary}
+				@@if(context.theme === 'dark'){btn-invert}
+				@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
+				@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
+					@@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color"}
+					@@if(!context.desk_btn_color) {data-desk-color="null"}
+					@@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color"}
+					@@if(!context.tab_btn_color) {data-tab-color="null"}
+					@@if(context.mob_btn_color) {data-mob-color="@@mob_btn_color"}
+					@@if(!context.mob_btn_color) {data-mob-color="null"}
+				}
 
-                <div class="standingImgBlock__cta">
-                    @@if(context.theme === "light") {
-                      <div class="btn btn--sm btn-primary btn_@@link-style">@@btn_title</div>
-                    }
-                    @@if(context.theme === "dark") {
-                      <div class="btn btn--sm btn-invert btn_@@link-style">@@btn_title</div>
-                    }
-                </div>
-            </div>  
-        }
+				@@if(context.link_style === 'button') {
+					@@if(context.desk_btn_background || context.tab_btn_background || context.mob_btn_background) {
+						@@if(context.desk_btn_background) {data-desk-background="@@desk_btn_background"}
+						@@if(!context.desk_btn_background) {data-desk-background="null"}
+						@@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background"}
+						@@if(!context.tab_btn_background) {data-tab-background="null"}
+						@@if(context.mob_btn_background) {data-mob-background="@@mob_btn_background"}
+						@@if(!context.mob_btn_background) {data-mob-background="null"}
+					}
+				}
 
-        @@if(context.has_link === false) {
-            <div class="standingImgBlock__content">
-                @@if(context.has_content_title){
-                    <h4 class="standingImgBlock__title autoHyphens">Vin&shy;ster som pas&shy;sar dig och din var&shy;dag</h4>
-                }
-            </div>
+				>
+					@@btn_title
+				</button>
+			</div>
         }
     </a>
 </div>

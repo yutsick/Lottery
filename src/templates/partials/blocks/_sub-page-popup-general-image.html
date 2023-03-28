@@ -1,0 +1,42 @@
+<!--
+	@background: light-blue, pink-bg, primary-blue, green, white
+	@sub_bg - must be 100% of block height, cause if text - it will be on front the image.
+		- assets/img/background/popup-general-back.png
+    @modal - modal_background, modal_image, no-image
+
+	@shadow: true, false.
+	@sub_text: "text".
+	@on_title: "text".
+-->
+
+<section class="sub-page-popup-general @@if(context.background){@@background}  @@if(context.modal){@@modal}  @@if(context.bg_shadow){shadow__}"
+         style=" background: @@if(context.sub_bg){ url(@@sub_bg) no-repeat center/cover; }">
+
+  	<div class="container">
+		<div class="row equal-height">
+		  <div class="col-xs-12 col-lg-12">
+                  @@if(context.images_url) {
+                    <div class="images__">
+                      <img src="@@images_url">
+                    </div>
+                  }
+                  
+                  @@if(context.on_title) {
+                    <h2 class="title">@@on_title</h2>
+                  }
+                  @@if(context.sub_text) {
+                    <p>@@sub_text</p>
+                  }
+                  
+                  @@if(context.block_btn) {
+                     <div class="block_btn">
+                       <a href="javascript:;" class="btn-color cta-pink">Jag vill skrapa nu!</a>
+                       <a href="javascript:;" class="btn-color primary-blue">Nej, jag väntar</a>
+                     </div> 
+                  }
+
+			 </div>  
+          </div>
+      </div>
+
+</section>

@@ -1,0 +1,36 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop",
+	"logged_in": true
+	})
+
+@@include('layout/_top-new2.html', { "logged_in": true, "show_cart": true })
+
+
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
+
+
+<div class="ml-2017" id="modals">
+	<div class="modal modal-2022 modal-sub-newsletter fade in" id="newsletter_sub_popup2" style="display: block;">
+		<div class="modal-dialog modal-xl modal-dialog-centered padding__0" role="document">
+			<a href="#" class="btn-close_circular js-action-close">Close</a>
+			
+			<div class="modal-content popup-general">
+				<div class="sub-page-popup ml-2017">
+
+					@@include('blocks/_sub-page-popup-general-only-img.html', {
+                        "modal": "modal_image",
+                        "background": "white",
+                        "images_url": "assets/img/mockup/popup-general-img.png",
+                        "bg_shadow": true,
+                        "sub_bg": false,
+                        "on_title": false,
+                        "sub_text": false
+
+					})
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

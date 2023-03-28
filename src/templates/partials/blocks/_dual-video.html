@@ -1,0 +1,51 @@
+<div class="container">
+  <section class="dual-video">
+    <div class="dual-grid media-@@media_position p-0 @@if(context.media_on_top){media-on-top}">
+      <div class="dual inner-grid">
+        <div class="dual-inner theme-@@theme_top font-@@font cta-position-@@cta_position_top"
+          style="background-image: url('@@image_top');">
+          <h3 class="block-hero__title">Header</h3>
+          <div class="cta">
+            <a href="" class="btn btn-cta">Läs mer</a>
+          </div>
+
+        </div>
+        <div class="dual-inner theme-@@theme_bottom font-@@font cta-position-@@cta_position_bottom"
+          style="background-image: url('@@image_bottom');">
+          <h3 class="block-hero__title">Header</h3>
+          <div class="cta">
+            <a href="" class="btn btn-cta">Läs mer</a>
+          </div>
+
+        </div>
+      </div>
+      @@if(context.media == 'video'){
+      <div class="media-block">
+
+        <div class="s-video">
+          <iframe loading="lazy" src="https://www.youtube.com/embed/EOQZ4VEi92M?autoplay=1&rel=0" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}body,html{height:100%}a{display:block}a>img{position:absolute;width:100%;height:100%;-o-object-fit:cover;object-fit:cover;top:50%;left:0;right:0;transform:translate(0,-50%);margin:auto}span{display:flex;align-items:center;justify-content:center;position:absolute;width:64px;height:64px;border-radius:50%;top:50%;left:calc(50% + 7px);margin:-40px 0 0 -40px;box-sizing:border-box}span>img{display:block;width:64;height:auto}
+        							</style>
+        									<a href=https://www.youtube.com/embed/EOQZ4VEi92M?autoplay=1&rel=0>
+        										<img src=https://img.youtube.com/vi/EOQZ4VEi92M/maxresdefault.jpg>
+        										<span>
+        											<img src=assets/img/icons/play-btn2.svg>
+        										</span>
+        									</a>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      }
+      @@if(context.media == 'image'){
+      <div class="media-block theme-@@media_theme font-@@font s-video-img" style="background-image: url('@@media_image');">
+        
+          <h3 class="block-hero__title">Header</h3>
+          <div class="cta">
+            <a href="" class="btn btn-cta">Läs mer</a>
+          </div>
+       
+      </div>
+      }
+
+    </div>
+  </section>
+</div>

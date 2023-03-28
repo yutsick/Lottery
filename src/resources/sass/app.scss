@@ -34,14 +34,14 @@
 
 #confetti {
 	width: 100vw;
-    height: 100vh;
-    z-index: 9999;
-    top: 0;
-    left: 0;
+	height: 100vh;
+	z-index: 9999;
+	top: 0;
+	left: 0;
 	position: fixed;
 	display: none;
-    touch-action: none;
-    pointer-events: none;
+	touch-action: none;
+	pointer-events: none;
 }
 
 .object-fit-contain {
@@ -54,12 +54,61 @@
 	font-family: 'object-fit: cover;';
 }
 
-body.none_scroll__{
-  overflow: hidden;
+body.none_scroll__ {
+	overflow: hidden;
 }
 
-#alert-cookie,.message-container,#top{
-//  display: none !important
+.family-Apercu {
+	font-family: $apercu !important;
+}
+
+.family-Apercu {
+
+	h2,
+	ul li {
+		font-family: $apercu !important;
+	}
+}
+
+.family-Proxima {
+	font-family: $base-font-family !important;
+}
+
+.family-Proxima {
+
+	h2,
+	ul li {
+		font-family: $base-font-family !important;
+	}
+}
+
+.family-Zing, .family-zingRust {
+	font-family: $zingRust !important;
+}
+
+.family-Zing,
+.family-zingRust {
+
+	h2,
+	ul li {
+		font-family: $zingRust !important;
+	}
+}
+.family-ZingRustScript {
+	font-family: $zingRustScript !important;
+}
+
+.family-ZingRustScript {
+
+	h2,
+	ul li {
+		font-family: $zingRustScript !important;
+	}
+}
+#alert-cookie,
+.message-container,
+#top {
+	//  display: none !important
 }
 
 .ml-2017 {
@@ -91,6 +140,7 @@ body.none_scroll__{
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 /* Page wrapper and template styles */
 @import "pages/pages";
 
@@ -98,4 +148,8 @@ body.none_scroll__{
 @import "extension/extension";
 
 // Styles for BrowserSync notification to be less annoying.
-#__bs_notify__ { top: 95% !important; right: 10px !important; border-radius: 10px !important; }
+#__bs_notify__ {
+	top: 95% !important;
+	right: 10px !important;
+	border-radius: 10px !important;
+}

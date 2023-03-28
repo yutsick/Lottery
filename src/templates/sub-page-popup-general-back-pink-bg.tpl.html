@@ -1,0 +1,35 @@
+@@include('layout/_header.html', {
+	"class": "logged-in shop",
+	"logged_in": true
+	})
+
+@@include('layout/_top-new2.html', { "logged_in": true, "show_cart": true })
+
+
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
+
+
+<div class="ml-2017" id="modals">
+	<div class="modal modal-2022 modal-sub-newsletter fade in" id="newsletter_sub_popup2" style="display: block;">
+		<div class="modal-dialog modal-xl modal-dialog-centered padding__0" role="document">
+			<a href="#" class="btn-close_circular js-action-close">Close</a>
+
+			<div class="modal-content popup-general">
+				<div class="sub-page-popup ml-2017">
+
+					@@include('blocks/_sub-page-popup-general-back.html', {
+						"modal": "modal_background",
+						"background": "pink-bg",
+						"bg_shadow": true,
+						"sub_bg": "assets/img/background/popup-general-back.png",
+						"on_title": "Spela bingo!",
+						"sub_text": "Lorem ipsum dolor sit amet, consectur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+
+					})
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

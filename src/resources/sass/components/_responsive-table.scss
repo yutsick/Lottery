@@ -212,3 +212,143 @@
 		}
 	}
 }
+
+h4.bonusar-table__title {
+	font-size: 30px;
+	margin-bottom: 22px;
+	margin-top: 22px;
+}
+
+.bonusar-table {
+	thead th {
+		background: #b8d8eb;
+
+		&:last-child {
+			text-align: unset;
+		}
+	}
+
+	&__title-block {
+		margin-bottom: 0;
+		padding: 15px;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		background-color: #b8d8eb;
+		font-size: 16px;
+		font-weight: 600;
+		color: #003E52;
+
+		@include min-screen($screen-sm) {
+			display: none;
+		}
+	}
+
+	td {
+		font-weight: 400;
+		color: #003e52;
+
+		@media screen and (max-width:768px) {
+			display: flex;
+
+			&:nth-child(2n) {
+				text-align: unset;
+			}
+		}
+
+		&:before {
+			margin-right: 10px;
+			font-weight: 500;
+			color: #003e52;
+		}
+
+		&:last-child {
+			text-align: unset;
+		}
+	}
+
+	td.bonusar-table__mob-6 {
+		@media screen and (max-width:768px) {
+			width: auto;
+			flex-grow: 1;
+		}
+	}
+
+	td.bonusar-table__mob-12 {
+		white-space: normal;
+
+		@media screen and (max-width:768px) {
+			width: 100%;
+		}
+	}
+
+	td.bonusar-table__mob-between {
+		@media screen and (max-width:768px) {
+			justify-content: space-between;
+			align-items: center;
+
+			* + * {
+				margin-left: 15px;
+			}
+		}
+	}
+
+	td.bonusar-table__mob-end {
+		@media screen and (max-width:768px) {
+			flex-grow: 0;
+		}
+	}
+
+	.bonusar-table__tillbonus {
+		width: fit-content;
+
+		&-title {
+			font-size: 14px;
+			text-align: center;
+			display: block;
+			margin-bottom: 5px;
+		}
+
+		&-scorebar {
+			width: 166px;
+			height: 16px;
+			background: rgba(6, 86, 111, 0.15);
+			position: relative;
+			border-radius: 50px;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 23px;
+				height: 30px;
+				position: absolute;
+				right: -13px;
+    			bottom: -3px;
+				background-repeat: no-repeat;
+				background-image: url('../img/icons/bonusar-table__bonus-icon.svg');
+			}
+
+			&-filled {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0px;
+				height: 16px;
+				background: #06566f;
+				border-radius: 50px;
+			}
+		}
+	}
+
+	&-filter {
+		.table__label {
+			font-family: $apercu;
+			font-size: 16px;
+			color: #003e52;
+			font-weight: 600;
+		}
+
+		.select2-container--default .select2-selection--single .select2-selection__rendered {
+			color: #003e52;
+		}
+	}
+}

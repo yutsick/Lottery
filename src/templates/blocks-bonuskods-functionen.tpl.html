@@ -1,0 +1,205 @@
+@@include('layout/_header.html', {
+	"class": "page-front logged-out",
+	"logged_in": false
+	})
+
+	@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+
+	<div class="content-wrapper ml-2017">
+		<div class="container">
+				<div class="col-12">
+					<h2 class="section__heading h3">Single</h2>
+				</div>
+			<div class="row equal-height">
+			
+				<div class="col-md-6 col-xs-12 split-block">
+					<div class="bnkfn">
+						<div class="bnkfn__content">
+							<h2 class="bnkfn__title">Rätta din rebus!</h2>
+							<p>Skriv in ditt svar på rebusen här nedan. Rätt svar belönas direkt.</p>
+							<form class="bnkfn__form" action="#">
+								<div style="display: block;">
+									<fieldset class="bnkfn__form-wrapper">
+										<div class="bnkfn__form-input">
+											<input type="text" name="bonuskodsInput" placeholder="Din bonuskod" id="bonuskodsInput0">
+											<label for="bonuskodsInput0" class="bnkfn__form-input_default">Din bonuskod</label>
+											<label for="bonuskodsInput0" class="bnkfn__form-input_error">Felaktig kod. Försök igen.</label>
+										</div>
+										<button class="btn btn-primary" type="submit" disabled>Hade jag rätt?</button>
+									</fieldset>
+								</div>
+								<div class="bnkfn__success" style="display: none;">
+									<div class="bnkfn__success-wrapper">
+										<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.976 0C10.728 0 0 10.752 0 24C0 37.248 10.728 48 23.976 48C37.248 48 48 37.248 48 24C48 10.752 37.248 0 23.976 0ZM15.6 14.4C17.592 14.4 19.2 16.008 19.2 18C19.2 19.992 17.592 21.6 15.6 21.6C13.608 21.6 12 19.992 12 18C12 16.008 13.608 14.4 15.6 14.4ZM35.304 30.528C33.12 35.208 28.896 38.4 24 38.4C19.104 38.4 14.88 35.208 12.696 30.528C12.312 29.736 12.888 28.8 13.776 28.8H34.224C35.112 28.8 35.688 29.736 35.304 30.528ZM32.4 21.6C30.408 21.6 28.8 19.992 28.8 18C28.8 16.008 30.408 14.4 32.4 14.4C34.392 14.4 36 16.008 36 18C36 19.992 34.392 21.6 32.4 21.6Z" fill="#50B78D"/>
+										</svg>
+
+										<span><b>Grattis!</b> Du har fått bonus!</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+					<h2 class="section__heading h3">Single error</h2>
+				</div>
+			<div class="row equal-height">
+				
+				<div class="col-md-6 col-xs-12 split-block">
+					<div class="bnkfn">
+						<div class="bnkfn__content">
+							<h2 class="bnkfn__title">Rätta din rebus!</h2>
+							<p>Skriv in ditt svar på rebusen här nedan. Rätt svar belönas direkt.</p>
+							<form class="bnkfn__form" action="#">
+								<div style="display: block;">
+									<fieldset class="bnkfn__form-wrapper">
+										<!-- Need to add "error" class and clear the val() of input" -->
+										<div class="bnkfn__form-input error">
+											<input type="text" name="bonuskodsInput" placeholder="Din bonuskod" id="bonuskodsInput1">
+											<label for="bonuskodsInput1" class="bnkfn__form-input_default">Din bonuskod</label>
+											<label for="bonuskodsInput1" class="bnkfn__form-input_error">Felaktig kod. Försök igen.</label>
+										</div>
+										<button class="btn btn-primary" type="submit" disabled>Hade jag rätt?</button>
+									</fieldset>
+								</div>
+
+								<div class="bnkfn__success" style="display: none;">
+									<div class="bnkfn__success-wrapper">
+										<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.976 0C10.728 0 0 10.752 0 24C0 37.248 10.728 48 23.976 48C37.248 48 48 37.248 48 24C48 10.752 37.248 0 23.976 0ZM15.6 14.4C17.592 14.4 19.2 16.008 19.2 18C19.2 19.992 17.592 21.6 15.6 21.6C13.608 21.6 12 19.992 12 18C12 16.008 13.608 14.4 15.6 14.4ZM35.304 30.528C33.12 35.208 28.896 38.4 24 38.4C19.104 38.4 14.88 35.208 12.696 30.528C12.312 29.736 12.888 28.8 13.776 28.8H34.224C35.112 28.8 35.688 29.736 35.304 30.528ZM32.4 21.6C30.408 21.6 28.8 19.992 28.8 18C28.8 16.008 30.408 14.4 32.4 14.4C34.392 14.4 36 16.008 36 18C36 19.992 34.392 21.6 32.4 21.6Z" fill="#50B78D"/>
+										</svg>
+
+										<span><b>Grattis!</b> Du har fått bonus!</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+					<h2 class="section__heading h3">Single success</h2>
+				</div>
+			<div class="row equal-height">
+				
+				<div class="col-md-6 col-xs-12  split-block">
+					<div class="bnkfn">
+						<div class="bnkfn__content">
+							<h2 class="bnkfn__title">Rätta din rebus!</h2>
+							<p>Skriv in ditt svar på rebusen här nedan. Rätt svar belönas direkt.</p>
+							<form class="bnkfn__form" action="#">
+								<!-- .hide() and .show() will works on this -->
+								<div style="display: none;">
+									<fieldset class="bnkfn__form-wrapper">
+										<div class="bnkfn__form-input">
+											<input type="text" name="bonuskodsInput" placeholder="Din bonuskod" id="bonuskodsInput0">
+											<label for="bonuskodsInput0" class="bnkfn__form-input_default">Din bonuskod</label>
+											<label for="bonuskodsInput0" class="bnkfn__form-input_error">Felaktig kod. Försök igen.</label>
+										</div>
+										<button class="btn btn-primary" type="submit" disabled>Hade jag rätt?</button>
+									</fieldset>
+								</div>
+
+								<div class="bnkfn__success" style="display: block;">
+									<div class="bnkfn__success-wrapper">
+										<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.976 0C10.728 0 0 10.752 0 24C0 37.248 10.728 48 23.976 48C37.248 48 48 37.248 48 24C48 10.752 37.248 0 23.976 0ZM15.6 14.4C17.592 14.4 19.2 16.008 19.2 18C19.2 19.992 17.592 21.6 15.6 21.6C13.608 21.6 12 19.992 12 18C12 16.008 13.608 14.4 15.6 14.4ZM35.304 30.528C33.12 35.208 28.896 38.4 24 38.4C19.104 38.4 14.88 35.208 12.696 30.528C12.312 29.736 12.888 28.8 13.776 28.8H34.224C35.112 28.8 35.688 29.736 35.304 30.528ZM32.4 21.6C30.408 21.6 28.8 19.992 28.8 18C28.8 16.008 30.408 14.4 32.4 14.4C34.392 14.4 36 16.008 36 18C36 19.992 34.392 21.6 32.4 21.6Z" fill="#50B78D"/>
+										</svg>
+
+										<span><b>Grattis!</b> Du har fått bonus!</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+					<h2 class="section__heading h3">Full-width with image</h2>
+				</div>
+			<div class="row equal-height">
+				
+				<div class="col-md-12 col-xs-12  split-block">
+					<div class="bnkfn">
+						<div class="bnkfn__content">
+							<h2 class="bnkfn__title">Rätta din rebus!</h2>
+							<p>Skriv in ditt svar på rebusen här nedan. Rätt svar belönas direkt.</p>
+							<form class="bnkfn__form" action="#">
+								<div style="display: block;">
+									<fieldset class="bnkfn__form-wrapper">
+										<div class="bnkfn__form-input">
+											<input type="text" name="bonuskodsInput" placeholder="Din bonuskod" id="bonuskodsInput3">
+											<label for="bonuskodsInput3" class="bnkfn__form-input_default">Din bonuskod</label>
+											<label for="bonuskodsInput3" class="bnkfn__form-input_error">Felaktig kod. Försök igen.</label>
+										</div>
+										<button class="btn btn-primary" type="submit" disabled>Hade jag rätt?</button>
+									</fieldset>
+								</div>
+
+								<div class="bnkfn__success" style="display: none;">
+									<div class="bnkfn__success-wrapper">
+										<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.976 0C10.728 0 0 10.752 0 24C0 37.248 10.728 48 23.976 48C37.248 48 48 37.248 48 24C48 10.752 37.248 0 23.976 0ZM15.6 14.4C17.592 14.4 19.2 16.008 19.2 18C19.2 19.992 17.592 21.6 15.6 21.6C13.608 21.6 12 19.992 12 18C12 16.008 13.608 14.4 15.6 14.4ZM35.304 30.528C33.12 35.208 28.896 38.4 24 38.4C19.104 38.4 14.88 35.208 12.696 30.528C12.312 29.736 12.888 28.8 13.776 28.8H34.224C35.112 28.8 35.688 29.736 35.304 30.528ZM32.4 21.6C30.408 21.6 28.8 19.992 28.8 18C28.8 16.008 30.408 14.4 32.4 14.4C34.392 14.4 36 16.008 36 18C36 19.992 34.392 21.6 32.4 21.6Z" fill="#50B78D"/>
+										</svg>
+
+										<span><b>Grattis!</b> Du har fått bonus!</span>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="bnkfn__image">
+							<img src="https://images.unsplash.com/photo-1671726805768-93b4c260766b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Some image">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row equal-height">
+				<div class="col-md-12 col-xs-12  split-block">
+					<div class="bnkfn">
+
+						<div class="bnkfn__image">
+							<img src="https://images.unsplash.com/photo-1671726805768-93b4c260766b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Some image">
+						</div>
+
+						<div class="bnkfn__content">
+							<h2 class="bnkfn__title">Rätta din rebus!</h2>
+							<p>Skriv in ditt svar på rebusen här nedan. Rätt svar belönas direkt.</p>
+							<form class="bnkfn__form" action="#">
+								<div style="display: block;">
+									<fieldset class="bnkfn__form-wrapper">
+										<div class="bnkfn__form-input">
+											<input type="text" name="bonuskodsInput" placeholder="Din bonuskod" id="bonuskodsInput4">
+											<label for="bonuskodsInput4" class="bnkfn__form-input_default">Din bonuskod</label>
+											<label for="bonuskodsInput4" class="bnkfn__form-input_error">Felaktig kod. Försök igen.</label>
+										</div>
+										<button class="btn btn-primary" type="submit" disabled>Hade jag rätt?</button>
+									</fieldset>
+								</div>
+
+								<div class="bnkfn__success" style="display: none;">
+									<div class="bnkfn__success-wrapper">
+										<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.976 0C10.728 0 0 10.752 0 24C0 37.248 10.728 48 23.976 48C37.248 48 48 37.248 48 24C48 10.752 37.248 0 23.976 0ZM15.6 14.4C17.592 14.4 19.2 16.008 19.2 18C19.2 19.992 17.592 21.6 15.6 21.6C13.608 21.6 12 19.992 12 18C12 16.008 13.608 14.4 15.6 14.4ZM35.304 30.528C33.12 35.208 28.896 38.4 24 38.4C19.104 38.4 14.88 35.208 12.696 30.528C12.312 29.736 12.888 28.8 13.776 28.8H34.224C35.112 28.8 35.688 29.736 35.304 30.528ZM32.4 21.6C30.408 21.6 28.8 19.992 28.8 18C28.8 16.008 30.408 14.4 32.4 14.4C34.392 14.4 36 16.008 36 18C36 19.992 34.392 21.6 32.4 21.6Z" fill="#50B78D"/>
+										</svg>
+
+										<span><b>Grattis!</b> Du har fått bonus!</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

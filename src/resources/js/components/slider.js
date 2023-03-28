@@ -45,7 +45,7 @@ export default function () {
 	const captionHeightFn = () => {
 		let curItem = $flickityPostSlider.data('flickity').selectedElement;
 
-		if ( $(window).width() < 768 ) {
+		if ($(window).width() < 768) {
 
 			$(curItem).closest('.post-slider').css('padding-bottom', (maxHeight));
 			$(curItem).find('.post-slider__caption').css({
@@ -81,9 +81,9 @@ export default function () {
 		captionHeightFn();
 	});
 
-	if ($(".post-slider")[0]){
+	if ($(".post-slider")[0]) {
 		captionHeightFn();
-		$(window).resize(function() {
+		$(window).resize(function () {
 			captionHeightFn();
 		});
 	}
@@ -133,25 +133,25 @@ export default function () {
 		lotterySliderOffset = 250;
 	}
 
-	$('.lottery-slider-nav__list').on( 'click', '.lottery-slider-nav__item', function() {
+	$('.lottery-slider-nav__list').on('click', '.lottery-slider-nav__item', function () {
 		let index = $(this).index();
-		$flickityLotterySlider.flickity( 'select', index );
+		$flickityLotterySlider.flickity('select', index);
 		$('body,html').animate({
 			scrollTop: $('.online-lottery-slider').offset().top - lotterySliderOffset
 		}, 500);
 	});
 
 	//winners slider
-	let winners = [{"NickName":"Ulf A","Time":"21:14","Amount":100,"GameType":"Lottery","GameName":"Miljonlotten 2021","GameId":"Miljonlotten 2021","AmountText":null,"PrizeType":"","Date":"2021-02-21","WhenDateTime":"/Date(1613938486000)/"},{"NickName":"Roger E","Time":"21:16","Amount":100,"GameType":"Lottery","GameName":"Miljonlotten 2021","GameId":"Miljonlotten 2021","AmountText":null,"PrizeType":"","Date":"2021-02-21","WhenDateTime":"/Date(1613938592000)/"},{"NickName":"Sven F","Time":"21:16","Amount":150,"GameType":"Lottery","GameName":"Miljonlotten 2021","GameId":"Miljonlotten 2021","AmountText":null,"PrizeType":"","Date":"2021-02-21","WhenDateTime":"/Date(1613938602000)/"},{"NickName":"Ulla E","Time":"21:17","Amount":100,"GameType":"Lottery","GameName":"Miljonlotten 2021","GameId":"Miljonlotten 2021","AmountText":null,"PrizeType":"","Date":"2021-02-21","WhenDateTime":"/Date(1613938629000)/"},{"NickName":"Roger E","Time":"21:18","Amount":500,"GameType":"Lottery","GameName":"Miljonlotten 2021","GameId":"Miljonlotten 2021","AmountText":null,"PrizeType":"","Date":"2021-02-21","WhenDateTime":"/Date(1613938687000)/"}]
+	let winners = [{ "NickName": "Ulf A", "Time": "21:14", "Amount": 100, "GameType": "Lottery", "GameName": "Miljonlotten 2021", "GameId": "Miljonlotten 2021", "AmountText": null, "PrizeType": "", "Date": "2021-02-21", "WhenDateTime": "/Date(1613938486000)/" }, { "NickName": "Roger E", "Time": "21:16", "Amount": 100, "GameType": "Lottery", "GameName": "Miljonlotten 2021", "GameId": "Miljonlotten 2021", "AmountText": null, "PrizeType": "", "Date": "2021-02-21", "WhenDateTime": "/Date(1613938592000)/" }, { "NickName": "Sven F", "Time": "21:16", "Amount": 150, "GameType": "Lottery", "GameName": "Miljonlotten 2021", "GameId": "Miljonlotten 2021", "AmountText": null, "PrizeType": "", "Date": "2021-02-21", "WhenDateTime": "/Date(1613938602000)/" }, { "NickName": "Ulla E", "Time": "21:17", "Amount": 100, "GameType": "Lottery", "GameName": "Miljonlotten 2021", "GameId": "Miljonlotten 2021", "AmountText": null, "PrizeType": "", "Date": "2021-02-21", "WhenDateTime": "/Date(1613938629000)/" }, { "NickName": "Roger E", "Time": "21:18", "Amount": 500, "GameType": "Lottery", "GameName": "Miljonlotten 2021", "GameId": "Miljonlotten 2021", "AmountText": null, "PrizeType": "", "Date": "2021-02-21", "WhenDateTime": "/Date(1613938687000)/" }]
 	for (let i = 0; i < 10; i++) {
 		if (winners[i]) {
 			let j = i % 2;
 			if (j == 0) {
-				$('.winners-slider').append('<div class="winner-item style01">' +
+				$('.s-winners .winners-slider').append('<div class="winner-item style01">' +
 					'<div class="icon"><img src="assets/img/icons/star-01.svg" alt=""></div><div class="text"><p>' + winners[i].NickName + '</p><p>' + winners[i].GameName + '</p></div></div>'
 				);
 			} else {
-				$('.winners-slider').append('<div class="winner-item style02">' +
+				$('.s-winners .winners-slider').append('<div class="winner-item style02">' +
 					'<div class="icon"><img src="assets/img/icons/star-02.svg" alt=""></div><div class="text"><p>' + winners[i].NickName + '</p><p>' + winners[i].GameName + '</p></div></div>'
 				);
 			}
@@ -166,6 +166,19 @@ export default function () {
 		pageDots: false,
 		prevNextButtons: false,
 		autoPlay: 5000
+	});
+
+	$('.winners-slider-slick').slick({
+		dots: false,
+		autoplay: true,
+		infinite: true,
+		speed: 1000,
+		arrows: false,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		centerMode: true,
+		variableWidth: true,
+		cssEase: "cubic-bezier(0,.5,0,1)",
 	});
 
 	//
@@ -193,7 +206,7 @@ export default function () {
 	}
 
 	// @media for slider
-	if ( matchMedia('screen and (max-width: 596px)').matches ) {
+	if (matchMedia('screen and (max-width: 596px)').matches) {
 		bingoSliderOptions.cellAlign = 'center';
 	}
 	$('.block-bingo-slider').flickity(bingoSliderOptions);
@@ -209,7 +222,7 @@ export default function () {
 		autoPlay: 5000,
 		adaptiveHeight: true
 	}
-	if ( matchMedia('screen and (max-width: 1024px)').matches ) {
+	if (matchMedia('screen and (max-width: 1024px)').matches) {
 		sbsArrowsOption.cellAlign = 'center';
 	}
 	$('.sbs-arrows').flickity(sbsArrowsOption);
@@ -226,13 +239,13 @@ export default function () {
 	});
 
 	//vinstshop-page-v2 slider for categories filter
-//	$('#productCategorySlider').flickity({
-//		cellSelector: '#productCategorySlider .product-category__btn',
-//		contain: true,
-//		pageDots: false,
-//		prevNextButtons: true,
-//		cellAlign: 'left'
-//	});
+	//	$('#productCategorySlider').flickity({
+	//		cellSelector: '#productCategorySlider .product-category__btn',
+	//		contain: true,
+	//		pageDots: false,
+	//		prevNextButtons: true,
+	//		cellAlign: 'left'
+	//	});
 
 
 	// $('.product-slider__big-box').flickity({
@@ -252,11 +265,11 @@ export default function () {
 		contain: true,
 
 		on: {
-			staticClick: function( event, pointer, cellElement, cellIndex ) {
+			staticClick: function (event, pointer, cellElement, cellIndex) {
 				$('.product-slider__big-box').find('.product-slider__current').text(cellIndex + 1);
 			},
 
-			ready: function() {
+			ready: function () {
 				let count = $('.product-slider__big-box').find('.product-slider__count');
 				count.text($('.product-slider__small-box').find('.product-slider__item--small').length);
 			}

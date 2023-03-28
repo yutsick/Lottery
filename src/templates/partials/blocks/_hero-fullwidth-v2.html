@@ -1,8 +1,102 @@
+@@if(false) {
+<!--
+
+	--media-data-switcher.js
+
+	@@desk_shadow - off shadow only on this width = use "none" value;
+	@@tab_shadow
+	@@mob_shadow
+
+	Available key BG-COLORS and BG-IMAGES for using:
+	@@desk_background, @@tab_background, @@mob_background - 'key' of color or 'url' of image values. If it is exist any of keys but not all 3 provided - in missing device width will uses default @image value or nothing;
+
+	FONT-COLORS using:
+
+	@@desk_text_color - key of color - 'Miljonbla' or ect.
+	@@tab_text_color
+	@@mob_text_color
+
+	@@desk_btn_color - key of color for BUTTON or LINK BUTTON - 'Miljonbla' or ect.
+	@@tab_btn_color
+	@@mob_btn_color
+
+	@@desk_btn_background - key of color for LINK BUTTON only - 'Miljonbla' or ect.
+	@@tab_btn_background
+	@@mob_btn_background
+
+	--Posible color keys for using:
+		Miljonbla: "#003E52",
+		Nord: "#1377B0",
+		Himmel: "#C7E7F8",
+		Moln: "#F5F5F5",
+
+		Turkos: "#00A4B9",
+		Turkos75: "#70B9CB",
+		Turkos50: "#A8D1DC",
+		Turkos20: "#DEEDF2",
+
+		Rosa: "#D96195",
+		Rosa75: "#E18DB1",
+		Rosa50: "#EBB6CE",
+		Rosa20: "#F7E3EC",
+
+		Gron: "#50B78D",
+		Gron75: "#8BC9A9",
+		Gron50: "#B7DBC7",
+		Gron20: "#E4F0EA",
+
+		Orange: "#F98F00",
+		Orange75: "#F7AA56",
+		Orange50: "#FBC890",
+		Orange20: "#FDE9D4",
+
+		Gul: "#FFD944",
+		Gul75: "#FFE27D",
+		Gul50: "#FFEBAD",
+		Gul20: "#FFF7E0",
+
+
+	@@font - key of font = 'apercu' or ect..
+	context keys: text_font, btn_font - for all devices width;
+	Like "text_font": "apercu";
+
+	--Posible font keys for using:
+		'apercu' - will be "Apercu Pro",
+		'zingRust' - will be "Zing Rust Demo Base",
+		'zingRustScript' - will be "Zing Rust Demo SB Base Script"
+-->
+}
+
 <div class="hero-full hero-content-desktop--@@content_alignment_desktop hero-content-tablet--@@content_alignment_tablet hero-content-mobile--@@content_alignment_mobile">
 	@@if(context.has_link === true){
 		<a href="#" class="hero-full__inner">
 			@@if (context.background_video === false) {
-			<div class="hero-full--bg hero-bgp-desktop--@@background_position_desktop hero-bgp-tablet--@@background_position_tablet hero-bgp-mobile--@@background_position_mobile" style="background-image: url(assets/img/background/hero-sektion.jpeg);"></div>
+			<div class="hero-full--bg hero-bgp-desktop--@@background_position_desktop hero-bgp-tablet--@@background_position_tablet hero-bgp-mobile--@@background_position_mobile @@if(context.desk_background || context.tab_background || context.mob_background){js-custom-device-props}"
+
+			@@if(context.image) {
+				style="background: url(@@image);"
+			}
+
+
+			@@if(!context.image) {
+				style="background: url(assets/img/background/hero-sektion.jpeg);"
+			}
+
+			@@if(context.desk_background || context.tab_background || context.mob_background) {
+				@@if(context.desk_background) {data-desk-background="@@desk_background"}
+				@@if(context.tab_background) {data-tab-background="@@tab_background"}
+				@@if(context.mob_background) {data-mob-background="@@mob_background"}
+
+				@@if(!context.desk_background && !context.image) {data-desk-background="null"}
+				@@if(!context.desk_background && context.image) {data-desk-background="@@image"}
+
+				@@if(!context.tab_background && !context.image) {data-tab-background="null"}
+				@@if(!context.tab_background && context.image) {data-tab-background="@@image"}
+
+				@@if(!context.mob_background && !context.image) {data-mob-background="null"}
+				@@if(!context.mob_background && context.image) {data-mob-background="@@image"}
+			 }
+			></div>
 			}
 
 			@@if (context.background_video === true) {
@@ -12,28 +106,80 @@
 			}
 
 			@@if (hero_overlay === true) {
-			<div class="hero-full__overlay"></div>
+			<div class="hero-full__overlay @@if(context.desk_shadow || context.tab_shadow || context.mob_shadow){js-custom-device-props}"
+
+			@@if(context.desk_shadow || context.tab_shadow || context.mob_shadow) {
+				@@if(context.desk_shadow) {data-desk-shadow="@@desk_shadow"}
+				@@if(!context.desk_shadow) {data-desk-shadow="null"}
+				@@if(context.tab_shadow) {data-tab-shadow="@@tab_shadow"}
+				@@if(!context.tab_shadow) {data-tab-shadow="null"}
+				@@if(context.mob_shadow) {data-mob-shadow="@@mob_shadow"}
+				@@if(!context.mob_shadow) {data-mob-shadow="null"}
+			}
+			></div>
 			}
 
 			<div class="hero-full__holder">
 				<div class="container">
-					<div class="hero-full__content">
+					<div class="hero-full__content @@if(context.desk_text_color || context.tab_text_color || context.mob_text_color){js-custom-device-props}"
+					@@if(context.desk_text_color || context.tab_text_color || context.mob_text_color) {
+						@@if(context.desk_text_color) {data-desk-color="@@desk_text_color"}
+						@@if(!context.desk_text_color) {data-desk-color="null"}
+						@@if(context.tab_text_color) {data-tab-color="@@tab_text_color"}
+						@@if(!context.tab_text_color) {data-tab-color="null"}
+						@@if(context.mob_text_color) {data-mob-color="@@mob_text_color"}
+						@@if(!context.mob_text_color) {data-mob-color="null"}
+					}>
 
 						@@if (context.logged_in === false) {
-						<h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
-						<div class="block-hero__text">
+						<h1 class="block-hero__title  @@if(context.text_font){family-@@text_font}">Välkommen till det goda lotteriet</h1>
+						<div class="block-hero__text  @@if(context.text_font){family-@@text_font}">
 							<p>Hos oss gör du livet bättre för tusentals barn och vuxna genom att stödja IOGT-NTO-rörelsens viktiga arbete. Som tack kan du skrapa fram vinster för upp till 10 miljoner.
 							</p>
-							<div class="btn btn-cta">Läs mer och gör skillnad</div>
+							<div class="btn btn-cta @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
+							@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
+								@@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color"}
+								@@if(!context.desk_btn_color) {data-desk-color="null"}
+								@@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color"}
+								@@if(!context.tab_btn_color) {data-tab-color="null"}
+								@@if(context.mob_btn_color) {data-mob-color="@@mob_btn_color"}
+								@@if(!context.mob_btn_color) {data-mob-color="null"}
+							}
+
+							@@if(context.desk_btn_background || context.tab_btn_background || context.mob_btn_background) {
+								@@if(context.desk_btn_background) {data-desk-background="@@desk_btn_background"}
+								@@if(!context.desk_btn_background) {data-desk-background="null"}
+								@@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background"}
+								@@if(!context.tab_btn_background) {data-tab-background="null"}
+								@@if(context.mob_btn_background) {data-mob-background="@@mob_btn_background"}
+								@@if(!context.mob_btn_background) {data-mob-background="null"}
+							}>Läs mer och gör skillnad</div>
 						</div>
 						}
 						@@if (context.logged_in === true) {
-						<h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
-						<div class="block-hero__text">
+						<h1 class="block-hero__title  @@if(context.text_font){family-@@text_font}">Välkommen till det goda lotteriet</h1>
+						<div class="block-hero__text  @@if(context.text_font){family-@@text_font}">
 							<p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
 								oss, och dig, kraften att göra skillnad.
 							</p>
-							<div class="btn btn-cta">Läs mer och gör skillnad</div>
+							<div class="btn btn-cta @@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color || context.desk_btn_background || context.tab_btn_background || context.mob_btn_background){js-custom-device-props} @@if(context.btn_font){family-@@btn_font}"
+							@@if(context.desk_btn_color || context.tab_btn_color || context.mob_btn_color) {
+								@@if(context.desk_btn_color) {data-desk-color="@@desk_btn_color"}
+								@@if(!context.desk_btn_color) {data-desk-color="null"}
+								@@if(context.tab_btn_color) {data-tab-color="@@tab_btn_color"}
+								@@if(!context.tab_btn_color) {data-tab-color="null"}
+								@@if(context.mob_btn_color) {data-mob-color="@@mob_btn_color"}
+								@@if(!context.mob_btn_color) {data-mob-color="null"}
+							}
+
+							@@if(context.desk_btn_background || context.tab_btn_background || context.mob_btn_background) {
+								@@if(context.desk_btn_background) {data-desk-background="@@desk_btn_background"}
+								@@if(!context.desk_btn_background) {data-desk-background="null"}
+								@@if(context.tab_btn_background) {data-tab-background="@@tab_btn_background"}
+								@@if(!context.tab_btn_background) {data-tab-background="null"}
+								@@if(context.mob_btn_background) {data-mob-background="@@mob_btn_background"}
+								@@if(!context.mob_btn_background) {data-mob-background="null"}
+							}>Läs mer och gör skillnad</div>
 						</div>
 						}
 					</div>
@@ -44,7 +190,29 @@
 	@@if(context.has_link === false){
 		<div class="hero-full__inner">
 			@@if (context.background_video === false) {
-			<div class="hero-full--bg hero-bgp-desktop--@@background_position_desktop hero-bgp-tablet--@@background_position_tablet hero-bgp-mobile--@@background_position_mobile" style="background-image: url(assets/img/background/hero-sektion.jpeg);"></div>
+			<div class="hero-full--bg hero-bgp-desktop--@@background_position_desktop hero-bgp-tablet--@@background_position_tablet hero-bgp-mobile--@@background_position_mobile @@if(context.desk_background || context.tab_background || context.mob_background){js-custom-device-props}"
+
+			@@if(context.image) {
+				style="background: url(@@image);"
+			}
+
+
+			@@if(!context.image) {
+				style="background: url(assets/img/background/hero-sektion.jpeg);"
+			}
+
+			@@if(context.desk_background || context.tab_background || context.mob_background) {
+				@@if(context.desk_background) {data-desk-background="@@desk_background"}
+
+				@@if(!context.desk_background && !context.image) {data-desk-background="null"}
+				@@if(!context.desk_background && context.image) {data-desk-background="@@image"}
+
+				@@if(!context.tab_background && !context.image) {data-tab-background="null"}
+				@@if(!context.tab_background && context.image) {data-tab-background="@@image"}
+
+				@@if(!context.mob_background && !context.image) {data-mob-background="null"}
+				@@if(!context.mob_background && context.image) {data-mob-background="@@image"}
+			 } ></div>
 			}
 
 			@@if (context.background_video === true) {
@@ -54,23 +222,40 @@
 			}
 
 			@@if (hero_overlay === true) {
-			<div class="hero-full__overlay"></div>
+			<div class="hero-full__overlay @@if(context.desk_shadow || context.tab_shadow || context.mob_shadow){js-custom-device-props}"
+
+			@@if(context.desk_shadow || context.tab_shadow || context.mob_shadow) {
+				@@if(context.desk_shadow) {data-desk-shadow="@@desk_shadow"}
+				@@if(!context.desk_shadow) {data-desk-shadow="null"}
+				@@if(context.tab_shadow) {data-tab-shadow="@@tab_shadow"}
+				@@if(!context.tab_shadow) {data-tab-shadow="null"}
+				@@if(context.mob_shadow) {data-mob-shadow="@@mob_shadow"}
+				@@if(!context.mob_shadow) {data-mob-shadow="null"}
+			}></div>
 			}
 
 			<div class="hero-full__holder">
 				<div class="container">
-					<div class="hero-full__content">
+					<div class="hero-full__content @@if(context.desk_text_color || context.tab_text_color || context.mob_text_color){js-custom-device-props}"
+					@@if(context.desk_text_color || context.tab_text_color || context.mob_text_color) {
+						@@if(context.desk_text_color) {data-desk-color="@@desk_text_color"}
+						@@if(!context.desk_text_color) {data-desk-color="null"}
+						@@if(context.tab_text_color) {data-tab-color="@@tab_text_color"}
+						@@if(!context.tab_text_color) {data-tab-color="null"}
+						@@if(context.mob_text_color) {data-mob-color="@@mob_text_color"}
+						@@if(!context.mob_text_color) {data-mob-color="null"}
+					}>
 
 						@@if (context.logged_in === false) {
-						<h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
-						<div class="block-hero__text">
+						<h1 class="block-hero__title  @@if(context.text_font){family-@@text_font}">Välkommen till det goda lotteriet</h1>
+						<div class="block-hero__text  @@if(context.text_font){family-@@text_font}">
 							<p>Hos oss gör du livet bättre för tusentals barn och vuxna genom att stödja IOGT-NTO-rörelsens viktiga arbete. Som tack kan du skrapa fram vinster för upp till 10 miljoner.
 							</p>
 						</div>
 						}
 						@@if (context.logged_in === true) {
-						<h1 class="block-hero__title">Välkommen till det goda lotteriet</h1>
-						<div class="block-hero__text">
+						<h1 class="block-hero__title  @@if(context.text_font){family-@@text_font}">Välkommen till det goda lotteriet</h1>
+						<div class="block-hero__text  @@if(context.text_font){family-@@text_font}">
 							<p>Det går att bry sig, istället för att låta bli. Därför startade vi ett lotteri som ger
 								oss, och dig, kraften att göra skillnad.
 							</p>

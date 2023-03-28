@@ -100,54 +100,54 @@
         height: 100%;
 
         background-color: $color-blue-deep;
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
         &.hero-bgp {
             @media screen and (max-width: $screen-xs-max){
                 &-mobile {
                     &--left {
-                        background-position: center left;
+                        background-position: center left!important;
                         &.hero-full__video {
                             left: 0;
                         }
                     }
                     &--right {
-                        background-position: center right;
+                        background-position: center right!important;
                     }
                     &--center {
-                        background-position: center center;
+                        background-position: center center!important;
                     }
                 }
             }
             @media screen and (min-width: $screen-sm){
                 &-tablet {
                     &--left {
-                        background-position: center left;
+                        background-position: center left!important;
                         &.hero-full__video {
                             left: 0;
                         }
                     }
                     &--right {
-                        background-position: center right;
+                        background-position: center right!important;
                     }
                     &--center {
-                        background-position: center center;
+                        background-position: center center!important;
                     }
                 }
             }
             @media screen and (min-width: $screen-md){
                 &-desktop {
                     &--left {
-                        background-position: center left;
+                        background-position: center left!important;
                         &.hero-full__video {
                             left: 0;
                         }
                     }
                     &--right {
-                        background-position: center right;
+                        background-position: center right!important;
                     }
                     &--center {
-                        background-position: center center;
+                        background-position: center center!important;
                     }
                 }
             }
@@ -322,6 +322,18 @@
             }
         }
     }
+
+	*.family-apercu {
+		font-family: $apercu;
+	}
+
+	*.family-zingRust {
+		font-family: $zingRust;
+	}
+
+	*.family-zingRustScript {
+		font-family: $zingRustScript;
+	}
 }
 
 

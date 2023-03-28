@@ -15,4 +15,8 @@ export default function () {
 			.find('.data-list__dropdown')
 			.toggleClass('data-list__dropdown--active');
 	});
+
+	$(document).on("click", ".flickity-prev-next-button", function () {
+		$('section.product-list-blocks #productCategorySlider>.flickity-viewport').addClass('back_');
+	});
 }

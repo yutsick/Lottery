@@ -1,0 +1,47 @@
+<div class="container-fluid position-relative p-0 block-hero block-hero-2 flex-@@hero_align font-@@font_family"
+  style="background-image: url('assets/img/background/hero_BG_v2.1.png')">
+  <div class="bg-dark d-none d-md-block" style="width:@@hero_width"></div>
+  <div class="bg-mobile-dark d-md-none"></div>
+  <div class="container">
+
+    <header class="block block-hero p-0 text-shadow">
+      <div class="row d-md-flex">
+        <div class="block-hero-width-@@hero_width" style="width:@@hero_width">
+          @@if(context.en_miljon == "white"){
+          <h2 class="block-hero__title h1 text-uppercase text-yellow">
+            Vinn upp till <br class="d-sm-none"><span class="text-white">en miljon </span><br class="d-sm-none"> varje måndag!
+          </h2>
+          }
+          @@if(context.en_miljon == "yellow"){
+          <h2 class="block-hero__title h1 text-uppercase text-white">
+            Vinn upp till <span class="text-yellow">en miljon </span> varje måndag!
+          </h2>
+          }
+
+          <div class="block-hero__list list-color-@@list_color">
+            <ul>
+              <li>Fyra miljondragningar ingår</li>
+              <li>Extra vinstchanser varje vecka</li>
+              <li>Vinn cash och upplevelser</li>
+            </ul>
+
+          </div>
+          <a href="/" class="btn btn-cta d-none d-md-block">Spela nu</a>
+        </div>
+        <div class="block-hero-image-wrapper d-lg-flex">
+
+          <picture class="block-hero-img">
+            <source media="(max-width:426px)" srcset="@@mobile_image">
+            <source media="(max-width:769px)" srcset="@@tablet_image">
+            <img src="@@desktop_image" alt="Hero">
+          </picture>
+
+          <div class="d-md-none text-align-center cta-wrapper">
+            <a href="/" class="btn btn-cta ">Spela nu</a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+  </div>
+</div>

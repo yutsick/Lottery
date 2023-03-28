@@ -1,0 +1,212 @@
+<div class="modal modal-gameLimit center fade @@if(show){in}" id="gameLimit" tabindex="-1" role="dialog" aria-labelledby="modal-login-label" aria-hidden="true"
+	data-opened-by-default="false" @@if(show){style="display:block;padding-left:0px;"} >
+	<div class="vertical-alignment-helper">
+		<div class="modal-dialog vertical-align-center" role="document">
+
+			<div class="modal-content">
+
+				<div class="modal-gameLimit__settings" style="display: block;">
+					<div class="modal-header">
+						<a class="btn btn-line-close js-action-close @@if(first){js-gameLimit-sure}" data-dismiss="modal">
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.0506 7.97047L18.0022 5.92211L12.9561 10.9682L7.93343 5.94547L5.87554 8.00336L10.8982 13.0261L5.88036 18.0439L7.92873 20.0923L12.9466 15.0744L17.9974 20.1252L20.0553 18.0673L15.0045 13.0165L20.0506 7.97047Z" fill="#074658"/>
+							</svg>
+						</a>
+						<h2 class="modal-title">@@if(first){Insättningsgräns} @@if(!first){Spelgräns}</h2>
+					</div>
+					<div class="modal-body">
+						<div class="modal-intro text-align-center">
+							<p>
+								Ange din insättningsgräns per dag, vecka och månad.<br> En sänkning träder i kraft direkt, medan en höjning börjar gälla först från nästa period och tidigast efter 72 timmar.
+							</p>
+							<button type="button" class="modal-intro__more-link js-gameLimit-terms">Läs mer</button>
+						</div>
+
+						<div class="modal-gameLimit__title">Din insättningsgräns per</div>
+
+						<div class="modal-gameLimit__item">
+							<div class="modal-gameLimit__item-title">
+								<svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.3333 1.61111C19.3333 0.721319 20.0547 0 20.9444 0C21.8342 0 22.5556 0.721319 22.5556 1.61111V3H25C27.2091 3 29 4.79086 29 7V26C29 28.2091 27.2091 30 25 30H4C1.79086 30 0 28.2091 0 26V7C0 4.79086 1.79086 3 4 3H6.44444V1.61111C6.44444 0.721319 7.16576 0 8.05556 0C8.94535 0 9.66667 0.721319 9.66667 1.61111V3H19.3333V1.61111ZM9.66667 6H3.22222V9H25.7778V6H9.66667ZM3.22222 12V27H25.7778V12H3.22222ZM6.44444 16C6.44444 15.4477 6.89216 15 7.44444 15H8.66667C9.21895 15 9.66667 15.4477 9.66667 16V17C9.66667 17.5523 9.21895 18 8.66667 18H7.44444C6.89216 18 6.44444 17.5523 6.44444 17V16Z" fill="#47A1B6" fill-opacity="0.7"/>
+								</svg>
+
+								Dag:
+							</div>
+							<div class="modal-gameLimit__item-content">
+								@@if(first) {
+									<input class="form-control modal-gameLimit__item-input" type="text" name="Dag" id="" value="300 kr" data-type='currency'>
+								}
+								@@if(!first) {
+									<div class="modal-gameLimit__item-text" style="display: block;">
+										<p>Nuvarande gräns: <b>500 kr</b> </p>
+										<p>Kvar att sätta in: <b>500 kr</b> </p>
+									</div>
+									<input class="form-control modal-gameLimit__item-input" type="text" name="Dag" data-text="dag" data-name="dag" id="" value="1 000 kr" style="display: none;" data-type='currency'>
+								}
+
+							</div>
+							@@if(!first) {
+								<div class="modal-gameLimit__item-action">
+									<button type="button" class="btn btn-success-line js-gameLimit-change"  style="display: block;">Ändra</button>
+									<button type="button" class="btn btn-success js-gameLimit-change js-gameLimit-save"  style="display: none;">Spara</button>
+								</div>
+							}
+						</div>
+
+						<div class="modal-gameLimit__item">
+							<div class="modal-gameLimit__item-title">
+								<svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.3333 1.61111C19.3333 0.721319 20.0547 0 20.9444 0C21.8342 0 22.5556 0.721319 22.5556 1.61111V3H25C27.2091 3 29 4.79086 29 7V26C29 28.2091 27.2091 30 25 30H4C1.79086 30 0 28.2091 0 26V7C0 4.79086 1.79086 3 4 3H6.44444V1.61111C6.44444 0.721319 7.16576 0 8.05556 0C8.94535 0 9.66667 0.721319 9.66667 1.61111V3H19.3333V1.61111ZM9.66667 6H3.22222V9H25.7778V6H9.66667ZM3.22222 12V27H25.7778V12H3.22222ZM6.44444 16C6.44444 15.4477 6.89216 15 7.44444 15H19.9444C20.4967 15 20.9444 15.4477 20.9444 16V17C20.9444 17.5523 20.4967 18 19.9444 18H7.44444C6.89216 18 6.44444 17.5523 6.44444 17V16ZM19.3333 16C19.3333 15.4477 19.781 15 20.3333 15H21.5556C22.1078 15 22.5556 15.4477 22.5556 16V17C22.5556 17.5523 22.1078 18 21.5556 18H20.3333C19.781 18 19.3333 17.5523 19.3333 17V16Z" fill="#47A1B6" fill-opacity="0.7"/>
+								</svg>
+
+								Vecka:
+							</div>
+							<div class="modal-gameLimit__item-content">
+								@@if(first) {
+									<input class="form-control modal-gameLimit__item-input" type="text" name="Vecka" id="" value="2 100 kr" data-type='currency'>
+								}
+								@@if(!first) {
+									<div class="modal-gameLimit__item-text" style="display: block;">
+										<p>Nuvarande gräns: <b>1 000 kr</b> </p>
+										<p>Kvar att sätta in: <b>1 000 kr</b> </p>
+									</div>
+									<input class="form-control modal-gameLimit__item-input" type="text" name="Vecka" data-text="vecka" data-name="vecka" id="" value="2 000 kr" style="display: none;" data-type='currency'>
+								}
+							</div>
+
+							@@if(!first) {
+								<div class="modal-gameLimit__item-action">
+									<button type="button" class="btn btn-success-line js-gameLimit-change"  style="display: block;">Ändra</button>
+									<button type="button" class="btn btn-success js-gameLimit-change js-gameLimit-save"  style="display: none;">Spara</button>
+								</div>
+							}
+						</div>
+
+						<div class="modal-gameLimit__item">
+							<div class="modal-gameLimit__item-title">
+								<svg width="29" height="30" viewBox="0 0 29 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M19.3333 1.61111C19.3333 0.721319 20.0547 0 20.9444 0C21.8342 0 22.5556 0.721319 22.5556 1.61111V3H25C27.2091 3 29 4.79086 29 7V26C29 28.2091 27.2091 30 25 30H4C1.79086 30 0 28.2091 0 26V7C0 4.79086 1.79086 3 4 3H6.44444V1.61111C6.44444 0.721319 7.16576 0 8.05556 0C8.94535 0 9.66667 0.721319 9.66667 1.61111V3H19.3333V1.61111ZM9.66667 6H3.22222V9H25.7778V6H9.66667ZM3.22222 12V27H25.7778V12H3.22222ZM6.44444 16C6.44444 15.4477 6.89216 15 7.44444 15H8.66667C9.21895 15 9.66667 15.4477 9.66667 16V17C9.66667 17.5523 9.21895 18 8.66667 18H7.44444C6.89216 18 6.44444 17.5523 6.44444 17V16ZM16.1111 16C16.1111 15.4477 15.6634 15 15.1111 15H13.8889C13.3366 15 12.8889 15.4477 12.8889 16V17C12.8889 17.5523 13.3366 18 13.8889 18H15.1111C15.6634 18 16.1111 17.5523 16.1111 17V16ZM19.3333 16C19.3333 15.4477 19.781 15 20.3333 15H21.5556C22.1078 15 22.5556 15.4477 22.5556 16V17C22.5556 17.5523 22.1078 18 21.5556 18H20.3333C19.781 18 19.3333 17.5523 19.3333 17V16ZM9.66667 22C9.66667 21.4477 9.21895 21 8.66667 21H7.44444C6.89216 21 6.44444 21.4477 6.44444 22V23C6.44444 23.5523 6.89216 24 7.44444 24H8.66667C9.21895 24 9.66667 23.5523 9.66667 23V22ZM12.8889 22C12.8889 21.4477 13.3366 21 13.8889 21H15.1111C15.6634 21 16.1111 21.4477 16.1111 22V23C16.1111 23.5523 15.6634 24 15.1111 24H13.8889C13.3366 24 12.8889 23.5523 12.8889 23V22ZM22.5556 22C22.5556 21.4477 22.1078 21 21.5556 21H20.3333C19.781 21 19.3333 21.4477 19.3333 22V23C19.3333 23.5523 19.781 24 20.3333 24H21.5556C22.1078 24 22.5556 23.5523 22.5556 23V22Z" fill="#47A1B6" fill-opacity="0.7"/>
+								</svg>
+
+								Månad:
+							</div>
+							<div class="modal-gameLimit__item-content">
+								@@if(first) {
+									<input class="form-control modal-gameLimit__item-input" type="text" name="Manad" id="" value="8 400 kr" data-type='currency'>
+								}
+								@@if(!first) {
+									<div class="modal-gameLimit__item-text" style="display: block;">
+										<p>Nuvarande gräns: <b>5 000 kr</b> </p>
+										<p>Kvar att sätta in: <b>5 000 kr</b> </p>
+									</div>
+									<input class="form-control modal-gameLimit__item-input" type="text" name="Månad" data-text="månad" data-name="manad" id="" value="6 000 kr" style="display: none;" data-type='currency'>
+								}
+							</div>
+							@@if(!first) {
+								<div class="modal-gameLimit__item-action">
+									<button type="button" class="btn btn-success-line js-gameLimit-change"  style="display: block;">Ändra</button>
+									<button type="button" class="btn btn-success js-gameLimit-change js-gameLimit-save"  style="display: none;">Spara</button>
+								</div>
+							}
+						</div>
+
+						<div class="modal-gameLimit__newLimits" style="display: none;">
+							<div class="modal-gameLimit__newLimits-title">Dina nya insättningsgränser:</div>
+							<div class="modal-gameLimit__newLimits-dag">
+								<!-- <b>1 000 kr</b> per dag gäller från <b>10/11</b>  -->
+							</div>
+							<div class="modal-gameLimit__newLimits-vecka">
+								<!-- <b>2 000 kr</b> per vecka gäller från <b>10/11</b>  -->
+							</div>
+							<div class="modal-gameLimit__newLimits-manad">
+								<!-- <b>6 000 kr</b> per månad gäller från <b>10/11</b>  -->
+							</div>
+						</div>
+
+						<div class="modal-gameLimit__error" style="display: none;">
+							<div class="modal-gameLimit__error-title">Insättningsgräns för låg</div>
+							<div class="modal-gameLimit__error-low">
+								Välj en ny gräns. OBS! Minimigräns per dag, vecka och månad är 300 kr/dag.
+							</div>
+						</div>
+
+					</div>
+					<div class="modal-footer text-align-center">
+						@@if(first) {<button type="button" class="btn btn-success js-gameLimitToSuccess" data-dismiss="modal">Spara</button>}
+						@@if(!first) {<button type="button" class="btn btn-line" data-dismiss="modal">Stäng</button>}
+
+						<button type="button" class="btn btn-success" style="display:none;" data-dismiss="modal">Stäng</button>
+					</div>
+				</div>
+				@@if(first) {
+					<div class="modal-gameLimit__success" style="display: none;">
+						<div class="modal-header">
+
+							<svg class="modal-gameLimit__success-icon" width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="1" y="1" width="68" height="68" rx="34" stroke="#50B78D" stroke-width="2"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M50.8711 23.3022C51.6071 24.0382 51.6071 25.2315 50.8711 25.9675L30.1403 46.6983C29.4043 47.4342 28.2111 47.4342 27.4751 46.6983L18.052 37.2752C17.316 36.5392 17.316 35.3459 18.052 34.6099C18.788 33.8739 19.9813 33.8739 20.7172 34.6099L28.8077 42.7004L48.2058 23.3022C48.9418 22.5662 50.1351 22.5662 50.8711 23.3022Z" fill="#50B78D"/>
+							</svg>
+
+							<h2 class="modal-title">Klart</h2>
+
+							<div class="modal-intro text-align-center">
+								<p>
+									Du har nu sparat dina spelgränser.<br>
+									Du kan när som helst ändra dina gränser.
+								</p>
+							</div>
+						</div>
+						<div class="modal-footer text-align-center">
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Stäng</button>
+						</div>
+					</div>
+					<div class="modal-gameLimit__sure" style="display: none;">
+						<div class="modal-header">
+
+							<h2 class="modal-title">Är du säker?</h2>
+
+							<div class="modal-intro text-align-center">
+								<p>
+									Du måste sätta en insättningsgräns för att kunna spela och köpa lotter på Miljonlotteriet.
+								</p>
+							</div>
+						</div>
+						<div class="modal-footer text-align-center">
+							<button type="button" class="btn btn-line js-gameLimit-settings" data-dismiss="modal">Tillbaka</button>
+							<button type="button" class="btn btn-primary" data-dismiss="modal">Stäng</button>
+						</div>
+					</div>
+				}
+				<div class="modal-gameLimit__terms" style="display: none;">
+					<div class="modal-header">
+						<a class="btn btn-line-close js-action-close js-gameLimit-settings" data-dismiss="modal">
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M20.0506 7.97047L18.0022 5.92211L12.9561 10.9682L7.93343 5.94547L5.87554 8.00336L10.8982 13.0261L5.88036 18.0439L7.92873 20.0923L12.9466 15.0744L17.9974 20.1252L20.0553 18.0673L15.0045 13.0165L20.0506 7.97047Z" fill="#074658"/>
+							</svg>
+						</a>
+
+						<h2 class="modal-title">Lorem Ipsum</h2>
+
+						<div class="modal-intro text-align-center">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<h5>Lorem Ipsum</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+							<h5>Lorem Ipsum</h5>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							</p>
+						</div>
+					</div>
+					<div class="modal-footer text-align-center">
+						<button type="button" class="btn btn-line js-gameLimit-settings" data-dismiss="modal">Tillbaka</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
