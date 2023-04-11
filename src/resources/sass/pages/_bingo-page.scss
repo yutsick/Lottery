@@ -245,13 +245,7 @@
       }
     }
 
-    .table-block{
-      &:first-child .list{
-        @media screen and (max-width:426px){
-          margin-top: 32px;
-        }
-      }
-    }
+
     .list{
       padding: 18px 12px 15px;
       @media screen and (max-width:840px){
@@ -872,6 +866,9 @@ section.expanded-menu{
     hr.hr-light{
       border-top:solid 1px rgba(255, 255, 255, 0.5);
       margin-top: 0;
+      @media (min-width:1194px) {
+        display: none;
+      }
     }
     .bingomeny{
       font: 700 17px/16px $base-font-family;
@@ -881,6 +878,9 @@ section.expanded-menu{
       color: #fff;
       opacity: 0.75;
       letter-spacing: 0.08em;
+      @media (min-width:1194px) {
+        display: none;
+      }
       @media (max-width:550px){
         opacity: 1;
       }
