@@ -1,4 +1,7 @@
 <!-- 
+
+  Use text_block or/and table_blocks true/false for show/hide it in the top section
+
   text-color,col_bg(columns background),section_bg(section background): white, primary-blue, primary-blue-75, primary-blue-50, primary-blue-20
   font: Apercu, Proxima, Zing
  -->
@@ -13,6 +16,8 @@
 <div class="content-wrapper ml-2017">
   @@include('blocks/page-bingo/_top-section.html',{
    "image": "assets/img/background/bg-bingo-page-top.jpg",
+   "text_block": true,
+   "table_blocks": true,
    //"section_bg": "primary-blue-20",
    "col_shadow": false,
    "font": "Apercu",
@@ -23,7 +28,7 @@
   
   
   @@include('blocks/page-bingo/_rooms-section.html',{
-    "section_bg": "white",
+    "section_bg": "primary-blue-75",
     "col_shadow":true,
     "blixt_img": "assets/img/background/blixtbingo-bg.png",
     "miljon_img": "assets/img/background/miljonbingo-bg.png"
