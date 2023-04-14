@@ -1,20 +1,48 @@
-<section class="expanded-menu section-bg-@@section_bg closed">
+<section class="expanded-menu  closed
+@@if(context.section_bg.mob){section-bg-mob-@@section_bg.mob}
+@@if(context.section_bg.tab){section-bg-tab-@@section_bg.tab}
+@@if(context.section_bg.desk){section-bg-desk-@@section_bg.desk}
+">
   <div class="container">
     <div class="mobile__menu">
       <div class="mobile__toggler"></div>
       <div class="mobile__menu-title"></div>
       <div class="mobile__close"></div>
     </div>
-    <div class="mobile-bg-@@section_bg mobile-bg">
+    <div class="mobile-bg">
       <hr class="hr-light">
-      <div class="bingomeny">Bingomeny</div>
-      <ul class="tabs font-color-@@font_color "> 
+      <div class="bingomeny" data-set-font = "true" data-font-mob = "family-@@font.mob" data-font-tab = "family-@@font.tab" data-font-desk="family-@@font.desk">Bingomeny</div>
+      <ul class="tabs  
+      @@if(context.font_color.mob){font-color-mob-@@font_color.mob}
+      @@if(context.font_color.tab){font-color-tab-@@font_color.tab}
+      @@if(context.font_color.desk){font-color-desk-@@font_color.desk}
+      "> 
      
-        <li class=" js-schema-tabs__btn @@if(context.menu_shadow){bg-shadow} family-@@font"> <a  href="#panel__bingoschema" class=""><span>Bingoschema</span> </a></li>
-        <li class=" js-schema-tabs__btn family-@@font @@if(context.menu_shadow){bg-shadow}"><a href="#chattschema" class=" "><span>Chatschema</span> </a>
+        <li class=" js-schema-tabs__btn 
+        @@if(context.menu_shadow.mob){bg-shadow-mob}
+        @@if(context.menu_shadow.tab){bg-shadow-tab}
+        @@if(context.menu_shadow.desk){bg-shadow-desk}
+        " data-set-font = "true" data-font-mob = "family-@@font.mob" data-font-tab = "family-@@font.tab" data-font-desk="family-@@font.desk"> 
+        <a  href="#panel__bingoschema" class=""><span>Bingoschema</span> </a></li>
+        <li class=" js-schema-tabs__btn  
+        @@if(context.menu_shadow.mob){bg-shadow-mob}
+        @@if(context.menu_shadow.tab){bg-shadow-tab}
+        @@if(context.menu_shadow.desk){bg-shadow-desk}
+        " data-set-font = "true" data-font-mob = "family-@@font.mob" data-font-tab = "family-@@font.tab" data-font-desk="family-@@font.desk">
+        <a href="#chattschema" class=" "><span>Chatschema</span> </a>
         </li>
-        <li class=" js-schema-tabs__btn family-@@font @@if(context.menu_shadow){bg-shadow}"><a href="#chattspel" class=""><span>Chattspel</span> </a></li>
-        <li class=" js-schema-tabs__btn family-@@font @@if(context.menu_shadow){bg-shadow}"><a href="#jackpottar" class=" "><span>Jackpottar</span> </a></li>
+        <li class=" js-schema-tabs__btn 
+        @@if(context.menu_shadow.mob){bg-shadow-mob}
+        @@if(context.menu_shadow.tab){bg-shadow-tab}
+        @@if(context.menu_shadow.desk){bg-shadow-desk}
+        " data-set-font = "true" data-font-mob = "family-@@font.mob" data-font-tab = "family-@@font.tab" data-font-desk="family-@@font.desk">
+        <a href="#chattspel" class=""><span>Chattspel</span> </a></li>
+        <li class=" js-schema-tabs__btn 
+        @@if(context.menu_shadow.mob){bg-shadow-mob}
+        @@if(context.menu_shadow.tab){bg-shadow-tab}
+        @@if(context.menu_shadow.desk){bg-shadow-desk}
+        " data-set-font = "true" data-font-mob = "family-@@font.mob" data-font-tab = "family-@@font.tab" data-font-desk="family-@@font.desk">
+        <a href="#jackpottar" class=" "><span>Jackpottar</span> </a></li>
       
     </ul>
   </div>
@@ -47,196 +75,196 @@
             <div class="schema-tabs__panel-content tab_1 js-bingoschema-tabs-slots__panel bingoroom-tabs__ desctop__active active">
                 
               <div class="row bingoroom-tabs__t-head">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5">NAMN</div>
-                    <div class="col-xs-7">BINGOTYP</div>
+                    <div class="col-md-5 col-xs-12 ">NAMN</div>
+                    <div class="col-xs-7 mobile-hide">BINGOTYP</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8">JACKPOT</div>
-                    <div class="col-xs-4">PRIS</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn1</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8">JACKPOT</div>
+                    <div class="col-md-4 col-xs-4 text-right">PRIS</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
@@ -251,196 +279,196 @@
             <div class="schema-tabs__panel-content tab_2 js-bingoschema-tabs-slots__panel bingoroom-tabs__">
                 
               <div class="row bingoroom-tabs__t-head">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5">NAMN</div>
-                    <div class="col-xs-7">BINGOTYP</div>
+                    <div class="col-md-5 col-xs-12 ">NAMN</div>
+                    <div class="col-xs-7 mobile-hide">BINGOTYP</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8">JACKPOT</div>
-                    <div class="col-xs-4">PRIS</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8">JACKPOT</div>
+                    <div class="col-md-4 col-xs-4 text-right">PRIS</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
@@ -455,196 +483,196 @@
             <div class="schema-tabs__panel-content tab_3 js-bingoschema-tabs-slots__panel bingoroom-tabs__">
                 
               <div class="row bingoroom-tabs__t-head">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5">NAMN</div>
-                    <div class="col-xs-7">BINGOTYP</div>
+                    <div class="col-md-5 col-xs-12 ">NAMN</div>
+                    <div class="col-xs-7 mobile-hide">BINGOTYP</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8">JACKPOT</div>
-                    <div class="col-xs-4">PRIS</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8">JACKPOT</div>
+                    <div class="col-md-4 col-xs-4 text-right">PRIS</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
@@ -673,196 +701,196 @@
             <div class="schema-tabs__panel-content tab_1 js-bingoschema-tabs-slots__panel bingoroom-tabs__ desctop__active active">
                 
               <div class="row bingoroom-tabs__t-head">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5">NAMN</div>
-                    <div class="col-xs-7">BINGOTYP</div>
+                    <div class="col-md-5 col-xs-12 ">NAMN</div>
+                    <div class="col-xs-7 mobile-hide">BINGOTYP</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8">JACKPOT</div>
-                    <div class="col-xs-4">PRIS</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8">JACKPOT</div>
+                    <div class="col-md-4 col-xs-4 text-right">PRIS</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
@@ -877,196 +905,196 @@
             <div class="schema-tabs__panel-content tab_2 js-bingoschema-tabs-slots__panel bingoroom-tabs__">
                 
               <div class="row bingoroom-tabs__t-head">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5">NAMN</div>
-                    <div class="col-xs-7">BINGOTYP</div>
+                    <div class="col-md-5 col-xs-12 ">NAMN</div>
+                    <div class="col-xs-7 mobile-hide">BINGOTYP</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8">JACKPOT</div>
-                    <div class="col-xs-4">PRIS</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8">JACKPOT</div>
+                    <div class="col-md-4 col-xs-4 text-right">PRIS</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
@@ -1081,196 +1109,196 @@
             <div class="schema-tabs__panel-content tab_3 js-bingoschema-tabs-slots__panel bingoroom-tabs__">
                 
               <div class="row bingoroom-tabs__t-head">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5">NAMN</div>
-                    <div class="col-xs-7">BINGOTYP</div>
+                    <div class="col-md-5 col-xs-12 ">NAMN</div>
+                    <div class="col-xs-7 mobile-hide">BINGOTYP</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8">JACKPOT</div>
-                    <div class="col-xs-4">PRIS</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8">JACKPOT</div>
+                    <div class="col-md-4 col-xs-4 text-right">PRIS</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
-                  </div>
-                </div>
-                
-              </div>
-              <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
-                  <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
-                  </div>
-                </div>
-                <div class="col-xs-4">
-                  <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
               </div>
               <div class="row bingoroom-tabs__t-data">
-                <div class="col-xs-8">
+                <div class="col-md-8 col-xs-5">
                   <div class="row">
-                    <div class="col-xs-5 font-bold">Spelnamn</div>
-                    <div class="col-xs-7">Mönsterbingo</div>
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
                   </div>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-md-4 col-xs-7">
                   <div class="row">
-                    <div class="col-xs-8 font-bold">12 234 kr</div>
-                    <div class="col-xs-4 font-bold">10 kr</div>
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row bingoroom-tabs__t-data">
+                <div class="col-md-8 col-xs-5">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 font-bold">Spelnamn</div>
+                    <div class="col-md-7 mobile-hide">Mönsterbingo</div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xs-7">
+                  <div class="row">
+                    <div class="col-md-8 col-xs-8 font-bold">12 234 kr</div>
+                    <div class="col-md-4 col-xs-4 font-bold text-right">10 kr</div>
                   </div>
                 </div>
                 
@@ -1451,292 +1479,14 @@
         </div>
         
         <div class="schema-tabs__panel js-schema-tabs__panel jackpottar" id="jackpottar">
-          <div class="jackpottar__wrapper">
-            <div class="jackpottar__item-wrapper col-sm-12 col-md-6 p-0">
-              <h3 class="jackpottar__item-title text-center">Aktuella jackpottar</h3>
-                <div class="jackpottar__item-table">
-                  <div class="col-xs-12 col-md-6 jackpottar__item">
-                    <div class="row bingoroom-tabs__t-head">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 p-0 text-right">
-                        Jackpott
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-12 col-md-6 jackpottar__item">
-                    <div class="row bingoroom-tabs__t-head">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 p-0 text-right">
-                        Jackpott
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="jackpottar__item-wrapper col-sm-12 col-md-6 p-0">
-              <h3 class="jackpottar__item-title text-center">Senaste jackpottarna</h3>
-                <div class="jackpottar__item-table">
-                  <div class="col-xs-12 col-md-6 jackpottar__item">
-                    <div class="row bingoroom-tabs__t-head">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 p-0 text-right">
-                        Jackpott
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-12 col-md-6 jackpottar__item">
-                    <div class="row bingoroom-tabs__t-head">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6">Spelnamn</div>
-                          <div class="col-xs-6">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 p-0 text-right">
-                        Jackpott
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                    <div class="row bingoroom-tabs__t-data">
-                      <div class="col-xs-9 p-0">
-                        <div class="row">
-                          <div class="col-xs-6 font-bold">Spelnamn</div>
-                          <div class="col-xs-6 text-dotted">Spelare</div>
-                        </div>
-                      </div>
-                      <div class="col-xs-3 font-bold p-0 text-right">
-                        12 234 kr
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            
+          <div class="jackpottar__wrapper jackpottar__mobile-hide">
+            @@include('blocks/page-bingo/_jackpotar_layout.html')
+          </div>
+          <div class="jackpottar__wrapper jackpottar__desktop-hide">
+            @@include('blocks/page-bingo/_jackpotar_layout_mob.html')
           </div>
         </div>
+        
 
         
       </div>
