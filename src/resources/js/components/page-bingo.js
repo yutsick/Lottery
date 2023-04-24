@@ -5,7 +5,7 @@ const breakPoins = {
   "mobile": 600
 }
   
-const cutEl = $('.page-bingo .top-section .text-cut');
+const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
      const cutText = $(cutEl).text();
 
   function pageBingo(){

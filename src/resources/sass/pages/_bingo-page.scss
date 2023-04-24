@@ -173,16 +173,6 @@ $mobile: 600px;
     padding: 40px 0;
     backdrop-filter: blur(34px);
 
-
-   
-    @media screen and(max-width:$tablet) {
-      padding: 30px;
-    }
-
-    @media screen and(max-width:$mobile) {
-      padding: 36px 30px 40px;
-    }
-
     &.color{
       &-white{
         h3,p{
@@ -211,6 +201,7 @@ $mobile: 600px;
       }
     }
     @media (max-width:$tablet) {
+      padding: 30px;
       &.color-tab{
         &-white{
           h3,p{
@@ -240,6 +231,7 @@ $mobile: 600px;
       }
     }
     @media (max-width:$mobile) {
+      padding: 36px 30px 40px;
       &.color-mob{
         &-white{
           h3,p{
@@ -307,7 +299,6 @@ $mobile: 600px;
         }
       }
     }
-
 
     .bg{
       &-none{
@@ -383,18 +374,18 @@ $mobile: 600px;
       }
       h4{
         line-height: 20px;
+        letter-spacing: 0.2px;
       }
       &-wrapper{
         margin-top: 18px;
       }
       &-title{
-        height: 20px;
+        height: 16px;
         display: flex;
         justify-content: space-between;
         padding: 0 10px;
-        
         span{
-          font: 700 10px/12px $base-font-family;
+          font: 700 12px/12px $base-font-family;
           color: #6B8B96;
           text-transform: uppercase;
           &:first-child{
@@ -427,7 +418,7 @@ $mobile: 600px;
         padding: 6px 10px;
         background-color: #E2EFF7;
         border-radius: 4px;
-        font:700 14px/20px $apercu;
+        font:700 16px/20px $apercu;
         margin-bottom: 4px;
         &:last-child{
           margin-bottom: 0;
@@ -1190,7 +1181,7 @@ section.expanded-menu{
     li{
       background-color: #fff;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 20px;
       line-height: 38px;
       text-transform: uppercase;
       padding: 0 24px;
@@ -1386,7 +1377,7 @@ section.expanded-menu{
 
       .js-bingoschema-tabs__btn{
         display: inline-block;
-        font: 400 24px/32px $apercu;
+        font: 400 20px/32px $apercu;
         letter-spacing: 0.02em;
         color: #366474;
         min-width: 212px;
@@ -1449,7 +1440,7 @@ section.expanded-menu{
           padding: 0;
           box-shadow: unset;
           background-color: #fff;
-          font: 400 20px/20px $apercu;
+          font: 400 16px/20px $apercu;
           color: #163D50;
           display: flex;
           align-items: center;
@@ -1597,7 +1588,7 @@ section.expanded-menu{
       
 
       &t-head{
-        font: 700 16px/38px $base-font-family;
+        font: 700 12px/38px $base-font-family;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #163D50;
@@ -1620,8 +1611,8 @@ section.expanded-menu{
         }
       }
       &t-data{
-        font: 400 20px/20px $apercu;
-        padding: 22px 26px;
+        font: 400 16px/20px $apercu;
+        padding: 16px 24px;
         background-color: #E2EFF7;
         border-radius: 8px;
         margin-bottom: 8px;
