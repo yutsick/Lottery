@@ -1034,9 +1034,9 @@
             position: relative; 
             border-radius: 10px;
             align-items:stretch;
-
+            background-color: #fff;
             @media screen and (max-width:576px){
-              width: 100%;;
+              width: 100%;
             }
           
             .block{
@@ -1052,6 +1052,7 @@
                 }
                 @media screen and (max-width:576px){
                   width: 100%;
+                  border-radius: 10px 10px 0 0;
                 }
               }
               img{
@@ -1229,11 +1230,7 @@
           display: flex;
           justify-content: flex-start;
           align-items: center;
-          
           text-decoration: none;
-          
-          
-          
           max-width: 372px;
           width: 100%;
           height: 64px;
@@ -1250,7 +1247,12 @@
           
           margin: auto auto 0;
           
-          
+          &_cont{
+            margin-top: 24px;
+            @media (max-width:600px) {
+              margin-top: 0;
+            }
+          }
         }
         
         .adress__{
