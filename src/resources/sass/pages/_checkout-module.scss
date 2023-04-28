@@ -1052,6 +1052,7 @@
                 }
                 @media screen and (max-width:576px){
                   width: 100%;
+                  border-radius: 10px 10px 0 0;
                 }
               }
               img{
@@ -2477,7 +2478,7 @@
           align-items: center;
           height: 166px;
 //          border: 1px solid #D9D9D9;
-          background: #fff;
+          background: transparent;
          border-radius: 10px;
           
           .block{
