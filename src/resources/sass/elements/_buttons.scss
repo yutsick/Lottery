@@ -158,7 +158,18 @@
 .btn-secondary {
 	background-color: $color-secondary;
 	color: $color-primary;
+	&-outline{
+		background-color:transparent;
+		border: solid 2px rgba(0, 62, 82, 0.25);
+		border-radius: 40px;
+		&:hover,
+		&:active,
+		&:active:hover,
+		&:active:focus{
+			border: solid 2px rgba(0, 62, 82, 0.25);
+		}
 
+	}
 	&--full {
 		width: 100%;
 	}

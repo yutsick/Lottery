@@ -2246,3 +2246,140 @@
 		max-height: calc(90vh - 60px);
 	}
 }
+
+#popup-pinningvatt {
+	.pex_v2_text-center{
+		text-align: center;
+	}
+
+	.popup-pep{
+		padding: 24px;
+		width: 420px;
+		max-width: 420px;
+		min-height: 567px;
+		border: 1px solid #D9D9D9;
+		border-radius: 20px;
+		color: rgba(0, 62, 82, 0.75);
+		@media (max-width: 600px) {
+			padding: 24px 20px 24px 22px;
+			max-width: 100%;
+			margin: 0 16px;
+			min-height: 585px;
+		}
+		&.popup-sec{
+			min-height: unset;
+		}
+
+		.sub-page-popup{
+			@media (max-width:600px) {
+				max-height: unset;
+			}
+		}
+
+		#form-pinningvatt{
+			width: 100%;
+		}
+
+		h2.title {
+			font: 700 18px/1em $apercu;
+			text-align: center;
+			margin-top: 4px;
+		}
+		p.subtitle{
+			font: 400 12px/16px $apercu;
+			text-align: center;
+			padding: 0;
+			margin: 16px 26px 0;
+		}
+		.read_more{
+			font: 400 12px/16px $apercu;
+			color: rgba(0, 62, 82, 0.75);
+			text-align: center;
+			margin-top: 16px;
+			text-decoration: underline;
+		}
+		hr{
+			margin-top: 24px;
+			width: 100%;
+			margin-bottom: 0;
+			border: solid 1px;
+			border-color: #D9D9D9;
+			@media (max-width:600px) {
+				margin: 24px -22px 0;
+				width: calc(100% + 42px);
+			}
+		}
+		.content{
+			&__questions{
+				text-align: left;
+				color: rgba(0, 62, 82, 0.75);
+				height: 270px;
+				overflow-y: auto;
+				overflow-x: hidden;
+				margin-top: 24px;
+				@media (max-width:600px) {
+					height: 306px   ;
+				}
+				p{
+					text-align: left;
+					font: 400 12px/16px $apercu;
+					padding: 0;
+				}
+				span{
+					display: flex;
+					align-items:center;
+					margin-top: 10px;
+					margin-bottom: 24px;
+				}
+				label{
+					font: 700 14px/1em $apercu;
+					margin-bottom: 0;
+					margin-top: 7px;
+				}
+				input[type="radio"]{
+					width: 16px;
+					height: 16px;
+					margin-bottom: 0;
+					margin-right: 5px;
+				}
+				input+label{
+					margin-right: 15px;
+					
+				}
+			}
+		}
+		.btn-block {
+			display: flex;
+			justify-content: space-around;	
+			margin-top: 16px;
+
+			button{
+				height: 48px;
+				max-width: 170px;
+				border-radius: 40px;
+				max-height: 48px;
+				@media (max-width:600px) {
+					max-width: 140px;
+				}
+			}
+			
+		}
+		&.popup-sec{
+				.btn-block {
+					margin-top: 40px;
+				}
+			}
+		::-webkit-scrollbar {
+			width: 4px;
+		}
+		::-webkit-scrollbar-track {
+			background: rgba(0, 62, 82, 0.15);
+			border-radius:4px;
+		}
+		::-webkit-scrollbar-thumb {
+			background: rgba(0, 62, 82, 0.5);
+			border-radius:4px;
+		}
+		
+	}
+}
