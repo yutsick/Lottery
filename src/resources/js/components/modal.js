@@ -147,14 +147,14 @@ export default function () {
 
 	// popup-pinningvatt modal
 	function cutText(){
-		const cutEl = $('.cut_text');
+		const cutEl = $('#popup-pinningvatt .cut_text');
 		const cutText = $(cutEl).text();
 		
 		if (cutText.length > 180){
 			$(cutEl).text(cutText.substring(0,180) + '...');
-			$('.read_more').show();
+			$('#popup-pinningvatt .read_more').show();
 		}
-		$('.read_more').on('click', function(){
+		$('#popup-pinningvatt .read_more').on('click', function(){
 			$(cutEl).text(cutText);
 			$(this).hide();
 		})
@@ -175,20 +175,20 @@ export default function () {
 
 	function popupChange(){
 
-		$('.popup-first #form-pinningvatt  button[type="submit"]').on('click',function(e){
+		$('#popup-pinningvatt #form-pinningvatt  button[type="submit"], #popup-pep button').on('click',function(e){
 			e.preventDefault();
-			$('#popup-pinningvatt').hide();
+			$('.popup-pinn-pep').fadeOut(400);
 		})
 
 
 		$('#popup-pinningvatt .popup-first button[type="cancel"]').on('click', function(e){
 			e.preventDefault();
 			$('.popup-first').hide();
-			$('.popup-sec').show();
+			$('.popup-sec').fadeIn(600);
 		})
 		$('#popup-pinningvatt .popup-sec button').on('click', function(e){
 			e.preventDefault();
-			$('#popup-pinningvatt').hide();
+			$('.popup-pinn-pep').fadeOut(400);
 		})
 	}
 
