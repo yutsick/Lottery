@@ -1313,16 +1313,16 @@
           
           <div class="chattschema__items">
             <div class="chattschema__items-col col-md-4 col-sm-12">
-              <div class="chattschema__header">
+              <div class="chattschema__header" @@if(context.tabmenu_font_size){style = "font-size:@@tabmenu_font_size"}>
                 Onsdag 15/2
               </div>
-              <div class="chattschema__item">
+              <div class="chattschema__item ">
                 <div class="chattschema__item-header">
                   <span>Moa1</span>
                   <span>09.00 - 12.00</span>
                 </div>
                 <div class="chattschema__item-text">
-                  Se upp för en STJÄRNFEMMA! De 5 snabbast som svarar rätt på chattspelet som Chattvärden väljer får dela på 100 kr! Chattvärden annonserar när det är dags! Mailtävlingen Femkampen startar klockan 10.00. 
+                  Mailtävlingen Femkampen startar klockan 10.00. Se upp för en STJÄRNFEMMA! De 5 snabbast som svarar rätt på chattspelet som Chattvärden väljer får dela på 100 kr! Chattvärden annonserar när det är dags! Mailtävlingen Femkampen startar klockan 10.00. 
                 </div>
               </div>
               <div class="chattschema__item">
@@ -1331,7 +1331,7 @@
                   <span>13.00 - 16.00</span>
                 </div>
                 <div class="chattschema__item-text">
-                  Är du bra på Matte? - chattspelet Mattetal är värt 25 kr och klockan 13.00 kör vi mailtävlingen Vi söker en stad.
+                  Vi söker en stad. Är du bra på Matte? - chattspelet Mattetal är värt 25 kr och klockan 13.00 kör vi mailtävlingen 
                 </div>
               </div>
               <div class="chattschema__item">
@@ -1354,7 +1354,7 @@
               </div>
             </div>
             <div class="chattschema__items-col col-md-4 col-sm-12">
-              <div class="chattschema__header">
+              <div class="chattschema__header" @@if(context.tabmenu_font_size){style = "font-size:@@tabmenu_font_size"}>
                 Torsdag 16/2
               </div>
               <div class="chattschema__item">
@@ -1395,7 +1395,7 @@
               </div>
             </div>
             <div class="chattschema__items-col col-md-4 col-sm-12">
-              <div class="chattschema__header">
+              <div class="chattschema__header" @@if(context.tabmenu_font_size){style = "font-size:@@tabmenu_font_size"}>
                 Fredag 17/2
               </div>
               <div class="chattschema__item">
@@ -1446,9 +1446,9 @@
         <div class="schema-tabs__panel js-schema-tabs__panel  chattspel " id="chattspel">
           
           <div class="rooms">
-            <a href="#allachattspel" class="js-bingoschema-chattspel-tabs__btn desctop__active active">Allachatt spel</a>
-            <a href="#boostspel" class="js-bingoschema-chattspel-tabs__btn">Boostspel</a>
-            <a href="#chattspelsregler" class="js-bingoschema-chattspel-tabs__btn">Chattspelsregler</a>
+            <a href="#allachattspel" class="js-bingoschema-chattspel-tabs__btn desctop__active active" @@if(context.tabmenu_font_size){style = "font-size:@@tabmenu_font_size"}>Allachatt spel</a>
+            <a href="#boostspel" class="js-bingoschema-chattspel-tabs__btn" @@if(context.tabmenu_font_size){style = "font-size:@@tabmenu_font_size"}>Boostspel</a>
+            <a href="#chattspelsregler" class="js-bingoschema-chattspel-tabs__btn" @@if(context.tabmenu_font_size){style = "font-size:@@tabmenu_font_size"}>Chattspelsregler</a>
           </div>
           <hr class="hr-light">
           <div class="room__items card-layout schema-tabs__panel js-bingoschema-chattspel-tabs__panel desctop__active active" id="allachattspel">

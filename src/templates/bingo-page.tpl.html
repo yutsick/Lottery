@@ -2,8 +2,22 @@
 
   Use text_block or/and table_blocks true/false for show/hide it in the top section
 
-  text-color,col_bg(columns background),section_bg(section background): white, primary-blue, primary-blue-75, primary-blue-50, primary-blue-20
-  font: Apercu, Proxima, Zing
+  text-color,col_bg(columns background),section_bg(section background): 
+    - white,
+    - primary-blue,
+    - primary-blue-75, 
+    - primary-blue-50, 
+    - primary-blue-20
+  
+    font: 
+      - Apercu, 
+      - Proxima, 
+      - Zing
+
+  read more color: 
+    - primary, 
+    - white
+
  -->
 @@include('layout/_header.html', {
   "class": "page-bingo logged-out",
@@ -24,7 +38,8 @@
    "col_shadow": false,
    "font": "Apercu",
    "text_color": "primary-blue",
-   "col_bg":"white"
+   "col_bg":"white",
+   "readmore_col":"white"
   }
   )
   
@@ -47,7 +62,7 @@
       "mob": "primary-blue",
       "tab": "primary-blue"
     },
-
+    "readmore_col":"primary"
    }
    )
 
@@ -105,7 +120,8 @@
     "mob": "Proxima",
     "tab": "Proxima",
     "desk": "Proxima"
-   }
+   },
+   //"tabmenu_font_size": "12px"
   }
   )
 
