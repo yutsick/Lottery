@@ -13,6 +13,7 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
     if($(window).width() <= breakPoins.tablet){
       if (cutText.length > 140){
         $(cutEl).text(cutText.substring(0,140) + '...');
+        $('.text-show').show();
       }
 
       $('.text-show').on('click', function(){
@@ -22,6 +23,30 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
     } else{
       $(cutEl).text(cutText);
     }
+  }
+
+  function cutSomeText(){
+    shortText('.room__items-item-text', 300);
+    shortText('.chattschema__item-text', 160);
+  }
+
+  function shortText(selector, size = 100){
+    const short = $(selector);
+
+    $(short).each(function(el) {
+      const shortText = $(this).text();
+      if (shortText.length > size){
+          $(this).text(shortText.substring(0,size) + '...')
+      }
+    })
+
+   
+    // for (let i = 0; i < short.length; i++){
+    //  // console.log($(short[i]).text());
+    //    if($(short[i]).text.length > 300){
+    //     $(short[i]).text($(short[i]).text.substring(0,300) + '...');
+    //   }
+    // }
   }
 
   function hidePanel(){
@@ -314,5 +339,6 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
   bingoRoomSection();
   bingoRoomItem();
   bingoMenuSection();
+  cutSomeText();
 
 }

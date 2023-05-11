@@ -172,7 +172,7 @@ $mobile: 600px;
     background-size: cover;
     padding: 40px 0;
     backdrop-filter: blur(34px);
-
+    
     &.color{
       &-white{
         h3,p{
@@ -358,8 +358,16 @@ $mobile: 600px;
       .text-show{
         text-decoration: underline;
         cursor: pointer;
-        @media (min-width:$tablet){
-            display: none;
+        display: none;
+
+        &.color{
+          &-primary{
+            color:$color-primary;
+          }
+          
+          &-white{
+            color:#fff;
+          }
         }
       }
     }
@@ -1647,7 +1655,7 @@ section.expanded-menu{
 
       &__header{
         text-align: center;
-        font: 700 24px/20px $apercu;
+        font: 700 20px/20px $apercu;
         margin-bottom: 16px;
         @media (max-width:992px){
           margin: 16px;
@@ -1665,7 +1673,7 @@ section.expanded-menu{
       }
       &__items-col{
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         gap: 16px 32px;
         padding: 0;       
         flex-direction: column;
@@ -1700,11 +1708,11 @@ section.expanded-menu{
         color: #163D50;
         display: flex;
         justify-content: space-between;
-        padding: 22px 20px; 
+        padding: 16px 24px; 
         }
         &-text{
           font: 400 16px/24px $apercu;
-          padding: 20px;
+          padding: 16px 24px; 
         }
       }
     }
@@ -1817,7 +1825,7 @@ section.expanded-menu{
         } 
         &-item{
           padding: 22px 16px;
-          border: 1px solid rgba(22, 61, 80, 0.2);
+          // border: 1px solid rgba(22, 61, 80, 0.2);
           border-radius: 16px;
           height: 272px;
           color: #163D50;
