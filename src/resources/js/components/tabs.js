@@ -1,10 +1,10 @@
 export default function() {
 
     //simple tabs
-    function tabs (btn, panel) {
+    function tabs (btn, panel, clickself) {
         $(btn).on('click', function (event) {
           event.preventDefault();
-          if($(this).hasClass('desctop__active active')){
+          if($(this).hasClass('desctop__active active') && clickself){
             $(this).removeClass('desctop__active active');
 
             if($(this).prop("tagName") != 'A'){
@@ -37,10 +37,10 @@ export default function() {
 
   
     //tabs in schema-tabs module
-    tabs('.js-schema-tabs__btn', '.js-schema-tabs__panel');
-    tabs('.js-bingoschema-tabs__btn', '.js-bingoschema-tabs__panel');
-    tabs('.js-bingoschema-chattspel-tabs__btn', '.js-bingoschema-chattspel-tabs__panel');
-    tabs('.js-bingoschema-tabs-slots__btn', '.js-bingoschema-tabs-slots__panel');
-    tabs('.js-schemas-modal-tabs__tab', '.schema-tabs__panel-content');
+    tabs('.js-schema-tabs__btn', '.js-schema-tabs__panel',true);
+    tabs('.js-bingoschema-tabs__btn', '.js-bingoschema-tabs__panel', false);
+    tabs('.js-bingoschema-chattspel-tabs__btn', '.js-bingoschema-chattspel-tabs__panel', false);
+    tabs('.js-bingoschema-tabs-slots__btn', '.js-bingoschema-tabs-slots__panel', true);
+    tabs('.js-schemas-modal-tabs__tab', '.schema-tabs__panel-content', true);
 
 }
