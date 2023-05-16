@@ -464,7 +464,7 @@ $mobile: 600px;
   }
 
   section.bingo-room{
-    padding: 40px 0;
+    padding: 32px 0;
     background-size: cover !important;
     @media (max-width:$tablet){
       //padding: 40px;
@@ -512,51 +512,85 @@ $mobile: 600px;
         }
       }
     }
-   
-
-    // @media (max-width:992px){
-    //   padding: 40px;
-      
-    //   .row.equal-height>*:first-child{
-    //     padding-right: 0;
-    //   }
-    //   .row.equal-height>*:first-child{
-    //     padding-right: 0;
-    //   }
-    //   .row.equal-height>*:last-child{
-    //     padding-left: 0;
-    //     margin-bottom: 0;
-    //   }
-      
-    // }
-    // @media (min-width:633px){
-    //       .row.equal-height>*{
-    //         margin-bottom: 0px;
-            
-    //       }
-    //       .row.equal-height>*:first-child{
-    //         padding-right: 20px;
-
-    //       }
-    //       .row.equal-height>*:last-child{
-    //         padding-left: 20px;
-
-    //       }
-          
-          
-    //     }
-    // @media (max-width:816px) {
-    //   .row.equal-height>*{
-    //     width: 50%;
-    //   }
-      
-    // }
-   
-   
-
-    
-    
-    
+    .room-titles{
+      text-align: center;
+      h2{
+        font: 700 16px/20px $apercu;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      h3{
+        font: 400 16px/20px $apercu;
+        opacity: 0.75;
+        margin: 0;
+        margin-bottom: 16px;
+      }
+    }
+    .font-color{
+      &-desk{
+        &-white{
+         color:#FFFFFF;
+        }
+  
+        &-primary-blue{
+          color:#003E52;
+          &-75{
+           color:#366474;
+          }
+          &-50{
+           color:#6B8B96;
+          }
+          &-20{
+           color: #ABBABE;
+          }
+        }
+      }
+      &-tab{
+        @media (min-width:$mobile) and (max-width:$tablet) {
+          &-white{
+            color:#FFFFFF;
+          }
+          &-figma{
+            color: rgba(22, 61 ,80, 0.75);
+          }
+          &-primary-blue{
+           color:#003E52;
+            &-75{
+              color:#366474;
+            }
+            &-50{
+              color:#6B8B96;
+            }
+            &-20{
+              color:#ABBABE;
+            }
+          }
+        }
+      }
+      &-mob{
+        @media  (max-width:$mobile) {
+          &-white{
+            color:#FFFFFF;
+          }
+          &-figma{
+            color:rgba(22, 61, 80, 0.75);
+          }
+          &-primary-blue{
+            color:#003E52;
+            &-75{
+              color:#366474;
+            }
+            &-50{
+              color:#6B8B96;
+            }
+            &-20{
+              color:#ABBABE;
+            }
+          }
+        }
+      }
+  
+    }
 
     .room-header{
       text-align: center;
@@ -610,6 +644,7 @@ $mobile: 600px;
       &__item{
         background-repeat: no-repeat;
         background-size: cover !important;
+        height: 100%;
 
         .host{
           display: flex;
