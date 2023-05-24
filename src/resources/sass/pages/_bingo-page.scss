@@ -639,6 +639,9 @@ $mobile: 600px;
     .bingo-room{
       &__block{
         min-height: 352px;
+        @media (max-width:$tablet) {
+          min-height: 430px;
+        }
       }
 
       &__item{
