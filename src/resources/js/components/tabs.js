@@ -40,7 +40,7 @@ export default function() {
     tabs('.js-schema-tabs__btn', '.js-schema-tabs__panel',true);
     tabs('.js-bingoschema-tabs__btn', '.js-bingoschema-tabs__panel', false);
     tabs('.js-bingoschema-chattspel-tabs__btn', '.js-bingoschema-chattspel-tabs__panel', false);
-    tabs('.js-bingoschema-tabs-slots__btn', '.js-bingoschema-tabs-slots__panel', true);
+    tabs('.js-bingoschema-tabs-slots__btn', '.js-bingoschema-tabs-slots__panel', false);
     tabs('.js-schemas-modal-tabs__tab', '.schema-tabs__panel-content', true);
 
 }
