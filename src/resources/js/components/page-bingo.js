@@ -53,6 +53,12 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
     $('.schema-tabs__panels-container').hide();
     $('.expanded-menu').addClass('closed');
     $('.js-schema-tabs__btn').removeClass('active');
+
+      $('.mobile__menu').removeClass('active');
+      $('.mobile-bg').removeClass('active');
+      $('.mobile-bg').removeClass('mobile__tabs');
+      
+    
     //$('.mobile-bg').show();
   }
 
@@ -62,6 +68,8 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
       $('.schema-tabs__panels-container').show();
       $('.expanded-menu').removeClass('closed');
       $('.mobile__menu').addClass('active');
+    
+      
       //$('.mobile-bg').hide();
       if($('.desctop__active.active').find('.rooms').length){
         $('.mobile__menu').css('filter', 'none');
