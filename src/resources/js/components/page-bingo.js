@@ -2,6 +2,7 @@ export default function(){
 
 const breakPoins = {
   "tablet": 1200,
+  "mobile-wide": 992,
   "mobile": 600
 }
   
@@ -53,6 +54,8 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
     $('.schema-tabs__panels-container').hide();
     $('.expanded-menu').addClass('closed');
     $('.js-schema-tabs__btn').removeClass('active');
+  
+    $('body').removeClass('noscroll');
 
       $('.mobile__menu').removeClass('active');
       $('.mobile-bg').removeClass('active');
@@ -65,6 +68,8 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
   function showHidePanel(){
     
     if($('.tabs .desctop__active.active').length != 0){
+    
+      $('body').addClass('noscroll');
       $('.schema-tabs__panels-container').show();
       $('.expanded-menu').removeClass('closed');
       $('.mobile__menu').addClass('active');
