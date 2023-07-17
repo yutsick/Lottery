@@ -604,5 +604,102 @@ a.btn {
 }
 
 
+.btn-miljonbla{
+	background-color: $colorMiljonbla;
+	color: $color-snow;
+	&:hover{
+		background-color: $colorMiljonblaHover;
+		color: $color-snow;
+	}
+	&.btn-outline{
+		background-color:transparent;
+		border: solid 2px $colorMiljonbla;
+		color: $colorMiljonbla;
+		box-sizing: border-box;
+		&:hover{
+			background-color: $colorMiljonbla;
+			color: $color-snow;
+		}
+	}
+}
+.btn-rosa{
+	background-color:$colorRosa;
+	color: $colorMiljonbla;
+	&:hover{
+		background-color:$colorRosaHover;
+		color: $colorMiljonbla;
+	}
+	&.btn-outline{
+		background-color:transparent;
+		border: solid 2px $colorRosa;
+		color: $colorRosa;
+		box-sizing: border-box;
+		&:hover{
+			background-color:$colorRosa;
+			color: $colorMiljonbla;
+		}
+	}
+}
+
+.btn-white{
+	background-color: $colorWhite;
+	color: $colorMiljonbla;
+	&:hover{
+		background-color: $colorWhiteHover;
+		color: $colorMiljonbla;
+	}
+	&.btn-outline{
+		background-color:transparent;
+		border: solid 2px $colorWhite;
+		color: $colorWhite;
+		box-sizing: border-box;
+		&:hover{
+			background-color: $colorWhite;
+			color: $colorMiljonbla;
+		}
+	}
+}
+
+.btn-lightblue{
+	background-color: $colorLightBlue;
+	color: $colorMiljonbla;
+	&:hover{
+		background-color: $colorLightBlueHover;
+		color: $colorMiljonbla;
+	}
+	&.btn-outline{
+		background-color:transparent;
+		border: solid 2px $colorLightBlue;
+		color: $colorLightBlue;
+		box-sizing: border-box;
+		&:hover{
+			background-color: $colorLightBlue;
+			color: $colorMiljonbla;
+		}
+	}
+}
+
+.btn-link {
+	width: auto !important;
+	display: flex !important;
+
+	border-radius: 0;
+	border: none;
+	background-color: transparent;
+	font-size: 20px !important;
+	font-weight: 700 !important;
+	line-height: 16px !important;
+	align-items:center;
+	text-decoration: underline;
+	justify-content: center;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color:transparent;
+	}
+}
+
+
+
 
 

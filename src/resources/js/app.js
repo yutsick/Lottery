@@ -51,6 +51,7 @@ import walletAccountSwitch from "./components/wallet-account-switch";
 import walletTransferAmount from "./components/wallet-transfer-amount";
 import orderActions from "./components/order-actions";
 import pageBingo from "./components/page-bingo";
+import blockHeroWhole from "./components/block-hero";
 import cartQuantity from "./components/cart-quantity";
 import bankIDForm from "./components/bankid-form";
 import timeSpent from "./components/time-spent";
@@ -152,6 +153,7 @@ $(function () {
 	new orderActions();
 	new cartQuantity();
 	pageBingo();
+	blockHeroWhole();
 	bankIDForm();
 	scroller();
 	orderSwitcher();
