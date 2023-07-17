@@ -27,12 +27,12 @@ export default function(){
     const windowSize = $(window).width();
     const btnClass={
       "button-outline": "btn-outline",
-      'link': "btn-link"
+      'link': "btn-type-link"
     }
      /** Set top bg */
      $(secondaryButton).each(function() {
 
-      $(this).removeClass('btn-link')
+      $(this).removeClass('btn-type-link')
       $(this).removeClass('btn-outline')
         if (windowSize <= breakPoints.mobile){
         $(this).addClass(btnClass[$(this).data('type-mob')])

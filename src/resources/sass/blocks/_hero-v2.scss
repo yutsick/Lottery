@@ -27,7 +27,7 @@
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
 
-  .box-shadow.btn-link{
+  .box-shadow.btn-type-link{
     box-shadow:none;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
@@ -282,6 +282,13 @@
       }
     }
   }
+  .btn-link-wrapper:has(.btn-type-link){
+    
+      padding: 8px 30px;
+      align-items:center
+    
+  }
+
 }
 
 .font-Zing {
