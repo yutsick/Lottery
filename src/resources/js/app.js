@@ -47,6 +47,7 @@ import triggerTooltip from "./components/trigger-tooltip";
 import walletAccountSwitch from "./components/wallet-account-switch";
 import walletTransferAmount from "./components/wallet-transfer-amount";
 import orderActions from "./components/order-actions";
+import blockHeroWhole from "./components/block-hero";
 import cartQuantity from "./components/cart-quantity";
 import bankIDForm from "./components/bankid-form";
 import timeSpent from "./components/time-spent";
@@ -140,6 +141,7 @@ $(function () {
 	textToggle();
 	new orderActions();
 	new cartQuantity();
+	blockHeroWhole();
 	bankIDForm();
 	scroller();
 	orderSwitcher();
