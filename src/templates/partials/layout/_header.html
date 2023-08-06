@@ -36,7 +36,9 @@
 
 </head>
 
-<body>
+<body @@if(!context.top_bar){style="margin:0"}>
 <div class="@@if(context.class){@@class}" id="page-wrapper">
-	@@include('blocks/_balance-bar.html', { "logged_in": "@@logged_in" })
+	@@if(context.top_bar){
+		@@include('blocks/_balance-bar.html', { "logged_in": "@@logged_in" })
+	}
 	@@include('components/_cookie-bar.html')
