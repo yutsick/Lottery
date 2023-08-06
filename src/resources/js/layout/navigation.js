@@ -4,6 +4,43 @@ export default function () {
 	click_top_nav_item();
 	click_sub_menu_item();
 	click_sub_menu_item_collapsed();
+	showHideMenu();
+	if($('#user__login-credentials').length != 0){
+		showPassword();
+		loginBankId();
+	}
+
+	if($('#deposit').length != 0){
+		activateDepositButton();
+	} 
+
+	if($('#transfer').length != 0){
+		activateTransferButton();
+	}
+	
+	if($('[data-target-screen]').length != 0){
+		setTargetScreen();
+	}
+
+	$(document).ready(function(){
+		let $submenu = $('.menu__list-item.submenu');
+		newMenuToggle($submenu);
+
+		window.addEventListener("resize", mainHeight);
+		mainHeight();
+
+
+
+	});
+	
+	const mainHeight = () => {
+		const elem = $('#nav-new .main-content');
+		$(elem).css('height', `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); 
+
+	};
+
+	
+
 
 	$(window).on('resize', function () {
 		reset_nav_on_resize();
@@ -17,6 +54,7 @@ export default function () {
 	let active_class = 'js-is-active';
 	let navigation_trigger = false;
 	let mobile_width = 767;
+	
 
 	// Reset navigation on resize window
 	function reset_nav_on_resize() {
@@ -149,6 +187,186 @@ export default function () {
 			$sidebar.removeClass(active_class);
 			$nav.removeClass('js-active-sidebar');
 		}
+	}
+
+	function newMenuToggle($submenu){
+		
+		$submenu.on('click', function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active')
+			} else {
+				$submenu.removeClass('active');
+				$(this).addClass('active');
+			}
+			
+		})
+		
+	}
+
+	// show / hide password
+
+	function showPassword(){
+		const passwordInput = document.querySelector('#user_pass');
+		const emailInput = document.querySelector('#user_email');
+		const passInput = document.querySelector('#user_pass');
+		const eyeIcon = document.querySelector('.pass-icon');
+		const emailErrorTooltip = document.querySelector('.error-tooltip.email-error');
+		const passErrorTooltip = document.querySelector('.error-tooltip.pass-error');
+		const login = document.querySelector('#login');
+		const loader = document.querySelector('#login .loader');
+		const accepted = document.querySelector('#login .approved');
+		const declined = document.querySelector('#login .declined');
+		login.addEventListener('click', () => {
+			$(loader).show();
+			$(declined).hide();
+			$(accepted).hide();
+			setTimeout(() => {
+				if (emailInput.value == 'error'){
+					emailErrorTooltip.style.display ='block';
+					emailInput.classList.add('error');
+					$(loader).hide();
+					$(declined).show();
+
+				} 
+				if (passInput.value == 'error'){
+					passErrorTooltip.style.display ='block';
+					passInput.classList.add('error');
+					$(loader).hide();
+					$(declined).show();
+
+			} 
+			if (passInput.value != 'error' && emailInput.value != 'error') {
+
+					$(loader).hide();
+					$(accepted).show();
+				}
+			}, 1000)
+			//email error
+			
+		});
+
+
+
+		// eye icon visibility
+		passwordInput.addEventListener('input', () => {
+			if (passwordInput.value.length > 0) {
+				eyeIcon.style.display = 'block';
+			} else {
+				eyeIcon.style.display = 'none';
+			}
+		});
+
+		// password visibility
+		eyeIcon.addEventListener('click', () => {
+			if (passwordInput.type === 'password') {
+				passwordInput.type = 'text';
+				eyeIcon.classList.add('show-password');
+			} else {
+				passwordInput.type = 'password';
+				eyeIcon.classList.remove('show-password');
+			}
+		})
+	}
+
+
+
+	function activateTransferButton (){
+		const emptyField = document.querySelector('#transfer #user_transfer');
+		const btnDisabled = document.querySelector('#transfer .transfer .btn__disabled');
+		const btnEnabled = document.querySelector('#transfer .transfer .btn__enabled');
+
+		emptyField.addEventListener('input', () => {
+			if (emptyField.value.length > 0){
+				$(btnDisabled).hide();
+				$(btnEnabled).show();
+			} else {
+				$(btnDisabled).show();
+				$(btnEnabled).hide();
+			}
+		})
+	};
+
+	function activateDepositButton (){
+		const depositStart = document.querySelector('#deposit');
+		const emptyField = document.querySelector('#user_depo');
+
+		const buttonStateZero = document.querySelector('#deposit [data-button-state = "0"]');
+		const buttonStateOne = document.querySelector('#deposit [data-button-state = "1"]');
+		const buttonStateTwo = document.querySelector('#deposit [data-button-state = "2"]');
+		const buttonStateThree = document.querySelector('#deposit [data-button-state = "3"]');
+		const depositDone = document.querySelector('#deposit__done');
+
+		emptyField.addEventListener('input', () => {
+			if (emptyField.value.length > 0){
+				$(buttonStateZero).hide();
+				$(buttonStateOne).show();
+			} else {
+				$(buttonStateZero).show();
+				$(buttonStateOne).hide();
+			}
+		})
+
+		$(buttonStateOne).on('click', () => {
+			$(buttonStateOne).hide();
+			$(buttonStateTwo).show();
+			setTimeout(() => {
+				$(buttonStateTwo).hide();
+				$(buttonStateThree).show();
+
+				setTimeout(() => {
+					$(depositStart).hide();
+					$(depositDone).show();
+					
+				}, 1500)
+
+			}, 1000)
+		})
+	}
+
+	function setTargetScreen(){
+		$('[data-target-screen]').on('click', function(){
+			$($(this).data('current-screen')).fadeTo('slow',0);
+			$($(this).data('current-screen')).hide();
+			$($(this).data('target-screen')).fadeTo('slow',1);
+		})
+	}
+
+	function showHideMenu(){
+		$('.user__icon').on('click', () => {
+			//$('#user-menu').show();
+			if($('#user-menu').hasClass('open')){
+				$('#user-menu').removeClass('open');
+			} else {
+				$('#user-menu').addClass('open');
+			}
+			
+		})
+
+		$('.close-user-menu').on('click', () => {
+				$('#user-menu').removeClass('open');
+				//$('#user-menu').hide();
+		})
+
+		$('button.toggle-nav').on('click', () => {
+			$('.side-menu').toggleClass('open');
+		})
+	}
+
+	function loginBankId(){
+		$('[data-target-screen="#user__login-bank-id" ]').on('click', () => {
+			$('#user__login-bank-id .bank-loader').show();
+			$('#user__login-bank-id .accepted').hide();
+			$('#user__login-bank-id .declined').hide();
+			setTimeout(() => {
+				$('#user__login-bank-id .bank-loader').hide();
+				$('#user__login-bank-id .accepted').show();
+				setTimeout (() => {
+					$('#user__login-bank-id .accepted').hide();
+					$('#user__login-bank-id .declined').show();
+				}, 1000)
+			}, 1000)
+		})
+		
 	}
 }
 

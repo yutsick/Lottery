@@ -231,7 +231,8 @@ $(".information__list_link a ").click(function () {
 //fix 100vh problem with iOS Safari
 const appHeight = () => {
 	const doc = document.documentElement;
-	doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+	doc.style.setProperty("--app-height", `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); //
+	// doc.style.setProperty("--app-height", `${window.innerHeight}px`);
 };
 window.addEventListener("resize", appHeight);
 appHeight();
