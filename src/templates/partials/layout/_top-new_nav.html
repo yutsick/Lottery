@@ -1,0 +1,74 @@
+<div class="ml-2017">
+  
+  <div id="nav-new">
+    <div class="top">
+      <div class="top__holder">
+        <div class="top__menu-toggle top__menu-toggle--default  ">
+          <button class="js-toggle-nav toggle-nav">
+            <i class="icon icon-burger"></i>
+          </button>
+        </div>
+        <div class="top__brand order-1">
+          <a href="/" title="Hem" class="top__brand-logotype">
+            <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
+          </a>
+        </div>
+        <div class="user__icon">
+          <a href="javascript:;" id="user-button">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M27.8461 30.3078C27.8461 29.0022 27.3274 27.75 26.4042 26.8267C25.4809 25.9034 24.2287 25.3848 22.923 25.3848H13.0769C11.7712 25.3848 10.519 25.9034 9.59574 26.8267C8.67249 27.75 8.15381 29.0022 8.15381 30.3078"
+                stroke="#074658" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M18 20.4614C20.7189 20.4614 22.9231 18.2573 22.9231 15.5383C22.9231 12.8194 20.7189 10.6152 18 10.6152C15.281 10.6152 13.0769 12.8194 13.0769 15.5383C13.0769 18.2573 15.281 20.4614 18 20.4614Z"
+                stroke="#074658" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="18" cy="18" r="16" stroke="#074658" stroke-width="3" />
+            </svg>
+          </a>
+        </div>
+        
+
+        <div class="top__break"></div>
+       
+
+        <div class="top__overlay top__overlay--closed js-top__overlay"></div>
+       
+      </div>
+    </div>
+    <div class="main-content">
+
+	
+      <div id="side-menu" class="side-menu">
+				<div id="mobile__overlay"></div>
+				<div id="mobile__close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M2 2L22 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+						
+				</div>
+        @@include('layout/_side-menu.html', {})
+        
+      </div>
+      <div class="main-content__wrapper"></div>
+      <div id="user-menu" class="user-menu">
+        <div class="user-menu__wrapper">
+          @@if(context.logged_in){
+            @@include('layout/_user-menu-auth.html', {})
+          } 
+          @@if(!context.logged_in){
+              @@include('layout/_user-menu-noauth.html', {})
+            }
+        
+        </div>
+       
+      </div>
+    </div>
+
+  </div>
+  @@include('components/_message.html',{
+  "msg_image": "assets/img/mockup/ML.png",
+  "msg_title": "Nytt meddelande",
+  "msg_text": "Du har en ny bonus att hämta!"
+  })
+</div>
