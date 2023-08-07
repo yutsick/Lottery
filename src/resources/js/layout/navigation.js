@@ -350,6 +350,10 @@ export default function () {
 		$('button.toggle-nav').on('click', () => {
 			$('.side-menu').toggleClass('open');
 		})
+
+		$('#mobile__close').on('click', () => {
+			$('.side-menu').removeClass('open');
+		})
 	}
 
 	function loginBankId(){
