@@ -624,7 +624,7 @@ a.btn {
 }
 .btn-rosa{
 	background-color:$colorRosa;
-	color: $colorMiljonbla;
+	color: $color-snow;
 	&:hover{
 		background-color:$colorRosaHover;
 		color: $colorMiljonbla;
@@ -696,6 +696,9 @@ a.btn {
 	&:focus {
 		text-decoration: none;
 		background-color:transparent;
+	}
+	&.btn-white{
+		color: $color-snow;
 	}
 }
 
