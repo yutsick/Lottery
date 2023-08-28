@@ -65,7 +65,7 @@ export default function(){
 
   const primaryCta = {
     "blue": "btn-miljonbla",
-    "rose": "btn-rosa",
+    "rose": "btn-cta",
     "light-blue": "btn-lightblue",
     "white": "btn-white"
   }
