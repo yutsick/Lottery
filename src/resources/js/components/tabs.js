@@ -37,7 +37,15 @@ export default function() {
 
   
     //tabs in schema-tabs module
-    tabs('.js-schema-tabs__btn', '.js-schema-tabs__panel',true);
+
+
+    if ($(window).width() > 992){
+      tabs('.js-schema-tabs__btn', '.js-schema-tabs__panel',true);
+    } else {
+      tabs('.js-schema-tabs__btn', '.js-schema-tabs__panel',false);
+    }
+
+    
     tabs('.js-bingoschema-tabs__btn', '.js-bingoschema-tabs__panel', false);
     tabs('.js-bingoschema-chattspel-tabs__btn', '.js-bingoschema-chattspel-tabs__panel', false);
     tabs('.js-bingoschema-tabs-slots__btn', '.js-bingoschema-tabs-slots__panel', false);
