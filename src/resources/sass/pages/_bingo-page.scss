@@ -1194,6 +1194,9 @@ section.expanded-menu{
         display: block;
       }
     }
+    &.active{
+      margin-top: 36px;
+    }
   }
   .mobile-bg{
     @media (max-width:992px){

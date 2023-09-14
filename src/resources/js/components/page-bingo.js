@@ -78,7 +78,7 @@ const cutEl = $('.page-bingo .top-section .text-cut:not(.top-section-text) ');
       //$('.mobile-bg').hide();
       if($('.desctop__active.active').find('.rooms').length){
         $('.mobile__menu').css('filter', 'none');
-        $('.schema-tabs__panels-container').css('top','186px');
+        $('.schema-tabs__panels-container').css('top','130px');
         $('.mobile__menu').attr('data-filter', false);
       } else {
         $('.mobile__menu').css('filter', 'drop-shadow(0px 8px 24px rgba(0, 0, 0, 0.1))');
