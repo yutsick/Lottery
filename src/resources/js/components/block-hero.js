@@ -1,8 +1,8 @@
 export default function(){
 
   const breakPoints = {
-    "tablet": 1200,
-    "mobile": 600
+    "tablet": 1024,
+    "mobile": 480
   }
   
 
@@ -26,14 +26,15 @@ export default function(){
   function secondryButton(){
     const windowSize = $(window).width();
     const btnClass={
-      "button-outline": "btn-outline",
-      'link': "btn-type-link"
+      "border": "btn-outline",
+      "link": "btn-type-link",
+      "solid":"btn-type-solid"
     }
      /** Set top bg */
      $(secondaryButton).each(function() {
 
-      $(this).removeClass('btn-type-link')
-      $(this).removeClass('btn-outline')
+      $(this).removeClass(['btn-type-link', 'btn-outline', 'btn-type-solid'])
+
         if (windowSize <= breakPoints.mobile){
         $(this).addClass(btnClass[$(this).data('type-mob')])
       } else if (windowSize > breakPoints.mobile && windowSize <= breakPoints.tablet){

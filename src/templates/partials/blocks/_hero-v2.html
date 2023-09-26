@@ -5,7 +5,13 @@
   <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
   <div class="container p-0">
 
-    <header class="block block-hero ">
+      @@if(context.text_block.display == "none" || context.list.display == "none") {
+        <header class="block block-hero pb-0">
+      }
+     
+      @@if(context.text_block.display == "block" && context.list.display == "block") {
+        <header class="block block-hero pb-20">
+      }
       <div class="row d-md-flex">
         <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
         <div class="block-hero-width-@@hero_width " style="width:@@hero_width">
@@ -24,34 +30,42 @@
             Välj den emoji som bäst speglar ditt morgonhumör och ha chans att vinna upp till 1 miljon kronor eller upplevelser värda upp till 100 000 kr varje vecka. 4 dragningar ingår. Vinster betalas ut direkt via Swish!
           </div>
           <div class="block-hero__list  d-@@list.display">
-            <ul class="list-type-@@list.type list-color-@@list.color text-color-@@list.text_color font-@@list.font" data-text-shadow="@@list.drop_shadow">
+           
+            @@if(context.text_block.display == "none") {
+              <ul class="list-type-@@list.type list-color-@@list.color text-color-@@list.text_color font-@@list.font li__wide" data-text-shadow="@@list.drop_shadow">
+            }
+           
+            @@if(context.text_block.display == "block") {
+              <ul class="list-type-@@list.type list-color-@@list.color text-color-@@list.text_color font-@@list.font" data-text-shadow="@@list.drop_shadow">
+            }
+            
               <li>Fyra miljondragningar ingår</li>
               <li>Extra vinstchanser varje vecka</li>
               <li>Vinn cash och upplevelser</li>
             </ul>
 
           </div>
-          <div class="col-gap-24 cta-wrapper d-none d-sm-flex">
+          <div class="col-gap-24 cta-wrapper d-none d-md-flex">
             <a href="/" class="btn block-hero__btn d-none d-sm-@@primary_cta.display font-@@primary_cta.font" data-box-shadow="@@primary_cta.drop_shadow" data-primary-color="@@primary_cta.color">Välj din emoji nu</a>
             <div class="d-flex btn-link-wrapper">
-               <a href="/" class="btn secondary-button d-none d-sm-@@secondary_cta.display p-0 btn-type-link"  data-type-desk="@@secondary_cta.type.desktop" data-type-tab="@@secondary_cta.type.tablet" data-type-mob="@@secondary_cta.type.mobile" data-secondary-color="@@secondary_cta.color" data-box-shadow="@@secondary_cta.drop_shadow">Se alla vinster</a>
+               <a href="/" class="btn secondary-button d-none d-sm-@@secondary_cta.display p-0"  data-type-desk="@@secondary_cta.type.desktop" data-type-tab="@@secondary_cta.type.tablet" data-type-mob="@@secondary_cta.type.mobile" data-secondary-color="@@secondary_cta.color" data-box-shadow="@@secondary_cta.drop_shadow">Se alla vinster</a>
             </div>
            
           </div>
          
         </div>
-        <div class="block-hero-image-wrapper d-lg-flex">
+        <div class="block-hero-image-wrapper d-md-flex">
 
           <picture class="block-hero-img d-@@image-display">
-            <source media="(max-width:426px)" srcset="@@image.mobile">
-            <source media="(max-width:834px)" srcset="@@image.tablet">
+            <source media="(max-width:480px)" srcset="@@image.mobile">
+            <source media="(max-width:768px)" srcset="@@image.tablet">
             <img src="@@image.desktop" alt="Hero">
           </picture>
 
-          <div class="d-sm-none d-@@primary-cta.display text-align-center cta-wrapper">
+          <div class="d-md-none d-@@primary-cta.display text-align-center cta-wrapper">
             <a href="/" class="btn block-hero__btn font-@@primary_cta.font" data-box-shadow="@@primary_cta.drop_shadow" data-primary-color="@@primary_cta.color">Välj din emoji nu</a>
           </div>
-          <div class="d-sm-none d-@@secondary_cta.display text-align-center cta-wrapper">
+          <div class="d-md-none d-@@secondary_cta.display text-align-center cta-wrapper">
             <a href="/" class="btn secondary-button" data-type-desk="@@secondary_cta.type.desktop" data-type-tab="@@secondary_cta.type.tablet" data-type-mob="@@secondary_cta.type.mobile" data-secondary-color="@@secondary_cta.color"  data-box-shadow="@@secondary_cta.drop_shadow">Se alla vinster</a>
           </div>
 
