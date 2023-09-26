@@ -3,6 +3,7 @@
   Use list:type = checkmarks/numbers
   Use for checkmarks list:color = blue/white/yellow/rose 
   Use for list text_color:white/blue
+  Use for button type: solid, border, link
  -->
 @@include('layout/_header.html', {
 "class": "page-front logged-out",
@@ -20,7 +21,7 @@
     "mobile": '/assets/img/background/hero_BG_v2.1.png',
   },
   "hero_align": "top",
-  "hero_width": "42%",
+  "hero_width": "50%",
   "title_cta_color": "yellow",
   "title": {
     "drop_shadow": "false",
@@ -45,17 +46,18 @@
     "font": "Proxima",
     "drop_shadow": "false",
   },
+
   "primary_cta":{
     "display":"block",
-    "color":"rose",
+    "color":"white",
     "font": "Apercu",
     "drop_shadow": "true",
   },
   "secondary_cta":{
     "display":"block",
     "type":{
-      "desktop":"button-outline",
-      "tablet":"button-outline",
+      "desktop":"solid",
+      "tablet":"border",
       "mobile":"link"
     },
     "color":"white",
