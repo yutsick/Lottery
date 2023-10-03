@@ -47,11 +47,7 @@
       margin: 0;
 
     }
-    &.li__wide{
-      li{
-        margin: 22px 0;
-      }
-    }
+
     &.list-type-checkmarks{
       li:before{
         content:'';
@@ -276,7 +272,7 @@
     @media (max-width: $screen-md) {
       font-size: 40px;
       line-height: 44px;
-      max-width: 75%;
+      max-width: 50%;
       
 
     }
