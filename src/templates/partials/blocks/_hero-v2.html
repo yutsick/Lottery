@@ -12,7 +12,7 @@
       @@if(context.text_block.display == "block" && context.list.display == "block") {
         <header class="block block-hero pb-20">
       }
-      <div class="row d-md-flex">
+      <div class="row d-md-flex w-100">
         <h1 class="block-hero__page-title hero-full__page-title">Miljonlotteriet - skrapa lotter, spela bingo och vinn fantastiska vinster</h1>
         <div class="block-hero-width-@@hero_width " style="width:@@hero_width">
           @@if(context.title_cta_color == "white"){
@@ -31,14 +31,7 @@
           </div>
           <div class="block-hero__list  d-@@list.display">
            
-            @@if(context.text_block.display == "none") {
-              <ul class="list-type-@@list.type list-color-@@list.color text-color-@@list.text_color font-@@list.font li__wide" data-text-shadow="@@list.drop_shadow">
-            }
-           
-            @@if(context.text_block.display == "block") {
-              <ul class="list-type-@@list.type list-color-@@list.color text-color-@@list.text_color font-@@list.font" data-text-shadow="@@list.drop_shadow">
-            }
-            
+            <ul class="list-type-@@list.type list-color-@@list.color text-color-@@list.text_color font-@@list.font" data-text-shadow="@@list.drop_shadow">
               <li>Fyra miljondragningar ingår</li>
               <li>Extra vinstchanser varje vecka</li>
               <li>Vinn cash och upplevelser</li>
