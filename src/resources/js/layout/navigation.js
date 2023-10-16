@@ -334,25 +334,28 @@ export default function () {
 	function showHideMenu(){
 		$('.user__icon').on('click', () => {
 			//$('#user-menu').show();
-			if($('#user-menu').hasClass('open')){
-				$('#user-menu').removeClass('open');
-			} else {
-				$('#user-menu').addClass('open');
-			}
+			$('#mobile__overlay').show();
+			$('#user-menu').addClass('open');
+				
+			
 			
 		})
 
 		$('.close-user-menu').on('click', () => {
 				$('#user-menu').removeClass('open');
+				$('#mobile__overlay').hide();
+				
 				//$('#user-menu').hide();
 		})
 
 		$('button.toggle-nav').on('click', () => {
 			$('.side-menu').toggleClass('open');
+			$('#mobile__overlay').show();
 		})
 
 		$('#mobile__close').on('click', () => {
 			$('.side-menu').removeClass('open');
+			$('#mobile__overlay').hide();
 		})
 	}
 

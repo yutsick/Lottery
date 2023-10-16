@@ -623,21 +623,23 @@
     }
 
     .side-menu {
-        width: 336px;
-        position: relative;
-        z-index: 1;
-        left: -336px;
-        transition: left 0.2s;
+        width: 100%;
+        position: absolute;
+        top:0;
+        height: 100%;
+        z-index: 4;
+        transform: translateX(-150%);
+        transition: transform 0.4s;
         @media (max-width:600px) {
             width: 100%;
             position: absolute;
-            left:-150%;
+            transform: translateX(-150%);
             top:0;
             z-index: 3;
             height: 100%;
         }
         &.open{
-            left:0;
+            transform: translateX(0);
         }
         // height:100% ;
         .menu {
@@ -646,12 +648,15 @@
                 box-shadow: 0px 0px 40px 0px #003E52;
                 padding: 35px 24px;
                 height: 100%;
+                width: 336px;
+                position: relative;
+                z-index: 5;
             @media (max-width: 600px) {
                 position: absolute;
                 left:0;
                 top:0;
                 z-index: 4;
-                width: 336px;
+                
             }
             }
 
@@ -810,21 +815,24 @@
     }
 
     .user-menu {
-        position: relative;
-        right: -390px;
-        width: 390px;
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        right: 0;
+        height: 100%;
+        transform: translateX(150%);
         background: #F5F7F7;
-        transition: right 0.2s;
+        transition: transform 0.4s ease-in-out;
         @media (max-width:600px) {
             position: absolute;
             top:0;
             width: 100%;
             z-index: 3;
-            right: -150%;
+            transform: translateX(150%);
         }
         &.open{
-            right: 0;
-
+            // right: 0;
+            transform: translateX(0);
         }
         .loader {
             margin: 0 auto;
@@ -859,15 +867,20 @@
             
                 .close-menu {
                     position: absolute;
-                    right: 33px;
-                    top: 32px;
+                    left: -38px;
+                    top: 35px;
                     cursor: pointer;
+                    svg{
+                       width: 20px;
+                        height: 20px; 
+                    }
+                    
                 }
 
                 .go-back {
-                    position: absolute;
-                    left: 33px;
-                    top: 32px;
+                    position: absolute;          
+                    left: 28px;
+                    top: 35px;
                     cursor: pointer;
                 }
 
@@ -1701,20 +1714,27 @@
                 height: 100%;
                 background: rgba(0, 58, 78, 0.75);
                 top:0;
+                left:0;
                 position: absolute;
                 z-index: 3;
-                filter: blur(58.5px);
-                @media (min-width:600px) {
-                    display: none;
-                }
+                // filter: blur(58.5px);
+                display: none;
+                // @media (min-width:600px) {
+                //     display: none;
+                // }
             }
             &__close{
                 position: absolute;
-                right: 15px;
-                top:35px;
+                left:380px;    
+                top:34px;
                 z-index: 4;
-                @media (min-width:600px) {
-                    display: none;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                }
+                @media (max-width:600px) {
+                    
+                    right: 15px;
                 }
             }
         }
