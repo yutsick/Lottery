@@ -50,6 +50,7 @@ import walletTransferAmount from "./components/wallet-transfer-amount";
 import orderActions from "./components/order-actions";
 import cartQuantity from "./components/cart-quantity";
 import bankIDForm from "./components/bankid-form";
+import balanceBarJS from "./components/balance-bar";
 import timeSpent from "./components/time-spent";
 import Odometer from "./components/odometer";
 import Carousel from "./components/carousel";
@@ -143,6 +144,7 @@ $(function () {
 	new orderActions();
 	new cartQuantity();
 	bankIDForm();
+	balanceBarJS();
 	scroller();
 	orderSwitcher();
 	slideOutNavigation();

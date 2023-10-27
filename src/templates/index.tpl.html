@@ -1,6 +1,31 @@
+<!-- 
+Use true/false to show/hide specific links or whole links row
+ -->
+
 @@include('layout/_header.html', {
 	"class": "sidebar-hidden",
-	"logged_in": false
+	"logged_in": true,
+	 "links_display": {
+			"mob": "true",
+			"tab": "false",
+			"desk": "true"
+		},
+		"visa_saldo_display":{
+			"mob": "false",
+			"tab": "true",
+			"desk": "true"
+		},
+		"insättning_display":{
+			"mob": "false",
+			"tab": "true",
+			"desk": "false"
+		},
+		"registrera_lott_display":{
+			"mob": "false",
+			"tab": "true",
+			"desk": "false"
+		}
+		 
 	})
 
 	<div class="content-wrapper ml-2017">
