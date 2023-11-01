@@ -5,36 +5,72 @@
       <div class="top">
         <div class="top__holder">
           <div class="top__menu-toggle top__menu-toggle--default  ">
-            <button class="js-toggle-nav toggle-nav">
-              <i class="icon icon-burger"></i>
-            </button>
+            <div class="buttons">
+              <button class="js-toggle-nav toggle-nav">
+                <i class="icon icon-burger"></i>
+                <span>Meny</span>
+              </button>
+              
+            </div>
+            @@if(!context.logged_in){
+            <div class="top__adv-block">
+              <img src="assets/img/top-menu-adv.png" alt="">
+            </div>
+            }
           </div>
           <div class="top__brand order-1">
             <a href="/" title="Hem" class="top__brand-logotype">
-              <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-            </a>
+              <picture>
+                <source media="(max-width: 426px)" srcset="assets/img/ml-logotype-mobile.png">
+                <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
+              </picture>
+              
+            </a> 
           </div>
-          <div class="user__icon">
-            <a href="javascript:;" id="user-button">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M27.8461 30.3078C27.8461 29.0022 27.3274 27.75 26.4042 26.8267C25.4809 25.9034 24.2287 25.3848 22.923 25.3848H13.0769C11.7712 25.3848 10.519 25.9034 9.59574 26.8267C8.67249 27.75 8.15381 29.0022 8.15381 30.3078"
-                  stroke="#074658" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                <path
-                  d="M18 20.4614C20.7189 20.4614 22.9231 18.2573 22.9231 15.5383C22.9231 12.8194 20.7189 10.6152 18 10.6152C15.281 10.6152 13.0769 12.8194 13.0769 15.5383C13.0769 18.2573 15.281 20.4614 18 20.4614Z"
-                  stroke="#074658" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-                <circle cx="18" cy="18" r="16" stroke="#074658" stroke-width="3" />
-              </svg>
-            </a>
-          </div>
-          
+          @@if(context.logged_in){
+            <div class="top__login user-button" id="user-button">
+              <div class="user__title">
+                Rebekka
+              </div>
+              <div class="user__icon">
+                
+                  <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M28.636 15.2731C28.636 17.2984 27.8315 19.2407 26.3994 20.6728C24.9673 22.1049 23.0249 22.9094 20.9996 22.9094C18.9744 22.9094 17.032 22.1049 15.5999 20.6728C14.1678 19.2407 13.3633 17.2984 13.3633 15.2731C13.3633 13.2478 14.1678 11.3055 15.5999 9.87336C17.032 8.44126 18.9744 7.63672 20.9996 7.63672C23.0249 7.63672 24.9673 8.44126 26.3994 9.87336C27.8315 11.3055 28.636 13.2478 28.636 15.2731ZM24.8178 15.2731C24.8178 16.2857 24.4156 17.2569 23.6995 17.9729C22.9835 18.689 22.0123 19.0913 20.9996 19.0913C19.987 19.0913 19.0158 18.689 18.2998 17.9729C17.5837 17.2569 17.1815 16.2857 17.1815 15.2731C17.1815 14.2604 17.5837 13.2893 18.2998 12.5732C19.0158 11.8572 19.987 11.4549 20.9996 11.4549C22.0123 11.4549 22.9835 11.8572 23.6995 12.5732C24.4156 13.2893 24.8178 14.2604 24.8178 15.2731Z" fill="#074658"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21 0C9.40227 0 0 9.40227 0 21C0 32.5977 9.40227 42 21 42C32.5977 42 42 32.5977 42 21C42 9.40227 32.5977 0 21 0ZM3.81818 21C3.81818 24.99 5.17936 28.6631 7.46073 31.5802C9.06289 29.4762 11.1298 27.7711 13.5 26.598C15.8702 25.425 18.4795 24.8159 21.1241 24.8182C23.7344 24.8157 26.3109 25.4091 28.6572 26.5531C31.0035 27.6972 33.0578 29.3617 34.6634 31.4198C36.3175 29.2503 37.4312 26.7181 37.9124 24.0328C38.3936 21.3474 38.2285 18.586 37.4306 15.9772C36.6327 13.3683 35.2251 10.9869 33.3241 9.03007C31.4232 7.07323 29.0836 5.59719 26.4989 4.72406C23.9143 3.85094 21.1588 3.60584 18.4606 4.00904C15.7625 4.41224 13.1991 5.45216 10.9826 7.04274C8.76606 8.63332 6.96018 10.7288 5.71435 13.1559C4.46851 15.583 3.81853 18.2718 3.81818 21ZM21 38.1818C17.0557 38.1877 13.2305 36.8308 10.1716 34.3407C11.4029 32.5781 13.0416 31.139 14.9485 30.1459C16.8555 29.1527 18.974 28.6348 21.1241 28.6364C23.2473 28.6347 25.3403 29.1395 27.2292 30.1091C29.1182 31.0786 30.7485 32.4848 31.9849 34.2109C28.9023 36.7819 25.014 38.1875 21 38.1818Z" fill="#074658"/>
+                    </svg>
+                    
+                
+              </div>
+            </div>
+          }
+          @@if(!context.logged_in){
+            <div class="top__login">
+              <div class="user__signin">
+                <a href="javascript:void(0)" data-target-screen="#user__login" data-current-screen="#user__start">Logga in</a> 
+              </div>
+              <div class="user__signup">
+                <a href="javascript:void(0)" data-target-screen="#user__create-account" data-current-screen="#user__start">Skapa konto</a> 
+              </div>
+              
+            </div>
+            <div class="top__login-mobile">
+              <div class="user__signin">
+                <a href="javascript:void(0)" data-target-screen="#user__start" data-current-screen="">Logga in</a> 
+              </div>
+              <div class="user__signup">
+                <a href="javascript:void(0)" data-target-screen="#user__start" data-current-screen="">Skapa konto</a> 
+              </div>
+              
+            </div>
+          }
 
-          <div class="top__break"></div>
-        
-
-          <div class="top__overlay top__overlay--closed js-top__overlay"></div>
         
         </div>
+        @@if(!context.logged_in){
+        <div class="top__adv-block-mobile">
+          <img src="assets/img/top-menu-adv-mob.png" alt="">
+        </div>
+      }
       </div>
     
 

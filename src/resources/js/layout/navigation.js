@@ -1,4 +1,11 @@
 export default function () {
+	const mobile = 425;
+	if ($(document).width() <= mobile){
+		$('#user__login .go-back, #user__login-credentials .go-back, #user__create-account .go-back').data('target-screen','#user__start'); 
+	}  
+
+	$("body").css("overflow-x", "hidden");
+	
 	toggle_nav();
 	reset_nav_on_resize();
 	click_top_nav_item();
@@ -191,12 +198,20 @@ export default function () {
 
 	function newMenuToggle($submenu){
 		
-		$submenu.on('click', function(){
+		$submenu.on('click', function(e){
+
 			if($(this).hasClass('active')){
-				$(this).removeClass('active')
+				
+				$(this).children('ul.menu__submenu').hide();
+				$(this).removeClass('active');
+					
+
 			} else {
 				$submenu.removeClass('active');
+				$submenu.children('ul.menu__submenu').hide();
+				$(this).children('ul.menu__submenu').fadeTo('fast',1);
 				$(this).addClass('active');
+
 			}
 			
 		})
@@ -204,48 +219,24 @@ export default function () {
 	}
 
 	// show / hide password
+const emailInput = document.querySelector('#user_email'),
+					passInput = document.querySelector('#user_pass'),
+					emailCreateInput=document.querySelector('#user_email_register'),
+					mobileInput = document.querySelector('#user_mobile'),
+					emailErrorTooltip = document.querySelector('.error-tooltip.email-error'),
+					passErrorTooltip = document.querySelector('.error-tooltip.pass-error'),
+					createEmailErrorTooltip = document.querySelector('.error-tooltip.email-create-error'),
+					createPersonErrorTooltip = document.querySelector('.error-tooltip.person-error'),
+					createKontoCta = document.querySelector('#create-konto-cta'),
+					createChk = document.querySelector('#create-conto-chk'),
+					createChkErrorTooltip = document.querySelector('.create-chk-error'),
+					login = document.querySelector('#login'),
+					loader = document.querySelector('#login .loader'), 
+					declined = document.querySelector('#login .declined');
 
 	function showPassword(){
-		const passwordInput = document.querySelector('#user_pass');
-		const emailInput = document.querySelector('#user_email');
-		const passInput = document.querySelector('#user_pass');
-		const eyeIcon = document.querySelector('.pass-icon');
-		const emailErrorTooltip = document.querySelector('.error-tooltip.email-error');
-		const passErrorTooltip = document.querySelector('.error-tooltip.pass-error');
-		const login = document.querySelector('#login');
-		const loader = document.querySelector('#login .loader');
-		const accepted = document.querySelector('#login .approved');
-		const declined = document.querySelector('#login .declined');
-		login.addEventListener('click', () => {
-			$(loader).show();
-			$(declined).hide();
-			$(accepted).hide();
-			setTimeout(() => {
-				if (emailInput.value == 'error'){
-					emailErrorTooltip.style.display ='block';
-					emailInput.classList.add('error');
-					$(loader).hide();
-					$(declined).show();
-
-				} 
-				if (passInput.value == 'error'){
-					passErrorTooltip.style.display ='block';
-					passInput.classList.add('error');
-					$(loader).hide();
-					$(declined).show();
-
-			} 
-			if (passInput.value != 'error' && emailInput.value != 'error') {
-
-					$(loader).hide();
-					$(accepted).show();
-				}
-			}, 1000)
-			//email error
-			
-		});
-
-
+		const passwordInput = document.querySelector('#user_pass'),
+					eyeIcon = document.querySelector('.pass-icon');
 
 		// eye icon visibility
 		passwordInput.addEventListener('input', () => {
@@ -267,6 +258,75 @@ export default function () {
 			}
 		})
 	}
+
+	login.addEventListener('click', () => {
+		$(loader).show();
+		$(declined).hide();
+		
+		setTimeout(() => {
+			if (emailInput.value == 'error'){
+				emailErrorTooltip.style.display ='block';
+				emailInput.classList.add('error');
+				$(loader).hide();
+				$(declined).show();
+
+			} 
+			if (passInput.value == 'error'){
+				passErrorTooltip.style.display ='block';
+				passInput.classList.add('error');
+				$(loader).hide();
+				$(declined).show();
+
+		} 
+			if (passInput.value != 'error' && emailInput.value != 'error') {
+
+					$(loader).hide();
+					
+				}
+		}, 1000)
+		//email error
+		
+	}); 
+
+	createKontoCta.addEventListener('click', () => {
+		
+		if(mobileInput.value == 'error'){
+			$(createPersonErrorTooltip).show();
+			$(mobileInput).addClass('error');
+		} else {
+			$(createPersonErrorTooltip).hide();
+			$(mobileInput).removeClass('error'); 
+		}
+
+		if(emailCreateInput.value == 'error'){
+			$(createEmailErrorTooltip).show();
+			$(emailCreateInput).addClass('error');
+		} else {
+			$(createEmailErrorTooltip).hide();
+			$(emailCreateInput).removeClass('error'); 
+		}
+
+		if(!$(createChk).is(':checked')){
+			$(createChkErrorTooltip).show();
+			$(createChk).addClass('error');
+		} else {
+			$(createChkErrorTooltip).hide();
+			$(createChk).removeClass('error'); 
+		}
+
+	})
+	
+	createChk.addEventListener('change', () => {
+		
+		if($(createChk).is(':checked')){
+			console.log('ff')
+			$(createChkErrorTooltip).hide();
+			$(createChk).removeClass('error'); 
+			$(createKontoCta).addClass('active');
+		} else {
+			$(createKontoCta).removeClass('active');
+		}
+	})
 
 
 
@@ -325,20 +385,23 @@ export default function () {
 
 	function setTargetScreen(){
 		$('[data-target-screen]').on('click', function(){
-			$($(this).data('current-screen')).fadeTo('slow',0);
-			$($(this).data('current-screen')).hide();
-			$($(this).data('target-screen')).fadeTo('slow',1);
+			if(($(this).data('current-screen'))){
+				$($(this).data('current-screen')).fadeTo('slow',0);
+				$($(this).data('current-screen')).hide();
+			}
+			if(($(this).data('target-screen'))){
+				$($(this).data('target-screen')).fadeTo('slow',1);
+			}
+			
 		})
 	}
 
 	function showHideMenu(){
-		$('.user__icon').on('click', () => {
+		$('#user-button, .user__signin, .user__signup').on('click', () => {
 			//$('#user-menu').show();
 			$('#mobile__overlay').show();
 			$('#user-menu').addClass('open');
 				
-			
-			
 		})
 
 		$('.close-user-menu').on('click', () => {
@@ -360,18 +423,16 @@ export default function () {
 	}
 
 	function loginBankId(){
-		$('[data-target-screen="#user__login-bank-id" ]').on('click', () => {
-			$('#user__login-bank-id .bank-loader').show();
-			$('#user__login-bank-id .accepted').hide();
-			$('#user__login-bank-id .declined').hide();
+		$('#user__login-bank-id .qr-wrapper').on('click', () => {
+			$('#user__login-bank-id .screen-scan-qr').hide();
+			$('#user__login-bank-id .screen-loading').show();
+			$('#user__login-bank-id .screen-error').hide();
+
 			setTimeout(() => {
-				$('#user__login-bank-id .bank-loader').hide();
-				$('#user__login-bank-id .accepted').show();
-				setTimeout (() => {
-					$('#user__login-bank-id .accepted').hide();
-					$('#user__login-bank-id .declined').show();
-				}, 1000)
-			}, 1000)
+				$('#user__login-bank-id .screen-loading').hide();
+				$('#user__login-bank-id .screen-error').show();
+			
+			}, 2000)
 		})
 		
 	}

@@ -2,7 +2,7 @@
 <div id="user__start">
   <div class="user-menu__top">
     <div class="user-menu__top-content">
-      <div class="close-menu close-user-menu">
+      <div class="close-menu close-user-menu" data-current-screen="#user__start">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M2 2L22 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -88,29 +88,26 @@
     </div>
     <div class="clip"></div>
   </div>
-  <div class="user-menu__logo">
-    <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-  </div>
-  <div class="user-menu__text">
-    <p><strong>Behöver du hjälp via mail eller telefon?</strong></p>
-    <p>Välkommen att kontakta oss <br>
-      på <strong><a href="emailto:kundcenter@miljonlotteriet.se">kundcenter@miljonlotteriet.se</a></strong>
-      eller <strong><a href="telto:031 - 338 28 20">tel. 031 - 338 28 20</a></strong> </p>
-  </div>
+  @@include('layout/_user-menu-noauth-bottom.html', {})
 </div>
 
 <!-- Menu Logga in -->
 <div id="user__login" style="display: none;">
   <div class="user-menu__top">
     <div class="user-menu__top-content">
-      <div class="close-menu"   data-target-screen="#user__start" data-current-screen="#user__login">
+      <div class="close-menu close-user-menu"  data-current-screen="#user__login" data-target-screen="">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M2 2L22 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          
+        </svg>
       </div>
-      <div class="go-back" data-target-screen="#user__start" data-current-screen="#user__login">
+      <div class="go-back close-user-menu" data-current-screen="#user__login" data-target-screen="">
+        <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29 10.4546L1.00002 10.6364" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.6362 20.2727L0.999874 10.6364L10.6362 1" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="go-back go-back-mobile" data-target-screen="#user__start" data-current-screen="#user__login">
         <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M29 10.4546L1.00002 10.6364" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M10.6362 20.2727L0.999874 10.6364L10.6362 1" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -119,7 +116,8 @@
       <div class="title">logga in</div>
       <div class="screen__title">
         <h3>Hur vill du logga in?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        <p>Välj hur du vill logga in<br>
+          på ditt konto.</p>
       </div>
       <div class="user__form">
         <a class="button active" href="javascript:;" data-target-screen="#user__login-bank-id" data-current-screen="#user__login">
@@ -160,14 +158,12 @@
         </a>
       </div>
       <p class="sign_up">
-        Har du inget konto? <a href="javascript:;">Skapa ett här</a>
+        Har du inget konto?<br><a href="javascript:;" data-target-screen="#user__create-account" data-current-screen="#user__login">Skapa ett här</a>
       </p>  
     </div>
     <div class="clip"></div>
   </div>
-  <div class="user-menu__logo">
-    <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-  </div>
+  @@include('layout/_user-menu-noauth-bottom.html', {})
   
 </div>
 
@@ -176,14 +172,14 @@
 <div id="user__login-credentials"  style="display: none;">
   <div class="user-menu__top login-credentials">
     <div class="user-menu__top-content">
-      <div class="close-menu" data-target-screen="#user__login" data-current-screen="#user__login-credentials">
+      <div class="close-menu close-user-menu" data-target-screen="" data-current-screen="#user__login-credentials">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M2 2L22 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           
       </div>
-      <div class="go-back"  data-target-screen="#user__login" data-current-screen="#user__login-credentials">
+      <div class="go-back go-back-mobile"  data-target-screen="#user__login" data-current-screen="#user__login-credentials">
         <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M29 10.4546L1.00002 10.6364" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M10.6362 20.2727L0.999874 10.6364L10.6362 1" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -199,9 +195,8 @@
             <label for="user_email">Mail <span>(namn@mail.se)</span></label>
             <input type="email" id="user_email" name="user_email">
             <div class="error-tooltip email-error">
-              E-postadressen som du angav finns inte registrerad hos Miljonlotteriet. Vänligen <a href="javascript:;">kontakta kundcenter</a> för hjälp.
-
-            </div>
+              Felaktig mailadress.
+          </div>
             
           </div>
           <div class="field password-container">
@@ -209,16 +204,10 @@
             <input type="password" id="user_pass" name="user_pass">
             <div class="pass-icon"></div>
             <div class="error-tooltip pass-error">
-              <p> Lösenordet som du angav verkar inte stämma. Försök igen eller kontakta  <a href="javascript:;">kundcenter</a> för hjälp.</p>
-
-              <p> Har du glömt ditt lösenord? <a href="javascript:;">Klicka här.</a></p>
-             
-
+              <p> Felaktigt lösenord. </p>
             </div>
           </div>
-          <p class="form_desc">
-            Genom att klicka på “Logga in” godkänner du vår integritetspolicy, kommunikation via nyhetsbrev och <a href="javascript:;">våra villkor</a>
-          </p>
+
           <a class="button active mb-0" href="javascript:;" id="login">
             <div class="button__left">
               <div class="button__icon">
@@ -244,15 +233,11 @@
         </form>
         
       </div>
-      <p class="sign_up">
-        Har du inget konto? <br><a href="javascript:;">Skapa ett här</a>
-      </p>  
+ 
     </div>
     <div class="clip"></div>
   </div>
-  <div class="user-menu__logo">
-    <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-  </div>
+  @@include('layout/_user-menu-noauth-bottom.html', {})
   
 </div>
 
@@ -260,7 +245,7 @@
 <div id="user__login-bank-id" style="display: none;">
   <div class="user-menu__top login-bank-id">
     <div class="user-menu__top-content">
-      <div class="close-menu" data-target-screen="#user__login" data-current-screen="#user__login-bank-id">
+      <div class="close-menu close-user-menu" data-target-screen="#user__login" data-current-screen="#user__login-bank-id">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M2 2L22 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -274,89 +259,73 @@
         </svg>
       </div>
       <div class="title">logga in</div>
-      <div class="screen__title">
-        <h3>Logga in med lösenord</h3>
-        <p>Kom ihåg att du behöver BankID säkerhetsapp installerad på din enhet.
-        </p>
-        <p>
-          <span>Din BankID-app startar..</span> <br>
-          
-          (<a href="javascript:;">Klicka här</a> om den inte öppnas automatiskt)</p>
+      <div class="screen-scan-qr">
+        <div class="screen__title">
+        <h3>Scanna QR-koden</h3>
+        <p>Öppna din BankID-app och scanna QR-koden för att logga in.</p>
+        
+        </div>
+        <div class="qr-wrapper">
+            <img src="../assets/img/mockup/user-menu-qr-code.png" alt="">
+        </div>
       </div>
+      <div class="screen-loading" style="display: none;">
+        <div class="screen__title">
+          <h3>Loggar in</h3>
+        </div>
+        <div class="loader-wrapper">
+          <div class="bank-loader">
+            <div class="loader"></div>
+          </div>
+        </div>
+      </div>
+      <div class="screen-error" style="display: none;">
+        <div class="screen__title">
+          <h3>Inloggningen misslyckades</h3>
+        </div>
+        <div class="loader-wrapper">
+          <div class="declined">
+            <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M54.2299 34L34 54.2299" stroke="#F56363" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M34 34L54.2299 54.2299" stroke="#F56363" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="44" cy="44" r="40" stroke="#F56363" stroke-opacity="0.5" stroke-width="8"/>
+              </svg>
 
-      <div class="loader-wrapper">
-        <div class="bank-loader">
-            <svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.72142 15.1713L11.0347 7.15851H9.63188C8.97526 7.15851 8.1296 6.80217 7.88088 6.14728C7.80129 5.92578 7.61226 5.16495 8.69669 4.42339C9.08469 4.16336 9.33341 3.87444 9.38316 3.65293C9.4329 3.42179 9.37321 3.21955 9.20408 3.06546C8.96531 2.84395 8.49771 2.71875 7.90078 2.71875C6.89595 2.71875 6.18958 3.27733 6.11993 3.68182C6.07019 3.98037 6.30896 4.22114 6.51789 4.37523C7.14467 4.82788 7.2939 5.48276 6.90589 6.09913C6.50794 6.73476 5.64239 7.14888 4.71715 7.15851H3.28451C3.16513 7.9386 1.21515 19.8999 1.06592 20.8438H8.80613C8.87577 20.4296 9.23393 18.1664 9.72142 15.1713Z" fill="#074658"/>
-            <path d="M0.817183 23.6426H3.88402C5.19152 23.6426 5.50878 24.3123 5.41264 24.9237C5.33573 25.4187 4.99924 25.7875 4.4224 26.0301C5.15306 26.3116 5.44148 26.7483 5.33573 27.4374C5.20113 28.3012 4.46086 28.9418 3.48985 28.9418H0L0.817183 23.6426ZM2.84572 25.836C3.44178 25.836 3.72059 25.5157 3.77827 25.1372C3.83595 24.7296 3.65329 24.4481 3.05723 24.4481H2.52846L2.31695 25.836H2.84572ZM2.51885 28.1168C3.13414 28.1168 3.48985 27.8645 3.57638 27.3501C3.64368 26.9036 3.39371 26.6416 2.79765 26.6416H2.20159L1.97085 28.1265H2.51885V28.1168Z" fill="#074658"/>
-            <path d="M9.63325 28.9798C8.83529 29.038 8.45074 28.9506 8.25846 28.6012C7.83545 28.8633 7.36436 28.9992 6.86444 28.9992C5.96073 28.9992 5.64347 28.5236 5.73 27.9995C5.76845 27.7472 5.91266 27.5045 6.1434 27.3007C6.64332 26.864 7.8739 26.8057 8.3546 26.4757C8.39305 26.1069 8.24884 25.9711 7.79699 25.9711C7.26822 25.9711 6.82598 26.1458 6.06648 26.6699L6.24915 25.4664C6.9029 24.9908 7.53741 24.7676 8.26807 24.7676C9.20062 24.7676 10.0274 25.1558 9.8736 26.1846L9.69093 27.3492C9.62364 27.7569 9.64286 27.883 10.0947 27.8927L9.63325 28.9798ZM8.24885 27.1454C7.82583 27.4172 7.03749 27.3686 6.95097 27.9316C6.91251 28.1936 7.07595 28.3877 7.33552 28.3877C7.5951 28.3877 7.89313 28.281 8.14309 28.1063C8.12386 28.0092 8.13348 27.9122 8.16232 27.7278L8.24885 27.1454Z" fill="#074658"/>
-            <path d="M11.123 24.8355H12.7189L12.6323 25.3693C13.1419 24.9326 13.5264 24.7676 14.0264 24.7676C14.9205 24.7676 15.3338 25.3208 15.1896 26.2234L14.7762 28.9312H13.1803L13.5264 26.6893C13.5937 26.2816 13.4687 26.0875 13.1611 26.0875C12.9111 26.0875 12.6804 26.2234 12.4593 26.5243L12.094 28.9215H10.498L11.123 24.8355Z" fill="#074658"/>
-            <path d="M16.4402 23.6426H18.0361L17.6324 26.2436L19.161 24.8364H21.1318L19.1706 26.5833L20.7473 28.9321H18.738L17.5266 27.0298H17.5074L17.219 28.9224H15.623L16.4402 23.6426Z" fill="#074658"/>
-            <path d="M21.8339 23.5625H23.7222L22.8917 29H21.0034L21.8339 23.5625Z" fill="#074658"/>
-            <path d="M24.601 23.5625H27.4235C29.605 23.5625 30.2356 25.089 30.0289 26.3561C29.8324 27.5932 28.8192 29 26.9065 29H23.7222L24.601 23.5625ZM26.4309 27.703C27.3925 27.703 27.9197 27.244 28.0748 26.2763C28.1886 25.5579 27.9611 24.8495 26.8962 24.8495H26.3689L25.914 27.703H26.4309Z" fill="#074658"/>
-            <path d="M19.936 0H12.0819L11.0347 6.52458H12.3684C13.0995 6.52458 13.791 6.19496 14.0874 5.71991C14.1862 5.5648 14.2257 5.42907 14.2257 5.30304C14.2257 5.03158 14.038 4.82799 13.8503 4.69227C13.3366 4.31417 13.2279 3.91669 13.2279 3.63554C13.2279 3.57737 13.2279 3.5289 13.2378 3.48042C13.3464 2.79209 14.2949 2.0456 15.5496 2.0456C16.3004 2.0456 16.8734 2.2201 17.2192 2.54003C17.5254 2.82118 17.644 3.21866 17.5551 3.63554C17.4464 4.12997 16.9426 4.53715 16.6561 4.74074C15.8953 5.26426 15.9941 5.71991 16.0435 5.85564C16.2016 6.26282 16.8042 6.52458 17.2686 6.52458H19.3037V6.53427C22.07 6.55366 23.5519 7.80429 23.0875 10.7127C22.6529 13.4176 20.5387 14.5809 18.0194 14.6003L17.0216 20.8438H18.4936C24.7078 20.8438 29.7858 16.9271 30.7836 10.7418C32.0185 3.06355 27.0492 0 19.936 0Z" fill="#074658"/>
-            </svg>
-            
-          <div class="loader"></div>
+          </div>
         </div>
-        <div class="accepted" style="display: none;">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80ZM40 73.3333C58.4095 73.3333 73.3333 58.4095 73.3333 40C73.3333 21.5905 58.4095 6.66667 40 6.66667C21.5905 6.66667 6.66667 21.5905 6.66667 40C6.66667 58.4095 21.5905 73.3333 40 73.3333Z" fill="url(#paint0_angular_0_1)"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M75.9389 32.0024C77.7647 31.7668 79.4358 33.056 79.6714 34.8818C79.8904 36.5791 80.0002 38.2887 80.0002 40.0001C80.0002 41.841 78.5078 43.3334 76.6668 43.3334C74.8259 43.3334 73.3335 41.841 73.3335 40.0001C73.3335 38.5739 73.242 37.1492 73.0595 35.7348C72.8239 33.909 74.1131 32.2379 75.9389 32.0024Z" fill="#6CB490"/>
-            <path d="M57 29L34.3125 51L24 41" stroke="#6CB490" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-            <radialGradient id="paint0_angular_0_1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40 40) scale(40)">
-            <stop stop-color="#6CB490"/>
-            <stop offset="1" stop-color="#6CB490"/>
-            </radialGradient>
-            </defs>
-            </svg>
-            
-            
-        </div>
-        <div class="declined" style="display: none;">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80ZM40 73.3333C58.4095 73.3333 73.3333 58.4095 73.3333 40C73.3333 21.5905 58.4095 6.66667 40 6.66667C21.5905 6.66667 6.66667 21.5905 6.66667 40C6.66667 58.4095 21.5905 73.3333 40 73.3333Z" fill="url(#paint0_angular_201_1137)"/>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M75.9389 32.0024C77.7647 31.7668 79.4358 33.056 79.6714 34.8818C79.8904 36.5791 80.0002 38.2887 80.0002 40.0001C80.0002 41.841 78.5078 43.3334 76.6668 43.3334C74.8259 43.3334 73.3335 41.841 73.3335 40.0001C73.3335 38.5739 73.242 37.1492 73.0595 35.7348C72.8239 33.909 74.1131 32.2379 75.9389 32.0024Z" fill="#F56363"/>
-            <path d="M52 28L28 52" stroke="#F56363" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M28 28L52 52" stroke="#F56363" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-            <radialGradient id="paint0_angular_201_1137" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(40 40) scale(40)">
-            <stop stop-color="#F56363"/>
-            <stop offset="1" stop-color="#F56363"/>
-            </radialGradient>
-            </defs>
-            </svg>
-            
-            
-            
-            
-        </div>
+        <p class="retry-link"> <a href="javascript:;">Försök igen</a></p>
       </div>
-      <p class="openbankid"> <a href="javascript:;">Öppna BankID på annan enhet</a></p>
+      
+      
+      
      
 
     </div>
     <div class="clip"></div>
   </div>
-  <div class="user-menu__logo">
-    <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-  </div>
+  @@include('layout/_user-menu-noauth-bottom.html', {})
   
 </div>
-
+ 
 <!-- Menu create account -->
 <div id="user__create-account"  style="display: none;">
   <div class="user-menu__top create-account">
     <div class="user-menu__top-content">
-      <div class="close-menu" data-target-screen="#user__start" data-current-screen="#user__create-account">
+      <div class="close-menu close-user-menu"  data-current-screen="#user__create-account" data-target-screen="">
         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 1L1 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 1L1 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 1L21 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           
       </div>
-      <div class="go-back"  data-target-screen="#user__start" data-current-screen="#user__create-account">
+      <div class="go-back close-user-menu"  data-target-screen="" data-current-screen="#user__create-account">
+        <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M29 10.4546L1.00002 10.6364" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.6362 20.2727L0.999874 10.6364L10.6362 1" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <div class="go-back go-back-mobile"  data-target-screen="#user__start" data-current-screen="#user__create-account">
         <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M29 10.4546L1.00002 10.6364" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M10.6362 20.2727L0.999874 10.6364L10.6362 1" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -364,41 +333,36 @@
       </div>
       <div class="title">skapa konto</div>
       <div class="screen__title">
-        <div class="screen__title-icon">
-          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.75">
-            <path d="M26.0007 2V11.6003" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M26.0007 40.3997V50" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9.03149 9.03149L15.8237 15.8237" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M36.1772 36.1772L42.9695 42.9695" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M2 26.0008H11.6003" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M40.4004 26.0008H50.0007" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9.03149 42.9695L15.8237 36.1772" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M36.1772 15.8237L42.9695 9.03149" stroke="#074658" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-            </svg>
-            
-        </div>
-        <h3>Logga in med lösenord</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+        <h3>Skapa ditt konto</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div class="user__form">
         <form action="">
           <div class="field">
-            <label for="user_email_register">Mail <span>(namn@mail.se)</span></label>
-            <input type="email" id="user_email_register" name="user_email_register">
-            
-            
+            <label for="user_mobile">Personnr <span>ÅÅÅÅMMDDNNNN</span> </label>
+            <input type="text" id="user_mobile" name="user_mobile" placeholder="ÅÅÅÅMMDDNNNN">
+            <div class="error-tooltip person-error">
+              Felaktig personnr.
+          </div>
           </div>
           <div class="field">
-            <label for="user_mobile">Mobil <span>(07XXXXXXXX)</span> </label>
-            <input type="text" id="user_mobile" name="user_mobile">
-            
+            <label for="user_email_register">Mail <span>(namn@mail.se)</span></label>
+            <input type="email" id="user_email_register" name="user_email_register" placeholder="namn@mail.se">
+            <div class="error-tooltip email-create-error">
+              Felaktig mailadress. 
           </div>
-          <p class="form_desc">
-            Genom att klicka på “Bekräfta med BankID" godkänner du vår integritetspolicy, kommunikation via nyhetsbrev och <a href="javascript:;">våra villkor</a>
-          </p>
-          <a class="button active mb-0" href="javascript:;">
+          </div>
+          <div class="field field__chk">
+            
+            <input type="checkbox" id="create-conto-chk" class="hidden-checkbox">
+            <label for="create-conto-chk" class="conto-chk-label"></label>
+            <label for="create-conto-chk">Jag godkänner Miljonlotteriets <a href="">Villkor</a><br>och kommunikation via nyhetsbrev.</label>
+            <div class="error-tooltip create-chk-error">
+              Villkor måste godkännas för att gå vidare. 
+          </div>
+          </div>
+
+          <a class="button mb-0" href="javascript:;" id="create-konto-cta">
             <div class="button__icon">
               <svg width="31" height="29" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9.72142 15.1713L11.0347 7.15851H9.63188C8.97526 7.15851 8.1296 6.80217 7.88088 6.14728C7.80129 5.92578 7.61226 5.16495 8.69669 4.42339C9.08469 4.16336 9.33341 3.87444 9.38316 3.65293C9.4329 3.42179 9.37321 3.21955 9.20408 3.06546C8.96531 2.84395 8.49771 2.71875 7.90078 2.71875C6.89595 2.71875 6.18958 3.27733 6.11993 3.68182C6.07019 3.98037 6.30896 4.22114 6.51789 4.37523C7.14467 4.82788 7.2939 5.48276 6.90589 6.09913C6.50794 6.73476 5.64239 7.14888 4.71715 7.15851H3.28451C3.16513 7.9386 1.21515 19.8999 1.06592 20.8438H8.80613C8.87577 20.4296 9.23393 18.1664 9.72142 15.1713Z" fill="white"/>
@@ -414,7 +378,7 @@
                 
               </div>
             <div class="button__text">
-              <h3>Bekräfta med BankID</h3>
+              <h3>Skapa konto</h3>
             </div>
 
           </a>
@@ -427,9 +391,7 @@
     </div>
     <div class="clip"></div>
   </div>
-  <div class="user-menu__logo">
-    <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-  </div>
+  @@include('layout/_user-menu-noauth-bottom.html', {})
   
 </div>
 
@@ -437,19 +399,19 @@
 <div id="user__register-lottery"  style="display: none;">
   <div class="user-menu__top register-lottery">
     <div class="user-menu__top-content">
-      <div class="close-menu"  data-target-screen="#user__start" data-current-screen="#user__register-lottery">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 1L1 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <div class="close-menu close-user-menu"  data-target-screen="#user__start" data-current-screen="#user__register-lottery">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L2 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+          <path d="M2 2L22 22" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
           
       </div>
-      <!-- <div class="go-back" data-target-screen="#user__start" data-current-screen="#user__register-lottery">
+      <div class="go-back" data-target-screen="#user__start" data-current-screen="#user__register-lottery">
         <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M29 10.4546L1.00002 10.6364" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           <path d="M10.6362 20.2727L0.999874 10.6364L10.6362 1" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-      </div> -->
+      </div>
       <div class="title">Registrera lotter</div>
       <div class="screen__title">
         
@@ -476,7 +438,7 @@
           </div>
 
         </a>
-        <a class="button mb-0" href="javascript:;">
+        <a class="button mb-0" href="javascript:;"  data-target-screen="#user__login-credentials" data-current-screen="#user__register-lottery">
           <div class="button__icon">
             <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20.1953 11.8032H3.39941C2.07425 11.8032 1 12.8775 1 14.2026V22.6006C1 23.9257 2.07425 25 3.39941 25H20.1953C21.5205 25 22.5947 23.9257 22.5947 22.6006V14.2026C22.5947 12.8775 21.5205 11.8032 20.1953 11.8032Z" stroke="#074658" stroke-opacity="0.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -495,8 +457,6 @@
     </div>
     <div class="clip"></div>
   </div>
-  <div class="user-menu__logo">
-    <img src="assets/img/brand/ml-logotype.svg" alt="Miljonlotteriet">
-  </div>
+  @@include('layout/_user-menu-noauth-bottom.html', {})
   
 </div>
