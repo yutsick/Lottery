@@ -5,55 +5,285 @@
     width: 100%;
     top: 0;
     z-index: 1004;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0 7px 10px;
+
+    @media (max-width:$screen-xs) {
+        display: block;
+        padding: 0;
+
+    }
+
 
     &__holder {
         display: flex;
-        flex-wrap: wrap;
-        padding: 5px 10px 0 0;
+
+        //flex-wrap: wrap;
+        @media (max-width:$screen-xs) {
+            justify-content: space-between;
+            border-bottom: 1px solid #D3DCDE;
+        }
+
         max-width: 1400px;
-        margin: 0 auto;
+
+        &:first-child {
+            @media (max-width:$screen-xs) {
+                height: 34px;
+                padding: 4px;
+
+            }
+        }
+
+        &--right {
+            @media (max-width:$screen-xs) {
+                position: relative;
+                height: 39px;
+                align-items: center;
+            }
+        }
+
+        &--main {
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        &--logged {
+            display: flex;
+            align-items: center;
+            margin-left: 12px;
+            gap: 5px;
+            font: 400 12px/22px $apercu;
+            color: rgba(0, 58, 78, 0.75);
+            letter-spacing: 0.24px;
+
+            .text {
+                @media (max-width: $screen-md) {
+                    display: none;
+                }
+            }
+
+            .timespent {
+                font-weight: 700;
+            }
+        }
+
+        &--conto {
+            margin-right: -500px;
+           display: flex;
+            font: 400 12px/1em $base-font-family;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            transition: 0.2s ease-in-out;
+
+            @media (max-width:$screen-xs) {
+                position: absolute;
+                top: 9px;
+            }
+
+            &.active {
+                transition: 0.2s ease-in-out;
+            }
+
+            .conto {
+
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 0 16px;
+                    border-left: solid 1px rgba(7, 70, 88, 0.20);
+
+                    @media(max-width: $screen-xs) {
+                        border-left: none;
+                    }
+
+                    &-text {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        font-size: 14px;
+                        line-height: 14px;
+                        letter-spacing: 0.28px;
+                        @media(max-width: $screen-md) {
+                            font-size: 12px;
+                            line-height: 12px;
+                        }
+                        @media(max-width: $screen-xs) {
+                            display: block;
+                            font-size: 14px;
+                            line-height: 14px;
+                            color: rgba(7, 70, 88, 0.75)
+                        }
+                    }
+
+                    &-title {
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        line-height: 12px;
+                        letter-spacing:normal;
+                        font-family: $base-font-family;
+                        @media(max-width: $screen-md) {
+                            font-size: 12px;
+                            line-height: 12px;
+                        }
+                        @media(max-width: $screen-xs) {
+                            display: block;
+                            font-size: 10px;
+                            line-height: 10px;
+                            color: #074658;
+                            letter-spacing: 0.2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &--buttons {
+            transition: 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            padding-right: 16px;
+            background-color: #f2f5f7;
+            position: relative;
+            z-index: 2;
+
+            &.buttons {
+                @media(max-width:$screen-xs) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .buttons {
+            &-item {
+                padding: 0 16px;
+                border-left: solid 1px rgba(7, 70, 88, 0.20);
+                font: 700 12px/24px $apercu;
+                color: #3D6978;
+
+                @media (max-width:$screen-xs) {
+                    flex: 1 1;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 22px;
+                    font-weight: 400;
+                    justify-content: center;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                    @media (max-width:$screen-xs){
+                        padding-right: 16px;
+                    }
+                }
+
+                &.toggle {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    height: 24px;
+                    @media (max-width:$screen-xs) {
+                        border: none;
+                        justify-content: center;
+                    }
+
+                    span {
+                        margin: 1px 8px 0 0;
+                        transition: 0.2s ease-in-out;
+
+                        @media (max-width:$screen-xs) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            &-slide {
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                transition: 0.2s ease-in-out;
+
+                @media (max-width:$screen-xs) {
+                    height: 100%;
+                    padding: 5px 0;
+
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #3D6978;
+                }
+
+
+            }
+
+            &.active {
+                transition: 0.2s ease-in-out;
+
+                .toggle {
+                    @media (max-width:$screen-xs) {
+                        border-left: solid 1px rgba(7, 70, 88, 0.20);
+                        justify-content: start;
+                    }
+
+                    span {
+                        transform: rotate(180deg);
+                        margin-top: -3px;
+                        transition: 0.2s ease-in-out;
+
+                        @media (max-width:$screen-xs) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     &__item {
         display: flex;
         align-items: center;
-        margin: 0 0 5px 5px;
-
-        &--right {
-            margin-left: auto;
-        }
 
         span {
             margin-top: 2px;
             margin: 2px 5px 0;
             font-size: 12px;
+
             &.text {
                 display: none;
             }
         }
     }
+
+    .d-desk-false{
+        display: none !important;
+        @media (max-width: $screen-md) {
+            display: inherit !important;
+        }
+    }
+
+    .d-tab-false{
+        @media (max-width: $screen-md) {
+            display: none !important;
+        }
+        @media (max-width: $screen-xs) {
+            display: inherit !important;
+        }
+    }
+
+    .d-mob-false{
+        @media (max-width: $screen-xs) {
+            display: none !important;
+        }
+    }
     
-    @include min-screen($screen-sm-min) {
-        &__holder {
-            padding: 5px $padding-default 0 15px;
-        }
 
-        &__item {
-            span {
-                margin-top: 1px;
-                &.text {
-                    display: inline-block;
-                }
-                &.timespent {
-                    margin: 2px 0 0;
-                }
-            }
-        }
-    }
 
-    @include min-screen($screen-lg-min) {
-        &__holder {
-            padding: 5px $padding-default 0 15px;
-        }
-    }
 }

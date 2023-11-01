@@ -54,6 +54,7 @@ import pageBingo from "./components/page-bingo";
 import blockHeroWhole from "./components/block-hero";
 import cartQuantity from "./components/cart-quantity";
 import bankIDForm from "./components/bankid-form";
+import balanceBarJS from "./components/balance-bar";
 import timeSpent from "./components/time-spent";
 import Odometer from "./components/odometer";
 import Carousel from "./components/carousel";
@@ -155,6 +156,7 @@ $(function () {
 	pageBingo();
 	blockHeroWhole();
 	bankIDForm();
+	balanceBarJS();
 	scroller();
 	orderSwitcher();
 	slideOutNavigation();

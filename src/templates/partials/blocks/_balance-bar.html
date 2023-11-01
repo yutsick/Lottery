@@ -1,28 +1,119 @@
 <div class="ml-2017">
     <div class="balance-bar">
-        <div class="balance-bar__holder">
-            <div class="balance-bar__item">
-                <a href="#">
-                    <img src="assets/img/icons/spelstopp.svg" />
-                </a>
+        <div class="balance-bar__holder"> 
+            <div class="balance-bar__holder--main">
+                <div class="balance-bar__item">
+                    <a href="#">
+                        <img src="assets/img/icons/spelstopp.svg" />
+                    </a>
+                </div>
+                <div class="balance-bar__item">
+                    <a href="#">
+                        <img src="assets/img/icons/sjalvtest.svg" />
+                    </a>
+                </div>
+                <div class="balance-bar__item">
+                    <a href="#">
+                        <img src="assets/img/icons/spelbudget.svg" />
+                    </a>
+                </div>
             </div>
-            <div class="balance-bar__item">
-                <a href="#">
-                    <img src="assets/img/icons/sjalvtest.svg" />
-                </a>
-            </div>
-            <div class="balance-bar__item">
-                <a href="#">
-                    <img src="assets/img/icons/spelbudget.svg" />
-                </a>
-            </div>
+            
             @@if (logged_in === 'true') {
-                <div class="balance-bar__item balance-bar__item--right">
+                <div class="balance-bar__holder--logged ">
                     <img src="assets/img/icons/schedule-button.svg" />
                     <span class="text">Tid inloggad</span>
                     <span class="timespent js-timespent" data-time="2019-09-23T13:00:00"></span>
                 </div>
             }
         </div>
+        <div class="balance-bar__holder balance-bar__holder--right
+                    @@if(context.links_display_desk == 'false'
+                    || context.visa_saldo_display_desk == 'false' 
+                    && context.insättning_display_desk == 'false' 
+                    && context.registrera_lott_display_desk == 'false'){d-desk-false}
+
+                    @@if(context.links_display_tab == 'false'
+                    || context.visa_saldo_display_tab == 'false' 
+                    && context.insättning_display_tab == 'false' 
+                    && context.registrera_lott_display_tab == 'false'){d-tab-false}
+
+                    @@if(context.links_display_mob == 'false'
+                    || context.visa_saldo_display_mob == 'false' 
+                    && context.insättning_display_mob == 'false' 
+                    && context.registrera_lott_display_mob == 'false'){d-mob-false} 
+                    ">
+            <div class="balance-bar__holder--conto">
+                <div class="conto__item">
+                    <div class="cont__item-icon">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.6086 8.65168V6.17345C15.6086 5.62116 15.1609 5.17345 14.6086 5.17345H2C1.44772 5.17345 1 5.62116 1 6.17345V15.3038C1 15.8561 1.44772 16.3038 2 16.3038H14.6086C15.1609 16.3038 15.6086 15.8561 15.6086 15.3038V13.1734" stroke="#F98F00" stroke-width="1.6"/>
+                            <rect x="11.4351" y="8.65193" width="5.56518" height="4.17388" rx="2" stroke="#F98F00" stroke-width="1.6"/>
+                            <path d="M14.3756 5.43762L14.0099 3.76242C13.8922 3.22283 13.3593 2.88089 12.8197 2.99865L4.13055 4.8951" stroke="#F98F00" stroke-width="1.6"/>
+                            <path d="M11.9294 3.15324L11.2597 1.88434C11.002 1.39591 10.397 1.20892 9.9086 1.46669L2.79114 5.22295" stroke="#F98F00" stroke-width="1.6"/>
+                            </svg>
+                            
+                    </div>
+                    <div class="conto__item-text">
+                        <div class="conto__item-title">
+                        Spelplånbok
+                        </div>
+                        <div class="conto__item-balance">
+                            <span>1000</span> kr
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="conto__item">
+                    <div class="cont__item-icon">
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.57138 5.37609H16.4286M1.12209 5.79352L8.54178 15.0059C8.59571 15.0732 8.66508 15.1277 8.74454 15.1652C8.82399 15.2027 8.9114 15.2222 9 15.2222C9.0886 15.2222 9.17601 15.2027 9.25546 15.1652C9.33492 15.1277 9.40429 15.0732 9.45822 15.0059L16.8779 5.79352C16.9509 5.7026 16.9932 5.59257 16.9992 5.47807C17.0053 5.36357 16.9748 5.25001 16.9118 5.1525L14.395 1.26359C14.3432 1.18311 14.2708 1.11665 14.1846 1.07051C14.0984 1.02438 14.0013 1.00011 13.9025 1H4.09747C3.99871 1.00011 3.90162 1.02438 3.81542 1.07051C3.72922 1.11665 3.65678 1.18311 3.60496 1.26359L1.08816 5.1525C1.02518 5.25001 0.994696 5.36357 1.00076 5.47807C1.00682 5.59257 1.04914 5.7026 1.12209 5.79352Z" stroke="#D96195" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.1425 1.54701L12.4282 5.37609M12.4282 5.37609L8.99964 1L5.57105 5.37609M12.4282 5.37609L8.99964 14.6753L5.57105 5.37609M3.85675 1.54701L5.57105 5.37609" stroke="#D96195" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                    </div>
+                    <div class="conto__item-text">
+                        <div class="conto__item-title">
+                        Vinstkonto
+                        </div>
+                        <div class="conto__item-balance">
+                            <span>1000</span> kr
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="balance-bar__holder--buttons buttons buttons-slide">
+                <div class="toggle buttons-item 
+                    @@if(context.visa_saldo_display_desk == 'false'){d-desk-false}
+                    @@if(context.visa_saldo_display_tab == 'false'){d-tab-false}
+                    @@if(context.visa_saldo_display_mob == 'false'){d-mob-false}
+                    ">
+                
+                    
+                    <span>
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.75" d="M5 9L1 5.08163L5 1" stroke="#074658" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    Visa saldo
+                </div>
+                
+                    <div class="buttons-item 
+                        @@if(context.insättning_display_desk == 'false'){d-desk-false}
+                        @@if(context.insättning_display_tab == 'false'){d-tab-false}
+                        @@if(context.insättning_display_mob == 'false'){d-mob-false}
+                    
+                    "><a href="#">Insättning</a></div>
+                    <div class="buttons-item
+                        @@if(context.registrera_lott_display_desk == 'false'){d-desk-false}
+                        @@if(context.registrera_lott_display_tab == 'false'){d-tab-false}
+                        @@if(context.registrera_lott_display_mob == 'false'){d-mob-false}
+                    
+                    "><a href="#">Registrera lott</a></div>
+                
+            </div>
+        </div>
+
     </div>
 </div>
