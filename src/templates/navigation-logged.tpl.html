@@ -1,7 +1,13 @@
 @@include('layout/_header.html', {
   "class": "page-front logged-out",
   "logged_in": false,
+  "balance_bar":false,
   "top_bar": false,
+  "show_submenu" :{
+    "desk": false,
+    "tab": false,
+    "mob": false
+  }
   })
   
   @@include('layout/_top-new_nav.html', { "logged_in": true, "show_cart": false })
