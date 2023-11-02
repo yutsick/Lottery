@@ -3,7 +3,7 @@
     display: flex;
     padding: 40px 40px 200px;
     gap: 20px;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
     border-bottom: 1px solid #D3DCDE;
     background: #EFF3F5;
@@ -24,7 +24,7 @@
     max-width: 670px;
     display: flex;
     justify-content: flex-end;
-    padding: 20px 31px;
+    padding: 36px 34px 16px 0;
     align-items: center;
     background-image: url('../img/mockup/Group\ 839.svg');
     background-position: center;
@@ -39,7 +39,7 @@
 .main-block__bar {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 17px;
 }
 
 .bar-info {
@@ -157,6 +157,7 @@
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 8px;
     padding: 20px 0 0;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
@@ -185,6 +186,15 @@
     padding: 0 19px;
     margin: 0;
     max-width: 265px;
+    margin-top: 9px;
+    @media (max-width: $screen-md) {
+        font: 400 14px/18px $apercu-regular-font;
+        
+    }
+    @media (max-width: $screen-xs) {
+        font: 400 16px/20px $apercu-regular-font;
+        
+    }
 }
 
 .sup-block__footer {
@@ -254,6 +264,11 @@
 
 .sup-block.long {
     padding: 0;
+    h3{
+        font: 700 20px/24px $apercu-regular-font;
+        text-transform: none;
+        padding-left: 24px;
+    }
 }
 
 .sup-block__row {
@@ -265,17 +280,19 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 24px 0;
+    padding-top: 24px;
 }
 
 .sup-block__text.long {
-    max-width: 358px;
+    max-width: 405px;
     color: #074658;
     font-family: $apercu-regular-font;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+    margin-bottom: 37px;
+    padding-left: 24px;
 }
 
 .sup-infoCube {
@@ -286,7 +303,6 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    height: 184px;
     border-radius: 16px;
     background: #003E52;
 }
@@ -305,7 +321,7 @@
     flex-direction: column;
     gap: 8px;
     align-items: flex-start;
-    padding: 0 24px;
+    
 }
 
 @media screen and (max-width: 1024px) {
@@ -367,9 +383,8 @@
     }
 
     .sup-block__text {
-        font-size: 12px;
-        line-height: 14px; 
-        max-width: 200px; 
+
+        max-width: 265px; 
     }
 
     .main-block, .main-block.long {
