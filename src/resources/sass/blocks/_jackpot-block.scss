@@ -1,0 +1,442 @@
+
+.section {
+    display: flex;
+    padding: 40px 40px 200px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #D3DCDE;
+    background: #EFF3F5;
+    &__three-col{
+        @media (max-width: $screen-md) {
+            flex-direction: column;
+        }
+    }
+    &__two-col{
+        @media (max-width: $screen-sm) {
+            flex-direction: column;
+        }
+    }
+}
+
+.main-block {
+    width: 100%;
+    max-width: 670px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 31px;
+    align-items: center;
+    background-image: url('../img/mockup/Group\ 839.svg');
+    background-position: center;
+    background-size: cover; 
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-color: #003E52;
+    border-radius: 16px;
+    // height: 163px
+}
+
+.main-block__bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bar-info {
+    color: #003E52;
+    text-align: center;
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+    padding: 6px 0 7px;
+}
+
+.bar-value {
+    display: flex;
+    flex-direction: column;
+    background: url('../img/mockup/Union2.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 334px;
+    height: 105px;
+}
+
+.bar-value__row {
+    display: flex;
+    align-items: center;
+    padding: 0 4px 12px;
+}
+
+.bar-value__title {
+    color: #003E52;
+    text-align: center;
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0.64px;
+    text-transform: uppercase;
+    padding: 6px 0 7px;
+}
+
+.bar-value__nums {
+    display: flex;
+}
+
+.bar-value__nums span {
+    padding: 25px 0;
+    color: white;
+    text-align: center;
+    font-family: $apercu-regular-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.96px;
+    width: 40px;
+}
+
+.bar-value__nums span:first-child {
+    color: rgba(255, 255, 255, 0.50);;
+}
+
+.bar-value__nums span:nth-child(odd) {
+    background-color: #004C6C;
+}
+
+.bar-value__nums span:nth-child(even) {
+    background-color: #003D50;
+}
+
+.bar-value__magnitude {
+    color: #003E52;
+    text-align: center;
+    font-family: $apercu-regular-font;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    width: 40px;
+}
+
+.bar-value__info {
+    color: #FFF;
+    text-align: center;
+    font-family: $apercu-regular-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; 
+}
+
+.bar-value__info.accent {
+    font-weight: 700;
+}
+
+/* sup-blocks */
+
+.sup-section__row {
+    display: flex;
+    gap: 20px;
+}
+
+.sup-block {
+    border-radius: 16px;
+    /* max-width: 325px;
+    width: 100%; */
+    width: 325px;
+    height: 100%;
+    max-height: 190px;
+    background: #FFF;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 0 0;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+}
+
+.sup-block__title {
+    color: #074658;
+    font-family: Proxima Nova;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 12px; 
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    padding: 0 19px;
+    margin: 0;
+}
+
+.sup-block__text {
+    color: #074658;
+    font-family: $apercu-regular-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    padding: 0 19px;
+    margin: 0;
+    max-width: 265px;
+}
+
+.sup-block__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-image: url('../img/mockup/Union.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    // height: 88px;
+    background-size: contain;
+    padding: 15px 15px 10px 16px;
+    @media (max-width: $screen-xs) {
+        background-size: contain;
+    }
+}
+
+.sup-block:last-child .sup-block__footer {
+    padding: 15px 28px 10px 16px;
+}
+
+.sup-block__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.icon {
+    position: relative;
+    top: 4px;
+}
+
+.info-title {
+    color: #D2E9F7;
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px; 
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.info-value {
+    color: #FFF;
+    font-family: $apercu-regular-font;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    letter-spacing: 0.8px;
+}
+
+/* second  section */
+
+.main-block.long {
+    // height: 144px;
+}
+
+.main-block.long, .sup-block.long  {
+    width: 100%;
+    max-width: 670px;
+}
+
+.sup-block.long {
+    padding: 0;
+}
+
+.sup-block__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sup-block__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+}
+
+.sup-block__text.long {
+    max-width: 358px;
+    color: #074658;
+    font-family: $apercu-regular-font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.sup-infoCube {
+    width: 200px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 184px;
+    border-radius: 16px;
+    background: #003E52;
+}
+
+.tooltip-info {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.sup-block__info.long {
+    display: flex;
+    width: 100%;
+    max-width: 153px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    padding: 0 24px;
+}
+
+@media screen and (max-width: 1024px) {
+    
+
+    .sup-block__title {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section {
+        flex-direction: column;
+        padding: 24px 24px 100px;
+        
+    }
+
+    .main-block, .main-block.long {
+        // width: 90%;
+        background-size: cover;
+        background-position-x: -50px;
+    }
+
+    .main-block.long {
+        background-position-x: -40px;
+    }
+
+    .info-title {
+        font-size: 12px;
+    }
+    .sup-block__footer .icon{
+        top:0;
+    }
+
+
+    .sup-block__footer {
+        padding: 15px 6% 10px 16px;
+        .icon{
+            width:31.7%;
+        }
+    }
+
+    .sup-block:last-child .sup-block__footer {
+        padding: 15px 10% 10px 16px;
+        .icon{
+            width:25%;
+        }
+    }
+}
+
+@media (max-width: 490px) {
+    .d-sm-none{
+        display: none;
+    }
+    .sup-block__title {
+        font-size: 8px; 
+        line-height: 8px; 
+    }
+
+    .sup-block__text {
+        font-size: 12px;
+        line-height: 14px; 
+        max-width: 200px; 
+    }
+
+    .main-block, .main-block.long {
+        height: 289px;
+        // max-width: 364px;
+        background-image: url('../img/mockup/Union1-mob.svg');
+        background-size: cover;
+        background-position: center;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .bar-value{
+        height:93px;
+        &__row{
+            justify-content: center;
+        }
+        &__nums{
+            span{
+                width: 35px;
+                padding: 19px 0;
+            }
+        }
+    }
+
+    .sup-section__row {
+        flex-direction: column;
+    }
+
+    .sup-block {
+        width: 100%;
+    }
+
+    .sup-section__row {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .sup-block__footer {
+        padding: 5px 6.5% 10px 16px;
+        background-size: 100% 91px;
+    }
+
+    .sup-block:last-child .sup-block__footer {
+        padding: 5px 9.5% 10px 16px;
+         .icon.fixm {
+            width: 26%;
+        }
+    }
+
+    .icon {
+        top: -2px;
+        width: 27%;
+    }
+
+   
+
+    .sup-block__row {
+        flex-direction: column;
+    }
+
+    .sup-infoCube {
+        width: 100%;
+        flex-direction: row-reverse;
+        height: 100%;
+        max-height: 120px;
+        padding: 12px 0;
+    }
+}
