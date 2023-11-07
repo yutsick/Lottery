@@ -1,31 +1,26 @@
 
 .section {
-    display: flex;
-    padding: 40px 40px 200px;
-    gap: 20px;
+    overflow: hidden;
+    margin-bottom: 200px;
     // align-items: center;
     justify-content: center;
     border-bottom: 1px solid #D3DCDE;
     background: #EFF3F5;
-    &__three-col{
-        @media (max-width: $screen-md) {
-            flex-direction: column;
-        }
+    &__item{
+
+        margin: 40px auto;
+
     }
-    &__two-col{
-        @media (max-width: $screen-sm) {
-            flex-direction: column;
-        }
-    }
+
 }
 
 .main-block {
     width: 100%;
-    max-width: 670px;
+
     display: flex;
     justify-content: flex-end;
     padding: 36px 34px 16px 0;
-    align-items: center;
+    align-items: flex-end;
     background-image: url('../img/mockup/Group\ 839.svg');
     background-position: center;
     background-size: cover; 
@@ -33,7 +28,11 @@
     background-repeat: no-repeat;
     background-color: #003E52;
     border-radius: 16px;
+    margin-bottom: 20px;
     // height: 163px
+    @media (max-width:490px) {
+        padding: 36px 0 16px;
+    }
 }
 
 .main-block__bar {
@@ -62,7 +61,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 334px;
+    max-width: 334px;
     height: 105px;
 }
 
@@ -150,9 +149,9 @@
     border-radius: 16px;
     /* max-width: 325px;
     width: 100%; */
-    width: 325px;
+ 
     height: 100%;
-    max-height: 190px;
+    // max-height: 190px;
     background: #FFF;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
     display: flex;
@@ -161,6 +160,7 @@
     gap: 8px;
     padding: 20px 0 0;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
 }
 
 .sup-block__title {
@@ -187,7 +187,7 @@
     margin: 0;
     max-width: 265px;
     margin-top: 9px;
-    @media (max-width: $screen-md) {
+    @media (max-width: 1024px) {
         font: 400 14px/18px $apercu-regular-font;
         
     }
@@ -259,7 +259,7 @@
 
 .main-block.long, .sup-block.long  {
     width: 100%;
-    max-width: 670px;
+
 }
 
 .sup-block.long {
@@ -332,7 +332,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .section {
         flex-direction: column;
@@ -373,7 +373,7 @@
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 768px) {
     .d-sm-none{
         display: none;
     }
@@ -390,11 +390,7 @@
     .main-block, .main-block.long {
         height: 289px;
         // max-width: 364px;
-        background-image: url('../img/mockup/Union1-mob.svg');
-        background-size: cover;
-        background-position: center;
-        align-items: flex-end;
-        justify-content: center;
+        align-items: center;
     }
 
     .bar-value{
@@ -408,20 +404,6 @@
                 padding: 19px 0;
             }
         }
-    }
-
-    .sup-section__row {
-        flex-direction: column;
-    }
-
-    .sup-block {
-        width: 100%;
-    }
-
-    .sup-section__row {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
     }
 
     .sup-block__footer {
@@ -454,4 +436,19 @@
         max-height: 120px;
         padding: 12px 0;
     }
+}
+
+@media (max-width:660px) {
+    .main-block, .main-block.long{
+        padding: 36px 0 16px;
+        background-image: url('../img/mockup/Union1-mob.svg');
+        background-position: top;
+                
+        background-size: cover;
+
+        align-items: flex-end;
+ 
+        justify-content: center;
+    }
+    
 }
