@@ -1,4 +1,33 @@
-
+.jackpot-blocks{
+     @media (min-width:569px) {
+        .col-sm-6{
+                width: 50%;
+            }
+           
+    }
+     @media (min-width:769px) {
+        .col-md-6{
+                width: 50%;
+            }
+        .col-md-3{
+                width: 25%
+        }     
+    }
+   
+    @media (max-width:570px) {
+        .col-sm-6{
+                width: 50%;
+            }
+           
+    }
+    @media (max-width:490px) {
+        .col-xs-12{
+                width: 100%;
+            }
+           
+    }
+    
+}
 .section {
     overflow: hidden;
     margin-bottom: 200px;
@@ -32,6 +61,7 @@
     // height: 163px
     @media (max-width:490px) {
         padding: 36px 0 16px;
+        height: 289px;
     }
 }
 
@@ -63,12 +93,19 @@
     background-position: center;
     max-width: 334px;
     height: 105px;
+    @media (max-width:1025px) {
+        height: unset;
+        max-width: unset;
+    }
 }
 
 .bar-value__row {
     display: flex;
     align-items: center;
     padding: 0 4px 12px;
+    @media (max-width: 1025px) {
+        padding: unset;
+    }
 }
 
 .bar-value__title {
@@ -82,6 +119,11 @@
     letter-spacing: 0.64px;
     text-transform: uppercase;
     padding: 6px 0 7px;
+    @media (max-width: 1025px) {
+        font-size: 14px;
+        line-height: 12px;
+        margin-top: 12px;
+    }
 }
 
 .bar-value__nums {
@@ -99,6 +141,13 @@
     line-height: 24px;
     letter-spacing: 0.96px;
     width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width:1025px) {
+        width: 31px;
+        padding: 14px 0;
+    }
 }
 
 .bar-value__nums span:first-child {
@@ -161,6 +210,14 @@
     padding: 20px 0 0;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.08);
     margin-bottom: 20px;
+    @media (max-width: 1025px) {
+        padding: 17px 0 0;
+        gap: 0;
+    }
+    @media (max-width: 769px) {
+        
+        gap: 20px;
+    }
 }
 
 .sup-block__title {
@@ -186,8 +243,8 @@
     padding: 0 19px;
     margin: 0;
     max-width: 265px;
-    margin-top: 9px;
-    @media (max-width: 1024px) {
+    //margin-top: 9px;
+    @media (max-width: 1025px) {
         font: 400 14px/18px $apercu-regular-font;
         
     }
@@ -205,26 +262,65 @@
     background-position: bottom;
     background-repeat: no-repeat;
     // height: 88px;
-    background-size: contain;
+    background-size: 100% 91px;
     padding: 15px 15px 10px 16px;
-    @media (max-width: $screen-xs) {
+      
+        @media (max-width: 1025px) {
+            background-image: url('../img/mockup/Union-tab.png');
+        }
+    @media (max-width: 769px) {
         background-size: contain;
+        background-image: url('../img/mockup/Union-md.png');
+    }
+    @media (max-width: 570px) {
+        background-image: url('../img/mockup/Union-md-small.png');
+    }
+    @media (max-width: 490px) {
+        background-image: url('../img/mockup/Union-mob.png');
     }
 }
 
-.sup-block:last-child .sup-block__footer {
-    padding: 15px 28px 10px 16px;
-}
+
 
 .sup-block__info {
     display: flex;
     flex-direction: column;
     gap: 6px;
+
 }
 
 .icon {
     position: relative;
     top: 4px;
+    width: 103px;
+
+    @media (max-width:1025px) {
+        
+        width: 82px;
+        top:-15px;
+        height:56px;
+    }
+    @media (max-width:769px) {
+        width: 102px;
+        height: 72px;
+        left:10px;
+        top:0px;
+    }
+    @media (max-width:570px) {
+
+        left:20px;
+
+    }
+    @media (max-width:426px) {
+
+        left:15px;
+
+    }
+    @media (max-width:391px) {
+
+        left: 18px;
+
+    }
 }
 
 .info-title {
@@ -239,6 +335,24 @@
     display: flex;
     gap: 6px;
     align-items: center;
+    @media (max-width:1025px) {
+        gap: 0;
+        position: relative;
+        font-size: 12px;
+        line-height: 12px;
+        max-width: 115px;
+        width: min-content;
+        svg{
+            position: absolute;
+            right:-20px;
+            height: 56px;
+            top:-29px;
+        }
+    }
+    @media (max-width:769px) {
+        max-width: initial;
+        width: initial;
+    }
 }
 
 .info-value {
@@ -255,6 +369,12 @@
 
 .main-block.long {
     // height: 144px;
+    .main-block__bar{
+        gap:15px;
+    }
+    .main-block__bar{
+        margin-top: -6px;
+    }
 }
 
 .main-block.long, .sup-block.long  {
@@ -269,6 +389,7 @@
         text-transform: none;
         padding-left: 24px;
     }
+
 }
 
 .sup-block__row {
@@ -321,29 +442,37 @@
     flex-direction: column;
     gap: 8px;
     align-items: flex-start;
-    
+    margin-left: 27px;
+    align-self: flex-start;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
     
 
     .sup-block__title {
         display: none;
     }
+
+    .sup-block__footer {
+        padding: 0 16px 16px 16px;
+        min-height: 92px;
+    }
+
+    .main-block, .main-block.long{
+        padding: 32px 22px 21px 0;
+    }
+    .main-block__bar{
+        gap:15px;
+    }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 769px) {
 
-    .section {
-        flex-direction: column;
-        padding: 24px 24px 100px;
-        
-    }
+
 
     .main-block, .main-block.long {
         // width: 90%;
         background-size: cover;
-        background-position-x: -50px;
     }
 
     .main-block.long {
@@ -353,27 +482,32 @@
     .info-title {
         font-size: 12px;
     }
+
+    .sup-block__row {
+     
+        min-height: 184px;
+    }
+
     .sup-block__footer .icon{
         top:0;
     }
-
+   
 
     .sup-block__footer {
         padding: 15px 6% 10px 16px;
-        .icon{
-            width:31.7%;
-        }
+
+        background-size: 100% 91px;
+         
+
     }
 
     .sup-block:last-child .sup-block__footer {
-        padding: 15px 10% 10px 16px;
-        .icon{
-            width:25%;
-        }
+        padding: 0 10% 10px 16px;
+
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .d-sm-none{
         display: none;
     }
@@ -388,8 +522,6 @@
     }
 
     .main-block, .main-block.long {
-        height: 289px;
-        // max-width: 364px;
         align-items: center;
     }
 
@@ -399,46 +531,37 @@
             justify-content: center;
         }
         &__nums{
+            @media (max-width:769px) {
+                padding-left: 5px;
+            }
             span{
                 width: 35px;
                 padding: 19px 0;
+                @media (max-width:769px) {
+                    padding: 11px 0;
+                }
             }
         }
+       
     }
 
     .sup-block__footer {
         padding: 5px 6.5% 10px 16px;
-        background-size: 100% 91px;
+  
     }
 
-    .sup-block:last-child .sup-block__footer {
-        padding: 5px 9.5% 10px 16px;
-         .icon.fixm {
-            width: 26%;
-        }
-    }
 
-    .icon {
-        top: -2px;
-        width: 27%;
-    }
 
-   
-
-    .sup-block__row {
-        flex-direction: column;
-    }
 
     .sup-infoCube {
-        width: 100%;
-        flex-direction: row-reverse;
+
         height: 100%;
-        max-height: 120px;
+
         padding: 12px 0;
     }
 }
 
-@media (max-width:660px) {
+@media (max-width:426px) {
     .main-block, .main-block.long{
         padding: 36px 0 16px;
         background-image: url('../img/mockup/Union1-mob.svg');
