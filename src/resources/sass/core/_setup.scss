@@ -54,6 +54,10 @@ $screen-xs-min:              $screen-xs !default;
 //** Deprecated `$screen-phone` as of v3.0.1
 $screen-phone:               $screen-xs-min !default;
 
+
+// tablet standart
+$screen-tablet-min: 569px;
+
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
 $screen-sm:                  768px;
@@ -90,6 +94,7 @@ $breakpoints: (
   ("tiny", 0px, $screen-tiny),
   ("thumb", $screen-tiny + 1px, $screen-phone),
   ("handheld", $screen-phone + 1px, $screen-tablet),
+  ('tablet-min', $screen-tablet + 1px, $screen-tablet-min),
   ("lap", $screen-tablet + 1px, $screen-desktop),
   ("desktop", $screen-desktop, $screen-lg-desktop),
   ("widescreen", $screen-lg-desktop + 1px, null)
