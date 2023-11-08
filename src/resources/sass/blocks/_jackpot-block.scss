@@ -14,7 +14,18 @@
         }     
     }
    
-
+    @media (max-width:570px) {
+        .col-sm-6{
+                width: 50%;
+            }
+           
+    }
+    @media (max-width:490px) {
+        .col-xs-12{
+                width: 100%;
+            }
+           
+    }
     
 }
 .section {
@@ -82,19 +93,14 @@
     background-position: center;
     max-width: 334px;
     height: 105px;
-    @media (max-width:1025px) {
-        height: unset;
-        max-width: unset;
-    }
+
 }
 
 .bar-value__row {
     display: flex;
     align-items: center;
     padding: 0 4px 12px;
-    @media (max-width: 1025px) {
-        padding: unset;
-    }
+ 
 }
 
 .bar-value__title {
@@ -203,7 +209,7 @@
         padding: 17px 0 0;
         gap: 0;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 769px) {
         
         gap: 20px;
     }
@@ -237,7 +243,7 @@
         font: 400 14px/18px $apercu-regular-font;
         
     }
-    @media (max-width: $screen-xs) {
+    @media (max-width: 490px) {
         font: 400 16px/20px $apercu-regular-font;
         
     }
@@ -253,15 +259,76 @@
     // height: 88px;
     background-size: 100% 91px;
     padding: 15px 15px 10px 16px;
+    height: 91px;
+    position: relative;
+    &.jackpott{
+        &::before{
+            content:"";
+            background-image: url('../img/mockup/jackpot-logo.svg');
+            background-size: 100% auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            width: 30.3%;
+            height: 72px;
+            position: absolute;
+            right: 5.5%;
+            top:4px;
+            @media(max-width: 1025px) {
+                right: 8%;
+            }
+            @media(max-width: 768px) {
+                right: 5.5%;
+                height: 91px;
+            }
+            @media(max-width: 490px) {
+                right: 6.5%;
+                height: 91px;
+                width: 24%;
+            }
+            
+        }
+        
+    }
+
+    &.andra{
+        &::before{
+            content:"";
+            background-image: url('../img/mockup/andra-logo.svg');
+            background-size: 100% auto;
+            background-position: center top;
+            background-repeat: no-repeat;
+            width: 22.2%;
+            height: 72px;
+            position: absolute;
+            right: 9.5%;
+            top:4px;
+            @media(max-width: 1025px) {
+                right: 12%;
+            }
+            @media(max-width: 768px) {
+                right: 9.5%;
+                height: 91px;
+            }
+            @media(max-width: 490px) {
+                right: 9.5%;
+                height: 91px;
+                width: 18%;
+            }
+            
+        }
+        
+    }
+    
+
       
         @media (max-width: 1025px) {
             background-image: url('../img/mockup/Union-tab.png');
         }
-    @media (max-width: 768px) {
+    @media (max-width: 769px) {
         background-size: contain;
         background-image: url('../img/mockup/Union-md.png');
     }
-    @media (max-width: 569px) {
+    @media (max-width: 570px) {
         background-image: url('../img/mockup/Union-md-small.png');
     }
     @media (max-width: 490px) {
@@ -275,37 +342,12 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-
+@media (max-width:490px) {
+    width: 100%;
+}
 }
 
-.icon {
-    position: relative;
-    top: 4px;
-    width: 103px;
 
-    @media (max-width:1025px) {
-        
-        width: 82px;
-        top:-15px;
-        height:56px;
-    }
-    @media (max-width:768px) {
-        width: 102px;
-        height: 72px;
-        left:10px;
-        top:0px;
-    }
-    @media (max-width:569px) {
-
-        left:20px;
-
-    }
-    @media (max-width:425px) {
-
-        left:10px;
-
-    }
-}
 
 .info-title {
     color: #D2E9F7;
@@ -319,12 +361,14 @@
     display: flex;
     gap: 6px;
     align-items: center;
+    max-width: 172px;
+    width: min-content;
     @media (max-width:1025px) {
         gap: 0;
         position: relative;
         font-size: 12px;
         line-height: 12px;
-        max-width: 115px;
+        max-width: 75px;
         width: min-content;
         svg{
             position: absolute;
@@ -333,9 +377,14 @@
             top:-29px;
         }
     }
-    @media (max-width:768px) {
-        max-width: initial;
-        width: initial;
+    @media (max-width:490px) {
+        max-width: 100%;
+        width: 100%;
+        svg{
+            position: unset;
+            height: auto;
+            margin-left: 10px;
+        }
     }
 }
 
@@ -450,7 +499,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
 
 
@@ -491,7 +540,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .d-sm-none{
         display: none;
     }
@@ -516,13 +565,13 @@
             justify-content: center;
         }
         &__nums{
-            @media (max-width:768px) {
+            @media (max-width:769px) {
                 padding-left: 5px;
             }
             span{
                 width: 35px;
                 padding: 19px 0;
-                @media (max-width:768px) {
+                @media (max-width:769px) {
                     padding: 11px 0;
                 }
             }
@@ -546,7 +595,7 @@
     }
 }
 
-@media (max-width:425px) {
+@media (max-width:490px) {
     .main-block, .main-block.long{
         padding: 36px 0 16px;
         background-image: url('../img/mockup/Union1-mob.svg');
