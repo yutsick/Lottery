@@ -1,9 +1,6 @@
 
 .sm-wrapper{
-  margin-top: 38px;
-  @media (max-width: $screen-xs) {
-      margin-top: 73px;
-  }
+
   *[data-desk-show = "false"]{
     display: none !important;
   }

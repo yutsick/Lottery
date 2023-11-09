@@ -1,4 +1,6 @@
-@@include('layout/_header.html', {
+  @@include('layout/_top-new_nav.html', { "logged_in": false})
+  
+  @@include('layout/_header.html', {
   "class": "page-front logged-out",
   "logged_in": false,
   "top_bar": false,
@@ -106,7 +108,12 @@
 	}
   })
   
-  @@include('layout/_top-new_nav.html', { "logged_in": false})
 
+  
+  <div class="new-nav-content main-content">
+    @@include('blocks/_jackpot.html',{"blocks_layout":"three_columns", "hide_jackpot_mobile": false})
+
+  @@include('blocks/_jackpot.html',{"blocks_layout":"two_columns", "hide_jackpot_mobile": false})
+  </div>
 
   @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false}) 

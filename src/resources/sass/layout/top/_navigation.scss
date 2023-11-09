@@ -577,7 +577,10 @@
 }
 
 #nav-new {
-  
+    margin-top: 38px;
+  @media (max-width: $screen-xs) {
+      margin-top: 73px;
+  }
 
     &+.message-container {
         position: absolute;
@@ -759,12 +762,7 @@
         }
     }
 
-    .main-content {
-        background: rgba(0, 58, 78, 0.75);
-        display: flex;
-        justify-content: space-between;
-        
-    }
+  
 
     .side-menu {
         width: 100%;
