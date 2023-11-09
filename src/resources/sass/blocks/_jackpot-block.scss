@@ -1,3 +1,10 @@
+.new-nav-content{
+    .block-promotion{
+        @media (min-width: 1024px) {
+            margin-bottom: 60px;
+        }
+    }
+}
 .jackpot-blocks{
     
      @media (min-width:569px) {
@@ -38,7 +45,7 @@
 }
 .section {
     overflow: hidden;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     // align-items: center;
     justify-content: center;
     border-bottom: 1px solid #D3DCDE;
@@ -367,7 +374,10 @@
             @media (max-width:400px) {
                 width: 173px;
                 height: 88px;
-                bottom:10px;
+                bottom:9px;
+            }
+            @media (max-width:320px) {
+                bottom: 8px;
             }
 
         }
@@ -377,6 +387,8 @@
             
              width: 135px;
                 height: 88px;
+                bottom:8px;
+
             @media (min-width:400px){
                width: 122px;
                  height: 88px;
