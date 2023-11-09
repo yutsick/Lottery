@@ -4,7 +4,10 @@ export default function () {
 		$('#user__login .go-back, #user__login-credentials .go-back, #user__create-account .go-back').data('target-screen','#user__start'); 
 	}  
 
-	$("body").css("overflow-x", "hidden");
+	$("#ml-2017").css({
+		"overflow-x": "hidden",
+		"position": "relative",
+	});
 	
 	toggle_nav();
 	reset_nav_on_resize();
