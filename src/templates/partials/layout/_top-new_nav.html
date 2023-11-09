@@ -5,12 +5,12 @@
       <div class="top">
         <div class="top__holder">
           <div class="top__menu-toggle top__menu-toggle--default  ">
-            <div class="buttons">
+            <div class="buttons" id="toggle-nav">
               <button class="js-toggle-nav toggle-nav">
                 <i class="icon icon-burger"></i>
-                <span>Meny</span>
+                
               </button>
-              
+              <span>Meny</span>
             </div>
             @@if(!context.logged_in){
             <div class="top__adv-block">
@@ -74,7 +74,8 @@
       </div>
     
 
-	  <div class="main-content">
+	  <div class="main-content1">
+
       <div id="mobile__overlay"></div>
       <div id="side-menu" class="side-menu">
 				
@@ -102,8 +103,9 @@
        
       </div>
     </div>
-
+      
   </div>
+ 
   @@include('components/_message.html',{
   "msg_image": "assets/img/mockup/ML.png",
   "msg_title": "Nytt meddelande",

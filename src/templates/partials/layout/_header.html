@@ -38,90 +38,90 @@
 
 <body @@if(!context.top_bar){style="margin:0"}>
 <div class="@@if(context.class){@@class}" id="page-wrapper">
-	@@if(context.show_balance_bar){
+	@@include('blocks/_balance-bar.html', { 
+		"logged_in": "@@logged_in",
+		"links_display_desk": "@@links_display.desk",
+		"links_display_tab": "@@links_display.tab",
+		"links_display_mob": "@@links_display.mob",
+		"visa_saldo_display_desk":"@@visa_saldo_display.desk",
+		"visa_saldo_display_tab":"@@visa_saldo_display.tab",
+		"visa_saldo_display_mob":"@@visa_saldo_display.mob",
+		"insättning_display_desk": "@@insättning_display.desk",
+		"insättning_display_tab": "@@insättning_display.tab",
+		"insättning_display_mob": "@@insättning_display.mob",
+		"registrera_lott_display_desk": "@@registrera_lott_display.desk",
+		"registrera_lott_display_tab": "@@registrera_lott_display.tab",
+		"registrera_lott_display_mob": "@@registrera_lott_display.mob"
+	})
 
-		@@include('blocks/_balance-bar.html', { 
-			"logged_in": "@@logged_in",
-			"links_display_desk": "@@links_display.desk",
-			"links_display_tab": "@@links_display.tab",
-			"links_display_mob": "@@links_display.mob",
-			"visa_saldo_display_desk":"@@visa_saldo_display.desk",
-			"visa_saldo_display_tab":"@@visa_saldo_display.tab",
-			"visa_saldo_display_mob":"@@visa_saldo_display.mob",
-			"insättning_display_desk": "@@insättning_display.desk",
-			"insättning_display_tab": "@@insättning_display.tab",
-			"insättning_display_mob": "@@insättning_display.mob",
-			"registrera_lott_display_desk": "@@registrera_lott_display.desk",
-			"registrera_lott_display_tab": "@@registrera_lott_display.tab",
-			"registrera_lott_display_mob": "@@registrera_lott_display.mob"
-		})
-	}
 
-	<div class="" >
-			@@include('layout/_sub-menu.html', { 
-				"balance_bar": "@@show_balance_bar",
-				"logged_in": "@@logged_in",
-				"show_submenu_mob": "@@show_submenu.mob",
-				"show_submenu_tab": "@@show_submenu.tab",
-				"show_submenu_desk": "@@show_submenu.desk",
-				"show_title_mob": "@@show_title.mob",
-				"show_title_tab": "@@show_title.tab",
-				"show_title_desk": "@@show_title.desk",
-				"title_type_mob": "@@title_type.mob",
-				"title_type_tab": "@@title_type.tab",
-				"title_type_desk": "@@title_type.desk",
-				"title_show": "@@title.show",     
-				"title_text": "@@title.text",
-				"title_image_small":"@@title.img_small",
-				"title_image_big":"@@title.img_big",
+	<!--  -->
 
-				"show_spel_balance_mob": "@@show_spel_balance.mob",
-				"show_spel_balance_tab": "@@show_spel_balance.tab",
-				"show_spel_balance_desk": "@@show_spel_balance.desk",
+	@@include('layout/_sub-menu.html', { 
+		"logged_in": "@@logged_in",
+		"show_submenu_mob": "@@show_submenu.mob",
+		"show_submenu_tab": "@@show_submenu.tab",
+		"show_submenu_desk": "@@show_submenu.desk",
+		"show_title_mob": "@@show_title.mob",
+		"show_title_tab": "@@show_title.tab",
+		"show_title_desk": "@@show_title.desk",
+		"title_type_mob": "@@title_type.mob",
+		"title_type_tab": "@@title_type.tab",
+		"title_type_desk": "@@title_type.desk",
+		"title_show": "@@title.show",     
+		"title_text": "@@title.text",
+		"title_image_small":"@@title.img_small",
+		"title_image_big":"@@title.img_big",
 
-				"show_spel_balance_info_mob": "@@show_spel_balance_info.mob",
-				"show_spel_balance_info_tab": "@@show_spel_balance_info.tab",
-				"show_spel_balance_info_desk": "@@show_spel_balance_info.desk",
+		"show_spel_balance_mob": "@@show_spel_balance.mob",
+		"show_spel_balance_tab": "@@show_spel_balance.tab",
+		"show_spel_balance_desk": "@@show_spel_balance.desk",
 
-				"spel_balance_order_mob": "@@spel_balance_order.mob",
-				"spel_balance_order_tab": "@@spel_balance_order.tab",
-				"spel_balance_order_desk": "@@spel_balance_order.desk",
+		"show_spel_balance_info_mob": "@@show_spel_balance_info.mob",
+		"show_spel_balance_info_tab": "@@show_spel_balance_info.tab",
+		"show_spel_balance_info_desk": "@@show_spel_balance_info.desk",
 
-				"show_spel_cta_mob": "@@show_spel_cta.mob",
-				"show_spel_cta_tab": "@@show_spel_cta.tab",
-				"show_spel_cta_desk": "@@show_spel_cta.desk",
+		"spel_balance_order_mob": "@@spel_balance_order.mob",
+		"spel_balance_order_tab": "@@spel_balance_order.tab",
+		"spel_balance_order_desk": "@@spel_balance_order.desk",
 
-				"spel_cta_type_mob": "@@spel_cta_type.mob",
-				"spel_cta_type_tab": "@@spel_cta_type.tab",
-				"spel_cta_type_desk": "@@spel_cta_type.desk",
+		"show_spel_cta_mob": "@@show_spel_cta.mob",
+		"show_spel_cta_tab": "@@show_spel_cta.tab",
+		"show_spel_cta_desk": "@@show_spel_cta.desk",
 
-				"show_vinst_balance_mob": "@@show_vinst_balance.mob",
-				"show_vinst_balance_tab": "@@show_vinst_balance.tab",
-				"show_vinst_balance_desk": "@@show_vinst_balance.desk",
+		"spel_cta_type_mob": "@@spel_cta_type.mob",
+		"spel_cta_type_tab": "@@spel_cta_type.tab",
+		"spel_cta_type_desk": "@@spel_cta_type.desk",
 
-				"show_vinst_balance_info_mob": "@@show_vinst_balance_info.mob",
-				"show_vinst_balance_info_tab": "@@show_vinst_balance_info.tab",
-				"show_vinst_balance_info_desk": "@@show_vinst_balance_info.desk",
+		"show_vinst_balance_mob": "@@show_vinst_balance.mob",
+		"show_vinst_balance_tab": "@@show_vinst_balance.tab",
+		"show_vinst_balance_desk": "@@show_vinst_balance.desk",
 
-				"vinst_balance_order_mob": "@@vinst_balance_order.mob",
-				"vinst_balance_order_tab": "@@vinst_balance_order.tab",
-				"vinst_balance_order_desk": "@@vinst_balance_order.desk",
+		"show_vinst_balance_info_mob": "@@show_vinst_balance_info.mob",
+		"show_vinst_balance_info_tab": "@@show_vinst_balance_info.tab",
+		"show_vinst_balance_info_desk": "@@show_vinst_balance_info.desk",
 
-				"show_vinst_cta_mob": "@@show_vinst_cta.mob",
-				"show_vinst_cta_tab": "@@show_vinst_cta.tab",
-				"show_vinst_cta_desk": "@@show_vinst_cta.desk",
+		"vinst_balance_order_mob": "@@vinst_balance_order.mob",
+		"vinst_balance_order_tab": "@@vinst_balance_order.tab",
+		"vinst_balance_order_desk": "@@vinst_balance_order.desk",
 
-				"vinst_cta_type_mob": "@@vinst_cta_type.mob",
-				"vinst_cta_type_tab": "@@vinst_cta_type.tab",
-				"vinst_cta_type_desk": "@@vinst_cta_type.desk",
+		"show_vinst_cta_mob": "@@show_vinst_cta.mob",
+		"show_vinst_cta_tab": "@@show_vinst_cta.tab",
+		"show_vinst_cta_desk": "@@show_vinst_cta.desk",
 
-				"show_star_icon_mob": "@@show_star_icon.mob",
-				"show_star_icon_tab": "@@show_star_icon.tab",
-				"show_star_icon_desk": "@@show_star_icon.desk",
+		"vinst_cta_type_mob": "@@vinst_cta_type.mob",
+		"vinst_cta_type_tab": "@@vinst_cta_type.tab",
+		"vinst_cta_type_desk": "@@vinst_cta_type.desk",
 
-				"show_bag_icon_mob": "@@show_bag_icon.mob",
-				"show_bag_icon_tab": "@@show_bag_icon.tab",
-				"show_bag_icon_desk": "@@show_bag_icon.desk",
-			})
-	</div>
+		"show_star_icon_mob": "@@show_star_icon.mob",
+		"show_star_icon_tab": "@@show_star_icon.tab",
+		"show_star_icon_desk": "@@show_star_icon.desk",
+
+		"show_bag_icon_mob": "@@show_bag_icon.mob",
+		"show_bag_icon_tab": "@@show_bag_icon.tab",
+		"show_bag_icon_desk": "@@show_bag_icon.desk",
+
+	})
+
+
 	@@include('components/_cookie-bar.html')

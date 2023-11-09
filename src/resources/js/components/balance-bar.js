@@ -16,6 +16,7 @@ export default function balanceBarJS() {
   $('.balance-bar__holder--conto').css('margin-right',`-${contoWidth}px`);
 
   $('.balance-bar .toggle.buttons-item').on('click', () => {
+    console.log($(window).width())
     $('.balance-bar__holder--conto, .balance-bar__holder--buttons').toggleClass('active');
 
     if($('.balance-bar__holder--conto').hasClass('active')){
@@ -25,11 +26,13 @@ export default function balanceBarJS() {
     }
 
     if($('.balance-bar__holder--buttons').hasClass('active')){
-      if($(document).width() <= mobile){
+      if($(window).width() <= mobile){
         $('.balance-bar__holder--conto').width($(document).width() - slideWidthMobile);
-        $('.balance-bar__holder--buttons').css({"-webkit-transform":`translateX(calc(100% - ${slideWidthMobile}px)`})
+        $('.balance-bar__holder--buttons').css({"-webkit-transform":`translateX(${slideWidth-16}px)`})
+       // $('.balance-bar__holder--buttons').css({"-webkit-transform":`translateX(calc(100% - ${slideWidthMobile}px)`})
       } else {
-        $('.balance-bar__holder--buttons').css('margin-right',`-${slideWidth-16}px`)
+        $('.balance-bar__holder--buttons').css('margin-right',`-${slideWidth-16}px`);
+        //$('.balance-bar__holder--buttons').css({"-webkit-transform":`translateX(${slideWidth-16}px)`})
       }
       
     } else {

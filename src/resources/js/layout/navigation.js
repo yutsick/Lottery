@@ -40,10 +40,23 @@ export default function () {
 
 	});
 	
-	const mainHeight = () => {
-		const elem = $('#nav-new .main-content');
-		$(elem).css('height', `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); 
+	const mainHeight = () => { 
+		
+		// if($(window).width() > mobile){
 
+		const elem = $('.new-nav-content.main-content');
+		$('#side-menu, #user-menu, #mobile__overlay').css('height', `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); 
+	// } else {
+		
+	// 	$('#side-menu, #user-menu, #mobile__overlay').css({
+	// 		'height':'100%',
+	// 		'overflow-y':'scroll'
+	// 	});
+	// 	$('body').css({
+	// 		'height':'100%',
+	// 		'overflow':'hidden'
+	// 	});
+	// }
 	};
 
 	
@@ -239,94 +252,110 @@ const emailInput = document.querySelector('#user_email'),
 					eyeIcon = document.querySelector('.pass-icon');
 
 		// eye icon visibility
-		passwordInput.addEventListener('input', () => {
-			if (passwordInput.value.length > 0) {
-				eyeIcon.style.display = 'block';
-			} else {
-				eyeIcon.style.display = 'none';
-			}
-		});
+		try{
+			passwordInput.addEventListener('input', () => {
+				if (passwordInput.value.length > 0) {
+					eyeIcon.style.display = 'block';
+				} else {
+					eyeIcon.style.display = 'none';
+				}
+			});
+		} catch (e) {}
+		
 
 		// password visibility
-		eyeIcon.addEventListener('click', () => {
-			if (passwordInput.type === 'password') {
-				passwordInput.type = 'text';
-				eyeIcon.classList.add('show-password');
-			} else {
-				passwordInput.type = 'password';
-				eyeIcon.classList.remove('show-password');
-			}
-		})
+		try {
+			eyeIcon.addEventListener('click', () => {
+				if (passwordInput.type === 'password') {
+					passwordInput.type = 'text';
+					eyeIcon.classList.add('show-password');
+				} else {
+					passwordInput.type = 'password';
+					eyeIcon.classList.remove('show-password');
+				}
+			});
+		} catch (e)  {}
+		
 	}
 
-	login.addEventListener('click', () => {
-		$(loader).show();
-		$(declined).hide();
-		
-		setTimeout(() => {
-			if (emailInput.value == 'error'){
-				emailErrorTooltip.style.display ='block';
-				emailInput.classList.add('error');
-				$(loader).hide();
-				$(declined).show();
+	try {
+		login.addEventListener('click', () => {
+			$(loader).show();
+			$(declined).hide();
+			
+			setTimeout(() => {
+				if (emailInput.value == 'error'){
+					emailErrorTooltip.style.display ='block';
+					emailInput.classList.add('error');
+					$(loader).hide();
+					$(declined).show();
+
+				} 
+				if (passInput.value == 'error'){
+					passErrorTooltip.style.display ='block';
+					passInput.classList.add('error');
+					$(loader).hide();
+					$(declined).show();
 
 			} 
-			if (passInput.value == 'error'){
-				passErrorTooltip.style.display ='block';
-				passInput.classList.add('error');
-				$(loader).hide();
-				$(declined).show();
+				if (passInput.value != 'error' && emailInput.value != 'error') {
 
-		} 
-			if (passInput.value != 'error' && emailInput.value != 'error') {
+						$(loader).hide();
+						
+					}
+			}, 1000)
+			//email error
+			
+		}); 
+	} catch (e)  {}
 
-					$(loader).hide();
-					
-				}
-		}, 1000)
-		//email error
-		
-	}); 
-
-	createKontoCta.addEventListener('click', () => {
-		
-		if(mobileInput.value == 'error'){
-			$(createPersonErrorTooltip).show();
-			$(mobileInput).addClass('error');
-		} else {
-			$(createPersonErrorTooltip).hide();
-			$(mobileInput).removeClass('error'); 
-		}
-
-		if(emailCreateInput.value == 'error'){
-			$(createEmailErrorTooltip).show();
-			$(emailCreateInput).addClass('error');
-		} else {
-			$(createEmailErrorTooltip).hide();
-			$(emailCreateInput).removeClass('error'); 
-		}
-
-		if(!$(createChk).is(':checked')){
-			$(createChkErrorTooltip).show();
-			$(createChk).addClass('error');
-		} else {
-			$(createChkErrorTooltip).hide();
-			$(createChk).removeClass('error'); 
-		}
-
-	})
 	
-	createChk.addEventListener('change', () => {
-		
-		if($(createChk).is(':checked')){
-			console.log('ff')
-			$(createChkErrorTooltip).hide();
-			$(createChk).removeClass('error'); 
-			$(createKontoCta).addClass('active');
-		} else {
-			$(createKontoCta).removeClass('active');
-		}
-	})
+	try {
+		createKontoCta.addEventListener('click', () => {
+			
+			if(mobileInput.value == 'error'){
+				$(createPersonErrorTooltip).show();
+				$(mobileInput).addClass('error');
+			} else {
+				$(createPersonErrorTooltip).hide();
+				$(mobileInput).removeClass('error'); 
+			}
+
+			if(emailCreateInput.value == 'error'){
+				$(createEmailErrorTooltip).show();
+				$(emailCreateInput).addClass('error');
+			} else {
+				$(createEmailErrorTooltip).hide();
+				$(emailCreateInput).removeClass('error'); 
+			}
+
+			if(!$(createChk).is(':checked')){
+				$(createChkErrorTooltip).show();
+				$(createChk).addClass('error');
+			} else {
+				$(createChkErrorTooltip).hide();
+				$(createChk).removeClass('error'); 
+			}
+
+		});
+	} catch (e)  {}
+
+	
+	try {
+		createChk.addEventListener('change', () => {
+			
+			if($(createChk).is(':checked')){
+				console.log('ff')
+				$(createChkErrorTooltip).hide();
+				$(createChk).removeClass('error'); 
+				$(createKontoCta).addClass('active');
+			} else {
+				$(createKontoCta).removeClass('active');
+			}
+		});
+	} catch (e)  {}
+
+	
 
 
 
@@ -335,15 +364,19 @@ const emailInput = document.querySelector('#user_email'),
 		const btnDisabled = document.querySelector('#transfer .transfer .btn__disabled');
 		const btnEnabled = document.querySelector('#transfer .transfer .btn__enabled');
 
-		emptyField.addEventListener('input', () => {
-			if (emptyField.value.length > 0){
-				$(btnDisabled).hide();
-				$(btnEnabled).show();
-			} else {
-				$(btnDisabled).show();
-				$(btnEnabled).hide();
-			}
-		})
+		try {
+			emptyField.addEventListener('input', () => {
+				if (emptyField.value.length > 0){
+					$(btnDisabled).hide();
+					$(btnEnabled).show();
+				} else {
+					$(btnDisabled).show();
+					$(btnEnabled).hide();
+				}
+			});
+		} catch (e)  {}
+
+		
 	};
 
 	function activateDepositButton (){
@@ -356,15 +389,20 @@ const emailInput = document.querySelector('#user_email'),
 		const buttonStateThree = document.querySelector('#deposit [data-button-state = "3"]');
 		const depositDone = document.querySelector('#deposit__done');
 
-		emptyField.addEventListener('input', () => {
-			if (emptyField.value.length > 0){
-				$(buttonStateZero).hide();
-				$(buttonStateOne).show();
-			} else {
-				$(buttonStateZero).show();
-				$(buttonStateOne).hide();
-			}
-		})
+		try {
+			emptyField.addEventListener('input', () => {
+				if (emptyField.value.length > 0){
+					$(buttonStateZero).hide();
+					$(buttonStateOne).show();
+				} else {
+					$(buttonStateZero).show();
+					$(buttonStateOne).hide();
+				}
+			});
+		} catch (e)  {}
+
+
+		
 
 		$(buttonStateOne).on('click', () => {
 			$(buttonStateOne).hide();
@@ -411,7 +449,7 @@ const emailInput = document.querySelector('#user_email'),
 				//$('#user-menu').hide();
 		})
 
-		$('button.toggle-nav').on('click', () => {
+		$('#toggle-nav').on('click', () => {
 			$('.side-menu').toggleClass('open');
 			$('#mobile__overlay').show();
 		})

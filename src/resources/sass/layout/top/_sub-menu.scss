@@ -1,14 +1,5 @@
 
 .sm-wrapper{
-  &.top_balance_present{
-    margin-top: 38px;
-    @media (max-width: $screen-md) {
-      margin-top: 39px;
-    }
-    @media (max-width: $screen-xs) {
-      margin-top: 73px;
-    }
-  }
 
   *[data-desk-show = "false"]{
     display: none !important;
