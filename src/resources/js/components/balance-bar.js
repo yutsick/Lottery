@@ -1,9 +1,17 @@
 export default function balanceBarJS() {
+  let currWidth = $(window).width();
 
-  $(window).on('resize',function(){location.reload();});
+  $(window).on('resize',function(){
+    let newWidth = $(window).width();
+    if (currWidth != newWidth){
+      currWidth = $(window).width();
+      location.reload();
+    }
+    
+  });
   const mobile = 426;
   const slideWidthMobile = $(document).width() * 0.27;
-  console.log(slideWidthMobile)
+  //console.log(slideWidthMobile)
 
   const slideWidth = ($('.buttons-item').length == 3 ) 
         ? ($('.buttons-slide').width() - $('.toggle.buttons-item').width()) 
