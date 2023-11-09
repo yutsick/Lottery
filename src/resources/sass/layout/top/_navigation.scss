@@ -577,11 +577,8 @@
 }
 
 #nav-new {
-    margin-top: 38px;
-    @media (max-width: $screen-xs) {
-        margin-top: 73px;
-    }
-    position: relative;
+  
+
     &+.message-container {
         position: absolute;
         bottom: 0;
@@ -774,7 +771,7 @@
         position: absolute;
         top:0;
         height: 100%;
-        z-index: 4;
+        z-index: 1006;
         transform: translateX(-150%);
         transition: transform 0.4s;
         @media (max-width:600px) {
@@ -782,7 +779,7 @@
             position: absolute;
             transform: translateX(-150%);
             top:0;
-            z-index: 3;
+            z-index: 1006;
             height: 100%;
         }
         &.open{
@@ -802,7 +799,7 @@
                 position: absolute;
                 left:0;
                 top:0;
-                z-index: 4;
+                z-index: 1005;
                 
             }
             }
@@ -982,7 +979,7 @@
 
     .user-menu {
         position: absolute;
-        z-index: 4;
+        z-index: 1006;
         top: 0;
         right: 0;
         height: 100%;
@@ -995,7 +992,7 @@
             position: absolute;
             top:0;
 
-            z-index: 3;
+            z-index: 1006;
             transform: translateX(150%);
         }
         &.open{
@@ -2076,7 +2073,7 @@
                 top:0;
                 left:0;
                 position: absolute;
-                z-index: 3;
+                z-index: 1005;
                 // filter: blur(58.5px);
                 display: none;
                 // @media (min-width:600px) {
