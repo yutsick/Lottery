@@ -7,13 +7,19 @@
  -->
 @@include('layout/_header.html', {
 "class": "page-front logged-out",
-"logged_in": false
+"logged_in": false,
+"show_submenu":  {
+  "mob": false,
+  "tab": false,
+  "desk": false
+},
 })
 
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
  
 
 <div class="content-wrapper ml-2017">
+  <section class="mb-30">
   @@include('blocks/_hero-v2.html', {
   "bg-image":{
     "desktop": '/assets/img/background/hero_BG_v2.1.png',
@@ -34,7 +40,7 @@
     "display": "block"
   },
   "text_block":{
-    "display": "none", 
+    "display": "block", 
     "font": "Proxima",
     "drop_shadow": "true",
   },
@@ -49,7 +55,7 @@
 
   "primary_cta":{
     "display":"block",
-    "color":"white",
+    "color":"rose",
     "font": "Apercu",
     "drop_shadow": "true",
   },
@@ -66,6 +72,61 @@
   }
 
   })
+</section>
+  <section class="mb-30">
+    @@include('blocks/_hero-v2.html', {
+      "bg-image":{
+        "desktop": '/assets/img/background/hero_BG_v2.1.png',
+        "tablet": '/assets/img/background/hero_BG_v2.1.png',
+        "mobile": '/assets/img/background/hero_BG_v2.1.png',
+      },
+      "hero_align": "top",
+      "hero_width": "50%",
+      "title_cta_color": "yellow",
+      "title": {
+        "drop_shadow": "false",
+        "font": "Zing",
+      },
+      "image":{
+        "desktop": "assets/img/mockup/hero-v2-image.png",
+        "tablet": "assets/img/mockup/hero-v2-tablet-image.png",
+        "mobile": "assets/img/mockup/hero-v2-mobile-image.png",
+        "display": "block"
+      },
+      "text_block":{
+        "display": "none", 
+        "font": "Proxima",
+        "drop_shadow": "true",
+      },
+      "list": {
+        "display": "block", 
+        "color": "yellow",
+        "type": "numbers",
+        "text_color": "white",
+        "font": "Proxima",
+        "drop_shadow": "false",
+      },
+    
+      "primary_cta":{
+        "display":"block",
+        "color":"rose",
+        "font": "Apercu",
+        "drop_shadow": "true",
+      },
+      "secondary_cta":{
+        "display":"block",
+        "type":{
+          "desktop":"solid",
+          "tablet":"border",
+          "mobile":"link"
+        },
+        "color":"white",
+        "font": "Apercu",
+        "drop_shadow": "false",
+      }
+    
+      })
+  </section>
  
 </div>
 
