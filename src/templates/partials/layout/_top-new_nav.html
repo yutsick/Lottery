@@ -12,11 +12,11 @@
               </button>
               <span>Meny</span>
             </div>
-            @@if(!context.logged_in){
+           
             <div class="top__adv-block">
-              <img src="assets/img/top-menu-adv.png" alt="">
+              @@include('layout/_top-new-jackpot.html',{})
             </div>
-            }
+            
           </div>
           <div class="top__brand order-1">
             <a href="/" title="Hem" class="top__brand-logotype">
