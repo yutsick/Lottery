@@ -250,6 +250,27 @@ const emailInput = document.querySelector('#user_email'),
 					loader = document.querySelector('#login .loader'), 
 					declined = document.querySelector('#login .declined');
 
+					// atcivate button
+					function checkFields() {
+					  const value1 = mobileInput.value.trim();
+					  const value2 = emailCreateInput.value.trim();
+					  const value3 = createChk.checked;
+					  if (value1 !== '' && value2 !== '' && value3) {
+						$(createKontoCta).addClass('active'); 
+					  } else {
+						$(createKontoCta).remove('active');
+					  }
+					}
+					passInput.addEventListener('input', checkFields);
+					emailCreateInput.addEventListener('input', checkFields);
+					createChk.addEventListener('input', checkFields);
+
+
+
+
+
+
+
 	function showPassword(){
 		const passwordInput = document.querySelector('#user_pass'),
 					eyeIcon = document.querySelector('.pass-icon');
@@ -351,9 +372,9 @@ const emailInput = document.querySelector('#user_email'),
 				console.log('ff')
 				$(createChkErrorTooltip).hide();
 				$(createChk).removeClass('error'); 
-				$(createKontoCta).addClass('active');
+				// $(createKontoCta).addClass('active');
 			} else {
-				$(createKontoCta).removeClass('active');
+				// $(createKontoCta).removeClass('active');
 			}
 		});
 	} catch (e)  {}
@@ -451,6 +472,7 @@ const emailInput = document.querySelector('#user_email'),
 				
 				//$('#user-menu').hide();
 		})
+		
 
 		$('#toggle-nav').on('click', () => {
 			$('.side-menu').toggleClass('open');
@@ -461,6 +483,15 @@ const emailInput = document.querySelector('#user_email'),
 			$('.side-menu').removeClass('open');
 			$('#mobile__overlay').hide();
 		})
+
+		// Close sideMenus on mobileOverlay click
+		$('#mobile__overlay').on('click', () => {
+			$('#user-menu').removeClass('open');
+			$('#side-menu').removeClass('open');
+			$('#mobile__overlay').hide();
+		})
+		
+
 	}
 
 	function loginBankId(){
