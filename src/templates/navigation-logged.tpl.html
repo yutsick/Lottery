@@ -31,13 +31,13 @@
 "desk": true
 },
 "show_title": {
-"mob": false,
+"mob": true,
 "tab": true,
 "desk": true
 },
 "title_type": {
 "mob": "image",
-"tab": "text",
+"tab": "image",
 "desk": "text"
 },
 "title":{
@@ -108,50 +108,52 @@
 })
 
 <div class="new-nav-content main-content">
-  @@include('blocks/_jackpot.html',{"blocks_layout":"three_columns", "hide_jackpot_mobile": false})
+	@@include('blocks/_jackpot.html',{"blocks_layout":"three_columns", "hide_jackpot_mobile": false})
 
-  @@include('blocks/_jackpot.html',{"blocks_layout":"two_columns", "hide_jackpot_mobile": false})
-  <section>
-    <div class="container">
-      <div class="row equal-height">
+	@@include('blocks/_jackpot.html',{"blocks_layout":"two_columns", "hide_jackpot_mobile": false})
 
-
-        @@include('blocks/promotion/block-img/_img-block-medium.html', {
-        "has_link": false,
-        "overlay": true,
-        "position": "center",
-        "has_content_title": false,
-        "has_content_description": false,
-        "theme": "dark",
-        "text_alignment":"left",
-        "image":"'assets/img/background/bingoheader-v2-T_2.png'",
-        "btn_style": "underline",
-        "btn_title": "Se produkter"
-        })
-
-        @@include('blocks/promotion/block/_promotion-split.html', {
-        "size": "medium",
-        "background": "color",
-        "background_color": "pink",
-        "background_color_pattern": "true",
-        "background_image": "",
-        "content_alignment": "bottom",
-        "content_title": "Block title",
-        "content_text": "With background color and image. Has link. Has text.",
-        "content_link": "true",
-        "content_image": "assets/img/mockup/butterfly.jpg",
-        "text_protection": "",
-        "text_alignment": ""
-        })
+	<section>
+		<div class="container">
+			<div class="row equal-height">
 
 
-      </div>
-      <div class="row equal-height">
-        @@include('blocks/promotion/_promotion-row-7.html')
-      </div>
+				@@include('blocks/promotion/block-img/_img-block-medium.html', {
+				"has_link": false,
+				"overlay": true,
+				"position": "center",
+				"has_content_title": false,
+				"has_content_description": false,
+				"theme": "dark",
+				"text_alignment":"left",
+				"image":"'assets/img/background/bingoheader-v2-T_2.png'",
+				"btn_style": "underline",
+				"btn_title": "Se produkter"
+				})
 
-    </div>
-  </section>
+				@@include('blocks/promotion/block/_promotion-split.html', {
+				"size": "medium",
+				"background": "color",
+				"background_color": "pink",
+				"background_color_pattern": "true",
+				"background_image": "",
+				"content_alignment": "bottom",
+				"content_title": "Block title",
+				"content_text": "With background color and image. Has link. Has text.",
+				"content_link": "true",
+				"content_image": "assets/img/mockup/butterfly.jpg",
+				"text_protection": "",
+				"text_alignment": ""
+				})
+
+
+			</div>
+			<div class="row equal-height">
+				@@include('blocks/promotion/_promotion-row-7.html')
+			</div>
+
+		</div>
+	</section>
+
 </div>
 
 @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false})
