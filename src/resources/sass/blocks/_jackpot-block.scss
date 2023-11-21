@@ -1,3 +1,10 @@
+.new-nav-content{
+    .block-promotion{
+        @media (min-width: 1024px) {
+            margin-bottom: 60px;
+        }
+    }
+}
 .jackpot-blocks{
     
      @media (min-width:569px) {
@@ -34,15 +41,29 @@
             }
            
     }
+    .sup-block{
+        margin: 0 0 20px;
+    }
+    .main-block{
+        padding: 32px 32px 32px 0;
+        margin-bottom: 20px;
+        @media (max-width:568px) {
+          padding: 24px;
+        }
+    }
     
 }
 .section {
     overflow: hidden;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
+    padding: 40px 0 20px;
     // align-items: center;
     justify-content: center;
     border-bottom: 1px solid #D3DCDE;
     background: #EFF3F5;
+    @media (max-width: 480px) {
+        padding:24px 0;
+    }
     &__item{
 
         margin: 40px auto;
@@ -65,10 +86,17 @@
     background-repeat: no-repeat;
     background-color: #003E52;
     border-radius: 16px;
+<<<<<<< HEAD
     margin:20px 0 0;
 
     @media (min-width: 1024px) {
         margin:20px 0;
+=======
+    margin:0;
+   
+    @media (min-width: 1024px) {
+        margin:0;
+>>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
     }
     // height: 163px
 
@@ -157,7 +185,11 @@
     line-height: 12px;
     letter-spacing: 0.64px;
     text-transform: uppercase;
+<<<<<<< HEAD
     padding: 6px 0 7px;
+=======
+    padding: 9px 0 5px;
+>>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
     @media (min-width: 1024px) {
         font-size: 14px;
         line-height: 12px;
@@ -176,7 +208,7 @@
 }
 
 .bar-value__nums span {
-    padding: 25px 0;
+    padding: 24px 0;
     color: white;
     text-align: center;
     font-family: $apercu-regular-font;
@@ -367,7 +399,14 @@
             @media (max-width:400px) {
                 width: 173px;
                 height: 88px;
+<<<<<<< HEAD
                 bottom:10px;
+=======
+                bottom:9px;
+            }
+            @media (max-width:320px) {
+                bottom: 8px;
+>>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
             }
 
         }
@@ -377,6 +416,11 @@
             
              width: 135px;
                 height: 88px;
+<<<<<<< HEAD
+=======
+                bottom:8px;
+
+>>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
             @media (min-width:400px){
                width: 122px;
                  height: 88px;
