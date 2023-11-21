@@ -1,0 +1,234 @@
+<div id="sub-menu" class="ml-2017 ">
+  <div class="sm-wrapper">
+    <div class="sm-wrapper__bg"
+      data-mob-show = '@@show_submenu_mob'
+      data-tab-show = '@@show_submenu_tab' 
+      data-desk-show = '@@show_submenu_desk'
+    >
+      <div class="container">
+        <div class="sub-menu"
+            
+        >
+          
+          <div class="sub-menu__holder"
+            data-mob-show = '@@show_title_mob'
+            data-tab-show = '@@show_title_tab' 
+            data-desk-show = '@@show_title_desk'
+          >
+          
+              <h1
+              @@if(context.title_type_mob == 'image'){data-mob-show = 'false' }
+              @@if(context.title_type_tab == 'image'){data-tab-show = 'false' }
+              @@if(context.title_type_desk == 'image'){data-desk-show = 'false'}
+
+              @@if(context.title_type_mob == 'text'){data-mob-show = 'true' }
+              @@if(context.title_type_tab == 'text'){data-tab-show = 'true' }
+              @@if(context.title_type_desk == 'text'){data-desk-show = 'true'}
+
+              >@@title_text</h1>
+            
+          
+              <div class="banner" 
+              @@if(context.title_type_mob == 'text'){data-mob-show = 'false' }
+              @@if(context.title_type_tab == 'text'){data-tab-show = 'false' }
+              @@if(context.title_type_desk == 'text'){data-desk-show = 'false'}
+
+              @@if(context.title_type_mob == 'image'){data-mob-show = 'true' }
+              @@if(context.title_type_tab == 'image'){data-tab-show = 'true' }
+              @@if(context.title_type_desk == 'image'){data-desk-show = 'true'}
+              >
+
+              <picture>
+                <source media="(max-width: 480px)" srcset="@@title_image_big" />
+                <img src="@@title_image_small" alt="" />
+              </picture>
+
+
+
+              </div>
+            
+        
+          </div>
+          
+          <div class="sub-menu__holder "
+          
+          @@if(context.show_star_icon_tab == 'false' && context.show_bag_icon_tab == 'false' && context.show_spel_balance_tab == 'false' && context.show_vinst_balance_tab == 'false'){
+            data-tab-show = 'false'
+          }
+
+          @@if(context.show_star_icon_mob == 'true' || context.show_bag_icon_mob == 'true' || context.show_spel_balance_mob == 'true' || context.show_vinst_balance_mob == 'true'){
+            data-mob-show = 'true'
+          }
+
+          @@if(context.show_star_icon_mob == 'false' && context.show_bag_icon_mob == 'false' && context.show_spel_balance_mob == 'false' && context.show_vinst_balance_mob == 'false'){
+            data-mob-show = 'false'
+          }
+          >
+            <div class="conto">
+              <div class="conto-item"
+              data-mob-show = '@@show_spel_balance_mob'
+              data-tab-show = '@@show_spel_balance_tab' 
+              data-desk-show = '@@show_spel_balance_desk'
+
+              data-mob-order = '@@spel_balance_order_mob'
+              data-tab-order = '@@spel_balance_order_tab' 
+              data-desk-order = '@@spel_balance_order_desk'
+              >
+                <div class="conto-item__info"
+                data-mob-show = '@@show_spel_balance_info_mob'
+                data-tab-show = '@@show_spel_balance_info_tab' 
+                data-desk-show = '@@show_spel_balance_info_desk'
+                >
+                  <div class="conto-item__info--icon orange">
+                    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 12V8C22 7.44772 21.5523 7 21 7H2C1.44772 7 1 7.44772 1 8V22C1 22.5523 1.44772 23 2 23H21C21.5523 23 22 22.5523 22 22V18.5" stroke="#F98F00" stroke-width="2"/>
+  <rect x="16" y="12" width="8" height="6" rx="2" stroke="#F98F00" stroke-width="2"/>
+  <path d="M20.2273 7.37999L19.6084 4.54441C19.4907 4.00483 18.9578 3.66288 18.4182 3.78065L5.5 6.6001" stroke="#F98F00" stroke-width="2"/>
+  <path d="M17.1363 4.09534L15.9695 1.88435C15.7117 1.39592 15.1068 1.20893 14.6184 1.4667L4 7.07056" stroke="#F98F00" stroke-width="2"/>
+  </svg>
+
+
+                  </div>
+                  <div class="conto-item__info--text">
+                    <div class="title">Spelplånbok</div>
+                    <div class="saldo">
+                      <span>1 000</span> kr
+                    </div>
+                  </div>
+                </div>
+                <div class="conto-item__cta spel"
+                data-mob-show = '@@show_spel_cta_mob'
+                data-tab-show = '@@show_spel_cta_tab' 
+                data-desk-show = '@@show_spel_cta_desk'
+
+                data-mob-type = '@@spel_cta_type_mob'
+                data-tab-type = '@@spel_cta_type_tab' 
+                data-desk-type = '@@spel_cta_type_desk'
+                >
+                  <div class="conto-item__cta--icon">
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 23.3086H23" stroke="#074658" stroke-width="2" stroke-linecap="round" />
+                      <path d="M1 23.3086V10.3086C1 10.0325 1.22386 9.80859 1.5 9.80859H3.5" stroke="#074658"
+                        stroke-width="2" stroke-linecap="round" />
+                      <path d="M23 23.3086V10.3086C23 10.0325 22.7761 9.80859 22.5 9.80859H20.5" stroke="#074658"
+                        stroke-width="2" stroke-linecap="round" />
+                      <circle cx="10" cy="5.30859" r="4" stroke="#074658" stroke-width="2" />
+                      <circle cx="14" cy="15.3086" r="4" stroke="#074658" stroke-width="2" />
+                    </svg>
+
+                  </div>
+                  <div class="conto-item__cta--text">
+                    Insättning
+                  </div>
+                </div>
+              </div>
+              <div class="conto-item"
+              data-mob-show = '@@show_vinst_balance_mob'
+              data-tab-show = '@@show_vinst_balance_tab' 
+              data-desk-show = '@@show_vinst_balance_desk'
+
+              data-mob-order = '@@vinst_balance_order_mob'
+              data-tab-order = '@@vinst_balance_order_tab' 
+              data-desk-order = '@@vinst_balance_order_desk'
+              >
+                <div class="conto-item__info"
+                data-mob-show = '@@show_vinst_balance_info_mob'
+                data-tab-show = '@@show_vinst_balance_info_tab' 
+                data-desk-show = '@@show_vinst_balance_info_desk'
+                >
+                  <div class="conto-item__info--icon pink">
+                    <svg width="25" height="23" viewBox="0 0 25 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1.82136 7.36459H23.1786M1.17551 7.97171L11.8413 21.3702C11.9188 21.468 12.0186 21.5473 12.1328 21.6019C12.247 21.6565 12.3726 21.6848 12.5 21.6848C12.6274 21.6848 12.753 21.6565 12.8672 21.6019C12.9814 21.5473 13.0812 21.468 13.1587 21.3702L23.8245 7.97171C23.9294 7.83947 23.9902 7.67945 23.9989 7.51292C24.0076 7.34639 23.9638 7.18123 23.8733 7.0394L20.2554 1.38337C20.1809 1.26632 20.0767 1.16965 19.9528 1.10256C19.8289 1.03546 19.6894 1.00015 19.5474 1H5.45261C5.31065 1.00015 5.17108 1.03546 5.04717 1.10256C4.92326 1.16965 4.81912 1.26632 4.74464 1.38337L1.12673 7.0394C1.0362 7.18123 0.992375 7.34639 1.00109 7.51292C1.0098 7.67945 1.07063 7.83947 1.17551 7.97171Z" stroke="#D96195" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M19.8927 1.79557L17.4284 7.36459M17.4284 7.36459L12.4998 1L7.57124 7.36459M17.4284 7.36459L12.4998 20.8894L7.57124 7.36459M5.10693 1.79557L7.57124 7.36459" stroke="#D96195" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+
+                  </div>
+                  <div class="conto-item__info--text">
+                    <div class="title">Vinstkonto</div>
+                    <div class="saldo">
+                      <span>1 000</span> kr
+                    </div>
+                  </div>
+                </div>
+                <div class="conto-item__cta vinst"
+                data-mob-show = '@@show_vinst_cta_mob'
+                data-tab-show = '@@show_vinst_cta_tab' 
+                data-desk-show = '@@show_vinst_cta_desk'
+
+                data-mob-type = '@@vinst_cta_type_mob'
+                data-tab-type = '@@vinst_cta_type_tab' 
+                data-desk-type = '@@vinst_cta_type_desk'
+                >
+                  <div class="conto-item__cta--icon ">
+                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.6608 1.59491L16.2888 2.94609C16.6995 3.28648 17.2089 3.49175 17.7449 3.53463L19.8783 3.70092C20.4846 3.7481 21.054 4.00413 21.4842 4.42312C21.9145 4.84212 22.1776 5.39671 22.2263 5.98753L22.3957 8.06626C22.4397 8.58984 22.6517 9.08743 23.001 9.48629L24.3877 11.0713C24.7829 11.5228 25 12.0967 25 12.6901C25 13.2835 24.7829 13.8575 24.3877 14.3089L23.001 15.8953C22.6517 16.2954 22.4396 16.7917 22.397 17.3153L22.2263 19.394C22.1779 19.9849 21.9151 20.5396 21.4851 20.9588C21.0551 21.3781 20.4859 21.6344 19.8796 21.6819L17.7462 21.8482C17.2091 21.8897 16.6991 22.0952 16.2888 22.4355L14.6608 23.7866C14.1974 24.1715 13.6083 24.3829 12.9994 24.3829C12.3905 24.3829 11.8015 24.1715 11.3381 23.7866L9.71136 22.4355C9.30073 22.0949 8.79023 21.8894 8.25266 21.8482L6.11927 21.6819C5.51272 21.6344 4.94338 21.3779 4.51333 20.9584C4.08329 20.5388 3.82067 19.9838 3.77255 19.3927L3.60188 17.3153C3.5587 16.7923 3.34734 16.2958 2.99787 15.8966L1.61117 14.3089C1.21667 13.8577 1 13.2842 1 12.6914C1 12.0986 1.21667 11.5252 1.61117 11.0739L2.99787 9.48629C3.34854 9.08613 3.55788 8.58984 3.60055 8.06626L3.77122 5.98883C3.82029 5.39756 4.08378 4.84262 4.51451 4.4234C4.94524 4.00418 5.51507 3.74807 6.12194 3.70092L8.25266 3.53593C8.78991 3.49412 9.29993 3.28815 9.71002 2.94738L11.3381 1.59621C11.8015 1.21137 12.3905 1 12.9994 1C13.6083 1 14.1974 1.21007 14.6608 1.59491Z"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M17.0002 10.0913L11.6667 15.2881L9 12.6897" stroke="white" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                  </div>
+                  <div class="conto-item__cta--text">
+                    Registrera lott
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="icons"
+            @@if(context.show_star_icon_tab == 'false' && context.show_bag_icon_tab == 'false'){
+              data-tab-show = 'false' 
+            }
+
+            @@if(context.show_star_icon_mob == 'false' && context.show_bag_icon_mob == 'false'){
+              data-mob-show = 'false' 
+            }
+
+            @@if(context.show_star_icon_mob == 'true' || context.show_bag_icon_mob == 'true'){
+              data-mob-show = 'true' 
+            }
+            >
+              <div class="icons-item"
+                data-mob-show = '@@show_star_icon_mob'
+                data-tab-show = '@@show_star_icon_tab' 
+                data-desk-show = '@@show_star_icon_desk'
+              >
+                <div class="icons-item__icon star">
+                  <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.7047 2.10748C13.2312 0.915365 14.9227 0.915362 15.4491 2.10747L17.3583 6.43105C18.0297 7.95151 19.4845 8.97808 21.142 9.10098L25.5673 9.42911C26.8964 9.52766 27.4465 11.1813 26.4412 12.0564L22.7888 15.2358C21.4812 16.3741 20.9437 18.1622 21.4071 19.8327L22.3648 23.2856C22.7303 24.6037 21.2854 25.6832 20.1251 24.959L16.4597 22.6711C15.0015 21.761 13.1523 21.761 11.6942 22.6711L8.02877 24.959C6.86845 25.6832 5.42352 24.6037 5.78909 23.2856L6.74679 19.8327C7.21012 18.1622 6.67266 16.3741 5.36509 15.2358L1.71264 12.0564C0.707345 11.1813 1.25741 9.52766 2.58659 9.42911L7.0118 9.10098C8.66935 8.97808 10.1242 7.95151 10.7956 6.43105L12.7047 2.10748Z"
+                      stroke="#6CB490" stroke-width="2" />
+                  </svg>
+                <div class="icons-item__badge"><span>2</span></div>
+                </div>
+                
+              </div>
+              <div class="icons-item"
+                data-mob-show = '@@show_bag_icon_mob'
+                data-tab-show = '@@show_bag_icon_tab' 
+                data-desk-show = '@@show_bag_icon_desk'
+              >
+                <div class="icons-item__icon bag">
+                  <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.75">
+                      <path
+                        d="M1 4.96594V23.6824C1 24.032 1.13887 24.3672 1.38605 24.6144C1.63324 24.8616 1.96849 25.0005 2.31806 25.0005H21.3201C21.6697 25.0005 22.0049 24.8616 22.2521 24.6144C22.4993 24.3672 22.6382 24.032 22.6382 23.6824V4.96594H1Z"
+                        stroke="#074658" stroke-width="2" stroke-linejoin="round" />
+                      <path
+                        d="M22.6382 4.96517L18.9035 1H4.73473L1 4.96517M16.7981 9.31478C16.7981 12.0814 14.5692 14.3234 11.8191 14.3234C9.06895 14.3234 6.83945 12.0814 6.83945 9.31478"
+                        stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                  </svg>
+                  <div class="icons-item__badge"><span>3</span></div>
+                </div>
+                
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
