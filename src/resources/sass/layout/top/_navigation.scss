@@ -665,7 +665,9 @@
             align-items: center;
             height: 40px;
             max-width: 348px;
-            
+            @media (max-width:1024px) {
+                max-width: 247px;
+            }
             margin: 0 auto;
             background: var(--GOLD, linear-gradient(113deg, #D19700 12.59%, #F2CB49 29.92%, #FFE46C 44.32%, #DFA205 51.11%, #F0CC44 59.18%, #E0B500 67.18%, #FFE15B 82.56%, #E39600 91.75%, #ECB92C 97.3%));            
             @media (max-width:$screen-xs) {
@@ -696,7 +698,17 @@
             &__right-block{
                 height: 24px;
                 border-left: 1px solid rgba(7, 70, 88, 0.50);
+                @media (max-width:1024px) {
+                    display: none;
+                }
             }
+            &__right-blocktext{
+                @media (max-width:1024px) {
+                    display: none;
+                }
+            
+            }
+
             &-svg{
                 position: relative;
                 z-index: 1;
