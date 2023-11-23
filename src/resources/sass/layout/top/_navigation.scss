@@ -670,7 +670,7 @@
             }
             margin: 0 auto;
             background: var(--GOLD, linear-gradient(113deg, #D19700 12.59%, #F2CB49 29.92%, #FFE46C 44.32%, #DFA205 51.11%, #F0CC44 59.18%, #E0B500 67.18%, #FFE15B 82.56%, #E39600 91.75%, #ECB92C 97.3%));            
-            @media (max-width:$screen-xs) {
+            @media (max-width:739px) {
                  display: none;
             }
             &__text{
@@ -728,7 +728,7 @@
                 display: flex;
                 margin: 0 auto 20px;
                 width: 247px;
-                @media (min-width:$screen-xs) {
+                @media (min-width:739px) {
                     display: none;
                 }
             
@@ -806,6 +806,7 @@
 
             &__signin{
                 a{
+                    text-wrap: nowrap;
                   color: #003A4E;
                     font: 700 20px/22px $apercu;
                     padding: 22px 27px;  
@@ -821,6 +822,7 @@
             }
             &__signup{
                 a{
+                    text-wrap: nowrap;
                     color: #003A4E;
                     font: 400 20px/22px $apercu; 
                     padding: 22px 27px;
