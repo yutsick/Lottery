@@ -347,15 +347,19 @@
     .icon{
         position: relative;
         bottom: 8px;
+        min-width: 77px;
+        min-height: 77px;
         img{
             width: 100%;
         }
         @media (max-width:1024px) {
             right: -2px;
             bottom: 9px;
+            display: none;
+
         }
         @media (max-width:768px) {
-
+            display: block;
             bottom:8px;
 
         }
@@ -397,16 +401,15 @@
         }
 
         &.andra{
-
-            
-             width: 135px;
+            width: 135px;
+            height: 88px;
+            bottom:8px;
+            min-width: 88px;
+            min-height: 88px;
+            @media (min-width:400px){
+                width: 122px;
                 height: 88px;
                 bottom:8px;
-
-            @media (min-width:400px){
-               width: 122px;
-                 height: 88px;
-                 bottom:8px;
             }
             
             @media (min-width:569px) {
@@ -528,6 +531,9 @@ margin-bottom: 15px;
         font: 700 20px/24px $apercu-regular-font;
         text-transform: none;
         padding-left: 24px;
+        @media (max-width:1298px) {
+            font-size: 19px;
+        }
     }
 
 }
@@ -535,6 +541,7 @@ margin-bottom: 15px;
 .sup-block__row {
     display: flex;
     justify-content: space-between;
+    height: 100%;
 }
 
 .sup-block__content {
@@ -552,8 +559,9 @@ margin-bottom: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    margin-bottom: 37px;
     padding-left: 24px;
+    @media (max-width:1260px) {
+    }
 }
 
 .sup-infoCube {
@@ -615,7 +623,7 @@ margin-bottom: 15px;
 
 @media (min-width:769px){
     .main-block, .main-block.long{
-        padding: 32px 80px 21px 0;
+        padding: 32px 32px 32px 0;
     }
     .main-block__bar{
         gap: 16px;
@@ -623,7 +631,7 @@ margin-bottom: 15px;
 }
 @media screen and (min-width: 1024px){
  .main-block, .main-block.long{
-        padding: 32px 20px 21px 0;
+        padding: 32px 32px 32px 0;
     }
     .main-block__bar{
         gap: 0;
@@ -642,8 +650,6 @@ margin-bottom: 15px;
 }
 
 @media (max-width: 769px) {
-
-
 
     .main-block, .main-block.long {
         // width: 90%;
