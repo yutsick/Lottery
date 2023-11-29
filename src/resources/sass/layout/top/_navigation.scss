@@ -579,11 +579,7 @@
 #nav-new {
     margin-top: 38px;
   @media (max-width: $screen-xs) {
-<<<<<<< HEAD
-      margin-top: 73px;
-=======
     margin-top: 73px;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
   }
 
     &+.message-container {
@@ -842,13 +838,9 @@
                 left:0;
                 top:0;
                 z-index: 1005;
-<<<<<<< HEAD
-                
-=======
             }
             @media (max-width: 480px) {
                 width: 85%;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
             }
             }
 
@@ -1027,11 +1019,7 @@
 
     .user-menu {
         position: absolute;
-<<<<<<< HEAD
-        z-index: 1006;
-=======
         z-index: 1100;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
         top: 0;
         right: 0;
         height: 100%;
@@ -1044,11 +1032,7 @@
             position: absolute;
             top:0;
 
-<<<<<<< HEAD
-            z-index: 1006;
-=======
             z-index: 1100;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
             transform: translateX(150%);
         }
         @media (max-width:480px) {

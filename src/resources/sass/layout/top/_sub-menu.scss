@@ -45,19 +45,12 @@
   }
     &__bg{
       background: #EFF3F5;
-<<<<<<< HEAD
-      padding: 3px;
-      border-bottom: 1px solid #D3DCDE;
-      @media (max-width:$screen-md){
-        padding: 0;
-=======
       height: 72px;
       border-bottom: 1px solid #D3DCDE;
       padding: 16px 0;
       @media (max-width:$screen-md){
         padding: 0;
         height: initial;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
       }
     }
       
@@ -70,16 +63,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-<<<<<<< HEAD
-
-      @media (max-width: $screen-xs) {
-        flex-direction: column;
-        
-      }
-      .banner{
-        height: 100%;
-
-=======
       height: 40px;
       @media (max-width: $screen-md) {
         height: 48px;
@@ -91,7 +74,6 @@
       .banner{
         height: 100%;
         width: 100%;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
         img{
           width: 100%;
           height: 100%;
@@ -99,8 +81,6 @@
         }
       }
       
-<<<<<<< HEAD
-=======
       .top-new__jackpot{
         
         opacity: 0.75;
@@ -134,7 +114,6 @@
         }
     }
       
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
       &__holder{
         flex: 1 1;
         display: flex;
@@ -185,12 +164,8 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-<<<<<<< HEAD
-          padding: 8px 24px;
-=======
           padding: 0 24px;
           gap:16px;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
           border-left: solid 1px rgba(7, 70, 88, 0.20);
           @media (max-width:$screen-md) {
             
@@ -253,30 +228,17 @@
             }
             &--icon{
               margin-right: 8px;
-<<<<<<< HEAD
-              width: 48px;
-              height: 48px;
-=======
               width: 40px;
               height: 40px;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
               border-radius: 50%;
             
               &.orange{
                 background-color: rgba(249, 143, 0, 0.2);
-<<<<<<< HEAD
-                padding: 11px 11px 15px 14px;
-              }
-              &.pink{
-                background-color: rgba(217, 97, 149, 0.2);
-                padding: 15px 13px 13.21px;
-=======
                 padding: 9px 10px 11px 10px;
               }
               &.pink{
                 background-color: rgba(217, 97, 149, 0.2);
                 padding: 12px 1px 9.5px 10px;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
               }
               @media (max-width: $screen-md) {
                 margin-right: 15px;
@@ -296,25 +258,18 @@
               
             }
             &--text{
-<<<<<<< HEAD
-=======
               flex-direction: column;
               display: flex;
               justify-content: center;
               gap:6px;
               margin-top: 2px;
               // height: 40px;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
               .title{
                 font: 700 16px/12px $base-font-family;
                 letter-spacing: 0.32px;
                 text-decoration-line: underline;
                 text-transform: uppercase;
-<<<<<<< HEAD
-                width: 144px;
-=======
                 
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
                 @media (max-width: $screen-md) {
                   font: 700 12px/12px $base-font-family;
                   letter-spacing: 0.24px;
@@ -326,11 +281,7 @@
               }
               .saldo{
                 font:400 16px/22px $apercu;
-<<<<<<< HEAD
-                margin-top: 6px;
-=======
                 
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
                 @media (max-width: $screen-md) {
                   font: 400 14px/14px $apercu;
                   
@@ -344,13 +295,9 @@
             align-items: center;
             justify-content: center;
             border-radius: 32px;
-<<<<<<< HEAD
-            height: 48px;
-=======
             height: 40px;
             padding: 0 32px;
             width: max-content;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
             font: 700 16px/20px $apercu;
             letter-spacing: 0.16px;
             cursor: pointer;
@@ -361,23 +308,8 @@
             @media (max-width:$screen-xs) {
               display: none;
             }
-<<<<<<< HEAD
-            &.spel{
-              width: 165px;
-              @media (max-width:$screen-md) {
-                width: 90px;
-              }
-            }
-            &.vinst{
-              width: 191px;
-              @media (max-width:$screen-md) {
-                width: 100px;
-              }
-            }
-=======
            
          
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
             &--icon{
               margin-right: 10px;
               display: flex;
@@ -475,10 +407,7 @@
         flex:1 1;
         max-width: 50%;
         justify-content: flex-end;
-<<<<<<< HEAD
-=======
         height: 40px;
->>>>>>> 63e25aa4e8a5d84f98ff8bc37bc9da2914d6cc66
         @media (max-width: $screen-md) {
           height: 100%;
         }
