@@ -15,7 +15,16 @@ export default function () {
         return false;
     });
 
-  
+    $('body').on('click', function(e){
+
+      if ($('#Expressfrakt').is(':checked')){
+        $(".payment").addClass('open')
+      } else {
+        $(".payment").removeClass('open')
+      }
+
+    })
+
     $('.tab_all .black_blue').click(function (e){
       
       e.preventDefault();

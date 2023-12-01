@@ -575,7 +575,18 @@
         }
     }
 }
- 
+
+.balance-bar__holder--buttons.buttons.buttons-slide .secondText{
+    display: none;
+}
+.balance-bar__holder--buttons.buttons.buttons-slide.active .secondText{
+    display: block;
+}
+.balance-bar__holder--buttons.buttons.buttons-slide.active .firstText{
+    display: none;
+}
+
+
 #nav-new {
     margin-top: 38px;
   @media (max-width: $screen-xs) {
@@ -653,10 +664,13 @@
             border-radius: 16px;
             align-items: center;
             height: 40px;
-            max-width: 247px;
+            max-width: 348px;
+            @media (max-width:1024px) {
+                max-width: 247px;
+            }
             margin: 0 auto;
             background: var(--GOLD, linear-gradient(113deg, #D19700 12.59%, #F2CB49 29.92%, #FFE46C 44.32%, #DFA205 51.11%, #F0CC44 59.18%, #E0B500 67.18%, #FFE15B 82.56%, #E39600 91.75%, #ECB92C 97.3%));            
-            @media (max-width:$screen-xs) {
+            @media (max-width:739px) {
                  display: none;
             }
             &__text{
@@ -673,8 +687,28 @@
                     font-weight: 700;
                     line-height: 16px;
                     letter-spacing: 0.64px;
+                    &.right{
+                        color: #074658;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16px;
+                    }
                 }
             }
+            &__right-block{
+                height: 24px;
+                border-left: 1px solid rgba(7, 70, 88, 0.50);
+                @media (max-width:1024px) {
+                    display: none;
+                }
+            }
+            &__right-blocktext{
+                @media (max-width:1024px) {
+                    display: none;
+                }
+            
+            }
+
             &-svg{
                 position: relative;
                 z-index: 1;
@@ -693,7 +727,8 @@
             &-mobile{
                 display: flex;
                 margin: 0 auto 20px;
-                @media (min-width:$screen-xs) {
+                width: 247px;
+                @media (min-width:739px) {
                     display: none;
                 }
             
@@ -771,6 +806,7 @@
 
             &__signin{
                 a{
+                    text-wrap: nowrap;
                   color: #003A4E;
                     font: 700 20px/22px $apercu;
                     padding: 22px 27px;  
@@ -786,6 +822,7 @@
             }
             &__signup{
                 a{
+                    text-wrap: nowrap;
                     color: #003A4E;
                     font: 400 20px/22px $apercu; 
                     padding: 22px 27px;
