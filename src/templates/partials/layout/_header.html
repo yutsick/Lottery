@@ -38,21 +38,23 @@
 
 <body @@if(!context.top_bar){style="margin:0"}>
 <div class="@@if(context.class){@@class}" id="page-wrapper">
-	@@include('blocks/_balance-bar.html', { 
-		"logged_in": "@@logged_in",
-		"links_display_desk": "@@links_display.desk",
-		"links_display_tab": "@@links_display.tab",
-		"links_display_mob": "@@links_display.mob",
-		"visa_saldo_display_desk":"@@visa_saldo_display.desk",
-		"visa_saldo_display_tab":"@@visa_saldo_display.tab",
-		"visa_saldo_display_mob":"@@visa_saldo_display.mob",
-		"insättning_display_desk": "@@insättning_display.desk",
-		"insättning_display_tab": "@@insättning_display.tab",
-		"insättning_display_mob": "@@insättning_display.mob",
-		"registrera_lott_display_desk": "@@registrera_lott_display.desk",
-		"registrera_lott_display_tab": "@@registrera_lott_display.tab",
-		"registrera_lott_display_mob": "@@registrera_lott_display.mob"
-	})
+	@@if(context.top_bar) {
+		@@include('blocks/_balance-bar.html', { 
+			"logged_in": "@@logged_in",
+			"links_display_desk": "@@links_display.desk",
+			"links_display_tab": "@@links_display.tab",
+			"links_display_mob": "@@links_display.mob",
+			"visa_saldo_display_desk":"@@visa_saldo_display.desk",
+			"visa_saldo_display_tab":"@@visa_saldo_display.tab",
+			"visa_saldo_display_mob":"@@visa_saldo_display.mob",
+			"insättning_display_desk": "@@insättning_display.desk",
+			"insättning_display_tab": "@@insättning_display.tab",
+			"insättning_display_mob": "@@insättning_display.mob",
+			"registrera_lott_display_desk": "@@registrera_lott_display.desk",
+			"registrera_lott_display_tab": "@@registrera_lott_display.tab",
+			"registrera_lott_display_mob": "@@registrera_lott_display.mob"
+		})
+	}
 
 
 	<!--  -->
