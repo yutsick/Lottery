@@ -12,6 +12,8 @@ import modernizr from "./vendor/modernizr-custom.js";
 
 import slick from "./vendor/slick.min.js";
 
+import slick from './vendor/slick.min.js';
+
 /* Store */
 import storeConfiguration from "./store";
 
@@ -48,6 +50,8 @@ import triggerTooltip from "./components/trigger-tooltip";
 import walletAccountSwitch from "./components/wallet-account-switch";
 import walletTransferAmount from "./components/wallet-transfer-amount";
 import orderActions from "./components/order-actions";
+import pageBingo from "./components/page-bingo";
+import blockHeroWhole from "./components/block-hero";
 import cartQuantity from "./components/cart-quantity";
 import bankIDForm from "./components/bankid-form";
 import balanceBarJS from "./components/balance-bar";
@@ -71,6 +75,12 @@ import functionSlick from "./components/function-slick";
 import mediaDataSwitcher from "./components/media-data-switcher.js";
 import gameLimitModal from "./components/gameLimitModal.js";
 import bonuskodsFunctionen from "./components/bonuskods-functionen";
+
+//import cookieList from './components/cookie-consent';
+//import checkOutIn from './components/checkout-module';
+import functionSlick from './components/function-slick';
+
+
 
 /* Layout */
 import navigation from "./layout/navigation";
@@ -143,6 +153,8 @@ $(function () {
 	textToggle();
 	new orderActions();
 	new cartQuantity();
+	pageBingo();
+	blockHeroWhole();
 	bankIDForm();
 	balanceBarJS();
 	scroller();
@@ -163,6 +175,10 @@ $(function () {
 	radioButtonProduct();
 
 	checkMaxLength();
+//	cookieList();
+  
+	functionSlick();
+  	slick();
 	cookieList();
 
 	functionSlick();

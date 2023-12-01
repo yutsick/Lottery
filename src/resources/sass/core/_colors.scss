@@ -13,7 +13,7 @@ $color-secondary-light: #C9E8F4;
 $color-secondary-lighter: #E5F6FE;
 $color-secondary-dark: #7CB7D0;
 
-$color-cta: #CC5599;
+$color-cta: #C59;
 $color-cta-light: #ECC5DE;
 $color-cta-lighter: #E3BAC5;
 $color-cta-dark: #BA5B80;
@@ -147,6 +147,8 @@ $color-popover: #06566F;
 
 // Colors from guidline 2022
 $colorMiljonbla: #003E52;
+$colorMiljonblaHover: #112329;
+
 $colorNord: #1377B0;
 $colorHimmel: #C7E7F8;
 $colorMoln: #F5F5F5;
@@ -156,10 +158,11 @@ $colorTurkos75: #70B9CB;
 $colorTurkos50: #A8D1DC;
 $colorTurkos20: #DEEDF2;
 
-$colorRosa: #D96195;
-$colorRosa75: #E18DB1;
-$colorRosa50: #EBB6CE;
-$colorRosa20: #F7E3EC;
+$colorRosa: #c59;
+$colorRosa75: rgba(204, 85, 153, 0.75);
+$colorRosa50: rgba(204, 85, 153, 0.5);
+$colorRosa20: rgba(204, 85, 153, 0.2);
+$colorRosaHover: #C65687;
 
 $colorGron: #50B78D;
 $colorGron75: #8BC9A9;
@@ -176,3 +179,8 @@ $colorGul75: #FFE27D;
 $colorGul50: #FFEBAD;
 $colorGul20: #FFF7E0;
 
+$colorWhite: #ECEAE8;
+$colorWhiteHover: #E3E3E3;
+
+$colorLightBlue: #A9D3E6;
+$colorLightBlueHover: #99C0D1;

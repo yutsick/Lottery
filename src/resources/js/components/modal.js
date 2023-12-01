@@ -144,6 +144,54 @@ export default function () {
 		}
 	});
 
+
+	// popup-pinningvatt modal
+	function cutText(){
+		const cutEl = $('#popup-pinningvatt .cut_text');
+		const cutText = $(cutEl).text();
+		
+		if (cutText.length > 180){
+			$(cutEl).text(cutText.substring(0,180) + '...');
+			$('#popup-pinningvatt .read_more').show();
+		}
+		$('#popup-pinningvatt .read_more').on('click', function(){
+			$(cutEl).text(cutText);
+			$(this).hide();
+		})
+
+	}
+
+	function buttonEnable(){
+		const radio = $('.content__questions_item input[type="radio"]');
+		$(radio).on('click',function(){
+			let radioSelected = $('.content__questions_item input[type="radio"]:checked');
+
+			if(radio.length/2 == radioSelected.length){
+				$('button[type="submit"]').prop('disabled', false); 
+			}
+		})
+
+	}
+
+	function popupChange(){
+
+		$('#popup-pinningvatt #form-pinningvatt  button[type="submit"], #popup-pep button').on('click',function(e){
+			e.preventDefault();
+			$('.popup-pinn-pep').fadeOut(400);
+		})
+
+
+		$('#popup-pinningvatt .popup-first button[type="cancel"]').on('click', function(e){
+			e.preventDefault();
+			$('.popup-first').hide();
+			$('.popup-sec').fadeIn(600);
+		})
+		$('#popup-pinningvatt .popup-sec button').on('click', function(e){
+			e.preventDefault();
+			$('.popup-pinn-pep').fadeOut(400);
+		})
+	}
+
 	modalOpen('.js-mediaBlock__video');
 	modalCloseVideo('.mediaBlock__video .js-modal-close');
 		
@@ -155,4 +203,7 @@ export default function () {
 	modalSchemasClose('.schemas-modal-tabs .js-modal-close');
 	
 	modalClose('.js-modal-close');
+	cutText();
+	buttonEnable();
+	popupChange(); 
 }
