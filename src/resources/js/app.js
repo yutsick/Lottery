@@ -75,6 +75,8 @@ import functionSlick from "./components/function-slick";
 import mediaDataSwitcher from "./components/media-data-switcher.js";
 import gameLimitModal from "./components/gameLimitModal.js";
 import bonuskodsFunctionen from "./components/bonuskods-functionen";
+import subscriptionPopup from "./components/subscription-popup";
+
 
 //import cookieList from './components/cookie-consent';
 //import checkOutIn from './components/checkout-module';
@@ -148,6 +150,7 @@ $(function () {
 	walletAccountSwitch();
 	walletTransferAmount();
 	navigation();
+
 	register();
 	top();
 	textToggle();
@@ -175,7 +178,7 @@ $(function () {
 	radioButtonProduct();
 
 	checkMaxLength();
-//	cookieList();
+	//	cookieList();
   
 	functionSlick();
   	slick();
@@ -190,12 +193,11 @@ $(function () {
 
 	/* call breakpointListener last */
 	breakpointListener();
-
 	gameLimitModal();
-
 	bonuskodsFunctionen();
+	
 });
-
+subscriptionPopup();
 /**
  * Flickity Extension to handle custom styles on third from active slide.
  **/
