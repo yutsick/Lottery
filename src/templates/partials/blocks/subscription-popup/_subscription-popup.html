@@ -3,7 +3,7 @@
     <div class="popup">
         <div class="popup_left position-@@image_position display-@@image_display.desk display-tab-@@image_display.tab display-mob-@@image_display.mob"></div>
     
-        <div class="popup_right-1 active">
+        <div class="popup_right-1 active" popup_right-index="1">
             <div class="popup_right-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
                     <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
@@ -62,7 +62,7 @@
                 <button type="button" class="verify_button blocked">Verifiera uppgifter</button>
             </div>
         </div>
-        <div class="popup_right-2 ">
+        <div class="popup_right-2 " popup_right-index="2">
             <div class="popup_right-header">
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
@@ -106,7 +106,7 @@
                 <button type="button" class="verify_button open">Till betalning</button>
             </div>
         </div>
-        <div class="popup_right-3">
+        <div class="popup_right-3" popup_right-index="3">
             <div class="popup_right-header">
                 <button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
@@ -223,7 +223,7 @@
             </div>
         </div>
 
-        <div class="popup_right-4  ">
+        <div class="popup_right-4  " popup_right-index="4">
             <div class="popup_right-top">
                 <div class="popup_right-header">
                     <button>
@@ -236,9 +236,9 @@
                 </div>
                 <div class="popup_process-topbar">
                     <h2>Öppna din BankID app</h2>
-                    <span style="display: none;">Skanna QR-koden nedan</span>
+                    <span">Skanna QR-koden nedan</span>
                 </div>
-                <div class="popup_qr" style="display: none;">
+                <div class="popup_qr" >
                     <svg width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M3 9h6V3H3zm1-5h4v4H4zm1 1h2v2H5zm10 4h6V3h-6zm1-5h4v4h-4zm1 1h2v2h-2zM3 21h6v-6H3zm1-5h4v4H4zm1 1h2v2H5zm15 2h1v2h-2v-3h1zm0-3h1v1h-1zm0-1v1h-1v-1zm-10 2h1v4h-1v-4zm-4-7v2H4v-1H3v-1h3zm4-3h1v1h-1zm3-3v2h-1V3h2v1zm-3 0h1v1h-1zm10 8h1v2h-2v-1h1zm-1-2v1h-2v2h-2v-1h1v-2h3zm-7 4h-1v-1h-1v-1h2v2zm6 2h1v1h-1zm2-5v1h-1v-1zm-9 3v1h-1v-1zm6 5h1v2h-2v-2zm-3 0h1v1h-1v1h-2v-1h1v-1zm0-1v-1h2v1zm0-5h1v3h-1v1h-1v1h-1v-2h-1v-1h3v-1h-1v-1zm-9 0v1H4v-1zm12 4h-1v-1h1zm1-2h-2v-1h2zM8 10h1v1H8v1h1v2H8v-1H7v1H6v-2h1v-2zm3 0V8h3v3h-2v-1h1V9h-1v1zm0-4h1v1h-1zm-1 4h1v1h-1zm3-3V6h1v1z" />
@@ -247,11 +247,6 @@
 
                 </div>
 
-                <!-- bank id loader screen -->
-
-                <div class="loader-wrapper">
-                    <div class="loader"></div>
-                </div>
             </div>
             <div class="popup_right-bottom">
                 <div class="popup_right-logo">
@@ -291,7 +286,7 @@
             </div>
         </div>
 
-        <div class="popup_right-4 process ">
+        <div class="popup_right-4 process " popup_right-index="5">
             <div class="popup_right-top">
                 <div class="popup_right-header">
 
@@ -346,7 +341,7 @@
             </div>
         </div>
 
-        <div class="popup_right-4 done">
+        <div class="popup_right-4 done" popup_right-index="6">
             <div class="popup_right-top">
                 <div class="popup_right-header">
 
@@ -428,7 +423,7 @@
             </div>
         </div>
 
-        <div class="popup_right-4 swish ">
+        <div class="popup_right-4 swish" popup_right-index="7">
             <div class="popup_right-top">
                 <div class="popup_right-header">
 
@@ -445,7 +440,7 @@
 
 
                 <div class="popup_qr">
-                    <img src="img/qr-color.svg" alt="">
+                    <img src="assets/img/subscription-popup/qr-color.svg" alt="">
                 </div>
                 <div class="text-center lh-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
@@ -464,7 +459,7 @@
             </div>
         </div>
 
-        <div class="popup_right-4 swish">
+        <div class="popup_right-4 swish"  popup_right-index="8">
             <div class="popup_right-top">
                 <div class="popup_right-header">
 
@@ -510,7 +505,7 @@
 
 <!-- main poup end -->
 <!-- error general blocks start -->
-<div class="error_general">
+<div class="error_general"  popup_right-index="10">
     <div class="error_general-topbar">
         <h3>Köpet avbröts</h3>
         <h2>Hoppsan,<br>
@@ -526,7 +521,7 @@
 <!-- error general blocks end -->
 
 <!-- Finish screen -->
-<div class="finish-screen">
+<div class="finish-screen"  popup_right-index="9">
     <div class="overlay">
        <img src="assets/img/subscription-popup/popup-finish.png" alt="">
     </div>

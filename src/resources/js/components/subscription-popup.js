@@ -1,8 +1,9 @@
 export default function (){
-    console.log('start1')
+
     $('.popup_right-header button, .popup_right-button--second .prevPage').on('click',switchToPrevPage);
     $('.verify_button').on('click',validateInputs);
-    $('.popup_right-button--second .verify_button').on('click', switchToNextPage);
+    $('.popup_right-button--second .verify_button, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
+
 
 
     document.getElementById('personnummer').addEventListener('input', function (e) {
@@ -91,12 +92,12 @@ export default function (){
     popupResize();
     
     function switchToNextPage() {
-        const currentPage = document.querySelector('.popup_right-' + PageIndex);
+        const currentPage = document.querySelector(`[popup_right-index="${PageIndex}"]`);
         currentPage.classList.remove('active');
     
         PageIndex++;
     
-        const nextPage = document.querySelector('.popup_right-' + PageIndex);
+        const nextPage = document.querySelector(`[popup_right-index="${PageIndex}"]`);
         nextPage.classList.add('active');
     
         popupResize();
@@ -104,12 +105,12 @@ export default function (){
     }
     
     function switchToPrevPage() {
-        const currentPage = document.querySelector('.popup_right-' + PageIndex);
+        const currentPage = document.querySelector(`[popup_right-index="${PageIndex}"]`);
         currentPage.classList.remove('active');
     
         PageIndex--;
     
-        const prevPage = document.querySelector('.popup_right-' + PageIndex);
+        const prevPage = document.querySelector(`[popup_right-index="${PageIndex}"]`);
         prevPage.classList.add('active');
         popupResize();
         if (PageIndex < 4){

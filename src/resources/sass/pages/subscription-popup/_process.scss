@@ -33,7 +33,7 @@
     line-height: 20px; 
   }
   .finish-screen{
-    display: flex;
+  
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -41,6 +41,6 @@
     background-color: #CED5DA;
     display: none;
     &.active{
-      display: block;
+      display: flex;
     }
   }

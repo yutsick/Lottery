@@ -1,11 +1,10 @@
 .popup_left {
     
     width: 50%;
-    height: 100%;
     background-image: url('../img/subscription-popup/OFFER.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 350px;
     border-radius:  16px 0 0 16px;
     &.position-right{
