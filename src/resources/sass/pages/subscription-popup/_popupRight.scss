@@ -11,6 +11,7 @@
 .popup_right-3{
     .popup_right-button{
         @media (max-width:425px) {
+            height: 22% !important;
             margin-top: 0;
             margin-bottom: 60px;
            // margin-bottom: 32px;
@@ -50,7 +51,7 @@
 .popup_right-title {
     text-align: center;
     padding: 0 32px;
-    margin-bottom: 28px;
+    // margin-bottom: 28px;
 
     h1 {
         font-family: $base-font-family;
@@ -129,10 +130,10 @@
 .popup_right-title--disc {
     color: #003E52;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 22.85px;
+    line-height: 18px;
 }
 
 /* popup_right-title end */
@@ -248,9 +249,9 @@
     margin-top: 40px;
 }
 
-.popup_qr svg {
-    border-radius: 8px;
-    border: 8px solid #50B78D;
+.popup_qr img {
+    height: 120px;
+    width: 120px;
 }
 
 /* popup_right-bottom start */
@@ -409,7 +410,7 @@
 }
 
 .hidden_text {
-    text-align: left;
+    // text-align: left;
     height: 68px;
 }
 
@@ -424,7 +425,7 @@
 .third {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 22px;
 }
 
 .bott_way {
@@ -439,7 +440,7 @@
 .bott_way::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 34px;
     width: 81%;
     height: 1px;
@@ -497,10 +498,12 @@
 
 .customRadio p {
     color: rgba(0, 62, 82, 0.75);
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 18px;
+    margin-left: 30px;
+    margin-bottom: 0px;
 }
 
 .checkmark {
@@ -535,7 +538,7 @@
 }
 
 .mb_10 {
-    margin: 30px 0 19px;
+    margin-top: 26px;
 }
 
 .customRadio input:checked~.checkmark:after {
@@ -568,7 +571,8 @@
 /* custom select start */
 details {
     position: relative;
-    width: 285px;
+    width: 255px;
+    margin-left: 30px;
 }
 
 details[open] {

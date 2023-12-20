@@ -2,7 +2,16 @@ export default function (){
 
     $('.popup_right-header button, .popup_right-button--second .prevPage').on('click',switchToPrevPage);
     $('.verify_button').on('click',validateInputs);
-    $('.popup_right-button--second .verify_button, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
+    $('.popup_right-button--second, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
+    $('#personnummer').on('input blur', function () {
+        setTimeout(() => validateInputs(), 4000);
+    });
+    $('#email').on('input blur', function () {
+        setTimeout(() => validateInputs(), 2000);
+    });
+    $('#mobilnummer').on('input blur', function () {
+        setTimeout(() => validateInputs(), 2000);
+    });
 
 
 
@@ -34,12 +43,16 @@ export default function (){
         const personnummerErrorMessage = document.getElementById('errorWindow');
         const emailErrorMessage = document.getElementById('errorWindow2');
         const mobilnummerErrorMessage = document.getElementById('errorWindow3');
+        const verifyButton = document.querySelector('.verify_button');
+
     
         if (!validateInput(personnummerInput, personnummerErrorMessage, 'personnummer') ||
             !validateInput(emailInput, emailErrorMessage, 'email') ||
             !validateInput(mobilnummerInput, mobilnummerErrorMessage, 'mobilnummer')) {
-        } else {
-            const verifyButton = document.querySelector('.verify_button');
+                verifyButton.classList.add('blocked');
+                verifyButton.classList.remove('open');
+                verifyButton.removeEventListener('click', switchToNextPage);
+        } else { 
             verifyButton.classList.remove('blocked');
             verifyButton.classList.add('open');
             verifyButton.addEventListener('click', switchToNextPage);
@@ -59,7 +72,8 @@ export default function (){
                 break;
     
             case 'email':
-                if (!isValidEmail(input.value)) {
+                const emailValue = input.value.trim()
+                if (!isValidEmail(emailValue)) {
                     errorMessageElement.style.display = 'block';
                     return false;
                 } else {
@@ -140,8 +154,8 @@ export default function (){
         customRadios.on('click', function () {
           hiddenText.css('display', 'none');
           hidText.css('display', 'block');
-          bottWay.css('height', '301px');
-          dFlex.css('height', '22%');
+          bottWay.css('height', '285px');
+          dFlex.css('height', '28%');
         });
       });
     
