@@ -5,12 +5,16 @@
     
         <div class="popup_right-1 active" popup_right-index="1">
             <div class="popup_right-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
+                <svg class="back_arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
                     <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 <img src="/assets/img/subscription-popup/Group 54.png" alt="pag">
-                <img class="close" src="/assets/img/subscription-popup/Close.png" alt="close">
+                <div class="close_container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6262 2.25361C18.0167 1.86309 18.0167 1.22992 17.6262 0.839397L17.1604 0.373611C16.7699 -0.0169137 16.1367 -0.0169136 15.7462 0.373611L8.99996 7.11984L2.25373 0.37361C1.86321 -0.0169144 1.23004 -0.0169137 0.839519 0.373611L0.373733 0.839397C-0.0167915 1.22992 -0.0167915 1.86309 0.373733 2.25361L7.11996 8.99984L0.373732 15.7461C-0.0167923 16.1366 -0.0167916 16.7698 0.373733 17.1603L0.839519 17.6261C1.23004 18.0166 1.86321 18.0166 2.25373 17.6261L8.99996 10.8798L15.7462 17.6261C16.1367 18.0166 16.7699 18.0166 17.1604 17.6261L17.6262 17.1603C18.0167 16.7698 18.0167 16.1366 17.6262 15.7461L10.88 8.99984L17.6262 2.25361Z" fill="#003E52"/>
+                    </svg>
+                </div>
             </div>
             <div class="popup_right-title">
                 <h1 class="popup_right-title--header display-@@header_first_display.desk display-tab-@@header_first_display.tab display-mob-@@header_first_display.mob">
@@ -34,7 +38,7 @@
                     
                 </div>
             </div>
-                <form class="popup_right-body--form" action="" method="get">
+                <form class="popup_right-body--form" id="right-1_form" action="" method="get">
 
                     <label for="personnummer">@@input1.label
                         <div class="error-window" id="errorWindow">
@@ -56,11 +60,12 @@
                         </div>
                     </label>
                     <input type="tel" id="mobilnummer" placeholder="@@input3.placeholder" maxlength="11" required="required">
+                    <div class="popup_right-button" id="verify_button">
+                        <button type="button"  class="verify_button blocked">Verifiera uppgifter</button>
+                    </div>
                 </form>
             </div>
-            <div class="popup_right-button">
-                <button type="button" class="verify_button blocked">Verifiera uppgifter</button>
-            </div>
+
         </div>
         <div class="popup_right-2 " popup_right-index="2">
             <div class="popup_right-header">
@@ -102,7 +107,7 @@
 
             </div>
             <div class="popup_right-button--second">
-                <button class="prevPage">Ändra personnummer</button>
+                <button type="button" class="prevPages">Ändra personnummer</button>
                 <button type="button" class="verify_button open">Till betalning</button>
             </div>
         </div>

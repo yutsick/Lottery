@@ -1,22 +1,70 @@
 export default function (){
 
-    $('.popup_right-header button, .popup_right-button--second .prevPage').on('click',switchToPrevPage);
+    const personnummerInput = document.getElementById('personnummer');
+    const emailInput = document.getElementById('email');
+    const mobilnummerInput = document.getElementById('mobilnummer');
+    const verifyButton = document.querySelector('.verify_button');
+    const verifyButtonId = document.querySelector('.popup_right-1');
+    verifyButtonId.setAttribute('tabindex', 0);
+
+    const personnummerErrorMessage = document.getElementById('errorWindow');
+    const emailErrorMessage = document.getElementById('errorWindow2');
+    const mobilnummerErrorMessage = document.getElementById('errorWindow3');
+
+    verifyButtonId.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            validateInputs();
+            console.log(validateInputs)
+            if (isValidId(personnummerInput.value) &&
+            isValidEmail(emailInput.value) &&
+            isValidPhone(mobilnummerInput.value)) {
+                switchToNextPage();
+            }
+            
+        }
+    });
+
+    $('.popup_right-header button, .popup_right-button--second .prevPages').on('click',switchToPrevPage);
     $('.verify_button').on('click',validateInputs);
-    $('.popup_right-button--second, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
-    $('#personnummer').on('input blur', function () {
-        setTimeout(() => validateInputs(), 4000);
-    });
-    $('#email').on('input blur', function () {
-        setTimeout(() => validateInputs(), 2000);
-    });
-    $('#mobilnummer').on('input blur', function () {
-        setTimeout(() => validateInputs(), 2000);
-    });
+    $('.popup_right-button--second .verify_button, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
 
+    function setupInputValidation(inputId, inputObject, errorMessage, validationDelay) {
+        $('#' + inputId).on('input', debounce(function () {
 
-
+            validateInput(inputObject, errorMessage, inputId);
+            if (isValidId(personnummerInput.value) &&
+                isValidEmail(emailInput.value) &&
+                isValidPhone(mobilnummerInput.value)) {
+                verifyButton.classList.remove('blocked');
+                verifyButton.classList.add('open');
+                verifyButton.addEventListener('click', switchToNextPage);
+            } else {
+                verifyButton.classList.add('blocked');
+                verifyButton.classList.remove('open');
+                verifyButton.removeEventListener('click', switchToNextPage);
+            }
+        }, validationDelay));
+    }
+    
+    function debounce(func, delay) {
+        let timeout;
+        return function () {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                func.apply(context, args);
+            }, delay);
+        };
+    }
+    
+    setupInputValidation('personnummer', personnummerInput, personnummerErrorMessage, 3000, 1);
+    setupInputValidation('email', emailInput, emailErrorMessage, 3000, 1);
+    setupInputValidation('mobilnummer', mobilnummerInput, mobilnummerErrorMessage, 3000, 1);
+    
     document.getElementById('personnummer').addEventListener('input', function (e) {
         let inputValue = e.target.value.replace(/\D/g, '');
+
         if (inputValue.length > 8) {
             e.target.value = inputValue.replace(/(\d{4})(\d{2})(\d{2})(\d{4})/, '$1$2$3-$4');
         } else {
@@ -25,7 +73,6 @@ export default function (){
     });
 
     $('#mobilnummer').on('input', (e) => {
-        console.log(e.target.value)
         let inputValue = e.target.value.replace(/\D/g, '');
         if (inputValue.length > 3) {
             e.target.value = inputValue.replace(/(\d{3})(\d{7})/, '$1-$2');
@@ -34,42 +81,32 @@ export default function (){
         }
     });
     
-    
     function validateInputs() {
-        const personnummerInput = document.getElementById('personnummer');
-        const emailInput = document.getElementById('email');
-        const mobilnummerInput = document.getElementById('mobilnummer');
-        
-        const personnummerErrorMessage = document.getElementById('errorWindow');
-        const emailErrorMessage = document.getElementById('errorWindow2');
-        const mobilnummerErrorMessage = document.getElementById('errorWindow3');
-        const verifyButton = document.querySelector('.verify_button');
-
-    
         if (!validateInput(personnummerInput, personnummerErrorMessage, 'personnummer') ||
             !validateInput(emailInput, emailErrorMessage, 'email') ||
             !validateInput(mobilnummerInput, mobilnummerErrorMessage, 'mobilnummer')) {
                 verifyButton.classList.add('blocked');
                 verifyButton.classList.remove('open');
                 verifyButton.removeEventListener('click', switchToNextPage);
+                return false;
         } else { 
             verifyButton.classList.remove('blocked');
             verifyButton.classList.add('open');
             verifyButton.addEventListener('click', switchToNextPage);
+            return true;
         }
     }
     
     function validateInput(input, errorMessageElement, inputType) {
         switch (inputType) {
             case 'personnummer':
-                if (input.value.length !== 13) {
-                    errorMessageElement.style.display = 'block';
-                    return false;
-                } else {
+                if (input.value.length === 13 || input.value.length === 10) {
                     errorMessageElement.style.display = 'none';
                     return true;
+                } else {
+                    errorMessageElement.style.display = 'block';
+                    return false;
                 }
-                break;
     
             case 'email':
                 const emailValue = input.value.trim()
@@ -80,7 +117,6 @@ export default function (){
                     errorMessageElement.style.display = 'none';
                     return true;
                 }
-                break;
     
             case 'mobilnummer':
                 if (input.value.length !== 11) {
@@ -90,16 +126,20 @@ export default function (){
                     errorMessageElement.style.display = 'none';
                     return true;
                 }
-                break;
-    
-            default:
-                return false;
         }
     }
     
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+    }
+
+    function isValidPhone(phone) {
+        return phone.length === 11;
+    }
+
+    function isValidId(id) {
+        return id.length === 13 || id.length === 10;
     }
     
     let PageIndex = 1;/*Temp. Must be =1*/
@@ -145,11 +185,11 @@ export default function (){
     }
     
     $(document).ready(function () {
-        var customRadios = $('.customRadio');
-        var hiddenText = $('.hidden_text');
-        var hidText = $('.hid_text');
-        var bottWay = $('.bott_way');
-        var dFlex = $('.d_flex');
+        const customRadios = $('.customRadio');
+        const hiddenText = $('.hidden_text');
+        const hidText = $('.hid_text');
+        const bottWay = $('.bott_way');
+        const dFlex = $('.d_flex');
       
         customRadios.on('click', function () {
           hiddenText.css('display', 'none');
