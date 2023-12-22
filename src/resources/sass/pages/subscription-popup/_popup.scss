@@ -21,6 +21,9 @@
     height: max-content;
     
     background-color: #fff;
+    @media (max-width: 389px){
+        width: none;
+    }
     @media (max-width: 425px){
         flex-direction: column-reverse;
         height: auto;

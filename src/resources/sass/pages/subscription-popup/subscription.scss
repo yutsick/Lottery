@@ -18,7 +18,7 @@
     background-color: #F2F5F7;
    .list{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         &-item{
             margin: 0 10px;
@@ -39,7 +39,26 @@
                 
             }
         }
+
+
     }
+}
+
+@media (max-width:361px) {
+    .sub-bar {
+        justify-content: space-between;
+        .list {
+            width: 100%;
+            padding: 0 5px;
+            &-item {
+                margin: 0;
+            }
+        }
+    }
+
+
+
+
 }
 
 

@@ -69,7 +69,7 @@
         </div>
         <div class="popup_right-2 " popup_right-index="2">
             <div class="popup_right-header">
-                <button>
+                <button class="prevPages">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
                         <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -113,7 +113,7 @@
         </div>
         <div class="popup_right-3 " popup_right-index="3">
             <div class="popup_right-header">
-                <button>
+                <button class="prevPages">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
                         <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round" />
@@ -190,7 +190,7 @@
 
             <div class="popup_right-button d_flex">
                 <p class="hid_text">Genom att klicka på “Slutför med BankID” påbörjar du en prenumeration och du
-                    godkänner <a href="#"> våra villkor.</a></p>
+                    godkänner <a href="#" id="termsLink"> våra villkor.</a></p>
                 <button id="third_but" type="button" class="verify_button blocked">
                     Slutför med BankID
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -226,12 +226,39 @@
                     </svg>
                 </button>
             </div>
+            <div id="termsBlock">
+                <div class="popup_right-header">
+                    <button >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
+                            <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup_right-title ">
+                    <h1 class="popup_right-title--header display-@@header_third_display.desk display-tab-@@header_third_display.tab display-mob-@@header_third_display.mob">
+                        Våra villkor
+                    </h1>
+                </div>
+                <div class="termsBlock-body">
+                    <strong>Lorem ipsum</strong>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.
+                    </span>
+                    <strong>Lorem ipsum</strong>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.
+                    </p>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.
+                    </span>
+                </div>
+            </div>
         </div>
-
-        <div class="popup_right-4  " popup_right-index="4">
+        <div class="popup_right-4 " popup_right-index="4">
             <div class="popup_right-top">
                 <div class="popup_right-header">
-                    <button>
+                    <button class="prevPages">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
                             <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
                                 stroke-linecap="round" stroke-linejoin="round" />
@@ -385,10 +412,17 @@
                 </div>
                 <div class="text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
-                        <circle cx="4" cy="4" r="4" fill="#003E52" />
-                        <circle cx="20" cy="4" r="4" fill="#003E52" fill-opacity="0.3" />
-                        <circle cx="36" cy="4" r="4" fill="#003E52" fill-opacity="0.3" />
+                        <circle cx="4" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="20" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="36" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.8s" repeatCount="indefinite" />
+                        </circle>
                     </svg>
+                    
                 </div>
 
             </div>
@@ -451,9 +485,15 @@
                 </div>
                 <div class="text-center lh-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
-                        <circle cx="4" cy="4" r="4" fill="#003E52" fill-opacity="0.3" />
-                        <circle cx="20" cy="4" r="4" fill="#003E52" />
-                        <circle cx="36" cy="4" r="4" fill="#003E52" fill-opacity="0.3" />
+                        <circle cx="4" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="20" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="36" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.8s" repeatCount="indefinite" />
+                        </circle>
                     </svg>
                 </div>
 

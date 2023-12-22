@@ -1,5 +1,6 @@
 export default function (){
 
+    const termsBlock = document.getElementById("termsBlock");
     const personnummerInput = document.getElementById('personnummer');
     const emailInput = document.getElementById('email');
     const mobilnummerInput = document.getElementById('mobilnummer');
@@ -11,26 +12,32 @@ export default function (){
     const emailErrorMessage = document.getElementById('errorWindow2');
     const mobilnummerErrorMessage = document.getElementById('errorWindow3');
 
+    $('#termsLink').on('click', function (event) {
+        event.preventDefault();
+        termsBlock.style.transform = "translateY(0)";
+    });
+
+    $('#termsBlock button').on('click', function () {
+        termsBlock.style.transform = "translateY(100%)";
+    });
+
+    $('.popup_right-button--second .prevPages, .prevPages').on('click',switchToPrevPage);
+    $('.verify_button').on('click',validateInputs);
+    $('.popup_right-button--second .verify_button, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
+
     verifyButtonId.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             validateInputs();
-            console.log(validateInputs)
             if (isValidId(personnummerInput.value) &&
             isValidEmail(emailInput.value) &&
             isValidPhone(mobilnummerInput.value)) {
                 switchToNextPage();
             }
-            
         }
     });
 
-    $('.popup_right-header button, .popup_right-button--second .prevPages').on('click',switchToPrevPage);
-    $('.verify_button').on('click',validateInputs);
-    $('.popup_right-button--second .verify_button, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
-
     function setupInputValidation(inputId, inputObject, errorMessage, validationDelay) {
         $('#' + inputId).on('input', debounce(function () {
-
             validateInput(inputObject, errorMessage, inputId);
             if (isValidId(personnummerInput.value) &&
                 isValidEmail(emailInput.value) &&
@@ -155,7 +162,6 @@ export default function (){
         nextPage.classList.add('active');
     
         popupResize();
-      
     }
     
     function switchToPrevPage() {
@@ -171,7 +177,6 @@ export default function (){
             $('.popup_left').show();
         }
     }
-    
     
     function popupResize(){
         if (PageIndex === 4){
@@ -198,22 +203,34 @@ export default function (){
           dFlex.css('height', '28%');
         });
       });
-    
-    
+
+      function updateVerificationStatus() {
+        if (isValidId(personnummerInput.value) &&
+            isValidEmail(emailInput.value) &&
+            isValidPhone(mobilnummerInput.value)) {
+            verifyButton.classList.remove('blocked');
+            verifyButton.classList.add('open');
+            personnummerErrorMessage.style.display = 'none';
+            emailErrorMessage.style.display = 'none';
+            mobilnummerErrorMessage.style.display = 'none';
+        }
+    }
+
+    setInterval(updateVerificationStatus, 1000);
     
     document.addEventListener('DOMContentLoaded', function () {
         const errorWindow4 = document.getElementById('errorWindow4');
-        const verifyButton = document.getElementById('third_but');
+        const verifyButton2 = document.getElementById('third_but');
         let selectedRadio;
             $('input[name="radio"]').change(function() {
                 if ($(this).is(':checked')) {
-                    verifyButton.classList.add('open');
+                    verifyButton2.classList.add('open');
                     errorWindow4.style.display = 'none';
                 }
               });
               $('input[name="item"]').change(function() {
                 if ($(this).is(':checked') && $(this).attr('title') !== 'Välj bank') {
-                    verifyButton.classList.add('open');
+                    verifyButton2.classList.add('open');
                     errorWindow4.style.display = 'none';
                     $('.custom-select').removeAttr('open');
                 }
