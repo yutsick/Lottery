@@ -17,9 +17,10 @@
 @media (max-width: 425px) {
     .popup_left{
         background-image: url('../img/subscription-popup/offer-mob.jpg');
-        width: 390px;
+        width: 100%;
         height: 187px;
         background-size: cover;
         order:1;
+        border-radius: 0px;
     }
 }

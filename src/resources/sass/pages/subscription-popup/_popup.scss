@@ -16,15 +16,19 @@
 .popup {
     margin-top: 49px;
     display: flex;
+    flex-direction: row;
     border-radius: 16px;
     height: max-content;
     
     background-color: #fff;
+    @media (max-width: 389px){
+        width: none;
+    }
     @media (max-width: 425px){
-         flex-wrap: wrap;
+        flex-direction: column-reverse;
         height: auto;
         width: 390px;
-        border-radius: none;
+        border-radius: 0px;
     }
 }
 
