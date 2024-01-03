@@ -36,20 +36,23 @@
     flex-direction: column;
     font-family: inherit;
     gap: 14px;
-    padding: 0 32px;
+    margin: 0 32px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
     color: rgba(0, 62, 82, 0.70);
+    overflow-y: scroll;
+    height: 404px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #C2D1D9;
 }
 
 .termsBlock-body p {
     margin: 0;
 }
 .termsBlock-body span:last-child {
-    padding-bottom: 5px;
-    border-bottom: 1px solid #C2D1D9;
+    
 }
 
 @media (max-width:425px) {
