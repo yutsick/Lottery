@@ -52,12 +52,13 @@
     border-bottom: 1px solid #C2D1D9;
 }
 
-@media (max-width:425px) {
+@media (max-width:700px) {
     .popup_right-1,
     .popup_right-2,
     .popup_right-3,
     .popup_right-4 {
         width: 100%;
+        // max-width: 450px;
     }
 }
 .popup_right-3{
@@ -228,6 +229,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 16.2px;
+    @media (max-width:700px) {
+        max-width: 311px;
+    }
 }
 
 .popup_right-body--form label {
@@ -849,7 +853,7 @@ ul.list {
 
 /* right part end */
 
-@media (max-width: 425px) {
+@media (max-width: 700px) {
 
     .popup_right-1,
     .popup_right-2,

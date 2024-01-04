@@ -239,6 +239,7 @@ export default function (){
               $('#third_but').on('click', function () {
                 var eFakturaRadio = $('#radio');
                 var selectedItem = $('input[name="item"]:checked');
+                var screenWidth = $(window).width();
                 if (eFakturaRadio.prop('checked') && selectedItem.attr('title') === 'Välj bank') {
                   $('#errorWindow4').css('display', 'block');
                   $('#third_but').removeClass('open').addClass('blocked');
@@ -252,10 +253,27 @@ export default function (){
     
                   selectedRadio = $('input[name="radio"]:checked').data('type');
                   $('.popup_left').hide();
-                  PageIndex = 3;
+                  if (screenWidth <= 700) {
+                    const currentPage = document.querySelector(`[popup_right-index="3"]`);
+                    currentPage.classList.remove('active');
+                    PageIndex = 4;
+                } else {
+                    PageIndex = 3;
+                }
                   switchToNextPage();
                 }
-              });
+            });
+
+            $('.text-slider').css('visibility', 'hidden');
+
+            $('#autogiro').on('click', function () {
+                console.log('autogiro clicked')
+                $('.text-slider').css('visibility', 'visible');
+            });
+        
+            $('input[name="radio"]').not('#autogiro').on('click', function () {
+                $('.text-slider').css('visibility', 'hidden');
+            });
     
             //   Error screens
     
