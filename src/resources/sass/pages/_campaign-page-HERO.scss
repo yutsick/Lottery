@@ -1,0 +1,306 @@
+#campaign-page-HERO {
+  .campaign_page_HERO_wrap {
+    width: 100%;
+    height: max-content;
+    border-bottom: 1px solid #DFE6EB;
+    background: #F2F5F7;
+  }
+  .campaign_page_HERO_container {
+    margin: 0 auto;
+    width: 1360px;
+    height: 100%;
+    padding-top: 40px;
+    font-family: Proxima Nova;
+    @media (max-width:425px) {
+      width: 100%;
+    }
+  }
+
+  .campaign_page_HERO_top {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 40px;
+    @media (max-width:425px) {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .campaign_page_HERO_top-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media (max-width:425px) {
+      gap: 16px;
+      padding: 0 24px;
+    }
+  }
+
+  .campaign_page_HERO_top-right a {
+    color: #003E52;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .campaign_page_HERO_top-right--top {
+    height: 50%;
+  }
+
+  .campaign_page_HERO_top-right--header {
+    color: #003E52;
+    font-size: 24px;
+    font-family: Apercu Pro;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.64px;
+    margin: 0;
+    margin-bottom: 16px;
+    width: 621px;
+    @media (max-width:425px) {
+      width: 284px;
+      margin: 0;
+    }
+  }
+
+  .campaign_page_HERO_top-right--desc {
+    margin: 0;
+    color: rgba(0, 62, 82, 0.70);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    width: 621px;
+    @media (max-width:425px) {
+      font-size: 14px;
+      width: 340px;
+    }
+  }
+
+  .campaign_page_HERO_top-right--bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+
+  .campaign_page_HERO_top-USPs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 90px;
+    max-width: 500px;
+  }
+
+  .USPs_firsttwo {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    @media (max-width:425px) {
+      gap: 6px;
+    }
+  }
+
+  .USP_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 262px;
+    margin-right: 24px;
+    color: #003E52;
+    font-family: Apercu Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .USP_wrap strong {
+    margin-left: 5px;
+  }
+
+
+  .campaign_page_HERO_top-rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .campaign_page_HERO_top-rating img {
+    margin-right: 36px;
+  }
+
+  .campaign_page_HERO_top-rating span {
+    color: #F56363;
+    text-align: right;
+    font-family: Apercu Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31px;
+  }
+
+  .campaign_page_HERO_top-rating span strike {
+    color: rgba(0, 62, 82, 0.75);
+    margin-left: 10px;
+  }
+
+  .campaign_page_HERO_top-rating--button {
+    color: #FFF;
+    text-align: center;
+    font-family: Apercu Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 220px;
+    height: 48px;
+    background: #D96195;
+    border: none;
+    border-radius: 24px;
+    padding: 0;
+    transition: background 0.3s ease;
+  }
+
+  .campaign_page_HERO_top-rating--button-mob {
+    color: #FFF;
+    text-align: center;
+    font-family: Apercu Pro;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    max-width: 220px;
+    height: 48px;
+    background: #D96195;
+    border: none;
+    border-radius: 24px;
+    padding: 0;
+    transition: background 0.3s ease;
+  }
+
+  .campaign_page_HERO_top-rating--button:hover, .campaign_page_HERO_top-rating--button-mob:hover {
+    background: #b34f7a;
+  }
+
+  .campaign_page_HERO_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 40px;
+    border-bottom: 1px solid rgba(73, 117, 131, 0.50);
+    @media (max-width:425px) {
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      text-align: center;
+      padding-top: 0;
+    }
+    @media (max-width: 370px) {
+      gap: 32px;
+    }
+  }
+
+  .campaign_page_HERO_bottom-blurb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 300px;
+    text-align: center;
+    padding: 0 10px 40px;
+    @media (max-width: 425px) {
+      gap: 0px;
+      padding: 0;
+    }
+  }
+
+  .campaign_page_HERO_bottom-blurb--header {
+    margin: 0;
+    color: #003E52;
+    font-family: Apercu Pro;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0;
+    @media (max-width: 425px) {
+      margin: 16px 0 8px 0;
+    }
+  }
+
+  .campaign_page_HERO_bottom-blurb--desc {
+    margin: 0;
+    color: #003E52;
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .campaign_page_HERO_top-desk {
+    display: block;
+  }
+
+  .desk {
+    display: flex;
+  }
+  
+  .campaign_page_HERO_top-mob, .campaign_page_HERO_top-USPs--mob, .campaign_page_HERO_top-rating--mob {
+    display: none;
+  }
+
+  @media (max-width:425px) {
+    .campaign_page_HERO_top-desk, .desk {
+      display: none;
+    }
+    
+    .campaign_page_HERO_top-mob {
+      display: block;
+    }
+
+    .campaign_page_HERO_top-USPs--mob {
+      display: flex;
+      padding: 16px 0;
+    }
+
+    .campaign_page_HERO_top-rating--mob {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0 16px 0;
+    }
+    .campaign_page_HERO_top-rating--mob span {
+      color: #F56363;
+      font-family: Apercu Pro;
+      font-size: 24px;
+      font-style: normal;
+      flex-wrap: wrap;
+      font-weight: 700;
+      line-height: 43px;
+      display: flex;
+      flex-direction: row;
+      text-wrap: nowrap;
+      // display: none;
+    }
+    .campaign_page_HERO_top-rating--mob img {
+      width: 160px;
+      margin-left: 32px;
+      // display: none;
+    }
+  
+    .campaign_page_HERO_top-rating--mob span strike {
+      color: rgba(0, 62, 82, 0.75);
+      margin-left: 10px;
+    }
+  }
+}
