@@ -1,11 +1,10 @@
 .checkout-module__{
 
-//  background: #ff0000;
 
   max-width: 868px;
 //  width: 100%;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 32px 16px;
   .mb-5{
     margin-bottom: 48px;
   }
@@ -331,21 +330,15 @@
         }
         
       }
-      
-
     }
 
-    &.open{
-        
-        .top__{
-          border-radius: 20px 20px 0 0;
-          
+        .p-0 {
+          padding: 0 !important;
         }
-        
-        .content__{
+        .content__ {
           display: flex;
           
-          padding: 30px 18px; 
+          padding: 24px; 
           
            @media screen and (max-width: 600px){
 //             padding: 12px 27px 9px 11px;
@@ -423,20 +416,18 @@
 
         }
   
-      }
       
       
       
       .content__{
-        display: none;
         flex-direction: column;
         
-        background: #F7F7F7;
+        background: #fff;
         
         min-height: auto;
-        border-radius: 0 0 20px 20px;
+        border-radius:20px;
         
-        padding: 27px 33px 23px;
+        padding: 24px;
         
         .product_title{
           
@@ -484,26 +475,20 @@
         }
         
         ul.product{
-          padding: 0;
           margin: 0;
           list-style-type: none;
           background: #FFFFFF;
           
           position: relative;
+          padding: 0;
           
-          padding: 6px 11px 8px;
-          
-          border: 1px solid #D9D9D9;
           border-top: 0;
-          border-radius: 0 0 10px 10px;
-          
-          margin-bottom: 24px;
-          
-          
+          border-radius: 0 0 10px 10px;          
           
           li{
             position: relative;
-            padding: 16px 0;
+            height: 158px;
+            padding: 24px 0;
             
             display: flex;
             
@@ -661,7 +646,7 @@
          
                   width: 42px;
                   height: 42px;
-                  border-radius: 10px 0px 0px 10px;
+                  border-radius: 100px;
                   cursor: pointer;
                   
                   
@@ -683,8 +668,6 @@
                   max-width: 45px;
                   width: 100%;
                   border: 0;
-                  border-top: 1px solid rgba(0, 62, 82, 0.5);
-                  border-bottom: 1px solid rgba(0, 62, 82, 0.5);
                   padding: 0;
                   outline: none;
                   text-align: left;
@@ -692,10 +675,6 @@
                   padding-left: 10px;
                   
                   font: 400 16px/1.2em 'Apercu Pro';
-                  background: #F7F7F7;
-                  
-
-                  
                 }
                 
                 .plus{
@@ -708,7 +687,7 @@
                   
                   width: 42px;
                   height: 42px;
-                  border-radius: 0px 10px 10px 0px;
+                  border-radius: 100px;
                   cursor: pointer;
                   
                   &:before{
@@ -732,8 +711,9 @@
               width: 100px;
               
               display: flex;
-              justify-content: flex-start;
-              align-items: flex-start;
+              justify-content: space-between;
+              align-items: flex-end;
+              flex-direction: column;
               
             }
             
@@ -1528,13 +1508,11 @@
         justify-content: space-between;
         align-items: center;
         
-        background: #C9E7F3;
-        border-radius: 20px;
+        background: #fff;
         
-        padding: 0px 23px;
+        padding:  0 0 24px;
         
-        min-height: 72px;
-        max-height: 72px;
+        border-bottom: 1px solid #D9D9D9;
         
         .title{
           font: 700 20px/1.4em 'Apercu Pro';
@@ -2900,25 +2878,6 @@
       span,p{
         color: rgba(0, 62, 82, 0.75);
       }
-      &.open{
-          
-          .content__{
-
-            padding: 24px 16px;
-
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: inherit;
-            .box__{
-              max-height: unset;
-            }
-            @media screen and (min-width: 601px){
-//              gap: 16px;
-            }
-                  
-          }
-          
-        }
       
       .top__{
         

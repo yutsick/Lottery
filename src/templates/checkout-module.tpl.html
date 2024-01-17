@@ -12,144 +12,83 @@
 	"class": "logged-in shop",
 	"logged_in": true
 })
-<li></li>
-@@include('layout/_top-new.html', { "logged_in": true, "show_cart": true })
+<!-- @@include('layout/_top-new.html', { "logged_in": true, "show_cart": true }) -->
 <!--@@include('layout/_top.html', {"logged_in": true})
 @@include('layout/_sidebar.html', {"logged_in": true})-->
 
 <div class="content-wrapper ml-2017">
-   <div class="@@if(context.class){@@class}" id="page-wrapper">
+ <div class="@@if(context.class){@@class}" id="page-wrapper" style="background: #F2F5F7;">
       <div class="checkout-module__">
-         <div class="number__top">
+         <!-- <div class="number__top">
             <span class="active"></span>
             <span></span>
             <span></span>
-         </div>
+         </div> -->
          <div class="tab_all">
             <div class="bat_1 open">
-               <div class="top__">
-                  <h3 class="title">Varukorg</h3>
-                  <a href="javascript:;" data-edit="1" class="edit">Ändra</a>
-               </div>
                <div class="content__">
+                  <div class="top__">
+                    <h3 class="title">Varukorg</h3>
+                    <a href="javascript:;" data-edit="1" class="edit">Ändra</a>
+                  </div>
                   <div class="row__content">
-                     <div class="product_title">
-                        <span class="artikel">Artikel</span>
-                        <span class="antal">Antal</span>
-                        <span class="pris">Pris</span>
-                     </div>
                      <ul class="product">
                         <li>
-                           <div class="block__img">
-                              <img src="assets/img/checkout-module/bac_checkout.svg" alt="">  
-                           </div>
-                           <div class="info">
-                              <h3 class="title">Varunamn</h3>
-                              <span class="dots">Artikelnummer</span>
-                              <span class="posht_car">Expressleverans möjlig (1-3 vardagar)</span>
-                           </div>
+                          <div class="product__wrapper">
+                            <div class="block__img">
+                                <img src="assets/img/checkout-module/bac_checkout.svg" alt="">  
+                            </div>
+                            <div class="info">
+                                <h3 class="title">Varunamn</h3>
+                                <span class="dots">Artikelnummer</span>
+                            </div>
+                            <span class="posht_car">Expressleverans möjlig (1-3 vardagar)</span>
+                          </div>
                            <div class="antal">
-                              <div class="number">
-                                 <span class="minus"></span>
-                                 <input type="text" value="1" />
-                                 <span class="plus"></span>
-                              </div>
+
                            </div>
-                           <div class="pris">
+                           <div class="pris antal">
                               <p>100 kr</p>
-                           </div>
-                           <div class="delete">
-                              <a href="javascript:;" class="del"></a>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="block__img">
-                              <img src="assets/img/checkout-module/bac_checkout.svg" alt="">  
-                           </div>
-                           <div class="info">
-                              <h3 class="title">Varunamn</h3>
-                              <span class="dots">Artikelnummer</span>
-                              <span class="posht_car">Expressleverans möjlig (1-3 vardagar)</span>
-                           </div>
-                           <div class="antal">
                               <div class="number">
-                                 <span class="minus"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                  <rect x="1" y="1" width="32" height="32" rx="16" fill="white" stroke="#003E52" stroke-opacity="0.25"/>
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11 17C11 16.4477 11.3358 16 11.75 16H22.25C22.6642 16 23 16.4477 23 17C23 17.5523 22.6642 18 22.25 18H11.75C11.3358 18 11 17.5523 11 17Z" fill="#003E52"/>
+                                </svg>
                                  <input type="text" value="1" />
-                                 <span class="plus"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                  <rect x="1" y="1" width="32" height="32" rx="16" fill="white" stroke="#003E52" stroke-opacity="0.25"/>
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 11.75C18 11.3358 17.5523 11 17 11C16.4477 11 16 11.3358 16 11.75V16H11.75C11.3358 16 11 16.4477 11 17C11 17.5523 11.3358 18 11.75 18H16V22.25C16 22.6642 16.4477 23 17 23C17.5523 23 18 22.6642 18 22.25V18H22.25C22.6642 18 23 17.5523 23 17C23 16.4477 22.6642 16 22.25 16H18V11.75Z" fill="#003E52"/>
+                                </svg>
                               </div>
-                           </div>
-                           <div class="pris">
-                              <p>100 kr</p>
-                           </div>
-                           <div class="delete">
-                              <a href="javascript:;" class="del"></a>
                            </div>
                         </li>
                      </ul>
-                     <div class="totalt">
-                        <div class="info">
-                           <h3 class="title">Totalt</h3>
-                           <p>Saldo efter köp</p>
-                        </div>
-                        <div class="pris">
-                           <h3 class="title">200 kr</h3>
-                           <p>100 kr</p>
-                        </div>
-                     </div>
-                     <h2 class="mb-5">Buble removed (with picture)</h2>
-                     <div class="additional-sales-wrapper">
-                        <div class="miljonlotten additional-sales">
-                           <div class="block">
-                              <div class="image-wrapper">
-                                 <img src="/assets/img/checkout-module/lotter-d.png" alt="">
-                           </div>
-                           </div>
-                           <div class="info">
-                              <h3 class="title">Miljonlotten</h3>
-                              <ul class="check">
-                                 <li>Drömvinster värda upp till 10 miljoner kronor</li>
-                                 <li>Jackpot fyra gånger per år</li>
-                                 <li>Vinn presentkort i Andra Chansen</li>
-                              </ul>
-                           </div>
-                           <div class="bot">
-                              <a href="javascript:;" class="pink">Lägg till!</a>
-                           </div>
-                        </div>
-                     </div>
-                     <h2 class="mb-5">Buble removed (with bg)</h2>
-                     <div class="additional-sales-wrapper">
-                        <div class="miljonlotten additional-sales">
-                           <div class="block">
-                              <div class="image-wrapper no-image"></div>
-                           </div>
-                           <div class="info">
-                              <h3 class="title">Miljonlotten</h3>
-                              <p>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat quam in hendrerit tristique.
-                              </p>
-                              <!-- <ul class="check">
-                                 <li>Drömvinster värda upp till 10 miljoner kronor</li>
-                                 <li>Jackpot fyra gånger per år</li>
-                                 <li>Vinn presentkort i Andra Chansen</li>
-                              </ul> -->
-                           </div>
-                           <div class="bot">
-                              <a href="javascript:;" class="pink">Lägg till!</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="black_blue_cont">
-                     <a href="javascript:;" class="black_blue" data-num="2">Leveransuppgifter</a>
                   </div>
                </div>
             </div>
+            <div class="bat_1 open">
+              <div class="content__ p-0">
+                <div class="miljonlotten additional-sales">
+                  <div class="block">
+                    <div class="image-wrapper">
+                        <img src="/assets/img/checkout-module/lotter-d.png" alt="">
+                  </div>
+                  </div>
+                  <div class="info">
+                    <h3 class="title">Miljonlotten</h3>
+                    <ul class="check">
+                        <li>Drömvinster värda upp till 10 miljoner kronor</li>
+                        <li>Jackpot fyra gånger per år</li>
+                        <li>Vinn presentkort i Andra Chansen</li>
+                    </ul>
+                  </div>
+                  <div class="bot">
+                    <a href="javascript:;" class="pink">Lägg till!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="bat_2">
-               <div class="top__">
-                  <h3 class="title">Leveransuppgifter</h3>
-                  <a href="javascript:;" data-edit="2" class="edit">Ändra</a>
-               </div>
                <div class="content__">
                   <div class="row__content">
                      
@@ -285,10 +224,6 @@
                </div>
             </div>
             <div class="bat_3">
-               <div class="top__">
-                  <h3 class="title">Beställningsbekräftelse</h3>
-                  <a href="javascript:;" data-edit="3" class="edit">Ändra</a>
-               </div>
                <div class="content__">
                   <div class="row__content">
                      <div class="box__col">
