@@ -116,12 +116,23 @@ export default function () {
     });
 
     // Set margin-top for pricing in mobile screen
-    if(document.querySelectorAll('.checkout-module__ .dots') && screen.width <= 426){
-      let items = document.querySelectorAll('.product__info-wrapper');
-      items.forEach(item => {
-        item.querySelectorAll('p')[0].style.marginTop = item.querySelectorAll('.dots')[0].offsetTop + 'px';
-      });
-     
-    }
+    function setPricingTop(){
+      if(document.querySelectorAll('.checkout-module__ .dots') ){
+      
+        let items = document.querySelectorAll('.product__info-wrapper');
+        items.forEach(item => {
+          if(screen.width <= 426){
+            item.querySelectorAll('p')[0].style.marginTop = item.querySelectorAll('.dots')[0].offsetTop + 'px';
+          } else {
+            item.querySelectorAll('p')[0].style.marginTop = '0px';
+          }
+          
+        });
+      
+      }
+    };
+    setPricingTop();
+    window.addEventListener('resize', setPricingTop);
+ 
  
 }
