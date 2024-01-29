@@ -15,12 +15,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: white; /* Фоновий колір можна налаштувати за вашим смаком */
+    background-color: white;
     display: flex;
     flex-direction: column;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
-    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1); /* Додайте тінь для вигляду поверхні */
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease-in-out;
     transform: translateY(100%);
 }
@@ -36,31 +36,29 @@
     flex-direction: column;
     font-family: inherit;
     gap: 14px;
-    margin: 0 32px;
+    padding: 0 32px;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
     color: rgba(0, 62, 82, 0.70);
-    overflow-y: scroll;
-    height: 404px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #C2D1D9;
 }
 
 .termsBlock-body p {
     margin: 0;
 }
 .termsBlock-body span:last-child {
-    
+    padding-bottom: 5px;
+    border-bottom: 1px solid #C2D1D9;
 }
 
-@media (max-width:425px) {
+@media (max-width:700px) {
     .popup_right-1,
     .popup_right-2,
     .popup_right-3,
     .popup_right-4 {
         width: 100%;
+        // max-width: 450px;
     }
 }
 .popup_right-3{
@@ -71,7 +69,6 @@
             height: 22% !important;
             margin-top: 0;
             margin-bottom: 60px;
-           // margin-bottom: 32px;
             padding: 0 36px;
         }
     }
@@ -107,7 +104,7 @@
     padding: 21px 24px 21px 24px;
 
     @media (max-width:425px) {
-        padding: 21px 24px 24px;
+        padding: 24px 24px 24px;
     }
 }
 
@@ -119,7 +116,7 @@
 }
 
 .popup_right-1 .popup_right-title {
-    margin-bottom: 43px;
+    margin-bottom: 32px;
 }
 
 .popup_right-title {
@@ -232,6 +229,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: 16.2px;
+    @media (max-width:700px) {
+        max-width: 311px;
+    }
 }
 
 .popup_right-body--form label {
@@ -385,7 +385,6 @@
         font-size: 16px;
         font-style: normal;
         line-height: 20px;
-        /* 100% */
 
         .top {
             display: flex;
@@ -421,6 +420,7 @@
 .second {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .second h2 {
@@ -457,9 +457,6 @@
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 0;
-    @media (max-width:425px) {
-        text-align: left;
-    }
 }
 
 .popup_right-button--second {
@@ -484,7 +481,6 @@
 }
 
 .hidden_text {
-    // text-align: left;
     height: 68px;
 }
 
@@ -857,7 +853,7 @@ ul.list {
 
 /* right part end */
 
-@media (max-width: 425px) {
+@media (max-width: 700px) {
 
     .popup_right-1,
     .popup_right-2,
@@ -868,12 +864,12 @@ ul.list {
 
     .popup_right-title,
     .popup_right-title--header {
-        text-align: start;
+        text-align: center;
     }
 
     .popup_right-button {
         margin-bottom: 100px;
-        margin-top: 35px;
+        margin-top: 11px;
 
     }
 

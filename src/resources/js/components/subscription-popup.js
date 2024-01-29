@@ -36,12 +36,8 @@ export default function (){
         }
     });
 
-    function setupInputValidation(inputId, inputObject, errorMessage) {
-        //errorMessageElement.style.display = 'none';
-        $('#' + inputId).on('focusin', function () {
-            errorMessage.style.display = 'none';
-        })
-        $('#' + inputId).on('focusout', function () {
+    function setupInputValidation(inputId, inputObject, errorMessage, validationDelay) {
+        $('#' + inputId).on('input', debounce(function () {
             validateInput(inputObject, errorMessage, inputId);
             if (isValidId(personnummerInput.value) &&
                 isValidEmail(emailInput.value) &&
@@ -54,13 +50,24 @@ export default function (){
                 verifyButton.classList.remove('open');
                 verifyButton.removeEventListener('click', switchToNextPage);
             }
-        });
+        }, validationDelay));
     }
-
     
-    setupInputValidation('personnummer', personnummerInput, personnummerErrorMessage);
-    setupInputValidation('email', emailInput, emailErrorMessage);
-    setupInputValidation('mobilnummer', mobilnummerInput, mobilnummerErrorMessage);
+    function debounce(func, delay) {
+        let timeout;
+        return function () {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                func.apply(context, args);
+            }, delay);
+        };
+    }
+    
+    setupInputValidation('personnummer', personnummerInput, personnummerErrorMessage, 3000, 1);
+    setupInputValidation('email', emailInput, emailErrorMessage, 3000, 1);
+    setupInputValidation('mobilnummer', mobilnummerInput, mobilnummerErrorMessage, 3000, 1);
     
     document.getElementById('personnummer').addEventListener('input', function (e) {
         let inputValue = e.target.value.replace(/\D/g, '');
@@ -98,36 +105,34 @@ export default function (){
     }
     
     function validateInput(input, errorMessageElement, inputType) {
-        if(input.value.length !==0){
-            switch (inputType) {
-                case 'personnummer':
-                    if (input.value.length === 13 || input.value.length === 10) {
-                        errorMessageElement.style.display = 'none';
-                        return true;
-                    } else {
-                        errorMessageElement.style.display = 'block';
-                        return false;
-                    }
-        
-                case 'email':
-                    const emailValue = input.value.trim()
-                    if (!isValidEmail(emailValue)) {
-                        errorMessageElement.style.display = 'block';
-                        return false;
-                    } else {
-                        errorMessageElement.style.display = 'none';
-                        return true;
-                    }
-        
-                case 'mobilnummer':
-                    if (input.value.length !== 11) {
-                        errorMessageElement.style.display = 'block';
-                        return false;
-                    } else {
-                        errorMessageElement.style.display = 'none';
-                        return true;
-                    }
-            }
+        switch (inputType) {
+            case 'personnummer':
+                if (input.value.length === 13 || input.value.length === 10) {
+                    errorMessageElement.style.display = 'none';
+                    return true;
+                } else {
+                    errorMessageElement.style.display = 'block';
+                    return false;
+                }
+    
+            case 'email':
+                const emailValue = input.value.trim()
+                if (!isValidEmail(emailValue)) {
+                    errorMessageElement.style.display = 'block';
+                    return false;
+                } else {
+                    errorMessageElement.style.display = 'none';
+                    return true;
+                }
+    
+            case 'mobilnummer':
+                if (input.value.length !== 11) {
+                    errorMessageElement.style.display = 'block';
+                    return false;
+                } else {
+                    errorMessageElement.style.display = 'none';
+                    return true;
+                }
         }
     }
     
@@ -234,6 +239,7 @@ export default function (){
               $('#third_but').on('click', function () {
                 var eFakturaRadio = $('#radio');
                 var selectedItem = $('input[name="item"]:checked');
+                var screenWidth = $(window).width();
                 if (eFakturaRadio.prop('checked') && selectedItem.attr('title') === 'Välj bank') {
                   $('#errorWindow4').css('display', 'block');
                   $('#third_but').removeClass('open').addClass('blocked');
@@ -247,10 +253,27 @@ export default function (){
     
                   selectedRadio = $('input[name="radio"]:checked').data('type');
                   $('.popup_left').hide();
-                  PageIndex = 3;
+                  if (screenWidth <= 700) {
+                    const currentPage = document.querySelector(`[popup_right-index="3"]`);
+                    currentPage.classList.remove('active');
+                    PageIndex = 4;
+                } else {
+                    PageIndex = 3;
+                }
                   switchToNextPage();
                 }
-              });
+            });
+
+            $('.text-slider').css('visibility', 'hidden');
+
+            $('#autogiro').on('click', function () {
+                console.log('autogiro clicked')
+                $('.text-slider').css('visibility', 'visible');
+            });
+        
+            $('input[name="radio"]').not('#autogiro').on('click', function () {
+                $('.text-slider').css('visibility', 'hidden');
+            });
     
             //   Error screens
     

@@ -1,0 +1,24 @@
+@@include('layout/_header.html', {
+    "top_bar": true,
+    "class": "page-front logged-out",
+    "show_submenu":{
+        "mob": false,
+        "tab": false,
+        "desk": false
+    },
+    "links_display":{
+        "mob": false,
+        "tab": false,
+        "desk": false
+    },
+    })
+
+    <div id="campaign-page-HERO">
+      @@include('layout/_top-simple-small.html')
+      <div class="content-wrapper ml-2017"  id="campaign-page-HERO">
+          @@include('blocks/_campaign-page-HERO.html',{})
+      </div>
+    </div>
+    
+
+    @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
