@@ -143,7 +143,7 @@
       width: 100%;
     }
     @media (max-width:740px) {
-      width: 284px;
+
       margin: 0;
     }
   }
@@ -207,7 +207,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 262px;
+    //width: 262px;
     margin-right: 24px;
     color: #003E52;
     font-family: Apercu Pro;
@@ -218,6 +218,10 @@
     @media (max-width:1279px) {
       font-size: 16px;
       width: 203px;
+    }
+    @media (max-width:768px) {
+      font-size: 16px;
+      width: 100%;
     }
   }
 
@@ -267,7 +271,7 @@
     margin: 0;
     @media (max-width:1279px) {
       font-size: 20px;
-      margin-left: auto;
+ 
     }
   }
 
@@ -321,6 +325,14 @@
     @media (max-width: 600px) {
       margin: 0 auto;
       width: 240px;
+    }
+    &.cta-inline{
+      margin:inherit; 
+      width:inherit; 
+      flex: 0.5 1;
+      @media (max-width: 460px) {
+        flex: 0.9 1;
+      }
     }
   }
 
@@ -446,6 +458,12 @@
 
   .desk {
     display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+    &.justify-end{
+      justify-content: flex-end;
+    
+    }
   }
   
   .campaign_page_HERO_top-mob, .campaign_page_HERO_top-USPs--mob, .campaign_page_HERO_top-rating--mob {
@@ -510,6 +528,11 @@
       align-items: center;
       gap: 16px;
       padding: 16px 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background: #f2f5f7;
+      padding: 16px;
       @media (max-width: 600px) {
         flex-wrap: wrap;
       }

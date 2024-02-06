@@ -16,26 +16,36 @@
           @@if(context.header_show){
             <h2 class="campaign_page_HERO_top-right--header">@@header_text</h2>
           }
+          @@if(context.usps_show){
             <div class="campaign_page_HERO_top-USPs--mob"                   >
             <div class="USPs_firsttwo">
+              @@if(context.usps_item1_show){
               <div class="USP_wrap"> 
                 <img src="/assets/img/campaign-page-HERO/Check2.png" alt="">
-                Vinn upp till <strong> 60 miljoner</strong>
+                @@usps_item1
               </div>
+            }
+            @@if(context.usps_item2_show){
               <div class="USP_wrap">
                 <img src="/assets/img/campaign-page-HERO/Check2.png" alt="">
-                3 st vinstchanser per lott
+                @@usps_item2
               </div>
+            }
+            @@if(context.usps_item3_show){
               <div class="USP_wrap">
                 <img src="/assets/img/campaign-page-HERO/Check2.png" alt=""> 
-                Ingen bindningstid
+                @@usps_item3
               </div>
+            }
+            @@if(context.usps_item4_show){
               <div class="USP_wrap">
                 <img src="/assets/img/campaign-page-HERO/Check2.png" alt="">
-                Välkomstpremie: <strong> 500 kr</strong>
+                @@usps_item4
               </div>
+            }
             </div>
           </div>
+        }
           @@if(context.desc_text){
           <p class="campaign_page_HERO_top-right--desc">@@desc_text</p>
             @@if(info_link_show){
@@ -77,20 +87,27 @@
           </div>
           }
           </div>
-          <div class="campaign_page_HERO_top-rating desk">
+          <div class="campaign_page_HERO_top-rating desk @@if(!context.raiting_show){justify-end}">
             @@if(context.raiting_show){
             <img style="visibility: visible;" src="/assets/img/campaign-page-HERO/Stjärnor.png" alt="">
             }
 
             @@if(context.price_show){
             <span style="visibility: visible;">@@price_price kr<strike>@@price_discount_price kr</strike></span>}
-            <button class="campaign_page_HERO_top-rating--button">@@cta_text</button> 
-          </div>
-          <div class="campaign_page_HERO_top-rating--mob">
-            <span style="visibility: visible;">@@price_price kr<strike>@@price_discount_price kr</strike></span>
-            <img style="visibility: visible;" src="/assets/img/campaign-page-HERO/Stjärnor1.png" alt="">
             @@if(context.cta_show){
-            <button class="campaign_page_HERO_top-rating--button-mob">@@cta_text</button>
+            <button class="campaign_page_HERO_top-rating--button">@@cta_text</button> 
+            }
+          </div>
+          <div class="campaign_page_HERO_top-rating--mob  @@if(!context.price_show){justify-center}">
+            @@if(context.price_show){
+            <span style="visibility: visible;">@@price_price kr<strike>@@price_discount_price kr</strike></span>
+            }
+            @@if(context.raiting_show){
+            <img style="visibility: visible;" src="/assets/img/campaign-page-HERO/Stjärnor1.png" alt="">
+            }
+            
+            @@if(context.cta_show){
+            <button class="campaign_page_HERO_top-rating--button-mob @@if(!context.raiting_show){cta-inline}" >@@cta_text</button>
             }
           </div>
        
