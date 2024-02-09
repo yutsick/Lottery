@@ -120,7 +120,7 @@ export default function () {
       
         let items = document.querySelectorAll('.product__info-wrapper');
         items.forEach(item => {
-          if(screen.width <= 426){
+          if(screen.width < 605){
             item.querySelectorAll('p')[0].style.marginTop = item.querySelectorAll('.dots')[0].offsetTop + 'px';
           } else {
             item.querySelectorAll('p')[0].style.marginTop = '0px';
