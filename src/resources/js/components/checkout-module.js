@@ -86,7 +86,6 @@ export default function () {
          $('.number__top>span').removeClass('active');
         $('.number__top>span:nth-child('+ numEdit + ')').addClass('active');
 
-      
       }else if(numEdit === 2){
         $('.number__top>span').removeClass('check');
         $('.number__top>span').removeClass('active');
@@ -115,5 +114,25 @@ export default function () {
 
 
     });
-  
+
+    // Set margin-top for pricing in mobile screen
+    function setPricingTop(){
+      if(document.querySelectorAll('.checkout-module__ .dots') ){
+      
+        let items = document.querySelectorAll('.product__info-wrapper');
+        items.forEach(item => {
+          if(screen.width < 605){
+            item.querySelectorAll('p')[0].style.marginTop = item.querySelectorAll('.dots')[0].offsetTop + 'px';
+          } else {
+            item.querySelectorAll('p')[0].style.marginTop = '0px';
+          }
+          
+        });
+      
+      }
+    };
+    setPricingTop();
+    window.addEventListener('resize', setPricingTop);
+ 
+ 
 }
