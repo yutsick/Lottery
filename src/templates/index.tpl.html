@@ -1,6 +1,39 @@
+<!-- 
+Use for show/hide elements true/false
+Use for title type image/text/ Small image is for the tablet, big image is for the mobile
+Use for order elements 1 or 2. 
+
+ -->
+
 @@include('layout/_header.html', {
 	"class": "sidebar-hidden",
-	"logged_in": false
+	"logged_in": true,
+	 "links_display": {
+			"mob": "true",
+			"tab": "false",
+			"desk": "true"
+		},
+		"visa_saldo_display":{
+			"mob": "true",
+			"tab": "true",
+			"desk": "true"
+		},
+		"insättning_display":{
+			"mob": "false",
+			"tab": "true",
+			"desk": "false"
+		},
+		"registrera_lott_display":{
+			"mob": "true",
+			"tab": "true",
+			"desk": "false"
+		},
+		"show_submenu":  {
+			"mob": false,
+			"tab": false,
+			"desk": false
+		}
+		 
 	})
 
 	<div class="content-wrapper ml-2017">
@@ -49,8 +82,15 @@
 					<ol class="index">
 						<li><a href="/logged-out.html">Logged out</a></li>
 						<li><a href="/logged-in.html">Logged in</a></li>
+						<li><h3>New navigation</h3>
+							<ol>
+								<li><a href="/navigation.html" target="_blank">Logged out</a></li>
+								<li><a href="/navigation-logged.html" target="_blank">Logged in</a></li>
+							</ol>
+						</li>
 					</ol>
-
+					
+						
 					<h2>Product Video Page</h2>
 					<ol class="index">
 						<li><a href="/product-video-page.html">product-video-page</a></li>
@@ -229,6 +269,9 @@
 					<ol class="index">
 						<!--<li><a href="/blocks-promotion-test.html">Promotion block (Test dynamic images)</a></li>-->
 						<li>
+							<a href="jackpot-blocks.html" target="_blank">Jackpot blocks</a>
+						</li>
+						<li>
 							<a href="/blocks-shortcuts.html">Shortcut blocks</a>
 						</li>
 						<li>
@@ -325,6 +368,7 @@
 								<li><a href="blocks-bonuskods-functionen.html">Blocks-bonuskods-functionen</a></li>
 							</ol>
 						</li>
+						
 					</ol>
 				</div>
 			</div>

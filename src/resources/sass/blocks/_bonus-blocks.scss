@@ -1,0 +1,67 @@
+.bonus-blocks {
+  .mt-10 {
+
+    margin-top: 10px;
+  }
+
+  .btn {
+    //min-width: 194px;
+    margin: 5px 0;
+  }
+
+  .bonus-block-item {
+    padding: 10px 40px 40px;
+  }
+
+  .bg-primary-blue {
+    background-color: $color-primary-dark;
+  }
+
+  .bg-light-blue {
+    background-color: $color-secondary;
+  }
+
+  .bg-green {
+    background-color: $color-green-lighter;
+  }
+
+  .bg-white {
+    background-color: $color-snow;
+  }
+
+  .bg-grey-bg {
+    background-color: $color-grey-bg;
+  }
+
+  .bg-pink-bg {
+    background-color: $color-cta-lighter;
+  }
+
+  .button-cta-pink {
+    background-color: $color-cta;
+    color: $color-snow;
+  }
+
+  .button-primary-blue {
+    background-color: $color-primary-dark;
+    color: $color-snow;
+  }
+
+  .button-sec-light-blue {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+
+  .button-sec-white {
+    background-color: $color-snow;
+    color: $color-primary;
+  }
+
+  .text-light {
+    color: $color-snow
+  }
+
+  .text-dark {
+    color: $color-primary
+  }
+}

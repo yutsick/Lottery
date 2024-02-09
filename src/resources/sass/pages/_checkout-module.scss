@@ -1302,6 +1302,13 @@ $mobile-small: 321px;
               order: 3
             }
 
+            @media screen and (max-width: $mobile) {
+              margin-left: 0;
+              margin-top: -10px;
+              padding: 0 16px;
+              order: 3
+            }
+
 
             .title {
               color: rgba(0, 62, 82, 0.75);
@@ -1919,6 +1926,10 @@ $mobile-small: 321px;
                 display: none;
 
 
+                  //                    min-height: 78px !important;
+
+                  padding-top: 20px !important;
+                  padding-bottom: 30px !important;
 
 
 
@@ -1934,6 +1945,30 @@ $mobile-small: 321px;
                 @media screen and (max-width: 991px) {
                   flex-direction: column;
                 }
+
+                @media screen and (min-width: 601px) {
+                  margin-bottom: 19px;
+                }
+
+                @media screen and (max-width: 991px) {
+                  flex-direction: column;
+                }
+
+
+
+                .box__content {
+
+
+                  @media screen and (min-width: 992px) {
+
+                    width: 50%;
+
+
+
+                    padding: 17px;
+                    border-radius: 10px 0 0 10px;
+
+                    border-right: 1px solid #D9D9D9;
 
 
 

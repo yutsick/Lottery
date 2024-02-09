@@ -1,0 +1,28 @@
+<div class="ml-2017">
+  <div class="balance-bar">
+      <div class="balance-bar__holder">
+          <div class="balance-bar__item">
+              <a href="#">
+                  <img src="assets/img/icons/spelstopp.svg" />
+              </a>
+          </div>
+          <div class="balance-bar__item">
+              <a href="#">
+                  <img src="assets/img/icons/sjalvtest.svg" />
+              </a>
+          </div>
+          <div class="balance-bar__item">
+              <a href="#">
+                  <img src="assets/img/icons/spelbudget.svg" />
+              </a>
+          </div>
+          @@if (logged_in === 'true') {
+              <div class="balance-bar__item balance-bar__item--right">
+                  <img src="assets/img/icons/schedule-button.svg" />
+                  <span class="text">Tid inloggad</span>
+                  <span class="timespent js-timespent" data-time="2019-09-23T13:00:00"></span>
+              </div>
+          }
+      </div>
+  </div>
+</div>

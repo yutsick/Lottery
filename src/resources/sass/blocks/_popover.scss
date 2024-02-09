@@ -1,0 +1,12 @@
+.popover {
+  background-color: $color-popover;
+  color: $color-snow;
+  border: solid 1px $color-popover;
+
+  .arrow {
+    border:none;
+    &::after {
+      border-top-color: $color-popover;
+    }
+  }
+}
