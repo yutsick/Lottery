@@ -1,3 +1,4 @@
+$mobileBreakpoint: 460px;
 #campaign-page-HERO {
   #top, .sub-bar {
     border-bottom: 1px solid #DFE6EB;
@@ -7,9 +8,12 @@
     height: max-content;
     border-bottom: 1px solid #DFE6EB;
     background: #F2F5F7;
-    gap: 100px;
+    gap: 40px;
     display: flex;
     flex-direction: column;
+    @media (max-width:$mobileBreakpoint) {
+      gap: 56px;
+    }
   }
   .campaign_page_HERO_container {
     display: flex;
@@ -41,6 +45,7 @@
     gap: 40px;
     margin-bottom: 40px;
     @media (max-width:1360px) {
+      
       max-width: 1360px;
       align-items: center;
       margin: 0 auto;
@@ -66,7 +71,6 @@
       flex-direction: column;
       gap: 24px;
       margin: 0;
-      margin-bottom: 25px;
     }
   }
 
@@ -85,6 +89,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+    display: inline-block;
+    margin-top: 8px;
   }
 
   .campaign_page_HERO_top-right--top {
@@ -192,6 +198,10 @@
     flex-wrap: wrap;
     height: 84px;
     max-width: 500px;
+    &.desk{
+      margin: 16px 0;
+    }
+    
   }
 
   .USPs_firsttwo {
@@ -368,6 +378,7 @@
       align-items: center;
       text-align: center;
       padding: 0;
+    padding-bottom: 56px;
       border: 0;
     }
     @media (max-width: 370px) {
@@ -577,7 +588,10 @@
   
     .campaign_page_HERO_top-rating--mob span strike {
       color: rgba(0, 62, 82, 0.75);
-      margin-left: 10px;
+        margin-left: 10px;
+
+      font-weight: 400;
+
     }
   }
 
