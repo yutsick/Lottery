@@ -1,0 +1,147 @@
+<!-- 
+
+  Use text_block or/and table_blocks true/false for show/hide it in the top section
+
+  text-color,col_bg(columns background),section_bg(section background): 
+    - white,
+    - primary-blue,
+    - primary-blue-75, 
+    - primary-blue-50, 
+    - primary-blue-20
+  
+    font: 
+      - Apercu, 
+      - Proxima, 
+      - Zing
+
+  read more color: 
+    - primary, 
+    - white
+
+ -->
+@@include('layout/_header.html', {
+  "class": "page-bingo logged-out",
+  "logged_in": false
+  })
+
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+
+
+<div class="content-wrapper ml-2017">
+
+  <!-- Include desktop ver -->
+  @@include('blocks/page-bingo/_top-section.html',{
+   "image": "assets/img/background/bg-bingo-page-top.jpg",
+   "text_block": true,
+   "table_blocks": true,
+   "col_shadow": false,
+   "font": "Apercu",
+   "text_color": "primary-blue",
+   "col_bg":"white",
+   "readmore_col":"white"
+  }
+  )
+  
+  <!-- Include mobile ver -->
+
+  @@include('blocks/page-bingo/_top-section-text.html',{
+    "image": {
+      "mob": "assets/img/background/bg-bingo-page-top.jpg", 
+      "tab": "assets/img/background/bg-bingo-page-top.jpg"
+    },
+   "bg": {
+    },
+    "font": {
+      "mob": "Apercu",
+      "tab": "Apercu"
+    },
+    "text_color": {
+      "mob": "primary-blue",
+      "tab": "primary-blue"
+    },
+    "readmore_col":"primary"
+   }
+   )
+
+   <!-- Rooms block -->
+  
+  @@include('blocks/page-bingo/_rooms-section.html',{
+    "image": {
+    },
+   "bg": {
+     "mob": "figma",
+     "tab": "primary-blue-75",
+     "desk": "white"
+    },
+    "font_color": {
+      "mob": "white",
+      "tab": "white",
+      "desk": "primary-blue-75"
+   },
+    "col_shadow":{
+      "mob": false,
+      "tab": true,
+      "desk": true
+    },
+    "blixt_img": {
+      "mob": "assets/img/background/blixtbingo-bg.png",
+      "tab": "assets/img/background/miljonbingo-bg.png",
+      "desk": "assets/img/background/blixtbingo-bg.png"
+    },
+    "miljon_img": {
+      "mob": "assets/img/background/miljonbingo-bg.png",
+      "tab": "assets/img/background/blixtbingo-bg.png",
+      "desk": "assets/img/background/miljonbingo-bg.png"
+    }
+    
+  }
+  )
+  
+  <!-- Menu block -->
+
+  @@include('blocks/page-bingo/_menu-section.html',{
+   "menu_shadow": {
+      "mob": false,
+      "tab": true,
+      "desk": false
+    },
+   "section_bg": {
+      "mob": "figma",
+      "tab": "primary-blue-75",
+      "desk": "primary-blue-75"
+   },
+   "font_color": {
+      "mob": "figma",
+      "tab": "figma",
+      "desk": "primary-blue-75"
+   },
+   "font": {
+    "mob": "Proxima",
+    "tab": "Proxima",
+    "desk": "Proxima"
+   }
+  }
+  )
+
+
+  <div class="show-mobile">
+    @@include('blocks/page-bingo/_top-section-table.html',{
+      "column": {
+        "first_table": "hide",
+        "second_table": "show"
+      },
+      "image": {
+          "mob": "assets/img/background/bg-bingo-page-top.jpg", 
+          "tab": "assets/img/background/bg-bingo-page-top.jpg"
+        },
+      "bg": {
+        },
+      "col_shadow": true,
+      "col_bg":"white",
+      "text_color": "primary-blue"
+    }
+    )
+  </div>
+</div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })

@@ -1,0 +1,95 @@
+@@include('layout/_header.html', {
+    "top_bar": true,
+    "class": "page-front logged-out",
+    "show_submenu":{
+        "mob": false,
+        "tab": false,
+        "desk": false
+    },
+    "links_display":{
+        "mob": false,
+        "tab": false,
+        "desk": false
+    },
+    })
+
+    @@include('layout/_top-simple-small.html')
+    <div class="content-wrapper ml-2017"  id="subscription-popup">
+        @@include('blocks/subscription-popup/_subscription-popup.html',{
+            'image_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'image_position': 'left',
+            'header_first': '1/3: Fyll i dina uppgifter',
+            'header_first_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'subheader_first': 'Bli prenumerant i tre enkla steg. Lotter levereras smidigt till din dörr.',
+            'subheader_first_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'input1': {
+                'label': 'Ditt personnummer',
+                'placeholder': 'ÅÅÅÅMMDD-NNNN'  
+            },
+            'input2': {
+                'label': 'Din e-postadress',
+                'placeholder': 'namn@email.se'  
+            },
+            'input3': {
+                'label': 'Ditt mobilnummer',
+                'placeholder': '07X-XXXXXXX'  
+            },
+            'header_third': '3/3: Välj betalmetod',
+            'header_third_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'subheader_third': 'Slutför din beställning. Hos oss spelar du tryggt och säkert och du är med så länge du vill. ',
+            'subheader_third_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'autogiro_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'autogiro_header':'<strong>Autogiro</strong> (0 kr) ',
+            'autogiro_offer':'Få <strong>300 kr</strong> i bonus!',
+            'autogiro_offer_display':{
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'efaktura_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'efaktura_header':'  <strong>E-faktura</strong> (0 kr)',
+            'papfaktura_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'papfaktura_header':'<strong>Pappersfaktura</strong> (39 kr)',
+            'swish_display': {
+                'desk': 'block',
+                'tab': 'block',
+                'mob': 'block'
+                },
+            'swish_header':'Swish',
+        })
+    </div>
+    
+
+    @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })

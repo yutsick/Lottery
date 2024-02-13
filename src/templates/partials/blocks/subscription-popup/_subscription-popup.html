@@ -1,0 +1,576 @@
+<!-- main poup start -->
+<div class="popup_container">
+    <div class="popup">
+        <div class="popup_left position-@@image_position display-@@image_display.desk display-tab-@@image_display.tab display-mob-@@image_display.mob"></div>
+    
+        <div class="popup_right-1 active" popup_right-index="1">
+            <div class="popup_right-header">
+                <svg class="back_arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
+                    <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <img src="/assets/img/subscription-popup/Group 54.png" alt="pag">
+                <div class="close_container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6262 2.25361C18.0167 1.86309 18.0167 1.22992 17.6262 0.839397L17.1604 0.373611C16.7699 -0.0169137 16.1367 -0.0169136 15.7462 0.373611L8.99996 7.11984L2.25373 0.37361C1.86321 -0.0169144 1.23004 -0.0169137 0.839519 0.373611L0.373733 0.839397C-0.0167915 1.22992 -0.0167915 1.86309 0.373733 2.25361L7.11996 8.99984L0.373732 15.7461C-0.0167923 16.1366 -0.0167916 16.7698 0.373733 17.1603L0.839519 17.6261C1.23004 18.0166 1.86321 18.0166 2.25373 17.6261L8.99996 10.8798L15.7462 17.6261C16.1367 18.0166 16.7699 18.0166 17.1604 17.6261L17.6262 17.1603C18.0167 16.7698 18.0167 16.1366 17.6262 15.7461L10.88 8.99984L17.6262 2.25361Z" fill="#003E52"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="popup_right-title">
+                <h1 class="popup_right-title--header display-@@header_first_display.desk display-tab-@@header_first_display.tab display-mob-@@header_first_display.mob">
+                    @@header_first
+                </h1>
+                <span class="popup_right-title--disc  display-@@subheader_first_display.desk display-tab-@@subheader_first_display.tab display-mob-@@subheader_first_display.mob">
+                    @@subheader_first
+                </span>
+            </div>
+            <div class="popup_right-body">
+                <div class="error-window general">
+                <div class="error-general" id="errorWindowGlobal">
+                   
+                        <div class="top">
+                            <div class="title"><strong>Hoppsan! </strong></div>
+                            <div class="">Något gick fel när din prenumeration skulle skapas.</div>
+                            <div class="">Har du frågor? Kontakta vår<br>kundtjänst på <strong>031-12 34 56</strong></div>
+                        </div>
+                
+                        <div class="link"><strong><a href="#">Försök igen</a></strong></div>
+                    
+                </div>
+            </div>
+                <form class="popup_right-body--form" id="right-1_form" action="" method="get">
+
+                    <label for="personnummer">@@input1.label
+                        <div class="error-window" id="errorWindow">
+                            <p>Hoppsan! Personumret du angett verkar inte stämma.</p>
+                        </div>
+                    </label>
+                    <input type="text" id="personnummer" placeholder="@@input1.placeholder" maxlength="13" required="required">
+
+                    <label for="email">@@input2.label
+                        <div class="error-window" id="errorWindow2">
+                            <p>Hoppsan! Du verkar ha anget en ogiltig epostadress.</p>
+                        </div>
+                    </label>
+                    <input type="email" id="email" placeholder="@@input2.placeholder" required="required">
+
+                    <label for="mobilnummer">@@input3.label
+                        <div class="error-window" id="errorWindow3">
+                            <p>Hoppsan! Mobilnumret du angett verkar inte stämma.</p>
+                        </div>
+                    </label>
+                    <input type="tel" id="mobilnummer" placeholder="@@input3.placeholder" maxlength="11" required="required">
+                    <div class="popup_right-button" id="verify_button">
+                        <button type="button"  class="verify_button blocked">Verifiera uppgifter</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="popup_right-2 " popup_right-index="2">
+            <div class="popup_right-header">
+                <button class="prevPages">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
+                        <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
+                    <circle cx="4" cy="4" r="4" fill="#003E52" fill-opacity="0.3" />
+                    <circle cx="20" cy="4" r="4" fill="#003E52" />
+                    <circle cx="36" cy="4" r="4" fill="#003E52" fill-opacity="0.3" />
+                </svg>
+                <img class="close" src="/assets/img/subscription-popup/Close.png" alt="close">
+            </div>
+            <div class="popup_right-title">
+                <h1 class="popup_right-title--header">
+                    2/3: Verifiera uppgifter
+                </h1>
+                <span class="popup_right-title--disc">
+                </span>
+            </div>
+            <div class="popup_right-body second">
+                <h2 class="">
+                    Kontrollera din adress:
+                </h2>
+                <span>
+                    J**** G****<br>
+                    L********* 7<br>
+                    *** 61 G*******
+                </span>
+                <p>
+                    <strong>Stämmer inte adressen?</strong><br>
+                    Kontrollera att du skrivit rätt personnummer.
+                    För hjälp, ring vårt kundcenter:
+                    031-388 28 20
+                </p>
+
+            </div>
+            <div class="popup_right-button--second">
+                <button type="button" class="prevPages">Ändra personnummer</button>
+                <button type="button" class="verify_button open">Till betalning</button>
+            </div>
+        </div>
+        <div class="popup_right-3 " popup_right-index="3">
+            <div class="popup_right-header">
+                <button class="prevPages">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
+                        <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
+                    <circle cx="36" cy="4" r="4" transform="rotate(-180 36 4)" fill="#003E52" />
+                    <circle cx="20" cy="4" r="4" transform="rotate(-180 20 4)" fill="#003E52" fill-opacity="0.3" />
+                    <circle cx="4" cy="4" r="4" transform="rotate(-180 4 4)" fill="#003E52" fill-opacity="0.3" />
+                </svg>
+                <img class="close" src="/assets/img/subscription-popup/Close.png" alt="close">
+            </div>
+            <div class="popup_right-title ">
+                <h1 class="popup_right-title--header display-@@header_third_display.desk display-tab-@@header_third_display.tab display-mob-@@header_third_display.mob">
+                    @@header_third
+                </h1>
+                <p class="popup_right-title--disc hidden_text display-@@subheader_third_display.desk display-tab-@@subheader_third_display.tab display-mob-@@subheader_third_display.mob">
+                    @@subheader_third
+                </p>
+            </div>
+            <div class="popup_right-body third bott_way">
+                <label class="customRadio display-@@autogiro_display.desk display-tab-@@autogiro_display.tab display-mob-@@autogiro_display.mob">
+                    <input type="radio" id="autogiro" name="radio" data-type="autogiro">
+                    <span class="checkmark"></span>
+                    @@autogiro_header
+                    
+                    <span class="border display-@@autogiro_offer_display.desk display-tab-@@autogiro_offer_display.tab display-mob-@@autogiro_offer_display.mob">@@autogiro_offer</span>
+                    <p class="customRadio_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                        eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </label>
+                <label class="customRadio display-@@efaktura_display.desk display-tab-@@efaktura_display.tab display-mob-@@efaktura_display.mob">
+                    <input id="radio" type="radio" name="radio" data-type="efaktura">
+                    <span class="checkmark top_1"></span>
+                    @@efaktura_header
+                  
+                    <div class="error-window" id="errorWindow4">
+                        <p>Du måste välja bank för att gå vidare.</p>
+                    </div>
+                    <details class="custom-select customRadio_desc mb_10">
+                        <summary class="radios">
+                            <input class="radio" type="radio" name="item" id="default" title="Välj bank" checked>
+                            <input class="radio" type="radio" name="item" id="item1" title="Item 1">
+                            <input class="radio" type="radio" name="item" id="item2" title="Item 2">
+                            <input class="radio" type="radio" name="item" id="item3" title="Item 3">
+                            <input class="radio" type="radio" name="item" id="item4" title="Item 4">
+                            <input class="radio" type="radio" name="item" id="item5" title="Item 5">
+                            <input class="radio" type="radio" name="item" id="item6" title="Item 6">
+                        </summary>
+                        <ul class="list">
+                            <li><label for="item1">Item 1</label></li>
+                            <li><label for="item2">Item 2</label></li>
+                            <li><label for="item3">Item 3</label></li>
+                            <li><label for="item4">Item 4</label></li>
+                            <li><label for="item5">Item 5</label></li>
+                            <li><label for="item6">Item 6</label></li>
+                        </ul>
+                    </details>
+                </label>
+                <label class="customRadio display-@@papfaktura_display.desk display-tab-@@papfaktura_display.tab display-mob-@@papfaktura_display.mob">
+                    <input type="radio" name="radio" data-type="pappersfaktura">
+                    <span class="checkmark"></span>
+                        @@papfaktura_header
+                    <p class="customRadio_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                        eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </label>
+                <label class="customRadio display-@@swish_display.desk display-tab-@@swish_display.tab display-mob-@@swish_display.mob">
+                    <input type="radio" name="radio" data-type="swish">
+                    <span class="checkmark"></span>
+                    <strong>@@swish_header</strong>
+                    <p class="customRadio_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do.
+                        eiusmod tempor incididunt ut labore et dolore magna.</p>
+                </label>
+            </div>
+
+            <div class="popup_right-button d_flex">
+                <p class="hid_text">Genom att klicka på “Slutför med BankID” påbörjar du en prenumeration och du
+                    godkänner <a href="#" id="termsLink"> våra villkor.</a></p>
+                <button id="third_but" type="button" class="verify_button blocked">
+                    Slutför med BankID
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_2_1715)">
+                            <path
+                                d="M7.57191 12.5221L8.57441 5.83935H7.50356C7.00231 5.83935 6.35676 5.54216 6.16689 4.99597C6.10614 4.81123 5.96184 4.1767 6.78966 3.55822C7.08585 3.34135 7.27572 3.10039 7.31369 2.91565C7.35167 2.72288 7.3061 2.55421 7.17699 2.42569C6.99471 2.24095 6.63776 2.13654 6.18208 2.13654C5.41502 2.13654 4.87579 2.6024 4.82263 2.93975C4.78466 3.18874 4.96693 3.38955 5.12642 3.51806C5.60489 3.89557 5.71881 4.44176 5.42261 4.95581C5.11882 5.48593 4.45809 5.83132 3.75178 5.83935H2.65814C2.56701 6.48995 1.07845 16.4659 0.964526 17.253H6.8732C6.92636 16.9076 7.19977 15.0201 7.57191 12.5221Z"
+                                fill="white" />
+                            <path
+                                d="M0.645549 19.5663H3.06826C4.10114 19.5663 4.35176 20.1205 4.27581 20.6265C4.21506 21.0362 3.94924 21.3414 3.49356 21.5422C4.07076 21.7751 4.2986 22.1366 4.21506 22.7068C4.10873 23.4217 3.52394 23.9518 2.75687 23.9518H0L0.645549 19.5663ZM2.24803 21.3815C2.7189 21.3815 2.93915 21.1165 2.98472 20.8032C3.03028 20.4659 2.88598 20.2329 2.41511 20.2329H1.9974L1.83032 21.3815H2.24803ZM1.98981 23.2691C2.47587 23.2691 2.75687 23.0603 2.82523 22.6346C2.87839 22.2651 2.68093 22.0482 2.21006 22.0482H1.73919L1.55691 23.2771H1.98981V23.2691Z"
+                                fill="white" />
+                            <path
+                                d="M7.60989 23.9839C6.97953 24.0321 6.67574 23.9598 6.52384 23.6707C6.18968 23.8875 5.81754 24 5.42261 24C4.70871 24 4.45809 23.6064 4.52644 23.1727C4.55682 22.9639 4.67074 22.763 4.85301 22.5944C5.24794 22.2329 6.22006 22.1847 6.59979 21.9116C6.63017 21.6064 6.51625 21.494 6.1593 21.494C5.74159 21.494 5.39223 21.6385 4.79225 22.0723L4.93655 21.0763C5.45299 20.6827 5.95424 20.498 6.53144 20.498C7.26812 20.498 7.92127 20.8193 7.79975 21.6707L7.65545 22.6345C7.60229 22.9719 7.61748 23.0763 7.97443 23.0843L7.60989 23.9839ZM6.51625 22.4659C6.18208 22.6908 5.55932 22.6506 5.49097 23.1165C5.46059 23.3333 5.5897 23.494 5.79475 23.494C5.99981 23.494 6.23525 23.4056 6.43271 23.261C6.41752 23.1807 6.42511 23.1004 6.4479 22.9478L6.51625 22.4659Z"
+                                fill="white" />
+                            <path
+                                d="M8.78706 20.5542H10.0478L9.97943 20.996C10.3819 20.6345 10.6857 20.498 11.0807 20.498C11.787 20.498 12.1135 20.9558 11.9996 21.7028L11.673 23.9438H10.4123L10.6857 22.0883C10.7389 21.751 10.6402 21.5904 10.3971 21.5904C10.1997 21.5904 10.0174 21.7028 9.84273 21.9518L9.55413 23.9357H8.29341L8.78706 20.5542Z"
+                                fill="white" />
+                            <path
+                                d="M12.9869 19.5663H14.2477L13.9287 21.7189L15.1362 20.5542H16.6931L15.1438 22L16.3894 23.9438H14.8021L13.8451 22.3695H13.8299L13.6021 23.9358H12.3414L12.9869 19.5663Z"
+                                fill="white" />
+                            <path d="M17.445 19.5663H18.8956L18.2576 23.9438H16.8071L17.445 19.5663Z" fill="white" />
+                            <path
+                                d="M19.6019 19.5663H21.6753C23.2777 19.5663 23.741 20.7952 23.5891 21.8153C23.4448 22.8113 22.7005 23.9438 21.2955 23.9438H18.9564L19.6019 19.5663ZM20.9462 22.8996C21.6525 22.8996 22.0398 22.5301 22.1537 21.751C22.2373 21.1727 22.0702 20.6024 21.2879 20.6024H20.9006L20.5664 22.8996H20.9462Z"
+                                fill="white" />
+                            <path
+                                d="M15.516 0H9.47818L8.67314 5.40562H9.69843C10.2604 5.40562 10.7921 5.13253 11.0199 4.73896C11.0959 4.61044 11.1262 4.49799 11.1262 4.39357C11.1262 4.16867 10.9819 4 10.8376 3.88755C10.4427 3.5743 10.3592 3.24498 10.3592 3.01205C10.3592 2.96386 10.3592 2.92369 10.3668 2.88353C10.4503 2.31325 11.1794 1.69478 12.1439 1.69478C12.7211 1.69478 13.1616 1.83936 13.4274 2.10442C13.6629 2.33735 13.754 2.66667 13.6856 3.01205C13.6021 3.42169 13.2148 3.75904 12.9945 3.92771C12.4097 4.36145 12.4857 4.73896 12.5237 4.85141C12.6452 5.18876 13.1084 5.40562 13.4654 5.40562H15.0299V5.41365C17.1564 5.42972 18.2956 6.46586 17.9387 8.8755C17.6045 11.1165 15.9792 12.0803 14.0426 12.0964L13.2755 17.2691H14.4071C19.1842 17.2691 23.0879 14.0241 23.8549 8.8996C24.8043 2.53815 20.9841 0 15.516 0Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2_1715">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+            <div id="termsBlock">
+                <div class="popup_right-header">
+                    <button >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
+                            <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="popup_right-title ">
+                    <h1 class="popup_right-title--header display-@@header_third_display.desk display-tab-@@header_third_display.tab display-mob-@@header_third_display.mob">
+                        Våra villkor
+                    </h1>
+                </div>
+                <div class="termsBlock-body">
+                    <strong>Lorem ipsum</strong>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.
+                    </span>
+                    <strong>Lorem ipsum</strong>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.
+                    </p>
+                    <span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do. eiusmod tempor incididunt ut labore et dolore magna.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="popup_right-4 " popup_right-index="4">
+            <div class="popup_right-top">
+                <div class="popup_right-header">
+                    <button class="prevPages">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 24 18" fill="none">
+                            <path d="M25 9L1 9M1 9L10.2903 17M1 9L10.2903 0.999999" stroke="#003E52" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <h3>Bankid</h3>
+                </div>
+                <div class="popup_process-topbar">
+                    <h2>Öppna din BankID app</h2>
+                    <span">Skanna QR-koden nedan</span>
+                </div>
+                <div class="popup_qr" >
+                    <img src="assets/img/subscription-popup/Sk1.png" alt="">
+                    <!-- <svg width="100px" height="100px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3 9h6V3H3zm1-5h4v4H4zm1 1h2v2H5zm10 4h6V3h-6zm1-5h4v4h-4zm1 1h2v2h-2zM3 21h6v-6H3zm1-5h4v4H4zm1 1h2v2H5zm15 2h1v2h-2v-3h1zm0-3h1v1h-1zm0-1v1h-1v-1zm-10 2h1v4h-1v-4zm-4-7v2H4v-1H3v-1h3zm4-3h1v1h-1zm3-3v2h-1V3h2v1zm-3 0h1v1h-1zm10 8h1v2h-2v-1h1zm-1-2v1h-2v2h-2v-1h1v-2h3zm-7 4h-1v-1h-1v-1h2v2zm6 2h1v1h-1zm2-5v1h-1v-1zm-9 3v1h-1v-1zm6 5h1v2h-2v-2zm-3 0h1v1h-1v1h-2v-1h1v-1zm0-1v-1h2v1zm0-5h1v3h-1v1h-1v1h-1v-2h-1v-1h3v-1h-1v-1zm-9 0v1H4v-1zm12 4h-1v-1h1zm1-2h-2v-1h2zM8 10h1v1H8v1h1v2H8v-1H7v1H6v-2h1v-2zm3 0V8h3v3h-2v-1h1V9h-1v1zm0-4h1v1h-1zm-1 4h1v1h-1zm3-3V6h1v1z" />
+                        <path fill="none" d="M0 0h24v24H0z" />
+                    </svg> -->
+
+                </div>
+
+
+            </div>
+            <div class="popup_right-bottom">
+                <div class="popup_right-logo">
+                    <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_38_24726)">
+                            <path
+                                d="M15.1438 24.0991L17.1488 11.238H15.0071C14.0046 11.238 12.7135 10.666 12.3338 9.61489C12.2123 9.25935 11.9237 8.03816 13.5793 6.84789C14.1717 6.43053 14.5515 5.96678 14.6274 5.61125C14.7034 5.24025 14.6122 4.91564 14.354 4.66831C13.9895 4.31277 13.2756 4.11182 12.3642 4.11182C10.8301 4.11182 9.75161 5.00838 9.64529 5.65762C9.56934 6.13682 9.93389 6.52327 10.2529 6.7706C11.2098 7.49713 11.4376 8.54828 10.8453 9.53759C10.2377 10.5578 8.9162 11.2225 7.50358 11.238H5.31631C5.13404 12.4901 2.15692 31.689 1.92908 33.2039H13.7464C13.8527 32.5392 14.3996 28.9065 15.1438 24.0991Z"
+                                fill="#133342" />
+                            <path
+                                d="M1.2911 37.6558H6.13651C8.20227 37.6558 8.70352 38.7224 8.55163 39.6962C8.43011 40.4846 7.89848 41.072 6.98712 41.4584C8.14151 41.9067 8.5972 42.6023 8.43011 43.6999C8.21746 45.0756 7.04788 46.0959 5.51375 46.0959H0L1.2911 37.6558ZM4.49606 41.1493C5.4378 41.1493 5.87829 40.6392 5.96943 40.0363C6.06057 39.3871 5.77197 38.9388 4.83023 38.9388H3.99481L3.66064 41.1493H4.49606ZM3.97962 44.7819C4.95174 44.7819 5.51375 44.38 5.65045 43.5607C5.75678 42.8497 5.36186 42.4323 4.42011 42.4323H3.47837L3.11383 44.7974H3.97962V44.7819Z"
+                                fill="#133342" />
+                            <path
+                                d="M15.2198 46.1575C13.9591 46.2503 13.3515 46.1112 13.0477 45.5547C12.3794 45.972 11.6351 46.1884 10.8452 46.1884C9.41742 46.1884 8.91617 45.431 9.05288 44.5963C9.11364 44.1944 9.34148 43.8079 9.70602 43.4833C10.4959 42.7877 12.4401 42.6949 13.1996 42.1693C13.2603 41.5819 13.0325 41.3655 12.3186 41.3655C11.4832 41.3655 10.7845 41.6438 9.58451 42.4785L9.87311 40.5617C10.906 39.8043 11.9085 39.4487 13.0629 39.4487C14.5362 39.4487 15.8425 40.0671 15.5995 41.7056L15.3109 43.5606C15.2046 44.2098 15.235 44.4108 15.9489 44.4262L15.2198 46.1575ZM13.0325 43.236C12.3642 43.6688 11.1186 43.5915 10.9819 44.4881C10.9212 44.9054 11.1794 45.2146 11.5895 45.2146C11.9996 45.2146 12.4705 45.0445 12.8654 44.7663C12.835 44.6117 12.8502 44.4571 12.8958 44.1634L13.0325 43.236Z"
+                                fill="#133342" />
+                            <path
+                                d="M17.5741 39.5569H20.0955L19.9588 40.4071C20.7639 39.7115 21.3714 39.4487 22.1613 39.4487C23.5739 39.4487 24.2271 40.3298 23.9992 41.7674L23.3461 46.0802H20.8246L21.3715 42.5094C21.4778 41.8602 21.2803 41.551 20.7943 41.551C20.3993 41.551 20.0348 41.7674 19.6854 42.2466L19.1082 46.0648H16.5868L17.5741 39.5569Z"
+                                fill="#133342" />
+                            <path
+                                d="M25.9738 37.6558H28.4953L27.8573 41.7985L30.2724 39.5571H33.3863L30.2876 42.3396L32.7787 46.0804H29.6041L27.6902 43.0506H27.6599L27.2042 46.0649H24.6827L25.9738 37.6558Z"
+                                fill="#133342" />
+                            <path d="M34.89 37.6558H37.7912L36.5153 46.0804H33.6141L34.89 37.6558Z" fill="#133342" />
+                            <path
+                                d="M39.2038 37.6558H43.3505C46.5555 37.6558 47.482 40.0208 47.1782 41.984C46.8896 43.9008 45.4011 46.0804 42.5911 46.0804H37.9127L39.2038 37.6558ZM41.8923 44.0709C43.305 44.0709 44.0796 43.3598 44.3075 41.8604C44.4745 40.7474 44.1404 39.6499 42.5759 39.6499H41.8012L41.1329 44.0709H41.8923Z"
+                                fill="#133342" />
+                            <path
+                                d="M31.032 0H18.9564L17.3463 10.4033H19.3969C20.5209 10.4033 21.5842 9.8777 22.0398 9.12025C22.1917 8.87292 22.2525 8.65651 22.2525 8.45556C22.2525 8.02273 21.9639 7.69811 21.6753 7.4817C20.8854 6.87884 20.7184 6.24506 20.7184 5.79677C20.7184 5.70402 20.7184 5.62673 20.7335 5.54944C20.9006 4.45192 22.3588 3.26165 24.2879 3.26165C25.4423 3.26165 26.3232 3.5399 26.8549 4.05001C27.3257 4.49829 27.508 5.13208 27.3713 5.79677C27.2042 6.58513 26.4296 7.23437 25.9891 7.55899C24.8195 8.39373 24.9714 9.12025 25.0473 9.33667C25.2904 9.98591 26.2169 10.4033 26.9308 10.4033H30.0598V10.4187C34.3129 10.4496 36.5913 12.4437 35.8774 17.0812C35.209 21.394 31.9585 23.2489 28.0852 23.2798L26.5511 33.2348H28.8143C38.3684 33.2348 46.1758 26.9898 47.7099 17.1275C49.6086 4.88475 41.9683 0 31.032 0Z"
+                                fill="#133342" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_38_24726">
+                                <rect width="48" height="46.1887" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="popup_right-4 process " popup_right-index="5">
+            <div class="popup_right-top">
+                <div class="popup_right-header">
+
+                    <h3>Bankid</h3>
+                </div>
+                <div class="popup_process-topbar">
+                    <h2>Bekräftar BankID</h2>
+                </div>
+
+
+                <!-- bank id loader screen -->
+
+                <div class="loader-wrapper">
+                    <div class="loader"></div>
+                </div>
+            </div>
+            <div class="popup_right-bottom">
+                <div class="popup_right-logo">
+                    <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_38_24726)">
+                            <path
+                                d="M15.1438 24.0991L17.1488 11.238H15.0071C14.0046 11.238 12.7135 10.666 12.3338 9.61489C12.2123 9.25935 11.9237 8.03816 13.5793 6.84789C14.1717 6.43053 14.5515 5.96678 14.6274 5.61125C14.7034 5.24025 14.6122 4.91564 14.354 4.66831C13.9895 4.31277 13.2756 4.11182 12.3642 4.11182C10.8301 4.11182 9.75161 5.00838 9.64529 5.65762C9.56934 6.13682 9.93389 6.52327 10.2529 6.7706C11.2098 7.49713 11.4376 8.54828 10.8453 9.53759C10.2377 10.5578 8.9162 11.2225 7.50358 11.238H5.31631C5.13404 12.4901 2.15692 31.689 1.92908 33.2039H13.7464C13.8527 32.5392 14.3996 28.9065 15.1438 24.0991Z"
+                                fill="#133342" />
+                            <path
+                                d="M1.2911 37.6558H6.13651C8.20227 37.6558 8.70352 38.7224 8.55163 39.6962C8.43011 40.4846 7.89848 41.072 6.98712 41.4584C8.14151 41.9067 8.5972 42.6023 8.43011 43.6999C8.21746 45.0756 7.04788 46.0959 5.51375 46.0959H0L1.2911 37.6558ZM4.49606 41.1493C5.4378 41.1493 5.87829 40.6392 5.96943 40.0363C6.06057 39.3871 5.77197 38.9388 4.83023 38.9388H3.99481L3.66064 41.1493H4.49606ZM3.97962 44.7819C4.95174 44.7819 5.51375 44.38 5.65045 43.5607C5.75678 42.8497 5.36186 42.4323 4.42011 42.4323H3.47837L3.11383 44.7974H3.97962V44.7819Z"
+                                fill="#133342" />
+                            <path
+                                d="M15.2198 46.1575C13.9591 46.2503 13.3515 46.1112 13.0477 45.5547C12.3794 45.972 11.6351 46.1884 10.8452 46.1884C9.41742 46.1884 8.91617 45.431 9.05288 44.5963C9.11364 44.1944 9.34148 43.8079 9.70602 43.4833C10.4959 42.7877 12.4401 42.6949 13.1996 42.1693C13.2603 41.5819 13.0325 41.3655 12.3186 41.3655C11.4832 41.3655 10.7845 41.6438 9.58451 42.4785L9.87311 40.5617C10.906 39.8043 11.9085 39.4487 13.0629 39.4487C14.5362 39.4487 15.8425 40.0671 15.5995 41.7056L15.3109 43.5606C15.2046 44.2098 15.235 44.4108 15.9489 44.4262L15.2198 46.1575ZM13.0325 43.236C12.3642 43.6688 11.1186 43.5915 10.9819 44.4881C10.9212 44.9054 11.1794 45.2146 11.5895 45.2146C11.9996 45.2146 12.4705 45.0445 12.8654 44.7663C12.835 44.6117 12.8502 44.4571 12.8958 44.1634L13.0325 43.236Z"
+                                fill="#133342" />
+                            <path
+                                d="M17.5741 39.5569H20.0955L19.9588 40.4071C20.7639 39.7115 21.3714 39.4487 22.1613 39.4487C23.5739 39.4487 24.2271 40.3298 23.9992 41.7674L23.3461 46.0802H20.8246L21.3715 42.5094C21.4778 41.8602 21.2803 41.551 20.7943 41.551C20.3993 41.551 20.0348 41.7674 19.6854 42.2466L19.1082 46.0648H16.5868L17.5741 39.5569Z"
+                                fill="#133342" />
+                            <path
+                                d="M25.9738 37.6558H28.4953L27.8573 41.7985L30.2724 39.5571H33.3863L30.2876 42.3396L32.7787 46.0804H29.6041L27.6902 43.0506H27.6599L27.2042 46.0649H24.6827L25.9738 37.6558Z"
+                                fill="#133342" />
+                            <path d="M34.89 37.6558H37.7912L36.5153 46.0804H33.6141L34.89 37.6558Z" fill="#133342" />
+                            <path
+                                d="M39.2038 37.6558H43.3505C46.5555 37.6558 47.482 40.0208 47.1782 41.984C46.8896 43.9008 45.4011 46.0804 42.5911 46.0804H37.9127L39.2038 37.6558ZM41.8923 44.0709C43.305 44.0709 44.0796 43.3598 44.3075 41.8604C44.4745 40.7474 44.1404 39.6499 42.5759 39.6499H41.8012L41.1329 44.0709H41.8923Z"
+                                fill="#133342" />
+                            <path
+                                d="M31.032 0H18.9564L17.3463 10.4033H19.3969C20.5209 10.4033 21.5842 9.8777 22.0398 9.12025C22.1917 8.87292 22.2525 8.65651 22.2525 8.45556C22.2525 8.02273 21.9639 7.69811 21.6753 7.4817C20.8854 6.87884 20.7184 6.24506 20.7184 5.79677C20.7184 5.70402 20.7184 5.62673 20.7335 5.54944C20.9006 4.45192 22.3588 3.26165 24.2879 3.26165C25.4423 3.26165 26.3232 3.5399 26.8549 4.05001C27.3257 4.49829 27.508 5.13208 27.3713 5.79677C27.2042 6.58513 26.4296 7.23437 25.9891 7.55899C24.8195 8.39373 24.9714 9.12025 25.0473 9.33667C25.2904 9.98591 26.2169 10.4033 26.9308 10.4033H30.0598V10.4187C34.3129 10.4496 36.5913 12.4437 35.8774 17.0812C35.209 21.394 31.9585 23.2489 28.0852 23.2798L26.5511 33.2348H28.8143C38.3684 33.2348 46.1758 26.9898 47.7099 17.1275C49.6086 4.88475 41.9683 0 31.032 0Z"
+                                fill="#133342" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_38_24726">
+                                <rect width="48" height="46.1887" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="popup_right-4 done" popup_right-index="6">
+            <div class="popup_right-top">
+                <div class="popup_right-header">
+
+                    <h3>Bankid</h3>
+                </div>
+                <div class="popup_process-topbar">
+                    <h2>BankID godkänt!</h2>
+                </div>
+
+
+                <!-- bank id loader screen -->
+
+                <div class="loader-wrapper text-center">
+                    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="82" height="82" rx="41" stroke="url(#paint0_linear_26_14958)"
+                            stroke-width="6" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M63.9522 29.2928C64.8775 30.2181 64.8775 31.7182 63.9522 32.6434L37.8907 58.7049C36.9654 59.6302 35.4653 59.6302 34.5401 58.7049L22.6939 46.8588C21.7687 45.9335 21.7687 44.4334 22.6939 43.5082C23.6192 42.5829 25.1193 42.5829 26.0445 43.5082L36.2154 53.679L60.6016 29.2928C61.5269 28.3676 63.027 28.3676 63.9522 29.2928Z"
+                            fill="#79E8AC" />
+                        <defs>
+                            <linearGradient id="paint0_linear_26_14958" x1="44" y1="0" x2="44" y2="88"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#85E8AC" stop-opacity="0.3" />
+                                <stop offset="1" stop-color="#85E8AC" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                </div>
+
+                <div class="text-slider text-center">
+                    Du omdirigeras nu till <strong>Tink</strong>
+
+                </div>
+                <div class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
+                        <circle cx="4" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="20" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="36" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.8s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                    
+                </div>
+
+            </div>
+            <div class="popup_right-bottom">
+                <div class="popup_right-logo">
+                    <svg width="48" height="47" viewBox="0 0 48 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_38_24726)">
+                            <path
+                                d="M15.1438 24.0991L17.1488 11.238H15.0071C14.0046 11.238 12.7135 10.666 12.3338 9.61489C12.2123 9.25935 11.9237 8.03816 13.5793 6.84789C14.1717 6.43053 14.5515 5.96678 14.6274 5.61125C14.7034 5.24025 14.6122 4.91564 14.354 4.66831C13.9895 4.31277 13.2756 4.11182 12.3642 4.11182C10.8301 4.11182 9.75161 5.00838 9.64529 5.65762C9.56934 6.13682 9.93389 6.52327 10.2529 6.7706C11.2098 7.49713 11.4376 8.54828 10.8453 9.53759C10.2377 10.5578 8.9162 11.2225 7.50358 11.238H5.31631C5.13404 12.4901 2.15692 31.689 1.92908 33.2039H13.7464C13.8527 32.5392 14.3996 28.9065 15.1438 24.0991Z"
+                                fill="#133342" />
+                            <path
+                                d="M1.2911 37.6558H6.13651C8.20227 37.6558 8.70352 38.7224 8.55163 39.6962C8.43011 40.4846 7.89848 41.072 6.98712 41.4584C8.14151 41.9067 8.5972 42.6023 8.43011 43.6999C8.21746 45.0756 7.04788 46.0959 5.51375 46.0959H0L1.2911 37.6558ZM4.49606 41.1493C5.4378 41.1493 5.87829 40.6392 5.96943 40.0363C6.06057 39.3871 5.77197 38.9388 4.83023 38.9388H3.99481L3.66064 41.1493H4.49606ZM3.97962 44.7819C4.95174 44.7819 5.51375 44.38 5.65045 43.5607C5.75678 42.8497 5.36186 42.4323 4.42011 42.4323H3.47837L3.11383 44.7974H3.97962V44.7819Z"
+                                fill="#133342" />
+                            <path
+                                d="M15.2198 46.1575C13.9591 46.2503 13.3515 46.1112 13.0477 45.5547C12.3794 45.972 11.6351 46.1884 10.8452 46.1884C9.41742 46.1884 8.91617 45.431 9.05288 44.5963C9.11364 44.1944 9.34148 43.8079 9.70602 43.4833C10.4959 42.7877 12.4401 42.6949 13.1996 42.1693C13.2603 41.5819 13.0325 41.3655 12.3186 41.3655C11.4832 41.3655 10.7845 41.6438 9.58451 42.4785L9.87311 40.5617C10.906 39.8043 11.9085 39.4487 13.0629 39.4487C14.5362 39.4487 15.8425 40.0671 15.5995 41.7056L15.3109 43.5606C15.2046 44.2098 15.235 44.4108 15.9489 44.4262L15.2198 46.1575ZM13.0325 43.236C12.3642 43.6688 11.1186 43.5915 10.9819 44.4881C10.9212 44.9054 11.1794 45.2146 11.5895 45.2146C11.9996 45.2146 12.4705 45.0445 12.8654 44.7663C12.835 44.6117 12.8502 44.4571 12.8958 44.1634L13.0325 43.236Z"
+                                fill="#133342" />
+                            <path
+                                d="M17.5741 39.5569H20.0955L19.9588 40.4071C20.7639 39.7115 21.3714 39.4487 22.1613 39.4487C23.5739 39.4487 24.2271 40.3298 23.9992 41.7674L23.3461 46.0802H20.8246L21.3715 42.5094C21.4778 41.8602 21.2803 41.551 20.7943 41.551C20.3993 41.551 20.0348 41.7674 19.6854 42.2466L19.1082 46.0648H16.5868L17.5741 39.5569Z"
+                                fill="#133342" />
+                            <path
+                                d="M25.9738 37.6558H28.4953L27.8573 41.7985L30.2724 39.5571H33.3863L30.2876 42.3396L32.7787 46.0804H29.6041L27.6902 43.0506H27.6599L27.2042 46.0649H24.6827L25.9738 37.6558Z"
+                                fill="#133342" />
+                            <path d="M34.89 37.6558H37.7912L36.5153 46.0804H33.6141L34.89 37.6558Z" fill="#133342" />
+                            <path
+                                d="M39.2038 37.6558H43.3505C46.5555 37.6558 47.482 40.0208 47.1782 41.984C46.8896 43.9008 45.4011 46.0804 42.5911 46.0804H37.9127L39.2038 37.6558ZM41.8923 44.0709C43.305 44.0709 44.0796 43.3598 44.3075 41.8604C44.4745 40.7474 44.1404 39.6499 42.5759 39.6499H41.8012L41.1329 44.0709H41.8923Z"
+                                fill="#133342" />
+                            <path
+                                d="M31.032 0H18.9564L17.3463 10.4033H19.3969C20.5209 10.4033 21.5842 9.8777 22.0398 9.12025C22.1917 8.87292 22.2525 8.65651 22.2525 8.45556C22.2525 8.02273 21.9639 7.69811 21.6753 7.4817C20.8854 6.87884 20.7184 6.24506 20.7184 5.79677C20.7184 5.70402 20.7184 5.62673 20.7335 5.54944C20.9006 4.45192 22.3588 3.26165 24.2879 3.26165C25.4423 3.26165 26.3232 3.5399 26.8549 4.05001C27.3257 4.49829 27.508 5.13208 27.3713 5.79677C27.2042 6.58513 26.4296 7.23437 25.9891 7.55899C24.8195 8.39373 24.9714 9.12025 25.0473 9.33667C25.2904 9.98591 26.2169 10.4033 26.9308 10.4033H30.0598V10.4187C34.3129 10.4496 36.5913 12.4437 35.8774 17.0812C35.209 21.394 31.9585 23.2489 28.0852 23.2798L26.5511 33.2348H28.8143C38.3684 33.2348 46.1758 26.9898 47.7099 17.1275C49.6086 4.88475 41.9683 0 31.032 0Z"
+                                fill="#133342" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_38_24726">
+                                <rect width="48" height="46.1887" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="popup_right-4 swish" popup_right-index="7">
+            <div class="popup_right-top">
+                <div class="popup_right-header">
+
+                    <h3>Swish</h3>
+                </div>
+                <div class="popup_process-topbar">
+                    <h2>Öppna din Swish app</h2>
+                    <span>Skanna QR-koden nedan</span>
+                </div>
+
+
+                <!-- qr -->
+                <div class="text-win text-center">Att betala: <strong>150 kr</strong></div>
+
+
+                <div class="popup_qr">
+                    <img src="assets/img/subscription-popup/qr-color.svg" alt="">
+                </div>
+                <div class="text-center lh-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="8" viewBox="0 0 40 8" fill="none">
+                        <circle cx="4" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="20" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.4s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="36" cy="4" r="4" fill="#003E52">
+                            <animate attributeName="opacity" values="0.3;1;0.3" dur="1.2s" begin="0.8s" repeatCount="indefinite" />
+                        </circle>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="popup_right-bottom">
+                <div class="popup_right-logo">
+                    <img src="img/Swish_Logo.svg" alt="">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="popup_right-4 swish"  popup_right-index="8">
+            <div class="popup_right-top">
+                <div class="popup_right-header">
+
+                    <h3>Swish</h3>
+                </div>
+                <div class="popup_process-topbar">
+                    <h2>Betalning klar!</h2>
+
+                </div>
+
+
+                <!-- qr -->
+
+                <div class="loader-wrapper text-center">
+                    <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="3" y="3" width="82" height="82" rx="41" stroke="url(#paint0_linear_34_17986)"
+                            stroke-width="6" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M63.9522 29.2927C64.8775 30.2179 64.8775 31.718 63.9522 32.6433L37.8907 58.7048C36.9654 59.6301 35.4653 59.6301 34.5401 58.7048L22.6939 46.8587C21.7687 45.9334 21.7687 44.4333 22.6939 43.5081C23.6192 42.5828 25.1193 42.5828 26.0445 43.5081L36.2154 53.6789L60.6016 29.2927C61.5269 28.3674 63.027 28.3674 63.9522 29.2927Z"
+                            fill="#79E8AC" />
+                        <defs>
+                            <linearGradient id="paint0_linear_34_17986" x1="44" y1="0" x2="44" y2="88"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#85E8AC" stop-opacity="0.3" />
+                                <stop offset="1" stop-color="#85E8AC" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+
+                </div>
+
+
+            </div>
+            <div class="popup_right-bottom">
+                <div class="popup_right-logo">
+                    <img src="img/Swish_Logo.svg" alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- main poup end -->
+<!-- error general blocks start -->
+<div class="error_general"  popup_right-index="10">
+    <div class="error_general-topbar">
+        <h3>Köpet avbröts</h3>
+        <h2>Hoppsan,<br>
+            Något gick fel
+        </h2>
+        <span>Försök igen</span>
+    </div>
+    <div class="error_general-bottbar">
+        <button class="error_general-bottbar--secondarycta">Försök igen</button>
+        <button class="error_general-bottbar--prymaricta">Stäng</button>
+    </div>
+</div>
+<!-- error general blocks end -->
+
+<!-- Finish screen -->
+<!-- <div class="finish-screen"  popup_right-index="9">
+    <div class="overlay">
+       <img src="assets/img/subscription-popup/popup-finish.png" alt="">
+    </div>
+</div> -->
+</div>

@@ -1,7 +1,13 @@
 export default function () {
 
 	$('.modal-cookie-consent a.arrow').click( function() {
-      
+      let collapse = $('ul.list li span.content');
+
+      for(let i = 0; i< collapse.length;i++){
+         if ($(collapse[i]).find('h5').length == 0) {
+            $(collapse[i]).find('a.arrow').hide();
+         }
+      }
       
      $(this).parents('li').toggleClass('open');
       

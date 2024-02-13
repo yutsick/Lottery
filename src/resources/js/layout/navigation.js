@@ -1,9 +1,69 @@
 export default function () {
+	const mobile = 425;
+	if ($(document).width() <= mobile){
+		$('#user__login .go-back, #user__login-credentials .go-back, #user__create-account .go-back').data('target-screen','#user__start'); 
+	}  
+
+	$("#ml-2017").css({
+		"overflow-x": "hidden",
+		"position": "relative",
+	});
+	
 	toggle_nav();
 	reset_nav_on_resize();
 	click_top_nav_item();
 	click_sub_menu_item();
 	click_sub_menu_item_collapsed();
+	showHideMenu();
+	if($('#user__login-credentials').length != 0){
+		showPassword();
+		loginBankId();
+	}
+
+	if($('#deposit').length != 0){
+		activateDepositButton();
+	} 
+
+	if($('#transfer').length != 0){
+		activateTransferButton();
+	}
+	
+	if($('[data-target-screen]').length != 0){
+		setTargetScreen();
+	}
+
+	$(document).ready(function(){
+		let $submenu = $('.menu__list-item.submenu');
+		newMenuToggle($submenu);
+
+		window.addEventListener("resize", mainHeight);
+		mainHeight();
+
+
+
+	});
+	
+	const mainHeight = () => { 
+		
+		// if($(window).width() > mobile){
+
+		const elem = $('.new-nav-content.main-content');
+		$('#side-menu, #user-menu, #mobile__overlay').css('height', `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); 
+	// } else {
+		
+	// 	$('#side-menu, #user-menu, #mobile__overlay').css({
+	// 		'height':'100%',
+	// 		'overflow-y':'scroll'
+	// 	});
+	// 	$('body').css({
+	// 		'height':'100%',
+	// 		'overflow':'hidden'
+	// 	});
+	// }
+	};
+
+	
+
 
 	$(window).on('resize', function () {
 		reset_nav_on_resize();
@@ -17,6 +77,7 @@ export default function () {
 	let active_class = 'js-is-active';
 	let navigation_trigger = false;
 	let mobile_width = 767;
+	
 
 	// Reset navigation on resize window
 	function reset_nav_on_resize() {
@@ -149,6 +210,303 @@ export default function () {
 			$sidebar.removeClass(active_class);
 			$nav.removeClass('js-active-sidebar');
 		}
+	}
+
+	function newMenuToggle($submenu){
+		
+		$submenu.on('click', function(e){
+
+			if($(this).hasClass('active')){
+				
+				$(this).children('ul.menu__submenu').hide();
+				$(this).removeClass('active');
+					
+
+			} else {
+				$submenu.removeClass('active');
+				$submenu.children('ul.menu__submenu').hide();
+				$(this).children('ul.menu__submenu').fadeTo('fast',1);
+				$(this).addClass('active');
+
+			}
+			
+		})
+		
+	}
+
+	// show / hide password
+const emailInput = document.querySelector('#user_email'),
+					passInput = document.querySelector('#user_pass'),
+					emailCreateInput=document.querySelector('#user_email_register'),
+					mobileInput = document.querySelector('#user_mobile'),
+					emailErrorTooltip = document.querySelector('.error-tooltip.email-error'),
+					passErrorTooltip = document.querySelector('.error-tooltip.pass-error'),
+					createEmailErrorTooltip = document.querySelector('.error-tooltip.email-create-error'),
+					createPersonErrorTooltip = document.querySelector('.error-tooltip.person-error'),
+					createKontoCta = document.querySelector('#create-konto-cta'),
+					createChk = document.querySelector('#create-conto-chk'),
+					createChkErrorTooltip = document.querySelector('.create-chk-error'),
+					login = document.querySelector('#login'),
+					loader = document.querySelector('#login .loader'), 
+					declined = document.querySelector('#login .declined');
+
+					// atcivate button
+					function checkFields() {
+					  const value1 = mobileInput.value.trim();
+					  const value2 = emailCreateInput.value.trim();
+					  const value3 = createChk.checked;
+					  if (value1 !== '' && value2 !== '' && value3) {
+						$(createKontoCta).addClass('active'); 
+					  } else {
+						$(createKontoCta).remove('active');
+					  }
+					}
+					passInput.addEventListener('input', checkFields);
+					emailCreateInput.addEventListener('input', checkFields);
+					createChk.addEventListener('input', checkFields);
+
+
+
+
+
+
+
+	function showPassword(){
+		const passwordInput = document.querySelector('#user_pass'),
+					eyeIcon = document.querySelector('.pass-icon');
+
+		// eye icon visibility
+		try{
+			passwordInput.addEventListener('input', () => {
+				if (passwordInput.value.length > 0) {
+					eyeIcon.style.display = 'block';
+				} else {
+					eyeIcon.style.display = 'none';
+				}
+			});
+		} catch (e) {}
+		
+
+		// password visibility
+		try {
+			eyeIcon.addEventListener('click', () => {
+				if (passwordInput.type === 'password') {
+					passwordInput.type = 'text';
+					eyeIcon.classList.add('show-password');
+				} else {
+					passwordInput.type = 'password';
+					eyeIcon.classList.remove('show-password');
+				}
+			});
+		} catch (e)  {}
+		
+	}
+
+	try {
+		login.addEventListener('click', () => {
+			$(loader).show();
+			$(declined).hide();
+			
+			setTimeout(() => {
+				if (emailInput.value == 'error'){
+					emailErrorTooltip.style.display ='block';
+					emailInput.classList.add('error');
+					$(loader).hide();
+					$(declined).show();
+
+				} 
+				if (passInput.value == 'error'){
+					passErrorTooltip.style.display ='block';
+					passInput.classList.add('error');
+					$(loader).hide();
+					$(declined).show();
+
+			} 
+				if (passInput.value != 'error' && emailInput.value != 'error') {
+
+						$(loader).hide();
+						
+					}
+			}, 1000)
+			//email error
+			
+		}); 
+	} catch (e)  {}
+
+	
+	try {
+		createKontoCta.addEventListener('click', () => {
+			
+			if(mobileInput.value == 'error'){
+				$(createPersonErrorTooltip).show();
+				$(mobileInput).addClass('error');
+			} else {
+				$(createPersonErrorTooltip).hide();
+				$(mobileInput).removeClass('error'); 
+			}
+
+			if(emailCreateInput.value == 'error'){
+				$(createEmailErrorTooltip).show();
+				$(emailCreateInput).addClass('error');
+			} else {
+				$(createEmailErrorTooltip).hide();
+				$(emailCreateInput).removeClass('error'); 
+			}
+
+			if(!$(createChk).is(':checked')){
+				$(createChkErrorTooltip).show();
+				$(createChk).addClass('error');
+			} else {
+				$(createChkErrorTooltip).hide();
+				$(createChk).removeClass('error'); 
+			}
+
+		});
+	} catch (e)  {}
+
+	
+	try {
+		createChk.addEventListener('change', () => {
+			
+			if($(createChk).is(':checked')){
+				console.log('ff')
+				$(createChkErrorTooltip).hide();
+				$(createChk).removeClass('error'); 
+				// $(createKontoCta).addClass('active');
+			} else {
+				// $(createKontoCta).removeClass('active');
+			}
+		});
+	} catch (e)  {}
+
+	
+
+
+
+	function activateTransferButton (){
+		const emptyField = document.querySelector('#transfer #user_transfer');
+		const btnDisabled = document.querySelector('#transfer .transfer .btn__disabled');
+		const btnEnabled = document.querySelector('#transfer .transfer .btn__enabled');
+
+		try {
+			emptyField.addEventListener('input', () => {
+				if (emptyField.value.length > 0){
+					$(btnDisabled).hide();
+					$(btnEnabled).show();
+				} else {
+					$(btnDisabled).show();
+					$(btnEnabled).hide();
+				}
+			});
+		} catch (e)  {}
+
+		
+	};
+
+	function activateDepositButton (){
+		const depositStart = document.querySelector('#deposit');
+		const emptyField = document.querySelector('#user_depo');
+
+		const buttonStateZero = document.querySelector('#deposit [data-button-state = "0"]');
+		const buttonStateOne = document.querySelector('#deposit [data-button-state = "1"]');
+		const buttonStateTwo = document.querySelector('#deposit [data-button-state = "2"]');
+		const buttonStateThree = document.querySelector('#deposit [data-button-state = "3"]');
+		const depositDone = document.querySelector('#deposit__done');
+
+		try {
+			emptyField.addEventListener('input', () => {
+				if (emptyField.value.length > 0){
+					$(buttonStateZero).hide();
+					$(buttonStateOne).show();
+				} else {
+					$(buttonStateZero).show();
+					$(buttonStateOne).hide();
+				}
+			});
+		} catch (e)  {}
+
+
+		
+
+		$(buttonStateOne).on('click', () => {
+			$(buttonStateOne).hide();
+			$(buttonStateTwo).show();
+			setTimeout(() => {
+				$(buttonStateTwo).hide();
+				$(buttonStateThree).show();
+
+				setTimeout(() => {
+					$(depositStart).hide();
+					$(depositDone).show();
+					
+				}, 1500)
+
+			}, 1000)
+		})
+	}
+
+	function setTargetScreen(){
+		$('[data-target-screen]').on('click', function(){
+			if(($(this).data('current-screen'))){
+				$($(this).data('current-screen')).fadeTo('slow',0);
+				$($(this).data('current-screen')).hide();
+			}
+			if(($(this).data('target-screen'))){
+				$($(this).data('target-screen')).fadeTo('slow',1);
+			}
+			
+		})
+	}
+
+	function showHideMenu(){
+		$('#user-button, .user__signin, .user__signup').on('click', () => {
+			//$('#user-menu').show();
+			$('#mobile__overlay').show();
+			$('#user-menu').addClass('open');
+				
+		})
+
+		$('.close-user-menu').on('click', () => {
+				$('#user-menu').removeClass('open');
+				$('#mobile__overlay').hide();
+				
+				//$('#user-menu').hide();
+		})
+		
+
+		$('#toggle-nav').on('click', () => {
+			$('.side-menu').toggleClass('open');
+			$('#mobile__overlay').show();
+		})
+
+		$('#mobile__close').on('click', () => {
+			$('.side-menu').removeClass('open');
+			$('#mobile__overlay').hide();
+		})
+
+		// Close sideMenus on mobileOverlay click
+		$('#mobile__overlay').on('click', () => {
+			$('#user-menu').removeClass('open');
+			$('#side-menu').removeClass('open');
+			$('#mobile__overlay').hide();
+		})
+		
+
+	}
+
+	function loginBankId(){
+		$('#user__login-bank-id .qr-wrapper').on('click', () => {
+			$('#user__login-bank-id .screen-scan-qr').hide();
+			$('#user__login-bank-id .screen-loading').show();
+			$('#user__login-bank-id .screen-error').hide();
+
+			setTimeout(() => {
+				$('#user__login-bank-id .screen-loading').hide();
+				$('#user__login-bank-id .screen-error').show();
+			
+			}, 2000)
+		})
+		
 	}
 }
 

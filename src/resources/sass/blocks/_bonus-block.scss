@@ -1,14 +1,46 @@
+#bonusBlockTwoColumns{
+	min-height: 395px;
+}
+form.js-bonus-block{
+	
+	& > .popover {
+		background-color: $color-popover-error;
+		border-color: $color-popover-error;
+		word-break: break-all;
+
+		& > .popover-content {
+			background-color: $color-popover-error;
+			color: $color-snow;
+		}
+
+		& > .arrow {
+			
+
+			&:after {
+				border-top-color: $color-popover-error;
+				margin-left:0;
+			}
+		}
+	}
+}
 .bonus-block {
-    position: relative;
-    margin: 20px 0;
-    padding: 40px 20px 30px;
-    width: 100%;
-    // height: 100%;
-    max-width: 100%;
+	position: relative;
+	padding: 40px 20px 30px;
+	width: 100%;
+	// height: 100%;
+	max-width: 100%;
 	min-height: 280px;
-    overflow: hidden;
+	overflow: hidden;
 	z-index: 0;
 	display: flex;
+
+	@media screen and (min-width: $screen-sm) {
+		margin-bottom: 20px;
+	}
+
+	@media screen and (min-width: $screen-md) {
+		margin-bottom: 60px;
+	}
 
 	.image {
 		background-color: #003E52;
@@ -47,27 +79,32 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		max-width: 300px;
+		// max-width: 300px;
 		margin-left: auto;
 		margin-right: auto;
-
-		p, h4 {
+		justify-content: space-between;
+		p,
+		h4 {
 			color: #fff;
 		}
 
-		button {
+		button,
+		input[type="submit"] {
 			margin-top: auto;
-			max-width: 215px;
-			width: 100%;
+			// max-width: 215px;
+			// width: 100%;
 			height: 38px;
-			padding: 5px 20px;
+			padding: 8px 30px;
+			width: auto;
 		}
 
 	}
 
 	&.text_dark {
 		.content {
-			p, h4 {
+
+			p,
+			h4 {
 				color: #003e52;
 			}
 		}
@@ -112,18 +149,202 @@
 			margin-bottom: 10px;
 			height: 48px;
 			color: #003e52;
-			font-size: 18px;
+			font-size: 16px;
 			font-family: $apercu;
-			font-weight: 600;
 			border-radius: 24px;
+			-webkit-border-radius:24px;
 			background: rgba(255, 255, 255, 0.85);
-			border: 2px solid #003e52;
-			padding:  5px 20px;
+			border: 2px solid transparent;
+			padding: 5px 20px;
+			outline: none;
+			display: inline-block;
+			&:focus{
+				border: 2px solid #003e52;
+
+			}
 		}
+
 
 		button.btn-success {
 			font-weight: 600;
-			max-width: 140px;
+			//max-width: 140px;
 		}
+
+		.loader {
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+			background-color: $color-primary-lighter;
+			position: absolute;
+			top: 0;
+			margin-top: 4px;
+			right: 6px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: none;
+
+
+			&.loader--spin {
+				display: flex;
+			}
+
+			&.block-col-loader {
+				right: inherit;
+				top: 50%;
+			}
+		}
+
+		button.btn-success-green {
+			background-color: $color-green;
+
+			&::before {
+				content: url(../img/icons/icon-check-white.svg);
+				width: 12px;
+				height: 16px;
+				display: inline-block;
+				margin-left: -5px;
+				margin-right: 10px;
+			}
+		}
+
+		.popover {
+			border: none;
+			background-color: #06566F;
+
+			.arrow {
+				border: none;
+
+				&:after {
+					border-top-color: #06566F;
+				}
+			}
+
+			.popover-content {
+				background-color: #06566F;
+				color: #ffffff;
+			}
+		}
+
+		.loader-wrapper {
+			height: 32px;
+		}
+
+		.loader {
+			width: 42px;
+			height: 42px;
+			border-radius: 42px;
+			background-color: $color-primary-lighter;
+			position: absolute;
+			top: 0;
+			// margin-top: -21px;
+			// right: 6px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: none;
+
+			&::after {
+				content: '';
+				display: block;
+				position: relative;
+				height: 22px;
+			}
+
+			@media screen and (min-width: 992px) {
+				width: 50px;
+				height: 50px;
+				border-radius: 50px;
+				// margin-top: -25px;
+				// right: 6px;
+			}
+
+			.spinner {
+				padding: 10px;
+				border: 4px solid $color-primary-lighter;
+				border-top: 4px solid $color-snow;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				display: none;
+			}
+
+			&--spin {
+				display: flex;
+
+				.spinner {
+					animation: spin .8s linear infinite;
+					display: flex;
+				}
+			}
+		}
+	}
+	
+  .bg-primary-blue {
+    background-color: $color-primary-dark;
+  }
+
+  .bg-light-blue {
+    background-color: $color-secondary;
+  }
+
+  .bg-green {
+    background-color: $color-green-lighter;
+  }
+
+  .bg-white {
+    background-color: $color-snow;
+  }
+
+  .bg-grey-bg {
+    background-color: $color-grey-bg;
+  }
+
+  .bg-pink-bg {
+    background-color: $color-cta-lighter;
+  }
+
+  .button-cta-pink {
+    background-color: $color-cta;
+    color: $color-snow;
+  }
+
+  .button-primary-blue {
+    background-color: $color-primary-dark;
+    color: $color-snow;
+  }
+
+  .button-sec-light-blue {
+    background-color: $color-secondary;
+    color: $color-primary;
+  }
+
+  .button-sec-white {
+    background-color: $color-snow;
+    color: $color-primary;
+  }
+
+  .text-light {
+    color: $color-snow
+  }
+
+  .text-dark {
+    color: $color-primary
+  }
+}
+
+#bonusBlockOneColumnsSuccess {
+	display: none;
+}
+.btn-success-green {
+	background-color: $color-green !important;
+
+	&::before {
+		content: url(../img/icons/icon-check-white.svg);
+		width: 12px;
+		height: 16px;
+		display: inline-block;
+		margin-left: -5px;
+		margin-right: 10px;
 	}
 }

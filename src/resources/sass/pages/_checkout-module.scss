@@ -792,11 +792,17 @@ $mobile-small: 321px;
 
             .antal {
               display: flex;
-              flex-direction: column;
+              flex-direction: row;
               justify-content: space-between;
+              align-items: center;
+              gap:20px;
 
 
-              .number {
+              svg:first-child {
+                cursor: pointer;
+              }
+
+              .check_number {
 
                 display: flex;
                 justify-content: center;
@@ -805,17 +811,6 @@ $mobile-small: 321px;
 
 
                 .minus {
-
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-
-                  background: #FFFFFF;
-                  border: 1px solid rgba(0, 62, 82, 0.5);
-
-                  width: 42px;
-                  height: 42px;
-
                   cursor: pointer;
 
 
@@ -852,16 +847,6 @@ $mobile-small: 321px;
                 }
 
                 .plus {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-
-                  background: #FFFFFF;
-                  border: 1px solid rgba(0, 62, 82, 0.5);
-
-                  width: 42px;
-                  height: 42px;
-                  border-radius: 0px 10px 10px 0px;
                   cursor: pointer;
 
                   &:before {
@@ -1038,6 +1023,15 @@ $mobile-small: 321px;
             flex-direction: column;
           }
 
+          .content_container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @media screen and (max-width: $mobile) {
+              display: block;
+            }
+          }
+
           @media screen and (max-width: $tablet) {
             position: relative;
 
@@ -1064,6 +1058,7 @@ $mobile-small: 321px;
                 margin-top: -24px;
                 box-shadow: 0 0 0 2px #fff;
               }
+
             }
 
           }
@@ -1257,7 +1252,7 @@ $mobile-small: 321px;
 
               @media (max-width:$mobile) {
                 order: 2;
-                margin-top: -40px;
+                margin-top: -82px;
                 border: none;
                 padding: 0;
                 padding-right: 16px;
@@ -1272,6 +1267,15 @@ $mobile-small: 321px;
 
                 @media screen and (max-width:$mobile) {
                   box-shadow: none;
+                  margin-left: auto;
+                }
+              }
+
+              .title {
+                text-align: end;
+                margin: 0 0 20px;
+                @media (max-width:$mobile) {
+                  margin: 0 0 70px;
                 }
               }
             }
@@ -1288,7 +1292,7 @@ $mobile-small: 321px;
             }
 
             @media screen and (max-width: $tablet) {
-              padding: 12px 12px 0;
+              padding: 12px;
             }
 
             @media screen and (max-width: $mobile) {
@@ -1298,6 +1302,12 @@ $mobile-small: 321px;
               order: 3
             }
 
+            @media screen and (max-width: $mobile) {
+              margin-left: 0;
+              margin-top: -10px;
+              padding: 0 16px;
+              order: 3
+            }
 
             .title {
               color: rgba(0, 62, 82, 0.75);
@@ -2656,7 +2666,7 @@ $mobile-small: 321px;
               .pris {
                 width: 100px;
                 justify-content: flex-end !important;
-                align-items: flex-start !important;
+                align-items: center !important;
 
                 @media (max-width:$mobile) {
                   width: initial;

@@ -12,6 +12,8 @@ import modernizr from "./vendor/modernizr-custom.js";
 
 import slick from "./vendor/slick.min.js";
 
+import slick from './vendor/slick.min.js';
+
 /* Store */
 import storeConfiguration from "./store";
 
@@ -21,6 +23,7 @@ import imageZoom from "./components/image-zoom";
 import accordion from "./components/accordion";
 import alert from "./components/alert";
 import bonusCode from "./components/bonus-code";
+import BonusBlocks from "./components/bonus-blocks";
 import checkboxTrigger from "./components/checkbox-trigger";
 import dataList from "./components/data-list";
 import dreamlistTooltip from "./components/dreamlist-tooltip";
@@ -47,8 +50,11 @@ import triggerTooltip from "./components/trigger-tooltip";
 import walletAccountSwitch from "./components/wallet-account-switch";
 import walletTransferAmount from "./components/wallet-transfer-amount";
 import orderActions from "./components/order-actions";
+import pageBingo from "./components/page-bingo";
+import blockHeroWhole from "./components/block-hero";
 import cartQuantity from "./components/cart-quantity";
 import bankIDForm from "./components/bankid-form";
+import balanceBarJS from "./components/balance-bar";
 import timeSpent from "./components/time-spent";
 import Odometer from "./components/odometer";
 import Carousel from "./components/carousel";
@@ -69,6 +75,15 @@ import functionSlick from "./components/function-slick";
 import mediaDataSwitcher from "./components/media-data-switcher.js";
 import gameLimitModal from "./components/gameLimitModal.js";
 import bonuskodsFunctionen from "./components/bonuskods-functionen";
+import subscriptionPopup from "./components/subscription-popup";
+import campaignPageHero from "./components/campaign-page-HERO.js";
+
+
+//import cookieList from './components/cookie-consent';
+//import checkOutIn from './components/checkout-module';
+import functionSlick from './components/function-slick';
+
+
 
 /* Layout */
 import navigation from "./layout/navigation";
@@ -108,6 +123,7 @@ $(function () {
 	addToDreamlist();
 	alert();
 	bonusCode();
+	BonusBlocks.init();
 	checkboxTrigger();
 	dataList();
 
@@ -135,12 +151,16 @@ $(function () {
 	walletAccountSwitch();
 	walletTransferAmount();
 	navigation();
+
 	register();
 	top();
 	textToggle();
 	new orderActions();
 	new cartQuantity();
+	pageBingo();
+	blockHeroWhole();
 	bankIDForm();
+	balanceBarJS();
 	scroller();
 	orderSwitcher();
 	slideOutNavigation();
@@ -159,6 +179,10 @@ $(function () {
 	radioButtonProduct();
 
 	checkMaxLength();
+	//	cookieList();
+  
+	functionSlick();
+  	slick();
 	cookieList();
 
 	functionSlick();
@@ -170,12 +194,12 @@ $(function () {
 
 	/* call breakpointListener last */
 	breakpointListener();
-
 	gameLimitModal();
-
 	bonuskodsFunctionen();
+	
 });
-
+subscriptionPopup();
+campaignPageHero();
 /**
  * Flickity Extension to handle custom styles on third from active slide.
  **/
@@ -213,7 +237,8 @@ $(".information__list_link a ").click(function () {
 //fix 100vh problem with iOS Safari
 const appHeight = () => {
 	const doc = document.documentElement;
-	doc.style.setProperty("--app-height", `${window.innerHeight}px`);
+	doc.style.setProperty("--app-height", `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); //
+	// doc.style.setProperty("--app-height", `${window.innerHeight}px`);
 };
 window.addEventListener("resize", appHeight);
 appHeight();

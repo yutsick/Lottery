@@ -69,7 +69,6 @@ export default function () {
 //      
 //      number__top
 
-  
     });
   
     $('.tab_all a.edit').click(function (e){

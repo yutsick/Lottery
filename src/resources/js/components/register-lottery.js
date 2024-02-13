@@ -1,16 +1,18 @@
 var Inputmask = require('inputmask');
 
 const ExportLottery = () => {
-    
+
     let im = null;
     let isValid = false;
     let $input = null;
+    let $input_small = null;
+    let $modal_input = null;
     let $button = null;
     let $loader = null;
 
     const maskInput = () => {
-        
-        if($input.length > 0) {
+
+        if ($input.length > 0) {
             im = new Inputmask({
                 placeholder: '•••• - •••• - ••••',
                 rightAlign: false,
@@ -24,7 +26,7 @@ const ExportLottery = () => {
                     isValid = true;
                     hideKeyboard();
                 }
-                
+
             });
             im.mask($input);
         }
@@ -50,8 +52,32 @@ const ExportLottery = () => {
         }
     }
 
-    const showError = () => {
-        $input.popover('show');
+    const showError = (formType) => {
+
+        switch (formType) {
+            case 'block':
+                $input.popover('show');
+                break;
+            case 'small-block':
+                $input_small.popover('show');
+                break;
+            case 'modal':
+                $modal_input.popover('show');
+                break;
+        }
+
+    }
+
+    const changeButton = (data, e) => {
+        let buttonText = $(e.target).find('button').text();
+        let formInput = $(e.target).find('input');
+        let button = $(e.target).find('button');
+        $(button).text(data);
+        $(button).addClass('btn-success-green');
+        $(formInput).on('input', () => {
+            $(button).text(buttonText);
+            $(button).removeClass('btn-success-green');
+        })
     }
 
     const addContent = (data) => {
@@ -88,8 +114,9 @@ const ExportLottery = () => {
             'http://www.mocky.io/v2/5da4635835000054004a7683',
             'http://www.mocky.io/v2/5da06f2e3000006e00f89e99'
         ];
+        // return 'http://www.mocky.io/v2/dd5da06f2e3000006e00f89e99'
 
-        return endpoints[Math.floor(Math.random()*endpoints.length)];
+        return endpoints[Math.floor(Math.random() * endpoints.length)];
     }
 
     const updateBlankLottery = (quantity) => {
@@ -117,13 +144,19 @@ const ExportLottery = () => {
 
     const form = () => {
         const $form = $('.js-register-lottery-form');
-        const isTest = $form.data('env');
         
+        const isTest = $form.data('env');
+
         $form.submit((e) => {
+            
             e.preventDefault();
-            let value = parseInt($input.val());
-            if (!isNaN(value) && value.toString().length == 12) {
-                $input.popover('hide');
+            let input = $(e.target).find('input');
+            let button = $(e.target).find('button');
+            let formType = input.data('form-type');
+            let value = input.val();
+            console.log('bb' + value)
+            if (value) {
+                popoverHide(formType);
                 hideKeyboard();
                 loading(true);
                 hideResultItems();
@@ -131,12 +164,15 @@ const ExportLottery = () => {
                     url: isTest ? getMockUpUrl() : e.currentTarget.action,
                     method: e.currentTarget.method,
                     data: $(e.currentTarget).serialize(),
-                    success: function(data){
+                    success: function (data) {
                         setTimeout(() => {
                             loading(false);
-                            $form[0].reset();
+                          
+                            for (let i =0; i< $form.length; i++){
+                                $form[i].reset();
+                            }
                             isValid = false;
-                            switch(data.type) {
+                            switch (data.type) {
                                 case 'blank':
                                 case 'blankwithbonus':
                                     updateBlankLottery(1);
@@ -147,18 +183,20 @@ const ExportLottery = () => {
                                     break;
                             }
                             updateJackpotLottery(data.jackpot);
-                            addContent(data);
+                            //addContent(data);
+                            changeButton($(button).data('text-success'), e);
                         }, 2000);
                     },
-                    error: function(){
+                    error: function () {
                         setTimeout(() => {
+
                             loading(false);
-                            showError();
+                            showError(formType);
                         }, 2000);
                     }
                 })
             } else {
-                showError();
+                showError(formType);
             }
         })
     }
@@ -170,6 +208,36 @@ const ExportLottery = () => {
                 placement: 'top',
                 trigger: 'manual',
             });
+        }
+
+        if ($modal_input && $input.length > 0) {
+            $modal_input.popover({
+                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
+                placement: 'top',
+                trigger: 'manual',
+            })
+        }
+
+        if ($input_small && $input.length > 0) {
+            $input_small.popover({
+                content: 'Felaktigt lottnummer. Dubbelkolla att du har skrivit in rätt.',
+                placement: 'top',
+                trigger: 'manual',
+            })
+        }
+    }
+
+    const popoverHide = (formType) => {
+        switch (formType) {
+            case 'block':
+                $input.popover('hide');
+                break;
+            case 'small-block':
+                $input_small.popover('hide');
+                break;
+            case 'modal':
+                $modal_input.popover('hide');
+                break;
         }
     }
 
@@ -192,14 +260,16 @@ const ExportLottery = () => {
     }
 
     const hideResultItems = () => {
-        $('.js-result__content-collapse').collapse('hide');   
+        $('.js-result__content-collapse').collapse('hide');
     }
-    
+
     this.init = () => {
         $input = $('#lotterynumberinput');
+        $input_small = $('#bonusnumberinput2')
+        $modal_input = $('#bonusnumberinput3');
         $loader = $('.loader');
         $button = $('.js-btn-success');
-        maskInput();
+        //maskInput();
         popover();
         form();
         initItems();
