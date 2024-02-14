@@ -544,6 +544,7 @@ $mobileBreakpoint: 460px;
       left: 0;
       background: #f2f5f7;
       padding: 16px;
+      z-index: 2;
       @media (max-width: 600px) {
         flex-wrap: wrap;
       }
