@@ -3,14 +3,15 @@
 <div class="campaign_page_HERO_wrap">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <div class="campaign_page_HERO_container">
-    <div class="campaign_page_HERO_top @@if(image_position=='right'){row_reverse}">
+    <div class="campaign_page_HERO_top @@if((image_position=='right')&&context.image_show_desk){row_reverse}">
     @@if(context.image_show_desk){
        
       <img class="campaign_page_HERO_top-desk" src="/assets/img/campaign-page-HERO/IMG.png" alt="">
+    }  
       @@if(context.image_show_mob){
       <img class="campaign_page_HERO_top-mob" src="/assets/img/campaign-page-HERO/IMG1.png" alt="">
      }
-    }
+    
       <div class="campaign_page_HERO_top-right">
         <div class="campaign_page_HERO_top-right--top">
           @@if(context.header_show){
@@ -46,12 +47,13 @@
             </div>
           </div>
         }
-          @@if(context.desc_text){
-          <p class="campaign_page_HERO_top-right--desc">@@desc_text</p>
-            @@if(info_link_show){
-              <a href="">@@info_link_text</a>
-            }
+          @@if(context.desc_show){
+            <p class="campaign_page_HERO_top-right--desc">@@desc_text</p>
+           }
+          @@if(info_link_show){
+            <a href="">@@info_link_text</a>
           }
+         
         </div>
         <div class="campaign_page_HERO_top-right--bottom">
           @@if(context.usps_show){
@@ -114,30 +116,73 @@
         </div>
       </div>
     </div>
+    @@if(context.blurbs_show){
     <div class="campaign_page_HERO_bottom">
-      <div class="campaign_page_HERO_bottom-blurb w_200">
-        <img src="@@blurb1_icon" alt="">
-        <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb1_header</h3>
-        <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb1_text</span>
-      </div>
-      <div class="campaign_page_HERO_bottom-blurb w_200">
-        <img src="@@blurb2_icon" alt="">
-        <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb2_header</h3>
-        <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb2_text</span>
-      </div>
-      <div class="campaign_page_HERO_bottom-blurb w_200">
-        <img src="@@blurb3_icon" alt="">
-        <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb3_header</h3>
-        <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb3_text</span>
-      </div>
-      <div class="campaign_page_HERO_bottom-blurb w_200">
-        <img src="@@blurb4_icon" alt="">
-        <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb4_header</h3>
-        <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb4_text</span>
-      </div>
+      @@if(context.blurbs_qt == 4){
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb1_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb1_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb1_text</span>
+        </div>
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb2_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb2_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb2_text</span>
+        </div>
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb3_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb3_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb3_text</span>
+        </div>
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb4_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb4_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb4_text</span>
+        </div>
+      }
+      @@if(context.blurbs_qt == 3){
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb1_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb1_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb1_text</span>
+        </div>
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb2_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb2_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb2_text</span>
+        </div>
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb3_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb3_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb3_text</span>
+        </div>
+
+      }
+      @@if(context.blurbs_qt == 2){
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb1_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb1_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb1_text</span>
+        </div>
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb2_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb2_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb2_text</span>
+        </div>
+
+
+      }
+      @@if(context.blurbs_qt == 1){
+        <div class="campaign_page_HERO_bottom-blurb w_200">
+          <img src="@@blurb1_icon" alt="">
+          <h3 class="campaign_page_HERO_bottom-blurb--header">@@blurb1_header</h3>
+          <span class="campaign_page_HERO_bottom-blurb--desc">@@blurb1_text</span>
+        </div>
+      }
+      
     </div>
     
-    @@if(context.blurbs_show){
+    
     
   }
   </div>
