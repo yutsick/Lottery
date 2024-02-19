@@ -130,8 +130,42 @@ export default function () {
       
       }
     };
-    setPricingTop();
-    window.addEventListener('resize', setPricingTop);
- 
- 
+   // setPricingTop();
+   // window.addEventListener('resize', setPricingTop);
+    function setMobileVision(){
+      if(!$('.product__delivery').is(':visible') || $('.product__delivery').is(':hidden')){
+        const $counter = $('.pris.antal');
+        $counter.css('margin-left', `calc(100% - ${$counter.outerWidth()}px`);
+      }
+
+      if(screen.width < 605){
+
+        if(!$('.product__delivery').is(':visible') || $('.product__delivery').is(':hidden')){
+          $('.pris.antal').css('marginTop','10px');
+        }
+
+
+        //change availibility to Articul
+        $('.dots').text('Art.Nr: 234560')
+        // $('.product-title h3').text('Väldigt långt jobbigt varunamn som tar två rader');
+        // $('.product__wrapper .info p').text('2 500 kr');
+        $('.product-title h3').first().text('Väldigt långt jobbigt varunamn som tar två rader');
+        $('.product__wrapper .info p').first().text('2 500 kr');
+        $('.product-title h3').eq(1).text('Väldigt långt jobbigt varunamn');
+        $('.product__wrapper .info p').eq(1).text('1 195 kr');
+
+      } else {
+        //change availibility to Articul
+        // $('.dots').text('Finns i lager');
+        // $('.product-title h3').text('Varunamn');
+        // $('.product__wrapper .info p').text('1 045kr');
+        
+      }
+    }
+    setMobileVision();
+
+    window.addEventListener('resize', () => {
+      setMobileVision();
+    });
+
 }
