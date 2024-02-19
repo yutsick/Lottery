@@ -168,4 +168,13 @@ export default function () {
       setMobileVision();
     });
 
+    $('.bat_2 .list.shipping.mobile input').on('change', function(){
+      //console.log(`el`, el)
+      if($(this).is(':checked')){
+        //console.log(`el`, el)
+        $('.select__').removeClass('select__');
+        $(this).parent().parent().addClass('select__');
+      }
+    })
+
 }

@@ -201,8 +201,8 @@
 
                         <h3 class="title">Fraktsätt</h3>
 
-                        <ul class="list shipping mobile">
-                           <li>
+                        <ul class="list shipping mobile border-none">
+                           <li class="select__">
                               <div class="input">
                                  <input type="radio" id="Standardfrakt" name="shipping" value="Standardfrakt"
                                     checked="checked">
@@ -219,7 +219,7 @@
                                  </label>
                               </div>
                               <div class="prise">
-                                 <p>0 kr</p>
+                                 <p><span>0 kr</span></p>
                               </div>
                            </li>
                            <li>
@@ -227,6 +227,7 @@
                               <div class="input">
                                  <input type="radio" id="Expressfrakt" name="shipping" value="Expressfrakt">
                                  <label for="Expressfrakt">
+
                                     <div class="icon-wrapper">
                                        <img class="icon"
                                           src="/assets/img/checkout-module/icon-leveransuppgifter-green.svg" alt="">
@@ -235,6 +236,8 @@
                                     <div class="text"><span>Expressfrakt</span>
                                        <p>(1-3 arbetsdagar)</p>
                                     </div>
+
+
                                  </label>
                               </div>
                               <div class="prise">
@@ -245,7 +248,7 @@
                            </li>
                         </ul>
                         <div class="payment row">
-                           <div class="col-md-6 p-2">
+                           <div class="col-md-6 p-0">
                               <h3 class="title small full-color">Tilläggsbetalning för expressleverans</h3>
                               <p class="font-small">Du saknar pengar på ditt vinstkonto för att beställa dina
                                  varor med expressleverans. Välj betalningsmetod och du får genomföra en
@@ -255,8 +258,8 @@
                                  <span class="full-color">25 kr</span>
                               </p>
                            </div>
-                           <div class="col-md-6 border-left ">
-                              <ul class="list shipping">
+                           <div class="col-md-6 border-left p-0">
+                              <ul class="list shipping payment">
                                  <li>
                                     <div class="input">
                                        <input type="radio" id="swish" name="payment" value="swish" checked="checked">
@@ -264,7 +267,7 @@
                                           Betala med Swish
                                        </label>
                                     </div>
-                                    <div class="logo-wrapper">
+                                    <div class="logo-wrapper logo-swish">
                                        <img src="assets/img/logos/swish-logo.png" alt="">
                                     </div>
                                  </li>
@@ -274,7 +277,7 @@
                                        <label for="cort"> Betala med kort</label>
                                     </div>
                                     <div class="logo-wrapper">
-                                       <img src="assets/img/logos/payment-logo.png" alt="">
+                                       <img src="assets/img/logos/checkout-payment-logo.png" alt="">
                                     </div>
                                  </li>
                               </ul>
@@ -285,20 +288,21 @@
 
                               <h3 class="title">Dina Leveransuppgifter</h3>
 
-                              <ul class="list shipping">
-                                 <li class="">
-                                    <p>Förnamn Efternamn
-                                       <br>Stadsgatan 12
-                                       <br>413 00 Göteborg
-                                    </p>
+                              <ul class="list shipping border-none p-normal">
+                                 <li class="d-block">
+                                    <p>Förnamn Efternamn</p>
+                                    <p>Stadsgatan 12</p>
+                                    <p>413 00 Göteborg</p>
+                                       
+                                    
                                  </li>
                               </ul>
                            </div>
-                           <div class="box__">
+                           <div class="box__ avisering">
 
                               <h3 class="title">Avisering</h3>
 
-                              <ul class="list shipping">
+                              <ul class="list shipping border-none">
                                  <li>
                                     <div class="input">
                                        <input type="radio" id="SMS" name="notice" value="SMS" checked="checked">
@@ -363,15 +367,16 @@
 
                   </div>
                   <div class="row__content summary">
-                     
-                        <div class="d-flex-between">
-                           <h3 class="title">Tilläggsbetalning</h3>
-                           <h3 class="title text-end">49 kr</h3>
-                        </div>
-                        
-                    
+
+                     <div class="d-flex-between">
+                        <h3 class="title">Tilläggsbetalning</h3>
+                        <h3 class="title text-end">49 kr</h3>
+                     </div>
+
+
                      <p class="text-grey">Du har valt expressleverans och saknar vinstkontomedel. </p>
-                        <p class="text-grey">Du kommer att skickas vidare till betalning för att<br>genomföra din tilläggsbetalning.</p>
+                     <p class="text-grey">Du kommer att skickas vidare till betalning för att genomföra din
+                        tilläggsbetalning.</p>
                   </div>
                </div>
 
