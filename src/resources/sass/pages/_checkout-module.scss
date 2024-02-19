@@ -498,7 +498,7 @@ $mobile-small: 321px;
           padding: 24px 32px;
 
           @media screen and (max-width: $mobile) {
-            padding: 16px 16px 24px;
+            padding: 16px 16px 15px;
           }
 
           &.banner {
@@ -2499,9 +2499,18 @@ $mobile-small: 321px;
               p {
                 color: rgba(0, 62, 82, 0.75);
                 flex: 1 1;
+                @media (max-width:$mobile) {
+                    margin: 0;
+                }
               }
 
-
+              &.column{
+                a{
+                  @media (max-width:$mobile) {
+                    margin-bottom: 0;
+                  }
+                }
+              }
 
             }
 
