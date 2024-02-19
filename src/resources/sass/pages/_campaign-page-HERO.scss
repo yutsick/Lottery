@@ -471,6 +471,10 @@ $mobileBreakpoint: 460px;
     display: flex;
     justify-content: space-between;
     column-gap: 40px;
+    @media (max-width:1280px) and (min-width: 1079px) {
+      column-gap: normal;
+      
+    }
     &.justify-end{
       justify-content: flex-end;
     
