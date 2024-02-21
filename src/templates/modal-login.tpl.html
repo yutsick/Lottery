@@ -1,0 +1,13 @@
+@@include('layout/_header.html', {
+    "class": "page-lottery logged-out"
+    })
+<div id="modals" class="ml-2017">
+    @@include('components/modals/_login_v2.html')
+</div>
+
+
+@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
+
+<script>
+    $('#modal-login-new').modal();
+</script>
