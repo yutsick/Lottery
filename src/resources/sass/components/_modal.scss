@@ -2669,7 +2669,7 @@ $primary: #193E4F;
 		}
 
 		.sub__title {
-			width: 305px;
+			max-width: 305px;
       margin: 16px auto 0;
 			font: 400 16px/20px $apercu;
 			opacity: 0.75;
