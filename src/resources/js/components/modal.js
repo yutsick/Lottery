@@ -9,6 +9,23 @@ export default function () {
 		return false;
 	});
 
+$(document).ready(function() {
+
+    $('#mailadress').on('input', function() {
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#mailadress').val().trim())) {
+          $('#submitBtn').prop('disabled', false);
+        } else {
+          $('#submitBtn').prop('disabled', true);
+        }
+    });
+
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#mailadress').val().trim())) {
+      $('#submitBtn').prop('disabled', false);
+    } else {
+      $('#submitBtn').prop('disabled', true);
+    }
+});
+
 
 	$('.modal-login').on('shown.bs.modal', function (e) {
 		$('.modal-backdrop').addClass('modal-backdrop-login');
