@@ -65,7 +65,7 @@
     position: relative;
     overflow: hidden;
     .popup_right-button{
-        @media (max-width:425px) {
+        @media (max-width:700px) {
             //height: 22% !important;
             margin-top: 32px;
             margin-bottom: 60px;
@@ -74,7 +74,7 @@
         }
     }
     .popup_right-title--header{
-        @media (max-width:425px) {
+        @media (max-width:700px) {
             margin-bottom: 24px;
         }
     }
@@ -110,7 +110,7 @@
     align-items: center;
     padding: 21px 24px 21px 24px;
 
-    @media (max-width:425px) {
+    @media (max-width:700px) {
 
         padding: 21px 17px 8px;
         img {
@@ -148,7 +148,7 @@
         letter-spacing: 0em;
     }
 
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         padding: 0 24px;
 
         h1 {
@@ -225,7 +225,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         font-size: 16px;
         line-height: 22.85px;
     }
@@ -238,7 +238,7 @@
     padding: 0 31px;
     position: relative;
 
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         padding: 0 24px;
     }
 }
@@ -295,7 +295,7 @@
     background: #E8F0FE;
     color: #003E52;
 
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         margin-bottom: 16px;
         height: 40px;
     }
@@ -381,7 +381,7 @@
     line-height: 18px;
     font-family: $apercu;
 
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         width: 100%;
         top:-50px;
         p{margin-bottom: 0;}
@@ -490,7 +490,7 @@
     align-items: center;
     margin: 69px 0 40px;
     gap: 24px;
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         margin: 24px 0 40px;
     }
 }
@@ -530,7 +530,7 @@
     position: relative;
     padding: 19px 31px 21px;
     height: calc(274px - 68px);
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         gap:20px;
         height: initial;
         padding: 19px 32px 21px;
@@ -577,7 +577,7 @@
     padding: 4px;
     border-radius: 4px;
     border: 1px solid rgba(80, 183, 141, 0.70);
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         margin-left: 14px;
     }
 }
@@ -672,7 +672,7 @@ details {
     position: relative;
     width: 255px;
     margin-left: 30px;
-    @media (max-width:425px) {
+    @media (max-width:700px) {
         margin-left: 0;
         width: 100%;
     }

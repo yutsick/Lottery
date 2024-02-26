@@ -137,35 +137,7 @@ export default function (){
                     }
             }
        // }
-        switch (inputType) {
-            case 'personnummer':
-                if (input.value.length === 13 || input.value.length === 10) {
-                    errorMessageElement.style.display = 'none';
-                    return true;
-                } else {
-                    errorMessageElement.style.display = 'block';
-                    return false;
-                }
-    
-            case 'email':
-                const emailValue = input.value.trim()
-                if (!isValidEmail(emailValue)) {
-                    errorMessageElement.style.display = 'block';
-                    return false;
-                } else {
-                    errorMessageElement.style.display = 'none';
-                    return true;
-                }
-    
-            case 'mobilnummer':
-                if (input.value.length !== 11) {
-                    errorMessageElement.style.display = 'block';
-                    return false;
-                } else {
-                    errorMessageElement.style.display = 'none';
-                    return true;
-                }
-        }
+       
 
     }
     
