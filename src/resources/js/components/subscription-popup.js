@@ -105,7 +105,7 @@ export default function (){
     }
     
     function validateInput(input, errorMessageElement, inputType) {
-<<<<<<< HEAD
+
        // if(input.value.length !==0){
             switch (inputType) {
                 case 'personnummer':
@@ -137,7 +137,6 @@ export default function (){
                     }
             }
        // }
-=======
         switch (inputType) {
             case 'personnummer':
                 if (input.value.length === 13 || input.value.length === 10) {
@@ -167,7 +166,7 @@ export default function (){
                     return true;
                 }
         }
->>>>>>> d2aef8138f5bb634e307cbfb561b7e63d5399d91
+
     }
     
     function isValidEmail(email) {
