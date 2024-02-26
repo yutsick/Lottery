@@ -66,12 +66,19 @@
     overflow: hidden;
     .popup_right-button{
         @media (max-width:425px) {
-            height: 22% !important;
-            margin-top: 0;
+            //height: 22% !important;
+            margin-top: 32px;
             margin-bottom: 60px;
             padding: 0 36px;
+            justify-content: start;
         }
     }
+    .popup_right-title--header{
+        @media (max-width:425px) {
+            margin-bottom: 24px;
+        }
+    }
+
 }
 .popup_right-4 {
     height: 495px;
@@ -104,7 +111,15 @@
     padding: 21px 24px 21px 24px;
 
     @media (max-width:425px) {
-        padding: 24px 24px 24px;
+
+        padding: 21px 17px 8px;
+        img {
+            display: none;
+        }
+       .dots{
+        display: none;
+       }
+
     }
 }
 
@@ -116,7 +131,9 @@
 }
 
 .popup_right-1 .popup_right-title {
+
     margin-bottom: 32px;
+
 }
 
 .popup_right-title {
@@ -196,6 +213,9 @@
     line-height: 22px;
     font-family: $apercu;
     margin-top: 0px !important;
+    @media (max-width:700px) {
+        text-align: center;
+    }
 }
 
 .popup_right-title--disc {
@@ -205,6 +225,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
+    @media (max-width:425px) {
+        font-size: 16px;
+        line-height: 22.85px;
+    }
 }
 
 /* popup_right-title end */
@@ -272,7 +296,7 @@
     color: #003E52;
 
     @media (max-width:425px) {
-        margin-bottom: 24px;
+        margin-bottom: 16px;
         height: 40px;
     }
 }
@@ -358,7 +382,9 @@
     font-family: $apercu;
 
     @media (max-width:425px) {
-        width: 325px;
+        width: 100%;
+        top:-50px;
+        p{margin-bottom: 0;}
     }
 
     &.general {
@@ -420,7 +446,9 @@
 .second {
     display: flex;
     flex-direction: column;
+
     align-items: center;
+
 }
 
 .second h2 {
@@ -431,9 +459,7 @@
     font-weight: 700;
     line-height: 20px;
     margin: 5px 0 27px 0;
-    @media (max-width:425px) {
-        text-align: left;
-    }
+
 }
 
 .second span {
@@ -444,9 +470,7 @@
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 24px;
-    @media (max-width:425px) {
-        text-align: left;
-    }
+
 }
 
 .second p {
@@ -457,6 +481,7 @@
     font-weight: 400;
     line-height: 20px;
     margin-bottom: 0;
+
 }
 
 .popup_right-button--second {
@@ -465,6 +490,9 @@
     align-items: center;
     margin: 69px 0 40px;
     gap: 24px;
+    @media (max-width:425px) {
+        margin: 24px 0 40px;
+    }
 }
 
 .popup_right-button--second :first-child {
@@ -503,7 +531,9 @@
     padding: 19px 31px 21px;
     height: calc(274px - 68px);
     @media (max-width:425px) {
-        
+        gap:20px;
+        height: initial;
+        padding: 19px 32px 21px;
     }
 }
 
@@ -511,8 +541,8 @@
     content: "";
     position: absolute;
     bottom: 0px;
-    left: 34px;
-    width: 81%;
+    left: 24px;
+    width: calc(100% - 48px);
     height: 1px;
     background-color: #C2D1D9;
 }
@@ -521,8 +551,8 @@
     content: "";
     position: absolute;
     top: 0;
-    left: 34px;
-    width: 81%;
+    left: 24px;
+    width: calc(100% - 48px);
     height: 1px;
     background-color: #C2D1D9;
 }
@@ -540,13 +570,16 @@
 .third .border {
     color: #50B78D;
     text-align: center;
-    font-size: 16px;
+    font-size: 16px; 
     font-style: normal;
     font-weight: 400;
     line-height: 22.85px;
-    padding: 1px 3px;
+    padding: 4px;
     border-radius: 4px;
     border: 1px solid rgba(80, 183, 141, 0.70);
+    @media (max-width:425px) {
+        margin-left: 14px;
+    }
 }
 
 /* custom radio button start */
@@ -639,6 +672,10 @@ details {
     position: relative;
     width: 255px;
     margin-left: 30px;
+    @media (max-width:425px) {
+        margin-left: 0;
+        width: 100%;
+    }
 }
 
 details[open] {
@@ -862,6 +899,13 @@ ul.list {
         // width: 100%;
     }
 
+
+  
+
+    .popup_right-button {
+        margin-bottom: 100px;
+        margin-top: 16px;
+    }
     .popup_right-title,
     .popup_right-title--header {
         text-align: center;
@@ -870,6 +914,7 @@ ul.list {
     .popup_right-button {
         margin-bottom: 100px;
         margin-top: 11px;
+
 
     }
 

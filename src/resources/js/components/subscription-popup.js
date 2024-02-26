@@ -105,6 +105,38 @@ export default function (){
     }
     
     function validateInput(input, errorMessageElement, inputType) {
+
+       // if(input.value.length !==0){
+            switch (inputType) {
+                case 'personnummer':
+                    if (input.value.length === 13 || input.value.length === 10) {
+                        errorMessageElement.style.display = 'none';
+                        return true;
+                    } else {
+                        errorMessageElement.style.display = 'block';
+                        return false;
+                    }
+        
+                case 'email':
+                    const emailValue = input.value.trim()
+                    if (!isValidEmail(emailValue)) {
+                        errorMessageElement.style.display = 'block';
+                        return false;
+                    } else {
+                        errorMessageElement.style.display = 'none';
+                        return true;
+                    }
+        
+                case 'mobilnummer':
+                    if (input.value.length !== 11) {
+                        errorMessageElement.style.display = 'block';
+                        return false;
+                    } else {
+                        errorMessageElement.style.display = 'none';
+                        return true;
+                    }
+            }
+       // }
         switch (inputType) {
             case 'personnummer':
                 if (input.value.length === 13 || input.value.length === 10) {
@@ -134,6 +166,7 @@ export default function (){
                     return true;
                 }
         }
+
     }
     
     function isValidEmail(email) {
@@ -199,7 +232,7 @@ export default function (){
         customRadios.on('click', function () {
           hiddenText.css('display', 'none');
           hidText.css('display', 'block');
-          bottWay.css('height', '285px');
+          bottWay.css('padding-top','24px');
           dFlex.css('height', '28%');
         });
       });
