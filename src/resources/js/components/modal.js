@@ -9,22 +9,38 @@ export default function () {
 		return false;
 	});
 
+//start contact-info-popup
+
 $(document).ready(function() {
+  $('#submitBtn').prop('disabled', true);
 
-    $('#mailadress').on('input', function() {
-        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#mailadress').val().trim())) {
-          $('#submitBtn').prop('disabled', false);
-        } else {
-          $('#submitBtn').prop('disabled', true);
-        }
-    });
-
-    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test($('#mailadress').val().trim())) {
-      $('#submitBtn').prop('disabled', false);
-    } else {
-      $('#submitBtn').prop('disabled', true);
+  function validateInput(input, regex, errorWindow) {
+    const value = input.val().trim();
+    if (value.trim()=== '') {
+      return;
     }
+    else if (!regex.test(value)) {
+        errorWindow.show();
+        input.css('border-color', 'rgba(255, 15, 0, 0.5)');
+        return false;
+    } else {
+        errorWindow.hide();
+        input.css('border-color', 'rgba(7, 70, 88, 0.5)');
+        return true;
+    }
+}
+
+  const validateField = (input, regex, window) => (validateInput($(input), regex, $(window)));
+
+  $('#mailadress, #mobilnummer').on('blur', () => {
+    const isValidEmail = validateField('#mailadress', /^[^\s@]+@[^\s@]+\.[^\s@]+$/, '#errorWindow2');
+    const isValidPhone = validateField('#mobilnummer', /^\+?\d{8,}$/, '#errorWindow3');
+    $('#submitBtn').prop('disabled', !(isValidEmail && isValidPhone));
+  });
+
 });
+
+//end contact-info-popup
 
 
 	$('.modal-login').on('shown.bs.modal', function (e) {
