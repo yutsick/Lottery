@@ -14,11 +14,10 @@ export default function () {
 $(document).ready(function() {
   $('#submitBtn').prop('disabled', true);
 
-  $('.modal-main__toggle-label').on('click', function() {
-    console.log("checkedcheck")
-    const checkbox = $(this).prev('.modal-main__toggle-checkbox');
+  $('.modal-main__toggle-container').on('click', function() {
+    const checkbox = $(this).find('.modal-main__toggle-checkbox');
     checkbox.prop('checked', !checkbox.prop('checked'));
-});
+  });
 
   function validateInput(input, regex, errorWindow) {
     const value = input.val().trim();
