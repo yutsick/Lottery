@@ -14,6 +14,12 @@ export default function () {
 $(document).ready(function() {
   $('#submitBtn').prop('disabled', true);
 
+  $('.modal-main__toggle-label').on('click', function() {
+    console.log("checkedcheck")
+    const checkbox = $(this).prev('.modal-main__toggle-checkbox');
+    checkbox.prop('checked', !checkbox.prop('checked'));
+});
+
   function validateInput(input, regex, errorWindow) {
     const value = input.val().trim();
     if (value.trim()=== '') {
@@ -33,8 +39,8 @@ $(document).ready(function() {
   const validateField = (input, regex, window) => (validateInput($(input), regex, $(window)));
 
   $('#mailadress, #mobilnummer').on('blur', () => {
-    const isValidEmail = validateField('#mailadress', /^[^\s@]+@[^\s@]+\.[^\s@]+$/, '#errorWindow2');
-    const isValidPhone = validateField('#mobilnummer', /^\+?\d{8,}$/, '#errorWindow3');
+    const isValidEmail = validateField('#mailadress', /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/, '#errorWindow2');
+    const isValidPhone = validateField('#mobilnummer', /^\+?\d{8,10}$/, '#errorWindow3');
     $('#submitBtn').prop('disabled', !(isValidEmail && isValidPhone));
   });
 
