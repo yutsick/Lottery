@@ -199,13 +199,13 @@ export default function (){
         const hiddenText = $('.hidden_text');
         const hidText = $('.hid_text');
         const bottWay = $('.bott_way');
-        const dFlex = $('.d_flex');
+        //const dFlex = $('.d_flex');
       
         customRadios.on('click', function () {
           hiddenText.css('display', 'none');
           hidText.css('display', 'block');
           bottWay.css('padding-top','24px');
-          dFlex.css('height', '28%');
+        //  dFlex.css('height', '28%');
         });
       });
 
