@@ -25,9 +25,9 @@
   },
 
   "show_submenu":  {
-		"mob": true,
-		"tab": true,
-		"desk": true
+		"mob": false,
+		"tab": false,
+		"desk": false
 	},
 	"show_title":  {
 		"mob": false,
@@ -106,7 +106,7 @@
 	}
   })
   
-  @@include('layout/_top-new_nav.html', { "logged_in": false})
+  @@include('layout/_top-new_nav.html', { "logged_in": true, "show_adv_block": false})
 
 
   @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false}) 

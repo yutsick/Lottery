@@ -13,9 +13,11 @@
               <span>Meny</span>
             </div>
             @@if(!context.logged_in){
-            <div class="top__adv-block">
-              <img src="assets/img/top-menu-adv.png" alt="">
-            </div>
+              @@if(context.show_adv_block){
+                <div class="top__adv-block">
+                  <img src="assets/img/top-menu-adv.png" alt="">
+                </div>
+              }
             }
           </div>
           <div class="top__brand order-1">
@@ -67,10 +69,12 @@
         
         </div>
         @@if(!context.logged_in){
-        <div class="top__adv-block-mobile">
-          <img src="assets/img/top-menu-adv-mob.png" alt="">
-        </div>
-      }
+          @@if(context.show_adv_block){
+            <div class="top__adv-block-mobile">
+              <img src="assets/img/top-menu-adv-mob.png" alt="">
+            </div>
+          }
+        }
       </div>
     
 
@@ -90,7 +94,7 @@
       </div>
       <div class="main-content__wrapper"></div>
       <div id="user-menu" class="user-menu">
-        <div class="user-menu__wrapper">
+        <div class="user-menu__wrapper @@if(context.logged_in){user__aouth}">
           @@if(context.logged_in){
             @@include('layout/_user-menu-auth.html', {})
           } 
