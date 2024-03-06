@@ -85,7 +85,13 @@
         align-items:center;
         
         @media (max-width: $screen-md) {
-          height: 48px;
+          height: 64px;
+          &:first-child {
+            flex: 1;
+          }
+          &:last-child {
+            flex: 2;
+          }
         }
         @media (max-width: $screen-xs) {
           
@@ -130,7 +136,16 @@
           align-items: center;
           justify-content: space-between;
           padding: 8px 24px;
-          border-left: solid 1px rgba(7, 70, 88, 0.20);
+          position: relative;
+          // border-left: solid 1px rgba(7, 70, 88, 0.20);
+          &::after {
+            content: " ";
+            position: absolute;
+            right: 0px;
+            height: 48px;
+            width: 1px;
+            background: rgba(7, 70, 88, 0.2);
+          }
           @media (max-width:$screen-md) {
             
             padding: 8px 8px 8px 16px;
@@ -138,7 +153,7 @@
           }
           @media (max-width:$screen-xs) {
             width: auto;
-            padding: 0 16px;
+            padding: 0 12px;
           }
 
           &:first-child{
@@ -147,7 +162,7 @@
             &[data-mob-order = "1"]{
               border-left: none;
               @media (max-width: $screen-md) {
-                border-left: solid 1px rgba(7, 70, 88, 0.20);
+                // border-left: solid 1px rgba(7, 70, 88, 0.20);
               }
               @media (max-width: $screen-xs) {
                 border-left: none
@@ -157,7 +172,7 @@
             &[data-tab-order = "2"],
             &[data-mob-order = "2"]{
               @media (max-width:$screen-md) {
-                border-left: solid 1px rgba(7, 70, 88, 0.20);
+                // border-left: solid 1px rgba(7, 70, 88, 0.20);
               }
             }
            
@@ -169,7 +184,7 @@
             &[data-tab-order = "1"],
             &[data-mob-order = "1"]{
               @media (max-width: $screen-md) {
-                border-left: solid 1px rgba(7, 70, 88, 0.20);
+                // border-left: solid 1px rgba(7, 70, 88, 0.20);
               }
               @media (max-width: $screen-xs) {
                 border-left: none
@@ -192,17 +207,17 @@
             }
             &--icon{
               margin-right: 8px;
-              width: 48px;
-              height: 48px;
-              border-radius: 50%;
+              // width: 48px;
+              // height: 48px;
+              // border-radius: 50%;
             
               &.orange{
-                background-color: rgba(249, 143, 0, 0.2);
-                padding: 11px 11px 15px 14px;
+                // background-color: rgba(249, 143, 0, 0.2);
+                // padding: 11px 11px 15px 14px;
               }
               &.pink{
-                background-color: rgba(217, 97, 149, 0.2);
-                padding: 15px 13px 13.21px;
+                // background-color: rgba(217, 97, 149, 0.2);
+                // padding: 15px 13px 13.21px;
               }
               @media (max-width: $screen-md) {
                 margin-right: 15px;
@@ -216,20 +231,20 @@
               }
               svg{
                 @media (max-width: $screen-xs) {
-                width: 16px;
+                width: 25px;
               }
               }
               
             }
             &--text{
               .title{
-                font: 700 16px/12px $base-font-family;
+                font: 600 12px/12px $base-font-family;
                 letter-spacing: 0.32px;
                 text-decoration-line: underline;
                 text-transform: uppercase;
-                width: 144px;
+                width: 126px;
                 @media (max-width: $screen-md) {
-                  font: 700 12px/12px $base-font-family;
+                  font: 600 12px/12px $base-font-family;
                   letter-spacing: 0.24px;
                   width: 90px;
                 }
@@ -238,11 +253,13 @@
                 }
               }
               .saldo{
-                font:400 16px/22px $apercu;
-                margin-top: 6px;
+                font:700 16px/20px $apercu;
+                margin-top: 2px;
                 @media (max-width: $screen-md) {
-                  font: 400 14px/14px $apercu;
-                  
+                  font: 700 16px/20px $apercu;
+                }
+                @media (max-width: $screen-xs) {
+                  font: 400 12px/20px $apercu;
                 }
               }
             }
@@ -253,8 +270,8 @@
             align-items: center;
             justify-content: center;
             border-radius: 32px;
-            height: 48px;
-            font: 700 16px/20px $apercu;
+            height: 40px;
+            font: 700 14px/20px $apercu;
             letter-spacing: 0.16px;
             cursor: pointer;
             @media (max-width:$screen-md) {
@@ -265,13 +282,13 @@
               display: none;
             }
             &.spel{
-              width: 165px;
+              width: 128px;
               @media (max-width:$screen-md) {
                 width: 90px;
               }
             }
             &.vinst{
-              width: 191px;
+              width: 157px;
               @media (max-width:$screen-md) {
                 width: 100px;
               }
@@ -371,36 +388,52 @@
         display: flex;
         align-items:center;
         flex:1 1;
+        gap: 40px;
         max-width: 50%;
-        justify-content: flex-end;
+        justify-content: space-between;
         @media (max-width: $screen-md) {
           height: 100%;
+          gap: 0px;
+          max-width: 30%;
+        }
+        @media (max-width: $screen-xs) {
+          gap: 0px;
         }
         &-item{
           display: flex;
           align-items:center;
           flex:1 1;
           justify-content: center;
-          padding: 18px 32px;
+          padding: 18px 0px;
           height: 100%;
-          border-left: solid 1px rgba(7, 70, 88, 0.20);
+          // border-left: solid 1px rgba(7, 70, 88, 0.20);
+          &:first-child {
+            padding-left: 40px;
+          }
           @media (min-width: $screen-md) {
-            &:last-child{
-              border-right: solid 1px rgba(7, 70, 88, 0.20);
-            }
+            // &:last-child{
+            //   border-right: solid 1px rgba(7, 70, 88, 0.20);
+            // }
           }
           @media (max-width:$screen-md) {
             font:700 10px/10px $apercu;
-            padding: 10px 20px;
+            padding: 10px 10px;
+            // max-width: 56px;
             &:last-child{
-              padding: 10px 24px;
+              padding: 10px 0px;
+            }
+            &:first-child {
+              padding-left: 10px;
             }
           }
           @media (max-width: $screen-xs) {
-            padding: 0 16px;
-            max-width: 98px;
+            padding: 0 10px;
+            max-width: 56px;
             &:last-child{
-              padding: 0 16px;
+              padding: 0;
+            }
+            &:first-child {
+              padding-left: 10px;
             }
             }
           
