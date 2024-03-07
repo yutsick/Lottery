@@ -7,8 +7,10 @@
           <div class="top__menu-toggle top__menu-toggle--default  ">
             <div class="buttons" id="toggle-nav">
               <button class="js-toggle-nav toggle-nav">
-                <i class="icon icon-burger"></i>
-                
+                <picture>
+                  <source media="(max-width:465px)" srcset="assets/img/MenuIcon.small.svg">
+                  <img src="assets/img/MenuIcon.svg" alt="menu">
+                </picture>
               </button>
               <span>Meny</span>
             </div>
@@ -32,7 +34,7 @@
           @@if(context.logged_in){
             <div class="top__login user-button top__login-auth" id="user-button">
               <div class="user__title">
-                Rebekka
+                Rebecka
               </div>
               <div class="user__icon">
                 

@@ -51,6 +51,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            &-logotype {
+              width: 133px;
+
+              @media (max-width: $screen-md) {
+                width: unset;
+              }
+            }
         }
 
         .top__contact {
@@ -589,7 +597,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 88px;
+            height: 80px;
             background-color: $color-snow;
             position: relative;
             z-index: 2;
@@ -603,10 +611,10 @@
         &__menu-toggle {
             display: flex;
             flex: 1 1;
-            margin-left: 32px;
+            margin-left: 23px;
 
             @media (max-width: $screen-xs) {
-                margin-left: 17px;
+                margin-left: 15px;
             }
 
             .buttons {
@@ -635,9 +643,14 @@
                 }
 
                 span {
-                    margin-top: 5px;
-                    margin-left: 16px;
-
+                    margin-top: 1px;
+                    margin-left: 9px;
+                    font-size: 18px;
+                    @media (max-width: $screen-xs) {
+                      margin-left: 7px;
+                      margin-top: 1px;
+                      font-size: 14px;
+                  }
                 }
             }
 
@@ -672,9 +685,11 @@
         &__brand {
 
             text-align: center;
+            padding-right: 22px;
 
             @media (max-width: $screen-xs) {
                 flex: 1 1;
+                padding-right: 15px;
             }
         }
 
@@ -716,16 +731,16 @@
             &__icon {
                 height: 42px;
                 width: 42px;
-                margin-right: 32px;
+                margin-right: 23px;
 
                 @media (max-width: $screen-xs) {
-                    height: 24px;
-                    width: 24px;
-                    margin-right: 20px;
+                    height: 28px;
+                    width: 28px;
+                    margin-right: 17px;
 
                     svg {
-                        width: 24px;
-                        height: 24px;
+                        width: 28px;
+                        height: 28px;
                     }
                 }
             }
@@ -735,13 +750,15 @@
             }
 
             &__title {
-                margin-right: 17px;
+                margin-right: 7px;
                 font: 700 20px/22px $apercu;
                 color: rgba(0, 58, 78, 0.75);
+                letter-spacing: -0.9px;
 
                 @media (max-width: $screen-xs) {
                     font: 700 14px/18px $apercu;
                     margin-right: 8px;
+                    letter-spacing: 0px;
                 }
             }
 
@@ -817,7 +834,7 @@
             &__wrapper {
                 background-color: #F5F7F7;
                 box-shadow: 0px 0px 40px 0px #003E52;
-                padding: 35px 16px;
+                padding: 23px 16px;
                 min-height: 100%;
                 width: 300px;
                 position: relative;
@@ -836,21 +853,22 @@
                 color: rgba(7, 70, 88, 0.75);
                 text-align: center;
                 font-family: Proxima Nova;
-                font-size: 16px;
+                font-size: 15px;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 20px;
                 /* 125% */
-                letter-spacing: 0.64px;
+                // letter-spacing: 0.64px;
                 text-transform: uppercase;
             }
 
             &__list {
-                margin-top: 34px;
+                margin-top: 15px;
 
                 ul {
                     list-style-type: none;
                     padding: 0;
+                    margin-top: 24px;
                 }
 
                 &-item {
@@ -875,6 +893,9 @@
                         }
 
                     }
+                    &:last-child {
+                      margin-top: 10px;
+                    }
 
                     .menu__list-icon{
                       svg:first-child {
@@ -886,9 +907,10 @@
                     }
 
                     &__title {
-                        padding: 15px 18px 15px 15px;
+                        padding: 0px 18px 0px 15px;
                         display: flex;
                         align-items: center;
+                        height: 48px;
                         a{
                             text-decoration: none;
                         }
@@ -907,8 +929,8 @@
                                 background-size: 20px 12px;
                                 display: block;
                                 position: absolute;
-                                right: 18px;
-                                top: 22px;
+                                right: 15px;
+                                top: 18px;
                                 z-index: 2;
                                 transition: transform 0.2s ease-in-out;
                             }
@@ -959,21 +981,30 @@
 
                             li.menu__submenu-item {
                                 display: flex;
-                                align-items: flex-end;
-                                font: 400 18px/1em $apercu;
+                                align-items: center;
+                                font: 400 16px/1em $apercu;
                                 color: #074658;
                                 margin-top: 8px;
                                 position: relative;
-                                padding: 14px 12px;
+                                padding: 12px 17px;
+                                height: 48px;
+                                padding-top: 0;
+                                @media (max-width: $screen-xs) {
+                                  height: 45px;
+                                  padding: 0 17px 16px 17px;
+                              }
 
                                 &:first-child {
                                     margin-top: 0;
-                                    padding-top: 0;
+                                    @media (max-width: $screen-xs) {
+                                      padding-top: 8px;
+                                  }
                                 }
 
                                 span {
-                                    margin-left: 9px;
+                                    margin-left: 8px;
                                     color: rgba(7, 70, 88, 0.75);
+                                    margin-bottom: 4px;
                                 }
                                 svg {
                                   display: none;
@@ -984,7 +1015,7 @@
                                 a {
                                     text-decoration: none;
                                     display: flex;
-                                    align-items: end;
+                                    align-items: center;
 
 
                                     &:hover,
@@ -1003,6 +1034,14 @@
 
                                     }
                                 }
+                            }
+                            li.menu__submenu-item:last-child {
+                              padding-bottom: 8px;
+                              height: 41px;
+                              @media (max-width: $screen-xs) {
+                                padding-bottom: 28px;
+                                height: 44px;
+                            }
                             }
 
                         }
@@ -1030,7 +1069,9 @@
                             }
 
                             .menu__list-name {
-                                color: #074658
+                                color: #074658;
+                                font-weight: 700;
+                                margin-left: 1px
                             }
                             .menu__list-icon {
                                 svg:first-child{
@@ -1047,7 +1088,8 @@
                                 height: 100%;
                                 opacity: 1;
                                 transition: 0.2s ease-in-out;
-                                padding: 15px 18px 15px 15px;
+                                padding: 15px 18px 0px 15px;
+                                margin-top: 0px;
                             }
                         }
                     }
@@ -1055,14 +1097,23 @@
                 }
 
                 &-icon {
-                    margin-right: 16px;
+                  margin-right: 12px;
+                    &:first-child {
+                      margin-right: 9px;
+                    }
                 }
 
                 &-name {
                     color: rgba(7, 70, 88, 0.75);
-                    font: 400 20px/1.6em $apercu;
-
+                    font: 400 19px/1.6em $apercu;
+                    letter-spacing: -0.5px;
                 }
+                &-item:first-child {
+                  .menu__list-name {
+                    letter-spacing: -1px;
+                  }
+                }
+
             }
 
 
@@ -1289,23 +1340,24 @@
                 }
 
                 .title {
-                    margin-top: 33px;
+                    margin-top: 20px;
                     color: rgba(7, 70, 88, 0.75);
                     text-align: center;
                     font: 700 16px/1.5em $base-font-family;
-                    letter-spacing: 0.64px;
+                    letter-spacing: -0.89px;
                     text-transform: uppercase;
                 }
 
                 .colored-boxes {
                     display: flex;
                     justify-content: center;
-                    margin-top: 34px;
-                    gap: 24px;
-                    margin-bottom: 32px;
+                    margin-top: 36px;
+                    gap: 16px;
+                    margin-bottom: 30px;
 
                     &__item {
                       padding: 16px;
+                      padding-bottom: 13px;
                       border-radius: 16px;
                       display: flex;
                       flex-direction: column;
@@ -1326,7 +1378,7 @@
                             font: 600 12px/16px $base-font-family;
                             text-transform: uppercase;
                             letter-spacing: 0.28px;
-                            margin-top: 10px;
+                            margin-top: 13px;
 
                         }
 
@@ -1337,6 +1389,7 @@
                             border-radius: 45px;
                             display: flex;
                             align-items: center;
+                            letter-spacing: 1px;
                         }
                     }
                 }
@@ -2269,22 +2322,24 @@
         &__items-wrapper {
             margin-top: 31px;
             padding: 0 24px;
+            margin-bottom: 70px
         }
 
         &__item {
 
           &-text {
-            margin-left: 10px;
+            margin-left: 9px;
             color: rgba(7, 70, 88, 0.75);
             font: 400 20px/22px $apercu;
-            letter-spacing: 0.2px;
+            letter-spacing: -0.9px;
+            margin-bottom: 4px;
           }
             a {
                 text-decoration: none;
                 display: flex;
                 height: 56px;
                 align-items: center;
-                padding-left: 17px;
+                padding-left: 9px;
                 width: 100%;
                 border-radius: 16px;
                 & svg {
@@ -2320,10 +2375,10 @@
 
         &__section-title {
             h3 {
-                margin: 24px 0 8px 0px;
-                font: 700 16px/22px $base-font-family;
+                margin: 23px 0 3px 9px;
+                font: 700 13px/22px $base-font-family;
                 color: rgba(53, 118, 171, 1);
-                letter-spacing: 0.32px;
+                letter-spacing: 0.82px;
                 text-transform: uppercase;
             }
         }
