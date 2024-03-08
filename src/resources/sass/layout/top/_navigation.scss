@@ -593,9 +593,12 @@
     display: none;
 }
 
-
+.main-content{
+        height: 100vh;
+        background-color: #eff3f5;
+    }
 #nav-new {
-
+    
     &+.message-container {
         position: absolute;
         bottom: 0;
