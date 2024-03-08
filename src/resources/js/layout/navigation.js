@@ -43,11 +43,11 @@ export default function () {
 
 	});
 	
-	const mainHeight = () => { 
-		
-		// if($(window).width() > mobile){
+	const mainHeight = () => {
+		const elem = $('#nav-new .main-content');
+		//console.log(window.scrollHeight, window.offsetHeight, window.innerHeight)
+		$(elem).css('height', `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); 
 
-		const elem = $('.new-nav-content.main-content');
 		$('#side-menu, #user-menu, #mobile__overlay').css('height', `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); 
 	// } else {
 		
@@ -213,20 +213,20 @@ export default function () {
 	}
 
 	function newMenuToggle($submenu){
-		
-		$submenu.on('click', function(e){
+		let $submenu_title = $($submenu).children('.menu__list-item__title');
+		$submenu_title.on('click', function(e){
 
-			if($(this).hasClass('active')){
+			if($(this).parent().hasClass('active')){
 				
-				$(this).children('ul.menu__submenu').hide();
-				$(this).removeClass('active');
+				$(this).parent().children('ul.menu__submenu').hide();
+				$(this).parent().removeClass('active');
 					
 
 			} else {
 				$submenu.removeClass('active');
 				$submenu.children('ul.menu__submenu').hide();
-				$(this).children('ul.menu__submenu').fadeTo('fast',1);
-				$(this).addClass('active');
+				$(this).parent().children('ul.menu__submenu').fadeTo('fast',1);
+				$(this).parent().addClass('active');
 
 			}
 			
@@ -463,13 +463,14 @@ const emailInput = document.querySelector('#user_email'),
 			//$('#user-menu').show();
 			$('#mobile__overlay').show();
 			$('#user-menu').addClass('open');
+			$('body').css('overflow', 'hidden');
 				
 		})
 
 		$('.close-user-menu').on('click', () => {
 				$('#user-menu').removeClass('open');
 				$('#mobile__overlay').hide();
-				
+				$('body').css('overflow', 'auto');	
 				//$('#user-menu').hide();
 		})
 		
@@ -477,11 +478,13 @@ const emailInput = document.querySelector('#user_email'),
 		$('#toggle-nav').on('click', () => {
 			$('.side-menu').toggleClass('open');
 			$('#mobile__overlay').show();
+			$('body').css('overflow', 'hidden');
 		})
 
 		$('#mobile__close').on('click', () => {
 			$('.side-menu').removeClass('open');
 			$('#mobile__overlay').hide();
+			$('body').css('overflow', 'auto');
 		})
 
 		// Close sideMenus on mobileOverlay click

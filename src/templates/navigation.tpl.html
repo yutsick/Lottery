@@ -16,8 +16,8 @@
     "desk": "true"
   },
   "insättning_display":{
-    "mob": "true",
-    "tab": "true",
+    "mob": "false",
+    "tab": "false",
     "desk": "false"
   },
   "registrera_lott_display":{
@@ -108,18 +108,12 @@
 	}
   })
   
+  @@include('layout/_top-new_nav.html', { "logged_in": true, "show_adv_block": false})
 
   
   <div class="new-nav-content main-content">
-    @@include('blocks/_jackpot.html',{"blocks_layout":"three_columns", "hide_jackpot_mobile": false, "date_ends": true})
 
-<<<<<<< Updated upstream
-  @@include('blocks/_jackpot.html',{"blocks_layout":"two_columns", "hide_jackpot_mobile": false})
-<<<<<<< HEAD
-=======
-=======
   @@include('blocks/_jackpot.html',{"blocks_layout":"two_columns", "hide_jackpot_mobile": false, "date_ends": true})
->>>>>>> Stashed changes
 
   <section>
 		<div class="container">
