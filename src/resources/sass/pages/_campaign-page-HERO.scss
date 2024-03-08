@@ -240,7 +240,6 @@ $mobileBreakpoint: 460px;
   }
 
   .USP_wrap strong {
-    margin-left: 5px;
   }
 
 
@@ -513,7 +512,7 @@ $mobileBreakpoint: 460px;
     }
 
     .row_reverse {
-      flex-direction: row;
+      flex-direction: column-reverse;
     }
 
     .height {
@@ -548,6 +547,7 @@ $mobileBreakpoint: 460px;
       left: 0;
       background: #f2f5f7;
       padding: 16px;
+      z-index: 1;
       @media (max-width: 600px) {
         flex-wrap: wrap;
       }
