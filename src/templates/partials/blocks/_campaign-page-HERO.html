@@ -100,7 +100,7 @@
             <button class="campaign_page_HERO_top-rating--button">@@cta_text</button> 
             }
           </div>
-          <div class="campaign_page_HERO_top-rating--mob  @@if(!context.price_show){justify-center}">
+          <div class="campaign_page_HERO_top-rating--mob  @@if(!context.price_show){justify-center} @@if(context.cta_sticky){sticky-true}">
             @@if(context.price_show){
             <span style="visibility: visible;">@@price_price kr<strike>@@price_discount_price kr</strike></span>
             }

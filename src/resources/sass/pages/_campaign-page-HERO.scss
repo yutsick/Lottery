@@ -417,9 +417,9 @@ $mobileBreakpoint: 460px;
   .w_200 {
     max-width: 300px;
     margin: 0 !important;
-    @media (max-width:1079px) {
-      max-width: 200px;
-    }
+    // @media (max-width:1079px) {
+    //   max-width: 200px;
+    // }
   }
 
   .campaign_page_HERO_bottom-blurb--header {
@@ -542,12 +542,25 @@ $mobileBreakpoint: 460px;
       align-items: center;
       gap: 16px;
       padding: 16px 0;
-      position: fixed;
+      //position: fixed;
       bottom: 0;
       left: 0;
       background: #f2f5f7;
       padding: 16px;
-      z-index: 1;
+      z-index: 2000;
+
+      &.stick {
+        position: fixed;
+        bottom: 0;
+        padding: 16px 40px;
+        box-sizing: border-box;
+        margin-top: auto;
+      }
+
+      &.unstick {
+        position: initial;
+
+      }
       @media (max-width: 600px) {
         flex-wrap: wrap;
       }
