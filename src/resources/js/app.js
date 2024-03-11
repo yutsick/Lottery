@@ -75,8 +75,9 @@ import functionSlick from "./components/function-slick";
 import mediaDataSwitcher from "./components/media-data-switcher.js";
 import gameLimitModal from "./components/gameLimitModal.js";
 import bonuskodsFunctionen from "./components/bonuskods-functionen";
-import subscriptionPopup from "./components/subscription-popup";
 import campaignPageHero from "./components/campaign-page-HERO.js";
+import subscriptionPopup from "./components/subscription-popup";
+
 
 
 //import cookieList from './components/cookie-consent';

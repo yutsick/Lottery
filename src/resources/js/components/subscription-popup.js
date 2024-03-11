@@ -6,8 +6,10 @@ export default function (){
     const mobilnummerInput = document.getElementById('mobilnummer');
     const verifyButton = document.querySelector('.verify_button');
     const verifyButtonId = document.querySelector('.popup_right-1');
-    verifyButtonId.setAttribute('tabindex', 0);
-
+    if (verifyButtonId && verifyButtonId.length !=0){
+        verifyButtonId.setAttribute('tabindex', 0); 
+    }
+    
     const personnummerErrorMessage = document.getElementById('errorWindow');
     const emailErrorMessage = document.getElementById('errorWindow2');
     const mobilnummerErrorMessage = document.getElementById('errorWindow3');
@@ -25,17 +27,18 @@ export default function (){
     $('.verify_button').on('click',validateInputs);
     $('.popup_right-button--second .verify_button, .popup_qr, .popup_right-4 .loader-wrapper').on('click', switchToNextPage);
 
-    verifyButtonId.addEventListener('keydown', function(event) {
-        if (event.key === 'Enter') {
-            validateInputs();
-            if (isValidId(personnummerInput.value) &&
-            isValidEmail(emailInput.value) &&
-            isValidPhone(mobilnummerInput.value)) {
-                switchToNextPage();
+    if (verifyButtonId && verifyButtonId.length !=0){
+        verifyButtonId.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                validateInputs();
+                if (isValidId(personnummerInput.value) &&
+                isValidEmail(emailInput.value) &&
+                isValidPhone(mobilnummerInput.value)) {
+                    switchToNextPage();
+                }
             }
-        }
-    });
-
+        });
+    }
     function setupInputValidation(inputId, inputObject, errorMessage, validationDelay) {
         $('#' + inputId).on('input', debounce(function () {
             validateInput(inputObject, errorMessage, inputId);
@@ -69,16 +72,17 @@ export default function (){
     setupInputValidation('email', emailInput, emailErrorMessage, 3000, 1);
     setupInputValidation('mobilnummer', mobilnummerInput, mobilnummerErrorMessage, 3000, 1);
     
-    document.getElementById('personnummer').addEventListener('input', function (e) {
-        let inputValue = e.target.value.replace(/\D/g, '');
+    if(document.getElementById('personnummer')){
+        document.getElementById('personnummer').addEventListener('input', function (e) {
+            let inputValue = e.target.value.replace(/\D/g, '');
 
-        if (inputValue.length > 8) {
-            e.target.value = inputValue.replace(/(\d{4})(\d{2})(\d{2})(\d{4})/, '$1$2$3-$4');
-        } else {
-            e.target.value = inputValue;
-        }
-    });
-
+            if (inputValue.length > 8) {
+                e.target.value = inputValue.replace(/(\d{4})(\d{2})(\d{2})(\d{4})/, '$1$2$3-$4');
+            } else {
+                e.target.value = inputValue;
+            }
+        });
+    }
     $('#mobilnummer').on('input', (e) => {
         let inputValue = e.target.value.replace(/\D/g, '');
         if (inputValue.length > 3) {
