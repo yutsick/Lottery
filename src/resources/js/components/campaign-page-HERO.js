@@ -18,30 +18,26 @@ export default function (){
     let ctaOffset = cta.offset().top;
     let windowHeight = $(window).height();
     let ctaHeight = cta.outerHeight();
-    let startStick = ctaOffset-windowHeight+ctaHeight;
-    let footer = $("#footer");
+    let startStick = ctaOffset - windowHeight + ctaHeight;
+    let footer = $("footer");
     let footerOffset = footer.offset().top;
+    let footerHeight = footer.outerHeight();
 
     $(window).scroll(function() {
       let scrollPos = $(window).scrollTop();
-      let stickToFooter = footerOffset - windowHeight-32;
-         
+      let stickToFooter = footerOffset - windowHeight;
+
       if (scrollPos >= stickToFooter) {
-        console.log(footerOffset, ctaHeight)
-        cta.css({ position: "absolute", top: footerOffset - 32, left: 0, width: "100%", height:"80px"});
-        //cta.removeClass("stick");
-      } else if (scrollPos >= startStick && scrollPos < stickToFooter){
-
-         cta.css({ position: "", top: "", left: "", width: "", height: "" });
-         cta.addClass("stick").removeClass("unstick");
-
+        // Stick to the footer
+        let offsetTop = footerHeight - ctaHeight;
+        cta.css({ position: "absolute", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
+      } else if (scrollPos >= startStick) {
+        // Stick to the bottom of the viewport
+        cta.css({ position: "fixed", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
       } else {
-
-        cta.addClass("unstick").removeClass("stick");
-        cta.css({position: "", top: "", left: "", width: "", height: "" });
-
+        // Unstick
+        cta.css({ position: "", top: "", bottom: "", left: "", width: "", padding: "" });
       }
-
     });
   }
 

@@ -11,6 +11,7 @@ $mobileBreakpoint: 460px;
     gap: 40px;
     display: flex;
     flex-direction: column;
+    position: relative;
     @media (max-width:$mobileBreakpoint) {
       gap: 56px;
     }
@@ -554,7 +555,7 @@ $mobileBreakpoint: 460px;
         bottom: 0;
         padding: 16px 40px;
         box-sizing: border-box;
-        margin-top: auto;
+       // margin-top: auto;
       }
 
       &.unstick {
