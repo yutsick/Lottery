@@ -1,9 +1,5 @@
 export default function (){
-  if("#campaign-page-HERO"){
-    $(window).resize(function() {
-      location.reload();
-    });
-  }
+
 
   const image = $('.campaign_page_HERO_top-rating--mob img');
 
