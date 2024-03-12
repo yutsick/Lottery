@@ -2518,7 +2518,7 @@ $primary: #193E4F;
       width: 358px;
     }
     @media (max-width:389px) {
-      width: 320px;
+      width: 328px;
     }
     @media (max-width:321px) {
       width: 315px;
@@ -2545,6 +2545,10 @@ $primary: #193E4F;
         top: 23px;
         right: 22px;
       }
+      @media (max-width:389px) {
+        top: 22px;
+        right: 13px;
+      }
 		}
 	}
 
@@ -2567,6 +2571,7 @@ $primary: #193E4F;
         @media (max-width:389px) {
           padding: 16px;
           padding-bottom:32px;
+          margin-top: 52px;
         }
 			}
 
