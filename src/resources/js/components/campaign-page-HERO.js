@@ -31,7 +31,7 @@ export default function (){
 
       if (scrollPos >= stickToFooter) {
         // Stick to the footer
-        cta.css({ position: "absolute", bottom: `calc(${height1}px - ${height2 + 1}px)`, left: 0, width: "100%", padding: "16px 40px" });
+        cta.css({ position: "absolute", bottom: `calc(${height1}px - ${height2 - 25}px)`, left: 0, width: "100%", padding: "16px 40px" });
       } else if (scrollPos >= startStick) {
         // Stick to the bottom of the viewport
         cta.css({ position: "fixed", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
