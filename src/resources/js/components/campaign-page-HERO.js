@@ -1,4 +1,9 @@
 export default function (){
+  if("#campaign-page-HERO"){
+    $(window).resize(function() {
+      location.reload();
+    });
+  }
 
   const image = $('.campaign_page_HERO_top-rating--mob img');
 
@@ -18,15 +23,41 @@ export default function (){
     let ctaOffset = cta.offset().top;
     let windowHeight = $(window).height();
     let ctaHeight = cta.outerHeight();
-    let startStick = ctaOffset - windowHeight + ctaHeight;
+
+    let isChrome = navigator.userAgent.includes("CriOS") && !navigator.userAgent.includes("Linux");
+    let isEmulation = navigator.userAgent.includes("Linux");
+    let isSafari = navigator.userAgent.includes("Safari") && !navigator.userAgent.includes("CriOS") && !navigator.userAgent.includes("Linux");
+
+
     let footer = $("footer");
     let footerOffset = footer.offset().top;
-    let footerHeight = footer.outerHeight();
+    let footerHeight = footer.outerHeight()
+    let topBrowserFix = 0, browserFix = 0;
+
+    if (isEmulation){
+      topBrowserFix = 0;
+      browserFix = ctaHeight;
+    } 
+    
+    if (isChrome){
+      topBrowserFix = 60;
+      browserFix = ctaHeight/2;
+    }
+
+    if (isSafari){
+      topBrowserFix = ctaHeight;
+      browserFix = ctaHeight;
+    }
+    
+
+    let startStick = ctaOffset - windowHeight + browserFix;
+    let stickToFooter = footerOffset - windowHeight - ctaHeight - topBrowserFix;
+
 
     $(window).scroll(function() {
-      let scrollPos = $(window).scrollTop();
-      let stickToFooter = footerOffset - windowHeight;
 
+      let scrollPos = $(window).scrollTop();
+    
       if (scrollPos >= stickToFooter) {
         // Stick to the footer
         let offsetTop = footerHeight - ctaHeight;
