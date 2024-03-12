@@ -21,7 +21,6 @@ export default function (){
     let startStick = ctaOffset - windowHeight + ctaHeight;
     let footer = $("footer");
     let footerOffset = footer.offset().top;
-    let footerHeight = footer.outerHeight();
 
     $(window).scroll(function() {
       let scrollPos = $(window).scrollTop();
@@ -29,8 +28,7 @@ export default function (){
 
       if (scrollPos >= stickToFooter) {
         // Stick to the footer
-        let offsetTop = footerHeight - ctaHeight;
-        cta.css({ position: "absolute", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
+        cta.css({ position: "fixed", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
       } else if (scrollPos >= startStick) {
         // Stick to the bottom of the viewport
         cta.css({ position: "fixed", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
