@@ -1,18 +1,302 @@
 <div class="container">
   <div class="register_lott_popup">
     <div class="register_lott_popup-body">
-      <div class="close_btn">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20.0948 1L1 20.0948" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>        
-      </div>
       <div class="register_lott_popup-body--1">
-        <h1>
-          Dags för registrering?
-        </h1>
-        <img src="assets/img/reg-lott-v2-big.png" alt="lottery">
-        <button class="reg_lott-btn">Registrera Lotter</button>
+        <div class="close_btn">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0948 1L1 20.0948" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>        
+        </div>
+        <div class="register_lott_wrapper">
+          <h1>
+            Dags för registrering?
+          </h1>
+          <img src="assets/img/reg-lott-v2-big.png" alt="lottery">
+          <button class="reg_lott-btn" >Registrera lotter</button>
+        </div>
+      </div>
+
+      <div class="register_lott_popup-body--2">
+        <div class="close_btn">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0948 1L1 20.0948" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>        
+        </div>
+        <div class="register_lott_wrapper">
+          <h1>
+            Registrera internetkod
+          </h1>
+          <span>
+            Skriv in din unika internetkod nedan.
+          </span>
+          <svg width="26" height="36" viewBox="0 0 26 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.7734 1L12.9998 34.5999" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M25 23.0359L13 34.5995L1 23.0359" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="reg_lott_container">
+          <input placeholder="0000 - 0000 - 0000" class="reg_lott_input" type="text" autofocus="true">
+          <button class="reg_lott-btn" >Registrera</button>
+          <div class="error_number">Hoppsan! Felaktigt lottnummer.</div>
+        </div>
+      </div>
+
+      <div class="register_lott_popup-body--3">
+        <div class="register_lott_wrapper">
+          <div class="loader-wrapper">
+            <div class="loader"></div>
+          </div>
+        </div>
+        <div class="reg_lott_container">
+          <input placeholder="4629 - 7562 - 8046" readonly="true" class="reg_lott_input" type="text">
+          <button class="reg_lott-btn" >Registrera</button>
+        </div>
+      </div>
+
+      <div class="register_lott_popup-body--4">
+        <div class="reg_lott_dropdown">
+          <div class="reg_lott_dropdown-top">
+            <span class="count_lotter">1</span>
+            <span class="dropdown-top_header">
+              Registrerade<br> lotter
+            </span>
+            <svg class="chevron" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.366117 0.991117C0.854272 0.50296 1.64573 0.50296 2.13388 0.991117L10 8.85723L17.8661 0.991117C18.3543 0.50296 19.1457 0.50296 19.6339 0.991117C20.122 1.47927 20.122 2.27073 19.6339 2.75888L10.8839 11.5089C10.3957 11.997 9.60427 11.997 9.11612 11.5089L0.366117 2.75888C-0.122039 2.27073 -0.122039 1.47927 0.366117 0.991117Z" fill="#003E52"/>
+            </svg>
+            <div class="dropdown-content">
+              <div class="dropdown_item">
+                <div class="dropdown_item_header">
+                  <div class="header_left">
+                    <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2857 1L5.46429 11L1 6.45455" stroke="#B0C3C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>0123-4567-8910</span>
+                  </div>
+                  <div class="header_right">
+                    <span>Ej vinst</span>
+                    <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.26035 0.26035C0.607482 -0.0867834 1.1703 -0.0867834 1.51743 0.26035L7.11111 5.85403L12.7048 0.26035C13.0519 -0.0867833 13.6147 -0.0867832 13.9619 0.26035C14.309 0.607482 14.309 1.1703 13.9619 1.51743L7.73965 7.73965C7.39252 8.08678 6.8297 8.08678 6.48257 7.73965L0.26035 1.51743C-0.0867831 1.1703 -0.0867831 0.607482 0.26035 0.26035Z" fill="#003E52"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown_item_body">
+                  <div class="line"></div>
+                  <span>Lotten har gett dig:</span>
+                  <ul>
+                    <li><strong>50 st</strong> andelar i <strong>Miljonjackpotten</strong></li>
+                    <li><strong>1 st</strong> vinstchans i <strong>Andra Chansen</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="close_btn">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0948 1L1 20.0948" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>        
+        </div>
+        <div class="register_lott_wrapper">
+          <h1>
+            järnspikar!<br>
+            ingen vinst men...
+          </h1>
+          <div class="reg_lott_result-container">
+            <span>Den här lotten har gett dig</span>
+            <div class="reg_lott_result-items">
+              <div class="reg_lott_result-item">
+                <span><strong>50</strong>ST</span>
+                <span>Andelar i <strong>Miljonjackpotten</strong>
+                </span>
+              </div>
+              <div class="reg_lott_result-item">
+                <span><strong>1</strong>ST</span>
+                <span>Vinstchans i <strong>Andra Chansen</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reg_lott_container">
+          <input placeholder="4629 - 7562 - 8046" readonly="true" class="reg_lott_input" type="text">
+          <button class="reg_lott-btn" >Registrera</button>
+        </div>
+      </div>
+
+      <div class="register_lott_popup-body--5">
+        <div class="reg_lott_dropdown">
+          <div class="reg_lott_dropdown-top">
+            <span class="count_lotter">1</span>
+            <span class="dropdown-top_header">
+              Registrerade<br> lotter
+            </span>
+            <svg class="chevron" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.366117 0.991117C0.854272 0.50296 1.64573 0.50296 2.13388 0.991117L10 8.85723L17.8661 0.991117C18.3543 0.50296 19.1457 0.50296 19.6339 0.991117C20.122 1.47927 20.122 2.27073 19.6339 2.75888L10.8839 11.5089C10.3957 11.997 9.60427 11.997 9.11612 11.5089L0.366117 2.75888C-0.122039 2.27073 -0.122039 1.47927 0.366117 0.991117Z" fill="#003E52"/>
+            </svg>
+            <div class="dropdown-content">
+              <div class="dropdown_item">
+                <div class="dropdown_item_header">
+                  <div class="header_left">
+                    <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2857 1L5.46429 11L1 6.45455" stroke="#B0C3C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>0123-4567-8910</span>
+                  </div>
+                  <div class="header_right">
+                    <span>Ej vinst</span>
+                    <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.26035 0.26035C0.607482 -0.0867834 1.1703 -0.0867834 1.51743 0.26035L7.11111 5.85403L12.7048 0.26035C13.0519 -0.0867833 13.6147 -0.0867832 13.9619 0.26035C14.309 0.607482 14.309 1.1703 13.9619 1.51743L7.73965 7.73965C7.39252 8.08678 6.8297 8.08678 6.48257 7.73965L0.26035 1.51743C-0.0867831 1.1703 -0.0867831 0.607482 0.26035 0.26035Z" fill="#003E52"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown_item_body">
+                  <div class="line"></div>
+                  <span>Lotten har gett dig:</span>
+                  <ul>
+                    <li><strong>50 st</strong> andelar i <strong>Miljonjackpotten</strong></li>
+                    <li><strong>1 st</strong> vinstchans i <strong>Andra Chansen</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="close_btn">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0948 1L1 20.0948" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>        
+        </div>
+        <div class="register_lott_wrapper">
+          <h1>
+            Registrera internetkod
+          </h1>
+          <span>
+            Skriv in din unika internetkod nedan.
+          </span>
+          <svg width="26" height="36" viewBox="0 0 26 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.7734 1L12.9998 34.5999" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M25 23.0359L13 34.5995L1 23.0359" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="reg_lott_container">
+          <input placeholder="0000 - 0000 - 0000" class="reg_lott_input" type="text">
+          <button class="reg_lott-btn" >Registrera</button>
+          <div class="error_number">Hoppsan! Felaktigt lottnummer.</div>
+        </div>
+      </div>
+
+      <div class="register_lott_popup-body--6">
+        <div class="register_lott_wrapper">
+          <div class="loader-wrapper">
+            <div class="loader"></div>
+          </div>
+        </div>
+        <div class="reg_lott_container">
+          <input placeholder="4629 - 7562 - 8046" readonly="true" class="reg_lott_input" type="text">
+          <button class="reg_lott-btn" >Registrera</button>
+        </div>
+      </div>
+
+      <div class="register_lott_popup-body--7">
+        <div class="reg_lott_dropdown">
+          <div class="reg_lott_dropdown-top">
+            <span class="count_lotter">2</span>
+            <span class="dropdown-top_header">
+              Registrerade<br> lotter
+            </span>
+            <svg class="chevron" width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.366117 0.991117C0.854272 0.50296 1.64573 0.50296 2.13388 0.991117L10 8.85723L17.8661 0.991117C18.3543 0.50296 19.1457 0.50296 19.6339 0.991117C20.122 1.47927 20.122 2.27073 19.6339 2.75888L10.8839 11.5089C10.3957 11.997 9.60427 11.997 9.11612 11.5089L0.366117 2.75888C-0.122039 2.27073 -0.122039 1.47927 0.366117 0.991117Z" fill="#003E52"/>
+            </svg>
+            <div class="dropdown-content">
+              <div class="dropdown_item green">
+                <div class="dropdown_item_header">
+                  <div class="header_left">
+                    <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2857 1L5.46429 11L1 6.45455" stroke="#6CB490" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>0123-4567-8910</span>
+                  </div>
+                  <div class="header_right">
+                    <span><strong>Vinst 1 000 kr</strong></span>
+                    <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.26035 0.26035C0.607482 -0.0867834 1.1703 -0.0867834 1.51743 0.26035L7.11111 5.85403L12.7048 0.26035C13.0519 -0.0867833 13.6147 -0.0867832 13.9619 0.26035C14.309 0.607482 14.309 1.1703 13.9619 1.51743L7.73965 7.73965C7.39252 8.08678 6.8297 8.08678 6.48257 7.73965L0.26035 1.51743C-0.0867831 1.1703 -0.0867831 0.607482 0.26035 0.26035Z" fill="#003E52"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown_item_body">
+                  <div class="line"></div>
+                  <span class="mb">Vinsten finns redan nu på ditt Vinstkonto.</span>
+                  <span>Lotten har även gett dig</span>
+                  <ul>
+                    <li><strong>50 st</strong> andelar i <strong>Miljonjackpotten</strong></li>
+                    <li><strong>1 st</strong> vinstchans i <strong>Andra Chansen</strong></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown_item">
+                <div class="dropdown_item_header">
+                  <div class="header_left">
+                    <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.2857 1L5.46429 11L1 6.45455" stroke="#B0C3C9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>0123-4567-8910</span>
+                  </div>
+                  <div class="header_right">
+                    <span>Ej vinst</span>
+                    <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.26035 0.26035C0.607482 -0.0867834 1.1703 -0.0867834 1.51743 0.26035L7.11111 5.85403L12.7048 0.26035C13.0519 -0.0867833 13.6147 -0.0867832 13.9619 0.26035C14.309 0.607482 14.309 1.1703 13.9619 1.51743L7.73965 7.73965C7.39252 8.08678 6.8297 8.08678 6.48257 7.73965L0.26035 1.51743C-0.0867831 1.1703 -0.0867831 0.607482 0.26035 0.26035Z" fill="#003E52"/>
+                    </svg>
+                  </div>
+                </div>
+                <div class="dropdown_item_body">
+                  <div class="line"></div>
+                  <span>Lotten har gett dig:</span>
+                  <ul>
+                    <li><strong>50 st</strong> andelar i <strong>Miljonjackpotten</strong></li>
+                    <li><strong>1 st</strong> vinstchans i <strong>Andra Chansen</strong></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="close_btn">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0948 1L1 20.0948" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 1L21 21" stroke="#074658" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>        
+        </div>
+        <div class="register_lott_wrapper">
+          <h1>
+            Vinst!<br>
+            <strong>1 000 KR</strong>
+          </h1>
+          <span>Grattis!<br>
+            Din vinst finns nu på ditt vinstkonto.</span>
+          <div class="reg_lott_result-container">
+            <span>Den här lotten har gett dig</span>
+            <div class="reg_lott_result-items">
+              <div class="reg_lott_result-item">
+                <span><strong>50</strong>ST</span>
+                <span>Andelar i <strong>Miljonjackpotten</strong>
+                </span>
+              </div>
+              <div class="reg_lott_result-item">
+                <span><strong>1</strong>ST</span>
+                <span>Vinstchans i <strong>Andra Chansen</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reg_lott_container">
+          <input placeholder="4629 - 7562 - 8046" readonly="true" class="reg_lott_input" type="text">
+          <button class="reg_lott-btn" >Registrera</button>
+        </div>
       </div>
     </div>
   </div>

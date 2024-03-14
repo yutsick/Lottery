@@ -2,21 +2,7 @@
   "class": "page-lottery logged-out"
   })
 <div id="registration_lott" class="ml-2017">
-  @@include('blocks/_registration-lott.html', {
-    'header_first': 'Verifiera uppgifter',
-    'subheader_first': 'Vi vill veta om vi har rätt kontaktuppgifter till dig. Verifiera eller ändra enkelt dina uppgifter nedan.',
-    'input1': {
-        'label': 'Mailadress',
-        'placeholder': 'namn@mail.se'  
-    },
-    'input_first_display': 'block',
-    'input2': {
-        'label': 'mobilnummer',
-        'placeholder': '0701-23 45 67'  
-    },
-    'input_second_display': 'block',
-    'toogle_text': 'Ja, Jag vill ha nyhetsbrev med nyheter och unika erbjudanden.',
-    'cta_text': 'Uppgifterna stämmer',
-    'toogle_text_display': 'block',
-  })
+  @@include('blocks/_registration-lott.html', {})
 </div>
+
+@@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
