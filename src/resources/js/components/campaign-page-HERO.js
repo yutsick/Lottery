@@ -39,7 +39,7 @@ export default function (){
     }
 
     if (isSafari){
-      topBrowserFix = 0;
+      topBrowserFix = ctaHeight/2;
     }
     
 
@@ -48,7 +48,6 @@ export default function (){
     console.log(footerOffset, windowHeight, ctaHeight)
 
     $(window).scroll(function() {
-      let startStick = ctaOffset - windowHeight + browserFix;
 
       let scrollPos = $(this).scrollTop(); 
       console.log(scrollPos, stickToFooter)
