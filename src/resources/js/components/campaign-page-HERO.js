@@ -37,21 +37,22 @@ export default function (){
     } 
     
     if (isChrome){
-      topBrowserFix = 60;
-      browserFix = ctaHeight/2;
+      topBrowserFix = 40;
+      browserFix = -20;
     }
 
     if (isSafari){
       topBrowserFix = ctaHeight;
-      browserFix = ctaHeight;
+      browserFix = -20//ctaHeight;
     }
     
 
-    let startStick = ctaOffset - windowHeight + browserFix;
+    
     let stickToFooter = footerOffset - windowHeight - ctaHeight - topBrowserFix;
 
 
     $(window).scroll(function() {
+      let startStick = ctaOffset - windowHeight + browserFix;
 
       let scrollPos = $(window).scrollTop();
     
