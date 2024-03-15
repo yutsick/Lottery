@@ -25,10 +25,9 @@ export default function (){
     let isSafari = navigator.userAgent.includes("Safari") && !navigator.userAgent.includes("CriOS") && !navigator.userAgent.includes("Linux");
 
     let wrapper = $('.campaign_page_HERO_wrap');
-
     let footer = $("footer");
     let footerOffset = footer.offset().top;
-    let topBrowserFix = 0, browserFix = 0;
+    let topBrowserFix = 0;
 
     if (isEmulation){
       topBrowserFix = 0;
@@ -39,18 +38,15 @@ export default function (){
     }
 
     if (isSafari){
-      topBrowserFix = 0;
+      topBrowserFix = ctaHeight/2;
     }
     
-
-    
     let stickToFooter = footerOffset - windowHeight + ctaHeight - topBrowserFix;
-    console.log(footerOffset, windowHeight, ctaHeight)
 
     $(window).scroll(function() {
 
       let scrollPos = $(this).scrollTop(); 
-      console.log(scrollPos, stickToFooter)
+
       if (scrollPos >= stickToFooter) {
         // Stick to the footer
         cta.css({ position: "absolute", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
