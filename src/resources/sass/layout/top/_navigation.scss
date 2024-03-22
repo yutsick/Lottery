@@ -768,9 +768,9 @@
 
         .user {
             &__icon {
-                height: 42px;
-                width: 42px;
-                margin-right: 23px;
+                height: 40px;
+                width: 40px;
+                margin-right: 24px;
 
                 @media (max-width: $screen-xs) {
                     height: 28px;
@@ -922,6 +922,7 @@
                         //background: #FFF;
                         .menu__list-name {
                             color: #074658;
+                            font-weight: 700;
                         }
 
                         .menu__list-icon{
@@ -1027,7 +1028,7 @@
                                 font: 400 16px/1em $apercu;
                                 color: #074658;
                                 position: relative;
-                                padding: 0px 17px;
+                                padding: 0px 16px;
                                 height: 56px;
                                 border-bottom: 1px solid #c1d0d6;
                                 @media (max-width: $screen-xs) {
@@ -1043,9 +1044,8 @@
                                 }
 
                                 span {
-                                    margin-left: 8px;
-                                    color: rgba(7, 70, 88, 0.75);
-                                    margin-bottom: 4px;
+                                  margin: 0 0 -2px 8px;
+                                  color: rgba(7, 70, 88, 0.75);
                                 }
                                 svg {
                                   display: none;
@@ -1112,7 +1112,7 @@
                             .menu__list-name {
                                 color: #074658;
                                 font-weight: 700;
-                                margin-left: 1px
+                                margin-left: 0px
                             }
                             .menu__list-icon {
                                 svg:first-child{
@@ -1164,10 +1164,10 @@
 
                 &-name {
                     color: rgba(7, 70, 88, 0.75);
-                    font: 400 19px/1.6em $apercu;
+                    font: 400 18px/1.6em $apercu;
                     letter-spacing: -0.5px;
                     line-height: 22px;
-                    margin-bottom: -3px;
+                    margin-bottom: -2px;
                 }
                 &-item:first-child {
                   .menu__list-name {
@@ -2402,7 +2402,7 @@
         &__items {
           .user-menu__item:first-child, .user-menu__item:nth-child(2) {
             .user-menu__item-text{
-              margin-bottom: -7px;
+              margin-bottom: -2px;
             }
           }
         }
@@ -2411,7 +2411,7 @@
           height: 56px;
           border-bottom: 1px solid #c1d0d6;
           &-text {
-            margin-left: 9px;
+            margin-left: 8px;
             color: rgba(7, 70, 88, 0.75);
             font: 400 18px/22px $apercu;
             margin-bottom: -4px;
@@ -2421,7 +2421,7 @@
                 display: flex;
                 height: 56px;
                 align-items: center;
-                padding-left: 9px;
+                padding-left: 8px;
                 width: 100%;
                 border-radius: 16px;
                 & svg {
