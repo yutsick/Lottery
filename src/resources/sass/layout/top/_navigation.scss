@@ -1158,11 +1158,16 @@
                     }
                 }
 
+                & .lott_icon {
+                  margin-bottom: 2px;
+                }
+
                 &-name {
                     color: rgba(7, 70, 88, 0.75);
                     font: 400 19px/1.6em $apercu;
                     letter-spacing: -0.5px;
                     line-height: 22px;
+                    margin-bottom: -3px;
                 }
                 &-item:first-child {
                   .menu__list-name {
