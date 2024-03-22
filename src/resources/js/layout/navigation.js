@@ -217,22 +217,13 @@ export default function () {
 		$submenu_title.on('click', function(e){
 
 			if($(this).parent().hasClass('active')){
-        $('.menu__list-item').fadeTo('fast',1);
 				$(this).parent().children('ul.menu__submenu').hide();
 				$(this).parent().removeClass('active');
-        setTimeout(() => {
-				  $('.menu__list-item').css('display', 'block');
-        }, 100)
 			} else {
 				submenu.removeClass('active');
 				submenu.children('ul.menu__submenu').hide();
 				$(this).parent().children('ul.menu__submenu').fadeTo('fast',1);
 				$(this).parent().addClass('active');
-        $('.menu__list-item.submenu.active').fadeTo('fast',1);
-        setTimeout(() => {
-          $('.menu__list-item').css('display', 'none');
-				  $('.menu__list-item.submenu.active').css('display', 'block');
-        }, 100)
 			}
 			
 		})

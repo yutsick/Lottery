@@ -1417,7 +1417,6 @@
                     color: rgba(7, 70, 88, 0.75);
                     text-align: center;
                     font: 700 16px/1.5em $base-font-family;
-                    letter-spacing: -1px;
                     text-transform: uppercase;
                 }
 
@@ -1429,7 +1428,6 @@
 
                     &__item {
                       padding: 16px;
-                      padding-bottom: 13px;
                       border-radius: 16px;
                       display: flex;
                       flex-direction: column;
@@ -1450,7 +1448,7 @@
                             font: 600 12px/16px $base-font-family;
                             text-transform: uppercase;
                             letter-spacing: 0.28px;
-                            margin-top: 13px;
+                            margin: 16px 0 0;
 
                         }
 
@@ -1461,7 +1459,6 @@
                             border-radius: 45px;
                             display: flex;
                             align-items: center;
-                            letter-spacing: 1px;
                         }
                     }
                 }
@@ -2397,15 +2394,22 @@
             margin-bottom: 112px
         }
 
+        &__items {
+          .user-menu__item:first-child, .user-menu__item:nth-child(2) {
+            .user-menu__item-text{
+              margin-bottom: -7px;
+            }
+          }
+        }
+
         &__item {
           height: 56px;
           border-bottom: 1px solid #c1d0d6;
           &-text {
             margin-left: 9px;
             color: rgba(7, 70, 88, 0.75);
-            font: 400 20px/22px $apercu;
-            letter-spacing: -0.9px;
-            margin-bottom: 0px;
+            font: 400 18px/22px $apercu;
+            margin-bottom: -4px;
           }
             a {
                 text-decoration: none;
@@ -2449,8 +2453,8 @@
 
         &__section-title {
             h3 {
-                margin: 31px 0 3px 9px;
-                font: 700 13px/22px $base-font-family;
+                margin: 32px 0 0 8px;
+                font: 700 14px/22px $base-font-family;
                 color: rgba(53, 118, 171, 1);
                 letter-spacing: 0.82px;
                 text-transform: uppercase;
