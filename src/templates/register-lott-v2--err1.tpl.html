@@ -1,0 +1,14 @@
+@@include('layout/_header.html', {
+    "class": "page-lottery logged-out"
+    })
+  <div id="registration_lott" class="ml-2017">
+    @@include('blocks/_register-lott-v2.html', {
+      "bg_color": "linear-gradient(to bottom, #96cdd6, #61b0bc)",
+      "img_desk": "assets/img/reg-lott-v2-big.png",
+      "img_mob": "assets/img/reg-lott-v2-big-mob.png",
+      "error_message": "Hoppsan! Felaktigt lottnummer."
+    })
+  </div>
+  
+  @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
+  
