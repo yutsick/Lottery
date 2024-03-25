@@ -54,7 +54,7 @@ export default function () {
 
 
     nextStep.addEventListener('click', () => {
-      console.log(activeStep)
+      //console.log(activeStep)
       let nextPage = document.querySelector(`.register_lott_popup-body--${activeStep + 1}`);
       let prevPage = document.querySelector(`.register_lott_popup-body--${activeStep}`);
 
@@ -110,6 +110,37 @@ export default function () {
             $('.register_lott_wrapper').addClass('disabled')
           })
         }
+     
+          input.addEventListener('focus', () => {
+            const value = input.value;
+            input.value = value.replace(/(\d{4})(\d{4})(\d{4})/, '$1 - $2 - $3');
+          })
+        
+        
+
+      
+        input.addEventListener('input', function() {
+          let formattedValue = input.value.replace(/\D/g, ''); 
+          let formattedWithDashes = '';
+          const value = input.value.replace(/ - /g, '');
+         
+          if(/^\d{12}$/.test(value)){
+            container.classList.add('active');
+          } else {
+            container.classList.remove('active');
+          }
+
+          for (let i = 0; i < formattedValue.length; i++) {
+            if (i > 0 && i % 4 === 0) {
+              formattedWithDashes += ' - ';
+            }
+            formattedWithDashes += formattedValue[i];
+          }
+      
+          input.value = formattedWithDashes;
+        });
+      
+        
 
 
 
@@ -159,16 +190,20 @@ export default function () {
   });
 
   function validateInputValue(input, container, errorNumber) {
-    const value = input.value;
-    if (/^\d{12}$/.test(value)) {
-      input.value = value.replace(/(\d{4})(\d{4})(\d{4})/, '$1 - $2 - $3');
+    const pattern = /^\d{4} - \d{4} - \d{4}$/;
+    const value = input.value.replace(/ - /g, ''); // Remove dashes for digit count check
+    const isValidFormat = pattern.test(input.value);
+    const hasExactly12Digits = /^\d{12}$/.test(value);
+
+    if (isValidFormat && hasExactly12Digits) {
+      
       container.classList.add('active');
       errorNumber.style.display = 'none';
       container.style.borderColor = '';
       input.style.borderColor = '';
       return true;
     } else {
-      input.value = value.replace(/\D/g, '');
+      
       errorNumber.style.display = 'flex';
       if ($(window).width() <= mobile) {
         input.classList.remove('active');
