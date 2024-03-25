@@ -630,6 +630,10 @@
                 margin-left: 15px;
             }
 
+            .toggle-nav {
+              width: 32px;
+            }
+
             .buttons {
                 display: flex;
                 align-items: center;
@@ -768,8 +772,8 @@
 
         .user {
             &__icon {
-                height: 40px;
-                width: 40px;
+                height: 32px;
+                width: 32px;
                 margin-right: 24px;
 
                 @media (max-width: $screen-xs) {
@@ -792,7 +796,6 @@
                 margin-right: 7px;
                 font: 700 20px/22px $apercu;
                 color: rgba(0, 58, 78, 0.75);
-                letter-spacing: -0.9px;
 
                 @media (max-width: $screen-xs) {
                     font: 700 14px/18px $apercu;
