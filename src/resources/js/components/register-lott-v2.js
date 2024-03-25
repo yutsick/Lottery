@@ -114,6 +114,7 @@ export default function () {
           input.addEventListener('focus', () => {
             const value = input.value;
             input.value = value.replace(/(\d{4})(\d{4})(\d{4})/, '$1 - $2 - $3');
+            errorNumber.style.display = 'none';
           })
         
         
