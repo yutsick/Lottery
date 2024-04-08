@@ -1,7 +1,13 @@
 <!-- main poup start -->
 <div class="popup_container">
     <div class="popup">
-        <div class="popup_left position-@@image_position display-@@image_display.desk display-tab-@@image_display.tab display-mob-@@image_display.mob"></div>
+        <div class="popup_left position-@@image_position display-@@image_display.desk display-tab-@@image_display.tab display-mob-@@image_display.mob">
+            <picture>
+                <source media="(min-width: 700px)" srcset="@@image_src.desk">
+                <img src="@@image_src.mob" alt="">
+            </picture>
+            
+        </div>
     
         <div class="popup_right-1 active" popup_right-index="1">
             <div class="popup_right-header">
