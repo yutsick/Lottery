@@ -736,11 +736,23 @@ $mobile-small:390px;
         border-radius: 16px;
         box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.2);
         padding: 16px;
+       
         @media (max-width: $mobile){
          top:49px; 
          height: 300px;
          width: 294px;
          padding: 13px 11px 13px;
+        }
+        
+        &__items{
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          &::-webkit-scrollbar {
+            display: none;
+          }
         }
       }
 

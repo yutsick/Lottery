@@ -7,6 +7,15 @@ export default function () {
   let isValidNumber = false;
   const nextSteps = document.querySelectorAll('.reg_lott-btn:not(.no-steps)');
 
+  function bodyOverflowRestore(){
+    if ($('.register_lott_popup').is( ":visible" )) {
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    } 
+  }
+  bodyOverflowRestore();
+  
   //set background
   if ($(window).width() <= mobile) {
     $("#registration_lott").css('background', bg);
@@ -44,6 +53,7 @@ export default function () {
     document.querySelector(`.register_lott_popup-body--${activeStep}`).style.display = 'none';
     document.querySelector(`.register_lott_popup-body--cancel`).style.display = 'none';
     document.querySelector('#registration_lott').style.display = "none";
+    bodyOverflowRestore();
   })
 
 
@@ -227,6 +237,7 @@ export default function () {
     setTimeout(() => {
 
       document.querySelector('#registration_lott').style.display = "none";
+      bodyOverflowRestore();
     }, 1000)
 
   })
