@@ -22,9 +22,15 @@
 @@if(context.panel_show){
 	<div class="sub-bar">
 		<div class="list">
-			<div class="list-item" style="">@@text1</div>
-			<div class="list-item" style="">@@text2</div>
-			<div class="list-item" style="">@@text3</div>
+      @@if(context.top_USP_first_show) {
+        <div class="list-item" style="">@@text1</div>
+      }
+      @@if(context.top_USP_second_show) {
+        <div class="list-item" style="">@@text2</div>
+      }
+      @@if(context.top_USP_third_show) {
+        <div class="list-item" style="">@@text3</div>
+      }
 		</div>
 	</div>
 	}
