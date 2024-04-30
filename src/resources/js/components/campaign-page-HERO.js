@@ -1,5 +1,9 @@
 export default function (){
-
+  if ($('#campaign-page-HERO').length) {
+    $('footer').css('z-index', '1');
+  } else {
+    $('footer').css('z-index', '4');
+  }
 
   const image = $('.campaign_page_HERO_top-rating--mob img');
 
