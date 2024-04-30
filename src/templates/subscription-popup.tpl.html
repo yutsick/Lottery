@@ -16,6 +16,10 @@
     @@include('layout/_top-simple-small.html')
     <div class="content-wrapper ml-2017"  id="subscription-popup">
         @@include('blocks/subscription-popup/_subscription-popup.html',{
+            'image_src': {
+                'desk': 'assets/img/subscription-popup/OFFER.png',
+                'mob': 'assets/img/subscription-popup/offer-mob-small.jpg'
+            },
             'image_display': {
                 'desk': 'block',
                 'tab': 'block',
@@ -28,7 +32,7 @@
                 'tab': 'block',
                 'mob': 'block'
                 },
-            'subheader_first': 'Bli prenumerant i tre enkla steg. Lotter levereras smidigt till din dörr.',
+            'subheader_first': 'Bli prenumerant i tre enkla steg. Lotter och levereras smidigt till din dörr.',
             'subheader_first_display': {
                 'desk': 'block',
                 'tab': 'block',
