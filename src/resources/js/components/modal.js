@@ -230,6 +230,22 @@ $(document).ready(function() {
 		})
 	}
 
+	// Temporary solution for the modal
+	function temporaryTest() {
+		
+		let current = 1;
+			$('#modal-login-new2').on('click', function (e) {
+				$('[data-step='+current+']').hide();
+					++current;
+					console.log($('[data-step='+current+']'))
+					$('[data-step='+current+']').show();
+					console.log('YEPPP')
+				
+			});
+	};
+	temporaryTest()
+	
+
 	modalOpen('.js-mediaBlock__video');
 	modalCloseVideo('.mediaBlock__video .js-modal-close');
 		
