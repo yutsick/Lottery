@@ -75,7 +75,10 @@ import functionSlick from "./components/function-slick";
 import mediaDataSwitcher from "./components/media-data-switcher.js";
 import gameLimitModal from "./components/gameLimitModal.js";
 import bonuskodsFunctionen from "./components/bonuskods-functionen";
+import campaignPageHero from "./components/campaign-page-HERO.js";
 import subscriptionPopup from "./components/subscription-popup";
+import registerLottV2 from "./components/register-lott-v2";
+
 
 
 //import cookieList from './components/cookie-consent';
@@ -198,6 +201,8 @@ $(function () {
 	
 });
 subscriptionPopup();
+campaignPageHero();
+registerLottV2();
 /**
  * Flickity Extension to handle custom styles on third from active slide.
  **/

@@ -68,7 +68,7 @@
 	&[disabled],
 	&.disabled,
 	&.btn-disabled {
-		color: rgba($color-light, 0.5);
+		color: rgba($color-light, 1);
 		background-color: $color-primary-lighter;
 
 		&:hover {

@@ -1,0 +1,30 @@
+<!-- Use "block" or "none" for show/hide elements -->
+@@include('layout/_header.html', {
+  "class": "page-lottery logged-out"
+  })
+<div id="modals" class="ml-2017">
+  @@include('components/modals/_login_v2_new.html', {
+    'header_first': 'Verifiera uppgifter',
+    'subheader_first': 'Vi vill veta om vi har rätt kontaktuppgifter till dig. Verifiera eller ändra enkelt dina uppgifter nedan.',
+    'input1': {
+        'label': 'Mailadress',
+        'placeholder': 'namn@mail.se'  
+    },
+    'input_first_display': 'block',
+    'input2': {
+        'label': 'mobilnummer',
+        'placeholder': '0701-23 45 67'  
+    },
+    'input_second_display': 'block',
+    'toogle_text': 'Ja, Jag vill ha nyhetsbrev med nyheter och unika erbjudanden.',
+    'cta_text': 'Uppgifterna stämmer',
+    'toogle_text_display': 'block',
+  })
+</div>
+
+
+@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
+
+<script>
+  $('#modal-login-new2').modal();
+</script>

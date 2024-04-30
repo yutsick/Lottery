@@ -1,0 +1,1120 @@
+$primary-color: #06566F;
+$mobile: 460px;
+$mobile-small:390px;
+
+
+#registration_lott {
+  *{
+    word-break: keep-all;
+  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2099;
+  display: block;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: rgba(0, 58, 78, 0.75);
+  @media (max-width:$mobile) {
+    //background: linear-gradient(to bottom, rgba(150, 205, 214, 1), rgba(97, 176, 188, 1));
+    background-color: transparent;
+  }
+
+  & .container {
+    margin: auto;
+    width: max-content;
+    position: relative;
+  }
+
+  & .register_lott_popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    height: 618px;
+    width: 510px;
+    padding: 32px 0; 
+    //background: linear-gradient(to bottom, rgba(150, 205, 214, 1), rgba(97, 176, 188, 1));
+
+    @media (max-width:$mobile) {
+      padding: 0 24px;
+      width: 100%;
+      background: transparent;
+    }
+
+    &.active {
+      background: rgba(189, 229, 213, 1);
+      & .register_lott_popup-body {
+        background-image: url('../img/firework.png');
+        background-position: 49% 23%;
+        background-repeat: no-repeat;
+      }
+      & .reg_lott_dropdown-top.active {
+        & .dropdown-content::before {
+          background: rgba(189, 229, 213, 1);
+        }
+        &::after {
+          background: rgba(189, 229, 213, 1);
+        }
+      }
+    }
+  }
+
+  & .close_btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 56px;
+    padding: 0 30px;
+    width: 100%;
+    cursor: pointer;
+    width: fit-content;
+    align-self: end;
+    z-index: 1;
+    @media (max-width:$mobile) {
+      padding: 0;
+      margin-right: 8px;
+      height: 32px;
+    }
+  }
+
+  & .register_lott_popup-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 5px;
+    font-family: $apercu;
+    
+
+    & h1 {
+      margin: 0;
+      font-family: $zingRust;
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 48px;
+      letter-spacing: 0.01em;
+      text-align: center;
+      padding: 0 32px;
+      max-width: 326px;
+      
+      @media (max-width: $mobile) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+
+    .register_lott_wrapper{
+      &.disabled{
+        @media (max-width: $mobile){
+         opacity: 0.2; 
+        }
+      }
+    }
+
+    .reg_lott-btn {
+      color: #FFF;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      width: 220px;
+      height: 48px;
+      background: #D96195;
+      border: none;
+      border-radius: 24px;
+      padding: 0;
+      transition: background 0.3s ease;
+      letter-spacing: 0.2px;
+      &.btn-primary{
+        background-color: $primary-color;
+        width: 158px;
+      }
+
+    }
+
+    & .reg_lott_container {
+      position: relative;
+    
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      
+      width: 100%;
+      height: 70px;
+      align-items: center;
+      border: 3px solid rgba(7, 70, 88, 0.75);
+      border-radius: 38px;
+      background: #fff;
+      padding: 0 11px 0 40px;
+
+        @media (max-width: $mobile){
+          border: none;
+          align-items: flex-start;
+          background: transparent;
+          padding: initial;
+          height: inherit; 
+        }
+
+
+      & .reg_lott-btn {
+        background: rgba(236, 197, 222, 1)
+      }
+
+      &.active {
+       border: 3px solid rgba(7, 70, 88, 1);
+       @media (max-width: $mobile){
+        border: none; 
+       }
+
+        .reg_lott-btn {
+           background: #D96195 !important;
+        }
+      }
+
+      & .error_number {
+        position: absolute;
+        top: -95px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 27px;
+        font-family: 'Circular Std';
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        background: rgba(255, 202, 202, 1);
+        border-radius: 8px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 99%;
+          left: 48%;
+          border: solid transparent;
+          border-width: 17px;
+          margin-left: -10px;
+          border-top-color: rgba(255, 202, 202, 1);
+        }
+      }
+
+
+      input {
+        border: none;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        font-family: $apercu;
+        color: rgba(0, 62, 82, 1);
+        font-weight: 700;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          color: rgba(0, 62, 82, 0.5);
+        }
+        @media (max-width: $mobile){
+          border: 3px solid rgba(7, 70, 88, 0.75);
+          border-radius: 38px;
+          background: #fff;
+          padding: 20px 0 16px 30px;
+          height: fit-content; 
+        }
+      }
+    }
+
+    &--1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding-top: 3px;
+      transition: 0.5s;
+
+      & .reg_lott-btn {
+        margin-top: 2px;
+      }
+
+      & .register_lott_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        @media (max-width: $mobile) {
+          height: 450px;
+          margin-top: 24px;
+          justify-content: start;
+          picture{
+            margin-top: 14px;
+          }
+          .reg_lott-btn{
+            width: 240px;
+          }
+        }
+      }
+    }
+
+    &--2, &--5 {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100%;
+      padding: 0 29px;
+      @media (max-width:$mobile) {
+        justify-content: start;
+        padding: 0;
+      }
+      & .close_btn {
+        padding: 0;
+      }
+
+      & .register_lott_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 27px;
+        @media (max-width: $mobile){
+         gap:20px ;
+         svg{
+          margin: 19px 0 67px; 
+         }
+        }
+      }
+
+      & .reg_lott-btn {
+        margin-top: 0px;
+        width: 164px;
+        @media (max-width:$mobile) {
+          width: 240px;
+          height: 48px;
+          position: absolute;
+          left:50%;
+          transform: translateX(-50%);
+          top:73px
+        }
+      }
+
+      & h1 {
+        margin-top: 24px;
+        @media (max-width: $mobile){
+          font-size: 40px;
+          line-height: 40px;
+          margin-top: 28px;
+        }
+      }
+
+      & span {
+        max-width: 195px;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 0.2px;
+        line-height: 24px;
+      }
+
+      & svg {
+        margin: 12px 0;
+
+      }
+
+      & .reg_lott_container {
+        width: 440px;
+        @media (max-width:$mobile) {
+          width: 300px;
+          padding: 0;
+          input{
+            padding: 14px 0;
+            text-align: center;
+            width: 100%;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 0.04em;
+            font-weight: 400;
+          }
+        }
+
+      }
+    }
+    &--3, &--6 {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      flex-direction: column;
+      padding: 0 35px;
+      .loader-wrapper{
+        margin-top: 53px;
+      }
+
+      @media (max-width: $mobile){
+       padding: 0 24px; 
+       justify-content: center;
+      }
+  
+
+      & .register_lott_wrapper {
+        flex: 3 1;
+        display: flex;
+        align-items: center;
+        @media (max-width: $mobile){
+         flex: 1 1; 
+         align-items: flex-end;
+        }
+    
+      }
+      .reg_lott_container{
+        @media (max-width: $mobile){
+          flex: 1 1;
+            input{
+              padding: 14px 0;
+              text-align: center;
+              width: 100%;
+              font-size: 24px;
+              line-height: 24px;
+              letter-spacing: 0.04em;
+              font-weight: 400;
+              margin-top: 108px;
+            }
+          
+        }
+        
+      }
+
+      & .reg_lott-btn {
+        width: 167px;
+        @media (max-width:$mobile) {
+          width: 240px;
+          height: 48px;
+          position: absolute;
+          left:50%;
+          transform: translateX(-50%);
+          top:183px
+        }
+      }
+
+      & input {
+        padding: 12px 0 8px 8px;
+      }
+    }
+
+    &--4, &--5, &--7, &--8{
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      flex-direction: column;
+      padding: 0 35px;
+
+      @media (max-width: $mobile){
+       padding:  0 15px ;
+      }
+
+      .close_btn{
+        @media (max-width: $mobile){
+         margin-right: 0; 
+        }
+      }
+      .register_lott_wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 27px;
+        flex: 2;
+        width: 100%;
+        padding: 64px 40px 33px;
+        @media (max-width: $mobile){
+         padding: 0; 
+         justify-content: flex-start;
+         margin-top: 35px;
+         gap:34px;
+        }
+
+        h1 {
+          font-size: 40px;
+          max-width: 357px;
+          letter-spacing: 0.56px;
+          @media (max-width: $mobile){
+           font-size: 32px;
+           line-height: 36px;
+           max-width: initial; 
+           padding: 0;
+          }
+
+        }
+
+        & .reg_lott_result-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          gap: 11px;
+
+          span {
+            font-weight: 700;
+            font-size: 16px;
+            text-align: center;
+            letter-spacing: 0.2px;
+          }
+
+          .reg_lott_result-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap:16px;
+            @media (max-width: $mobile){
+              
+            }
+
+            .reg_lott_result-item {
+              display: flex;
+              flex-direction: column;
+              padding: 14px 47px 12px 24px;
+              background: rgba(255, 255, 255, 0.75);
+              border-radius: 16px;
+              max-width: 168px;
+              justify-content: flex-start;
+
+              @media (max-width: $mobile){
+               width: 148px;
+               padding: 12px 15px 17px 17px;
+              }
+              & span:first-child {
+                font-family: $zingRust;
+                font-size: 24px;
+                font-weight: 400;
+                text-align: left;
+                letter-spacing: unset;
+                line-height: 40px;
+
+                & strong {
+                  font-size: 40px;
+                  margin-right: 10px;
+                }
+              }
+
+              & :nth-child(2) {
+                text-align: left;
+                font-size: 12px;
+                font-weight: 400;
+                font-family: $apercu;
+                display: inline-block;
+                line-height: 14px;
+                letter-spacing: unset;
+
+                & strong {
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .reg_lott_container{
+        @media (max-width: $mobile){
+         flex:2; 
+        }
+        input{
+          @media (max-width: $mobile){
+           width: 100%;
+           text-align: center; 
+           padding: 14px 0;
+           margin: 10px 5px 0;
+           font-size: 24px;
+           line-height: 24px;
+           letter-spacing: 0.04em;
+           font-weight: 400;
+          }
+        }
+      }
+
+      & .close_btn {
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        height: 56px;
+        padding: 0 30px;
+        width: unset;
+      }
+
+      .reg_lott-btn {
+        width: 166px;
+        @media (max-width: $mobile){
+         position: absolute;
+         left:50%;
+         transform: translateX(-50%); 
+         top:82px;
+         width: 240px;
+        }
+      }
+    }
+
+    &--cancel{
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      padding-top: 3px;
+      padding: 0 40px;
+      @media (max-width: $mobile){
+       padding: 0 32px; 
+      }
+
+      .screen-title{
+        margin-top: 20px;
+        text-transform: uppercase;
+        font: 700 16px/16px $base-font-family;
+        color: #003D50;
+        letter-spacing: 0.04em;
+      }
+
+      .reg_lott-btn {
+        margin-top: 2px;
+      }
+
+      .register_lott_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        @media (max-width: $mobile){
+         justify-content: start; 
+        }
+
+        &--summering{
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          margin-top: 34px;
+          &__item{
+            border: solid 2px #99C5BC;
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            width: 100%;
+            padding: 0 24px;
+            @media (max-width: $mobile){
+             height: 56px; 
+             padding: 0 15.5px;
+             &:nth-child(3){
+              margin-top: 6px;
+             }
+            }
+
+            &.fill{
+              border: none;
+              background-color: #99C5BC;
+            }
+            .text{
+              p{
+                margin: 0;
+                font: 700 16px/20px $base-font-family;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                @media (max-width: $mobile){
+                  font: 700 12px/16px $base-font-family;
+                }
+              }
+            }
+
+            .sum{
+              font: 400 40px/57px $zingRust;
+              @media (max-width: $mobile){
+               font: 400 24px/34px $zingRust; 
+              }
+            }
+
+          }
+        }
+        .buttons{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 15px;
+          @media (max-width: $mobile){
+           flex-direction: column; 
+           gap:16px;
+           align-items: center;
+           margin-top: 29px;
+          }
+          .reg_lott-btn{
+            width: 252px;
+            @media (max-width: $mobile){
+             width: 240px; 
+            }
+            &.btn-primary{
+              width: 158px;
+              @media (max-width: $mobile){
+               width: 240px; 
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .reg_lott_dropdown-top {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background: #fff;
+      box-shadow: 0px 4px 16px 0px #00000029;
+      border-radius: 16px;
+      padding: 12px 19px;
+      min-width: 278px;
+
+      @media (max-width: $mobile){
+       min-width: initial;
+       max-width: 212px; 
+       position: relative;
+       z-index: 2;
+       padding: 11px 19px;
+      }
+      .count_lotter {
+        width: 43px;
+        font-family: $zingRust;
+        font-size: 32px;
+        line-height: 32px;
+        font-weight: 400;
+        @media (max-width: $mobile){
+          width: 62px;
+          line-height: 28px;
+        }
+      }
+      .dropdown-top_header {
+        display: inline-block;
+        width: 177px;
+        font-family: 'Proxima Nova';
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        cursor: pointer;
+        @media (max-width: $mobile){
+         font-size: 12px; 
+         line-height: 14px;
+         letter-spacing: 0.02em;
+        }
+      }
+
+      & .chevron {
+        transform: rotate(0deg);
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+
+      }
+
+      & .dropdown-content {
+        position: absolute;
+        top: 56px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        width: 380px;
+        height: 416px;
+        border-radius: 16px;
+        box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+       
+        @media (max-width: $mobile){
+         top:49px; 
+         height: 300px;
+         width: 294px;
+         padding: 13px 11px 13px;
+        }
+        
+        &__items{
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+
+      &.active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        &::before {
+          content: "";
+          position: absolute;
+          left: -10px;
+          bottom: 0;
+          width: 10px;
+          height: 10px;
+          background: #fff;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: -20px;
+          bottom: 0px;
+          width: 20px;
+          height: 20px;
+          border-radius: 100%;
+          background: #8fc9d2;
+          @media (max-width: $mobile){
+           bottom:1px; 
+          }
+        }
+        & .chevron {
+          transform: rotate(180deg);
+          transition: all 0.1s ease-in-out;
+        }
+        & .dropdown-content {
+          display: flex;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 31px;
+            top: -20px;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background: #8fc9d2;
+            @media (max-width: $mobile){
+             left:21px 
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            right: 41px;
+            top: -10px;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            @media (max-width: $mobile){
+              right: 31px;
+              top: -8px;
+            }
+          }
+        }
+
+        & .dropdown_item {
+          background: rgba(235, 240, 241, 1);
+          border-radius: 8px;
+          padding: 15px 15px 15px 14px;
+          width: 348px;
+          height: max-content;
+          @media (max-width: $mobile){
+           width: 100%; 
+           padding: 15px 15px 10px 14px;
+          }
+
+          & .dropdown_item_header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            cursor: pointer;
+            @media (max-width: $mobile){
+             font-size: 12px;
+             line-height: 16px; 
+            }
+            
+            & .header_left, .header_right {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 10px;
+            }
+
+            & .header_right {
+              gap: 16px;
+            }
+
+            & svg:last-child {
+              transform: rotate(0deg);
+              transition: all 0.1s ease-in-out;
+            }
+          }
+
+          & .dropdown_item_body {
+            @media (max-width: $mobile){
+             font-size: 12px;
+             line-height: 16px; 
+            }
+            display: none;
+            & .line {
+              height: 1px;
+              background-color: rgba(0, 62, 82, 0.25);
+              margin: 10px 0 20px;
+            }
+          }
+          &.active {
+            & .dropdown_item_header svg:last-child {
+              transform: rotate(180deg);
+              transition: all 0.1s ease-in-out;
+            }
+            & .dropdown_item_body {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &--2{
+      
+      transition: 1s;
+      opacity: 1;
+      &.first{
+        animation-name: fade_bottom;
+        animation-duration: 1s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        //transition: 0.5s;
+        transform: translateY(50%);
+        //margin-top: 25%;
+      }
+
+      @keyframes fade_bottom {
+        from {
+          transform: translateY(50%);
+         //margin-top: 25%;
+        }
+
+        to {
+          //margin-top: 0;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &--5 {
+
+      .register_lott_wrapper {
+        justify-content: flex-start;
+        @media (max-width: $mobile){
+         gap: 20px;
+
+        }
+        h1 {
+          font-size: 48px;
+          margin-top: 32px;
+          @media (max-width: $mobile){
+           font-size: 40px;
+           line-height: 40px; 
+          }
+        }
+        svg {
+          margin-top: 13px;
+        }
+      }
+      & .reg_lott_dropdown-top {
+        & span {
+          font-size: 16px;
+          text-align: left;
+        }
+        & .dropdown-content {
+          padding-top: 17px;
+        }
+
+        &.active {
+          & .dropdown_item {
+            padding: 13px;
+            padding-right: 14px;
+          }
+        }
+      }
+
+      & svg {
+        margin: 0;
+      }
+    }
+
+    &--6{
+      .reg_lott_dropdown{
+        display: none;
+        @media (max-width: $mobile){
+         display: flex; 
+        }
+      }
+      .register_lott_wrapper{
+        @media (max-width: $mobile){
+         align-items: center; 
+        }
+      }
+      .reg_lott_container {
+        @media (max-width: $mobile){
+          input{
+          margin-top: 25px;
+        }
+        .reg_lott-btn{
+          top: 98px;
+        }
+        }
+      }
+      .loader-wrapper{
+        @media (max-width: $mobile){
+         margin-top: 0; 
+        }
+      }
+    }
+    &--7 {
+      .register_lott_wrapper {
+        background-image: url('../img/background/register-lott-fireworks.png');
+        background-repeat: no-repeat;
+        background-position: center 38px;
+        background-size: contain;
+        gap:0;
+        justify-content: start;
+        padding: 72px 40px 33px;
+
+        @media (max-width: $mobile){
+          background-position: center 0;
+          margin-top: 21px;
+          padding: 0;
+
+        }
+        span {
+          text-align: center;
+          &.d-mob-none{
+            @media (max-width: $mobile){
+             display: none; 
+            }
+          }
+        }
+
+        h1{
+          letter-spacing: 0.01em;
+          margin-bottom: 12px;
+          @media (max-width: $mobile){
+           margin-top: 16px; 
+          }
+          strong{
+            font-size: 56px;
+            color:#50B78D;
+            @media (max-width: $mobile){
+             font-size: 40px;
+             line-height: 40px; 
+            }
+          }
+          
+        }
+        .reg_lott_result-container{
+          margin-top: 34px;
+          @media (max-width: $mobile){
+           margin-top: 16px; 
+          }
+        }
+
+      }
+      .reg_lott_container{
+        @media (max-width: $mobile){
+          margin-top: 15px;
+          .reg_lott-btn{
+            top:86px
+          }
+        }
+      }
+      .dropdown_item.green {
+        &.active{
+          margin-bottom: 10px;
+          @media (max-width: $mobile){
+           margin-bottom: 5px; 
+          }
+        }
+        & .mb {
+          margin: 6px 0 26px;
+          display: inline-block;
+          @media (max-width: $mobile){
+            margin: 6px 0 9px;
+          }
+        }
+        & .line {
+          margin: 12px 0 !important;
+        }
+        & ul {
+          padding-left: 24px;
+          margin-bottom: 7px;
+          & li {
+            margin-bottom: 4px;
+          }
+        }
+      }
+
+      .dropdown-content{
+        &::before{
+          background: #BDE5D5 !important;
+        }
+      
+        }
+        .reg_lott_dropdown-top.active{
+          &::after{
+            background: #BDE5D5 !important;
+          }
+      }
+    }
+
+    &--8{
+      display: none;
+      .register_lott_wrapper{
+        max-width: 326px;
+        padding: 0;
+        text-align: center;
+        justify-content: start;
+        gap:0;
+        
+        h1{
+          font-size: 48px;
+          line-height: 48px;
+          margin-top: 94px;
+        }
+        span{
+          font-size: 20px;
+          line-height: 24px;
+          letter-spacing: 0.01em;
+          max-width: 195px;
+          display: inline-block;
+          margin: 29px 0 40px;
+      
+        }
+
+      }
+    }
+  }
+
+  & .loader {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #FFFFFF 94%, #0000) top / 12px 12px no-repeat, conic-gradient(#ffffff24 3%, #FFFFFF); 
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 13px), #000 0);
+    animation: s3 1s infinite linear;
+    @media (max-width: $mobile){
+     width: 120px;
+     height: 120px;
+     background: radial-gradient(farthest-side, #FFFFFF 94%, #0000) top / 10px 10px no-repeat, conic-gradient(#ffffff24 3%, #FFFFFF); 
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0); 
+    }
+  }
+  & .green {
+    background: rgba(218, 236, 227, 1) !important;
+  }
+}
