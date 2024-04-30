@@ -629,44 +629,12 @@ $mobileBreakpoint: 460px;
     @media(max-width: 1024px) {
       flex-direction: column;
     }
-    .card_img_text {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      padding: 50px;
-      background-color: #eef9fb;
+    img {
       max-width: 670px;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
       border-radius: 24px;
-      @media(max-width: 500px) {
-        padding: 50px 30px;
-      }
-      img {
-        width: 150px;
-        height: 150px;
-        border-radius: 100px;
-        object-fit: cover;
-      }
-      .text_container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        justify-content: start;
-        h3 {
-          font-size: 24px;
-          color: #0e495c;
-          margin: 0;
-          font-weight: 800;
-        }
-        p {
-          font-size: 16px;
-          color: #4e7b89;
-          margin: 0;
-          font-weight: 600;
-          max-width: 300px;
-        }
-      }
     }
   }
 }
