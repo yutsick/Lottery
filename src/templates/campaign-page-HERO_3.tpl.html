@@ -1,0 +1,77 @@
+ <!-- Use true or false to show/hide specific elements on desktop or/and mobile. Change texts and image links to fit the campaign. Use provided values for the elements if present. -->
+
+
+ @@include('layout/_header.html', {
+    "top_bar": true,
+    "class": "page-front logged-out",
+    "show_submenu":{
+        "mob": false,
+        "tab": false,
+        "desk": false
+    },
+    "links_display":{
+        "mob": false,
+        "tab": false,
+        "desk": false
+    },
+    })
+
+    <div id="campaign-page-HERO"> 
+      @@include('layout/_top-simple-small.html',{
+        "panel_show": false,
+        "top_USP_first_show": false,
+        "top_USP_second_show": false,
+        "top_USP_third_show": false,
+        "icons": "/assets/img/icons/check-green.svg",
+        "text1": "Fri frakt",
+        "text2": "1-3 dagars leverans",
+        "text3": "Igen bindningstid"
+      })
+      <div class="content-wrapper ml-2017">
+          @@include('blocks/_campaign-page-HERO.html',{
+            "image_show_desk":true,
+            "image_show_mob": true,
+            "image_position": "right", // left, right
+            "blurbs_show": true,
+            "blurbs_qt": '4', // 1,2,3,4
+            "blurb1_icon": "/assets/img/campaign-page-HERO/ellipse.png",
+            "blurb1_header": "Beställ & få hem",
+            "blurb1_text": "Skapa enkelt din prenumeration och få dina lotter direkt hem i brevlådan.",
+            "blurb2_icon": "/assets/img/campaign-page-HERO/ellipse.png",
+            "blurb2_header": "Skrapa & vinn",
+            "blurb2_text": "Skrapa och registrera sedan dina lotter för maximal vinstchans.",
+            "blurb3_icon": "/assets/img/campaign-page-HERO/blurb_andra.png ",
+            "blurb3_header": "Andra chansen",
+            "blurb3_text": "Registrera dina lotter för och ha chans att vinna även på dina nitlotter.",
+            "blurb4_icon": "/assets/img/campaign-page-HERO/blurb_jackpot.png ",
+            "blurb4_header": "Miljonjackpott",
+            "blurb4_text": "Du får andelar i Miljonjackpotten på allt du köper hos oss.",
+            "header_show": true,
+            "header_text": "Sveriges största skrapvinst – Vinn 60 miljoner kronor",
+            "desc_show": true,
+            "desc_text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquat enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor. ",
+            "info_link_show": true,
+            "info_link_text": "Mer om Miljonlotten",
+            "usps_show": true,
+            "usps_item1_show":true,
+            "usps_item1": "Vinn upp till <strong style='margin-left: 5px'>60 miljoner</strong>",
+            "usps_item2_show":true,
+            "usps_item2": "3 st vinstchanser per lott",
+            "usps_item3_show":true,
+            "usps_item3": "Ingen bindningstid",
+            "usps_item4_show":true,
+            "usps_item4": "Välkomstpremie: <strong style='margin-left: 5px'>500 kr</strong>",
+            "price_show": false,
+            "price_price": "150",
+            "price_discount_price": "300",
+            "cta_show": true,
+            "cta_text":  "Beställ nu", 
+            "cta_sticky": true,
+            "raiting_show": false,
+            "img_block_show": true,
+        })    
+      </div>
+    </div>
+    
+
+    @@include('layout/_footer.html', { "show_footer": true, "show_terms_modal": false })
