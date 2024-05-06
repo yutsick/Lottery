@@ -206,6 +206,7 @@ $mobile-small:390px;
         font-family: $apercu;
         color: rgba(0, 62, 82, 1);
         font-weight: 700;
+        padding-top: 5px;
         &:focus {
           outline: none;
         }
@@ -395,7 +396,7 @@ $mobile-small:390px;
       }
 
       & input {
-        padding: 12px 0 8px 8px;
+        padding: 12px 0 8px 8px !important;
       }
     }
 
