@@ -48,11 +48,6 @@ $mobile-small:390px;
 
     &.active {
       background: rgba(189, 229, 213, 1);
-      & .register_lott_popup-body {
-        background-image: url('../img/firework.png');
-        background-position: 49% 23%;
-        background-repeat: no-repeat;
-      }
       & .reg_lott_dropdown-top.active {
         & .dropdown-content::before {
           background: rgba(189, 229, 213, 1);
@@ -978,13 +973,10 @@ $mobile-small:390px;
     }
     &--7 {
       .register_lott_wrapper {
-        background-image: url('../img/background/register-lott-fireworks.png');
-        background-repeat: no-repeat;
-        background-position: center 38px;
-        background-size: contain;
         gap:0;
         justify-content: start;
-        padding: 72px 40px 33px;
+        padding: 40px 20px 30px;
+        justify-content: space-between;
 
         @media (max-width: $mobile){
           background-position: center 0;
@@ -996,16 +988,16 @@ $mobile-small:390px;
           text-align: center;
           &.d-mob-none{
             @media (max-width: $mobile){
-             display: none; 
+             margin-top: 20px;
             }
           }
         }
 
         h1{
           letter-spacing: 0.01em;
-          margin-bottom: 12px;
+          // margin-bottom: 12px;
           @media (max-width: $mobile){
-           margin-top: 16px; 
+          //  margin-top: 16px; 
           }
           strong{
             font-size: 56px;
@@ -1018,7 +1010,8 @@ $mobile-small:390px;
           
         }
         .reg_lott_result-container{
-          margin-top: 34px;
+          padding: 0 20px;
+          margin-top: 0px;
           @media (max-width: $mobile){
            margin-top: 16px; 
           }

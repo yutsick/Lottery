@@ -2,6 +2,8 @@ export default function () {
 
   const mobile = 460;
   const bg = document.querySelector('#bg').value;
+  const bgWin = document.querySelector('#bgWin').value;
+  console.log('bgWin', bgWin)
   let activeStep = 1;
   let ring = 1, cancel = false
   let isValidNumber = false;
@@ -19,8 +21,10 @@ export default function () {
   //set background
   if ($(window).width() <= mobile) {
     $("#registration_lott").css('background', bg);
+    $(".register_lott_popup-body--7").css('background', bgWin)
   } else {
     $(".register_lott_popup").css('background', bg);
+    $(".register_lott_popup-body--7").css('background', bgWin)
   }
 
   //close popup
