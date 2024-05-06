@@ -973,6 +973,9 @@ $mobile-small:390px;
       }
     }
     &--7 {
+      @media (max-width: $mobile){
+        padding: 0;
+      }
       .register_lott_wrapper {
         gap:0;
         justify-content: start;
@@ -998,7 +1001,7 @@ $mobile-small:390px;
           letter-spacing: 0.01em;
           // margin-bottom: 12px;
           @media (max-width: $mobile){
-          //  margin-top: 16px; 
+           margin-top: 16px; 
           }
           strong{
             font-size: 56px;
@@ -1014,7 +1017,7 @@ $mobile-small:390px;
           padding: 0 20px;
           margin-top: 0px;
           @media (max-width: $mobile){
-           margin-top: 16px; 
+           margin-top: 30px; 
           }
         }
 
