@@ -212,22 +212,18 @@ export default function () {
 		}
 	}
 
-	function newMenuToggle($submenu){
-		let $submenu_title = $($submenu).children('.menu__list-item__title');
+	function newMenuToggle(submenu){
+		let $submenu_title = $(submenu).children('.menu__list-item__title');
 		$submenu_title.on('click', function(e){
 
 			if($(this).parent().hasClass('active')){
-				
 				$(this).parent().children('ul.menu__submenu').hide();
 				$(this).parent().removeClass('active');
-					
-
 			} else {
-				$submenu.removeClass('active');
-				$submenu.children('ul.menu__submenu').hide();
+				submenu.removeClass('active');
+				submenu.children('ul.menu__submenu').hide();
 				$(this).parent().children('ul.menu__submenu').fadeTo('fast',1);
 				$(this).parent().addClass('active');
-
 			}
 			
 		})

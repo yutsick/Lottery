@@ -1,4 +1,9 @@
 export default function (){
+  if ($('#campaign-page-HERO').length) {
+    $('footer').css('z-index', '1');
+  } else {
+    $('footer').css('z-index', '4');
+  }
 
   const image = $('.campaign_page_HERO_top-rating--mob img');
 
@@ -13,30 +18,47 @@ export default function (){
 
   //stick CTA before footer if sticked
   let cta = $(".campaign_page_HERO_top-rating--mob");
+
   if (cta.hasClass("sticky-true")){
 
-    let ctaOffset = cta.offset().top;
     let windowHeight = $(window).height();
     let ctaHeight = cta.outerHeight();
-    let startStick = ctaOffset - windowHeight + ctaHeight;
+
+    let isChrome = navigator.userAgent.includes("CriOS") && !navigator.userAgent.includes("Linux");
+    let isEmulation = navigator.userAgent.includes("Linux");
+    let isSafari = navigator.userAgent.includes("Safari") && !navigator.userAgent.includes("CriOS") && !navigator.userAgent.includes("Linux");
+
+    let wrapper = $('.campaign_page_HERO_wrap');
     let footer = $("footer");
     let footerOffset = footer.offset().top;
-    let footerHeight = footer.outerHeight();
+    let topBrowserFix = 0;
+
+    if (isEmulation){
+      topBrowserFix = 0;
+    } 
+    
+    if (isChrome){
+      topBrowserFix = ctaHeight;
+    }
+
+    if (isSafari){
+      topBrowserFix = ctaHeight/2;
+    }
+    
+    let stickToFooter = footerOffset - windowHeight + ctaHeight - topBrowserFix;
 
     $(window).scroll(function() {
-      let scrollPos = $(window).scrollTop();
-      let stickToFooter = footerOffset - windowHeight;
+
+      let scrollPos = $(this).scrollTop(); 
 
       if (scrollPos >= stickToFooter) {
         // Stick to the footer
-        let offsetTop = footerHeight - ctaHeight;
         cta.css({ position: "absolute", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
-      } else if (scrollPos >= startStick) {
-        // Stick to the bottom of the viewport
-        cta.css({ position: "fixed", bottom: 0, left: 0, width: "100%", padding: "16px 40px" });
+        wrapper.css('padding-bottom', ctaHeight);
       } else {
         // Unstick
         cta.css({ position: "", top: "", bottom: "", left: "", width: "", padding: "" });
+        wrapper.css('padding-bottom', 'inital');
       }
     });
   }
