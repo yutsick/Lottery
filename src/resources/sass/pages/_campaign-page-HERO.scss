@@ -548,12 +548,12 @@ $mobileBreakpoint: 460px;
       left: 0;
       background: #f2f5f7;
       padding: 16px;
-      z-index: 3;
+      z-index: 3; 
 
       &.stick {
         position: fixed;
         bottom: 0;
-        padding: 16px 40px;
+        padding: 16px;
         box-sizing: border-box;
        // margin-top: auto;
       }
