@@ -1023,6 +1023,7 @@ $mobile-small:390px;
           height: 39%;
           padding-bottom: 4px;
           justify-content: space-between;
+          gap: 0px;
           @media (max-width: $mobile){
            margin-top: 30px; 
           }
@@ -1030,7 +1031,6 @@ $mobile-small:390px;
 
       }
       .reg_lott_container{
-        gap: 0px;
         @media (max-width: $mobile){
           margin-top: 15px;
           .reg_lott-btn{
