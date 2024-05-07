@@ -979,7 +979,7 @@ $mobile-small:390px;
       .register_lott_wrapper {
         gap:0;
         justify-content: start;
-        padding: 40px 20px 30px;
+        padding: 52px 20px 30px;
         justify-content: space-between;
 
         @media (max-width: $mobile){
@@ -991,14 +991,18 @@ $mobile-small:390px;
         span {
           text-align: center;
           &.d-mob-none{
+            line-height: 20px;
+            width: 385px;
             @media (max-width: $mobile){
              margin-top: 20px;
+             width: unset;
             }
           }
         }
 
         h1{
           letter-spacing: 0.01em;
+          line-height: 35px;
           // margin-bottom: 12px;
           @media (max-width: $mobile){
            margin-top: 16px; 
@@ -1006,9 +1010,9 @@ $mobile-small:390px;
           strong{
             font-size: 56px;
             color:#50B78D;
+            line-height: 50px;
             @media (max-width: $mobile){
              font-size: 40px;
-             line-height: 40px; 
             }
           }
           
@@ -1016,6 +1020,9 @@ $mobile-small:390px;
         .reg_lott_result-container{
           padding: 0 20px;
           margin-top: 0px;
+          height: 39%;
+          padding-bottom: 4px;
+          justify-content: space-between;
           @media (max-width: $mobile){
            margin-top: 30px; 
           }
@@ -1023,6 +1030,7 @@ $mobile-small:390px;
 
       }
       .reg_lott_container{
+        gap: 0px;
         @media (max-width: $mobile){
           margin-top: 15px;
           .reg_lott-btn{
