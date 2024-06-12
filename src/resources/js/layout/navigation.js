@@ -51,7 +51,7 @@ export default function () {
 		$('#side-menu, #user-menu, #mobile__overlay').css('height', `${Math.max(document.body.scrollHeight, document.body.offsetHeight, window.innerHeight)}px`); 
 	// } else {
 		
-	// 	$('#side-menu, #user-menu, #mobile__overlay').css({
+	// 	$('#side-menu, #user-menu, #mobile__ove,rlay').css({
 	// 		'height':'100%',
 	// 		'overflow-y':'scroll'
 	// 	});

@@ -908,6 +908,8 @@
 
             &__list {
                 margin-top: 20px;
+                // position: absolute;
+                // width: calc(100% - 32px);
 
                 ul {
                     list-style-type: none;
@@ -965,6 +967,7 @@
                     &.submenu {
                         position: relative;
                         cursor: pointer;
+                        height: fit-content;
 
                         .menu__list-item__title {
                             &:after {
