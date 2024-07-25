@@ -1,0 +1,96 @@
+
+	<div class="block-promotion block-promotion--wallet block-promotion--wallet-toggle h-100">
+		<div class="block-promotion__header no-flex
+			@@if(context.color === 'blue'){ block-promotion--color-blue}
+			js-toggle-content @@if(context.active){js-is-active}" data-content="@@id">
+			@@if(context.content_title){
+			<h4 class="block-promotion__header-title">@@content_title </h4>
+			}
+
+
+
+		</div>
+
+		<div class="block-promotion__content js-toggle-content @@if(context.active){js-is-visible}" id="@@id">
+			@@if(context.content_text){
+			<p class="block-promotion__text">@@content_text</p>
+			}
+
+			<ul class="wallet-money">
+				@@if(context.id == "wallet"){
+					@@loop('blocks/wallet-list/_wallet-item.html', [
+						{
+							"icon": './assets/img/icons/icon-contanter.svg',
+							"label": "Kontanter",
+							"value": "1000kr",
+							"tooltip": true,
+							"tooltip_text": "Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för."
+						},
+						{
+							"icon": './assets/img/icons/icon-bonus.svg',
+							"label": "Bonus",
+							"value": "200kr",
+							"tooltip": true,
+							"tooltip_text": "Bonus är pengar som du har fått av oss och som du kan använda för att spela för."
+						},
+						{
+							"icon": './assets/img/icons/icon-VINST.svg',
+							"label": "Vinstvärde",
+							"value": "500kr",
+							"tooltip": true,
+							"tooltip_text": "Vinstvärde är pengar som du har vunnit och som du kan använda för att spela för."
+						},
+						
+						{
+							"icon": "",
+							"label": "Totalt",
+							"value": "1 700kr",
+							"tooltip": false,
+						}
+					])
+				}
+
+				@@if (context.id == "account") {
+					@@loop('blocks/wallet-list/_wallet-item.html', [
+						{	"icon": "./assets/img/icons/icon-saldo.svg",
+							"label": "Saldo",
+							"value": "1 500kr",
+							"tooltip": false,
+						}
+					])
+				}
+			</ul>
+			<div class="line-color @@if(context.background === 'color'){ line-color__@@background_color} "></div>
+			@@if(context.id == "wallet") {
+			<div class="block-promotion__action-btns tablet-colors tablet-visible">
+				@@if(context.primary_button_text) {
+				<button id="make-deposit" type="button" class="block-promotion__action-btn btn btn-primary"
+						data-toggle="modal" data-target="#modal-make-deposit">@@primary_button_text</button>
+				}
+				@@if(context.secondary_button_text) {
+				<button id="make-withdrawal" type="button" class="block-promotion__action-btn btn btn-secondary"
+						data-toggle="modal" data-target="#modal-make-withdrawal">@@secondary_button_text</button>
+				}
+			</div>
+			<div class="block-promotion__action-btns tablet-colors mobile-visible">
+				@@if(context.primary_button_mobile_text) {
+				<button data-toggle="tab" href ="#depo" data-target="#deposit" role="tab" id="" type="button" class="block-promotion__action-btn btn btn-primary">@@primary_button_mobile_text</button>
+				}
+				@@if(context.secondary_button_mobile_text) {
+				<button id="" data-toggle="tab" href ="#withdraw" data-target="#deposit" role="tab"  type="button" class="block-promotion__action-btn btn btn-secondary">@@secondary_button_mobile_text</button>
+				}
+			</div>
+			}
+
+			@@if(context.id == "account") {
+			<div class="block-promotion__action-btns">
+				@@if(context.primary_button_text) {
+				<a class="block-promotion__action-btn btn btn-primary" href="/" >@@primary_button_text</a>
+				}
+				@@if(context.secondary_button_text) {
+				<a class="block-promotion__action-btn btn btn-secondary" href="/" >@@secondary_button_text</a>
+				}
+			</div>
+			}
+		</div>
+	</div>

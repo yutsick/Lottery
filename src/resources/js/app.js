@@ -77,6 +77,7 @@ import gameLimitModal from "./components/gameLimitModal.js";
 import bonuskodsFunctionen from "./components/bonuskods-functionen";
 import campaignPageHero from "./components/campaign-page-HERO.js";
 import subscriptionPopup from "./components/subscription-popup";
+import spelkonto from "./components/spelkonto";
 import registerLottV2 from "./components/register-lott-v2";
 
 
@@ -198,11 +199,14 @@ $(function () {
 	breakpointListener();
 	gameLimitModal();
 	bonuskodsFunctionen();
+
 	
 });
-subscriptionPopup();
+// subscriptionPopup();
 campaignPageHero();
+spelkonto();
 registerLottV2();
+
 /**
  * Flickity Extension to handle custom styles on third from active slide.
  **/

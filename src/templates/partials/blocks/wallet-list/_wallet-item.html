@@ -1,4 +1,17 @@
 <li class="wallet__list-item">
-    <p class="wallet__item wallet__label">@@label</p>
+    <p class="wallet__item wallet__label">
+        <span class="icon__wrapper">
+            <img src="@@icon" alt="" class="icon">
+        </span>
+        
+        @@label
+        @@if(context.tooltip){
+            <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="@@tooltip_text">
+                i
+            </span>
+        }
+    </p>
     <p class="wallet__item wallet__value">@@value</p>
+  
+
 </li>

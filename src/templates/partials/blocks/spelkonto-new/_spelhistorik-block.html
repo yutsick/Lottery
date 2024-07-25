@@ -1,0 +1,428 @@
+<section id="spelhistorik" class="tab-pane" role="tabpanel">
+    <div class="table-section block block-content block-prenumerationer">
+        @@include('blocks/spelkonto-new/_block-header.html', {
+            "screen_name": "min Spelhistorik",
+            "title": "Spelhistorik",
+            "class":"dynamic-text",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        })
+        <div class="row equal-height">
+            <div class="col-xs-12 ">
+                <div class=" block-white h-100 px-4 py-8"> 
+                    <div class="table-section block block-content block-spelhistorik mb-0 m-0">
+
+                     
+                    
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="table-wrapper" role="tabpanel">
+                                    <div class="form-group responsive-table-filter  d-flex justify-between mb-0">
+                                        <select id="tableSelectHistorik" class="table-select form-control" name="tableSelect1" role="tablist">
+                                            <option value="" data-title ="Spelhistorik" data-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >Välj historik</option>
+                                            <option value="account-1" data-title ="Registrerade lotter" data-text="Registrerade lotter text" data-toggle="">Registrerade lotter</option>
+                                            <option value="account-2" data-title ="Onlinespel" data-text="Onlinespel text" data-toggle="onlinespel">Onlinespel</option>
+                                            <option value="account-3"  data-title ="Jackpottandelar" data-text="Jackpottandelar text" data-toggle="">Jackpottandelar</option>
+                                            <option value="account-4" data-title ="Andra Chansen" data-text="Andra Chansen text" data-toggle="">Andra Chansen</option>
+                                            <option value="" data-title ="Bonusar" data-text="Bonusar text" data-toggle="bonusar">Bonusar</option>
+
+                                        </select>
+                                        <div class="table-pane tab-pane toggle onlinespel " id="onlinespel">                              
+                                            <div class="d-flex align-items-center gap-4">
+                                                <div class="filter-name me-2">Filter</div>
+                                                
+
+                                                <select id="" class="table-select form-control" name="">
+                                                    <option>Alla spel</option>
+                                                    <option>link</option>
+                                                    <option>link</option>
+                                                    <option>link</option>
+                                                    <option>link</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="table-pane tab-pane toggle bonusar " id="bonusar">                              
+                                            <div class="d-flex align-items-center gap-4">
+                                                <div class="filter-name me-2">Visa: </div>
+                                                
+                                                <select id="spelTip" class="table-select form-control" name="">
+                                                    <option>Välj historik</option>
+                                                    <option>Registrerade lotter</option>
+                                                    <option>Onlinespel</option>
+                                                    <option>Jackpottandelar</option>
+                                                    <option>Andra Chansen</option>
+                                                    <option>Bonusar</option>
+
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                    
+                    
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="table-pane  tab-pane" id="account-1" role="tabpanel">
+
+                                    <table class="responsive-table modern">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-none font-bold">Tidpunkt</th>
+                                                <th class="bg-none font-bold">Product</th>
+                                                <th class="bg-none font-bold text-right">Urfall</th> 
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody id="account-wallet-table-data" data-total-items="8">
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+      
+                                                <td data-header="Urfall" class="text-right font-bold text-green">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+                                                <td data-header="Urfall" class="text-right ">105 kr</td>
+                             
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+      
+                                                <td data-header="Urfall" class="text-right font-bold text-green">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+                                                <td data-header="Urfall" class="text-right">105 kr</td>
+                             
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+                                                <td data-header="Urfall" class="text-right">105 kr</td>
+                             
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+      
+                                                <td data-header="Urfall" class="text-right font-bold text-green">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+      
+                                                <td data-header="Urfall" class="text-right font-bold text-green">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Product">Miljonlotten</td>
+                                                <td data-header="Urfall" class="text-right">105 kr</td>
+                             
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                    
+                                    <div class="entity-collection-actions">
+                                        <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                                            href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                                    </div>
+                                </div>
+                                <div class="table-pane  tab-pane" id="account-2" role="tabpanel">
+                                    <p class="table__title-block">Spelplånbok</p>
+                                    <table class="responsive-table modern">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-none font-bold">Tidpunkt</th>
+                                                <th class="bg-none font-bold">Speltyp</th>
+                                                <th class="bg-none font-bold">Visa spelet</th>
+                                                <th class="bg-none font-bold text-right">Pris</th>
+                                                <th class="bg-none font-bold text-right">Utfall </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody id="account-wallet-table-data" data-total-items="8">
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Miljonlotten</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">20 kr</td>
+                                                <td data-header="Utfall" class="text-right">0 kr </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Jippi</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">50 kr</td> 
+                                                <td data-header="Utfall" class="text-right text-green font-bold">100 kr </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Jippi</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">0 kr (Bonus)</td>
+                                                <td data-header="Utfall" class="text-right">0 kr </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Miljonlotten</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">0 kr (Spelkupong)</td> 
+                                                <td data-header="Utfall" class="text-right text-green font-bold">100 kr </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Miljonlotten</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">20 kr</td>
+                                                <td data-header="Utfall" class="text-right">0 kr </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Jippi</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">50 kr</td> 
+                                                <td data-header="Utfall" class="text-right text-green font-bold">100 kr </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Jippi</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">0 kr (Bonus)</td>
+                                                <td data-header="Utfall" class="text-right">0 kr </td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                                                <td data-header="Speltyp">Miljonlotten</td>
+                                                <td data-header="Visa spelet" class="link">Visa</td>
+                                                <td data-header="Pris" class="text-right">0 kr (Spelkupong)</td> 
+                                                <td data-header="Utfall" class="text-right text-green font-bold">100 kr </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                    
+                                    <div class="entity-collection-actions">
+                                        <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                                            href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                                    </div>
+                                </div>
+                                <div class="table-pane  tab-pane" id="account-3" role="tabpanel">
+                                    <p class="table__title-block">Spelplånbok</p>
+                                    <table class="responsive-table modern">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-none font-bold">Dragning</th>
+                                                <th class="bg-none font-bold">Datum</th>
+                                                <th class="bg-none font-bold text-right">Antal andelar</th> 
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody id="account-wallet-table-data" data-total-items="8">
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning">Miljonjackpott X</td>
+                                                <td data-header="Datum">2024-06-01 – 2024-06-31</td>
+      
+                                                <td data-header="Antal andelar" class="text-right">100 kr</td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                    
+                                    <div class="entity-collection-actions">
+                                        <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                                            href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                                    </div>
+                                </div>
+                                <div class="table-pane  tab-pane" id="account-4" role="tabpanel">
+                                    <p class="table__title-block">Spelplånbok</p>
+                                    <table class="responsive-table modern">
+                                        <thead>
+                                            <tr>
+                                                
+                                                <th class="bg-none"><span class="font-bold">Dragning (Gäller lotter registrerade t.o.m.)</span> </th>
+                                                <th class="bg-none font-bold">Onlinelotter</th>
+                                                <th class="bg-none font-bold">Prenumerationslotter</th>
+                                                <th class="bg-none font-bold text-right">Resultat</th> 
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody id="account-wallet-table-data" data-total-items="8">
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right">Dragning ej genomförd</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right">Tyvärr ingen vinst/td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right">Tyvärr ingen vinst/td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right font-bold text-green text-underline">Vinst: Presentkort/td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right">Tyvärr ingen vinst/td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right">Tyvärr ingen vinst/td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right">Tyvärr ingen vinst/td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Dragning (Gäller lotter registrerade t.o.m.)"><span class="font-bold">2024-04-16</span> (2024-05-31)</td>
+                                                <td data-header="Onlinelotter">0 st X</td>
+                                                <td data-header="Prenumerationslotter">6 st</td>
+      
+                                                <td data-header="Resultat" class="text-right">Tyvärr ingen vinst/td>
+                                            </tr>
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                    
+                                    <div class="entity-collection-actions">
+                                        <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                                            href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                                    </div>
+                                </div>
+                                <div class="table-pane  tab-pane" id="account-5" role="tabpanel">
+                                    <p class="table__title-block">Bonusar</p>
+                                    <table class="responsive-table modern">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-none font-bold">Bonus</th>
+                                                <th class="bg-none font-bold">Utnyttjad/Förfallen</th>
+                                                <th class="bg-none font-bold text-right">Status</th> 
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody id="account-wallet-table-data" data-total-items="8">
+                                            <tr>
+                                                <td data-header="Bonus">Miljonjackpott X</td>
+                                                <td data-header="Utnyttjad/Förfallen">2024-06-01 – 2024-06-31/td>
+      
+                                                <td data-header="Status" class="text-right ">Använd</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Bonus">Miljonjackpott X</td>
+                                                <td data-header="Utnyttjad/Förfallen">2024-06-01 – 2024-06-31/td>
+      
+                                                <td data-header="Status" class="text-right ">Använd</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Bonus">Miljonjackpott X</td>
+                                                <td data-header="Utnyttjad/Förfallen">2024-06-01 – 2024-06-31/td>
+      
+                                                <td data-header="Status" class="text-right ">Använd</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Bonus">Miljonjackpott X</td>
+                                                <td data-header="Utnyttjad/Förfallen">2024-06-01 – 2024-06-31/td>
+      
+                                                <td data-header="Status" class="text-right ">Använd</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Bonus">Miljonjackpott X</td>
+                                                <td data-header="Utnyttjad/Förfallen">2024-06-01 – 2024-06-31/td>
+      
+                                                <td data-header="Status" class="text-right ">Använd</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-header="Bonus">Miljonjackpott X</td>
+                                                <td data-header="Utnyttjad/Förfallen">2024-06-01 – 2024-06-31/td>
+      
+                                                <td data-header="Status" class="text-right ">Använd</td>
+                                            </tr>
+                                            
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                    
+                                    <div class="entity-collection-actions">
+                                        <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                                            href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                                    </div>
+                                </div>
+                    
+
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

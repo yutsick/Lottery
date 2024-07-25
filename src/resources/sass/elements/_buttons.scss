@@ -76,6 +76,11 @@
 			cursor: default;
 		}
 	}
+	&.btn-outline{
+		background-color: transparent;
+		border: solid 2px $color-primary;
+		color: $color-primary;
+	}
 }
 
 .btn-target,

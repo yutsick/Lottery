@@ -1,0 +1,29 @@
+@@include('layout/_header.html', {
+    "class": "page-front logged-in",
+    "logged_in": true,
+    "sub_menu": false,
+    })
+
+    @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+    <div class="ml-2017" id="konto-new">
+        @@include('blocks/spelkonto-new/_konto-menu.html', {  })
+        @@include('blocks/spelkonto-new/_spelkonto-main.html', {  })
+    </div>
+
+    
+    <script>
+
+
+        const listItems = document.querySelectorAll('.block-vinster .responsive-table tbody tr');
+        console.log(listItems.length);
+        for (let i = 2; i < listItems.length; i += 4) {
+            console.log(i);
+            // Check if y is an integer
+                listItems[i].classList.add('highlight');
+                listItems[i+1].classList.add('highlight');
+            
+        }
+
+    </script>
+
+    @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })

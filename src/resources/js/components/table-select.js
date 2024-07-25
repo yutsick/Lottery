@@ -15,12 +15,68 @@ export default function () {
 	// }
 
 	// Show selected table
-	$('.table-select') .on('select2:select', function (evt) {
-		var choice = evt.params.data.id;
 
-		if (choice) {
+
+    // $('#tableSelectHistorik').select2({
+    //   templateResult: function(option) {
+    //     if (!option.id) {
+    //       return option.text;
+    //     }
+    //     console.log($(option.element).data);
+    //     var $option = $(
+    //       '<span data-toggle="'  + $(option.element).data('toggle') + '" data-text="' + $(option.element).data('text') + '">' + option.text + '</span>'
+    //     );
+  
+    //     return $option;
+    //   },
+    //   templateSelection: function(option) {
+    //     if (!option.id) {
+    //       return option.text;
+    //     }
+  
+    //     var $option = $(
+    //        '<span data-toggle="'  + $(option.element).data('toggle') + '" data-text="' + $(option.element).data('text') + '">' + option.text + '</span>'
+    //     );
+  
+    //     return $option;
+    //   }
+    // });
+
+    $('#spelkontomenu').on('select2:select', function (evt) {
+     let choice = evt.params.data.id;
+     if (choice) {
 			$('#' + choice).addClass('table-pane--active').siblings('.table-pane').removeClass('table-pane--active');
 		}
+    });
+	$('.table-select') .on('select2:select', function (evt) {
+		var choice = evt.params.data.id;
+    let selectedOption = evt.params.data.element;
+    let $selectedOption = $(selectedOption);
+    let titleChange= $selectedOption.data('title');
+    let descChange= $selectedOption.data('text');
+    let toggle = $selectedOption.data('toggle');
+    let defaultDescription = $('.block-desc.dynamic-text').data('text-default');
+
+		if (choice) {
+			$('#' + choice).addClass('active').siblings('.tab-pane').removeClass('active');
+		}
+
+    if (toggle) {
+      $('.toggle.table-pane').removeClass('table-pane--active');
+      $('#' + toggle).addClass('table-pane--active');
+      
+    } else {
+        $('.toggle.table-pane').removeClass('table-pane--active');
+      }
+    
+    if (descChange) {
+      $('.block-title.dynamic-text').text(titleChange);
+      $('.block-desc.dynamic-text').text(descChange);
+    } else {
+      $('.block-desc.dynamic-text').text(defaultDescription);
+      $('.block-title.dynamic-text').text('Spelhistorik');
+    }
+
 	});
   
     $('.menu_bingoguide-tabs>li>a').click( function(){
@@ -92,7 +148,11 @@ export default function () {
          $($(this).data('target')).addClass('desctop__active active');
       }); 
   
-  
+  $('#konto-new #spelkonto [data-target]').on('click', function(e){
+    let target = $(this).attr('href');
+    let switchTo = $(this).data('target');
+    $(`${switchTo}`).find(`[href="${target}"]`).trigger('click');
+  });
   
   
 

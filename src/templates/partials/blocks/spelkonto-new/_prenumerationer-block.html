@@ -1,0 +1,244 @@
+<section id="prenumerationer" class="tab-pane" role="tabpanel">
+    <div class="table-section block block-content block-prenumerationer">
+        @@include('blocks/spelkonto-new/_block-header.html', {
+            "screen_name": "Mitt konto",
+            "title": "Prenumerationer",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        })
+        <a class="js-hide-section" href="/"><i class="icon icon-chevron-left"></i> Kontohistorik</a>
+            <div class="invoices ">
+                <div class="invoice block-white m-0">
+                    <div class="invoice__values">
+                        <div class="invoice__header">
+                            <span class="invoice__icon invoice__icon--warning">!</span>
+                            <div class="invoice__status">
+                                <h3>Obetald faktura</h3>
+                            </div>
+                        </div>
+                        <div class="flex-auto">
+                            <table class="responsive-table modern">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-none font-bold">förfallodatum</th>
+                                        <th class="bg-none font-bold">OCR</th>
+                                        <th class="bg-none font-bold">Bank-Giro</th>
+                                        <th class="bg-none font-bold">Summa</th>
+                                        <th class="bg-none font-bold"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="account-wallet-table-data" data-total-items="4">
+                                    <tr class="expanded">
+                                        <td data-header="förfallodatum" class="text-red font-bold">2024-05-30</td>
+                                        <td data-header="OCR">1012345678900</td>
+                                        <td data-header="Bank-Giro" class="">5688-8050</td>
+                                        <td data-header="Summa" class="">300 kr</td>
+                                        <td data-header="" class="text-right"><a href="#" class="link">Visa Fakturakopia</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="row equal-height">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch mt-6">
+                <div class=" block-white h-100"> 
+                    <h4 class="block-promotion__header-title">Mina Prenumerationer</h4>
+                    <table class="responsive-table modern">
+                        <thead>
+                            <tr>
+                                <th class="bg-none font-bold">Produkt</th>
+                                <th class="bg-none font-bold">antal lotter</th>
+                                <th class="bg-none font-bold">pris</th>
+                                <th class="bg-none font-bold">Leveranssätt</th>
+                                <th class="bg-none"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="account-wallet-table-data" data-total-items="5">
+                            <tr>
+                                <td data-header="Produkt">Idag 14:01</td>
+                                <td data-header="Lotter">Köp</td>
+                                <td data-header="Pris" class="">135kr</td>
+                                <td data-header="Bonus" class="">108.96kr</td>
+                                <td data-header="Vinstvärde" class="text-right"><a href="#"class="link-nord">Ändra</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="offer">
+                        <div class="offer__wrapper align-items-center">
+                            <div class="d-flex align-items-center">
+                                <span class="invoice__icon invoice__icon--success mr-4">!</span>
+                                <div class="offer__header">
+                                
+                                    <h3 class="offer__title">Erbjudande</h3>
+                                    <p class="offer__description m-0">Byt till autogiro idag – få 300 kr!</p>
+                                </div>
+                            </div>
+                            <div class="offer__footer">
+                                <a href="#" class="btn btn-primary">Byt nu</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+
+                <div class="table-wrapper table-pane tab-pane" id="account-prizes" role="tabpanel">
+                    <div class="form-group responsive-table-filter">
+                        <label class="table__label" for="tableSelect">Visa:</label>
+                        <select id="tableSelect" class="table-select form-control" name="tableSelect">
+                            <option value="history" id="accountHistory">Kontohistorik</option>
+                            <option value="expiration-date" id="accountExpirationDate">Förfallodatum</option>
+                        </select>
+                    </div>
+
+                    <div id="history" class="table-pane table-pane--active tab-pane" role="tabpanel">
+                        <p class="table__title-block">Vinstkonto</p>
+                        <table class="responsive-table modern">
+                            <thead>
+                                <tr>
+                                    <th class="bg-none">Tidpunkt</th>
+                                    <th class="bg-none">Typ</th>
+                                    <th class="bg-none">Belopp</th>
+                                    <th class="bg-none">Saldo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="account-prizes-table-data" data-total-items="12">
+                                <tr>
+                                    <td data-header="Tidpunkt">Idag 14:01</td>
+                                    <td data-header="Typ">Köp</td>
+                                    <td data-header="Belopp">- 250kr</td>
+                                    <td data-header="Saldo">85kr</td>
+                                </tr>
+                                <tr>
+                                    <td data-header="Tidpunkt">Igår 12:00</td>
+                                    <td data-header="Typ">Köp</td>
+                                    <td class="highlight" data-header="Belopp">+ 50kr</td>
+                                    <td data-header="Saldo">80kr</td>
+                                </tr>
+                                <tr>
+                                    <td data-header="Tidpunkt">Igår 11:59</td>
+                                    <td data-header="Typ">Köp</td>
+                                    <td class="highlight" data-header="Belopp">+ 150kr</td>
+                                    <td data-header="Saldo">60kr</td>
+                                </tr>
+                                <tr>
+                                    <td data-header="Tidpunkt">2017-10-27</td>
+                                    <td data-header="Typ">Köp</td>
+                                    <td class="highlight" data-header="Belopp">+ 250kr</td>
+                                    <td data-header="Saldo">50kr</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="entity-collection-actions">
+                            <a class="btn btn-primary" data-target="#account-prizes-table-data"
+                                href="/ajax/account-history/account-prizes.html">Visa fler</a>
+                        </div>
+                    </div>
+                    <div id="expiration-date" class="table-pane tab-pane" role="tabpanel">
+                        <p class="table__title-block">Förfallodatum</p>
+                        <table class="responsive-table ">
+                            <thead>
+                                <tr>
+                                    <th>Förfaller</th>
+                                    <th>Belopp</th>
+                                </tr>
+                            </thead>
+                            <tbody id="account-due-dates-table-data" data-total-items="12">
+                                <tr>
+                                    <td data-header="Förfaller">Idag 14:01</td>
+                                    <td data-header="Belopp">250kr</td>
+                                </tr>
+                                <tr>
+                                    <td data-header="Förfaller">Igår 12:00</td>
+                                    <td data-header="Belopp">50kr</td>
+                                </tr>
+                                <tr>
+                                    <td data-header="Förfaller">Igår 11:59</td>
+                                    <td data-header="Belopp">150kr</td>
+                                </tr>
+                                <tr>
+                                    <td data-header="Förfaller">2017-10-27</td>
+                                    <td data-header="Belopp">250kr</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="entity-collection-actions">
+                            <a class="btn btn-primary" data-target="#account-due-dates-table-data"
+                                href="/ajax/account-history/account-due-dates.html">Visa fler</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch mt-6">
+                <div class="block-white h-100">
+                    <h4 class="block-promotion__header-title">Mina fakturor</h4>
+                    <table class="responsive-table modern has-hidden">
+                        <thead>
+                            <tr>
+                                <th class="bg-none font-bold">förfallodag</th>
+                                <th class="bg-none font-bold">Belopp</th>
+                                <th class="bg-none font-bold">produkt</th>
+                                <th class="bg-none font-bold">Status</th>
+                                <th class="bg-none"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="account-wallet-table-data" data-total-items="8">
+
+                            
+                            <tr class="expanded">
+                                <td data-header="förfallodag">2024-05-30</td>
+                                <td data-header="Belopp">300 kr</td>
+                                <td data-header="produkt" class="">Miljonlotten</td>
+                                <td data-header="Status" class="font-bold">Betald</td>
+                                <td data-header="Vinstvärde" class="text-right"><a href="#" data-text-toggle="Visa mindre" class="link-nord js-toggle-row">Visa mer</a></td>
+
+                            </tr>
+                            <tr class="bg-none hidden-row" style="display: none;">
+                                <td colspan="2"><strong>OCR: </strong>0012345678901</td>
+                                <td data-header="cc" colspan="3" class="text-right"><a href="#" class="">Visa fakturakopia</a></td>
+                            </tr>
+                            <tr>
+                                <td data-header="förfallodag">2024-05-30</td>
+                                <td data-header="Belopp">300 kr</td>
+                                <td data-header="produkt" class="">Miljonlotten</td>
+                                <td data-header="Status" class="font-bold text-red">Obetald</td>
+                                <td data-header="Vinstvärde" class="text-right"><a href="#" data-text-toggle="Visa mindre" class="link-nord js-toggle-row">Visa mer</a></td>
+
+                            </tr>
+                            <tr class="bg-none hidden-row" style="display: none;">
+                                <td colspan="2"><strong>OCR: </strong>0012345678901</td>
+                                <td colspan="3" class="text-right"><a href="#" class="">Visa fakturakopia</a></td>
+                            </tr>
+                            <tr>
+                                <td data-header="förfallodag">2024-05-30</td>
+                                <td data-header="Belopp">300 kr</td>
+                                <td data-header="produkt" class="">Miljonlotten</td>
+                                <td data-header="Status" class="font-bold">Betald</td>
+                                <td data-header="Vinstvärde" class="text-right"><a href="#" data-text-toggle="Visa mindre" class="link-nord js-toggle-row">Visa mer</a></td>
+
+                            </tr>
+                            <tr class="bg-none hidden-row" style="display: none;">
+                                <td colspan="2"><strong>OCR: </strong>0012345678901</td>
+                                <td colspan="3" class="text-right"><a href="#" class="">Visa fakturakopia</a></td>
+                            </tr>
+
+              
+                        </tbody>
+                    </table>
+
+                    <div class="entity-collection-actions">
+                        <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                            href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+        
+    </div>
+
+</section>

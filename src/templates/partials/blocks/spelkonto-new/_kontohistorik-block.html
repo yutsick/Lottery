@@ -1,0 +1,182 @@
+<div class="table-section section block block-content block-kontohistorik">
+    <h2 class="section__heading h3">Kontohistorik</h2>
+    <a class="js-hide-section" href="/"><i class="icon icon-chevron-left"></i> Kontohistorik</a>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="table-wrapper" role="tabpanel">
+                <div class="form-group responsive-table-filter  d-flex justify-between">
+                    <select id="tableSelect1" class="table-select form-control" name="tableSelect1" role="tablist">
+                        <option value="account-wallet">Spelplånbok</option>
+                        <option value="account-prizes">Vinstkonto</option>
+                    </select>
+                    <select id="tableSelect1" class="table-select form-control">
+                        <option value="">Senaste månaden</option>
+                        <option value="">Lorem ipsum</option>
+                    </select>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-xs-12">
+            <div class="table-pane table-pane--active tab-pane" id="account-wallet" role="tabpanel">
+                <p class="table__title-block">Spelplånbok</p>
+                <table class="responsive-table modern">
+                    <thead>
+                        <tr>
+                            <th class="bg-none font-bold">Tidpunkt</th>
+                            <th class="bg-none font-bold">Typ</th>
+                            <th class="bg-none font-bold text-right">Kontanter
+                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+                                    i
+                                </span>
+                            </th>
+                            <th class="bg-none font-bold text-right">Bonus
+                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+                                    i
+                                </span>
+                            </th>
+                            <th class="bg-none font-bold text-right">Vinstvärde
+                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+                                    i
+                                </span>
+                            </th>
+                            <th class="bg-none font-bold text-right">Saldo <span class="regular">(varav kontanter)</span>
+                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+                                    i
+                                </span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="account-wallet-table-data" data-total-items="8">
+                        <tr>
+                            <td data-header="Tidpunkt">Idag 14:01</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right">135kr</td>
+                            <td data-header="Bonus" class="text-right">108.96kr</td>
+                            <td data-header="Vinstvärde" class="text-right">500kr</td>
+                            <td data-header="Belopp" class="text-right"><span class="text-bold">1 700 kr </span> (1 600 kr)</td>
+                        </tr>
+                        <tr>
+                            <td data-header="Tidpunkt">Igår 12:00</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right">105kr</td>
+                            <td data-header="Bonus" class="text-right">-</td>
+                            <td data-header="Vinstvärde" class="text-right">500kr</td>
+                            <td data-header="Belopp" class="text-right"><span class="text-bold">1 700 kr </span> (1 600 kr)</td>
+                        </tr>
+                        <tr>
+                            <td data-header="Tidpunkt">Igår 11:59</td>
+                            <td data-header="Typ" class="vinst"><span>Vinst </span>(100 kr)</td>
+                            <td data-header="Kontanter" class="text-right">135kr</td>
+                            <td data-header="Bonus" class="text-right">108.96kr</td>
+                            <td data-header="Vinstvärde" class="text-right">-</td>
+                            <td data-header="Belopp" class="text-right">100 kr</td>
+                        </tr>
+                        <tr>
+                            <td data-header="Tidpunkt">2017-10-27</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right">135kr</td>
+                            <td data-header="Bonus" class="text-right">-</td>
+                            <td data-header="Vinstvärde" class="text-right">-</td>
+                            <td data-header="Belopp" class="text-right"> 250kr</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="entity-collection-actions">
+                    <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                        href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                </div>
+            </div>
+
+            <div class="table-wrapper table-pane tab-pane" id="account-prizes" role="tabpanel">
+                <div class="form-group responsive-table-filter">
+                    <label class="table__label" for="tableSelect">Visa:</label>
+                    <select id="tableSelect" class="table-select form-control" name="tableSelect">
+                        <option value="history" id="accountHistory">Kontohistorik</option>
+                        <option value="expiration-date" id="accountExpirationDate">Förfallodatum</option>
+                    </select>
+                </div>
+
+                <div id="history" class="table-pane table-pane--active tab-pane" role="tabpanel">
+                    <p class="table__title-block">Vinstkonto</p>
+                    <table class="responsive-table modern">
+                        <thead>
+                            <tr>
+                                <th class="bg-none">Tidpunkt</th>
+                                <th class="bg-none">Typ</th>
+                                <th class="bg-none">Belopp</th>
+                                <th class="bg-none">Saldo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="account-prizes-table-data" data-total-items="12">
+                            <tr>
+                                <td data-header="Tidpunkt">Idag 14:01</td>
+                                <td data-header="Typ">Köp</td>
+                                <td data-header="Belopp">- 250kr</td>
+                                <td data-header="Saldo">85kr</td>
+                            </tr>
+                            <tr>
+                                <td data-header="Tidpunkt">Igår 12:00</td>
+                                <td data-header="Typ">Köp</td>
+                                <td class="highlight" data-header="Belopp">+ 50kr</td>
+                                <td data-header="Saldo">80kr</td>
+                            </tr>
+                            <tr>
+                                <td data-header="Tidpunkt">Igår 11:59</td>
+                                <td data-header="Typ">Köp</td>
+                                <td class="highlight" data-header="Belopp">+ 150kr</td>
+                                <td data-header="Saldo">60kr</td>
+                            </tr>
+                            <tr>
+                                <td data-header="Tidpunkt">2017-10-27</td>
+                                <td data-header="Typ">Köp</td>
+                                <td class="highlight" data-header="Belopp">+ 250kr</td>
+                                <td data-header="Saldo">50kr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="entity-collection-actions">
+                        <a class="btn btn-secondary" data-target="#account-prizes-table-data"
+                            href="/ajax/account-history/account-prizes.html">Visa fler</a>
+                    </div>
+                </div>
+                <div id="expiration-date" class="table-pane tab-pane" role="tabpanel">
+                    <p class="table__title-block">Förfallodatum</p>
+                    <table class="responsive-table ">
+                        <thead>
+                            <tr>
+                                <th>Förfaller</th>
+                                <th>Belopp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="account-due-dates-table-data" data-total-items="12">
+                            <tr>
+                                <td data-header="Förfaller">Idag 14:01</td>
+                                <td data-header="Belopp">250kr</td>
+                            </tr>
+                            <tr>
+                                <td data-header="Förfaller">Igår 12:00</td>
+                                <td data-header="Belopp">50kr</td>
+                            </tr>
+                            <tr>
+                                <td data-header="Förfaller">Igår 11:59</td>
+                                <td data-header="Belopp">150kr</td>
+                            </tr>
+                            <tr>
+                                <td data-header="Förfaller">2017-10-27</td>
+                                <td data-header="Belopp">250kr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="entity-collection-actions">
+                        <a class="btn btn-secondary" data-target="#account-due-dates-table-data"
+                            href="/ajax/account-history/account-due-dates.html">Visa fler</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

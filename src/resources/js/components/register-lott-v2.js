@@ -251,4 +251,5 @@ export default function () {
     $('.reg_lott-btn:not(.register_lott_popup-body--1 .reg_lott-btn, .register_lott_popup-body--cancel .reg_lott-btn)').text('Registrera lott')
   }
 
+
 }

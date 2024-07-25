@@ -1,0 +1,12 @@
+$primary: rgb(7, 70, 88);
+$primary-lighter: rgba(7, 70, 88, 0.75);
+$primary-light: rgba(7, 70, 88, 0.5);
+$primary-disable: rgba(7, 70, 88, 0.25);
+$grey: rgba(118, 149, 158, 1);
+$grey-light: rgba(118, 149, 158, 0.5);
+#konto-new{
+    background-color: #EFF3F5;
+    @import 'menu';
+    @import 'common';
+    @import 'spelkonto';
+}

@@ -1,0 +1,117 @@
+<section class="section block block-content tab-pane active" id="spelkonto" role="tabpanel">
+        @@include('blocks/spelkonto-new/_block-header.html', {
+            "screen_name": "Mitt konto",
+            "title": "Mitt spelkonto",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        })
+       
+    <div class="row equal-height tab-content">
+        <div class="mobile-togglers">
+      
+            <ul class="buttons-list buttons-list__two" role="tablist" aria-orientation="horizontal"> 
+                <li data-toggle="tab" href ="#sp" class="active" role="tab">
+                    <a href=""  class="nav-link ">
+                    
+                        <span class="text">Spelplånbok</span>
+                    </a>
+                </li>
+                <li data-toggle="tab" href ="#vk" class="" role="tab">
+                    <a href=""  class="nav-link ">
+                    
+                        <span class="text">Vinstkonto</span>
+                    </a> 
+                </li>
+            </ul>
+        </div>
+        <div class="tab-pane active col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch block-promotion__wrapper" id="sp" role="tabpanel" >
+            @@include('blocks/promotion/block/_promotion-wallet-toggle-new.html', {
+            "id": "wallet",
+            "background": "color",
+            "background_color": "lightorange",
+            "content_title": "Spelplånbok",
+            "content_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "content_pris": "500 kr",
+            "active": true,
+            "primary_button_text": "Sätt in pengar",
+            "secondary_button_text": "Ta ut pengar",
+            "primary_button_mobile_text": "Sätt in pengar",
+            "secondary_button_mobile_text": "Överföring",
+            }) 
+        </div>
+     
+        <div class="tab-pane col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch block-promotion__wrapper" id="vk" role="tabpanel" >
+            @@include('blocks/promotion/block/_promotion-wallet-toggle-new.html', {
+            "id": "account",
+            "background": "color",
+            "background_color": "lightpink",
+            "content_title": "Vinstkonto",
+            "content_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "content_pris": "444 kr",
+            "active": true,
+            "content_image": "assets/img/mockup/symbol_vinstkontot.svg",
+            "primary_button_text": "Hämta ut vinst"
+            })
+        </div>  
+    </div>
+ 
+    <div class="block block-wallet-transfer block--decoration">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <h4 class="block-wallet-transfer__title h4">Kontoöverföring</h4>
+                <p class="block-wallet-transfer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-12">
+                <div class="wallet_switch_transfer">
+                    <form class="wallet-transfer" data-toggle="validator" action="/spelkonto-v2.html" method="get"
+                        data-focus="false">
+                        <div class="wallet-switch">
+                            <div class="wallet-switch__switcher">
+                            <div class="wallet-switch__item-wrapper">
+                                <span class="wallet-switch__label">Från konto:</span>
+                                <p class="wallet-switch__item" data-account="Spelplånbok">
+                                    <span class="wallet-switch__account">Spelplånbok</span>
+                                    <span class="hidden-xs">(<span class="wallet-switch__balance"
+                                            data-balance="200">200</span>kr)</span>
+                                </p>
+                            </div>
+                            <button class="wallet-switch__btn js-wallet-switch">
+                                <img class="wallet-switch__icon" src="assets/img/icons/arrow-switch-primary.svg"
+                                    alt="Pilar för att växla mellan konto" width="19px" height="17px">
+                                <span class="sr-only">Växla konto</span>
+                            </button>
+                            <div class="wallet-switch__item-wrapper">
+                                <span class="wallet-switch__label">Till konto:</span>
+                                <p class="wallet-switch__item" data-account="Vinstkonto">
+                                    <span class="wallet-switch__account">Vinstkonto</span>
+                                    <span class="hidden-xs">(<span class="wallet-switch__balance"
+                                            data-balance="100">100</span>kr)</span>
+                                </p>
+                            </div>
+                        </div>
+                            <div class="inner-addon right-addon">
+                                <i class="icon icon-close js-action-empty-input"></i>
+                                <input max="150" class="wallet-transfer__amount form-control popover-control"
+                                    id="transferAmount" type="number" placeholder="Summa" required
+                                    aria-describedby="popover1">
+
+                            </div>
+                        </div>
+
+                        <div class="wallet-transfer__form-wrapper form-group">
+                            <button type="submit" class="wallet-transfer__submit btn btn-primary js-btn-success">För
+                                över</button>
+
+                        </div>
+
+
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    @@include('blocks/spelkonto-new/_kontohistorik-block.html', {   })
+</section>
+

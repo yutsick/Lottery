@@ -1,0 +1,179 @@
+section {
+    padding-top: 64px;
+}
+
+.block {
+    &-hero--mini {
+        padding-left: 24px;
+        margin: 0 0 24px;
+    }
+
+    &-name {
+        font: 700 16px/18px $base-font-family;
+        text-transform: uppercase;
+        color: $primary-light;
+    }
+
+    &-title {
+        font: 700 32px/32px $apercu;
+        color: $primary;
+        margin-top: 16px;
+    }
+
+    &-desc {
+        font: 400 16px/20px $apercu;
+        color: $primary-lighter;
+        margin-top: 24px;
+    }
+
+
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.block-white {
+    background-color: #fff;
+    padding: 24px 24px 40px;
+    border-radius: 8px;
+
+    @media screen and (max-width: 1200px) {
+        padding: 24px 16px 40px;
+
+    }
+}
+
+.px-4 {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.py-8 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.font-semibold {
+    font-weight: 600 !important;
+
+}
+
+.font-bold {
+    font-weight: 700 !important;
+}
+
+hr.disabled {
+    border-top: 1px solid $primary-light;
+
+}
+
+.my-6 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.gap-8 {
+    gap: 32px;
+}
+
+.text-red {
+    color: #F56363;
+}
+
+.text-disabled {
+    color: $primary-light !important;
+}
+
+.link-nord,
+.link-nord:visited {
+    color: #1377B0;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.bg-none {
+    background: none;
+    background-color: transparent;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-green {
+    color: #41D6A0;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.link {
+    text-decoration: underline;
+    color: #1377B0;
+}
+
+.table-section {
+    border-bottom: none;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.mr-4 {
+    margin-right: 16px !important;
+
+}
+
+.pr-4 {
+    padding-right: 16px;
+}
+
+.mt-8 {
+    margin-top: 32px;
+}
+
+.mt-4 {
+    margin-top: 16px !important;
+}
+
+.mt-6 {
+    margin-top: 24px;
+}
+
+.responsive-table.modern {
+    thead {
+        th {
+            @media (min-width:768px) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+#konto-new {
+    li.select2-results__option.select2-results__option--highlighted[aria-selected="true"] {
+        background-color: transparent !important;
+        color: initial !important;
+      }
+}

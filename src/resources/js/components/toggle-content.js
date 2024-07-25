@@ -28,4 +28,7 @@ export default function () {
 			$content.addClass('js-is-visible');
 		}
 	});
+	
 }
+
+

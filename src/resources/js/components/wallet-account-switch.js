@@ -1,12 +1,12 @@
 export default function() {
-    $('.js-wallet-switch').bind('click', function () {
+    $('.js-wallet-switch').bind('click', function (e) {
+        e.stopImmediatePropagation();
         let $icon = $('.wallet-switch__icon');
-
         // Account
-        let $accountFirst = $(this).prev();
+        let $accountFirst = $(this).prev().find('.wallet-switch__item');
         let $accountFirstData = $accountFirst.data('account');
         let $accountFirstHtml = $accountFirst.find('.wallet-switch__account');
-        let $accountSecond = $(this).next();
+        let $accountSecond = $(this).next().find('.wallet-switch__item');
         let $accountSecondData = $accountSecond.data('account');
         let $accountSecondHtml = $accountSecond.find('.wallet-switch__account');
 
