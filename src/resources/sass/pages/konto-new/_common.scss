@@ -1,34 +1,68 @@
 section {
-    padding-top: 64px;
+    padding-top: 48px;
+    @media (max-width: 1024px) {
+        padding-top: 40px;
+        
+    }
 }
-
+.container{
+    @media (max-width: 1024px) {
+        padding: 0 20px;
+        
+    }
+}
 .block {
     &-hero--mini {
         padding-left: 24px;
-        margin: 0 0 24px;
+        margin: 0 0 40px;
+        @media screen and (max-width: 1200px) {
+            margin: 0 0 32px;
+            padding-left: 16px;
+            
+        }
+   
     }
 
     &-name {
         font: 700 16px/18px $base-font-family;
         text-transform: uppercase;
         color: $primary-light;
+        @media (max-width:1200px) {
+            display: none;
+            
+        }
     }
 
     &-title {
         font: 700 32px/32px $apercu;
         color: $primary;
         margin-top: 16px;
+        @media (max-width:768px) {
+            font: 700 24px/32px $apercu;
+            margin-top: 0;
+        }
     }
 
     &-desc {
         font: 400 16px/20px $apercu;
         color: $primary-lighter;
         margin-top: 24px;
+        @media (max-width:1024px) {
+            max-width: 674px;
+        }
+        @media (max-width:768px) {
+            font: 400 14px/20px $apercu;
+        }
     }
 
 
 }
-
+.entity-collection-actions{
+    margin-top: 24px;
+    .btn-secondary{
+        width: 140px;
+    }
+}
 .align-stretch {
     align-items: stretch;
 }
@@ -81,9 +115,7 @@ hr.disabled {
     gap: 32px;
 }
 
-.text-red {
-    color: #F56363;
-}
+
 
 .text-disabled {
     color: $primary-light !important;
@@ -131,15 +163,23 @@ hr.disabled {
 .table-section {
     border-bottom: none;
 }
-
+.pb-4{
+    padding-bottom: 24px;
+}
 .mb-0 {
     margin-bottom: 0;
+}
+
+.mb-4{
+    margin-bottom: 16px;
 }
 
 .m-0 {
     margin: 0;
 }
-
+.mr-2 {
+    margin-right: 8px !important;
+}
 .mr-4 {
     margin-right: 16px !important;
 
@@ -160,7 +200,9 @@ hr.disabled {
 .mt-6 {
     margin-top: 24px;
 }
-
+.text-red {
+    color: #F56363;
+}
 .responsive-table.modern {
     thead {
         th {
@@ -171,9 +213,90 @@ hr.disabled {
     }
 }
 
-#konto-new {
-    li.select2-results__option.select2-results__option--highlighted[aria-selected="true"] {
-        background-color: transparent !important;
-        color: initial !important;
-      }
+.tablet-hidden{
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+.desktop-hidden{
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+/* Hide the default checkbox */
+.toggle-switch input {
+    display: none;
+  }
+  
+  /* Create a custom toggle switch container */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 32px;
+  }
+  
+  /* Style the slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(360deg, #A0B6BF 27.5%, #8497A2 100%);
+    box-shadow: inset 0px -0.5px 4px #678A97;
+    transition: .4s;
+    border-radius: 27px;
+  }
+  
+  /* Style the slider when checked */
+  input:checked + .slider {
+    background: linear-gradient(360deg, #41D6A0 27.5%, #5AB393 100%);
+
+    box-shadow: 0px 0.5px 4px 0px #45685580 inset;
+  }
+  
+  /* Style the slider before (the circle) */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 28.35px;
+    width: 28px;
+    border-radius: 50%;
+    left: 2.5px;
+    bottom: 2px;
+    box-shadow: 0px 0.5px 4px 0px #0000004D, 0px 0px 8px 0px #FFFFFF80 inset;
+    background: linear-gradient(180deg, #FFFFFF 28.5%, #CDD6DB 100%);
+
+    transition: .4s;
+  }
+  
+  /* Move the circle to the right when checked */
+  input:checked + .slider:before {
+    transform: translateX(23px);
+  }
+
+
+  @media (min-width:1024px) {
+    .w-140{
+        width: 140px;
+       }
+   .w-160{
+    width: 160px;
+   }
+    .w-240{
+  width: 240px;
+    }
+    .w-270{
+    width: 270px;
+    }
+    .w-315{
+    width: 315px;
+    }
+    .w-460{
+        width: 460px;
+    }
+    
 }

@@ -9,3 +9,14 @@
 .select2-selection__placeholder {
     color: #444 !important;
 }
+.select2-container--default .select2-results__option{
+    color:rgba(7, 70, 88, 0.75);
+}
+.select2-container--default .select2-results__option[aria-selected]{
+    background-color: #fff;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected]{
+    background-color: rgb(255, 255, 255);
+    color:rgba(7, 70, 88, 0.75);
+    font-weight: 700;
+}

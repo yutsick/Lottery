@@ -53,14 +53,28 @@
             })
         </div>  
     </div>
- 
+    <div class="row desktop-hidden">
+    
+        <div class="col-xs-12 col-sm-12 col-lg-12 ">
+            <div class="px-4">
+                <h4 class="block-wallet-transfer__title h4">Kontoöverföring</h4>
+                <p class="block-wallet-transfer__text">Här kan du flytta medel mellan din spelplånbok och ditt vinstkonto.
+                    Funktionen fungerar även åt andra hållet, klicka på pilarna för att byta riktning.</p>
+            </div>
+        </div>
+    </div>
+     
+    
     <div class="block block-wallet-transfer block--decoration">
-        <div class="row">
+      
+        <div class="row tablet-hidden">
             <div class="col-xs-12 col-sm-12 col-lg-12">
                 <h4 class="block-wallet-transfer__title h4">Kontoöverföring</h4>
                 <p class="block-wallet-transfer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
+            
         </div>
+        <hr class="disabled tablet-hidden">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-lg-12">
                 <div class="wallet_switch_transfer">
@@ -69,7 +83,8 @@
                         <div class="wallet-switch">
                             <div class="wallet-switch__switcher">
                             <div class="wallet-switch__item-wrapper">
-                                <span class="wallet-switch__label">Från konto:</span>
+                                <span class="wallet-switch__label tablet-hidden">Från konto:</span>
+                                <span class="wallet-switch__label desktop-hidden">Från:</span>
                                 <p class="wallet-switch__item" data-account="Spelplånbok">
                                     <span class="wallet-switch__account">Spelplånbok</span>
                                     <span class="hidden-xs">(<span class="wallet-switch__balance"
@@ -82,7 +97,8 @@
                                 <span class="sr-only">Växla konto</span>
                             </button>
                             <div class="wallet-switch__item-wrapper">
-                                <span class="wallet-switch__label">Till konto:</span>
+                                <span class="wallet-switch__label tablet-hidden">Till konto:</span>
+                                <span class="wallet-switch__label desktop-hidden">Till:</span>
                                 <p class="wallet-switch__item" data-account="Vinstkonto">
                                     <span class="wallet-switch__account">Vinstkonto</span>
                                     <span class="hidden-xs">(<span class="wallet-switch__balance"
@@ -90,17 +106,30 @@
                                 </p>
                             </div>
                         </div>
+                        <div class="form-group mb-0">
+                            <p class="text-left p-0 m-0">
+                                <label for="withdrawalValue" class="text-uppercase tablet-hidden">Belopp att föra över:</label>
+                                <label for="withdrawalValue" class="text-uppercase desktop-hidden">Belopp:</label>
+                            </p>
                             <div class="inner-addon right-addon">
-                                <i class="icon icon-close js-action-empty-input"></i>
-                                <input max="150" class="wallet-transfer__amount form-control popover-control"
-                                    id="transferAmount" type="number" placeholder="Summa" required
-                                    aria-describedby="popover1">
-
+                                <i class="js-action-empty-input icon"><svg width="20" height="14"
+                                        viewBox="0 0 20 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 7L7 13L18.9972 1" stroke="#50B78D"
+                                            stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                                <input type="number" class="form-control font-bold" id="withdrawalValue"
+                                    required placeholder="Belopp">
                             </div>
                         </div>
-
+                        
+                        </div>
+                        
                         <div class="wallet-transfer__form-wrapper form-group">
-                            <button type="submit" class="wallet-transfer__submit btn btn-primary js-btn-success">För
+                            <hr class="disabled">
+                            <button type="submit" class=" btn btn-primary js-btn-success">För
                                 över</button>
 
                         </div>

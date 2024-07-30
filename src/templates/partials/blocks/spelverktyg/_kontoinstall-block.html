@@ -1,0 +1,243 @@
+<section class="section block block-content tab-pane " id="kontoinstall" role="tabpanel">
+    @@include('blocks/spelverktyg/_block-header.html', {
+        "screen_name": "inställningar",
+        "title": "Kontoinställningar",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    })
+    <div class="container p-0">
+        <div class="row equal-height">
+
+            <div class="col-xs-12 col-sm-6">
+                <div class="text-block bg-white profile">
+                    <div class="profile__header">Inloggningsuppgifter</div>
+
+                    <div class="profile__row">
+                        <div class="profile__label">Kundnummer</div>
+                        <div class="profile__input m-0">110001679538</div>
+                    </div>
+
+                    <div class="profile__row form-group has-feedback">
+                        <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                            <label class="profile__label">E-postadress</label>
+                            <div class="profile__input">
+                                <input type="email" data-required-error="Du måste fylla i detta fält."
+                                    data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med." placeholder="E-postadress" value="hello@hello.se" name="email" required disabled>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="profile__actions">
+                                <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+                                <button class="btn btn-link profile__submit text-red link mr-4" type="submit">Avbryt</button>
+                                <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="profile__row form-group has-feedback">
+                        <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                            <label class="profile__label">Lösenord</label>
+                            <div class="profile__input m-0">********</div>
+                                
+                            <div class="profile__actions">
+                                <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+                                <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+                                <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+                            </div>
+                            <div class="profile__multiple-input">
+                                <div class="profile__multiple-input--item">
+                                    <label>Nuvarande lösenord</label>
+                                    <input class="profile__multiple-input" type="password" id="currentPassword"
+                                            data-required-error="Du måste fylla i detta fält."
+                                            data-remote-error="Befintliga lösenordet är inte giltigt" name="currentPassword" placeholder="*******" value="" required  data-remote="/">
+                                </div>        
+                                <div class="profile__multiple-input--item">
+                                    <label>Nytt lösenord</label>
+                                    <input type="password" id="password" data-required-error="Du måste fylla i detta fält." name="password" value="" required disabled>
+                                </div>
+
+                                <div class="profile__multiple-input--item">
+                                    <label>Bekräfta lösenord</label>
+                                    <input type="password" id="confirmPassword" data-required-error="Du måste fylla i detta fält." data-match="#password" data-match-error="Lösenorden matchar ej" name="confirm-password" value="" required disabled>
+                                </div>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                           
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="text-block bg-white profile">
+                    <div class="profile__header">Kontaktuppgifter</div>
+
+                    <div class="profile__row">
+                        <div class="profile__label">Namn</div>
+                        <div class="profile__input">Stefan Jakobsson</div>
+                    </div>
+
+                    <div class="profile__row">
+                        <div class="profile__label">Adress</div>
+                        <div class="profile__input">Hvitfeldtsgatan 4, 411 20, Göteborg</div>
+                    </div>
+
+                    <div class="profile__row form-group has-feedback">
+                        <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                            <label class="profile__label">Telefonnummer</label>
+                            <div class="profile__input">
+                                <input type="tel"
+                                    data-required-error="Du måste fylla i detta fält."
+                                    placeholder="Ej angivet"
+                                    value="0701234567"
+                                    name="mobile"
+                                    required disabled>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="profile__actions">
+                                <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+                                <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+                                <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="profile__row form-group has-feedback">
+                        <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                            <label class="profile__label">Mobilnummer</label>
+                            <div class="profile__input">
+                                <input type="tel"
+                                    data-required-error="Du måste fylla i detta fält."
+                                    placeholder="Ej angivet"
+                                    value="0768232323"
+                                    name="mobile"
+                                    required disabled>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="profile__actions">
+                                <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+                                <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+                                <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <div class="text-block bg-white profile">
+                    <div class="profile__header">Profilinställningar</div>
+
+                        <div class="profile__row form-group has-feedback">
+                            <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                                <label class="profile__label">Chat-namn</label>
+                                <div class="profile__input">
+                                    <input type="text"
+                                        data-required-error="Du måste fylla i detta fält."
+                                        placeholder="Chat-namn"
+                                        value="DjPingo"
+                                        name="chat-name"
+                                        required disabled>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                                <div class="profile__actions">
+                                    <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+                                    <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+                                    <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="profile__row form-group has-feedback">
+                            <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                                <label class="profile__label">Nyhetsbrev</label>
+
+                                <div class="profile__input m-0">
+                                    <div class="d-flex items-center gap-30">
+                                        <div class="toggle d-flex items-center">
+                                            <span class="mr-2">E-post:</span>
+                                            <label class="toggle-switch m-0">
+                                                <input type="checkbox" />
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                        <div class="toggle d-flex items-center">
+                                            <span class="mr-2">SMS:</span>
+                                            <label class="toggle-switch m-0">
+                                                <input type="checkbox" />
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </div>  
+                                    <div class="help-block with-errors"></div>
+                                </div>
+
+                                
+                            </form>
+                        </div>
+                        <div class="profile__row form-group has-feedback">
+                            <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                                <label class="profile__label">Villkor</label>
+                                <div class="profile__input m-0">
+                                    Du har godkänt våra villkor
+                                </div>
+                                
+                            </form>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6">
+                <div class="text-block bg-white profile">
+                    <div class="profile__header">Utbetalningskonto</div>
+
+                        <div class="profile__row form-group has-feedback">
+                            <form action="/" method="post" data-toggle="validator" data-use-ajax>
+                                <label class="profile__label">Kontonummer</label>
+
+                                <div class="profile__input m-0">
+                                    0123 - 4567890
+                                </div>
+
+                                <div class="profile__actions">
+                                    <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+                                    <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+                                    <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+                                </div>
+                                <div class="profile__multiple-input">
+                                    <div class="profile__multiple-input--item">
+                                        <label>Clearingnr</label>
+                                        <input class="input-clearing"
+                                            type="text"
+                                            data-required-error="Du måste fylla i detta fält."
+                                            name="clearingnumber"
+                                            value=""
+                                            disabled
+                                            placeholder="NNNN"
+                                            maxlength="5"
+                                            pattern="[0-9]*">
+                                    </div>
+                                    <div class="profile__multiple-input--item">
+                                        <label>Kontonummer</label>
+                                        <input class="input-account"
+                                            type="text"
+                                            data-required-error="Du måste fylla i detta fält."
+                                            name="accountnumber"
+                                            value=""
+                                            placeholder="NNNNNNNNNN"
+                                            maxlength="10"
+                                            disabled pattern="[0-9]*">
+                                    </div>
+                                    <div class="profile__multiple-input--item notes">
+                                        <strong>Obs! </strong>Om din bank har 5-siffrigt clearingnummer fyller du bara i de fyra första. 12345 = 1234.
+                                        
+                                        
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

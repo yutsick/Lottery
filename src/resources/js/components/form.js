@@ -235,10 +235,19 @@ export default function () {
 
 	function toggle_profile_inputs() {
 		$('.js-update-profile-row').on('click', function () {
+			$('.js-update-profile-row').addClass('profile__row--disabled');
+			
 			let $currentRow = $(this).parents('.profile__row');
 			$currentRow.find('input').prop('disabled', false);
 			$currentRow.find('input').last().focusTextToEnd();
 			$currentRow.addClass('profile__row--active');
+		});
+
+		$('#kontoinstall .profile__submit').on('click', function () {
+			$('.js-update-profile-row').removeClass('profile__row--disabled');
+			let $currentRow = $(this).parents('.profile__row');
+			$currentRow.find('input').prop('disabled', true);
+			$currentRow.removeClass('profile__row--active');
 		});
 	}
 

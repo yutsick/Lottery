@@ -7,8 +7,8 @@
 	display: none !important; /* Always hide to avoid FOUC */
 
 	+ .select2 {
-		min-width: 200px;
-		font-family: $base-font-family;
+		min-width: 250px;
+		font-family: $apercu;
 
 		&.select2-container--open .select2-selection__arrow:before {
 			transform: rotate(180deg);
@@ -23,10 +23,11 @@
 
 			&:before {
 				font-family: $base-icon-family;
-				content: "\e906";
+				content: "";
 				display: block;
-				font-size: 20px;
-				color: $color-blue;
+				background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' viewBox='0 0 14 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1L7.12245 7L4.06122 4L1 1' stroke='%23074658' stroke-opacity='0.75' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+				width: 14px;
+				height: 8px;
 			}
 
 			b {
@@ -36,7 +37,7 @@
 		}
 
 		.select2-selection {
-			height: 44px;
+			height: 40px;
 			padding: 5px;
 			border-radius: 4px;
 			border: $form-border-width solid $color-input-border;
@@ -47,12 +48,18 @@
 				outline: 0;
 				border-color: $color-input-border-focus;
 			}
+			&--single{
+				display: flex;
+				align-items: center;
+			}
 		}
 
 		.select2-selection__rendered {
-			font-weight: $bold;
+			font-weight: 700;
 			vertical-align: middle;
-			line-height: 32px;
+			line-height: 22px;
+			font-size: 16px;
+
 
 			span {
 				padding-top: $padding-small;
@@ -60,3 +67,4 @@
 		}
 	}
 }
+

@@ -156,6 +156,15 @@
     display: inline-block;
 
 }
+#spelkonto{
+    .block-hero--mini{
+          @media screen and (max-width: 768px) {
+        display: none;
+        
+    }
+    }
+  
+}
 #deposit{
     .mobile-togglers{
         margin: 0 4px;
@@ -290,29 +299,52 @@
         display: flex;
         gap: 40px;
         align-items: center;
-        @media (min-width: 1024px) {
+        @media (max-width:1024px) {
             align-items: flex-end;
             justify-content: center;
+            width: 100%;
         }
     }
 
-    .wallet-switch,
-    .wallet-transfer {
-        flex: 1 1;
-    }
+
     .wallet-transfer{
         align-items: flex-end;
+         @media (max-width:1024px) {
+                width: 100%;
+            }
+
         &__form-wrapper{
         text-align: center;
-        @media (min-width:992px) {
+           hr{
+            @media (min-width:1024.88px) {
+                display: none;
+                
+            }
+           }
+        @media (min-width:1024px) {
             width: fit-content;
         }
     }
+    button.btn{
+        @media (max-width: 1024px) {
+            width: 213px;
+            
+        }
+    }
 }
+    .right-addon{
+        @media (max-width: 1024px) {
+            flex:1 1;
+        }
+    }
     .wallet-switch {
         align-items: flex-end;
         gap:24px;
-        justify-content: center;
+        justify-content: flex-start;
+        @media (max-width: 1024px) {
+            width: 100%;
+             
+         }
         @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
@@ -321,19 +353,40 @@
             }
             
         }
+        label{
+            margin: 0;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.02rem;
+            @media screen and (max-width: 1024px) {
+                color: $primary-lighter;
+                
+            }
+        }
+        .form-group{
+            flex:1 1;
+        }
         &__item-wrapper {
-            flex: 1 1;
+            width: 232px;
+            @media (max-width: 992px) {
+                width: 190px;
+          
+                
+            }
         }
         &__switcher{
             display: flex;
-            flex:1 1;
+            @media (min-width:992px) and (max-width:1024px) {
+                flex:1 1;
+            }
+         
         }
         &__item {
             width: 100%;
             color: $primary-lighter;
             display: flex;
             align-items: center;
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
                 border:none;
                 position: relative;
                 padding-left: 0;
@@ -362,7 +415,7 @@
                 border-radius: 100%;
                 margin-right: 8px;
                 background-color: #F09F54;
-                @media (max-width: 768px) {
+                @media (max-width: 1024px) {
                     border-radius: 0;
                     width: 100%;
                     height: 4px;
@@ -385,9 +438,9 @@
             letter-spacing: 0.01em;
             color: $primary;
             text-transform: uppercase;
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
                 color:$primary-lighter;
-                font-weight: 600;
+                font-weight: 700;
                 font-size: 14px;
                 
             }
@@ -402,14 +455,23 @@
         .hidden-xs {
             font-weight: 400;
             margin-left: 4px;
+            @media (min-width: 768px) and (max-width: 1024px) {
+                display: none;
+                
+            }
         }
 
     }
 
     .wallet-transfer {
 
-        justify-content: start;
+        justify-content: flex-start;
         gap: 40px;
+        @media (max-width: 1024px) {
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
 
         input {
             &::placeholder {
@@ -433,6 +495,28 @@
         }
     }
 }
+
+#prenumerationer{
+    .invoices{
+        margin-bottom: 40px;
+        .invoice{
+            padding: 13px 16px 0;
+            .expanded{
+                border-bottom: none;
+                td{
+                    line-height: 18px;
+                }
+            }
+            &__status{
+                h3{
+                   font-family: $apercu; 
+                }
+                
+            }
+        }
+    }
+}
+
 .justify-between{
     justify-content: space-between;
 }
@@ -460,6 +544,34 @@
             }
         }
     }
+    .block-hero--mini{
+        @media (max-width: 1024px) {
+            margin: 0 0 24px;
+            
+        }
+    }
+    .block-promotion__header-title{
+        @media (max-width:768px) {
+            font:700 20px/32px $apercu;
+        }
+    }
+}
+.block-spelhistorik{
+    .responsive-table-filter{
+        margin-bottom: 16px;
+        @media (max-width:768px) {
+            margin-bottom: 8px;
+            
+        }
+       
+    }
+     select{
+            width: 280px;
+            height: 40px;
+        }
+    .table-select + .select2 .select2-selection{
+        height: 48px;
+    }
 }
 .block-vinster{
     .responsive-table.modern tbody tr:nth-of-type(n+2){
@@ -473,6 +585,64 @@
     tr.highlight{
         background-color: #EAF3F9 !important;
     }
+
+    .block-hero--mini{
+        @media (max-width: 1024px) {
+            margin: 0 0 24px;
+            
+        }
+    }
+
+    .desktop-hidden{
+       .block-promotion__header-title{
+        margin-left: 27px;
+
+            @media (max-width:768px) {
+                font:700 20px/32px $apercu;
+                margin-left: 16px;
+            }
+        
+       }
+       .block-white{
+            margin-top: 24px;
+            @media (max-width:768px) {
+                padding: 26px 16px 40px;
+                margin-top: 16px;
+            }
+       }
+       .t-heading{
+            text-transform: uppercase;
+            font: 700 12px/16px $base-font-family;
+            color: $primary;
+       }
+       .order-article{
+            display: flex;
+            flex-direction: column;
+            gap:12px;
+            &~div{
+                color: $primary-lighter;
+            }
+                @media (max-width:768px) {
+                gap:0;
+                flex:0.8 1;
+            }
+            p{
+                font: 400 14px/16px $apercu;
+                color: $primary-lighter;
+            }
+       }
+       .order-detailes{
+            display: flex;
+            flex-direction: column;
+            gap:16px;
+            padding-top: 16px;
+            border-top: dashed 1px $primary-light; 
+            font: 400 14px/16px $apercu;
+            color: $primary-lighter;
+    
+       }
+    }
+
 }
 .responsive-table{
     &.modern{
@@ -488,10 +658,11 @@
                 font-weight: 400;
             }
             th{
+                padding: 13px;
                 @media (max-width:1200px) {
                     font-size: 12px;
                     line-height: 12px;
-                    padding: 20px 16px;
+                    
                     // white-space: wrap;
                 }
                 .tooltip-icon-info{
@@ -508,6 +679,8 @@
             td{
                  font-weight: 400;
                 font-size: 14px;
+                line-height: 32px;
+                padding: 13px;
                 @media screen and (max-width: 1200px) {
                     font-size: 12px;
                     line-height: 12px;
@@ -611,9 +784,7 @@
     flex:1 1;
 }
 
-.pb-4{
-    padding-bottom: 24px;
-}
+
 
 .offer{
     background-color: rgba(80, 183, 141, 0.16);
