@@ -11,6 +11,11 @@
 }
 .select2-container--default .select2-results__option{
     color:rgba(7, 70, 88, 0.75);
+    @media screen and (max-width: 768px){
+        border-bottom: solid 1px rgba(131, 162, 171, 0.5);
+
+        
+    }
 }
 .select2-container--default .select2-results__option[aria-selected]{
     background-color: #fff;
@@ -19,4 +24,16 @@
     background-color: rgb(255, 255, 255);
     color:rgba(7, 70, 88, 0.75);
     font-weight: 700;
+}
+
+#konto-new{
+    .block-spelhistorik{
+       .table-select + .select2{
+        @media screen and (max-width: 768px){
+            width: 100% !important;
+            
+        }
+    } 
+    }
+    
 }

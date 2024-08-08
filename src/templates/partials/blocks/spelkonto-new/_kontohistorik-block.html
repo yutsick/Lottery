@@ -10,7 +10,7 @@
                         <option value="account-wallet">Spelplånbok</option>
                         <option value="account-prizes">Vinstkonto</option>
                     </select>
-                    <select id="tableSelect1" class="table-select form-control">
+                    <select id="tableSelect2" class="table-select form-control">
                         <option value="">Senaste månaden</option>
                         <option value="">Lorem ipsum</option>
                     </select>
@@ -21,7 +21,6 @@
         </div>
         <div class="col-xs-12">
             <div class="table-pane table-pane--active tab-pane" id="account-wallet" role="tabpanel">
-                <p class="table__title-block">Spelplånbok</p>
                 <table class="responsive-table modern">
                     <thead>
                         <tr>
@@ -49,43 +48,99 @@
                         </tr>
                     </thead>
                     <tbody id="account-wallet-table-data" data-total-items="8">
-                        <tr>
-                            <td data-header="Tidpunkt">Idag 14:01</td>
+                        <tr class="mb-py-2">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div> 135kr</td>
+                            <td data-header="Bonus" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>108.96kr</td>
+                            <td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>500kr</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div><span><strong>1 700 kr</strong> (1 600 kr)</span> </td>
+                        </tr>
+                        <tr class="mb-py-2">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Belopp<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>105kr</td>
+                            <td data-header="Bonus" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>-</td>
+                            <td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus & Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>500kr</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div><span><strong>1 700 kr</strong> (1 600 kr)</span> </td>
+                        </tr>
+                        <tr class="mb-py-2">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                            <td data-header="Typ"><span class="text-green"><strong>Vinst</strong> (100 kr)</span></td>
+                            <td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Belopp<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>135kr</td>
+                            <td data-header='Bonus' class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>108.96kr</td>
+                            <td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus & Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>-</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+                                i
+                            </span></div>100 kr</td>
+                        </tr>
+                        <tr class="tablet-hidden">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
                             <td data-header="Typ">Köp</td>
                             <td data-header="Kontanter" class="text-right">135kr</td>
-                            <td data-header="Bonus" class="text-right">108.96kr</td>
-                            <td data-header="Vinstvärde" class="text-right">500kr</td>
-                            <td data-header="Belopp" class="text-right"><span class="text-bold">1 700 kr </span> (1 600 kr)</td>
-                        </tr>
-                        <tr>
-                            <td data-header="Tidpunkt">Igår 12:00</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right">105kr</td>
                             <td data-header="Bonus" class="text-right">-</td>
-                            <td data-header="Vinstvärde" class="text-right">500kr</td>
-                            <td data-header="Belopp" class="text-right"><span class="text-bold">1 700 kr </span> (1 600 kr)</td>
-                        </tr>
-                        <tr>
-                            <td data-header="Tidpunkt">Igår 11:59</td>
-                            <td data-header="Typ" class="vinst"><span>Vinst </span>(100 kr)</td>
-                            <td data-header="Kontanter" class="text-right">135kr</td>
-                            <td data-header="Bonus" class="text-right">108.96kr</td>
                             <td data-header="Vinstvärde" class="text-right">-</td>
-                            <td data-header="Belopp" class="text-right">100 kr</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
                         </tr>
-                        <tr>
-                            <td data-header="Tidpunkt">2017-10-27</td>
+                        <tr class="tablet-hidden">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
                             <td data-header="Typ">Köp</td>
                             <td data-header="Kontanter" class="text-right">135kr</td>
                             <td data-header="Bonus" class="text-right">-</td>
                             <td data-header="Vinstvärde" class="text-right">-</td>
-                            <td data-header="Belopp" class="text-right"> 250kr</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
+                        </tr>
+                        <tr class="tablet-hidden">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right">135kr</td>
+                            <td data-header="Bonus" class="text-right">-</td>
+                            <td data-header="Vinstvärde" class="text-right">-</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
+                        </tr>
+                        <tr class="tablet-hidden">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right">135kr</td>
+                            <td data-header="Bonus" class="text-right">-</td>
+                            <td data-header="Vinstvärde" class="text-right">-</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
+                        </tr>
+                        <tr class="tablet-hidden">
+                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
+                            <td data-header="Typ">Köp</td>
+                            <td data-header="Kontanter" class="text-right">135kr</td>
+                            <td data-header="Bonus" class="text-right">-</td>
+                            <td data-header="Vinstvärde" class="text-right">-</td>
+                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div class="entity-collection-actions">
-                    <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                    <a class="btn btn-secondary" data-target=""
                         href="/ajax/account-history/account-wallet.html">Visa fler</a>
                 </div>
             </div>
@@ -112,7 +167,7 @@
                         </thead>
                         <tbody id="account-prizes-table-data" data-total-items="12">
                             <tr>
-                                <td data-header="Tidpunkt">Idag 14:01</td>
+                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
                                 <td data-header="Typ">Köp</td>
                                 <td data-header="Belopp">- 250kr</td>
                                 <td data-header="Saldo">85kr</td>
@@ -153,7 +208,7 @@
                         </thead>
                         <tbody id="account-due-dates-table-data" data-total-items="12">
                             <tr>
-                                <td data-header="Förfaller">Idag 14:01</td>
+                                <td data-header="Förfaller">2024-04-16 18:30</td>
                                 <td data-header="Belopp">250kr</td>
                             </tr>
                             <tr>
