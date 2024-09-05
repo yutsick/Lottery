@@ -35,7 +35,7 @@
                 <div class="modal-body">
                     <p class="">Minsta belopp är 50 kr. Ange ditt belopp nedan.</p>
                     <form id="make-deposit-modal" class="make-deposit" data-toggle="validator" action="/" method="get">
-                        <div class="form-group">
+                        <div class="form-group" data-tooltip="Belopp för högt.">
                             <p class="text-left p-0 m-0">
                                 <label for="depositValue" class="text-uppercase">Belopp:</label>
                             </p>
@@ -51,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group" data-tooltip="Belopp för högt.">
                             <button type="submit"
                                 class="btn btn-rosa  d-flex gap-4 align-items-center justify-content-center">Betala med
                                 <span class="d-flex align-items-center">
@@ -125,7 +125,7 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
+                                            <div class="form-group" data-tooltip="Belopp för högt.">
                                                 <p class="text-left p-0 m-0">
                                                     <label for="withdrawalValue" class="text-uppercase">Belopp att föra över:</label>
                                                 </p>
@@ -189,7 +189,7 @@
                             <form class="m-0" data-toggle="validator" action="/spelkonto-v2.html"
                                 method="get" data-focus="false">
 
-                                <div class="form-group">
+                                <div class="form-group" data-tooltip="Belopp för högt.">
                                     <p class="text-left p-0 m-0">
                                         <label for="withdrawalValue" class="text-uppercase mb-2">Belopp att ta ut:</label>
                                     </p>

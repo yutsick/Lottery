@@ -4,6 +4,68 @@ $primary-light: rgba(7, 70, 88, 0.5);
 $primary-disable: rgba(7, 70, 88, 0.25);
 $grey: rgba(118, 149, 158, 1);
 $grey-light: rgba(118, 149, 158, 0.5);
+
+.has-error{
+    position: relative;
+    &::after{
+      content: attr(data-tooltip); /* Replace with the actual tooltip message */
+      position: absolute;
+      top: -50px; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #F56363;
+      color: #fff;
+      padding: 15px 0px;
+      width: 220px;
+      border-radius: 8px;
+      white-space: nowrap;
+      font-size: 14px;
+      z-index: 1;
+      color: #074658;
+      font-weight: 450;
+      text-align: center;
+      font-family: $apercu;
+    }
+   
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: -11px; 
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 15px;
+        background-color: #F56363;
+        transform: translateX(-50%) rotate(45deg);
+      border-radius: 2px;
+    }
+    .form-control{
+        border-color: #F56363;
+    }
+    &.no-label{
+        &::after{
+            top: -65px;
+        }
+        &::before{
+            top:-25px;
+        }
+    }
+    &.right-0{
+        &::after{
+            left:100%;
+            width: 182px;
+            transform: translateX(-100%);
+        }
+        &::before{
+            left: unset;
+            right: 25%;
+            transform: translateX(0%) rotate(45deg);
+        }
+    }
+  }
+
+
 #konto-new{
     background-color: #EFF3F5;
     @import 'menu';
