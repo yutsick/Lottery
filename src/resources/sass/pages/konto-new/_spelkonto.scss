@@ -114,9 +114,13 @@
                     align-items: center;
 
                 }
+				& {
+					margin: 0;
+                    padding: 16px;
+				}
 
-				&{
-					padding-left: 16px;
+				&:last-child{
+					margin-bottom: 0;
 				}
 				.icon__wrapper {
 					margin-left: 0;
@@ -480,6 +484,7 @@
             width: 100%;
             color: $primary-lighter;
             display: flex;
+			min-height: 43px;
             align-items: center;
             @media (max-width: 1024px) {
                 border:none;
@@ -547,9 +552,14 @@
         }
 
         &__btn {
-            margin: 18px 24px 0;
+            margin: 24px 24px 0;
 
         }
+
+		&__account,
+		.hidden-xs  {
+			line-height: 1.3;
+		}
 
         .hidden-xs {
             font-weight: 400;
@@ -622,7 +632,7 @@
             margin-bottom: 16px;
         }
         .invoice{
-            padding: 13px 16px 0;
+            padding: 0 16px;
             .expanded{
                 border-bottom: none;
                 td{
@@ -925,7 +935,7 @@
                 font-weight: 400;
             }
             th{
-                padding: 13px;
+                padding: 16px 8px 8px;
                 @media (max-width:1200px) {
                     font-size: 12px;
                     line-height: 12px;
@@ -947,7 +957,7 @@
                  font-weight: 400;
                 font-size: 14px;
                 line-height: 32px;
-                padding: 13px;
+                padding: 12px 8px;
                 @media screen and (max-width: 1200px) {
                     font-size: 12px;
                     line-height: 12px;
