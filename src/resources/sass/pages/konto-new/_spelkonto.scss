@@ -187,6 +187,9 @@
     width: 12px;
     height: 12px;
     display: inline-block;
+	@media screen and (max-width: 991px) {
+		display: none;
+	}
 
 }
 #spelkonto{
