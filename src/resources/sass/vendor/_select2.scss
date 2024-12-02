@@ -1,4 +1,5 @@
 .select2-results__options {
+	font-family: 'Apercu Pro', sans-serif;
     max-height: 220px !important;
 }
 
@@ -14,7 +15,7 @@
     @media screen and (max-width: 768px){
         border-bottom: solid 1px rgba(131, 162, 171, 0.5);
 
-        
+
     }
 }
 .select2-container--default .select2-results__option[aria-selected]{
@@ -31,9 +32,9 @@
        .table-select + .select2{
         @media screen and (max-width: 768px){
             width: 100% !important;
-            
+
         }
-    } 
     }
-    
+    }
+
 }
