@@ -10,17 +10,12 @@ let showMoreLinks = document.querySelectorAll('.js-toggle-row');
             let row = link.closest('tr');
             let nextRow = row.nextElementSibling;
             if (nextRow && nextRow.classList.contains('hidden-row')) {
-				
-                if (nextRow.style.display === 'none' ) {
-                    if(nextRow.classList.contains('flex')){
-                        nextRow.style.display = 'flex';
-                    } else {
-                        nextRow.style.display = 'table-row';
-                    }
-                    link.textContent = link.getAttribute('data-text-toggle'); 
+                if (nextRow.classList.contains('js-active') === false) {
+                    nextRow.classList.add('js-active')
+                    link.textContent = link.getAttribute('data-text-toggle');
                 } else {
-                    nextRow.style.display = 'none';
-                    link.textContent = 'Visa mer'; 
+                    nextRow.classList.remove('js-active')
+                    link.textContent = 'Visa mer';
                 }
             }
         });
@@ -31,7 +26,7 @@ let showMoreLinks = document.querySelectorAll('.js-toggle-row');
             e.preventDefault();
             $('#withdrawConto').addClass('hidden');
             $('#withdrawContoChange').removeClass('hidden');
-            
+
         });
 
         $('#withdrawContoChange a.cancel').on('click', function(e) {
@@ -40,7 +35,7 @@ let showMoreLinks = document.querySelectorAll('.js-toggle-row');
             $('#withdrawConto').removeClass('hidden');
             $('#accountNr, #clearingNr').val('');
             $('#withdrawContoChange .js-action-empty-input').css('opacity', '0');
-            
+
         });
         $('#withdrawContoChange a.confirm').on('click', function(e) {
             e.preventDefault();
@@ -49,7 +44,7 @@ let showMoreLinks = document.querySelectorAll('.js-toggle-row');
         });
 
         $('.toggle-eye').on('click', function() {
-            
+
             let input = $(this).prev();
             console.log(input.attr('type'));
             if (input.attr('type') === 'password') {
@@ -66,10 +61,10 @@ let showMoreLinks = document.querySelectorAll('.js-toggle-row');
               `);
             }
           });
-          
+
     } catch (error) {
-        
+
     }
 
-    
+
 }
