@@ -170,6 +170,14 @@
                 display: none;
 
             }
+			@media screen and (max-width: 480px) {
+				flex-direction: column-reverse;
+				gap: 10px;
+
+				.btn {
+					width: 100%;
+				}
+			}
         }
     }
 }
