@@ -101,6 +101,12 @@
                     width: 32px;
                     margin-left: 16px;
                     display: inline-block;
+
+					&--empty {
+						@media screen and (max-width: 767px) {
+							display: none;
+						}
+					}
                 }
 
                 .wallet__label{
