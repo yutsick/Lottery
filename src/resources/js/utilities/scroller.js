@@ -8,16 +8,16 @@ export default function() {
     let didScroll;
     let lastScrollTop = 0;
     let availableBreakpoints = ['tiny', 'thumb'];
-    let $contentWrapper = $('.content-wrapper');
+    let $contentWrapper = $('.content-wrapper').first();
     let contentTop = $contentWrapper.position().top;
 
 //    console.log(topBarHeight);
     const isMobile = () => {
         return availableBreakpoints.indexOf(currentBreakpoint()) != -1;
     }
-    
+
     const hasScrolled = () => {
-        
+
         var scrollTop = $(window).scrollTop();
         if (scrollTop > lastScrollTop && scrollTop > contentTop){
             $top.addClass('top--animate');
@@ -38,7 +38,7 @@ export default function() {
                 }
             }
         }
-        
+
         lastScrollTop = scrollTop;
     }
 
@@ -62,7 +62,7 @@ export default function() {
     const currentBreakpoint = () => window.ML.store.breakpoint.getState().currentBreakpointName;
 
     window.ML.store.breakpoint.subscribe(() => {
-        topBarHeight = $top.outerHeight();
+		topBarHeight = $top.outerHeight();
         contentTop = $contentWrapper.position().top;
         if(!loaded) {
             loadScroller();
