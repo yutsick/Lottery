@@ -40,7 +40,7 @@
 							"tooltip": true,
 							"tooltip_text": "Vinstvärde är pengar som du har vunnit och som du kan använda för att spela för."
 						},
-						
+
 						{
 							"icon": "",
 							"label": "Totalt",
@@ -64,20 +64,20 @@
 			@@if(context.id == "wallet") {
 			<div class="block-promotion__action-btns tablet-colors tablet-visible">
 				@@if(context.primary_button_text) {
-				<button id="make-deposit" type="button" class="block-promotion__action-btn btn btn-primary"
+				<button id="make-deposit" type="button" class="block-promotion__action-btn btn btn-cta"
 						data-toggle="modal" data-target="#modal-make-deposit">@@primary_button_text</button>
 				}
 				@@if(context.secondary_button_text) {
-				<button id="make-withdrawal" type="button" class="block-promotion__action-btn btn btn-secondary"
+				<button id="make-withdrawal" type="button" class="block-promotion__action-btn btn btn-primary btn-outline"
 						data-toggle="modal" data-target="#modal-make-withdrawal">@@secondary_button_text</button>
 				}
 			</div>
 			<div class="block-promotion__action-btns tablet-colors mobile-visible">
 				@@if(context.primary_button_mobile_text) {
-				<button data-toggle="tab" href ="#depo" data-target="#deposit" role="tab" id="" type="button" class="block-promotion__action-btn btn btn-primary">@@primary_button_mobile_text</button>
+				<button data-toggle="tab" href ="#depo" data-target="#deposit" role="tab" id="" type="button" class="block-promotion__action-btn btn btn-cta">@@primary_button_mobile_text</button>
 				}
 				@@if(context.secondary_button_mobile_text) {
-				<button id="" data-toggle="tab" href ="#withdraw" data-target="#deposit" role="tab"  type="button" class="block-promotion__action-btn btn btn-secondary">@@secondary_button_mobile_text</button>
+				<button id="" data-toggle="tab" href ="#withdraw" data-target="#deposit" role="tab"  type="button" class="block-promotion__action-btn btn btn-primary btn-outline">@@secondary_button_mobile_text</button>
 				}
 			</div>
 			}

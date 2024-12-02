@@ -23,9 +23,9 @@
     &--wallet-toggle {
         background-color: #fff;
         border-radius: 8px;
-        padding: 24px 24px 40px;
+        padding: 24px 24px 32px;
         @media screen and (max-width: 1024px) {
-            padding: 24px 16px 40px;
+            padding: 24px 16px 32px;
             border-radius: 0 0 8px 8px;
 
         }
@@ -145,11 +145,6 @@
             margin: 32px 14px 0;
 
             &.tablet-colors{
-                .btn-primary{
-                    background-color: #D96195;
-                    color: #fff;
-
-                }
                 .btn-secondary{
                     background-color: transparent;
                     color: $primary;
@@ -174,21 +169,29 @@
             }
         }
         &.mobile-visible{
-            flex-direction: row-reverse;
-            justify-content: flex-end;
             @media screen and (min-width: 768px) {
                 display: none;
 
             }
 			@media screen and (max-width: 480px) {
-				flex-direction: column-reverse;
-				gap: 10px;
+				flex-direction: column;
+				gap: 16px;
+				max-width: 200px;
+				width: 100%;
+				margin-left: auto;
+				margin-right: auto;
+				padding-bottom: 0;
+				margin-bottom: 0;
 
 				.btn {
 					width: 100%;
 				}
 			}
         }
+
+		.btn {
+			min-height: 40px;
+		}
     }
 
 	&__table {

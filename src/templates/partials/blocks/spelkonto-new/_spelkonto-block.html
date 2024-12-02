@@ -4,22 +4,22 @@
             "title": "Mitt spelkonto",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         })
-       
+
     <div class="row equal-height tab-content">
         <div class="mobile-togglers">
-      
-            <ul class="buttons-list buttons-list__two" role="tablist" aria-orientation="horizontal"> 
+
+            <ul class="buttons-list buttons-list__two" role="tablist" aria-orientation="horizontal">
                 <li data-toggle="tab" href ="#sp" class="active" role="tab">
                     <a href=""  class="nav-link ">
-                    
+
                         <span class="text">Spelplånbok</span>
                     </a>
                 </li>
                 <li data-toggle="tab" href ="#vk" class="" role="tab">
                     <a href=""  class="nav-link ">
-                    
+
                         <span class="text">Vinstkonto</span>
-                    </a> 
+                    </a>
                 </li>
             </ul>
         </div>
@@ -33,12 +33,12 @@
             "content_pris": "500 kr",
             "active": true,
             "primary_button_text": "Sätt in pengar",
-            "secondary_button_text": "Ta ut pengar",
+            "secondary_button_text": "Uttagr",
             "primary_button_mobile_text": "Sätt in pengar",
-            "secondary_button_mobile_text": "Överföring",
-            }) 
+            "secondary_button_mobile_text": "Överföring/Uttag",
+            })
         </div>
-     
+
         <div class="tab-pane col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch block-promotion__wrapper" id="vk" role="tabpanel" >
             @@include('blocks/promotion/block/_promotion-wallet-toggle-new.html', {
             "id": "account",
@@ -51,10 +51,10 @@
             "content_image": "assets/img/mockup/symbol_vinstkontot.svg",
             "primary_button_text": "Hämta ut vinst"
             })
-        </div>  
+        </div>
     </div>
     <div class="row desktop-hidden mobile-hidden">
-    
+
         <div class="col-xs-12 col-sm-12 col-lg-12 ">
             <div class="px-4">
                 <h4 class="block-wallet-transfer__title h4">Kontoöverföring</h4>
@@ -63,16 +63,16 @@
             </div>
         </div>
     </div>
-     
-    
+
+
     <div class="block block-wallet-transfer block--decoration">
-      
+
         <div class="row tablet-hidden">
             <div class="col-xs-12 col-sm-12 col-lg-12">
                 <h4 class="block-wallet-transfer__title h4">Kontoöverföring</h4>
                 <p class="block-wallet-transfer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
-            
+
         </div>
         <hr class="disabled tablet-hidden">
         <div class="row">
@@ -124,9 +124,9 @@
                                     required placeholder="Summa">
                             </div>
                         </div>
-                        
+
                         </div>
-                        
+
                         <div class="wallet-transfer__form-wrapper form-group">
                             <hr class="disabled">
                             <button type="submit" class=" btn btn-primary js-btn-success">För
@@ -137,7 +137,7 @@
 
                     </form>
                 </div>
-                
+
             </div>
         </div>
     </div>
