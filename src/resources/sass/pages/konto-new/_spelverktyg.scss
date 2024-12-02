@@ -97,6 +97,39 @@
                 }
             }
         }
+		&__actions {
+			flex-shrink: 0;
+			position: relative;
+			top: 0;
+			right: 0;
+		}
+
+		&__form-top {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			@media screen and (max-width: 400px) {
+				flex-direction: column;
+			}
+		}
+		&__fieldset {
+			display: flex;
+			gap: 4px;
+			flex-wrap: wrap;
+			margin-right: auto;
+			.profile__input {
+				margin: 0;
+				@media screen and (max-width: 480px) {
+					width: 100%;
+				}
+				input {
+					width: 100%;
+					@media screen and (min-width: 481px) {
+						max-width: 220px;
+					}
+				}
+			}
+		}
         &__label{
             font:700 14px/32px $apercu;
             color: $primary;

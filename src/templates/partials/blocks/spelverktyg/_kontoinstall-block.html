@@ -18,17 +18,21 @@
 
                     <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
                         <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                            <label class="profile__label">E-postadress</label>
-                            <div class="profile__input">
-                                <input type="email" data-required-error="Du måste fylla i detta fält."
-                                    data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med." placeholder="E-postadress" value="hello@hello.se" name="email" required disabled>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="profile__actions">
-                                <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
-                                <button class="btn btn-link profile__submit text-red link mr-4" type="submit">Avbryt</button>
-                                <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
-                            </div>
+							<div class="profile__form-top">
+								<div class="profile__fieldset">
+									<label class="profile__label">E-postadress</label>
+									<div class="profile__input">
+										<input type="email" data-required-error="Du måste fylla i detta fält."
+											data-error="Detta är inte en korrekt e-postadress, det måste finnas ett @ med." placeholder="E-postadress" value="hello@hello.se" name="email" required disabled>
+										<div class="help-block with-errors"></div>
+									</div>
+							   </div>
+							   <div class="profile__actions">
+								   <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+								   <button class="btn btn-link profile__submit text-red link mr-4" type="submit">Avbryt</button>
+								   <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+							   </div>
+							</div>
                         </form>
                     </div>
 
@@ -37,7 +41,7 @@
                             <div class="active-px-3">
                                 <label class="profile__label m-0">Lösenord</label>
                                 <div class="profile__input m-0">********</div>
-                                    
+
                                 <div class="profile__actions">
                                     <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
                                     <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
@@ -53,15 +57,15 @@
                                     <svg class="toggle-eye" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 13.485C16.6205 13.485 20.6386 10.9857 22.6969 7.30435C21.6535 5.43455 20.1086 3.87308 18.2256 2.78512C16.3427 1.69715 14.1916 1.12312 12 1.12375C9.80838 1.12312 7.65733 1.69715 5.77436 2.78512C3.89139 3.87308 2.3465 5.43455 1.30309 7.30435C2.3465 9.17415 3.89139 10.7356 5.77436 11.8236C7.65733 12.9116 9.80838 13.4856 12 13.485ZM12 7.21511e-07C14.5059 -0.000811506 16.9612 0.684154 19.0839 1.97622C21.2065 3.26828 22.9105 5.11504 24 7.30435C22.9105 9.49366 21.2065 11.3404 19.0839 12.6325C16.9612 13.9245 14.5059 14.6095 12 14.6087C9.49412 14.6095 7.03882 13.9245 4.91615 12.6325C2.79347 11.3404 1.08951 9.49366 0 7.30435C1.08951 5.11504 2.79347 3.26828 4.91615 1.97622C7.03882 0.684154 9.49412 -0.000811506 12 7.21511e-07ZM12 2.24749C13.3824 2.24749 14.7082 2.78027 15.6857 3.72861C16.6632 4.67696 17.2124 5.96319 17.2124 7.30435C17.2124 8.64551 16.6632 9.93174 15.6857 10.8801C14.7082 11.8284 13.3824 12.3612 12 12.3612C10.6176 12.3612 9.29181 11.8284 8.31431 10.8801C7.3368 9.93174 6.78764 8.64551 6.78764 7.30435C6.78764 5.96319 7.3368 4.67696 8.31431 3.72861C9.29181 2.78027 10.6176 2.24749 12 2.24749ZM12 3.37124C10.9248 3.37124 9.89363 3.78562 9.13335 4.52322C8.37307 5.26082 7.94595 6.26122 7.94595 7.30435C7.94595 8.34747 8.37307 9.34788 9.13335 10.0855C9.89363 10.8231 10.9248 11.2375 12 11.2375C13.0752 11.2375 14.1064 10.8231 14.8666 10.0855C15.6269 9.34788 16.0541 8.34747 16.0541 7.30435C16.0541 6.26122 15.6269 5.26082 14.8666 4.52322C14.1064 3.78562 13.0752 3.37124 12 3.37124Z" fill="#003E52" fill-opacity="0.5"/>
                                     </svg>
-                                                
-                                </div>        
+
+                                </div>
                                 <div class="profile__multiple-input--item">
                                     <label class="m-0">Nytt lösenord</label>
                                     <input type="password" id="password" data-required-error="Du måste fylla i detta fält." name="password" value="" required disabled>
                                     <svg class="toggle-eye" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 13.485C16.6205 13.485 20.6386 10.9857 22.6969 7.30435C21.6535 5.43455 20.1086 3.87308 18.2256 2.78512C16.3427 1.69715 14.1916 1.12312 12 1.12375C9.80838 1.12312 7.65733 1.69715 5.77436 2.78512C3.89139 3.87308 2.3465 5.43455 1.30309 7.30435C2.3465 9.17415 3.89139 10.7356 5.77436 11.8236C7.65733 12.9116 9.80838 13.4856 12 13.485ZM12 7.21511e-07C14.5059 -0.000811506 16.9612 0.684154 19.0839 1.97622C21.2065 3.26828 22.9105 5.11504 24 7.30435C22.9105 9.49366 21.2065 11.3404 19.0839 12.6325C16.9612 13.9245 14.5059 14.6095 12 14.6087C9.49412 14.6095 7.03882 13.9245 4.91615 12.6325C2.79347 11.3404 1.08951 9.49366 0 7.30435C1.08951 5.11504 2.79347 3.26828 4.91615 1.97622C7.03882 0.684154 9.49412 -0.000811506 12 7.21511e-07ZM12 2.24749C13.3824 2.24749 14.7082 2.78027 15.6857 3.72861C16.6632 4.67696 17.2124 5.96319 17.2124 7.30435C17.2124 8.64551 16.6632 9.93174 15.6857 10.8801C14.7082 11.8284 13.3824 12.3612 12 12.3612C10.6176 12.3612 9.29181 11.8284 8.31431 10.8801C7.3368 9.93174 6.78764 8.64551 6.78764 7.30435C6.78764 5.96319 7.3368 4.67696 8.31431 3.72861C9.29181 2.78027 10.6176 2.24749 12 2.24749ZM12 3.37124C10.9248 3.37124 9.89363 3.78562 9.13335 4.52322C8.37307 5.26082 7.94595 6.26122 7.94595 7.30435C7.94595 8.34747 8.37307 9.34788 9.13335 10.0855C9.89363 10.8231 10.9248 11.2375 12 11.2375C13.0752 11.2375 14.1064 10.8231 14.8666 10.0855C15.6269 9.34788 16.0541 8.34747 16.0541 7.30435C16.0541 6.26122 15.6269 5.26082 14.8666 4.52322C14.1064 3.78562 13.0752 3.37124 12 3.37124Z" fill="#003E52" fill-opacity="0.5"/>
                                         </svg>
-                                        
+
                                 </div>
 
                                 <div class="profile__multiple-input--item">
@@ -70,12 +74,12 @@
                                     <svg class="toggle-eye" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 13.485C16.6205 13.485 20.6386 10.9857 22.6969 7.30435C21.6535 5.43455 20.1086 3.87308 18.2256 2.78512C16.3427 1.69715 14.1916 1.12312 12 1.12375C9.80838 1.12312 7.65733 1.69715 5.77436 2.78512C3.89139 3.87308 2.3465 5.43455 1.30309 7.30435C2.3465 9.17415 3.89139 10.7356 5.77436 11.8236C7.65733 12.9116 9.80838 13.4856 12 13.485ZM12 7.21511e-07C14.5059 -0.000811506 16.9612 0.684154 19.0839 1.97622C21.2065 3.26828 22.9105 5.11504 24 7.30435C22.9105 9.49366 21.2065 11.3404 19.0839 12.6325C16.9612 13.9245 14.5059 14.6095 12 14.6087C9.49412 14.6095 7.03882 13.9245 4.91615 12.6325C2.79347 11.3404 1.08951 9.49366 0 7.30435C1.08951 5.11504 2.79347 3.26828 4.91615 1.97622C7.03882 0.684154 9.49412 -0.000811506 12 7.21511e-07ZM12 2.24749C13.3824 2.24749 14.7082 2.78027 15.6857 3.72861C16.6632 4.67696 17.2124 5.96319 17.2124 7.30435C17.2124 8.64551 16.6632 9.93174 15.6857 10.8801C14.7082 11.8284 13.3824 12.3612 12 12.3612C10.6176 12.3612 9.29181 11.8284 8.31431 10.8801C7.3368 9.93174 6.78764 8.64551 6.78764 7.30435C6.78764 5.96319 7.3368 4.67696 8.31431 3.72861C9.29181 2.78027 10.6176 2.24749 12 2.24749ZM12 3.37124C10.9248 3.37124 9.89363 3.78562 9.13335 4.52322C8.37307 5.26082 7.94595 6.26122 7.94595 7.30435C7.94595 8.34747 8.37307 9.34788 9.13335 10.0855C9.89363 10.8231 10.9248 11.2375 12 11.2375C13.0752 11.2375 14.1064 10.8231 14.8666 10.0855C15.6269 9.34788 16.0541 8.34747 16.0541 7.30435C16.0541 6.26122 15.6269 5.26082 14.8666 4.52322C14.1064 3.78562 13.0752 3.37124 12 3.37124Z" fill="#003E52" fill-opacity="0.5"/>
                                         </svg>
-                                        
+
                                 </div>
                                 <div class="help-block with-errors"></div>
                             </div>
 
-                           
+
                         </form>
                     </div>
 
@@ -97,40 +101,48 @@
 
                     <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
                         <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                            <label class="profile__label">Telefonnummer</label>
-                            <div class="profile__input m-0">
-                                <input type="tel"
-                                    data-required-error="Du måste fylla i detta fält."
-                                    placeholder="Ej angivet"
-                                    value="0701234567"
-                                    name="mobile"
-                                    required disabled>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="profile__actions">
-                                <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
-                                <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
-                                <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+							<div class="profile__form-top">
+								<div class="profile__fieldset">
+									<label class="profile__label">Telefonnummer</label>
+									<div class="profile__input m-0">
+										<input type="tel"
+											data-required-error="Du måste fylla i detta fält."
+											placeholder="Ej angivet"
+											value="0701234567"
+											name="mobile"
+											required disabled>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="profile__actions">
+									<button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+									<button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+									<button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+								</div>
                             </div>
                         </form>
                     </div>
 
                     <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
                         <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                            <label class="profile__label">Mobilnummer</label>
-                            <div class="profile__input m-0">
-                                <input type="tel"
-                                    data-required-error="Du måste fylla i detta fält."
-                                    placeholder="Ej angivet"
-                                    value="0768232323"
-                                    name="mobile"
-                                    required disabled>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="profile__actions">
-                                <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
-                                <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
-                                <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+							<div class="profile__form-top">
+								<div class="profile__fieldset">
+									<label class="profile__label">Mobilnummer</label>
+									<div class="profile__input m-0">
+										<input type="tel"
+											data-required-error="Du måste fylla i detta fält."
+											placeholder="Ej angivet"
+											value="0768232323"
+											name="mobile"
+											required disabled>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="profile__actions">
+									<button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+									<button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+									<button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+								</div>
                             </div>
                         </form>
                     </div>
@@ -143,20 +155,24 @@
 
                         <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
                             <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                                <label class="profile__label">Chat-namn</label>
-                                <div class="profile__input">
-                                    <input type="text"
-                                        data-required-error="Du måste fylla i detta fält."
-                                        placeholder="Chat-namn"
-                                        value="DjPingo"
-                                        name="chat-name"
-                                        required disabled>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <div class="profile__actions">
-                                    <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
-                                    <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
-                                    <button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+								<div class="profile__form-top">
+									<div class="profile__fieldset">
+										<label class="profile__label">Chat-namn</label>
+										<div class="profile__input">
+											<input type="text"
+												data-required-error="Du måste fylla i detta fält."
+												placeholder="Chat-namn"
+												value="DjPingo"
+												name="chat-name"
+												required disabled>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+									<div class="profile__actions">
+										<button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
+										<button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
+										<button class="btn btn-link profile__submit link" type="submit"><strong>Spara</strong></button>
+									</div>
                                 </div>
                             </form>
                         </div>
@@ -181,11 +197,11 @@
                                                 <span class="slider"></span>
                                             </label>
                                         </div>
-                                    </div>  
+                                    </div>
                                     <div class="help-block with-errors"></div>
                                 </div>
 
-                                
+
                             </form>
                         </div>
                         <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
@@ -194,7 +210,7 @@
                                 <div class="profile__input m-0">
                                     Du har godkänt våra villkor
                                 </div>
-                                
+
                             </form>
                         </div>
                 </div>
@@ -214,7 +230,7 @@
                                             0123 - 4567890
                                         </div>
                                     </div>
-                                    
+
 
                                     <div class="profile__actions">
                                         <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
@@ -248,8 +264,8 @@
                                     </div>
                                     <div class="profile__multiple-input--item notes">
                                         <strong>Obs! </strong>Om din bank har 5-siffrigt clearingnummer fyller du bara i de fyra första. 12345 = 1234.
-                                        
-                                        
+
+
                                     </div>
                                     <div class="help-block with-errors"></div>
                                 </div>
