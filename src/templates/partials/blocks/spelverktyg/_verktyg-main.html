@@ -1,9 +1,13 @@
 <div class="content-wrapper ml-2017">
     <div class="my-pages container">
-        <div class="tab-content">
-            @@include('blocks/spelverktyg/_spelverktyg-block.html', {   })
-            @@include('blocks/spelverktyg/_kontoinstall-block.html', {   })
-            @@include('blocks/spelverktyg/_support-block.html', {   })
-        </div>
+		@@if(activeIndex == 1){
+			@@include('blocks/spelverktyg/_spelverktyg-block.html', {   })
+		}
+		@@if(activeIndex == 2){
+			@@include('blocks/spelverktyg/_kontoinstall-block.html', {   })
+		}
+		@@if(activeIndex == 3){
+			@@include('blocks/spelverktyg/_support-block.html', {   })
+		}
     </div>
-</div> 
+</div>

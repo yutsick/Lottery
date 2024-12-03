@@ -2,13 +2,13 @@
     "class": "page-front logged-in",
     "logged_in": true,
     "sub_menu": false,
-    })
+})
 
-    @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
-    <div class="ml-2017" id="konto-new">
-        @@include('blocks/spelkonto-new/_konto-menu.html', {  })
-        @@include('blocks/spelkonto-new/_spelkonto-main.html', {  })
-    </div>
+@@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
+<div class="ml-2017" id="konto-new">
+	@@include('blocks/spelkonto-new/_konto-menu.html', { activeIndex: 1 })
+	@@include('blocks/spelkonto-new/_spelkonto-main.html', { activeIndex: 1 })
+</div>
 
 
-    @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
+@@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })

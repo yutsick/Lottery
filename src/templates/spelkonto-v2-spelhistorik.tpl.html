@@ -1,15 +1,14 @@
 @@include('layout/_header.html', {
-    "class": "page-front logged-in",
-    "logged_in": true,
-    "sub_menu": false,
+	"class": "page-front logged-in",
+	"logged_in": true,
+	"sub_menu": false,
 })
 
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 <div class="ml-2017" id="konto-new">
-	@@include('blocks/spelverktyg/_verktyg-menu.html', { activeIndex: 1 })
-	@@include('blocks/spelverktyg/_verktyg-main.html', { activeIndex: 1 })
+	@@include('blocks/spelkonto-new/_konto-menu.html', { activeIndex: 4 })
+	@@include('blocks/spelkonto-new/_spelkonto-main.html', { activeIndex: 4 })
 </div>
-
 
 
 @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
