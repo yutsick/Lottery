@@ -1236,3 +1236,70 @@
 		margin-top: 40px;
 	}
 }
+
+
+.spelhistorik-table {
+	font-size: 14px;
+}
+.spelhistorik-table,
+.spelhistorik-table td{
+	color: rgba(7, 70, 88, 0.75);
+}
+.spelhistorik-table td{
+	@media screen and (min-width: 768px) {
+		height: 57px;
+	}
+}
+.spelhistorik-table.responsive-table.modern tbody td{
+	line-height: 1.6;
+	padding: 4px 8px;
+	@media screen and (min-width: 768px) {
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+}
+.spelhistorik-table.responsive-table.modern tbody tr {
+	@media screen and (max-width: 767px) {
+		padding: 8px 0;
+	}
+}
+.spelhistorik-table.responsive-table.modern thead th:first-child {
+	@media screen and (min-width: 768px) {
+		width: 25.2%;
+	}
+}
+.spelhistorik-table.responsive-table.modern tbody tr:nth-of-type(even){
+	@media screen and (min-width: 768px) {
+		background-color: #F3F6F7;
+	}
+	@media screen and (max-width: 767px) {
+		background-color: transparent;
+	}
+}
+.spelhistorik-table.responsive-table.modern thead th:first-child,
+.spelhistorik-table.responsive-table.modern tbody td:first-child {
+	@media screen and (min-width: 768px) {
+		padding-left: 14px;
+	}
+}
+.spelhistorik-table.responsive-table.modern thead th:last-child,
+.spelhistorik-table.responsive-table.modern tbody td:last-child {
+	@media screen and (min-width: 768px) {
+		padding-right: 16px;
+	}
+}
+.spelhistorik-table__bonus {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 14px!important;
+
+	@media screen and (min-width: 768px) {
+		margin-right: -16px;
+	}
+}
+.spelhistorik-table__bonus-icon {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+}

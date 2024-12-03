@@ -23,7 +23,8 @@
                                             <option value="account-2" data-title ="Onlinespel" data-text="Onlinespel text" data-toggle="onlinespel">Onlinespel</option>
                                             <option value="account-3"  data-title ="Jackpottandelar" data-text="Jackpottandelar text" data-toggle="">Jackpottandelar</option>
                                             <option value="account-4" data-title ="Andra Chansen" data-text="Andra Chansen text" data-toggle="">Andra Chansen</option>
-                                            <option value="" data-title ="Bonusar" data-text="Bonusar text" data-toggle="bonusar">Bonusar</option>
+                                            <option value="account-5" data-title ="Bonusar" data-text="Bonusar text" data-toggle="bonusar">Bonusar</option>
+                                            <option value="account-6" data-title ="Bonusar & spelkuponger" data-text="Bonusar & spelkuponger text" data-toggle="">Bonusar & spelkuponger</option>
 
                                         </select>
                                         <div class="table-pane tab-pane toggle onlinespel " id="onlinespel">
@@ -441,6 +442,128 @@
 
 
 
+                                        </tbody>
+                                    </table>
+
+                                    <div class="entity-collection-actions">
+                                        <a class="btn btn-secondary" data-target="#account-wallet-table-data"
+                                            href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                                    </div>
+                                </div>
+								<div class="table-pane  tab-pane" id="account-6" role="tabpanel">
+                                    <p class="table__title-block">Bonusar & spelkuponger</p>
+                                    <table class="responsive-table modern spelhistorik-table" style="table-layout: fixed;">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-none font-bold">Namn</th>
+                                                <th class="bg-none font-bold">Typ</th>
+                                                <th class="bg-none font-bold">Värde</th>
+                                                <th class="bg-none font-bold">Förfallodatum</th>
+                                                <th class="bg-none font-bold text-right">Status</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody id="account-wallet-table-data" data-total-items="8">
+                                            <tr>
+                                                <td data-header="Namn">1:a insättning 150 kronor extra</td>
+                                                <td data-header="Typ">Bonus</td>
+                                                <td data-header="Värde">100 kr</td>
+                                                <td data-header="Förfallodatum">2024-06-31</td>
+                                                <td data-header="Status" class="text-right ">
+													<div class="spelhistorik-table__bonus">
+														<strong>100 kr kvar till bonus</strong>
+														<div class="spelhistorik-table__bonus-icon">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+																<circle cx="12" cy="12" r="12" fill="#F3D551"/>
+																<path d="M10.7991 2.16425C10.8438 1.94557 11.1562 1.94557 11.2009 2.16426L11.2845 2.57309C11.7452 4.827 13.5066 6.58841 15.7605 7.04909L16.1693 7.13265C16.388 7.17735 16.388 7.48981 16.1693 7.5345L15.7605 7.61806C13.5066 8.07875 11.7452 9.84016 11.2845 12.0941L11.2009 12.5029C11.1562 12.7216 10.8438 12.7216 10.7991 12.5029L10.7155 12.0941C10.2548 9.84015 8.49341 8.07875 6.2395 7.61806L5.83067 7.5345C5.61199 7.48981 5.61199 7.17735 5.83067 7.13265L6.2395 7.04909C8.49341 6.58841 10.2548 4.827 10.7155 2.57309L10.7991 2.16425Z" fill="white"/>
+																<path d="M17.516 9.78951C17.5495 9.6255 17.7839 9.6255 17.8174 9.78951L17.8801 10.0961C18.2256 11.7866 19.5466 13.1076 21.2371 13.4531L21.5437 13.5158C21.7077 13.5493 21.7077 13.7837 21.5437 13.8172L21.2371 13.8799C19.5466 14.2254 18.2256 15.5464 17.8801 17.2369L17.8174 17.5435C17.7839 17.7075 17.5495 17.7075 17.516 17.5435L17.4533 17.2369C17.1078 15.5464 15.7868 14.2254 14.0963 13.8799L13.7897 13.8172C13.6257 13.7837 13.6257 13.5493 13.7897 13.5158L14.0963 13.4531C15.7868 13.1076 17.1078 11.7866 17.4533 10.0961L17.516 9.78951Z" fill="white"/>
+																<path d="M5.5662 11.0822C5.58855 10.9729 5.74478 10.9729 5.76713 11.0822L5.80891 11.2867C6.03925 12.4136 6.91996 13.2943 8.04691 13.5247L8.25133 13.5664C8.36067 13.5888 8.36067 13.745 8.25133 13.7674L8.04691 13.8092C6.91996 14.0395 6.03925 14.9202 5.80891 16.0472L5.76713 16.2516C5.74478 16.3609 5.58855 16.3609 5.5662 16.2516L5.52442 16.0472C5.29408 14.9202 4.41338 14.0395 3.28642 13.8092L3.08201 13.7674C2.97266 13.745 2.97266 13.5888 3.08201 13.5664L3.28642 13.5247C4.41338 13.2943 5.29408 12.4136 5.52442 11.2867L5.5662 11.0822Z" fill="white"/>
+																<path d="M10.8995 16.4155C10.9219 16.3062 11.0781 16.3062 11.1004 16.4155L11.1422 16.6199C11.3726 17.7469 12.2533 18.6276 13.3802 18.8579L13.5846 18.8997C13.694 18.922 13.694 19.0783 13.5846 19.1006L13.3802 19.1424C12.2533 19.3727 11.3726 20.2535 11.1422 21.3804L11.1004 21.5848C11.0781 21.6942 10.9219 21.6942 10.8995 21.5848L10.8577 21.3804C10.6274 20.2535 9.74669 19.3727 8.61974 19.1424L8.41532 19.1006C8.30598 19.0783 8.30598 18.922 8.41532 18.8997L8.61974 18.8579C9.74669 18.6276 10.6274 17.7469 10.8577 16.6199L10.8995 16.4155Z" fill="white"/>
+																</svg>
+														</div>
+													</div>
+												</td>
+                                            </tr>
+											<tr>
+                                                <td data-header="Namn">v6 Fem brickor till schlagerbingo</td>
+                                                <td data-header="Typ">Spelkupong</td>
+                                                <td data-header="Värde">3 kr</td>
+                                                <td data-header="Förfallodatum">2024-12-31</td>
+                                                <td data-header="Status" class="text-right ">
+													<div>
+														<strong class="d-block">Använd</strong>
+														2024-11-20
+													</div>
+												</td>
+                                            </tr>
+											<tr>
+                                                <td data-header="Namn">Lucka 8: bonus 20 kr</td>
+                                                <td data-header="Typ">Bonus</td>
+                                                <td data-header="Värde">20 kr</td>
+                                                <td data-header="Förfallodatum"></td>
+                                                <td data-header="Status" class="text-right ">
+													<div>
+														<strong class="d-block">Utbetald</strong>
+														2024-11-20
+													</div>
+												</td>
+                                            </tr>
+											<tr>
+                                                <td data-header="Namn">v6 Bjudbonus</td>
+                                                <td data-header="Typ">Bonus</td>
+                                                <td data-header="Värde">50 kr</td>
+                                                <td data-header="Förfallodatum"></td>
+                                                <td data-header="Status" class="text-right ">
+													<div>
+														<strong class="d-block">Utbetald</strong>
+														2024-11-20
+													</div>
+												</td>
+                                            </tr>
+											<tr>
+                                                <td data-header="Namn">Voucher</td>
+                                                <td data-header="Typ">Spelkupong</td>
+                                                <td data-header="Värde">40 kr</td>
+                                                <td data-header="Förfallodatum">2024-11-31</td>
+                                                <td data-header="Status" class="text-right ">
+													<div>
+														<strong class="d-block">Använd</strong>
+														2024-11-20
+													</div>
+												</td>
+                                            </tr>
+											<tr>
+                                                <td data-header="Namn">Miljonjackpott X</td>
+                                                <td data-header="Typ">Spelkupong</td>
+                                                <td data-header="Värde">20 kr</td>
+                                                <td data-header="Förfallodatum">2024-06-31</td>
+                                                <td data-header="Status" class="text-right ">
+													<div>
+														<strong class="d-block">Ej använd</strong>
+													</div>
+												</td>
+                                            </tr>
+											<tr>
+                                                <td data-header="Namn">Miljonjackpott X</td>
+                                                <td data-header="Typ">Bonus</td>
+                                                <td data-header="Värde">100 kr</td>
+                                                <td data-header="Förfallodatum"></td>
+                                                <td data-header="Status" class="text-right ">
+													<div>
+														<strong class="d-block">Utbetald</strong>
+														2024-11-20
+													</div>
+												</td>
+                                            </tr>
+											<tr>
+                                                <td data-header="Namn">Miljonjackpott X</td>
+                                                <td data-header="Typ">Spelkupong</td>
+                                                <td data-header="Värde">50 kr</td>
+                                                <td data-header="Förfallodatum">2024-06-31</td>
+                                                <td data-header="Status" class="text-right ">
+													<div><strong class="d-block">Ej använd</strong></div>
+												</td>
+                                            </tr>
                                         </tbody>
                                     </table>
 
