@@ -4,109 +4,91 @@
             "screen_name": "Mitt konto",
             "title": "Beställda vinster",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        })
+			"class": ""
+		})
         <div class="row equal-height tablet-hidden">
             <div class="col-xs-12 ">
-                <div class=" block-white h-100"> 
-                    <h4 class="block-promotion__header-title">Mina beställningar</h4>
-                    <table class="responsive-table modern mt-6">
+                <div class=" block-white h-100">
+                    <h4 class="block-promotion__header-title">Mina beställningar1</h4>
+                    <table class="vinster-table">
                         <thead>
-                            <tr>
-                                <th class="bg-none font-bold" style="width: 14%;">Orderdatum</th>
-                                <th class="bg-none font-bold" style="width: 25%;">Artikel</th>
-                                <th class="bg-none font-bold" style="width: 14%;">Frakt</th>
-                                <th class="bg-none font-bold" style="width: 14%;">summa</th>
-                                <th class="bg-none font-bold">status</th>
+                            <tr class="vinster-table__tr">
+                                <th class="bg-none font-bold vinster-table__th vinster-table__th--image"></th>
+                                <th class="bg-none font-bold vinster-table__th vinster-table__th--orderdatum">Orderdatum</th>
+                                <th class="bg-none font-bold vinster-table__th vinster-table__th--artikel">Artikel</th>
+                                <th class="bg-none font-bold vinster-table__th vinster-table__th--antal">Antal</th>
+                                <th class="bg-none font-bold vinster-table__th vinster-table__th--frakt">Frakt</th>
+                                <th class="bg-none font-bold vinster-table__th vinster-table__th--summa">summa</th>
+                                <th class="bg-none font-bold vinster-table__th vinster-table__th--status">status</th>
                             </tr>
                         </thead>
                         <tbody id="account-wallet-table-data" data-total-items="5">
-                            <tr>
-                                <td data-header="Orderdatum">2024-06-06</td>
-                                <td data-header="Artikel">Varumärke - Ett väldigt långt Produktna...</td>
-                                <td data-header="Frakt" class="">Standard</td>
-                                <td data-header="summa" class="">599 kr</td>
-                                <td data-header="Vinstvärde" class="">
-                                    <a href="#"class="text-red link">Avbryt beställning</a>
+							<tr class="vinster-table__tr">
+                                <td class="vinster-table__td vinster-table__td--image" data-header="">
+                                    <div class="" style="height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div>
                                 </td>
-                            </tr>
-                            <tr class="expanded">
-                                <td data-header="Orderdatum">
-                                    <div class="" style="width: 163px; height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div>
+                                <td class="vinster-table__td vinster-table__td--orderdatum" data-header="Orderdatum">2024-06-06</td>
+                                <td class="vinster-table__td vinster-table__td--artikel" data-header="Artikel">
+									<p>Varumärke</p>
+                                    <p><strong>Ett väldigt långt Produktnamn som kan ligga på två rader</strong></p>
+                                    <p class="vinster-table__info">(Art. No. 01234567890)</p>
                                 </td>
-                                <td data-header="Artikel">
-                                    <div class="d-flex"> 
-                                        <p class="m-0">Varumärke</p>
-                                        <p class="m-0 text-right">1 st</p>
-                                    </div>
-                                   
-                                    <p><strong>Produktnamn som kan ligga på två rader</strong></p>
-                                    <p>(Art. No. 01234567890)</p>
-                                </td>
-                                <td data-header="Frakt" class=""></td>
-                                <td data-header="summa" class=""></td>
-                                <td data-header="Vinstvärde" class="">
-                                    <p class="m-0"><strong>Leveransstatus:</strong></p>
+                                <td class="vinster-table__td vinster-table__td--antal" data-header="Antal" class="">1 st</td>
+                                <td class="vinster-table__td vinster-table__td--frakt" data-header="Frakt" class="">Standard</td>
+                                <td class="vinster-table__td vinster-table__td--summa" data-header="Summa" class="">599 kr</td>
+                                <td class="vinster-table__td vinster-table__td--status" data-header="Status" class="">
+									<div class="vinster-table__status">
+										<a href="#"class="text-red link">Avbryt beställning</a>
+									</div>
+                                    <p ><strong>Leveransstatus:</strong></p>
                                     <p>Varuvinsten är restnoterad och beräknas åter i lager 2024-06-25</p>
-                                    
                                 </td>
                             </tr>
-                            <tr>
-                                <td data-header="Orderdatum">2024-06-06</td>
-                                <td data-header="Artikel">Varumärke - Ett väldigt långt Produktna...</td>
-                                <td data-header="Frakt" class="">Standard</td>
-                                <td data-header="summa" class="">599 kr</td>
-                                <td data-header="Vinstvärde" class="">Behandlas</td>
-                            </tr>
-                            <tr class="expanded">
-                                <td data-header="Orderdatum"><div class="" style="width: 163px; height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div></td>
-                                <td data-header="Artikel">
-                                    <div class="d-flex"> 
-                                        <p class="m-0">Varumärke</p>
-                                        <p class="m-0 text-right">1 st</p>
-                                    </div>
-                                   
-                                    <p><strong>Produktnamn som kan ligga på två rader</strong></p>
-                                    <p>(Art. No. 01234567890)</p>
+							<tr class="vinster-table__tr">
+                                <td class="vinster-table__td vinster-table__td--image" data-header="">
+                                    <div class="" style="height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div>
                                 </td>
-                                <td data-header="Frakt" class=""></td>
-                                <td data-header="summa" class=""></td>
-                                <td data-header="Vinstvärde" class="">
-                                    <p class="m-0"><strong>Leveransstatus:</strong></p>
+                                <td class="vinster-table__td vinster-table__td--orderdatum" data-header="Orderdatum">2024-06-06</td>
+                                <td class="vinster-table__td vinster-table__td--artikel" data-header="Artikel">
+									<p>Varumärke</p>
+                                    <p><strong>Ett väldigt långt Produktnamn som kan ligga på två rader</strong></p>
+                                    <p class="vinster-table__info">(Art. No. 01234567890)</p>
+                                </td>
+                                <td class="vinster-table__td vinster-table__td--antal" data-header="Antal" class="">1 st</td>
+                                <td class="vinster-table__td vinster-table__td--frakt" data-header="Frakt" class="">Standard</td>
+                                <td class="vinster-table__td vinster-table__td--summa" data-header="Summa" class="">599 kr</td>
+                                <td class="vinster-table__td vinster-table__td--status" data-header="Status" class="">
+									<div class="vinster-table__status">
+										Behandlas
+									</div>
+                                    <p ><strong>Leveransstatus:</strong></p>
                                     <p>Varuvinsten är restnoterad och beräknas åter i lager 2024-06-25</p>
-                                    
                                 </td>
                             </tr>
-                            <tr>
-                                <td data-header="Orderdatum">2024-06-06</td>
-                                <td data-header="Artikel">Varumärke - Ett väldigt långt Produktna...</td>
-                                <td data-header="Frakt" class="">Standard</td>
-                                <td data-header="summa" class="">599 kr</td>
-                                <td data-header="Vinstvärde" class="">
-                                    <a href="#"class="link">Spåra beställning</a>
+							<tr class="vinster-table__tr">
+                                <td class="vinster-table__td vinster-table__td--image" data-header="">
+                                    <div class="" style="height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div>
                                 </td>
-                            </tr>
-                            <tr class="expanded">
-                                <td data-header="Orderdatum"><div class="" style="width: 163px; height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div></td>
-                                <td data-header="Artikel">
-                                    <div class="d-flex"> 
-                                        <p class="m-0">Varumärke</p>
-                                        <p class="m-0 text-right">1 st</p>
-                                    </div>
-                                   
-                                    <p><strong>Produktnamn som kan ligga på två rader</strong></p>
-                                    <p>(Art. No. 01234567890)</p>
+                                <td class="vinster-table__td vinster-table__td--orderdatum" data-header="Orderdatum">2024-06-06</td>
+                                <td class="vinster-table__td vinster-table__td--artikel" data-header="Artikel">
+									<p>Varumärke</p>
+                                    <p><strong>Ett väldigt långt Produktnamn som kan ligga på två rader</strong></p>
+                                    <p class="vinster-table__info">(Art. No. 01234567890)</p>
                                 </td>
-                                <td data-header="Frakt" class=""></td>
-                                <td data-header="summa" class=""></td>
-                                <td data-header="Vinstvärde" class="">
-                                    <p class="m-0"><strong>Leveransstatus:</strong></p>
+                                <td class="vinster-table__td vinster-table__td--antal" data-header="Antal" class="">1 st</td>
+                                <td class="vinster-table__td vinster-table__td--frakt" data-header="Frakt" class="">Standard</td>
+                                <td class="vinster-table__td vinster-table__td--summa" data-header="Summa" class="">599 kr</td>
+                                <td class="vinster-table__td vinster-table__td--status" data-header="Status" class="">
+									<div class="vinster-table__status">
+										<a href="#"class="link">Spåra beställning</a>
+									</div>
+                                    <p ><strong>Leveransstatus:</strong></p>
                                     <p>Varuvinsten är restnoterad och beräknas åter i lager 2024-06-25</p>
-                                    
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    
+
                     <div class="entity-collection-actions">
                         <a class="btn btn-secondary" data-target="#account-due-dates-table-data"
                             href="/ajax/account-history/account-due-dates.html">Visa fler</a>
@@ -124,13 +106,18 @@
                                 <div class="" style="width: 163px; height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div>
                             </div>
                             <div class="col-xs-12 col-sm-9">
-                                <div class="t-heading">artikel</div>
-                                <div class="d-flex justify-between"> 
-                                <div class="order-article">
-                                    <p>Varumärke - Produktnamn med långt namn på två rader</p>
-                                    <p>(Ord.No: 01234567890)</p>
-                                </div>
-                                <div class="">  1 st</div>
+								<div class="d-flex justify-between order-detailes-top">
+									<div>
+										<div class="t-heading">artikel</div>
+										<div class="order-article">
+											<p>Varumärke - Lång krångligt produktnamn</p>
+											<p>(Ord.No: 01234567890)</p>
+										</div>
+									</div>
+									<div class="text-right">
+										<div class="t-heading">Antal</div>
+										1 st
+									</div>
                                 </div>
                             <div class="order-detailes">
                                 <div class="d-flex justify-between">
@@ -144,7 +131,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex justify-between">
-                                    <div class="">
+                                    <div>
                                         <div class="t-heading">frakt</div>
                                         <div class="">Standard</div>
                                     </div>
@@ -154,7 +141,7 @@
                                     </div>
                                 </div>
                             </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -168,13 +155,18 @@
                                 <div class="" style="width: 163px; height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div>
                             </div>
                             <div class="col-xs-12 col-sm-9">
-                                <div class="t-heading">artikel</div>
-                                <div class="d-flex justify-between"> 
-                                <div class="order-article">
-                                    <p>Varumärke - Produktnamn med långt namn på två rader</p>
-                                    <p>(Ord.No: 01234567890)</p>
-                                </div>
-                                <div class="">  1 st</div>
+								<div class="d-flex justify-between order-detailes-top">
+									<div>
+										<div class="t-heading">artikel</div>
+										<div class="order-article">
+											<p>Varumärke - Lång krångligt produktnamn</p>
+											<p>(Ord.No: 01234567890)</p>
+										</div>
+									</div>
+									<div class="text-right">
+										<div class="t-heading">Antal</div>
+										1 st
+									</div>
                                 </div>
                             <div class="order-detailes">
                                 <div class="d-flex justify-between">
@@ -198,7 +190,7 @@
                                     </div>
                                 </div>
                             </div>
-                               
+
                             </div>
                         </div>
                     </div>
@@ -212,13 +204,18 @@
                                 <div class="" style="width: 163px; height: 112px; background-color: rgba(7, 70, 88, 0.25); border-radius: 4px;"></div>
                             </div>
                             <div class="col-xs-12 col-sm-9">
-                                <div class="t-heading">artikel</div>
-                                <div class="d-flex justify-between"> 
-                                <div class="order-article">
-                                    <p>Varumärke - Produktnamn med långt namn på två rader</p>
-                                    <p>(Ord.No: 01234567890)</p>
-                                </div>
-                                <div class="">  1 st</div>
+								<div class="d-flex justify-between order-detailes-top">
+									<div>
+										<div class="t-heading">artikel</div>
+										<div class="order-article">
+											<p>Varumärke - Lång krångligt produktnamn</p>
+											<p>(Ord.No: 01234567890)</p>
+										</div>
+									</div>
+									<div class="text-right">
+										<div class="t-heading">Antal</div>
+										1 st
+									</div>
                                 </div>
                             <div class="order-detailes">
                                 <div class="d-flex justify-between">
@@ -242,13 +239,13 @@
                                     </div>
                                 </div>
                             </div>
-                               
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="entity-collection-actions">
+            <div class="entity-collection-actions entity-collection-actions--margin">
                 <a class="btn btn-secondary" data-target="#account-due-dates-table-data"
                     href="/ajax/account-history/account-due-dates.html">Visa fler</a>
             </div>

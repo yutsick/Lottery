@@ -10,20 +10,5 @@
         @@include('blocks/spelkonto-new/_spelkonto-main.html', {  })
     </div>
 
-    
-    <script>
-
-
-        const listItems = document.querySelectorAll('.block-vinster .responsive-table tbody tr');
-       
-        for (let i = 2; i < listItems.length; i += 4) {
-            console.log(i);
-            // Check if y is an integer
-                listItems[i].classList.add('highlight');
-                listItems[i+1].classList.add('highlight');
-            
-        }
-
-    </script>
 
     @@include('layout/_footer.html', { "show_footer": false, "show_terms_modal": false })
