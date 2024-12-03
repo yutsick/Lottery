@@ -23,7 +23,7 @@
                 column-gap: 16px;
 
                 li {
-                    height: 70px;
+                    height: 67px;
                     width: 140px;
                     position: relative;
                     .nav-link {
@@ -39,11 +39,20 @@
                             color: $primary-lighter;
                         }
 
+						.icon {
+							margin-bottom: 7px;
+							line-height: 1;
+						}
+						svg {
+							vertical-align: middle;
+						}
+
                          &:hover, &:focus{
                         background-color: transparent !important;
                     }
+
                     }
-                  
+
                     &.active {
                         .text {
                             color: $primary;
@@ -73,21 +82,21 @@
             justify-content: space-between;
             width: 100%;
             font: 700 14px/18px $base-font-family;
-            color: $primary-lighter !important; 
-            
+            color: $primary-lighter !important;
+
             .menu-title{
-              text-transform: uppercase;  
+              text-transform: uppercase;
               letter-spacing: 0.01rem;
             }
             @media (min-width: 768px) {
                 display: none;
-                
+
             }
         }
         .menu-desktop{
             @media (max-width: 767.88px) {
                 display: none;
-                
+
             }
         }
     }
