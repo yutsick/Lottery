@@ -7,7 +7,9 @@
     .text-block{
         border-radius: 8px;
         &__title{
-            font: 700 24px/32px $apercu;
+            font: 700 20px/32px $apercu;
+			margin-top: 0;
+			margin-bottom: 8px;
         }
         &__text{
             font:400 14px/20px $apercu;
