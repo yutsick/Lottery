@@ -51,6 +51,20 @@
             }
         }
         &__row{
+			@media screen and (min-width: 768px) {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				min-height: 74px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+
+				form {
+					width: 100%;
+				}
+            }
+
             &:nth-of-type(odd){
                 background-color: #EAF3F9;
                 border-top: solid 1px rgba(7, 70, 88, 0.25);
@@ -83,10 +97,16 @@
                 .profile__multiple-input{
                     display: flex;
                     margin-right: 0;
-                    padding-right: 16px;
+					@media screen and (min-width: 768px) {
+						padding-right: 16px;
+					}
+
                     inout{
                         height: 40px;
                         padding: 16px 17px 9px;
+                    }
+                    input{
+                        padding-left: 10px;
                     }
                 }
 				div.profile__multiple-input{
@@ -116,6 +136,7 @@
 		}
 		&__fieldset {
 			display: flex;
+            align-items: center;
 			gap: 4px;
 			flex-wrap: wrap;
 			margin-right: auto;
@@ -139,6 +160,9 @@
         &__input{
             font:400 14px/32px $apercu;
             color: $primary-lighter;
+			@media screen and (min-width: 768px) {
+				text-align: right;
+			}
 
             input{
                 font:400 16px/20px $apercu;
@@ -151,7 +175,12 @@
                     height: auto;
                 }
             }
-					}
+			.help-block {
+				@media screen and (min-width: 400px) {
+					max-width: 220px;
+				}
+			}
+		}
         &__multiple-input{
             display: none;
             flex-direction: column;
@@ -215,7 +244,9 @@
         border-radius: 8px;
         padding: 24px;
         margin-bottom: 20px;
-        max-height: 218px;
+		@media screen and (min-width: 992px) {
+        	max-height: 218px;
+		}
         min-height: 218px;
         &__content{
             padding-bottom: 0;
