@@ -1,4 +1,4 @@
-<section class="section block block-content" id="spelkonto">
+<section class="section block block-content js-tabs" id="spelkonto">
         @@include('blocks/spelkonto-new/_block-header.html', {
             "screen_name": "Mitt konto",
             "title": "Mitt spelkonto",
@@ -8,14 +8,14 @@
     <div class="row equal-height tab-content">
         <div class="mobile-togglers">
 
-            <ul class="buttons-list buttons-list__two" role="tablist" aria-orientation="horizontal">
-                <li data-toggle="tab" href ="#sp" class="active" role="tab">
+            <ul class="buttons-list buttons-list__two js-tabs-buttons" role="tablist" aria-orientation="horizontal">
+                <li data-toggle="tab" data-index="0" href ="#sp" class="js-tabs-button js-active active" role="tab">
                     <a href=""  class="nav-link ">
 
                         <span class="text">Spelplånbok</span>
                     </a>
                 </li>
-                <li data-toggle="tab" href ="#vk" class="" role="tab">
+                <li data-toggle="tab" data-index="1" href ="#vk" class="js-tabs-button" role="tab">
                     <a href=""  class="nav-link ">
 
                         <span class="text">Vinstkonto</span>

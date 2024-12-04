@@ -4,6 +4,15 @@
 
     <div class="row">
         <div class="col-xs-12">
+			<div class="new-tabs block-kontohistorik__tabs js-tabs-buttons d-none d-md-flex">
+				<div class="new-tabs__bg">
+					<button data-index="0" class="new-tabs__button js-tabs-button js-active">Spelplånbok</button>
+					<button data-index="1" class="new-tabs__button js-tabs-button">Vinstkonto</button>
+				</div>
+			</div>
+		</div>
+		<div class="js-tabs-content-item js-active" >
+			<div class="col-xs-12">
             <div class="table-wrapper" role="tabpanel">
                 <div class="form-group responsive-table-filter  d-flex justify-between">
                     <select id="tableSelect1" class="table-select form-control" name="tableSelect1" role="tablist">
@@ -20,7 +29,6 @@
 
         </div>
         <div class="col-xs-12">
-            <div class="table-pane table-pane--active tab-pane" id="account-wallet" role="tabpanel">
                 <table class="responsive-table modern">
                     <thead>
                         <tr>
@@ -144,84 +152,144 @@
                         href="/ajax/account-history/account-wallet.html">Visa fler</a>
                 </div>
             </div>
-
-            <div class="table-wrapper table-pane tab-pane" id="account-prizes" role="tabpanel">
-                <div class="form-group responsive-table-filter">
-                    <label class="table__label" for="tableSelect">Visa:</label>
-                    <select id="tableSelect" class="table-select form-control" name="tableSelect">
-                        <option value="history" id="accountHistory">Kontohistorik</option>
-                        <option value="expiration-date" id="accountExpirationDate">Förfallodatum</option>
+		</div>
+		<div class="js-tabs-content-item" hidden>
+			<div class="col-xs-12">
+				<div class="table-wrapper" role="tabpanel">
+					<div class="form-group responsive-table-filter  d-flex justify-between">
+						<select id="tableSelect1" class="table-select form-control" name="tableSelect1" role="tablist">
+							<option value="account-prizes">Kontohistorik</option>
+							<option value="account-wallet">Förfallodatum</option>
+						</select>
+						<select id="tableSelect2" class="table-select form-control">
+							<option value="">Senaste månaden</option>
+							<option value="">Lorem ipsum</option>
                     </select>
                 </div>
-
-                <div id="history" class="table-pane table-pane--active tab-pane" role="tabpanel">
-                    <p class="table__title-block">Vinstkonto</p>
+				</div>
+			</div>
+			<div class="col-xs-12">
+				<div class="table-wrapper table-pane tab-pane table-pane--active" id="account-prizes" role="tabpanel">
+					<!-- <p class="table__title-block">Kontohistorik</p> -->
                     <table class="responsive-table modern">
                         <thead>
                             <tr>
-                                <th class="bg-none">Tidpunkt</th>
-                                <th class="bg-none">Typ</th>
-                                <th class="bg-none">Belopp</th>
-                                <th class="bg-none">Saldo</th>
+								<th class="bg-none responsive-table__th responsive-table__th--fixed-width">Tidpunkt</th>
+								<th class="bg-none responsive-table__th responsive-table__th--fixed-width">Typ</th>
+								<th class="bg-none responsive-table__th responsive-table__th--fixed-width">
+									Belopp
+									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+										i
+									</span>
+								</th>
+								<th class="bg-none text-right">
+									Saldo
+									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+										i
+									</span>
+								</th>
                             </tr>
                         </thead>
                         <tbody id="account-prizes-table-data" data-total-items="12">
                             <tr>
                                 <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                                <td data-header="Typ">Köp</td>
-                                <td data-header="Belopp">- 250kr</td>
-                                <td data-header="Saldo">85kr</td>
+								<td data-header="Typ">Insättning kontant</td>
+								<td data-header="Belopp">1 600 kr</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ">Uttag</td>
+								<td data-header="Belopp">450 kr</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ"><span class="text-green"><strong>Vinst</strong> (100 kr)</span></td>
+								<td data-header="Belopp">-</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ">Miljonlotten</td>
+								<td data-header="Belopp">50 kr</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
+							</tr>
+							<tr>
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ">Miljonlotten</td>
+								<td data-header="Belopp">100 kr</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
                             </tr>
                             <tr>
-                                <td data-header="Tidpunkt">Igår 12:00</td>
-                                <td data-header="Typ">Köp</td>
-                                <td class="highlight" data-header="Belopp">+ 50kr</td>
-                                <td data-header="Saldo">80kr</td>
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ">Miljonlotten</td>
+								<td data-header="Belopp">100 kr</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
                             </tr>
                             <tr>
-                                <td data-header="Tidpunkt">Igår 11:59</td>
-                                <td data-header="Typ">Köp</td>
-                                <td class="highlight" data-header="Belopp">+ 150kr</td>
-                                <td data-header="Saldo">60kr</td>
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ">Miljonlotten</td>
+								<td data-header="Belopp">100 kr</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
                             </tr>
                             <tr>
-                                <td data-header="Tidpunkt">2017-10-27</td>
-                                <td data-header="Typ">Köp</td>
-                                <td class="highlight" data-header="Belopp">+ 250kr</td>
-                                <td data-header="Saldo">50kr</td>
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ">Miljonlotten</td>
+								<td data-header="Belopp">100 kr</td>
+								<td data-header="Saldo" class="text-right">1 500 kr</td>
                             </tr>
+
                         </tbody>
                     </table>
                     <div class="entity-collection-actions">
                         <a class="btn btn-secondary" data-target="#account-prizes-table-data"
                             href="/ajax/account-history/account-prizes.html">Visa fler</a>
                     </div>
+
                 </div>
-                <div id="expiration-date" class="table-pane tab-pane" role="tabpanel">
-                    <p class="table__title-block">Förfallodatum</p>
-                    <table class="responsive-table ">
+
+				<div class="table-pane tab-pane" id="account-wallet" role="tabpanel">
+					<!-- <p class="table__title-block">Förfallodatum</p> -->
+					<table class="responsive-table modern">
                         <thead>
                             <tr>
-                                <th>Förfaller</th>
-                                <th>Belopp</th>
+								<th class="bg-none font-bold">Förfaller</th>
+								<th class="bg-none font-bold text-right">Belopp</th>
                             </tr>
                         </thead>
-                        <tbody id="account-due-dates-table-data" data-total-items="12">
-                            <tr>
+						<tbody id="account-wallet-table-data" data-total-items="12">
+							<tr class="mb-py-2">
+								<td data-header="Förfaller">2024-04-16 18:30</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
+							</tr>
+							<tr class="mb-py-2">
+								<td data-header="Förfaller">2024-04-16 18:30</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
+							</tr>
+							<tr class="mb-py-2">
+								<td data-header="Förfaller">2024-04-16 18:30</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
+							</tr>
+							<tr class="mb-py-2">
+								<td data-header="Förfaller">2024-04-16 18:30</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
+							</tr>
+							<tr class="mb-py-2">
                                 <td data-header="Förfaller">2024-04-16 18:30</td>
-                                <td data-header="Belopp">250kr</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
                             </tr>
-                            <tr>
-                                <td data-header="Förfaller">Igår 12:00</td>
-                                <td data-header="Belopp">50kr</td>
+							<tr class="mb-py-2">
+								<td data-header="Förfaller">2024-04-16 18:30</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
                             </tr>
-                            <tr>
-                                <td data-header="Förfaller">Igår 11:59</td>
-                                <td data-header="Belopp">150kr</td>
+							<tr class="mb-py-2">
+								<td data-header="Förfaller">2024-04-16 18:30</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
                             </tr>
-                            <tr>
-                                <td data-header="Förfaller">2017-10-27</td>
-                                <td data-header="Belopp">250kr</td>
+							<tr class="mb-py-2">
+								<td data-header="Förfaller">2024-04-16 18:30</td>
+								<td data-header="Belopp" class="text-right">100 kr </td>
                             </tr>
                         </tbody>
                     </table>
@@ -233,5 +301,62 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('.js-tabs').forEach(tabs=> {
+			const buttonsGroup = tabs.querySelectorAll('.js-tabs-buttons')
+			const items = tabs.querySelectorAll('.js-tabs-content-item')
+
+			buttonsGroup.forEach(buttonsWrapper=> {
+				buttonsWrapper.addEventListener('click', (event) => {
+					const target = event.target
+					const button = target.closest('.js-tabs-button')
+
+					if(button === null) {
+						return
+					}
+
+					const index = button.dataset.index
+
+					if(index == null) {
+						return
+					}
+
+					const newActiveItem = items[index]
+
+					if(newActiveItem == null) {
+						return
+					}
+
+					items.forEach(item=>{
+						item.classList.remove('js-active')
+						item.style.animation = ""
+						item.hidden = true
+					})
+					newActiveItem.classList.add('js-active')
+					newActiveItem.style.animation = "fadeIn 1s"
+					newActiveItem.hidden = false
+
+					// update all buttons group
+					buttonsGroup.forEach(buttonsWrapper=> {
+						const buttons = buttonsWrapper.querySelectorAll('.js-tabs-button')
+						const newActiveButton = buttons[index]
+
+						if(newActiveButton == null) {
+							return
+						}
+
+						buttons.forEach(button=>button.classList.remove('js-active'))
+						newActiveButton.classList.add('js-active')
+					})
+
+				})
+			})
+
+		})
+	})
+</script>
