@@ -988,6 +988,10 @@
                         color: $primary-lighter;
                     }
                 }
+                @media (max-width:480px) {
+					padding-left: 8px;
+					padding-right: 8px;
+				}
                 &:last-child:not(.text-right){
                     text-align: initial;
                 }
