@@ -140,6 +140,10 @@
         button, .btn-primary{
             font-size: 14px;
             width: 160px;
+
+			&.btn-outline{
+				min-height: 40px;
+			}
         }
         @media (max-width:992px) {
             margin: 32px 14px 0;
