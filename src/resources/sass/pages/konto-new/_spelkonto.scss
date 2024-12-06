@@ -222,7 +222,9 @@
 }
 
 .tooltip-icon-info{
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: default;
     border: solid 1px $primary-lighter;
     border-radius: 100%;
