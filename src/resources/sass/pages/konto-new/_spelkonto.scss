@@ -1012,7 +1012,8 @@
             tr:not(.hidden-row){
                 border-bottom: solid 1px rgba(7, 70, 88, 0.25);
             }
-            tr:nth-of-type(even){
+            tr:nth-of-type(even),
+			tr.tr-bg{
 
                 background-color: #EAF3F9;
             }
@@ -1105,7 +1106,10 @@
     background-color: rgba(80, 183, 141, 0.16);
     border-radius: 8px;
     padding: 12px 16px;
-    margin-top: 24px;
+    margin-top: 5px;
+	& + .offer{
+		margin-top: 30px;
+	}
     @media (max-width:1024px) {
         max-width: 638px;
         margin: 24px auto 0;
@@ -1113,6 +1117,10 @@
     @media (max-width:768px) {
         padding: 16px 16px 24px;
     }
+	&--transparent {
+		background: transparent;
+	}
+
     &__wrapper{
         display: flex;
         justify-content: space-between;
