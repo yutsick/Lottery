@@ -1298,10 +1298,12 @@
 }
 .spelhistorik-table.responsive-table.modern tbody td{
 	line-height: 1.6;
-	padding: 4px 8px;
+	padding: 4px 16px;
 	@media screen and (min-width: 768px) {
 		padding-top: 6px;
 		padding-bottom: 6px;
+		padding-left: 8px;
+		padding-right: 8px;
 	}
 }
 .spelhistorik-table.responsive-table.modern tbody tr {
@@ -1413,4 +1415,11 @@
 
 .mobile-togglers {
 	// display: block!important;
+}
+
+
+#vinster .block-white {
+	@media (min-width: 992px) {
+		padding-top: 36px;
+	}
 }
