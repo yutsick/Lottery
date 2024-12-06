@@ -647,7 +647,10 @@
             margin-bottom: 16px;
         }
         .invoice{
-            padding: 0 16px;
+            @media (min-width: 768px){
+				padding: 0 16px;
+			}
+			padding: 13px 16px;
             .expanded{
                 border-bottom: none;
                 td{
