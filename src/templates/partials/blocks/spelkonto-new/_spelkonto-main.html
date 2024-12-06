@@ -1,19 +1,20 @@
     <div class="content-wrapper ml-2017">
         <div class="my-pages container">
-			@@if(activeIndex == 1){
-				@@include('blocks/spelkonto-new/_spelkonto-block.html', {   })
-			}
-			@@if(activeIndex == 2){
-				@@include('blocks/spelkonto-new/_prenumerationer-block.html', {   })
-			}
-			@@if(activeIndex == 3){
-				@@include('blocks/spelkonto-new/_vinster-block.html', {   })
-			}
-			@@if(activeIndex == 4){
-				@@include('blocks/spelkonto-new/_spelhistorik-block.html', {   })
-			}
-			@@if(activeIndex == 5){
-				@@include('blocks/spelkonto-new/_deposit-block.html', {   })
-			}
+			<div class="tab-content">
+				@@if(activeIndex == 1){
+					@@include('blocks/spelkonto-new/_spelkonto-block.html', {   })
+					@@include('blocks/spelkonto-new/_deposit-block.html', {   })
+				}
+				@@if(activeIndex == 2){
+					@@include('blocks/spelkonto-new/_prenumerationer-block.html', {   })
+				}
+				@@if(activeIndex == 3){
+					@@include('blocks/spelkonto-new/_vinster-block.html', {   })
+				}
+				@@if(activeIndex == 4){
+					@@include('blocks/spelkonto-new/_spelhistorik-block.html', {   })
+				}
+
+        	</div>
         </div>
     </div>
