@@ -219,6 +219,10 @@
 				}
 			}
 		}
+
+		&--bg {
+			background-color: #EAF3F9;
+		}
 	}
 }
 
@@ -1021,7 +1025,17 @@
         }
     }
 
+	&--bg-4n {
+		 tr:nth-of-type(4n+3),
+		 tr:nth-of-type(4n+4) {
+            background-color: #EAF3F9;
+		}
+	}
+
 }
+
+
+
 .has-hidden{
     tbody{
         tr:nth-of-type(even){
