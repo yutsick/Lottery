@@ -11,11 +11,11 @@ let showMoreLinks = document.querySelectorAll('.js-toggle-row');
             let nextRow = row.nextElementSibling;
             if (nextRow && nextRow.classList.contains('hidden-row')) {
                 if (nextRow.classList.contains('js-active') === false) {
+					row.classList.add('js-active')
                     nextRow.classList.add('js-active')
-                    link.textContent = link.getAttribute('data-text-toggle');
                 } else {
+					row.classList.remove('js-active')
                     nextRow.classList.remove('js-active')
-                    link.textContent = 'Visa mer';
                 }
             }
         });

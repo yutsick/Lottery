@@ -211,19 +211,35 @@
 		}
 	}
 	&__tr {
-		&.js-active  {
+		&--toggle.js-active  {
+			.js-toggle-row {
+				color: #F56363;
+			}
+		}
+		&--hidden.js-active  {
 			animation: fadeIn 1s;
 			display: table-row!important;
 			@media screen and (max-width: 767px) {
 				display: flex!important;
 				td {
 					display: block;
+					width: 100%!important;
 				}
 			}
 		}
 
 		&--bg {
 			background-color: #EAF3F9;
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: flex-end;
+		gap: 24px;
+		width: 100%;
+		@media screen and (max-width: 767px) {
+			margin-left: -100px;
 		}
 	}
 }
