@@ -248,6 +248,8 @@ export default function () {
 			let $currentRow = $(this).parents('.profile__row');
 			$currentRow.find('input').prop('disabled', true);
 			$currentRow.removeClass('profile__row--active');
+			$currentRow.removeClass('has-error');
+			$currentRow.removeClass('has-danger');
 		});
 	}
 
