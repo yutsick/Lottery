@@ -40,7 +40,7 @@
                         <form action="/" method="post" data-toggle="validator" data-use-ajax>
                             <div class="active-px-3">
                                 <label class="profile__label m-0">Lösenord</label>
-                                <div class="profile__input m-0">********</div>
+                                <div class="profile__input m-0" style="padding-top: 3px;">********</div>
 
                                 <div class="profile__actions">
                                     <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
@@ -51,7 +51,7 @@
                             <div class="profile__multiple-input">
                                 <div class="profile__multiple-input--item">
                                     <label class="m-0">Nuvarande lösenord</label>
-                                    <input class="profile__multiple-input" type="password" id="currentPassword"
+                                    <input class="profile__multiple-input profile__multiple-input--password js-input-password" type="password" id="currentPassword"
                                             data-required-error="Du måste fylla i detta fält."
                                             data-remote-error="Befintliga lösenordet är inte giltigt" name="currentPassword" placeholder="*******" value="" required  data-remote="/">
                                     <svg class="toggle-eye" width="24" height="15" viewBox="0 0 24 15" fill="none" xmlns="http://www.w3.org/2000/svg">

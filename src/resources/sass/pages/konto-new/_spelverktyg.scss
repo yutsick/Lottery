@@ -226,6 +226,12 @@
                     color:$primary-lighter;
                 }
             }
+
+			&--password {
+				&:not(.js-filled) {
+					padding-top: 17px;
+				}
+			}
         }
     }
     .gap-30{

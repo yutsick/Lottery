@@ -1,5 +1,18 @@
 
 export default function (){
+	document.querySelectorAll('.js-input-password').forEach(((input) => {
+		input.addEventListener('input', (event) => {
+			const target = event.target
+			const value = target.value
+
+			if(value) {
+				target.classList.add('js-filled')
+			} else {
+				target.classList.remove('js-filled')
+			}
+		})
+	}))
+
 
 let showMoreLinks = document.querySelectorAll('.js-toggle-row');
 
