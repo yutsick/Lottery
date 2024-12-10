@@ -301,57 +301,58 @@
 </div>
 
 <script>
-	document.addEventListener('DOMContentLoaded', () => {
-		document.querySelectorAll('.js-tabs').forEach(tabs=> {
-			const buttonsGroup = tabs.querySelectorAll('.js-tabs-buttons')
-			const items = tabs.querySelectorAll('.js-tabs-content-item')
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll(".js-tabs").forEach((tabs) => {
+			const buttonsGroup = tabs.querySelectorAll(".js-tabs-buttons");
+			const items = tabs.querySelectorAll(".js-tabs-content-item");
 
-			buttonsGroup.forEach(buttonsWrapper=> {
-				buttonsWrapper.addEventListener('click', (event) => {
-					const target = event.target
-					const button = target.closest('.js-tabs-button')
+			buttonsGroup.forEach((buttonsWrapper) => {
+				buttonsWrapper.addEventListener("click", (event) => {
+					const target = event.target;
+					const button = target.closest(".js-tabs-button");
 
-					if(button === null) {
-						return
+					if (button === null) {
+						return;
 					}
 
-					const index = button.dataset.index
+					const index = button.dataset.index;
 
-					if(index == null) {
-						return
+					if (index == null) {
+						return;
 					}
 
-					const newActiveItem = items[index]
+					const newActiveItem = items[index];
 
-					if(newActiveItem == null) {
-						return
+					if (newActiveItem == null) {
+						return;
 					}
 
-					items.forEach(item=>{
-						item.classList.remove('js-active')
-						item.style.animation = ""
-						item.hidden = true
-					})
-					newActiveItem.classList.add('js-active')
-					newActiveItem.style.animation = "fadeIn 1s"
-					newActiveItem.hidden = false
+					items.forEach((item) => {
+						item.classList.remove("js-active");
+						item.style.animation = "";
+						item.hidden = true;
+					});
+					newActiveItem.classList.add("js-active");
+					newActiveItem.style.animation = "fadeIn 1s";
+					newActiveItem.hidden = false;
 
 					// update all buttons group
-					buttonsGroup.forEach(buttonsWrapper=> {
-						const buttons = buttonsWrapper.querySelectorAll('.js-tabs-button')
-						const newActiveButton = buttons[index]
+					buttonsGroup.forEach((buttonsWrapper) => {
+						const buttons =
+							buttonsWrapper.querySelectorAll(".js-tabs-button");
+						const newActiveButton = buttons[index];
 
-						if(newActiveButton == null) {
-							return
+						if (newActiveButton == null) {
+							return;
 						}
 
-						buttons.forEach(button=>button.classList.remove('js-active'))
-						newActiveButton.classList.add('js-active')
-					})
-
-				})
-			})
-
-		})
-	})
+						buttons.forEach((button) =>
+							button.classList.remove("js-active")
+						);
+						newActiveButton.classList.add("js-active");
+					});
+				});
+			});
+		});
+	});
 </script>
