@@ -1484,3 +1484,13 @@
 		padding-top: 36px;
 	}
 }
+
+
+::placeholder {
+	color:#074658;
+}
+
+.has-error::after,
+.has-error::before {
+	background-color: #FFCACA;
+}
