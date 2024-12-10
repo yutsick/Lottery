@@ -236,7 +236,7 @@ export default function () {
 	function toggle_profile_inputs() {
 		$('.js-update-profile-row').on('click', function () {
 			$('.js-update-profile-row').addClass('profile__row--disabled');
-			
+
 			let $currentRow = $(this).parents('.profile__row');
 			$currentRow.find('input').prop('disabled', false);
 			$currentRow.find('input').last().focusTextToEnd();
