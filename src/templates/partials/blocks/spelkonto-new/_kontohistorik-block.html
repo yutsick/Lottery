@@ -4,10 +4,12 @@
 
     <div class="row">
         <div class="col-xs-12">
-			<div class="new-tabs block-kontohistorik__tabs js-tabs-buttons d-none d-md-flex">
+			<div class="new-tabs block-kontohistorik__tabs js-tabs-buttons d-md-flex"  role="tablist" >
 				<div class="new-tabs__bg">
-					<button data-index="0" class="new-tabs__button js-tabs-button js-active">Spelplånbok</button>
-					<button data-index="1" class="new-tabs__button js-tabs-button">Vinstkonto</button>
+					<button
+					data-toggle="tab" data-index="0" href ="#sp" class="new-tabs__button js-tabs-button js-active active" role="tab"
+					data-index="0">Spelplånbok</button>
+					<button data-toggle="tab" data-index="1" href ="#vk" class="new-tabs__button js-tabs-button" role="tab" data-index="1">Vinstkonto</button>
 				</div>
 			</div>
 		</div>
@@ -144,7 +146,7 @@
 
                 <div class="entity-collection-actions">
                     <a class="btn btn-secondary" data-target="#account-wallet-table-data"
-                        href="/ajax/account-history/account-wallet.html">Visa fler</a>
+                        href="./ajax/account-history/account-wallet.html">Visa fler</a>
                 </div>
             </div>
 		</div>
@@ -239,7 +241,7 @@
                     </table>
                     <div class="entity-collection-actions">
                         <a class="btn btn-secondary" data-target="#account-prizes-table-data"
-                            href="/ajax/account-history/account-prizes.html">Visa fler</a>
+                            href="./ajax/account-history/account-prizes.html">Visa fler</a>
                     </div>
 
                 </div>
@@ -291,7 +293,7 @@
 
                     <div class="entity-collection-actions">
                         <a class="btn btn-secondary" data-target="#account-due-dates-table-data"
-                            href="/ajax/account-history/account-due-dates.html">Visa fler</a>
+                            href="./ajax/account-history/account-due-dates.html">Visa fler</a>
                     </div>
                 </div>
             </div>
@@ -347,9 +349,9 @@
 						}
 
 						buttons.forEach((button) =>
-							button.classList.remove("js-active")
+							button.classList.remove("js-active", "active")
 						);
-						newActiveButton.classList.add("js-active");
+						newActiveButton.classList.add("js-active", "active");
 					});
 				});
 			});
