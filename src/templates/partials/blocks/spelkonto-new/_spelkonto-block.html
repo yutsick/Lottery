@@ -5,25 +5,18 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         })
 
-    <div class="row equal-height tab-content">
+    <div class="equal-height tab-content js-tabs-content row">
         <div class="mobile-togglers">
-
-            <ul class="buttons-list buttons-list__two js-tabs-buttons" role="tablist" aria-orientation="horizontal">
-                <li data-toggle="tab" data-index="0" href ="#sp" class="js-tabs-button js-active active" role="tab">
-                    <a href=""  class="nav-link ">
-
-                        <span class="text">Spelplånbok</span>
-                    </a>
-                </li>
-                <li data-toggle="tab" data-index="1" href ="#vk" class="js-tabs-button" role="tab">
-                    <a href=""  class="nav-link ">
-
-                        <span class="text">Vinstkonto</span>
-                    </a>
-                </li>
-            </ul>
+			<div class="new-tabs block-kontohistorik__tabs" style="margin-top: 24px;">
+				<div class="new-tabs__bg js-tabs-nav">
+					<button class="new-tabs__button js-tabs-nav-item js-active"
+					>Spelplånbok</button>
+					<button class="new-tabs__button js-tabs-nav-item">Vinstkonto</button>
+					<div class="new-tabs__bg-toggle js-tabs-nav-bg"></div>
+				</div>
+			</div>
         </div>
-        <div class="tab-pane active col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch block-promotion__wrapper" id="sp" role="tabpanel" >
+		<div class="tab-pane col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch block-promotion__wrapper js-tabs-content-item js-active"  >
             @@include('blocks/promotion/block/_promotion-wallet-toggle-new.html', {
             "id": "wallet",
             "background": "color",
@@ -39,7 +32,7 @@
             })
         </div>
 
-        <div class="tab-pane col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch block-promotion__wrapper" id="vk" role="tabpanel" >
+        <div class="tab-pane col-xs-12 col-sm-12 col-md-6 col-lg-6 align-stretch block-promotion__wrapper js-tabs-content-item" >
             @@include('blocks/promotion/block/_promotion-wallet-toggle-new.html', {
             "id": "account",
             "background": "color",

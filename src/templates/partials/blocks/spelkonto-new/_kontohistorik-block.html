@@ -1,360 +1,423 @@
-<div class="table-section section block block-content block-kontohistorik">
+<div class="table-section section block block-content block-kontohistorik js-tabs">
     <h2 class="section__heading h4">Kontohistorik</h2>
     <a class="js-hide-section" href="/"><i class="icon icon-chevron-left"></i> Kontohistorik</a>
 
     <div class="row">
         <div class="col-xs-12">
-			<div class="new-tabs block-kontohistorik__tabs js-tabs-buttons d-md-flex"  role="tablist" >
-				<div class="new-tabs__bg">
-					<button
-					data-toggle="tab" data-index="0" href ="#sp" class="new-tabs__button js-tabs-button js-active active" role="tab"
-					data-index="0">Spelplånbok</button>
-					<button data-toggle="tab" data-index="1" href ="#vk" class="new-tabs__button js-tabs-button" role="tab" data-index="1">Vinstkonto</button>
+			<div class="new-tabs block-kontohistorik__tabs">
+				<div class="new-tabs__bg js-tabs-nav">
+					<button class="new-tabs__button js-tabs-nav-item js-active"
+					>Spelplånbok</button>
+					<button class="new-tabs__button js-tabs-nav-item">Vinstkonto</button>
+					<div class="new-tabs__bg-toggle js-tabs-nav-bg"></div>
 				</div>
 			</div>
 		</div>
-		<div class="js-tabs-content-item js-active" >
-			<div class="col-xs-12">
-            <div class="table-wrapper" role="tabpanel">
-                <div class="form-group responsive-table-filter  d-flex justify-between" style="gap: 0">
-					<div></div>
-                    <select id="tableSelect2" class="table-select form-control">
-                        <option value="">Senaste månaden</option>
-                        <option value="">Lorem ipsum</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12">
-                <table class="responsive-table modern">
-                    <thead>
-                        <tr>
-                            <th class="bg-none font-bold">Tidpunkt</th>
-                            <th class="bg-none font-bold">Typ</th>
-                            <th class="bg-none font-bold text-right">Kontanter
-                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
-                                    i
-                                </span>
-                            </th>
-                            <th class="bg-none font-bold text-right">Bonus
-                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
-                                    i
-                                </span>
-                            </th>
-                            <th class="bg-none font-bold text-right">Vinstvärde
-                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
-                                    i
-                                </span>
-                            </th>
-                            <th class="bg-none font-bold text-right">Saldo <span class="regular">(varav kontanter)</span>
-                                <span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
-                                    i
-                                </span></th>
-                        </tr>
-                    </thead>
-                    <tbody id="account-wallet-table-data" data-total-items="8">
-                        <tr class="mb-py-2">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div> 135kr</td>
-                            <td data-header="Bonus" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>108.96kr</td>
-                            <td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>500kr</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div><span><strong>1 700 kr</strong> (1 600 kr)</span> </td>
-                        </tr>
-                        <tr class="mb-py-2">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Belopp<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>105kr</td>
-                            <td data-header="Bonus" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>-</td>
-                            <td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus & Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>500kr</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div><span><strong>1 700 kr</strong> (1 600 kr)</span> </td>
-                        </tr>
-                        <tr class="mb-py-2">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ"><span class="text-green"><strong>Vinst</strong> (100 kr)</span></td>
-                            <td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Belopp<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>135kr</td>
-                            <td data-header='Bonus' class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>108.96kr</td>
-                            <td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus & Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>-</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
-                                i
-                            </span></div>100 kr</td>
-                        </tr>
-                        <tr class="tablet-hidden">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right">135kr</td>
-                            <td data-header="Bonus" class="text-right">-</td>
-                            <td data-header="Vinstvärde" class="text-right">-</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
-                        </tr>
-                        <tr class="tablet-hidden">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right">135kr</td>
-                            <td data-header="Bonus" class="text-right">-</td>
-                            <td data-header="Vinstvärde" class="text-right">-</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
-                        </tr>
-                        <tr class="tablet-hidden">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right">135kr</td>
-                            <td data-header="Bonus" class="text-right">-</td>
-                            <td data-header="Vinstvärde" class="text-right">-</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
-                        </tr>
-                        <tr class="tablet-hidden">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right">135kr</td>
-                            <td data-header="Bonus" class="text-right">-</td>
-                            <td data-header="Vinstvärde" class="text-right">-</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
-                        </tr>
-                        <tr class="tablet-hidden">
-                            <td data-header="Tidpunkt">2024-04-16 18:30</td>
-                            <td data-header="Typ">Köp</td>
-                            <td data-header="Kontanter" class="text-right">135kr</td>
-                            <td data-header="Bonus" class="text-right">-</td>
-                            <td data-header="Vinstvärde" class="text-right">-</td>
-                            <td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="entity-collection-actions">
-                    <a class="btn btn-secondary" data-target="#account-wallet-table-data"
-                        href="./ajax/account-history/account-wallet.html">Visa fler</a>
-                </div>
-            </div>
-		</div>
-		<div class="js-tabs-content-item" hidden>
-			<div class="col-xs-12">
+		<div class="js-tabs-content">
+			<div class="js-tabs-content-item js-active">
+				<div class="col-xs-12">
 				<div class="table-wrapper" role="tabpanel">
-					<div class="form-group responsive-table-filter  d-flex justify-between">
-						<select id="tableSelect1" class="table-select form-control" name="tableSelect1" role="tablist">
-							<option value="account-prizes">Kontohistorik</option>
-							<option value="account-wallet">Förfallodatum</option>
-						</select>
+					<div class="form-group responsive-table-filter  d-flex justify-between" style="gap: 0">
+						<div></div>
 						<select id="tableSelect2" class="table-select form-control">
 							<option value="">Senaste månaden</option>
 							<option value="">Lorem ipsum</option>
-                    </select>
-                </div>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="col-xs-12">
-				<div class="table-wrapper table-pane tab-pane table-pane--active" id="account-prizes" role="tabpanel">
-					<!-- <p class="table__title-block">Kontohistorik</p> -->
-                    <table class="responsive-table modern">
-                        <thead>
-                            <tr>
-								<th class="bg-none responsive-table__th responsive-table__th--fixed-width">Tidpunkt</th>
-								<th class="bg-none responsive-table__th responsive-table__th--fixed-width">Typ</th>
-								<th class="bg-none responsive-table__th responsive-table__th--fixed-width">
-									Belopp
-									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
-										i
-									</span>
-								</th>
-								<th class="bg-none text-right">
-									Saldo
-									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
-										i
-									</span>
-								</th>
-                            </tr>
-                        </thead>
-                        <tbody id="account-prizes-table-data" data-total-items="12">
-                            <tr>
-                                <td data-header="Tidpunkt">2024-04-16 18:30</td>
-								<td data-header="Typ">Insättning kontant</td>
-								<td data-header="Belopp">1 600 kr</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
-							</tr>
+					<table class="responsive-table modern">
+						<thead>
 							<tr>
+								<th class="bg-none font-bold">Tidpunkt</th>
+								<th class="bg-none font-bold">Typ</th>
+								<th class="bg-none font-bold text-right">Kontanter
+									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+										i
+									</span>
+								</th>
+								<th class="bg-none font-bold text-right">Bonus
+									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+										i
+									</span>
+								</th>
+								<th class="bg-none font-bold text-right">Vinstvärde
+									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+										i
+									</span>
+								</th>
+								<th class="bg-none font-bold text-right">Saldo <span class="regular">(varav kontanter)</span>
+									<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+										i
+									</span></th>
+							</tr>
+						</thead>
+						<tbody id="account-wallet-table-data" data-total-items="8">
+							<tr class="mb-py-2">
 								<td data-header="Tidpunkt">2024-04-16 18:30</td>
-								<td data-header="Typ">Uttag</td>
-								<td data-header="Belopp">450 kr</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div> 135kr</td>
+								<td data-header="Bonus" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>108.96kr</td>
+								<td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>500kr</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div><span><strong>1 700 kr</strong> (1 600 kr)</span> </td>
 							</tr>
-							<tr>
+							<tr class="mb-py-2">
+								<td data-header="Tidpunkt">2024-04-16 18:30</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Belopp<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>105kr</td>
+								<td data-header="Bonus" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>-</td>
+								<td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus & Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>500kr</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div><span><strong>1 700 kr</strong> (1 600 kr)</span> </td>
+							</tr>
+							<tr class="mb-py-2">
 								<td data-header="Tidpunkt">2024-04-16 18:30</td>
 								<td data-header="Typ"><span class="text-green"><strong>Vinst</strong> (100 kr)</span></td>
-								<td data-header="Belopp">-</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
+								<td data-header="Kontanter" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Belopp<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>135kr</td>
+								<td data-header='Bonus' class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Kontanter<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>108.96kr</td>
+								<td data-header="Vinstvärde" class="text-right mb-header-none"><div class="min-tablet-hidden font-bold text-uppercase">Bonus & Vinstvärde<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>-</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right mb-header-none"><div class="min-tablet-hidden  text-uppercase"><span class="font-bold">Saldo</span> (varav kontanter)<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Kontanter är pengar som du har på ditt spelkonto och som du kan använda för att spela för.">
+									i
+								</span></div>100 kr</td>
 							</tr>
-							<tr>
+							<tr class="tablet-hidden">
 								<td data-header="Tidpunkt">2024-04-16 18:30</td>
-								<td data-header="Typ">Miljonlotten</td>
-								<td data-header="Belopp">50 kr</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Kontanter" class="text-right">135kr</td>
+								<td data-header="Bonus" class="text-right">-</td>
+								<td data-header="Vinstvärde" class="text-right">-</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
 							</tr>
-							<tr>
+							<tr class="tablet-hidden">
 								<td data-header="Tidpunkt">2024-04-16 18:30</td>
-								<td data-header="Typ">Miljonlotten</td>
-								<td data-header="Belopp">100 kr</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
-                            </tr>
-                            <tr>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Kontanter" class="text-right">135kr</td>
+								<td data-header="Bonus" class="text-right">-</td>
+								<td data-header="Vinstvärde" class="text-right">-</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
+							</tr>
+							<tr class="tablet-hidden">
 								<td data-header="Tidpunkt">2024-04-16 18:30</td>
-								<td data-header="Typ">Miljonlotten</td>
-								<td data-header="Belopp">100 kr</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
-                            </tr>
-                            <tr>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Kontanter" class="text-right">135kr</td>
+								<td data-header="Bonus" class="text-right">-</td>
+								<td data-header="Vinstvärde" class="text-right">-</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
+							</tr>
+							<tr class="tablet-hidden">
 								<td data-header="Tidpunkt">2024-04-16 18:30</td>
-								<td data-header="Typ">Miljonlotten</td>
-								<td data-header="Belopp">100 kr</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
-                            </tr>
-                            <tr>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Kontanter" class="text-right">135kr</td>
+								<td data-header="Bonus" class="text-right">-</td>
+								<td data-header="Vinstvärde" class="text-right">-</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
+							</tr>
+							<tr class="tablet-hidden">
 								<td data-header="Tidpunkt">2024-04-16 18:30</td>
-								<td data-header="Typ">Miljonlotten</td>
-								<td data-header="Belopp">100 kr</td>
-								<td data-header="Saldo" class="text-right">1 500 kr</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                    <div class="entity-collection-actions">
-                        <a class="btn btn-secondary" data-target="#account-prizes-table-data"
-                            href="./ajax/account-history/account-prizes.html">Visa fler</a>
-                    </div>
-
-                </div>
-
-				<div class="table-pane tab-pane" id="account-wallet" role="tabpanel">
-					<!-- <p class="table__title-block">Förfallodatum</p> -->
-					<table class="responsive-table modern">
-                        <thead>
-                            <tr>
-								<th class="bg-none font-bold">Förfaller</th>
-								<th class="bg-none font-bold text-right">Belopp</th>
-                            </tr>
-                        </thead>
-						<tbody id="account-due-dates-table-data" data-total-items="12">
-							<tr class="mb-py-2">
-								<td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
+								<td data-header="Typ">Köp</td>
+								<td data-header="Kontanter" class="text-right">135kr</td>
+								<td data-header="Bonus" class="text-right">-</td>
+								<td data-header="Vinstvärde" class="text-right">-</td>
+								<td data-header="Saldo (varav kontanter)" class="text-right"> 250kr</td>
 							</tr>
-							<tr class="mb-py-2">
-								<td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
-							</tr>
-							<tr class="mb-py-2">
-								<td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
-							</tr>
-							<tr class="mb-py-2">
-								<td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
-							</tr>
-							<tr class="mb-py-2">
-                                <td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
-                            </tr>
-							<tr class="mb-py-2">
-								<td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
-                            </tr>
-							<tr class="mb-py-2">
-								<td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
-                            </tr>
-							<tr class="mb-py-2">
-								<td data-header="Förfaller">2024-04-16 18:30</td>
-								<td data-header="Belopp" class="text-right">100 kr </td>
-                            </tr>
-                        </tbody>
-                    </table>
+						</tbody>
+					</table>
 
-                    <div class="entity-collection-actions">
-                        <a class="btn btn-secondary" data-target="#account-due-dates-table-data"
-                            href="./ajax/account-history/account-due-dates.html">Visa fler</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+					<div class="entity-collection-actions">
+						<a class="btn btn-secondary" data-target="#account-wallet-table-data"
+							href="./ajax/account-history/account-wallet.html">Visa fler</a>
+					</div>
+				</div>
+			</div>
+			<div class="js-tabs-content-item">
+				<div class="col-xs-12">
+					<div class="table-wrapper" role="tabpanel">
+						<div class="form-group responsive-table-filter  d-flex justify-between">
+							<select id="tableSelect1" class="table-select form-control" name="tableSelect1" role="tablist">
+								<option value="account-prizes">Kontohistorik</option>
+								<option value="account-wallet">Förfallodatum</option>
+							</select>
+							<select id="tableSelect2" class="table-select form-control">
+								<option value="">Senaste månaden</option>
+								<option value="">Lorem ipsum</option>
+						</select>
+					</div>
+					</div>
+				</div>
+				<div class="col-xs-12">
+					<div class="table-wrapper table-pane tab-pane table-pane--active" id="account-prizes" role="tabpanel">
+						<!-- <p class="table__title-block">Kontohistorik</p> -->
+						<table class="responsive-table modern">
+							<thead>
+								<tr>
+									<th class="bg-none responsive-table__th responsive-table__th--fixed-width">Tidpunkt</th>
+									<th class="bg-none responsive-table__th responsive-table__th--fixed-width">Typ</th>
+									<th class="bg-none responsive-table__th responsive-table__th--fixed-width">
+										Belopp
+										<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+											i
+										</span>
+									</th>
+									<th class="bg-none text-right">
+										Saldo
+										<span class="tooltip-on-touch tooltip-icon-info" data-toggle="tooltip" data-placement="top" title="" data-original-title="Lorem ipsum">
+											i
+										</span>
+									</th>
+								</tr>
+							</thead>
+							<tbody id="account-prizes-table-data" data-total-items="12">
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ">Insättning kontant</td>
+									<td data-header="Belopp">1 600 kr</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ">Uttag</td>
+									<td data-header="Belopp">450 kr</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ"><span class="text-green"><strong>Vinst</strong> (100 kr)</span></td>
+									<td data-header="Belopp">-</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ">Miljonlotten</td>
+									<td data-header="Belopp">50 kr</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ">Miljonlotten</td>
+									<td data-header="Belopp">100 kr</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ">Miljonlotten</td>
+									<td data-header="Belopp">100 kr</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ">Miljonlotten</td>
+									<td data-header="Belopp">100 kr</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
+								<tr>
+									<td data-header="Tidpunkt">2024-04-16 18:30</td>
+									<td data-header="Typ">Miljonlotten</td>
+									<td data-header="Belopp">100 kr</td>
+									<td data-header="Saldo" class="text-right">1 500 kr</td>
+								</tr>
 
+							</tbody>
+						</table>
+						<div class="entity-collection-actions">
+							<a class="btn btn-secondary" data-target="#account-prizes-table-data"
+								href="./ajax/account-history/account-prizes.html">Visa fler</a>
+						</div>
+
+					</div>
+
+					<div class="table-pane tab-pane" id="account-wallet" role="tabpanel">
+						<!-- <p class="table__title-block">Förfallodatum</p> -->
+						<table class="responsive-table modern">
+							<thead>
+								<tr>
+									<th class="bg-none font-bold">Förfaller</th>
+									<th class="bg-none font-bold text-right">Belopp</th>
+								</tr>
+							</thead>
+							<tbody id="account-due-dates-table-data" data-total-items="12">
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+								<tr class="mb-py-2">
+									<td data-header="Förfaller">2024-04-16 18:30</td>
+									<td data-header="Belopp" class="text-right">100 kr </td>
+								</tr>
+							</tbody>
+						</table>
+
+						<div class="entity-collection-actions">
+							<a class="btn btn-secondary" data-target="#account-due-dates-table-data"
+								href="./ajax/account-history/account-due-dates.html">Visa fler</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 </div>
 
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
-		document.querySelectorAll(".js-tabs").forEach((tabs) => {
-			const buttonsGroup = tabs.querySelectorAll(".js-tabs-buttons");
-			const items = tabs.querySelectorAll(".js-tabs-content-item");
+		const classes = {
+			wrap: 'js-tabs',
+			nav: 'js-tabs-nav',
+			navItem: 'js-tabs-nav-item',
+			content: 'js-tabs-content',
+			contentItem: 'js-tabs-content-item',
+			active: 'js-active',
+			bg: 'js-tabs-nav-bg',
+		}
 
-			buttonsGroup.forEach((buttonsWrapper) => {
-				buttonsWrapper.addEventListener("click", (event) => {
-					const target = event.target;
-					const button = target.closest(".js-tabs-button");
+		document.querySelectorAll(`.${classes.wrap}`).forEach((tabs) => {
+			tabs.querySelectorAll(`.${classes.contentItem}`).forEach((el) => (el.style.display = 'none'))
 
-					if (button === null) {
-						return;
+			const nav = tabs.querySelector(`.${classes.nav}`)
+
+			if(nav === null) {
+				return
+			}
+
+			const itemsNav = Array.from(nav.querySelectorAll(`.${classes.navItem}`))
+			const lengthItemsNav = itemsNav.length
+			const widthItem = 100 / lengthItemsNav
+			const content = tabs.querySelector(`.${classes.content}`)
+			const itemsContent = [...content.querySelectorAll(`.${classes.contentItem}`)].filter((item) => item.parentNode === content)
+
+			const setActiveItem = (activeIndex) => (item, index) => (index === activeIndex ? item.classList.add(classes.active) : item.classList.remove(classes.active))
+
+			const handleClickNavItem = (event) => {
+				const navItem = event.target.closest(`.${classes.navItem}`)
+
+				if (navItem === null) {
+					return
+				}
+
+				if (navItem.closest(`.${classes.wrap}`) !== tabs) {
+					return
+				}
+
+				event.preventDefault()
+
+				const activeIndexNav = itemsNav.indexOf(navItem) || +navItem.getAttribute('data-index')
+
+
+				itemsNav.forEach(setActiveItem(activeIndexNav))
+				itemsContent.forEach(setActiveItem(activeIndexNav))
+
+				if (bg === null) {
+					return
+				}
+
+				const { left: leftItem } = navItem.getBoundingClientRect()
+				const { left: leftNav } = nav.getBoundingClientRect()
+				bg.classList.remove('js-move')
+				bg.style.left = leftItem - leftNav - 1 + 'px'
+			}
+
+			tabs.addEventListener('click', handleClickNavItem)
+
+			const bg = nav.querySelector(`.${classes.bg}`)
+
+			if (bg === null) {
+				return
+			}
+
+			bg.style.width = widthItem + '%'
+			let activeIndex = itemsNav.findIndex((el) => el.classList.contains(classes.active))
+			let oldActiveIndex = activeIndex
+
+			const down = (e) => {
+				e.preventDefault()
+
+				const { width: widthBg, left: leftBg } = bg.getBoundingClientRect()
+				const { width: widthNav, left: leftNav } = nav.getBoundingClientRect()
+
+				const shiftX = (e.pageX ?? e.touches[0].pageX) - leftBg
+
+				const move = (e) => {
+					e.preventDefault()
+					bg.classList.add('js-move')
+
+					const currentX = e.pageX ?? e.touches[0].pageX
+					let newX = currentX - leftNav - shiftX
+					newX = Math.min(widthNav - widthBg, Math.max(0, newX))
+
+					const percentCurrentPosition = (100 / widthNav) * (newX + widthBg / 2)
+					activeIndex = Math.floor(percentCurrentPosition / widthItem)
+
+					if (activeIndex !== oldActiveIndex) {
+						itemsNav.forEach(setActiveItem(activeIndex))
+						oldActiveIndex = activeIndex
 					}
 
-					const index = button.dataset.index;
+					bg.style.left = newX + 'px'
+				}
 
-					if (index == null) {
-						return;
-					}
+				const up = (e) => {
+					e.preventDefault()
 
-					const newActiveItem = items[index];
+					window.removeEventListener('mousemove', move)
+					window.removeEventListener('mouseup', up)
+					window.removeEventListener('touchmove', move)
+					window.removeEventListener('touchend', up)
+					itemsNav[activeIndex].click()
+				}
 
-					if (newActiveItem == null) {
-						return;
-					}
+				window.addEventListener('mousemove', move)
+				window.addEventListener('mouseup', up)
+				window.addEventListener('touchmove', move)
+				window.addEventListener('touchend', up)
+			}
 
-					items.forEach((item) => {
-						item.classList.remove("js-active");
-						item.style.animation = "";
-						item.hidden = true;
-					});
-					newActiveItem.classList.add("js-active");
-					newActiveItem.style.animation = "fadeIn 1s";
-					newActiveItem.hidden = false;
-
-					// update all buttons group
-					buttonsGroup.forEach((buttonsWrapper) => {
-						const buttons =
-							buttonsWrapper.querySelectorAll(".js-tabs-button");
-						const newActiveButton = buttons[index];
-
-						if (newActiveButton == null) {
-							return;
-						}
-
-						buttons.forEach((button) =>
-							button.classList.remove("js-active", "active")
-						);
-						newActiveButton.classList.add("js-active", "active");
-					});
-				});
-			});
-		});
+			bg.addEventListener('mousedown', down)
+			bg.addEventListener('touchstart', down)
+		})
 	});
 </script>

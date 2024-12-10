@@ -13,12 +13,16 @@
 
 .block-promotion {
     &__wrapper{
+        @media screen and (min-width: 768px) {
+			display: flex !important;
+		}
         @media screen and (max-width: 767px) {
             display: none !important;
-            &.active{
-                display: flex !important;
-            }
         }
+		&.active,
+		&.js-tabs-content-item.js-active{
+			display: flex !important;
+		}
     }
     &--wallet-toggle {
         background-color: #fff;
@@ -1383,6 +1387,49 @@
 	display: flex;
 	justify-content: center;
 }
+.new-tabs__bg-toggle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 50%;
+	border-radius: inherit;
+	transition: left .3s;
+	cursor: pointer;
+
+	&::before,
+	&::after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 4;
+		border-radius: inherit;
+	}
+
+	&::after {
+		z-index: 99;
+	}
+
+	&::before {
+		background-color: #074658;
+	}
+
+
+	&.js-move {
+		transition: left 0s;
+	}
+}
+.js-tabs-content-item.js-active {
+	display: block !important;
+	animation-duration: 1s;
+	animation-name: fadeIn;
+	animation-fill-mode: both;
+}
 .new-tabs__bg {
 	display: flex;
 	align-items: center;
@@ -1391,11 +1438,16 @@
 	border-radius: 53px;
 	max-width: 320px;
 	width: 100%;
+	position: relative;
 	@media screen and (max-width: 767px) {
 		max-width: 286px;
 	}
 }
 .new-tabs__button {
+	position: relative;
+	z-index: 5;
+	user-select: none;
+	cursor: pointer;
 	flex: 1 1;
 	display: inline-flex;
 	align-items: center;
@@ -1418,26 +1470,12 @@
 	}
 }
 
-.new-tabs__button:not(:first-child) {
-	margin-left: -16px;
-}
-
-.new-tabs__button:hover {
-	background-color: #074658;
-	color: #fff;
-}
 
 .new-tabs__button--active,
 .new-tabs__button.js-active {
 	border-radius: inherit;
-	background-color: #074658;
 	color: #fff;
 	font-weight: 700;
-}
-
-
-.mobile-togglers {
-	// display: block!important;
 }
 
 
