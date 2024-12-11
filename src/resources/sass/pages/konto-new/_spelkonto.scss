@@ -1147,7 +1147,9 @@
     padding: 12px 16px;
     margin-top: 5px;
 	& + .offer{
-		margin-top: 30px;
+		@media (min-width:1025px) {
+			margin-top: 30px;
+		}
 	}
     @media (max-width:1024px) {
         max-width: 638px;
@@ -1433,6 +1435,9 @@
 		transition: left 0s;
 	}
 }
+.js-tabs-content-item{
+	display: none;
+}
 .js-tabs-content-item.js-active {
 	display: block !important;
 	animation-duration: 1s;
@@ -1502,4 +1507,10 @@
 .has-error::after,
 .has-error::before {
 	background-color: #FFCACA;
+}
+
+
+// TODO: REMOVE THIS
+.ml-2017#alert-cookie {
+	display: none;
 }
