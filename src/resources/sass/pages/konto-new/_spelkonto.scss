@@ -225,9 +225,15 @@
 			display: table-row!important;
 			@media screen and (max-width: 767px) {
 				display: flex!important;
+				flex-wrap: nowrap;
+				justify-content: space-between;
 				td {
-					display: block;
+					display: block!important;
 					width: 100%!important;
+
+					&::before {
+						display: none;
+					}
 				}
 			}
 		}
@@ -243,7 +249,10 @@
 		gap: 24px;
 		width: 100%;
 		@media screen and (max-width: 767px) {
-			margin-left: -100px;
+			justify-content: space-between;
+			margin-left: -8px;
+			margin-right: -8px;
+			width: auto;
 		}
 	}
 }
