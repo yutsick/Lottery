@@ -12,8 +12,12 @@
                     <div class="profile__header">Inloggningsuppgifter</div>
 
                     <div class="profile__row">
-                        <div class="profile__label">Kundnummer</div>
-                        <div class="profile__input m-0">110001679538</div>
+						<div class="profile__form-top">
+							<div class="profile__fieldset">
+								<div class="profile__label">Kundnummer</div>
+								<div class="profile__input m-0">110001679538</div>
+							</div>
+                    	</div>
                     </div>
 
                     <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
@@ -38,10 +42,11 @@
 
                     <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
                         <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                            <div class="active-px-3">
-                                <label class="profile__label m-0">Lösenord</label>
-                                <div class="profile__input m-0" style="padding-top: 3px;">********</div>
-
+                            <div class="profile__form-top active-px-3">
+								<div class="profile__fieldset">
+                                	<label class="profile__label m-0">Lösenord</label>
+                                	<div class="profile__input profile__input--password m-0">********</div>
+								</div>
                                 <div class="profile__actions">
                                     <button class="btn btn-link js-update-profile-row link" type="button">Ändra</button>
                                     <button class="btn btn-link profile__submit text-red link mr-4" type="button">Avbryt</button>
@@ -84,11 +89,13 @@
                     </div>
 
 					<div class="profile__row">
-						<div class="profile__fieldset">
-							<div class="profile__label">Senaste inloggning</div>
-							<div class="profile__input m-0">2024-05-30 12.10</div>
-						</div>
-						<div class="profile__actions"></div>
+						<div class="profile__form-top">
+							<div class="profile__fieldset">
+								<div class="profile__label">Senaste inloggning</div>
+								<div class="profile__input m-0">2024-05-30 12.10</div>
+							</div>
+							<div class="profile__actions"></div>
+                    </div>
                     </div>
 
 
@@ -99,17 +106,21 @@
                     <div class="profile__header">Kontaktuppgifter</div>
 
                     <div class="profile__row">
-						<div class="profile__fieldset">
-                        	<div class="profile__label">Namn</div>
-                        	<div class="profile__input m-0">Stefan Jakobsson</div>
+						<div class="profile__form-top">
+							<div class="profile__fieldset">
+								<div class="profile__label">Namn</div>
+								<div class="profile__input m-0">Stefan Jakobsson</div>
+							</div>
                     	</div>
                     </div>
 
                     <div class="profile__row">
-						<div class="profile__fieldset">
-                    	    <div class="profile__label">Adress</div>
-                    	    <div class="profile__input m-0">Hvitfeldtsgatan 4, 411 20, Göteborg</div>
-                    	</div>
+						<div class="profile__form-top">
+							<div class="profile__fieldset">
+								<div class="profile__label">Adress</div>
+								<div class="profile__input m-0">Hvitfeldtsgatan 4, 411 20, Göteborg</div>
+							</div>
+                	    </div>
                     </div>
 
                     <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
@@ -192,38 +203,43 @@
 
                         <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
                             <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                                <label class="profile__label">Nyhetsbrev</label>
+								<div class="profile__form-top">
+									<div class="profile__fieldset">
+										<label class="profile__label">Nyhetsbrev</label>
 
-                                <div class="profile__input m-0">
-                                    <div class="d-flex items-center gap-30">
-                                        <div class="toggle d-flex items-center">
-                                            <span class="mr-2">E-post:</span>
-                                            <label class="toggle-switch m-0">
-                                                <input type="checkbox" />
-                                                <span class="slider"></span>
-                                            </label>
-                                        </div>
-                                        <div class="toggle d-flex items-center">
-                                            <span class="mr-2">SMS:</span>
-                                            <label class="toggle-switch m-0">
-                                                <input type="checkbox" />
-                                                <span class="slider"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-
+										<div class="profile__input profile__input--checkboxs m-0">
+											<div class="d-flex items-center gap-30">
+												<div class="toggle d-flex items-center">
+													<span class="mr-2">E-post:</span>
+													<label class="toggle-switch m-0">
+														<input type="checkbox" />
+														<span class="slider"></span>
+													</label>
+												</div>
+												<div class="toggle d-flex items-center">
+													<span class="mr-2">SMS:</span>
+													<label class="toggle-switch m-0">
+														<input type="checkbox" />
+														<span class="slider"></span>
+													</label>
+												</div>
+											</div>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+								</div>
                             </form>
                         </div>
                         <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
                             <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                                <label class="profile__label">Villkor</label>
-                                <div class="profile__input m-0">
-                                    Du har godkänt våra villkor
-                                </div>
-
+								<div class="profile__form-top">
+									<div class="profile__fieldset">
+										<label class="profile__label">Villkor</label>
+										<div class="profile__input m-0">
+											Du har godkänt våra villkor
+										</div>
+									</div>
+								</div>
                             </form>
                         </div>
                 </div>
@@ -235,8 +251,8 @@
 
                         <div class="profile__row form-group has-feedback px-0">
                             <form action="/" method="post" data-toggle="validator" data-use-ajax>
-                                <div class="d-flex px-3 justify-between">
-                                    <div class="">
+                                <div class="profile__form-top d-flex px-3 justify-between">
+                                    <div class="profile__fieldset">
                                         <label class="profile__label">Kontonummer</label>
 
                                         <div class="profile__input m-0">
