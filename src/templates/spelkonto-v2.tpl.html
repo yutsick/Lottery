@@ -6,8 +6,10 @@
 
 @@include('layout/_top-new.html', { "logged_in": false, "show_cart": false })
 <div class="ml-2017" id="konto-new">
-	@@include('blocks/spelkonto-new/_konto-menu.html', { activeIndex: 1 })
-	@@include('blocks/spelkonto-new/_spelkonto-main.html', { activeIndex: 1 })
+	<div class="content-wrapper ml-2017">
+		@@include('blocks/spelkonto-new/_konto-menu.html', { activeIndex: 1 })
+		@@include('blocks/spelkonto-new/_spelkonto-main.html', { activeIndex: 1 })
+	</div>
 </div>
 
 
