@@ -60,7 +60,9 @@ export default function () {
 			window.location = href
 		}
     });
-	$('.table-select') .on('select2:select', function (evt) {
+	$('.table-select.table-select--sub') .on('select2:select', function (evt) {
+	})
+	$('.table-select:not(.table-select--sub)') .on('select2:select', function (evt) {
 		var choice = evt.params.data.id;
     let selectedOption = evt.params.data.element;
     let $selectedOption = $(selectedOption);
