@@ -165,13 +165,26 @@
 							<div class="profile__form-top">
 								<div class="profile__fieldset">
 									<label class="profile__label">Mobilnummer</label>
-									<div class="profile__input m-0">
-										<input type="tel"
-											data-required-error="Du måste fylla i detta fält."
-											placeholder="Ej angivet"
-											value="0768232323"
-											name="mobile"
-											required disabled>
+									<div class="profile__input m-0 js-profile-phone">
+										<div class="profile__input-split-phone">
+											<div class="profile__input-value js-profile-phone-value">0701234567</div>
+											<input type="tel"
+												data-required-error="Du måste fylla i detta fält."
+												placeholder="Ej angivet"
+												value="070"
+												name="mobile-code"
+												class="js-profile-phone-input-1"
+												maxlength="3"
+												required disabled>
+											<input type="tel"
+												data-required-error="Du måste fylla i detta fält."
+												placeholder="Ej angivet"
+												value="1234567"
+												name="mobile"
+												class="js-profile-phone-input-2"
+												maxlength="7"
+												required disabled>
+										</div>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -338,23 +351,25 @@
 
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		const phone = document.querySelector('.js-profile-phone')
-
-		if (phone) {
+		 document.querySelectorAll('.js-profile-phone').forEach((phone)=>{
 			const value = phone.querySelector('.js-profile-phone-value')
 			const input1 = phone.querySelector('.js-profile-phone-input-1')
 			const input2 = phone.querySelector('.js-profile-phone-input-2')
 
-			if (value && input1 && input2) {
-				const blur = () => {
-					const inputValue1 = input1.value
-					const inputValue2 = input2.value
-					value.textContent = inputValue1 + inputValue2
-				}
-				input1.addEventListener('blur', blur)
-				input2.addEventListener('blur', blur)
+			if (value === null || input1 === null || input2 === null) {
+				return
 			}
-		}
+
+			const blur = () => {
+				const inputValue1 = input1.value
+				const inputValue2 = input2.value
+				value.textContent = inputValue1 + inputValue2
+			}
+
+			input1.addEventListener('blur', blur)
+			input2.addEventListener('blur', blur)
+		})
+
 
 		document.querySelectorAll('.js-profile-checkbox').forEach((checkbox) => {
 			const input = document.querySelector('.js-profile-checkbox-input')
@@ -367,9 +382,28 @@
 			input.addEventListener('change', (event) => {
 				const { checked } = event.target
 
+				if(checked === false) {
+					event.preventDefault()
+					const form = input.closest('.form-group')
+					setTimeout(() => {
+						form.classList.remove('has-error')
+					}, 3000)
+					setTimeout(() => {
+						event.target.checked = true
+					})
+					return
+				}
+
 				const newText = toggle.dataset.toggle
 				toggle.dataset.toggle = toggle.textContent
 				toggle.textContent = newText
+			})
+
+			input.addEventListener('mousedown', (event) => {
+				const { checked } = event.target
+
+				if(input.disabled ) {
+				}
 			})
 		})
 	})
