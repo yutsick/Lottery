@@ -128,13 +128,26 @@
 							<div class="profile__form-top">
 								<div class="profile__fieldset">
 									<label class="profile__label">Telefonnummer</label>
-									<div class="profile__input m-0">
-										<input type="tel"
-											data-required-error="Du måste fylla i detta fält."
-											placeholder="Ej angivet"
-											value="0701234567"
-											name="mobile"
-											required disabled>
+									<div class="profile__input m-0 js-profile-phone">
+										<div class="profile__input-split-phone">
+											<div class="profile__input-value js-profile-phone-value">0701234567</div>
+											<input type="tel"
+												data-required-error="Du måste fylla i detta fält."
+												placeholder="Ej angivet"
+												value="070"
+												name="mobile-code"
+												class="js-profile-phone-input-1"
+												maxlength="3"
+												required disabled>
+											<input type="tel"
+												data-required-error="Du måste fylla i detta fält."
+												placeholder="Ej angivet"
+												value="1234567"
+												name="mobile"
+												class="js-profile-phone-input-2"
+												maxlength="7"
+												required disabled>
+										</div>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
@@ -230,14 +243,30 @@
 								</div>
                             </form>
                         </div>
-                        <div class="profile__row form-group has-feedback" data-tooltip="Belopp för högt.">
+                        <div class="profile__row form-group has-feedback" data-tooltip="En text med ett relevant felmeddelande">
                             <form action="/" method="post" data-toggle="validator" data-use-ajax>
 								<div class="profile__form-top">
 									<div class="profile__fieldset">
 										<label class="profile__label">Villkor</label>
-										<div class="profile__input m-0">
-											Du har godkänt våra villkor
+
+										<div class="profile__input profile__input--checkboxs m-0">
+											<div class="d-flex items-center gap-30">
+												<div class="toggle d-flex items-center js-profile-checkbox">
+													<span class="mr-2">
+														<span data-toggle="Du har godkänt våra" class="js-profile-checkbox-toggle">
+															Du har inte godkänt</span>
+															<a href="#">villkor</a>
+														</span>
+													<label class="toggle-switch m-0">
+														<input type="checkbox" class="js-profile-checkbox-input" required />
+														<span class="slider slider--icon">
+														</span>
+
+													</label>
+												</div>
+											</div>
 										</div>
+
 									</div>
 								</div>
                             </form>
@@ -305,3 +334,43 @@
         </div>
     </div>
 </section>
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const phone = document.querySelector('.js-profile-phone')
+
+		if (phone) {
+			const value = phone.querySelector('.js-profile-phone-value')
+			const input1 = phone.querySelector('.js-profile-phone-input-1')
+			const input2 = phone.querySelector('.js-profile-phone-input-2')
+
+			if (value && input1 && input2) {
+				const blur = () => {
+					const inputValue1 = input1.value
+					const inputValue2 = input2.value
+					value.textContent = inputValue1 + inputValue2
+				}
+				input1.addEventListener('blur', blur)
+				input2.addEventListener('blur', blur)
+			}
+		}
+
+		document.querySelectorAll('.js-profile-checkbox').forEach((checkbox) => {
+			const input = document.querySelector('.js-profile-checkbox-input')
+			const toggle = document.querySelector('.js-profile-checkbox-toggle')
+
+			if (input === null || toggle === null) {
+				return
+			}
+
+			input.addEventListener('change', (event) => {
+				const { checked } = event.target
+
+				const newText = toggle.dataset.toggle
+				toggle.dataset.toggle = toggle.textContent
+				toggle.textContent = newText
+			})
+		})
+	})
+</script>
