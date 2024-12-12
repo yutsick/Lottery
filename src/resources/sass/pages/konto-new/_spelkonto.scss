@@ -531,6 +531,7 @@
             color: $primary-lighter;
             display: flex;
 			min-height: 43px;
+			gap: 6px;
             align-items: center;
             @media (max-width: 1024px) {
                 border:none;
@@ -563,7 +564,6 @@
                 width: 12px;
                 height: 12px;
                 border-radius: 100%;
-                margin-right: 8px;
                 background-color: #F09F54;
                 @media (max-width: 1024px) {
                     border-radius: 0;
