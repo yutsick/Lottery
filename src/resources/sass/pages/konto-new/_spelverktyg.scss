@@ -210,7 +210,7 @@
 			}
 
 			&--password {
-				@media screen and (min-width: 768px) {
+				@media screen and (min-width: 600px) {
 					padding-top: 3px;
 				}
 			}
@@ -236,6 +236,9 @@
 					}
 					&:nth-of-type(2) {
 						width: 162px;
+						@media screen and (max-width: 991px) and (min-width: 768px) {
+							width: 125px;
+						}
 					}
 				}
 			}
