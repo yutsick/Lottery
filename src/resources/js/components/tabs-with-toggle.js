@@ -21,8 +21,9 @@ export default function () {
 			const itemsNav = Array.from(nav.querySelectorAll(`.${classes.navItem}`))
 			const lengthItemsNav = itemsNav.length
 			const widthItem = 100 / lengthItemsNav
-			const itemsContent = [...content.querySelectorAll(`.${classes.contentItem}`)].filter(
-				(item) => item.parentNode === content
+
+			const itemsContent = Array.from(content.querySelectorAll(`.${classes.contentItem}`)).filter(
+				(item) => item.parentElement === content
 			)
 
 			const setActiveItem = (activeIndex) => (item, index) =>
