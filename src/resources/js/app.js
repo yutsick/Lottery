@@ -79,6 +79,7 @@ import campaignPageHero from "./components/campaign-page-HERO.js";
 import subscriptionPopup from "./components/subscription-popup";
 import spelkonto from "./components/spelkonto";
 import registerLottV2 from "./components/register-lott-v2";
+import tabsWithToggle from "./components/tabs-with-toggle.js";
 
 
 
@@ -104,6 +105,8 @@ import textToggle from "./utilities/textToggle";
 import breakpointListener from "./utilities/breakpoint-listener";
 import scroller from "./utilities/scroller";
 import orderSwitcher from "./utilities/order-switcher";
+
+tabsWithToggle()
 
 $(function () {
 	window.ML = window.ML || {};
@@ -183,7 +186,7 @@ $(function () {
 
 	checkMaxLength();
 	//	cookieList();
-  
+
 	functionSlick();
   	slick();
 	cookieList();
@@ -200,7 +203,7 @@ $(function () {
 	gameLimitModal();
 	bonuskodsFunctionen();
 
-	
+
 });
 // subscriptionPopup();
 campaignPageHero();
