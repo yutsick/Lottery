@@ -2,13 +2,13 @@ section {
     padding-top: 48px;
     @media (max-width: 1024px) {
         padding-top: 40px;
-        
+
     }
 }
 .container{
     @media (max-width: 1024px) {
         padding: 0 20px;
-        
+
     }
 }
 .block {
@@ -18,9 +18,9 @@ section {
         @media screen and (max-width: 1200px) {
             margin: 0 0 32px;
             padding-left: 16px;
-            
+
         }
-   
+
     }
 
     &-name {
@@ -29,7 +29,7 @@ section {
         color: $primary-light;
         @media (max-width:1200px) {
             display: none;
-            
+
         }
     }
 
@@ -258,7 +258,7 @@ hr.disabled {
 .toggle-switch input {
     display: none;
   }
-  
+
   /* Create a custom toggle switch container */
   .toggle-switch {
     position: relative;
@@ -266,7 +266,7 @@ hr.disabled {
     width: 56px;
     height: 32px;
   }
-  
+
   /* Style the slider */
   .slider {
     position: absolute;
@@ -277,19 +277,25 @@ hr.disabled {
     bottom: 0;
     background: linear-gradient(360deg, #A0B6BF 27.5%, #8497A2 100%);
     box-shadow: inset 0px -0.5px 4px #678A97;
-    transition: .4s;
+    transition: all .4s;
     border-radius: 27px;
   }
-  
+
   /* Style the slider when checked */
   input:checked + .slider {
     background: linear-gradient(360deg, #41D6A0 27.5%, #5AB393 100%);
 
     box-shadow: 0px 0.5px 4px 0px #45685580 inset;
   }
-  
+
+  input:checked + .slider--icon {
+	background: linear-gradient(360deg, rgba(65, 214, 160, 0.5) 27.5%, rgba(90, 179, 147, 0.5) 100%);
+	box-shadow: inset 0px 0.5px 4px rgba(69, 104, 85, 0.5);
+  }
+
   /* Style the slider before (the circle) */
-  .slider:before {
+  .slider:before,
+  .slider:after {
     position: absolute;
     content: "";
     height: 28.35px;
@@ -297,15 +303,27 @@ hr.disabled {
     border-radius: 50%;
     left: 2px;
     bottom: 2px;
-    box-shadow: 0px 0.5px 4px 0px #0000004D, 0px 0px 8px 0px #FFFFFF80 inset;
-    background: linear-gradient(180deg, #FFFFFF 28.5%, #CDD6DB 100%);
 
     transition: .4s;
   }
-  
+  .slider::before {
+    box-shadow: 0px 0.5px 4px 0px #0000004D, 0px 0px 8px 0px #FFFFFF80 inset;
+    background: linear-gradient(180deg, #FFFFFF 28.5%, #CDD6DB 100%);
+  }
+  .slider--icon:after {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url("data:image/svg+xml,	%3Csvg width='14' height='16' viewBox='0 0 14 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.18585 1.9202C4.88406 1.33835 5.84765 1 6.86735 1C7.88705 1 8.85064 1.33835 9.54886 1.9202C10.2444 2.49983 10.6122 3.26432 10.6122 4.03742V6.36734H3.12245V4.03742C3.12245 3.26432 3.49029 2.49983 4.18585 1.9202ZM2.62061 7.36734C2.62122 7.36735 2.62184 7.36735 2.62245 7.36735C2.62307 7.36735 2.62369 7.36735 2.6243 7.36734H11.1104C11.111 7.36735 11.1116 7.36735 11.1122 7.36735C11.1129 7.36735 11.1135 7.36735 11.1141 7.36734H11.8197C12.285 7.36734 12.7347 7.79274 12.7347 8.41094V13.8135C12.7347 14.4317 12.285 14.8571 11.8197 14.8571H1.91497C1.44971 14.8571 1 14.4317 1 13.8135V8.41094C1 7.79274 1.44971 7.36734 1.91497 7.36734H2.62061ZM2.12245 6.36734V4.03742C2.12245 2.93415 2.64908 1.89913 3.54566 1.15197C4.43959 0.407033 5.63542 0 6.86735 0C8.09928 0 9.29511 0.407033 10.189 1.15197C11.0856 1.89913 11.6122 2.93415 11.6122 4.03742V6.36734H11.8197C12.9174 6.36734 13.7347 7.32414 13.7347 8.41094V13.8135C13.7347 14.9003 12.9174 15.8571 11.8197 15.8571H1.91497C0.817296 15.8571 0 14.9003 0 13.8135V8.41094C0 7.32414 0.817296 6.36734 1.91497 6.36734H2.12245Z' fill='%23003E52' fill-opacity='0.5'/%3E%3C/svg%3E");
+	opacity: 0;
+  }
+
   /* Move the circle to the right when checked */
-  input:checked + .slider:before {
+  input:checked + .slider:before,
+  input:checked + .slider:after {
     transform: translateX(24.5px);
+  }
+  input:checked + .slider--icon:after {
+	opacity: .5;
   }
 
   .px-0{
@@ -319,20 +337,20 @@ hr.disabled {
 .mb-pt-2{
     @media screen and (max-width: 768px) {
         padding-top: 8px;
-        
+
     }
 }
 .mb-mt-6{
     @media screen and (max-width: 768px) {
         margin-top: 24px;
-        
+
     }
 }
 .mb-py-2{
     @media screen and (max-width: 768px) {
         padding-top: 8px;
         padding-bottom: 8px;
-        
+
     }
 }
 
@@ -356,5 +374,5 @@ hr.disabled {
     .w-460{
         width: 460px;
     }
-    
+
 }
