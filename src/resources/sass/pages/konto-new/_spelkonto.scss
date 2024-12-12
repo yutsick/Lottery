@@ -1301,6 +1301,13 @@
 	margin-top: 16px;
 	font-size: 12px;
 }
+.vinster-table__image {
+	max-width: 164px;
+	img {
+		max-width: 100%;
+		border-radius: 4px;
+	}
+}
 
 .order-detailes-top {
 	font-size: 14px;
@@ -1499,6 +1506,12 @@
 
 ::placeholder {
 	color:#074658;
+}
+
+.has-error::after {
+	width: auto;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .has-error::after,
