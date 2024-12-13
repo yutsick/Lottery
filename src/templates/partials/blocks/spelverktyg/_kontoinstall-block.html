@@ -270,7 +270,7 @@
 															Du har inte godkänt</span>
 															<a href="#">villkor</a>
 														</span>
-													<label class="toggle-switch m-0">
+													<label class="toggle-switch m-0 js-profile-checkbox-label">
 														<input type="checkbox" class="js-profile-checkbox-input" required />
 														<span class="slider slider--icon">
 														</span>
@@ -351,12 +351,12 @@
 
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		 document.querySelectorAll('.js-profile-phone').forEach((phone)=>{
+		 document.querySelectorAll('.js-profile-phone').forEach((phone) => {
 			const value = phone.querySelector('.js-profile-phone-value')
 			const input1 = phone.querySelector('.js-profile-phone-input-1')
 			const input2 = phone.querySelector('.js-profile-phone-input-2')
 
-			if (value === null || input1 === null || input2 === null) {
+			if (input1 === null || input2 === null) {
 				return
 			}
 
@@ -376,36 +376,34 @@
 
 		document.querySelectorAll('.js-profile-checkbox').forEach((checkbox) => {
 			const input = document.querySelector('.js-profile-checkbox-input')
-			const toggle = document.querySelector('.js-profile-checkbox-toggle')
+			const form = checkbox.closest('.form-group')
+			const toggle = checkbox.querySelector('.js-profile-checkbox-toggle')
+			const label = checkbox.querySelector('.js-profile-checkbox-label')
 
-			if (input === null || toggle === null) {
+			if (input === null || label === null || toggle === null) {
 				return
 			}
 
-			input.addEventListener('change', (event) => {
-				const { checked } = event.target
+			input.addEventListener('change', () => {
+				const { checked } = input
 
-				if(checked === false) {
-					event.preventDefault()
-					const form = input.closest('.form-group')
-					setTimeout(() => {
-						form.classList.remove('has-error')
-					}, 3000)
-					setTimeout(() => {
-						event.target.checked = true
-					})
-					return
-				}
-
+				input.disabled = true
 				const newText = toggle.dataset.toggle
 				toggle.dataset.toggle = toggle.textContent
 				toggle.textContent = newText
 			})
 
-			input.addEventListener('mousedown', (event) => {
-				const { checked } = event.target
+			let setTimeoutId
+			label.addEventListener('click', () => {
+				const { disabled } = input
 
-				if(input.disabled ) {
+				if(disabled && form) {
+					clearTimeout(setTimeoutId)
+					setTimeoutId = setTimeout(() => {
+						form.classList.remove('has-error')
+					}, 3000)
+
+					form.classList.add('has-error')
 				}
 			})
 		})
