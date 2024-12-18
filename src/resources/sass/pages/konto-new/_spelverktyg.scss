@@ -79,6 +79,8 @@
 			width: 100%;
 			padding-top: 0;
 			padding-bottom: 0;
+			padding-left: 16px;
+			padding-right: 16px;
 			form {
 				width: 100%;
 			}
@@ -107,16 +109,10 @@
 				opacity: 0.5;
 			}
 			&--active {
-				.active-px-3 {
-					padding-left: 16px;
-					padding-right: 16px;
-				}
+
 				.profile__multiple-input {
 					display: flex;
-					margin-right: 0;
-					@media screen and (min-width: 768px) {
-						padding-right: 16px;
-					}
+
 
 					inout {
 						height: 40px;
@@ -125,9 +121,6 @@
 					input {
 						padding-left: 10px;
 					}
-				}
-				div.profile__multiple-input {
-					width: 100%;
 				}
 				.profile__input--phone {
 					.profile__multiple-input {
@@ -226,11 +219,19 @@
 				display: flex;
 				gap: 6px;
 
-				input {
-					display: none;
-					padding-left: 14px !important;
-					padding-right: 5px !important;
+				.form-group  {
+					margin-bottom: 0;
+				}
 
+				.has-error:not([data-tooltip=''])::before{
+					top: -24px;
+				}
+				.has-error:not([data-tooltip=''])::after {
+					top: -63px;
+				}
+
+				> span,
+				> input {
 					&:first-of-type {
 						width: 61px;
 					}
@@ -240,6 +241,12 @@
 							width: 125px;
 						}
 					}
+				}
+
+				input {
+					display: none;
+					padding-left: 14px !important;
+					padding-right: 5px !important;
 				}
 			}
 
@@ -265,9 +272,13 @@
 			flex-direction: column;
 			align-items: flex-end;
 			gap: 16px;
-			margin-right: 16px;
 			border-top: dashed 1px $primary-light;
 			padding-top: 21px;
+			margin-left: -16px;
+			margin-right: -16px;
+			padding-left: 16px;
+			padding-right: 16px;
+
 			input {
 				height: 40px;
 				padding: 11px 24px 10px;
