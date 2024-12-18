@@ -249,7 +249,6 @@
 
 				input {
 					display: none;
-					padding-left: 14px !important;
 					padding-right: 5px !important;
 				}
 			}
@@ -257,7 +256,7 @@
 			input {
 				font: 400 16px/20px $apercu;
 				height: 40px;
-				padding: 11px 24px 10px;
+				padding: 11px 10px 10px;
 				box-sizing: border-box;
 				&[disabled] {
 					font: 400 14px/1.3 $apercu;
