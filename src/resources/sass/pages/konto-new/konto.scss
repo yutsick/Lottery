@@ -5,9 +5,25 @@ $primary-disable: rgba(7, 70, 88, 0.25);
 $grey: rgba(118, 149, 158, 1);
 $grey-light: rgba(118, 149, 158, 0.5);
 
+.profile__row:not(.profile__row--active) {
+	.form-group.has-error {
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
+
 .has-error{
     position: relative;
 	&[data-tooltip]:not([data-tooltip='']) {
+
+		&.profile__row:not(.profile__row--active) {
+			&::before,
+			&::after {
+				display: none;
+			}
+		}
 
 		&::after{
 			content: attr(data-tooltip); /* Replace with the actual tooltip message */
