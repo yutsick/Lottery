@@ -245,11 +245,34 @@ export default function () {
 			$currentRow.find('input').prop('disabled', false);
 			$currentRow.find('input').last().focusTextToEnd();
 			$currentRow.addClass('profile__row--active');
+			$currentRow.removeClass('has-error');
+			$currentRow.removeClass('has-danger');
+
+
+			$currentRow.find('.form-group').each(function () {
+				$(this).removeClass('has-error');
+				$(this).removeClass('has-danger');
+			})
+
 		});
 
 		$('#kontoinstall .profile__submit').on('click', function () {
 			if($(this).hasClass('profile__row--disabled') || $(this).hasClass('disabled')) {
 				return false
+			}
+
+			const form = $(this).closest('.form-group');
+			const inputs = [...form.find('input')]
+			if($(this).is('[type="button"]')) {
+				// reset inputs
+				inputs.forEach((input) => {
+					input[0].value = input[0].getAttribute('value')
+				});
+			} else {
+				// update inputs
+				inputs.forEach((input) => {
+					input[0].setAttribute('value', input[0].value)
+				});
 			}
 
 			$('.js-update-profile-row').removeClass('profile__row--disabled');

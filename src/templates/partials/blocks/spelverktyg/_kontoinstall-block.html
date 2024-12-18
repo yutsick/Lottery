@@ -364,11 +364,56 @@
 				value.textContent = inputValue1 + inputValue2
 			}
 
+			const reset = () => {
+				const inputValue1 = input1.getAttribute('value')
+				const inputValue2 = input2.getAttribute('value')
+				input1.value = inputValue1
+				input2.value = inputValue2
+				value.textContent = inputValue1 + inputValue2
+			}
+
+			const update = () => {
+				const inputValue1 = input1.value
+				const inputValue2 = input2.value
+				input1.setAttribute('value', inputValue1)
+				input2.setAttribute('value', inputValue2)
+				value.textContent = inputValue1 + inputValue2
+			}
+
 			// init value
 			blur()
 
 			input1.addEventListener('blur', blur)
 			input2.addEventListener('blur', blur)
+
+			const form = phone.closest('.form-group')
+
+			if(form === null) {
+				return
+			}
+
+
+			const resetButton = form.querySelector('.profile__submit[type="button"]')
+			const submitButton = form.querySelector('.profile__submit[type="submit"]')
+
+			if(resetButton) {
+				resetButton.addEventListener('click', ()  => {
+					if(resetButton.classList.contains('profile__row--disabled') || resetButton.classList.contains('disabled')) {
+						return
+					}
+					reset()
+				})
+			}
+
+			if(submitButton) {
+				submitButton.addEventListener('click', () => {
+					if(submitButton.classList.contains('profile__row--disabled') || submitButton.classList.contains('disabled')) {
+						return
+					}
+					update()
+				})
+			}
+
 		})
 
 
