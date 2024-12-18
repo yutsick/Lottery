@@ -65,6 +65,10 @@
 			}
 			.btn-link {
 				font-weight: 400;
+				&.disabled,
+				&.profile__row--disabled {
+					cursor: not-allowed;
+				}
 			}
 		}
 		&__row--active .active-px-3 .profile__actions {
