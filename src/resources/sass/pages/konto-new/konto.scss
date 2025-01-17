@@ -25,6 +25,12 @@ $grey-light: rgba(118, 149, 158, 0.5);
 			}
 		}
 
+		&.has-error-empty {
+			&::after {
+				content: attr(data-tooltip-empty); /* Replace with the actual tooltip message */
+			}
+		}
+
 		&::after{
 			content: attr(data-tooltip); /* Replace with the actual tooltip message */
 			position: absolute;
@@ -58,6 +64,7 @@ $grey-light: rgba(118, 149, 158, 0.5);
 			border-radius: 2px;
 		}
 	}
+
     .form-control{
         border-color: #F56363;
     }

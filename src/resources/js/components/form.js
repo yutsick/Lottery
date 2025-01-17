@@ -282,6 +282,17 @@ export default function () {
 			$currentRow.removeClass('has-error');
 			$currentRow.removeClass('has-danger');
 		});
+
+		$('.profile__input input').on('input', function() {
+			requestAnimationFrame(() => {
+				const form = $(this).closest('.form-group');
+				if(this.value === '') {
+					form.addClass('has-error-empty')
+				} else {
+					form.removeClass('has-error-empty')
+				}
+			})
+		})
 	}
 
 	(function ($) {
