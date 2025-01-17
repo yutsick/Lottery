@@ -27,7 +27,7 @@ section {
         font: 700 16px/18px $base-font-family;
         text-transform: uppercase;
         color: $primary-light;
-        @media (max-width:1200px) {
+        @media (max-width: 767px) {
             display: none;
 
         }
