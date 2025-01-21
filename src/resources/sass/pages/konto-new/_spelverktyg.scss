@@ -202,9 +202,9 @@
 		&__input {
 			font: 400 14px/1.3 $apercu;
 			color: $primary-lighter;
-			@media screen and (min-width: 768px) {
-				text-align: right;
-			}
+			// @media screen and (min-width: 768px) {
+			// 	text-align: right;
+			// }
 
 			&--password {
 				@media screen and (min-width: 600px) {
