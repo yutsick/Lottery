@@ -1,4 +1,4 @@
-Miljonlotteriet - Frontend 2017
+Lottery project
 
 
 http://localhost:3000/
